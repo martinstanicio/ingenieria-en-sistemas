@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"1fd36127082c7aec","type":"group","x":-680,"y":-260,"width":1440,"height":580,"color":"2","label":"Universidad"},
+		{"id":"be36bb5e1c468347","type":"group","x":-680,"y":980,"width":1440,"height":540,"color":"3","label":"Departamentos"},
+		{"id":"d945d2ee39b13d51","type":"group","x":-680,"y":380,"width":1440,"height":540,"color":"5","label":"Facultades Regionales"},
+		{"id":"a980454abf848445","type":"group","x":-160,"y":1040,"width":400,"height":420,"label":"Departamentos de la FRD"},
+		{"id":"1ddda17fb994510f","type":"file","file":"Ingeniería y Sociedad/Universidad Tecnológica Nacional (UTN).md","x":-160,"y":-200,"width":400,"height":460},
+		{"id":"ccca5257979bb217","type":"file","file":"Ingeniería y Sociedad/Asamblea universitaria.md","x":-620,"y":-200,"width":400,"height":460},
+		{"id":"2416b439b3e38098","type":"file","file":"Ingeniería y Sociedad/Rector.md","x":300,"y":-200,"width":400,"height":140},
+		{"id":"183239cf8768c9e8","type":"file","file":"Ingeniería y Sociedad/Consejo superior.md","x":300,"y":-20,"width":400,"height":280},
+		{"id":"021be520959ff813","type":"file","file":"Ingeniería y Sociedad/Facultad Regional Delta (FRD).md","x":-160,"y":440,"width":400,"height":420},
+		{"id":"517631ab47bc940f","type":"file","file":"Ingeniería y Sociedad/Decano.md","x":300,"y":440,"width":400,"height":140},
+		{"id":"3a92a4f9dab2bff9","type":"file","file":"Ingeniería y Sociedad/Consejo directivo.md","x":300,"y":620,"width":400,"height":240},
+		{"id":"badb231415c68385","type":"file","file":"Ingeniería y Sociedad/Asamblea de facultad.md","x":-620,"y":440,"width":400,"height":420},
+		{"id":"8e3a2e2d0031c14f","type":"text","text":"Dpto. ingeniería mecánica","x":-140,"y":1140,"width":360,"height":60},
+		{"id":"8fa3884326f47bee","type":"text","text":"Dpto. ingeniería química","x":-140,"y":1220,"width":360,"height":60},
+		{"id":"d7b3bcb992828e6f","type":"text","text":"Dpto. ingeniería en sistemas de info.","x":-140,"y":1300,"width":360,"height":60},
+		{"id":"ea528d868b4d4ca6","type":"text","text":"Dpto. materias básicas","x":-140,"y":1380,"width":360,"height":60},
+		{"id":"ca4fb6becadaea1c","type":"file","file":"Ingeniería y Sociedad/Director de departamento.md","x":-620,"y":1040,"width":400,"height":420},
+		{"id":"95ea6370d4ff4d5c","type":"file","file":"Ingeniería y Sociedad/Consejo departamental.md","x":300,"y":1040,"width":400,"height":420},
+		{"id":"3c536f94dfaf3a51","type":"text","text":"Dpto. ingeniería eléctrica","x":-140,"y":1060,"width":360,"height":60}
+	],
+	"edges":[
+		{"id":"5c7a88ea79585e03","fromNode":"1ddda17fb994510f","fromSide":"right","toNode":"183239cf8768c9e8","toSide":"left"},
+		{"id":"83cdc3bd0f3c2382","fromNode":"1ddda17fb994510f","fromSide":"bottom","toNode":"021be520959ff813","toSide":"top"},
+		{"id":"66712e784f2ab0d2","fromNode":"021be520959ff813","fromSide":"right","toNode":"3a92a4f9dab2bff9","toSide":"left"},
+		{"id":"43c69afac6c30b64","fromNode":"a980454abf848445","fromSide":"right","toNode":"95ea6370d4ff4d5c","toSide":"left"},
+		{"id":"2b4aa3cebe3c505c","fromNode":"a980454abf848445","fromSide":"left","toNode":"ca4fb6becadaea1c","toSide":"right"},
+		{"id":"f82ba1fe4eedbf00","fromNode":"1ddda17fb994510f","fromSide":"left","toNode":"ccca5257979bb217","toSide":"right"},
+		{"id":"605272bee8b00ee1","fromNode":"021be520959ff813","fromSide":"left","toNode":"badb231415c68385","toSide":"right"},
+		{"id":"f6738f9c985d7ede","fromNode":"1ddda17fb994510f","fromSide":"right","toNode":"2416b439b3e38098","toSide":"left"},
+		{"id":"c1299b0ef7cbbcde","fromNode":"021be520959ff813","fromSide":"bottom","toNode":"a980454abf848445","toSide":"top"},
+		{"id":"c9651192d0b2bbaf","fromNode":"021be520959ff813","fromSide":"right","toNode":"517631ab47bc940f","toSide":"left"}
+	]
+}

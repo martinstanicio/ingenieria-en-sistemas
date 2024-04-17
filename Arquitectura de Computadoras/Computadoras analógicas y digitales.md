@@ -1,0 +1,2 @@
+# Computadoras analógicas y digitales
+Las primeras computadoras eran analógicas, es decir, permitían un amplio rango de entrada de valores, a diferencia de las digitales, que utilizan únicamente código binario (1 y 0), es decir, [[Lenguaje de máquina]].

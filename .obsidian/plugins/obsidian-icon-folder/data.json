@@ -1,0 +1,43 @@
+{
+  "settings": {
+    "migrated": 4,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "none",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "FasInfinity",
+      "FasRobot",
+      "FasUserGroup",
+      "FasPencil",
+      "FasLanguage"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": ":"
+  },
+  "Física I": "FasBolt",
+  "Lógica y Estructuras Discretas": "FasGreaterThanEqual",
+  "Sistemas y Procesos de Negocios": "FasDiagramProject",
+  "Inglés I": "FasLanguage",
+  "Sistemas y procesos de negocios": "FasDiagramProject",
+  "Algoritmos y Estructuras de Datos": "FasLayerGroup",
+  "Análisis Matemático I": "FasSquareRootVariable",
+  "Arquitectura de Computadoras": "FasServer",
+  "Ingeniería y Sociedad": "FasUserGroup",
+  "Inteligencia Artificial": "FasBrain",
+  "Álgebra y Geometría Analítica": "FasInfinity",
+  "Inglés I/Actividades": "FasPencil",
+  "Algoritmos y Estructuras de Datos/Actividades": "FasPencil"
+}

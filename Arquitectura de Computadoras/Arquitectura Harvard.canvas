@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"85d60e3ef205a66a","type":"group","x":80,"y":160,"width":400,"height":400,"label":"CPU"},
+		{"id":"c49fe2b486b99856","type":"group","x":116,"y":244,"width":325,"height":240,"label":"ALU"},
+		{"id":"f208aa1b361b3a39","type":"text","text":"UC (Unidad de Control)","x":154,"y":334,"width":250,"height":60},
+		{"id":"84e080f736ff7699","type":"text","text":"Memoria de datos [[RAM]]","x":680,"y":300,"width":250,"height":120},
+		{"id":"b644abb52a6146e7","type":"text","text":"Memoria instrucciones [[ROM]]","x":-380,"y":300,"width":250,"height":120},
+		{"id":"666188b66f989f72","type":"text","text":"Líneas de control","x":176,"y":-20,"width":206,"height":60,"color":"5"},
+		{"id":"28d93701d3657d42","type":"text","text":"Instrucciones","x":-52,"y":-20,"width":206,"height":60,"color":"1"},
+		{"id":"168a927bff4e5909","type":"text","text":"Datos","x":404,"y":-20,"width":206,"height":60},
+		{"id":"91d7e3527526242e","x":-52,"y":-160,"width":662,"height":120,"type":"text","text":"Mayor velocidad que la [[Arquitectura Von Neumann]], pero mayor costo. La ALU está dentro de la [[CPU]], y dentro de la misma está la UC (unidad de control)."}
+	],
+	"edges":[
+		{"id":"8feca899c9b9e184","fromNode":"85d60e3ef205a66a","fromSide":"top","toNode":"84e080f736ff7699","toSide":"top","toEnd":"none","color":"1"},
+		{"id":"d4967550405f6a6a","fromNode":"85d60e3ef205a66a","fromSide":"right","toNode":"84e080f736ff7699","toSide":"left","toEnd":"none","color":"5"},
+		{"id":"0036513d64ad1cab","fromNode":"85d60e3ef205a66a","fromSide":"bottom","toNode":"84e080f736ff7699","toSide":"bottom","toEnd":"none"},
+		{"id":"a8e8032e6b00b4fa","fromNode":"85d60e3ef205a66a","fromSide":"top","toNode":"b644abb52a6146e7","toSide":"top","toEnd":"none","color":"1"},
+		{"id":"b31f74962fc9f4b5","fromNode":"85d60e3ef205a66a","fromSide":"left","toNode":"b644abb52a6146e7","toSide":"right","toEnd":"none","color":"5"},
+		{"id":"77dee99703a2cfd5","fromNode":"85d60e3ef205a66a","fromSide":"bottom","toNode":"b644abb52a6146e7","toSide":"bottom","toEnd":"none"}
+	]
+}

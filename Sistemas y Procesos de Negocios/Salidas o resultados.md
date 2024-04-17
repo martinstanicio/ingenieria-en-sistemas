@@ -1,0 +1,9 @@
+# Salidas o resultados
+
+Son creadas por el [[Sistemas|sistema]] y se envían al [[Ambiente]] con el fin de tener un efecto.
+
+> Son la corriente de productos procesados por el sistema a partir de las [[Entradas]] ingresadas.
+
+Pueden ser bienes materiales, servicios, información que podrán exportarse al ambiente o servir de *retroinput*, al ser reabsorbido por el mismo sistema como una nueva entrada.
+
+Las salidas ==actúan para alcanzar algún [[Propósito]]== en el sistema. Es decir, deben ser coherentes con el objetivo del sistema. Los resultados de los sistemas son **finales**, mientras que los resultados de los [[Subsistema|subsistemas]] son **intermedios**.
