@@ -1,4 +1,5 @@
 # Árboles semánticos
+
 Se utiliza para verificar que una serie de [[Proposiciones]] no pueden ser todas verdaderas simultáneamente. Para esto, se evalúa la conjunción de todas las premisas, y la negación de la conclusión.
 
 Cuando tengo una [[Disyunción (∨)]], las ramas del árbol se bifurcan por cada preposición de la misma.

@@ -1,4 +1,5 @@
 # Movimiento
+
 Cambio de posición de un cuerpo. Es relativo, ya que depende de quién analiza el cuerpo.
 
 El movimiento puede ser rectilíneo (horizontal, vertical, oblicuo), circular, o indefinido.

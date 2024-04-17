@@ -1,5 +1,7 @@
 # 20240408 - Sustantivos compuestos
+
 Clasificar los siguientes sustantivos compuestos de acuerdo a la relación que expresan.
+
 1. **Heat exchanger:** propósito.
 2. **Metal bar:** material.
 3. **Carbon dioxide:** material.

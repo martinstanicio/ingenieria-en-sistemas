@@ -1,4 +1,5 @@
 # Lenguaje de alto nivel
+
 Utiliza lenguaje humano en su sintaxis, es mucho más simple que un [[Lenguaje de bajo nivel o ensamblador]], lo cual tiene sus ventajas.
 
 - Ofrecen una capa de **abstracción**, ocultando las complejidades del hardware de la computadora.

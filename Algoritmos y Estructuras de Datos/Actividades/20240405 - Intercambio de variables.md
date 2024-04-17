@@ -1,7 +1,9 @@
 # 20240405 - Intercambio de variables
+
 Se ingresan dos números reales en las variables `a` y `b` respectivamente. Realizar un algoritmo para intercambiar los contenidos y mostrarlos por pantalla.
 
 ## Pseudocódigo
+
 ```
 comienzo
 
@@ -21,6 +23,7 @@ fin
 ```
 
 ## Diagrama de flujo
+
 ```mermaid
 flowchart TB
 	comienzo([comienzo])

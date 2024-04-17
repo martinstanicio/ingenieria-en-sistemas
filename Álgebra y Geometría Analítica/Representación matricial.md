@@ -1,7 +1,9 @@
 # Representación matricial
+
 Son una forma más concisa de escribir un [[Sistema de ecuaciones lineales (SEL)]].
 
 ## Vector de incógnitas
+
 $$
 X=
 \left( 
@@ -15,6 +17,7 @@ X=
 $$
 
 ## Vector de términos independientes
+
 $$
 B=
 \left( 
@@ -28,6 +31,7 @@ B=
 $$
 
 ## Matriz de coeficientes
+
 $$
 A=
 \left( 
@@ -41,6 +45,7 @@ A=
 $$
 
 ## Expresión matricial del sistema
+
 $$
 \begin{align}
 AX &= B \\
@@ -73,6 +78,7 @@ AX &= B \\
 $$
 
 ## Matriz ampliada
+
 $$
 Ab=
 \left( 

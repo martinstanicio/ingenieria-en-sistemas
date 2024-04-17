@@ -1,7 +1,9 @@
 # Espacio vectorial
+
 Un espacio vectorial $V$ es un conjunto **vectores**, que posee dos operaciones: **suma** y **multiplicación** por un [[Escalar]], y que satisfacen los diez axiomas enumerados a continuación.
 
 ## Axiomas de un espacio vectorial
+
 1. **Cerradura bajo la suma:** si $x \in V$ y $y \in V$, entonces $x+y \in V$
 2. **Ley asociativa de la suma de vectores:** para todo $x$, $y$ y $z$ en $V$, $(x+y)+z=x+(y+z)$
 3. **Vector cero o idéntico aditivo:** existe un vector $0 \in V$ tal que para todo $x \in V$, $x+0=0+x=0$
@@ -14,20 +16,27 @@ Un espacio vectorial $V$ es un conjunto **vectores**, que posee dos operaciones:
 10. Para cada vector $x \in V$, $1x=x$
 
 ## Representación de un EV
+
 Un EV se representa de la siguiente forma.
+
 $$(V, +, k, \cdot)$$
+
 Donde:
+
 1. $V$ es el nombre del mismo
 2. $+$ es la operación de suma
 3. $k$ es el [[Campo o cuerpo]] que representa a los escalares
 4. $\cdot$ es la operación de multiplicación
 
 Por ejemplo:
+
 - El conjunto de los complejos con los reales como escalares: $(\mathbb{C},+,\mathbb{R},\cdot)$
 - El conjunto de los polinomios de grado menor o igual a 2 con los reales como escalares: $(P_2,+,\mathbb{R},\cdot)$
 
 ## El vector nulo
+
 El vector nulo, es decir $\overrightarrow{0}$, es diferente del número $0$, aunque a veces sea utilizado para representar al primero. Por ejemplo, el vector nulo en $\mathbb{R}^2$ es $(0,0)$.
 
 ## Cantidad de elementos
+
 Un espacio vectorial **siempre** tiene o un solo elemento, por lo que es un [[Espacio vectorial trivial]], o tiene elementos infinitos.

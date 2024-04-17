@@ -1,6 +1,9 @@
 # 20240409 - Circunferencia
+
 Se ingresa el radio de una circunferencia. Calcular el área y perímetro.
+
 ## Pseudocódigo
+
 ```
 comienzo
 
@@ -20,6 +23,7 @@ fin
 ```
 
 ## Diagrama de flujo
+
 ```mermaid
 flowchart TB
 	comienzo([comienzo])

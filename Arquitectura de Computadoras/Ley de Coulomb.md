@@ -1,9 +1,13 @@
 # Ley de Coulomb
+
 Establece que la fuerza entre dos cargas puntuales es directamente proporcional al producto de sus magnitudes e inversamente proporcional al cuadrado de la distancia entre ellas.
+
 $$
 F = k * (q_1 * q_2) / r^2
 $$
+
 Donde:
+
  * $F$: fuerza eléctrica (N)
  * $k$: constante de proporcionalidad dieléctrica
  * $q_1$ y $q_2$: magnitudes de las cargas (C)

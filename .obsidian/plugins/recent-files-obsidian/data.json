@@ -1,12 +1,84 @@
 {
   "recentFiles": [
     {
+      "basename": "Ley de composición interna o propiedad cerrada",
+      "path": "Álgebra y Geometría Analítica/Ley de composición interna o propiedad cerrada.md"
+    },
+    {
+      "basename": "Isomorfismo",
+      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
+    },
+    {
+      "basename": "Grupo abeliano",
+      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
+    },
+    {
+      "basename": "Grupo",
+      "path": "Álgebra y Geometría Analítica/Grupo.md"
+    },
+    {
+      "basename": "Espacios vectoriales notables",
+      "path": "Álgebra y Geometría Analítica/Espacios vectoriales notables.md"
+    },
+    {
+      "basename": "Espacio vectorial trivial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
+    },
+    {
+      "basename": "Espacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
+    },
+    {
+      "basename": "Espacio generado",
+      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
+    },
+    {
+      "basename": "Escalar",
+      "path": "Álgebra y Geometría Analítica/Escalar.md"
+    },
+    {
+      "basename": "Elemento opuesto o inverso",
+      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
+      "basename": "Ecuación lineal",
+      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
+    },
+    {
+      "basename": "Conmutatividad",
+      "path": "Álgebra y Geometría Analítica/Conmutatividad.md"
+    },
+    {
+      "basename": "Conjunto linealmente independiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+    },
+    {
+      "basename": "Conjunto linealmente dependiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+    },
+    {
+      "basename": "Combinación lineal trivial",
+      "path": "Álgebra y Geometría Analítica/Combinación lineal trivial.md"
+    },
+    {
       "basename": "Combinación lineal",
       "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
     },
     {
       "basename": "Cardinal",
       "path": "Álgebra y Geometría Analítica/Cardinal.md"
+    },
+    {
+      "basename": "Campo o cuerpo",
+      "path": "Álgebra y Geometría Analítica/Campo o cuerpo.md"
+    },
+    {
+      "basename": "Asociatividad",
+      "path": "Álgebra y Geometría Analítica/Asociatividad.md"
     },
     {
       "basename": "Accesibilidad",
@@ -127,78 +199,6 @@
     {
       "basename": "Propiedades de un elemento",
       "path": "Sistemas y Procesos de Negocios/Propiedades de un elemento.md"
-    },
-    {
-      "basename": "Atributos",
-      "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "Permeabilidad",
-      "path": "Sistemas y Procesos de Negocios/Permeabilidad.md"
-    },
-    {
-      "basename": "Ambiente",
-      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
-    },
-    {
-      "basename": "Retroalimentación",
-      "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
-    },
-    {
-      "basename": "Jerarquía",
-      "path": "Sistemas y Procesos de Negocios/Jerarquía.md"
-    },
-    {
-      "basename": "Rango",
-      "path": "Sistemas y Procesos de Negocios/Rango.md"
-    },
-    {
-      "basename": "Nivel",
-      "path": "Sistemas y Procesos de Negocios/Nivel.md"
-    },
-    {
-      "basename": "Recursividad",
-      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
-    },
-    {
-      "basename": "Entradas",
-      "path": "Sistemas y Procesos de Negocios/Entradas.md"
-    },
-    {
-      "basename": "Suprasistema",
-      "path": "Sistemas y Procesos de Negocios/Suprasistema.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
-    },
-    {
-      "basename": "Elemento",
-      "path": "Sistemas y Procesos de Negocios/Elemento.md"
-    },
-    {
-      "basename": "Subsistema",
-      "path": "Sistemas y Procesos de Negocios/Subsistema.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
-    },
-    {
-      "basename": "Modelo",
-      "path": "Sistemas y Procesos de Negocios/Modelo.md"
-    },
-    {
-      "basename": "Rango de una matriz",
-      "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
-    },
-    {
-      "basename": "Espacio generado",
-      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
-    },
-    {
-      "basename": "Teorema de Rouche Frobeniuos",
-      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
     }
   ],
   "omittedPaths": [],

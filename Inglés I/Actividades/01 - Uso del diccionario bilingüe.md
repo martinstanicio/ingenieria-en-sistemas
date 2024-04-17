@@ -1,4 +1,5 @@
 # 01 - Uso del diccionario bilingüe
+
 1. Traduzca las siguientes palabras (sin uso del diccionario si cree conocer el significado)
 	1. **Plague:** peste
 	2. **Pest:** plaga
@@ -9,7 +10,9 @@
 	7. **Carpet:** alfombra
 	8. **Career:** carrera profesional
 	
+
     Todas las palabras son [[False friends]].
+
 2. Busque en el diccionario el siguiente vocabulario e indique si se trata de vocabulario técnico o general.
 	- **Sprocket (técnica):** rueda dentada.
 	- **Welding (técnico):** soldadura.
@@ -33,6 +36,7 @@
 	10. **Cranes (general):** grullas
 
 ## Ejercicios de la teoría
+
 4. 
     1. 
         1. Spring a leak

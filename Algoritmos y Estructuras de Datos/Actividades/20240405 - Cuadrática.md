@@ -1,7 +1,9 @@
 # 20240405 - Cuadrática
+
 Se ingresan los términos A,B, y C de la función cuadrática. Hallar las raices y mostrarlas por pantalla.
 
 ## Pseudocódigo
+
 ```
 comienzo
 
@@ -25,6 +27,7 @@ fin
 ```
 
 ## Diagrama de flujo
+
 ```mermaid
 flowchart TB
 	comienzo([comienzo])

@@ -1,4 +1,5 @@
 # 20240325 - Vocabulario técnico vs general
+
 - Dynamo (técnico): dínamo.
 - Bore (subtécnico y procedimental): aburrir, calibre, perforar.
 - Piece (subtécnico): pedazo, pieza.

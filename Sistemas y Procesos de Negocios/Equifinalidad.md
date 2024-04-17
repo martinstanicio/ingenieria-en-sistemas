@@ -1,2 +1,3 @@
 # Equifinalidad
+
 La capacidad de alcanzar el mismo [[Objetivo]] final a partir de diferentes condiciones iniciales; la flexibilidad del sistema y su ==capacidad para adaptarse a diferentes situaciones==.

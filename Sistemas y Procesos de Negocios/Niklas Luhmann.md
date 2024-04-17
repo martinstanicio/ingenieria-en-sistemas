@@ -1,5 +1,7 @@
 # Niklas Luhmann
+
 En su [[Teoría General de Sistemas (TGS)]], dice que cada sociedad está fraccionada en varios sistemas:
+
 - Legal
 - Político
 - Educativo

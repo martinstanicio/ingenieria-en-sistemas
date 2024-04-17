@@ -1,4 +1,5 @@
 # Disyunción (∨)
+
 Es verdadera si $p$ o $q$, o ambas, son verdaderas. Utilizamos el símbolo "$\lor$".
 
 | $p$ | $q$ | $p \lor q$ |

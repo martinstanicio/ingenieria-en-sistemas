@@ -1,7 +1,9 @@
 # Sistema de ecuaciones lineales (SEL)
+
 Un grupo de varias [[Ecuación lineal|ecuaciones lineales]]. Puede ser un [[Sistema compatible (SC)]] o un [[Sistema incompatible (SI)]].
 
 La **expresión general** de un SEL es:
+
 $$
 \left\{ 
     \begin{array}{l}
@@ -14,10 +16,13 @@ $$
 $$
 
 ## Sistemas equivalentes
+
 Cuando dos sistemas tienen el mismo conjunto solución, se dice que son **sistemas equivalentes**.
 
 ## Operaciones elementales
+
 Son aquellas operaciones que podemos realizar con las ecuaciones de un SEL, que ==no alteran el conjunto solución==. Esto nos sirve para obtener un **sistema equivalente**, más sencillo de resolver.
+
 1. Multiplicación de una ecuación por un $c\neq 0$.
 2. Sumar a una ecuación el múltiplo de otra.
 3. Intercambiar el orden de las ecuaciones.

@@ -1,2 +1,3 @@
 # Lógica
+
 Viene a explicar la semántica de oraciones matemáticas, es decir aclarar y eliminar la ambigüedad que presenta el [[Lenguaje natural]], dándole un significado preciso a las oraciones que estamos analizando, las cuales llamaremos [[Proposiciones]].
