@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de Rouche Frobeniuos",
+      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
+    },
+    {
+      "basename": "Rango de una matriz",
+      "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
+    },
+    {
+      "basename": "Rango",
+      "path": "Sistemas y Procesos de Negocios/Rango.md"
+    },
+    {
       "basename": "Adjetivos o pronombres demostrativos",
       "path": "Inglés I/Adjetivos o pronombres demostrativos.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Ecuaciones horarias",
       "path": "Física I/Ecuaciones horarias.md"
-    },
-    {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
-    },
-    {
-      "basename": "20240416 - Palindromo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales (SEL)",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
     }
   ],
   "omittedPaths": [],
