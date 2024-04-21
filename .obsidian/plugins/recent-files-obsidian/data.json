@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "Teorema de Rouche Frobeniuos",
-      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
+      "basename": "Matriz escalonada",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
+    },
+    {
+      "basename": "Pivote",
+      "path": "Álgebra y Geometría Analítica/Pivote.md"
     },
     {
       "basename": "Rango de una matriz",
       "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
+    },
+    {
+      "basename": "Representación matricial",
+      "path": "Álgebra y Geometría Analítica/Representación matricial.md"
+    },
+    {
+      "basename": "Números complejos",
+      "path": "Álgebra y Geometría Analítica/Números complejos.md"
+    },
+    {
+      "basename": "Isomorfismo",
+      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
+    },
+    {
+      "basename": "Sistema compatible (SC)",
+      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
+    },
+    {
+      "basename": "Subespacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Subespacio vectorial.md"
+    },
+    {
+      "basename": "Teorema de Rouche Frobeniuos",
+      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
     },
     {
       "basename": "Rango",
@@ -171,34 +199,6 @@
     {
       "basename": "Generalización existencial",
       "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
-    },
-    {
-      "basename": "Especificación universal",
-      "path": "Lógica y Estructuras Discretas/Especificación universal.md"
-    },
-    {
-      "basename": "Especificación existencial",
-      "path": "Lógica y Estructuras Discretas/Especificación existencial.md"
-    },
-    {
-      "basename": "Demostración formal",
-      "path": "Lógica y Estructuras Discretas/Demostración formal.md"
-    },
-    {
-      "basename": "Cuantificadores anidados",
-      "path": "Lógica y Estructuras Discretas/Cuantificadores anidados.md"
-    },
-    {
-      "basename": "Cuantificador universal (∀)",
-      "path": "Lógica y Estructuras Discretas/Cuantificador universal (∀).md"
-    },
-    {
-      "basename": "Cuantificador existencial (∃)",
-      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
-    },
-    {
-      "basename": "Ecuaciones horarias",
-      "path": "Física I/Ecuaciones horarias.md"
     }
   ],
   "omittedPaths": [],
