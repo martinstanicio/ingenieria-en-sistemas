@@ -14,4 +14,12 @@ Se utiliza con ==sustantivos singulares==. Se traducen como "un" o "una". Si el 
 - **An** idea
 
 ## Artículo definido (the)
-Se utiliza con sustantivos  y PLURALES. • Se traduce como: EL / LA / LO / LOS / LAS E.g.: THE device THE condensers THE government THE principles THE office THE liquids
+
+Se utiliza con ==sustantivos singulares y [[Sustantivos plurales|plurales]]==. Se traduce como "el", "la", "lo", "los", "las". Por ejemplo:
+
+- **The** device
+- **The** condensers
+- **The** government
+- **The** principles
+- **The** office
+- **The** liquids

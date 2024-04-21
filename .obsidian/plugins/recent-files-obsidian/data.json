@@ -1,32 +1,64 @@
 {
   "recentFiles": [
     {
-      "basename": "Artículo",
-      "path": "Inglés I/Artículo.md"
+      "basename": "Frase o grupo nominal",
+      "path": "Inglés I/Frase o grupo nominal.md"
+    },
+    {
+      "basename": "Adjetivo",
+      "path": "Inglés I/Adjetivo.md"
     },
     {
       "basename": "Sustantivos compuestos",
       "path": "Inglés I/Sustantivos compuestos.md"
     },
     {
+      "basename": "Sustantivo",
+      "path": "Inglés I/Sustantivo.md"
+    },
+    {
+      "basename": "Adjetivos o pronombres demostrativos",
+      "path": "Inglés I/Adjetivos o pronombres demostrativos.md"
+    },
+    {
+      "basename": "Cuantificadores",
+      "path": "Inglés I/Cuantificadores.md"
+    },
+    {
+      "basename": "False friends",
+      "path": "Inglés I/False friends.md"
+    },
+    {
+      "basename": "Ubicación del adjetivo",
+      "path": "Inglés I/Ubicación del adjetivo.md"
+    },
+    {
+      "basename": "Vocabulario procedimental",
+      "path": "Inglés I/Vocabulario procedimental.md"
+    },
+    {
+      "basename": "Sustantivos plurales del latín o griego",
+      "path": "Inglés I/Sustantivos plurales del latín o griego.md"
+    },
+    {
+      "basename": "02 - Abreviaturas y siglas",
+      "path": "Inglés I/Actividades/02 - Abreviaturas y siglas.md"
+    },
+    {
+      "basename": "Sustantivos genéricos",
+      "path": "Inglés I/Sustantivos genéricos.md"
+    },
+    {
+      "basename": "Artículo",
+      "path": "Inglés I/Artículo.md"
+    },
+    {
       "basename": "Relación entre sustantivos",
       "path": "Inglés I/Relación entre sustantivos.md"
     },
     {
-      "basename": "Sustantivos en plural del Latín o Griego",
-      "path": "Inglés I/Sustantivos en plural del Latín o Griego.md"
-    },
-    {
       "basename": "Sustantivos plurales",
       "path": "Inglés I/Sustantivos plurales.md"
-    },
-    {
-      "basename": "Frase o grupo nominal",
-      "path": "Inglés I/Frase o grupo nominal.md"
-    },
-    {
-      "basename": "Sustantivo",
-      "path": "Inglés I/Sustantivo.md"
     },
     {
       "basename": "Campo o cuerpo",
@@ -167,38 +199,6 @@
     {
       "basename": "Sistema de ecuaciones lineales (SEL)",
       "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
-    },
-    {
-      "basename": "Predicados",
-      "path": "Lógica y Estructuras Discretas/Predicados.md"
-    },
-    {
-      "basename": "Regla del pulgar",
-      "path": "Física I/Regla del pulgar.md"
-    },
-    {
-      "basename": "Movimiento Circular Uniforme (MCU)",
-      "path": "Física I/Movimiento Circular Uniforme (MCU).md"
-    },
-    {
-      "basename": "Intersección (AND)",
-      "path": "Arquitectura de Computadoras/Intersección (AND).md"
-    },
-    {
-      "basename": "Espacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
-    },
-    {
-      "basename": "Grupo",
-      "path": "Álgebra y Geometría Analítica/Grupo.md"
-    },
-    {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
-    },
-    {
-      "basename": "Elemento opuesto o inverso",
-      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
     }
   ],
   "omittedPaths": [],
