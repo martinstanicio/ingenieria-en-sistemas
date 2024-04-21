@@ -1,6 +1,194 @@
 {
   "recentFiles": [
     {
+      "basename": "Campo o cuerpo",
+      "path": "Álgebra y Geometría Analítica/Campo o cuerpo.md"
+    },
+    {
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
+      "basename": "Sinergia",
+      "path": "Sistemas y Procesos de Negocios/Sinergia.md"
+    },
+    {
+      "basename": "Salidas o resultados",
+      "path": "Sistemas y Procesos de Negocios/Salidas o resultados.md"
+    },
+    {
+      "basename": "Estructuras de control",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+    },
+    {
+      "basename": "Lenguaje de bajo nivel o ensamblador",
+      "path": "Algoritmos y Estructuras de Datos/Lenguaje de bajo nivel o ensamblador.md"
+    },
+    {
+      "basename": "Interpretador",
+      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
+    },
+    {
+      "basename": "Error lógico",
+      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "20240419 - Bifurcación doble",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
+    },
+    {
+      "basename": "Asamblea universitaria",
+      "path": "Ingeniería y Sociedad/Asamblea universitaria.md"
+    },
+    {
+      "basename": "Barreras",
+      "path": "Ingeniería y Sociedad/Barreras.md"
+    },
+    {
+      "basename": "Disyunción exclusiva (⊕)",
+      "path": "Lógica y Estructuras Discretas/Disyunción exclusiva (⊕).md"
+    },
+    {
+      "basename": "Cardinal",
+      "path": "Álgebra y Geometría Analítica/Cardinal.md"
+    },
+    {
+      "basename": "Estructuras de datos",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
+    },
+    {
+      "basename": "Variables",
+      "path": "Algoritmos y Estructuras de Datos/Variables.md"
+    },
+    {
+      "basename": "Pseudocódigo",
+      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
+      "basename": "Diseño descendente",
+      "path": "Algoritmos y Estructuras de Datos/Diseño descendente.md"
+    },
+    {
+      "basename": "Diagrama de flujo",
+      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
+    },
+    {
+      "basename": "Variable ligada o cuantificada",
+      "path": "Lógica y Estructuras Discretas/Variable ligada o cuantificada.md"
+    },
+    {
+      "basename": "Universo",
+      "path": "Lógica y Estructuras Discretas/Universo.md"
+    },
+    {
+      "basename": "Generalización universal",
+      "path": "Lógica y Estructuras Discretas/Generalización universal.md"
+    },
+    {
+      "basename": "Generalización existencial",
+      "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
+    },
+    {
+      "basename": "Especificación universal",
+      "path": "Lógica y Estructuras Discretas/Especificación universal.md"
+    },
+    {
+      "basename": "Especificación existencial",
+      "path": "Lógica y Estructuras Discretas/Especificación existencial.md"
+    },
+    {
+      "basename": "Demostración formal",
+      "path": "Lógica y Estructuras Discretas/Demostración formal.md"
+    },
+    {
+      "basename": "Cuantificadores anidados",
+      "path": "Lógica y Estructuras Discretas/Cuantificadores anidados.md"
+    },
+    {
+      "basename": "Cuantificador universal (∀)",
+      "path": "Lógica y Estructuras Discretas/Cuantificador universal (∀).md"
+    },
+    {
+      "basename": "Cuantificador existencial (∃)",
+      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
+    },
+    {
+      "basename": "Ecuaciones horarias",
+      "path": "Física I/Ecuaciones horarias.md"
+    },
+    {
+      "basename": "20240416 - Triángulo rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
+    },
+    {
+      "basename": "20240416 - Palindromo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
+    },
+    {
+      "basename": "Sistema de ecuaciones lineales (SEL)",
+      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
+    },
+    {
+      "basename": "Predicados",
+      "path": "Lógica y Estructuras Discretas/Predicados.md"
+    },
+    {
+      "basename": "Regla del pulgar",
+      "path": "Física I/Regla del pulgar.md"
+    },
+    {
+      "basename": "Movimiento Circular Uniforme (MCU)",
+      "path": "Física I/Movimiento Circular Uniforme (MCU).md"
+    },
+    {
+      "basename": "Intersección (AND)",
+      "path": "Arquitectura de Computadoras/Intersección (AND).md"
+    },
+    {
+      "basename": "Espacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
+    },
+    {
+      "basename": "Grupo",
+      "path": "Álgebra y Geometría Analítica/Grupo.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
+      "basename": "Elemento opuesto o inverso",
+      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
+    },
+    {
+      "basename": "Grupo abeliano",
+      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
+    },
+    {
+      "basename": "Unión (OR)",
+      "path": "Arquitectura de Computadoras/Unión (OR).md"
+    },
+    {
+      "basename": "Diagrama en bloques de una computadora de propósito general",
+      "path": "Arquitectura de Computadoras/Diagrama en bloques de una computadora de propósito general.canvas"
+    },
+    {
+      "basename": "Frase o grupo nominal",
+      "path": "Inglés I/Frase o grupo nominal.md"
+    },
+    {
       "basename": "Ley de composición interna o propiedad cerrada",
       "path": "Álgebra y Geometría Analítica/Ley de composición interna o propiedad cerrada.md"
     },
@@ -9,196 +197,8 @@
       "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
     },
     {
-      "basename": "Grupo abeliano",
-      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
-    },
-    {
-      "basename": "Grupo",
-      "path": "Álgebra y Geometría Analítica/Grupo.md"
-    },
-    {
       "basename": "Espacios vectoriales notables",
       "path": "Álgebra y Geometría Analítica/Espacios vectoriales notables.md"
-    },
-    {
-      "basename": "Espacio vectorial trivial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
-    },
-    {
-      "basename": "Espacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
-    },
-    {
-      "basename": "Espacio generado",
-      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
-    },
-    {
-      "basename": "Escalar",
-      "path": "Álgebra y Geometría Analítica/Escalar.md"
-    },
-    {
-      "basename": "Elemento opuesto o inverso",
-      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
-    },
-    {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
-    },
-    {
-      "basename": "Ecuación lineal",
-      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
-    },
-    {
-      "basename": "Conmutatividad",
-      "path": "Álgebra y Geometría Analítica/Conmutatividad.md"
-    },
-    {
-      "basename": "Conjunto linealmente independiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
-    },
-    {
-      "basename": "Conjunto linealmente dependiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
-    },
-    {
-      "basename": "Combinación lineal trivial",
-      "path": "Álgebra y Geometría Analítica/Combinación lineal trivial.md"
-    },
-    {
-      "basename": "Combinación lineal",
-      "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
-    },
-    {
-      "basename": "Cardinal",
-      "path": "Álgebra y Geometría Analítica/Cardinal.md"
-    },
-    {
-      "basename": "Campo o cuerpo",
-      "path": "Álgebra y Geometría Analítica/Campo o cuerpo.md"
-    },
-    {
-      "basename": "Asociatividad",
-      "path": "Álgebra y Geometría Analítica/Asociatividad.md"
-    },
-    {
-      "basename": "Accesibilidad",
-      "path": "Ingeniería y Sociedad/Accesibilidad.md"
-    },
-    {
-      "basename": "20240405 - Energía",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Energía.md"
-    },
-    {
-      "basename": "20240416 - Palindromo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
-    },
-    {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
-    },
-    {
-      "basename": "20240416 - Palindromo",
-      "path": "Algoritmos y estructuras de datos/Actividades/20240416 - Palindromo.md"
-    },
-    {
-      "basename": "Notación de modelos de procesos de negocios (BPMN)",
-      "path": "Sistemas y procesos de negocios/Notación de modelos de procesos de negocios (BPMN).md"
-    },
-    {
-      "basename": "20240409 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
-    },
-    {
-      "basename": "Notación de modelos de procesos de negocios (BPMN)",
-      "path": "Sistemas y Procesos de Negocios/Notación de modelos de procesos de negocios (BPMN).md"
-    },
-    {
-      "basename": "Diagrama de Transición de Estado (DTE)",
-      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado (DTE).md"
-    },
-    {
-      "basename": "dte",
-      "path": "Sistemas y Procesos de Negocios/attachments/dte.png"
-    },
-    {
-      "basename": "Universidad de Córdoba",
-      "path": "Ingeniería y Sociedad/Universidad de Córdoba.md"
-    },
-    {
-      "basename": "Diseño en clave universal",
-      "path": "Ingeniería y Sociedad/Diseño en clave universal.md"
-    },
-    {
-      "basename": "Barreras",
-      "path": "Ingeniería y Sociedad/Barreras.md"
-    },
-    {
-      "basename": "Discapacidad",
-      "path": "Ingeniería y Sociedad/Discapacidad.md"
-    },
-    {
-      "basename": "Usabilidad",
-      "path": "Ingeniería y Sociedad/Usabilidad.md"
-    },
-    {
-      "basename": "Barreras comunicacionales",
-      "path": "Ingeniería y Sociedad/Barreras comunicacionales.md"
-    },
-    {
-      "basename": "Barreras físicas",
-      "path": "Ingeniería y Sociedad/Barreras físicas.md"
-    },
-    {
-      "basename": "Convención de los derechos de las personas con discapacidad",
-      "path": "Ingeniería y Sociedad/Convención de los derechos de las personas con discapacidad.md"
-    },
-    {
-      "basename": "Singularidad",
-      "path": "Ingeniería y Sociedad/Singularidad.md"
-    },
-    {
-      "basename": "Modelo social",
-      "path": "Ingeniería y Sociedad/Modelo social.md"
-    },
-    {
-      "basename": "Modelo rehabilitador",
-      "path": "Ingeniería y Sociedad/Modelo rehabilitador.md"
-    },
-    {
-      "basename": "Modelo de prescidencia",
-      "path": "Ingeniería y Sociedad/Modelo de prescidencia.md"
-    },
-    {
-      "basename": "Estructura organizacional",
-      "path": "Ingeniería y Sociedad/Estructura organizacional.canvas"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "Salidas o resultados",
-      "path": "Sistemas y Procesos de Negocios/Salidas o resultados.md"
-    },
-    {
-      "basename": "Estructura",
-      "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "Propiedades emergentes",
-      "path": "Sistemas y Procesos de Negocios/Propiedades emergentes.md"
-    },
-    {
-      "basename": "Teoría General de Sistemas (TGS)",
-      "path": "Sistemas y Procesos de Negocios/Teoría General de Sistemas (TGS).md"
-    },
-    {
-      "basename": "Sinergia",
-      "path": "Sistemas y Procesos de Negocios/Sinergia.md"
-    },
-    {
-      "basename": "Propiedades de un elemento",
-      "path": "Sistemas y Procesos de Negocios/Propiedades de un elemento.md"
     }
   ],
   "omittedPaths": [],

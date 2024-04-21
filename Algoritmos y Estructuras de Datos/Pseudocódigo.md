@@ -31,3 +31,21 @@ Para guardar en una variable la entrada del usuario.
 ```
 leer(variable1)
 ```
+
+## [[Bifurcaciones#Bifurcación simple|Bifurcación simple]]
+
+```
+si condición entonces
+  instruccion
+fin-si
+```
+
+## [[Bifurcaciones#Bifurcación doble|Bifurcación doble]]
+
+```
+si condición entonces
+  instruccion1
+sino
+  instruccion2
+fin-si
+```

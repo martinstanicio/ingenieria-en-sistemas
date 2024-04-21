@@ -2,7 +2,7 @@
 
 Existen diferentes tipos, entre ellas:
 
-- Variables
+- [[Variables]]
 - Vectores, matrices o listas
 - Conjuntos
 - Archivos

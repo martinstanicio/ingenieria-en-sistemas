@@ -4,8 +4,8 @@ Es más poderosa que la lógica con [[Proposiciones]], ya que nos permite trabaj
 
 Por ejemplo, para una oración "x es mayor a 4":
 
-- Sujeto: "x" (un valor del *universo* del discurso)
+- Sujeto: "x" (un valor del [[Lógica y Estructuras Discretas/Universo|Universo]] del discurso)
 - Predicado: "es mayor o igual a 4"
 Esto también puede ser escrito como $P(x): \text{x es mayor o igual a 4}$, o hasta utilizar varias variables, que luego podemos reemplazar para evaluar la expresión.
 
-También se suele utilizar un [[Cuantificador universal]] o [[Cuantificador existencial]].
+También se suele utilizar un [[Cuantificador universal (∀)]] o [[Cuantificador existencial (∃)]].
