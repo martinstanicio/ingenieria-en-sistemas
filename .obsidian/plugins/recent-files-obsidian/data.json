@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Artículo",
+      "path": "Inglés I/Artículo.md"
+    },
+    {
+      "basename": "Sustantivos compuestos",
+      "path": "Inglés I/Sustantivos compuestos.md"
+    },
+    {
+      "basename": "Relación entre sustantivos",
+      "path": "Inglés I/Relación entre sustantivos.md"
+    },
+    {
+      "basename": "Sustantivos en plural del Latín o Griego",
+      "path": "Inglés I/Sustantivos en plural del Latín o Griego.md"
+    },
+    {
+      "basename": "Sustantivos plurales",
+      "path": "Inglés I/Sustantivos plurales.md"
+    },
+    {
+      "basename": "Frase o grupo nominal",
+      "path": "Inglés I/Frase o grupo nominal.md"
+    },
+    {
+      "basename": "Sustantivo",
+      "path": "Inglés I/Sustantivo.md"
+    },
+    {
       "basename": "Campo o cuerpo",
       "path": "Álgebra y Geometría Analítica/Campo o cuerpo.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "Elemento opuesto o inverso",
       "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
-    },
-    {
-      "basename": "Grupo abeliano",
-      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
-    },
-    {
-      "basename": "Unión (OR)",
-      "path": "Arquitectura de Computadoras/Unión (OR).md"
-    },
-    {
-      "basename": "Diagrama en bloques de una computadora de propósito general",
-      "path": "Arquitectura de Computadoras/Diagrama en bloques de una computadora de propósito general.canvas"
-    },
-    {
-      "basename": "Frase o grupo nominal",
-      "path": "Inglés I/Frase o grupo nominal.md"
-    },
-    {
-      "basename": "Ley de composición interna o propiedad cerrada",
-      "path": "Álgebra y Geometría Analítica/Ley de composición interna o propiedad cerrada.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
-    },
-    {
-      "basename": "Espacios vectoriales notables",
-      "path": "Álgebra y Geometría Analítica/Espacios vectoriales notables.md"
     }
   ],
   "omittedPaths": [],
