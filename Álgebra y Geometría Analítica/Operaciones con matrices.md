@@ -128,7 +128,22 @@ AB^t=
 =
 C^{2\times2}
 $$
-Ahora calculamos cada uno de los 4 elementos de $C$.
-- $C_{11} = \left(\begin{array}{c}1 & 2 & 3\end{array}\right) \left(\begin{array}{c}7 \\ 8 \\ 9 \end{array}\right) = $
 
-La multiplicación de matrices ==no es conmutativa==.
+Ahora calculamos cada uno de los 4 elementos de $C$.
+
+- $C_{11} = \left(\begin{array}{c}1 & 2 & 3\end{array}\right) \left(\begin{array}{c}7 \\ 8 \\ 9 \end{array}\right) = 1(7) + 2(8) + 3(9) = 50$
+- $C_{21} = \left(\begin{array}{c}4 & 5 & 6\end{array}\right) \left(\begin{array}{c}7 \\ 8 \\ 9 \end{array}\right) = 4(7) + 5(8) + 6(9) = 122$
+- $C_{12} = \left(\begin{array}{c}1 & 2 & 3\end{array}\right) \left(\begin{array}{c}10 \\ 11 \\ 12 \end{array}\right) = 1(10) + 2(11) + 3(12) = 68$
+- $C_{22} = \left(\begin{array}{c}4 & 5 & 6\end{array}\right) \left(\begin{array}{c}10 \\ 11 \\ 12 \end{array}\right) = 4(10) + 5(11) + 6(12) = 167$
+
+$$
+AB^t = C =
+\left( 
+    \begin{array}{c}
+        50 & 68 \\
+        122 & 167 \\
+    \end{array}
+\right)
+$$
+
+La multiplicación de matrices ==no es [[Conmutatividad|conmutativa]]==.
