@@ -5,7 +5,7 @@ La CPU (Central Processing Unit) es considerada el cerebro de la máquina. Es un
 Estas instrucciones pueden ser:
 
 - **Operaciones aritméticas:** Suma, resta, multiplicación, división.
-- **Operaciones lógicas:** Comparaciones (mayor que, menor que, igual a).
+- **Operaciones lógicas:** Comparaciones con [[Operadores lógicos]].
 - **Control de flujo:** Determinar el orden en que se ejecutan las instrucciones.
 - **Entrada/Salida (E/S):** Transferencia de datos entre la CPU y otros dispositivos.
 

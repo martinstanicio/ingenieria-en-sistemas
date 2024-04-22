@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "CPU",
+      "path": "Arquitectura de Computadoras/CPU.md"
+    },
+    {
+      "basename": "Componentes básicos de una computadora",
+      "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
+    },
+    {
+      "basename": "Arquitectura Harvard",
+      "path": "Arquitectura de Computadoras/Arquitectura Harvard.md"
+    },
+    {
+      "basename": "Arquitectura Harvard",
+      "path": "Arquitectura de Computadoras/Arquitectura Harvard.canvas"
+    },
+    {
+      "basename": "Espacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
       "basename": "Matriz escalonada",
       "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "Operadores lógicos",
       "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Diseño descendente",
-      "path": "Algoritmos y Estructuras de Datos/Diseño descendente.md"
-    },
-    {
-      "basename": "Diagrama de flujo",
-      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
-    },
-    {
-      "basename": "Variable ligada o cuantificada",
-      "path": "Lógica y Estructuras Discretas/Variable ligada o cuantificada.md"
-    },
-    {
-      "basename": "Universo",
-      "path": "Lógica y Estructuras Discretas/Universo.md"
-    },
-    {
-      "basename": "Generalización universal",
-      "path": "Lógica y Estructuras Discretas/Generalización universal.md"
-    },
-    {
-      "basename": "Generalización existencial",
-      "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
     }
   ],
   "omittedPaths": [],
