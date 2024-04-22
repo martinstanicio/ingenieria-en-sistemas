@@ -27,4 +27,4 @@ Son aquellas operaciones que podemos realizar con las ecuaciones de un SEL, que 
 2. Sumar a una ecuación el múltiplo de otra.
 3. Intercambiar el orden de las ecuaciones.
 
-También se puede aplicar sobre la [[Representación matricial]].
+También se puede aplicar sobre la [[Matriz|Representación matricial]].

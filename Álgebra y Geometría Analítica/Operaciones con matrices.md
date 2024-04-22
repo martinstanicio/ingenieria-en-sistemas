@@ -1,0 +1,98 @@
+# Operaciones con matrices
+
+Existen ciertas condiciones para realizar operaciones con [[Matriz|matrices]].
+
+## Suma
+
+Dos matrices solo puede sumarse si ==tienen el mismo tamaño==.
+
+$$
+A^{2 \times 3} \land B^{2 \times 3}\Rightarrow A + B \in \mathbb{R}^{2 \times 3}
+$$
+
+Cada elemento se suma con el elemento que esté en su misma posición pero en la otra matriz.
+
+$$
+A+B=
+\left( 
+    \begin{array}{c}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+    \end{array}
+\right)
++
+\left( 
+    \begin{array}{c}
+        7 & 8 & 9 \\
+        10 & 11 & 12 \\
+    \end{array}
+\right)
+=
+\left( 
+    \begin{array}{c}
+        8 & 10 & 12 \\
+        14 & 16 & 18 \\
+    \end{array}
+\right)
+$$
+
+## Multiplicación por un escalar
+
+Se aplica ==distributiva de la multiplicación entre un escalar y un vector==.
+
+$$
+A \in \mathbb{R}^{2 \times 3} \land \alpha \in \mathbb{R}\Rightarrow
+\alpha A =
+\alpha
+\left( 
+    \begin{array}{c}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+    \end{array}
+\right)
+=
+\left( 
+    \begin{array}{c}
+        \alpha1 & \alpha2 & \alpha3 \\
+        \alpha4 & \alpha5 & \alpha6 \\
+    \end{array}
+\right)
+$$
+
+## Trasposición
+
+Se invierten las filas y columnas.
+
+$$
+A\in\mathbb{R}^{2 \times 3} \Rightarrow A^t \in\mathbb{R}^{3 \times 2}
+$$
+
+Por ejemplo.
+
+$$
+A^t=
+\left( 
+    \begin{array}{c}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+    \end{array}
+\right)^t
+=
+\left( 
+    \begin{array}{c}
+        1 & 4 \\
+        2 & 5 \\
+        3 & 6 \\
+    \end{array}
+\right)
+$$
+
+## Multiplicación de matrices
+
+Para que sea posible, ==el número de columnas de la primera, debe ser igual al número de filas de la segunda==. La matriz resultante tendrá la misma cantidad de filas que la primera, y la misma cantidad de columnas que la segunda.
+
+$$
+A^{m \times n} \land B^{n \times p}\Rightarrow AB \in \mathbb{R}^{m \times p}
+$$
+
+La multiplicación de matrices ==no es conmutativa==.

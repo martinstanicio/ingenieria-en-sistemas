@@ -1,4 +1,9 @@
-# Representación matricial
+---
+aliases:
+  - Representación matricial
+---
+
+# Matriz
 
 Son una forma más concisa de escribir un [[Sistema de ecuaciones lineales (SEL)]].
 

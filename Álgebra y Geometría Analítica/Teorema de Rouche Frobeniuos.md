@@ -1,6 +1,6 @@
 # Teorema de Rouche Frobeniuos
 
-> Un [[Sistema de ecuaciones lineales (SEL)]] de $m \times n$ es [[Sistema compatible (SC)|compatible]] si y solo si el [[Rango de una matriz|rango]] de la [[Representación matricial#Matriz de coeficientes|matriz de coeficientes]] del sistema es igual al rango de la [[Representación matricial#Matriz ampliada|matriz ampliada]] con los términos independientes.
+> Un [[Sistema de ecuaciones lineales (SEL)]] de $m \times n$ es [[Sistema compatible (SC)|compatible]] si y solo si el [[Rango de una matriz|rango]] de la [[Matriz#Matriz de coeficientes|matriz de coeficientes]] del sistema es igual al rango de la [[Matriz#Matriz ampliada|matriz ampliada]] con los términos independientes.
 
 Por lo tanto, sea $r_A$ el rango de la matriz de coeficientes $A$, $r_{Ab}$ el rango de la matriz ampliada $Ab$, y $n$ el número de incógnitas, entonces:
 

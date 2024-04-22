@@ -1,6 +1,6 @@
 # Matriz escalonada reducida
 
-Para que una [[Representación matricial|matriz]] esté en este formato, se deben cumplir las siguientes condiciones:
+Para que una [[Matriz]] esté en este formato, se deben cumplir las siguientes condiciones:
 
 1. Debe estar en [[Matriz escalonada|forma escalonada]].
 2. Todos los [[Pivote|pivotes]] deben ser igual a $1$.
