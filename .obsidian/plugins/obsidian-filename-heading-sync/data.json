@@ -1,0 +1,10 @@
+{
+  "userIllegalSymbols": [],
+  "ignoredFiles": {},
+  "ignoreRegex": "README",
+  "useFileOpenHook": true,
+  "useFileSaveHook": true,
+  "newHeadingStyle": "Prefix",
+  "replaceStyle": true,
+  "underlineString": "==="
+}

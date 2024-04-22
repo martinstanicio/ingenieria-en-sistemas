@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Sistemas y Procesos de Negocios/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Lógica y Estructuras Discretas/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Inteligencia Artificial/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Inglés I/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Ingeniería y Sociedad/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Física I/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Arquitectura de Computadoras/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Análisis Matemático I/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Algoritmos y Estructuras de Datos/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Álgebra y Geometría Analítica/README.md"
+    },
+    {
+      "basename": "Alcance",
+      "path": "Sistemas y Procesos de Negocios/Alcance.md"
+    },
+    {
       "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
       "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
     },
@@ -151,54 +199,6 @@
     {
       "basename": "Lenguaje de bajo nivel o ensamblador",
       "path": "Algoritmos y Estructuras de Datos/Lenguaje de bajo nivel o ensamblador.md"
-    },
-    {
-      "basename": "Interpretador",
-      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
-    },
-    {
-      "basename": "Error lógico",
-      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
-    },
-    {
-      "basename": "Bifurcaciones",
-      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
-    },
-    {
-      "basename": "20240419 - Bifurcación doble",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
-    },
-    {
-      "basename": "Asamblea universitaria",
-      "path": "Ingeniería y Sociedad/Asamblea universitaria.md"
-    },
-    {
-      "basename": "Barreras",
-      "path": "Ingeniería y Sociedad/Barreras.md"
-    },
-    {
-      "basename": "Disyunción exclusiva (⊕)",
-      "path": "Lógica y Estructuras Discretas/Disyunción exclusiva (⊕).md"
-    },
-    {
-      "basename": "Cardinal",
-      "path": "Álgebra y Geometría Analítica/Cardinal.md"
-    },
-    {
-      "basename": "Estructuras de datos",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
-    },
-    {
-      "basename": "Variables",
-      "path": "Algoritmos y Estructuras de Datos/Variables.md"
-    },
-    {
-      "basename": "Pseudocódigo",
-      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
     }
   ],
   "omittedPaths": [],
