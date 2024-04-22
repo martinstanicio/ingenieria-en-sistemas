@@ -87,12 +87,48 @@ A^t=
 \right)
 $$
 
-## Multiplicación de matrices
+## Producto de matrices
 
 Para que sea posible, ==el número de columnas de la primera, debe ser igual al número de filas de la segunda==. La matriz resultante tendrá la misma cantidad de filas que la primera, y la misma cantidad de columnas que la segunda.
 
 $$
 A^{m \times n} \land B^{n \times p}\Rightarrow AB \in \mathbb{R}^{m \times p}
 $$
+
+Por ejemplo, para $AB^t$:
+
+$$
+AB^t=
+\left( 
+    \begin{array}{c}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+    \end{array}
+\right)
+\left( 
+    \begin{array}{c}
+        7 & 8 & 9 \\
+        10 & 11 & 12 \\
+    \end{array}
+\right)^t
+=
+\left( 
+    \begin{array}{c}
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+    \end{array}
+\right)
+\left( 
+    \begin{array}{c}
+        7 & 10 \\
+        8 & 11 \\
+        9 & 12 \\
+    \end{array}
+\right)
+=
+C^{2\times2}
+$$
+Ahora calculamos cada uno de los 4 elementos de $C$.
+- $C_{11} = \left(\begin{array}{c}1 & 2 & 3\end{array}\right) \left(\begin{array}{c}7 \\ 8 \\ 9 \end{array}\right) = $
 
 La multiplicación de matrices ==no es conmutativa==.
