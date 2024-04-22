@@ -39,5 +39,8 @@
   "promptDelete": false,
   "foldHeading": false,
   "foldIndent": false,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "userIgnoreFilters": [
+    "/.*README/"
+  ]
 }

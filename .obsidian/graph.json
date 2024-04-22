@@ -1,11 +1,11 @@
 {
   "collapse-filter": false,
-  "search": "path:-\"Actividades\"",
+  "search": "-path:\"Actividades\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:\"Álgebra y Geometría Analítica\" path:\"Álgebra y Geometría Analítica\"  ",
@@ -81,6 +81,6 @@
   "repelStrength": 15,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.16348370567220535,
+  "scale": 0.16348370567220605,
   "close": true
 }

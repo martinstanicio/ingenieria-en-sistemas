@@ -195,10 +195,6 @@
     {
       "basename": "Estructuras de control",
       "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
-    },
-    {
-      "basename": "Lenguaje de bajo nivel o ensamblador",
-      "path": "Algoritmos y Estructuras de Datos/Lenguaje de bajo nivel o ensamblador.md"
     }
   ],
   "omittedPaths": [],

@@ -27,3 +27,27 @@
 17. [[Probabilidades y Estadísticas/README|Probabilidades y Estadísticas]]
 18. [[Economía/README|Economía]]
 19. [[Bases de Datos/README|Bases de Datos]]
+20. [[Desarrollo de Software/README|Desarrollo de Software]]
+21. [[Comunicación de Datos/README|Comunicación de Datos]]
+22. [[Análisis Numérico/README|Análisis Numérico]]
+23. [[Diseño de Sistemas de Información/README|Diseño de Sistemas de Información]]
+
+## Cuarto año
+
+24. [[Legislación/README|Legislación]]
+25. [[Ingeniería y Calidad de Software/README|Ingeniería y Calidad de Software]]
+26. [[Redes de Datos/README|Redes de Datos]]
+27. [[Investigación Operativa/README|Investigación Operativa]]
+28. [[Simulación/README|Simulación]]
+29. [[Tecnologías para la Automatización/README|Tecnologías para la Automatización]]
+30. [[Administración de Sistemas de Información/README|Administración de Sistemas de Información]]
+
+## Quinto año
+
+31. [[Inteligencia Artificial/README|Inteligencia Artificial]]
+32. [[Ciencia de Datos/README|Ciencia de Datos]]
+33. [[Sistemas de Gestión/README|Sistemas de Gestión]]
+34. [[Gestión Gerencial/README|Gestión Gerencial]]
+35. [[Seguridad en los Sistemas de Información/README|Seguridad en los Sistemas de Información]]
+
+36. [[Proyecto Final/README|Proyecto Final]]
