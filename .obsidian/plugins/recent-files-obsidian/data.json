@@ -1,200 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "Espacio vectorial trivial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
+    },
+    {
+      "basename": "Generalización existencial",
+      "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
+    },
+    {
+      "basename": "Generalización universal",
+      "path": "Lógica y Estructuras Discretas/Generalización universal.md"
+    },
+    {
+      "basename": "Especificación existencial",
+      "path": "Lógica y Estructuras Discretas/Especificación existencial.md"
+    },
+    {
+      "basename": "Especificación universal",
+      "path": "Lógica y Estructuras Discretas/Especificación universal.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Sistemas y Procesos de Negocios/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Lógica y Estructuras Discretas/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Inteligencia Artificial/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Inglés I/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Ingeniería y Sociedad/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Física I/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Arquitectura de Computadoras/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Análisis Matemático I/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Algoritmos y Estructuras de Datos/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Álgebra y Geometría Analítica/README.md"
-    },
-    {
-      "basename": "Alcance",
-      "path": "Sistemas y Procesos de Negocios/Alcance.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
-    },
-    {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
-    },
-    {
-      "basename": "CPU",
-      "path": "Arquitectura de Computadoras/CPU.md"
-    },
-    {
-      "basename": "Componentes básicos de una computadora",
-      "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
-    },
-    {
-      "basename": "Arquitectura Harvard",
-      "path": "Arquitectura de Computadoras/Arquitectura Harvard.md"
-    },
-    {
-      "basename": "Arquitectura Harvard",
-      "path": "Arquitectura de Computadoras/Arquitectura Harvard.canvas"
-    },
-    {
-      "basename": "Espacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
-    },
-    {
-      "basename": "Matriz escalonada",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
-    },
-    {
-      "basename": "Pivote",
-      "path": "Álgebra y Geometría Analítica/Pivote.md"
-    },
-    {
-      "basename": "Rango de una matriz",
-      "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
-    },
-    {
-      "basename": "Representación matricial",
-      "path": "Álgebra y Geometría Analítica/Representación matricial.md"
-    },
-    {
-      "basename": "Números complejos",
-      "path": "Álgebra y Geometría Analítica/Números complejos.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
-    },
-    {
-      "basename": "Sistema compatible (SC)",
-      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
-    },
-    {
-      "basename": "Subespacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Subespacio vectorial.md"
-    },
-    {
-      "basename": "Teorema de Rouche Frobeniuos",
-      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
-    },
-    {
-      "basename": "Rango",
-      "path": "Sistemas y Procesos de Negocios/Rango.md"
-    },
-    {
-      "basename": "Adjetivos o pronombres demostrativos",
-      "path": "Inglés I/Adjetivos o pronombres demostrativos.md"
-    },
-    {
-      "basename": "Frase o grupo nominal",
-      "path": "Inglés I/Frase o grupo nominal.md"
-    },
-    {
-      "basename": "Adjetivo",
-      "path": "Inglés I/Adjetivo.md"
-    },
-    {
-      "basename": "Sustantivos compuestos",
-      "path": "Inglés I/Sustantivos compuestos.md"
-    },
-    {
-      "basename": "Sustantivo",
-      "path": "Inglés I/Sustantivo.md"
-    },
-    {
-      "basename": "Cuantificadores",
-      "path": "Inglés I/Cuantificadores.md"
-    },
-    {
-      "basename": "False friends",
-      "path": "Inglés I/False friends.md"
-    },
-    {
-      "basename": "Ubicación del adjetivo",
-      "path": "Inglés I/Ubicación del adjetivo.md"
-    },
-    {
-      "basename": "Vocabulario procedimental",
-      "path": "Inglés I/Vocabulario procedimental.md"
-    },
-    {
-      "basename": "Sustantivos plurales del latín o griego",
-      "path": "Inglés I/Sustantivos plurales del latín o griego.md"
-    },
-    {
-      "basename": "02 - Abreviaturas y siglas",
-      "path": "Inglés I/Actividades/02 - Abreviaturas y siglas.md"
-    },
-    {
-      "basename": "Sustantivos genéricos",
-      "path": "Inglés I/Sustantivos genéricos.md"
-    },
-    {
-      "basename": "Artículo",
-      "path": "Inglés I/Artículo.md"
-    },
-    {
-      "basename": "Relación entre sustantivos",
-      "path": "Inglés I/Relación entre sustantivos.md"
-    },
-    {
-      "basename": "Sustantivos plurales",
-      "path": "Inglés I/Sustantivos plurales.md"
-    },
-    {
-      "basename": "Campo o cuerpo",
-      "path": "Álgebra y Geometría Analítica/Campo o cuerpo.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "Sinergia",
-      "path": "Sistemas y Procesos de Negocios/Sinergia.md"
-    },
-    {
-      "basename": "Salidas o resultados",
-      "path": "Sistemas y Procesos de Negocios/Salidas o resultados.md"
-    },
-    {
-      "basename": "Estructuras de control",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
     }
   ],
   "omittedPaths": [],

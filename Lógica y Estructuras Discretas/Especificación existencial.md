@@ -1,4 +1,5 @@
 # Especificación existencial
+
 $$
 \left.
     \begin{array}{l}
