@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
+      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
       "basename": "CPU",
       "path": "Arquitectura de Computadoras/CPU.md"
     },
@@ -19,10 +27,6 @@
     {
       "basename": "Espacio vectorial",
       "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
-    },
-    {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
     },
     {
       "basename": "Matriz escalonada",
@@ -195,10 +199,6 @@
     {
       "basename": "Python",
       "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
     }
   ],
   "omittedPaths": [],
