@@ -5,20 +5,72 @@
       "path": "Álgebra y Geometría Analítica/Operaciones con matrices.md"
     },
     {
-      "basename": "Elemento opuesto o inverso",
-      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
+      "basename": "Matriz involutiva",
+      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
+    },
+    {
+      "basename": "Matriz idempotente",
+      "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
+    },
+    {
+      "basename": "Matriz nilpotente",
+      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
+    },
+    {
+      "basename": "Matriz periódica",
+      "path": "Álgebra y Geometría Analítica/Matriz periódica.md"
+    },
+    {
+      "basename": "Traza de una matriz",
+      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
+    },
+    {
+      "basename": "Matriz simétrica",
+      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
     },
     {
       "basename": "Matriz inversa",
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     },
     {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+      "basename": "Teorema del rango",
+      "path": "Álgebra y Geometría Analítica/Teorema del rango.md"
+    },
+    {
+      "basename": "20240422 - Casos posesivos",
+      "path": "Inglés I/Actividades/20240422 - Casos posesivos.md"
+    },
+    {
+      "basename": "20240415 - La frase nominal",
+      "path": "Inglés I/Actividades/20240415 - La frase nominal.md"
+    },
+    {
+      "basename": "20240415 - La frase nominal (conflict 2024-04-15-20-04-25)",
+      "path": "Inglés I/Actividades/20240415 - La frase nominal (conflict 2024-04-15-20-04-25).md"
+    },
+    {
+      "basename": "Matriz identidad",
+      "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
     },
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "20240416 - Triángulo rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
+    },
+    {
+      "basename": "Elemento opuesto o inverso",
+      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
     },
     {
       "basename": "Rango de una matriz",

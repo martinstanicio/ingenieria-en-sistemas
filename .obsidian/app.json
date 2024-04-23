@@ -42,5 +42,6 @@
   "showLineNumber": false,
   "userIgnoreFilters": [
     "/.*README/"
-  ]
+  ],
+  "mobilePullAction": "editor:save-file"
 }
