@@ -5,16 +5,20 @@
       "path": "Análisis Matemático I/Límite.md"
     },
     {
+      "basename": "Sistema de ecuaciones lineales (SEL)",
+      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
+    },
+    {
+      "basename": "Continuidad",
+      "path": "Análisis Matemático I/Continuidad.md"
+    },
+    {
       "basename": "Universo",
       "path": "Lógica y Estructuras Discretas/Universo.md"
     },
     {
       "basename": "Función",
       "path": "Análisis Matemático I/Función.md"
-    },
-    {
-      "basename": "Continuidad",
-      "path": "Análisis Matemático I/Continuidad.md"
     },
     {
       "basename": "Operaciones con matrices",
@@ -115,10 +119,6 @@
     {
       "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
       "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales (SEL)",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
     },
     {
       "basename": "Pivote",
