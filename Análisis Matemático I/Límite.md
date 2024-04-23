@@ -7,8 +7,8 @@ Si nos aproximamos por derecha y por izquierda del punto, y la imagen se acerca 
 $$
 \left.
     \begin{array}{l}
-        \lim\limits_{x \to a} f(x) = L \\
-        \lim\limits_{x \to a} f(x) = L
+        \lim\limits_{x \to a^-} f(x) = L \\
+        \lim\limits_{x \to a^+} f(x) = L
     \end{array} 
 \right\}
 \lim\limits_{x \to a} f(x) = L
