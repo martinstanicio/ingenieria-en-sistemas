@@ -20,8 +20,8 @@ flowchart LR
     AND["&"]
     Z[Z]
 
-    A & B --> AND
-    AND --> Z
+    A & B --- AND
+    AND --- Z
 ```
 
 ## Tabla de verdades
@@ -30,9 +30,9 @@ Podemos representarla mediante una [[Tabla de verdades]], igual a la de la de un
 
 ![[Conjunción (∧)#^fd3490]]
 
-| $A$ | $B$ | $Z = AB$ |
-| --- | --- | -------- |
-| 0   | 0   | 0        |
-| 0   | 1   | 0        |
-| 1   | 0   | 0        |
-| 1   | 1   | 1        |
+| $A$ | $B$ | $Z = A \cdot B$ |
+| --- | --- | --------------- |
+| 0   | 0   | 0               |
+| 0   | 1   | 0               |
+| 1   | 0   | 0               |
+| 1   | 1   | 1               |

@@ -20,8 +20,8 @@ flowchart LR
     OR["≥1"]
     Z[Z]
 
-    A & B --> OR
-    OR --> Z
+    A & B --- OR
+    OR --- Z
 ```
 
 ## Tabla de verdades

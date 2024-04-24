@@ -15,6 +15,8 @@ $$
 | 1   | 0   | 0                     |
 | 1   | 1   | 1                     |
 
+^b9afeb
+
 También se puede escribir como:
 
 - $p$ si y sólo si $q$

@@ -8,3 +8,6 @@ Es verdadera si $p$ o $q$ son verdaderas, pero no ambas. Utiliza el símbolo "$\
 | 0   | 1   | 1            |
 | 1   | 0   | 1            |
 | 1   | 1   | 0            |
+
+^9bd0d6
+

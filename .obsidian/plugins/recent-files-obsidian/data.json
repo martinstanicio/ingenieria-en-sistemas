@@ -1,16 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "Compuerta NOT",
-      "path": "Arquitectura de Computadoras/Compuerta NOT.md"
+      "basename": "Compuerta XNOR",
+      "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
     },
     {
       "basename": "Compuerta AND",
       "path": "Arquitectura de Computadoras/Compuerta AND.md"
     },
     {
+      "basename": "Compuerta NAND",
+      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
+    },
+    {
+      "basename": "Bicondicional (↔)",
+      "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
+    },
+    {
+      "basename": "Compuerta XOR",
+      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
+    },
+    {
       "basename": "Compuerta OR",
       "path": "Arquitectura de Computadoras/Compuerta OR.md"
+    },
+    {
+      "basename": "Compuerta NOT",
+      "path": "Arquitectura de Computadoras/Compuerta NOT.md"
+    },
+    {
+      "basename": "Compuerta NOR",
+      "path": "Arquitectura de Computadoras/Compuerta NOR.md"
+    },
+    {
+      "basename": "Disyunción exclusiva (⊕)",
+      "path": "Lógica y Estructuras Discretas/Disyunción exclusiva (⊕).md"
+    },
+    {
+      "basename": "Tabla de verdades",
+      "path": "Lógica y Estructuras Discretas/Tabla de verdades.md"
     },
     {
       "basename": "202403410 - Unión e intersección",
@@ -171,14 +199,6 @@
     {
       "basename": "Especificación existencial",
       "path": "Lógica y Estructuras Discretas/Especificación existencial.md"
-    },
-    {
-      "basename": "Especificación universal",
-      "path": "Lógica y Estructuras Discretas/Especificación universal.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     }
   ],
   "omittedPaths": [],

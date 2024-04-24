@@ -16,12 +16,12 @@ Podemos representarla de forma gráfica.
 
 
 ```mermaid
-flowchart LR
+flowchart RL
     Z[Z]
     NOT["1"]
-    NOTZ[Z]
+    NOTZ[-Z]
 
-    Z --> NOT --> NOTZ
+    NOTZ --o NOT --- Z
 ```
 
 ## Tabla de verdades
