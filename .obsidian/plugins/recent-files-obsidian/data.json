@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Compuerta NAND",
+      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
+    },
+    {
+      "basename": "Compuerta XOR",
+      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
+    },
+    {
+      "basename": "Compuerta NOR",
+      "path": "Arquitectura de Computadoras/Compuerta NOR.md"
+    },
+    {
       "basename": "Compuertas lógicas",
       "path": "Arquitectura de Computadoras/Compuertas lógicas.md"
     },
@@ -13,16 +25,8 @@
       "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
     },
     {
-      "basename": "Compuerta NAND",
-      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
-    },
-    {
       "basename": "Bicondicional (↔)",
       "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
-    },
-    {
-      "basename": "Compuerta XOR",
-      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
     },
     {
       "basename": "Compuerta OR",
@@ -31,10 +35,6 @@
     {
       "basename": "Compuerta NOT",
       "path": "Arquitectura de Computadoras/Compuerta NOT.md"
-    },
-    {
-      "basename": "Compuerta NOR",
-      "path": "Arquitectura de Computadoras/Compuerta NOR.md"
     },
     {
       "basename": "Disyunción exclusiva (⊕)",
