@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Compuerta XNOR",
-      "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
+      "basename": "Compuertas lógicas",
+      "path": "Arquitectura de Computadoras/Compuertas lógicas.md"
     },
     {
       "basename": "Compuerta AND",
       "path": "Arquitectura de Computadoras/Compuerta AND.md"
+    },
+    {
+      "basename": "Compuerta XNOR",
+      "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
     },
     {
       "basename": "Compuerta NAND",
@@ -51,10 +55,6 @@
     {
       "basename": "Implicación (→)",
       "path": "Lógica y Estructuras Discretas/Implicación (→).md"
-    },
-    {
-      "basename": "Compuertas lógicas",
-      "path": "Arquitectura de Computadoras/Compuertas lógicas.md"
     },
     {
       "basename": "Límite",
@@ -195,10 +195,6 @@
     {
       "basename": "Generalización universal",
       "path": "Lógica y Estructuras Discretas/Generalización universal.md"
-    },
-    {
-      "basename": "Especificación existencial",
-      "path": "Lógica y Estructuras Discretas/Especificación existencial.md"
     }
   ],
   "omittedPaths": [],
