@@ -4,28 +4,14 @@ Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==suma== 
 
 ## Representación simbólica
 
-Podemos representarla de forma simbólica, de tres formas:
+Podemos representarla de forma simbólica, de dos formas:
 
 - $A + B = Z$
-- $A \cup B = Z$
 - $A \lor B = Z$
 
 ## Representación gráfica
 
 Podemos representarla de forma gráfica, de dos formas:
-
-```mermaid
-flowchart LR
-    A[A]
-    B[B]
-    OR["|"]
-    Z[Z]
-
-    A & B --> OR
-    OR --> Z
-```
-
-O también como:
 
 ```mermaid
 flowchart LR

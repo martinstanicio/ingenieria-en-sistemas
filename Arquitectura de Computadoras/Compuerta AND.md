@@ -4,38 +4,24 @@ Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==multipl
 
 ## Representación simbólica
 
-Podemos representarla de forma simbólica, de tres formas:
+Podemos representarla de forma simbólica, de dos formas:
 
 - $A \cdot B = Z$
-- $A \cap B = Z$
 - $A \land B = Z$
 
 ## Representación gráfica
 
-Podemos representarla de forma gráfica, de dos formas:
+Podemos representarla de forma gráfica:
 
 ```mermaid
 flowchart LR
     A[A]
     B[B]
-    OR["&"]
+    AND["&"]
     Z[Z]
 
-    A & B --> OR
-    OR --> Z
-```
-
-O también como:
-
-```mermaid
-flowchart LR
-    A[A]
-    B[B]
-    OR["=1"]
-    Z[Z]
-
-    A & B --> OR
-    OR --> Z
+    A & B --> AND
+    AND --> Z
 ```
 
 ## Tabla de verdades

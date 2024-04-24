@@ -12,30 +12,16 @@ Podemos representarla de forma simbólica, de tres formas:
 
 ## Representación gráfica
 
-Podemos representarla de forma gráfica, de dos formas:
+Podemos representarla de forma gráfica.
+
 
 ```mermaid
 flowchart LR
-    A[A]
-    B[B]
-    OR["|"]
     Z[Z]
+    NOT["1"]
+    NOTZ[Z]
 
-    A & B --> OR
-    OR --> Z
-```
-
-O también como:
-
-```mermaid
-flowchart LR
-    A[A]
-    B[B]
-    OR["≥1"]
-    Z[Z]
-
-    A & B --> OR
-    OR --> Z
+    Z --> NOT --> NOTZ
 ```
 
 ## Tabla de verdades
