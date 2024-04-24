@@ -1,16 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Compuerta NAND",
-      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
+      "basename": "Ley de Coulomb",
+      "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
     },
     {
       "basename": "Compuerta XOR",
       "path": "Arquitectura de Computadoras/Compuerta XOR.md"
     },
     {
+      "basename": "Compuerta NAND",
+      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
+    },
+    {
       "basename": "Compuerta NOR",
       "path": "Arquitectura de Computadoras/Compuerta NOR.md"
+    },
+    {
+      "basename": "Compuerta OR",
+      "path": "Arquitectura de Computadoras/Compuerta OR.md"
+    },
+    {
+      "basename": "Ordenanzas y resoluciones",
+      "path": "Ingeniería y Sociedad/Ordenanzas y resoluciones.md"
     },
     {
       "basename": "Compuertas lógicas",
@@ -27,10 +39,6 @@
     {
       "basename": "Bicondicional (↔)",
       "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
-    },
-    {
-      "basename": "Compuerta OR",
-      "path": "Arquitectura de Computadoras/Compuerta OR.md"
     },
     {
       "basename": "Compuerta NOT",
@@ -191,10 +199,6 @@
     {
       "basename": "Generalización existencial",
       "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
-    },
-    {
-      "basename": "Generalización universal",
-      "path": "Lógica y Estructuras Discretas/Generalización universal.md"
     }
   ],
   "omittedPaths": [],
