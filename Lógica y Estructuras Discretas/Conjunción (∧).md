@@ -8,3 +8,6 @@ Solo es verdadera si $p$ y $q$ lo son. Utilizamos el símbolo "$\land$".
 | 0   | 1   | 0           |
 | 1   | 0   | 0           |
 | 1   | 1   | 1           |
+
+^fd3490
+

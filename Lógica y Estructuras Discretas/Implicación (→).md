@@ -9,6 +9,8 @@ Solo es falsa si el **antecedente** ($p$, también llamado condición suficiente
 | 1   | 0   | 0                 |
 | 1   | 1   | 1                 |
 
+^3f8a0c
+
 También se puede escribir como:
 
 - si $p$, $q$

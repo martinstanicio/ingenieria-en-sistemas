@@ -8,3 +8,6 @@ Es verdadera si $p$ o $q$, o ambas, son verdaderas. Utilizamos el símbolo "$\lo
 | 0   | 1   | 1          |
 | 1   | 0   | 1          |
 | 1   | 1   | 1          |
+
+^632ed6
+
