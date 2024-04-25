@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Dinámica",
+      "path": "Física I/Dinámica.md"
+    },
+    {
+      "basename": "20240415 - La frase nominal",
+      "path": "Inglés I/Actividades/20240415 - La frase nominal.md"
+    },
+    {
       "basename": "Proposiciones compuestas",
       "path": "Lógica y Estructuras Discretas/Proposiciones compuestas.md"
     },
@@ -165,14 +173,6 @@
       "path": "Inglés I/Actividades/20240422 - Casos posesivos.md"
     },
     {
-      "basename": "20240415 - La frase nominal",
-      "path": "Inglés I/Actividades/20240415 - La frase nominal.md"
-    },
-    {
-      "basename": "20240415 - La frase nominal (conflict 2024-04-15-20-04-25)",
-      "path": "Inglés I/Actividades/20240415 - La frase nominal (conflict 2024-04-15-20-04-25).md"
-    },
-    {
       "basename": "Matriz identidad",
       "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
     },
@@ -195,10 +195,6 @@
     {
       "basename": "Elemento neutro",
       "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
-    },
-    {
-      "basename": "Rango de una matriz",
-      "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
     }
   ],
   "omittedPaths": [],

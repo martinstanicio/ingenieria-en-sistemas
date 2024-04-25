@@ -1,5 +1,7 @@
 # 20240415 - La frase nominal
 
+## Identify nouns in these sentences
+
 1. Electricity is the flow of electric charge.
 	- Electricity: sustantivo.
 	- The flow.
@@ -33,9 +35,24 @@
 		- Some: cuantificador.
 		- Big-name: adjetivo-sustantivo usado como adjetivo.
 		- Companies: sustantivo.
-1. A system is a combination of many "things".
+	- Systems engineering.
+		- Systems: sustantivo como adjetivo.
+		- Engineering: sustantivo.
+	- Their products.
+		- Their: adjetivo posesivo.
+		- Products: sustantivo.
+5. A system is a combination of many "things".
+	- A system.
+		- A: artículo indefinido.
+		- System: sustantivo.
+	- A combination.
+		- A: artículo indefinido.
+		- Combination: sustantivo.
+	- Many "things".
+		- Many: cuantificador.
+		- Things: sustantivo.
 
-Translate into English.
+## Translate into English.
 
 1. **La ingeniería electrica es una disciplina técnica. Es el estudio, diseño y aplicación de la electricidad.**
    Electric engineering is a technical discipline. It's the study, design and application of electricity.
@@ -46,4 +63,4 @@ Translate into English.
 4. **El hiero, el carbono y el aluminio son elementos muy comunes en ingeniería.**
    Iron, carbon and aluminium are very common elements in engineering.
 5. **La corrosión en una reacción quimica. Es una reacción común en el acero templado.**
-   Corros is a chemical reaction. It's a common reaction in mild steel.
+   Corrosion is a chemical reaction. It's a common reaction in mild steel.
