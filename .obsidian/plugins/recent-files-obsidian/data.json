@@ -1,200 +1,80 @@
 {
   "recentFiles": [
     {
-      "basename": "Dinámica",
-      "path": "Física I/Dinámica.md"
+      "basename": "20240419 - Bifurcación doble",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
     },
     {
-      "basename": "20240415 - La frase nominal",
-      "path": "Inglés I/Actividades/20240415 - La frase nominal.md"
+      "basename": "Inteligencia artificial simbólica",
+      "path": "Inteligencia Artificial/Inteligencia artificial simbólica.md"
     },
     {
-      "basename": "Proposiciones compuestas",
-      "path": "Lógica y Estructuras Discretas/Proposiciones compuestas.md"
+      "basename": "Inteligencia artificial neuronal",
+      "path": "Inteligencia Artificial/Inteligencia artificial neuronal.md"
     },
     {
-      "basename": "Pasaje directo",
-      "path": "Arquitectura de Computadoras/Pasaje directo.md"
+      "basename": "README",
+      "path": "Inteligencia Artificial/README.md"
     },
     {
-      "basename": "Sistema decimal",
-      "path": "Arquitectura de Computadoras/Sistema decimal.md"
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
     },
     {
-      "basename": "Sistema binario",
-      "path": "Arquitectura de Computadoras/Sistema binario.md"
-    },
-    {
-      "basename": "Sistema hexadecimal",
-      "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
-    },
-    {
-      "basename": "Sistema octal",
-      "path": "Arquitectura de Computadoras/Sistema octal.md"
-    },
-    {
-      "basename": "Byte",
-      "path": "Arquitectura de Computadoras/Byte.md"
-    },
-    {
-      "basename": "Bit",
-      "path": "Arquitectura de Computadoras/Bit.md"
-    },
-    {
-      "basename": "Sistema numérico",
-      "path": "Arquitectura de Computadoras/Sistema numérico.md"
-    },
-    {
-      "basename": "Conjunto binario",
-      "path": "Lógica y Estructuras Discretas/Conjunto binario.md"
-    },
-    {
-      "basename": "Matriz involutiva",
-      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
-    },
-    {
-      "basename": "Ley de Coulomb",
-      "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
-    },
-    {
-      "basename": "Compuerta XOR",
-      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
-    },
-    {
-      "basename": "Compuerta NAND",
-      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
-    },
-    {
-      "basename": "Compuerta NOR",
-      "path": "Arquitectura de Computadoras/Compuerta NOR.md"
-    },
-    {
-      "basename": "Compuerta OR",
-      "path": "Arquitectura de Computadoras/Compuerta OR.md"
-    },
-    {
-      "basename": "Ordenanzas y resoluciones",
-      "path": "Ingeniería y Sociedad/Ordenanzas y resoluciones.md"
-    },
-    {
-      "basename": "Compuertas lógicas",
-      "path": "Arquitectura de Computadoras/Compuertas lógicas.md"
-    },
-    {
-      "basename": "Compuerta AND",
-      "path": "Arquitectura de Computadoras/Compuerta AND.md"
-    },
-    {
-      "basename": "Compuerta XNOR",
-      "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
-    },
-    {
-      "basename": "Bicondicional (↔)",
-      "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
-    },
-    {
-      "basename": "Compuerta NOT",
-      "path": "Arquitectura de Computadoras/Compuerta NOT.md"
-    },
-    {
-      "basename": "Disyunción exclusiva (⊕)",
-      "path": "Lógica y Estructuras Discretas/Disyunción exclusiva (⊕).md"
-    },
-    {
-      "basename": "Tabla de verdades",
-      "path": "Lógica y Estructuras Discretas/Tabla de verdades.md"
-    },
-    {
-      "basename": "202403410 - Unión e intersección",
-      "path": "Arquitectura de Computadoras/Actividades/202403410 - Unión e intersección.md"
-    },
-    {
-      "basename": "Conjunción (∧)",
-      "path": "Lógica y Estructuras Discretas/Conjunción (∧).md"
-    },
-    {
-      "basename": "Implicación (→)",
-      "path": "Lógica y Estructuras Discretas/Implicación (→).md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
-    },
-    {
-      "basename": "Continuidad",
-      "path": "Análisis Matemático I/Continuidad.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales (SEL)",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
-    },
-    {
-      "basename": "Universo",
-      "path": "Lógica y Estructuras Discretas/Universo.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
-    },
-    {
-      "basename": "Operaciones con matrices",
-      "path": "Álgebra y Geometría Analítica/Operaciones con matrices.md"
-    },
-    {
-      "basename": "Matriz idempotente",
-      "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
-    },
-    {
-      "basename": "Matriz nilpotente",
-      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
-    },
-    {
-      "basename": "Matriz periódica",
-      "path": "Álgebra y Geometría Analítica/Matriz periódica.md"
-    },
-    {
-      "basename": "Traza de una matriz",
-      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
-    },
-    {
-      "basename": "Matriz simétrica",
-      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
-    },
-    {
-      "basename": "Matriz inversa",
-      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
-    },
-    {
-      "basename": "Teorema del rango",
-      "path": "Álgebra y Geometría Analítica/Teorema del rango.md"
-    },
-    {
-      "basename": "20240422 - Casos posesivos",
-      "path": "Inglés I/Actividades/20240422 - Casos posesivos.md"
-    },
-    {
-      "basename": "Matriz identidad",
-      "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
+      "basename": "Interpretador",
+      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
     },
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
-      "basename": "Bifurcaciones",
-      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+      "basename": "Proposiciones",
+      "path": "Lógica y Estructuras Discretas/Proposiciones.md"
     },
     {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
+      "basename": "Proposiciones compuestas",
+      "path": "Lógica y Estructuras Discretas/Proposiciones compuestas.md"
     },
     {
-      "basename": "Elemento opuesto o inverso",
-      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
+      "basename": "Proposiciones simples",
+      "path": "Lógica y Estructuras Discretas/Proposiciones simples.md"
     },
     {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+      "basename": "Objetivo",
+      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
+    },
+    {
+      "basename": "Operaciones con matrices",
+      "path": "Álgebra y Geometría Analítica/Operaciones con matrices.md"
+    },
+    {
+      "basename": "Logaritmo natural de un complejo",
+      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
+    },
+    {
+      "basename": "Grupo abeliano",
+      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
+    },
+    {
+      "basename": "Espacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
+    },
+    {
+      "basename": "Escalar",
+      "path": "Álgebra y Geometría Analítica/Escalar.md"
+    },
+    {
+      "basename": "Conjunto linealmente dependiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+    },
+    {
+      "basename": "Diseño descendente",
+      "path": "Algoritmos y Estructuras de Datos/Diseño descendente.md"
+    },
+    {
+      "basename": "Compilador",
+      "path": "Algoritmos y Estructuras de Datos/Compilador.md"
     }
   ],
   "omittedPaths": [],
