@@ -1,6 +1,50 @@
 {
   "recentFiles": [
     {
+      "basename": "Proposiciones compuestas",
+      "path": "Lógica y Estructuras Discretas/Proposiciones compuestas.md"
+    },
+    {
+      "basename": "Pasaje directo",
+      "path": "Arquitectura de Computadoras/Pasaje directo.md"
+    },
+    {
+      "basename": "Sistema decimal",
+      "path": "Arquitectura de Computadoras/Sistema decimal.md"
+    },
+    {
+      "basename": "Sistema binario",
+      "path": "Arquitectura de Computadoras/Sistema binario.md"
+    },
+    {
+      "basename": "Sistema hexadecimal",
+      "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
+    },
+    {
+      "basename": "Sistema octal",
+      "path": "Arquitectura de Computadoras/Sistema octal.md"
+    },
+    {
+      "basename": "Byte",
+      "path": "Arquitectura de Computadoras/Byte.md"
+    },
+    {
+      "basename": "Bit",
+      "path": "Arquitectura de Computadoras/Bit.md"
+    },
+    {
+      "basename": "Sistema numérico",
+      "path": "Arquitectura de Computadoras/Sistema numérico.md"
+    },
+    {
+      "basename": "Conjunto binario",
+      "path": "Lógica y Estructuras Discretas/Conjunto binario.md"
+    },
+    {
+      "basename": "Matriz involutiva",
+      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
+    },
+    {
       "basename": "Ley de Coulomb",
       "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
     },
@@ -89,10 +133,6 @@
       "path": "Álgebra y Geometría Analítica/Operaciones con matrices.md"
     },
     {
-      "basename": "Matriz involutiva",
-      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
-    },
-    {
       "basename": "Matriz idempotente",
       "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
     },
@@ -159,46 +199,6 @@
     {
       "basename": "Rango de una matriz",
       "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
-    },
-    {
-      "basename": "Matriz escalonada",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
-    },
-    {
-      "basename": "Teorema de Rouche Frobeniuos",
-      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
-    },
-    {
-      "basename": "Técnica de eliminación de Gauss Jordan",
-      "path": "Álgebra y Geometría Analítica/Técnica de eliminación de Gauss Jordan.md"
-    },
-    {
-      "basename": "Técnica de eliminación de Gauss",
-      "path": "Álgebra y Geometría Analítica/Técnica de eliminación de Gauss.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales homogéneo asociado",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo asociado.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
-    },
-    {
-      "basename": "Pivote",
-      "path": "Álgebra y Geometría Analítica/Pivote.md"
-    },
-    {
-      "basename": "Matriz escalonada reducida",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
-    },
-    {
-      "basename": "Espacio vectorial trivial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
-    },
-    {
-      "basename": "Generalización existencial",
-      "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
     }
   ],
   "omittedPaths": [],
