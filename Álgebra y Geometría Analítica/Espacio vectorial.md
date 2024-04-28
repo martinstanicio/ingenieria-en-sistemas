@@ -8,7 +8,7 @@ Donde:
 
 1. $V$ es el nombre del mismo
 2. $+$ es la operación de suma
-3. $k$ es el [[Campo o cuerpo]] que representa a los escalares
+3. $k$ es el [[Cuerpo]] que representa a los escalares
 4. $\cdot$ es la operación de multiplicación
 
 Por ejemplo:

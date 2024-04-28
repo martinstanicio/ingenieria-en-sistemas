@@ -1,16 +1,56 @@
 {
   "recentFiles": [
     {
-      "basename": "20240426 - Número mayor",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
+      "basename": "Determinante",
+      "path": "Álgebra y Geometría Analítica/Determinante.md"
+    },
+    {
+      "basename": "Cuerpo",
+      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
+    },
+    {
+      "basename": "RREF",
+      "path": "Álgebra y Geometría Analítica/RREF.md"
+    },
+    {
+      "basename": "Matriz simétrica",
+      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
+    },
+    {
+      "basename": "Matriz periódica",
+      "path": "Álgebra y Geometría Analítica/Matriz periódica.md"
+    },
+    {
+      "basename": "Matriz nilpotente",
+      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
+    },
+    {
+      "basename": "Matriz involutiva",
+      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
+    },
+    {
+      "basename": "Matriz inversa",
+      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
+    },
+    {
+      "basename": "Matriz identidad",
+      "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
+    },
+    {
+      "basename": "Matriz idempotente",
+      "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
+    },
+    {
+      "basename": "Matriz escalonada reducida",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
+    },
+    {
+      "basename": "Matriz escalonada",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
     },
     {
       "basename": "Dinámica",
       "path": "Física I/Dinámica.md"
-    },
-    {
-      "basename": "Movimiento",
-      "path": "Física I/Movimiento.md"
     },
     {
       "basename": "Fuerza",
@@ -19,6 +59,14 @@
     {
       "basename": "Leyes de Newton",
       "path": "Física I/Leyes de Newton.md"
+    },
+    {
+      "basename": "20240426 - Número mayor",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
+    },
+    {
+      "basename": "Movimiento",
+      "path": "Física I/Movimiento.md"
     },
     {
       "basename": "20240409 - Sueldo",
@@ -151,54 +199,6 @@
     {
       "basename": "Interpretador",
       "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
-    },
-    {
-      "basename": "Proposiciones",
-      "path": "Lógica y Estructuras Discretas/Proposiciones.md"
-    },
-    {
-      "basename": "Proposiciones compuestas",
-      "path": "Lógica y Estructuras Discretas/Proposiciones compuestas.md"
-    },
-    {
-      "basename": "Proposiciones simples",
-      "path": "Lógica y Estructuras Discretas/Proposiciones simples.md"
-    },
-    {
-      "basename": "Objetivo",
-      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
-    },
-    {
-      "basename": "Operaciones con matrices",
-      "path": "Álgebra y Geometría Analítica/Operaciones con matrices.md"
-    },
-    {
-      "basename": "Logaritmo natural de un complejo",
-      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
-    },
-    {
-      "basename": "Grupo abeliano",
-      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
-    },
-    {
-      "basename": "Espacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
-    },
-    {
-      "basename": "Escalar",
-      "path": "Álgebra y Geometría Analítica/Escalar.md"
-    },
-    {
-      "basename": "Conjunto linealmente dependiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
-    },
-    {
-      "basename": "Diseño descendente",
-      "path": "Algoritmos y Estructuras de Datos/Diseño descendente.md"
-    },
-    {
-      "basename": "Compilador",
-      "path": "Algoritmos y Estructuras de Datos/Compilador.md"
     }
   ],
   "omittedPaths": [],

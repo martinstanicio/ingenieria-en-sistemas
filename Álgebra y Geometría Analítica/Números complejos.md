@@ -12,7 +12,7 @@ $$
 Re(z)=a \land Im(z)=b
 $$
 
-Debido a que tanto la suma como la multiplicación en $\mathbb{C}$ cumplen las condiciones para ser un [[Grupo abeliano]], se considera a los complejos un [[Campo o cuerpo]]. Sin embargo, a diferencia de los reales, los complejos ==**no están ordenados**==, por lo que no podemos utilizar, por ejemplo, el "mayor que" con ellos.
+Debido a que tanto la suma como la multiplicación en $\mathbb{C}$ cumplen las condiciones para ser un [[Grupo abeliano]], se considera a los complejos un [[Cuerpo]]. Sin embargo, a diferencia de los reales, los complejos ==**no están ordenados**==, por lo que no podemos utilizar, por ejemplo, el "mayor que" con ellos.
 
 Además, existe un [[Álgebra y Geometría Analítica/Isomorfismo]] entre los reales y un subconjunto de los complejos, pues un complejo puede ser expresado como un real cuando su parte imaginaria es 0:
 
