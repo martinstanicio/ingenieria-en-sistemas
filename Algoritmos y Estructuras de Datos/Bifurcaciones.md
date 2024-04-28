@@ -1,6 +1,6 @@
 # Bifurcaciones
 
-Es una condición en nuestro programa. Dependiendo del ==valor de verdad== de la condición evaluada, el código ejecutado será uno u otro. Esta formada por 3 partes básicas:
+Es una condición en nuestro programa. Dependiendo del ==valor de verdad== de la condición evaluada, el código ejecutado será uno u otro. Está formada por 3 partes básicas:
 
 1. Variable
 2. Operador de relación u [[Operadores lógicos|operador lógico]]
@@ -9,8 +9,10 @@ Es una condición en nuestro programa. Dependiendo del ==valor de verdad== de la
 Por ejemplo:
 
 $$
-x>5
+x > 5
 $$
+
+Podemos ==conectar múltiples condiciones== utilizando [[Conectivos lógicos]]. Los más comunes son [[Compuerta AND|AND]], [[Compuerta OR|OR]] y [[Compuerta NOT|NOT]].
 
 ## Bifurcación simple
 

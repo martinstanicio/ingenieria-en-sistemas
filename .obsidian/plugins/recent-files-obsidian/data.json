@@ -5,6 +5,110 @@
       "path": "Física I/Leyes de Newton.md"
     },
     {
+      "basename": "20240409 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
+    },
+    {
+      "basename": "20240409 - Triángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Triángulo.md"
+    },
+    {
+      "basename": "20240416 - Palindromo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
+    },
+    {
+      "basename": "20240416 - Triángulo rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
+    },
+    {
+      "basename": "20240419 - Bifurcación doble",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
+    },
+    {
+      "basename": "20240426 - Conectivos lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
+    },
+    {
+      "basename": "20240426 - Número mayor",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "Conectivos lógicos",
+      "path": "Lógica y Estructuras Discretas/Conectivos lógicos.md"
+    },
+    {
+      "basename": "Compuerta AND",
+      "path": "Arquitectura de Computadoras/Compuerta AND.md"
+    },
+    {
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Ecuación lineal",
+      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
+    },
+    {
+      "basename": "Subconjunto",
+      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
+    },
+    {
+      "basename": "Conjunto vacío",
+      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
+    },
+    {
+      "basename": "Teoría de conjuntos",
+      "path": "Lógica y Estructuras Discretas/Teoría de conjuntos.md"
+    },
+    {
+      "basename": "Prueba de existencia y unicidad",
+      "path": "Lógica y Estructuras Discretas/Prueba de existencia y unicidad.md"
+    },
+    {
+      "basename": "Prueba exhaustiva",
+      "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
+    },
+    {
+      "basename": "Pruebas vacías",
+      "path": "Lógica y Estructuras Discretas/Pruebas vacías.md"
+    },
+    {
+      "basename": "Pruebas triviales",
+      "path": "Lógica y Estructuras Discretas/Pruebas triviales.md"
+    },
+    {
+      "basename": "Sistemas axiomáticos",
+      "path": "Lógica y Estructuras Discretas/Sistemas axiomáticos.md"
+    },
+    {
+      "basename": "Demostración informal",
+      "path": "Lógica y Estructuras Discretas/Demostración informal.md"
+    },
+    {
+      "basename": "Axiomas",
+      "path": "Lógica y Estructuras Discretas/Axiomas.md"
+    },
+    {
       "basename": "Fuerza",
       "path": "Física I/Fuerza.md"
     },
@@ -29,10 +133,6 @@
       "path": "Lógica y Estructuras Discretas/Implicación (→).md"
     },
     {
-      "basename": "20240419 - Bifurcación doble",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
-    },
-    {
       "basename": "Inteligencia artificial simbólica",
       "path": "Inteligencia Artificial/Inteligencia artificial simbólica.md"
     },
@@ -45,16 +145,8 @@
       "path": "Inteligencia Artificial/README.md"
     },
     {
-      "basename": "Algoritmos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
       "basename": "Interpretador",
       "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Proposiciones",
