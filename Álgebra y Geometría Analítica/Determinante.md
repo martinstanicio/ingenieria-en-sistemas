@@ -35,17 +35,35 @@ $$
 
 ## Caso recursivo
 
-Si $n\geq3$, $A \in k^{n \times n}$
+Si $n\geq3$, $A \in k^{n \times n}$, el determinante de dicha matriz será la suma de los productos entre las coordenadas de ==una fila o columna y su respectivo adjunto==, es decir:
 
-El determinante de una matriz de $2\times2$ será la diferencia entre la multiplicación de los elementos de la diagonal principal, y la multiplicación de los elementos de la diagonal secundaria. Por ejemplo:
+$$
+\sum_{j=i}^n a_{ij} \cdot A_{ij}
+$$
+
+El Teorema de Laplace nos demuestra que podemos
+
+Por ejemplo:
 
 $$
 A=
 \left( 
     \begin{array}{c}
-        7 & -1 \\
-        2 & 3 \\
+        1 & -4 & 2 \\
+        -2 & 8 & -9 \\
+        -1 & 7 & 0 \\
     \end{array}
-\right),
-det(A) = a_{11} \cdot a_{22} - a_{21} \cdot a_{12} = 7 \cdot 3 - (-1 \cdot 2) = 23
+\right)
+$$
+
+Primero calculamos los tres [[Adjunto|adjuntos]] de los elementos de, por ejemplo, la primera fila.
+
+- $M_{11} = \left(\begin{array}{c} 8 & -9 \\ 7 & 0 \end{array}\right) \rightarrow A_{11} = (-1)^{1 + 1} \cdot \left|\begin{array}{c} 8 & -9 \\ 7 & 0 \end{array}\right| = (-1)^2 \cdot 63 = 63$
+- $M_{12} = \left(\begin{array}{c} -2 & -9 \\ -1 & 0 \end{array}\right) \rightarrow A_{12} = (-1)^{1 + 2} \cdot \left|\begin{array}{c} -2 & -9 \\ -1 & 0 \end{array}\right| = (-1)^3 \cdot (-9) = 9$
+- $M_{13} = \left(\begin{array}{c} -2 & 8 \\ -1 & 7 \end{array}\right) \rightarrow A_{13} = (-1)^{1 + 3} \cdot \left|\begin{array}{c} -2 & 8 \\ -1 & 7 \end{array}\right| = (-1)^4 \cdot (-6) = -6$
+
+Calculamos el determinante.
+
+$$
+det(A) = a_{11} \cdot A_{11} + a_{12} \cdot A_{12} + a_{13} \cdot A_{13} = 1 \cdot 63 + (-4) \cdot 9 + 2 \cdot (-6) = 63 - 36 - 12 = 15
 $$

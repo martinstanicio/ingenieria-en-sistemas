@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Determinante",
+      "path": "Álgebra y Geometría Analítica/Determinante.md"
+    },
+    {
+      "basename": "Teorema de Laplace",
+      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
+    },
+    {
       "basename": "Adjunto",
       "path": "Álgebra y Geometría Analítica/Adjunto.md"
     },
     {
       "basename": "Menor complementario",
       "path": "Álgebra y Geometría Analítica/Menor complementario.md"
-    },
-    {
-      "basename": "Determinante",
-      "path": "Álgebra y Geometría Analítica/Determinante.md"
     },
     {
       "basename": "Matriz",
@@ -195,10 +199,6 @@
     {
       "basename": "Inteligencia artificial simbólica",
       "path": "Inteligencia Artificial/Inteligencia artificial simbólica.md"
-    },
-    {
-      "basename": "Inteligencia artificial neuronal",
-      "path": "Inteligencia Artificial/Inteligencia artificial neuronal.md"
     }
   ],
   "omittedPaths": [],

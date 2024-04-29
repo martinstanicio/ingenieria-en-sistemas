@@ -10,6 +10,7 @@ Si tenemos una [[Matriz]] $A \in k^{n \times n}$, se llama **adjunto** o **cofac
 $$
 A_{ij} = (-1)^{i + j} \cdot det(M_{ij})
 $$
+
 Por ejemplo, para la siguiente matriz:
 
 $$
@@ -25,5 +26,7 @@ $$
 
 Algunos de los posibles adjuntos son:
 
-- $M_{23} = \left(\begin{array}{c} -1 & 3 \\ 0 & 5 \end{array}\right) \rightarrow A_$
-- $M_{31} = \left(\begin{array}{c} 3 & 7 \\ 6 & 8 \end{array}\right)$
+- $M_{23} = \left(\begin{array}{c} -1 & 3 \\ 0 & 5 \end{array}\right) \rightarrow A_{23} = (-1)^{2 + 3} \cdot \left|\begin{array}{c} -1 & 3 \\ 0 & 5 \end{array}\right| = (-1)^5 \cdot (-5) = -1(-5) = 5$
+- $M_{31} = \left(\begin{array}{c} 3 & 7 \\ 6 & 8 \end{array}\right) \rightarrow A_{31} = (-1)^{3 + 1} \cdot \left|\begin{array}{c} 3 & 7 \\ 6 & 8 \end{array}\right| = (-1)^4 \cdot (-18) = 1(-18) = -18$
+
+Una matriz tiene ==$n^2$ adjuntos posibles==, uno por cada una de sus coordenadas.
