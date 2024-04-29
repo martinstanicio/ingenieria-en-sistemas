@@ -5,6 +5,10 @@
       "path": "Álgebra y Geometría Analítica/Determinante.md"
     },
     {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
       "basename": "Cuerpo",
       "path": "Álgebra y Geometría Analítica/Cuerpo.md"
     },
@@ -119,10 +123,6 @@
     {
       "basename": "Conjunto",
       "path": "Lógica y Estructuras Discretas/Conjunto.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Ecuación lineal",
