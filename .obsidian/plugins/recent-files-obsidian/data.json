@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Adjunto",
+      "path": "Álgebra y Geometría Analítica/Adjunto.md"
+    },
+    {
       "basename": "Menor complementario",
       "path": "Álgebra y Geometría Analítica/Menor complementario.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Inteligencia artificial neuronal",
       "path": "Inteligencia Artificial/Inteligencia artificial neuronal.md"
-    },
-    {
-      "basename": "README",
-      "path": "Inteligencia Artificial/README.md"
     }
   ],
   "omittedPaths": [],
