@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Menor complementario",
+      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
+    },
+    {
       "basename": "Determinante",
       "path": "Álgebra y Geometría Analítica/Determinante.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "README",
       "path": "Inteligencia Artificial/README.md"
-    },
-    {
-      "basename": "Interpretador",
-      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
     }
   ],
   "omittedPaths": [],
