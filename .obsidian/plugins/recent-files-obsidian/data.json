@@ -1,8 +1,192 @@
 {
   "recentFiles": [
     {
+      "basename": "Proceso de caja negra",
+      "path": "Sistemas y Procesos de Negocios/Proceso de caja negra.md"
+    },
+    {
+      "basename": "Leyes de Newton",
+      "path": "Física I/Leyes de Newton.md"
+    },
+    {
+      "basename": "Universo",
+      "path": "Lógica y Estructuras Discretas/Universo.md"
+    },
+    {
+      "basename": "Teoría de conjuntos",
+      "path": "Lógica y Estructuras Discretas/Teoría de conjuntos.md"
+    },
+    {
+      "basename": "Subespacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Subespacio vectorial.md"
+    },
+    {
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
+      "basename": "Sistema octal",
+      "path": "Arquitectura de Computadoras/Sistema octal.md"
+    },
+    {
+      "basename": "Sistema hexadecimal",
+      "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
+    },
+    {
+      "basename": "Sistema decimal",
+      "path": "Arquitectura de Computadoras/Sistema decimal.md"
+    },
+    {
+      "basename": "Sistema compatible (SC)",
+      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
+    },
+    {
+      "basename": "ROM",
+      "path": "Arquitectura de Computadoras/ROM.md"
+    },
+    {
+      "basename": "Recursividad",
+      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
+    },
+    {
+      "basename": "Rango de una matriz",
+      "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
+    },
+    {
+      "basename": "Predicados",
+      "path": "Lógica y Estructuras Discretas/Predicados.md"
+    },
+    {
+      "basename": "Plan de estudios",
+      "path": "Ingeniería y Sociedad/Plan de estudios.md"
+    },
+    {
+      "basename": "Órganos o autoridades legislados (colegiados)",
+      "path": "Ingeniería y Sociedad/Órganos o autoridades legislados (colegiados).md"
+    },
+    {
+      "basename": "Números complejos",
+      "path": "Álgebra y Geometría Analítica/Números complejos.md"
+    },
+    {
+      "basename": "Mecánica cuántica",
+      "path": "Física I/Mecánica cuántica.md"
+    },
+    {
+      "basename": "Ley de composición interna o propiedad cerrada",
+      "path": "Álgebra y Geometría Analítica/Ley de composición interna o propiedad cerrada.md"
+    },
+    {
+      "basename": "Lenguaje de máquina",
+      "path": "Algoritmos y Estructuras de Datos/Lenguaje de máquina.md"
+    },
+    {
+      "basename": "Isomorfismo",
+      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
+    },
+    {
+      "basename": "Grupo abeliano",
+      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
+    },
+    {
+      "basename": "Grupo",
+      "path": "Álgebra y Geometría Analítica/Grupo.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Frase o grupo nominal",
+      "path": "Inglés I/Frase o grupo nominal.md"
+    },
+    {
+      "basename": "Estructuras de datos",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
+    },
+    {
+      "basename": "Espacios vectoriales notables",
+      "path": "Álgebra y Geometría Analítica/Espacios vectoriales notables.md"
+    },
+    {
+      "basename": "Espacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
+    },
+    {
+      "basename": "Entradas",
+      "path": "Sistemas y Procesos de Negocios/Entradas.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
+      "basename": "Cuerpo",
+      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
+    },
+    {
+      "basename": "Cuantificador universal (∀)",
+      "path": "Lógica y Estructuras Discretas/Cuantificador universal (∀).md"
+    },
+    {
+      "basename": "Cuantificador existencial (∃)",
+      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
+    },
+    {
+      "basename": "Conjunto vacío",
+      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
+    },
+    {
+      "basename": "Conjunto linealmente independiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+    },
+    {
+      "basename": "Conjunto linealmente dependiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+    },
+    {
+      "basename": "Conjunto binario",
+      "path": "Lógica y Estructuras Discretas/Conjunto binario.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
+    },
+    {
+      "basename": "Cardinal",
+      "path": "Álgebra y Geometría Analítica/Cardinal.md"
+    },
+    {
+      "basename": "Atributos",
+      "path": "Sistemas y Procesos de Negocios/Atributos.md"
+    },
+    {
+      "basename": "Retroalimentación",
+      "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
+    },
+    {
+      "basename": "Diseño en clave universal",
+      "path": "Ingeniería y Sociedad/Diseño en clave universal.md"
+    },
+    {
+      "basename": "Ambiente",
+      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
+    },
+    {
+      "basename": "Equifinalidad",
+      "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
+    },
+    {
       "basename": "Proceso de caja blanca",
       "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
+    },
+    {
+      "basename": "Programa propio",
+      "path": "Algoritmos y Estructuras de Datos/Programa propio.md"
     },
     {
       "basename": "Determinante",
@@ -15,190 +199,6 @@
     {
       "basename": "Adjunto",
       "path": "Álgebra y Geometría Analítica/Adjunto.md"
-    },
-    {
-      "basename": "Menor complementario",
-      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
-    },
-    {
-      "basename": "Consejo Universitario Nacional (CIN)",
-      "path": "Ingeniería y Sociedad/Consejo Universitario Nacional (CIN).md"
-    },
-    {
-      "basename": "Ordenanzas y resoluciones",
-      "path": "Ingeniería y Sociedad/Ordenanzas y resoluciones.md"
-    },
-    {
-      "basename": "Regla de Chio",
-      "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
-    },
-    {
-      "basename": "20240422 - Casos posesivos",
-      "path": "Inglés I/Actividades/20240422 - Casos posesivos.md"
-    },
-    {
-      "basename": "20240415 - La frase nominal",
-      "path": "Inglés I/Actividades/20240415 - La frase nominal.md"
-    },
-    {
-      "basename": "Prueba de existencia y unicidad",
-      "path": "Lógica y Estructuras Discretas/Prueba de existencia y unicidad.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Cuerpo",
-      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
-    },
-    {
-      "basename": "RREF",
-      "path": "Álgebra y Geometría Analítica/RREF.md"
-    },
-    {
-      "basename": "Matriz simétrica",
-      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
-    },
-    {
-      "basename": "Matriz periódica",
-      "path": "Álgebra y Geometría Analítica/Matriz periódica.md"
-    },
-    {
-      "basename": "Matriz nilpotente",
-      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
-    },
-    {
-      "basename": "Matriz involutiva",
-      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
-    },
-    {
-      "basename": "Matriz inversa",
-      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
-    },
-    {
-      "basename": "Matriz identidad",
-      "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
-    },
-    {
-      "basename": "Matriz idempotente",
-      "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
-    },
-    {
-      "basename": "Matriz escalonada reducida",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
-    },
-    {
-      "basename": "Matriz escalonada",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
-    },
-    {
-      "basename": "Dinámica",
-      "path": "Física I/Dinámica.md"
-    },
-    {
-      "basename": "Fuerza",
-      "path": "Física I/Fuerza.md"
-    },
-    {
-      "basename": "Leyes de Newton",
-      "path": "Física I/Leyes de Newton.md"
-    },
-    {
-      "basename": "20240426 - Número mayor",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
-    },
-    {
-      "basename": "Movimiento",
-      "path": "Física I/Movimiento.md"
-    },
-    {
-      "basename": "20240409 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
-    },
-    {
-      "basename": "20240409 - Triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Triángulo.md"
-    },
-    {
-      "basename": "20240416 - Palindromo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
-    },
-    {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
-    },
-    {
-      "basename": "20240419 - Bifurcación doble",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
-    },
-    {
-      "basename": "20240426 - Conectivos lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Bifurcaciones",
-      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
-    },
-    {
-      "basename": "Conectivos lógicos",
-      "path": "Lógica y Estructuras Discretas/Conectivos lógicos.md"
-    },
-    {
-      "basename": "Compuerta AND",
-      "path": "Arquitectura de Computadoras/Compuerta AND.md"
-    },
-    {
-      "basename": "Algoritmos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
-    },
-    {
-      "basename": "Ecuación lineal",
-      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
-    },
-    {
-      "basename": "Subconjunto",
-      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
-    },
-    {
-      "basename": "Conjunto vacío",
-      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
-    },
-    {
-      "basename": "Teoría de conjuntos",
-      "path": "Lógica y Estructuras Discretas/Teoría de conjuntos.md"
-    },
-    {
-      "basename": "Prueba exhaustiva",
-      "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
-    },
-    {
-      "basename": "Pruebas vacías",
-      "path": "Lógica y Estructuras Discretas/Pruebas vacías.md"
-    },
-    {
-      "basename": "Pruebas triviales",
-      "path": "Lógica y Estructuras Discretas/Pruebas triviales.md"
-    },
-    {
-      "basename": "Sistemas axiomáticos",
-      "path": "Lógica y Estructuras Discretas/Sistemas axiomáticos.md"
-    },
-    {
-      "basename": "Demostración informal",
-      "path": "Lógica y Estructuras Discretas/Demostración informal.md"
     }
   ],
   "omittedPaths": [],

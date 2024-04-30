@@ -1,6 +1,6 @@
 # Predicados
 
-Es más poderosa que la lógica con [[Proposiciones]], ya que nos permite trabajar con incógnitas, o conjuntos de elementos.
+Es más poderosa que la lógica con [[Proposiciones]], ya que nos permite trabajar con incógnitas, o [[Conjunto|conjuntos de elementos]].
 
 Por ejemplo, para una oración "x es mayor a 4":
 

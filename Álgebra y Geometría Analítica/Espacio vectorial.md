@@ -1,6 +1,6 @@
 # Espacio vectorial
 
-Un espacio vectorial $V$ es un conjunto **vectores**, que posee dos operaciones: **suma** y **multiplicación** por un [[Escalar]], y que satisfacen los diez axiomas enumerados a continuación. Se representa de la siguiente forma.
+Un espacio vectorial $V$ es un [[Conjunto]] **vectores**, que posee dos operaciones: **suma** y **multiplicación** por un [[Escalar]], y que satisfacen los diez axiomas enumerados a continuación. Se representa de la siguiente forma.
 
 $$(V, +, k, \cdot)$$
 

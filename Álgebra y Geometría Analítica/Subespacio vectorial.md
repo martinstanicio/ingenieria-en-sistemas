@@ -1,6 +1,6 @@
 # Subespacio vectorial
 
-Es un subconjunto de un conjunto que ya sabemos que es un [[Espacio vectorial]]. Por lo tanto, podemos decir que $H \subset V$ y $H \neq 0$, donde $H$ *hereda* las mismas operaciones que $V$.
+Es un subconjunto de un [[Conjunto]] que ya sabemos que es un [[Espacio vectorial]]. Por lo tanto, podemos decir que $H \subset V$ y $H \neq 0$, donde $H$ *hereda* las mismas operaciones que $V$.
 
 Para que un subconjunto sea un subespacio vectorial, se deben cumplir las siguientes condiciones:
 

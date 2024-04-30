@@ -1,6 +1,6 @@
 # Grupo
 
-Cuando una operación en un conjunto numérico cumple con las siguientes propiedades, es considerado un **grupo**:
+Cuando una operación en un [[Conjunto]] numérico cumple con las siguientes propiedades, es considerado un **grupo**:
 
 - [[Ley de composición interna o propiedad cerrada]]
 - [[Asociatividad]]

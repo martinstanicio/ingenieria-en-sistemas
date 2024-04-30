@@ -13,6 +13,6 @@ $$
 a+x=a
 $$
 
-El elemento neutro ==no necesariamente es el número 0==, sino el **vector nulo** del conjunto. Por ejemplo, en $\mathbb{R}^2$ es $(0,0)$.
+El elemento neutro ==no necesariamente es el número 0==, sino el **vector nulo** del [[Conjunto]]. Por ejemplo, en $\mathbb{R}^2$ es $(0,0)$.
 
 En la ==multiplicación por un escalar== real, el elemento neutro es el 1.

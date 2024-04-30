@@ -10,5 +10,5 @@ Por lo tanto, la relación $f: A \rightarrow B$ es una función si y solo sí:
 
 Para ser función debe cumplir con los siguientes criterios:
 
-- Existencia: a todo elemento del conjunto de partida le corresponde un valor del conjunto de llegada.
+- Existencia: a todo elemento del [[Conjunto]] de partida le corresponde un valor del conjunto de llegada.
 - Unicidad: cada elemento del conjunto de partida solo puede estar relacionado como máximo con un elemento del conjunto de llegada.

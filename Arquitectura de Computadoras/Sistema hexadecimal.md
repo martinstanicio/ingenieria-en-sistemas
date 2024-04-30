@@ -1,6 +1,6 @@
 # Sistema hexadecimal
 
-Es un [[Sistema numérico]]. Está conformado por ==dieciséis elementos==, el conjunto hexadecimal: $\{0, 1,\dots, 9, A, B, C, D, E, F\}$.
+Es un [[Sistema numérico]]. Está conformado por ==dieciséis elementos==, el [[Conjunto]] hexadecimal: $\{0, 1,\dots, 9, A, B, C, D, E, F\}$.
 
 $$
 1253_{16} = 1 \cdot 16^3 + 2 \cdot 16^2 + 5 \cdot 16^1 + 3 \cdot 16^0 = 4691

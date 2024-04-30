@@ -1,6 +1,6 @@
 # Espacios vectoriales notables
 
-Sabemos que cada uno de los siguientes conjuntos son un [[Espacio vectorial]], ya que fue comprado previamente.
+Sabemos que cada uno de los siguientes [[Conjunto|conjuntos]] son un [[Espacio vectorial]], ya que fue comprado previamente.
 
 - $(\mathbb{C},+,\mathbb{R},\cdot)$
 - $(\mathbb{R}^n,+,\mathbb{R},\cdot)$
