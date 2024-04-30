@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Proceso de caja blanca",
+      "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
+    },
+    {
       "basename": "Determinante",
       "path": "Álgebra y Geometría Analítica/Determinante.md"
     },
@@ -15,6 +19,30 @@
     {
       "basename": "Menor complementario",
       "path": "Álgebra y Geometría Analítica/Menor complementario.md"
+    },
+    {
+      "basename": "Consejo Universitario Nacional (CIN)",
+      "path": "Ingeniería y Sociedad/Consejo Universitario Nacional (CIN).md"
+    },
+    {
+      "basename": "Ordenanzas y resoluciones",
+      "path": "Ingeniería y Sociedad/Ordenanzas y resoluciones.md"
+    },
+    {
+      "basename": "Regla de Chio",
+      "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
+    },
+    {
+      "basename": "20240422 - Casos posesivos",
+      "path": "Inglés I/Actividades/20240422 - Casos posesivos.md"
+    },
+    {
+      "basename": "20240415 - La frase nominal",
+      "path": "Inglés I/Actividades/20240415 - La frase nominal.md"
+    },
+    {
+      "basename": "Prueba de existencia y unicidad",
+      "path": "Lógica y Estructuras Discretas/Prueba de existencia y unicidad.md"
     },
     {
       "basename": "Matriz",
@@ -153,10 +181,6 @@
       "path": "Lógica y Estructuras Discretas/Teoría de conjuntos.md"
     },
     {
-      "basename": "Prueba de existencia y unicidad",
-      "path": "Lógica y Estructuras Discretas/Prueba de existencia y unicidad.md"
-    },
-    {
       "basename": "Prueba exhaustiva",
       "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "Demostración informal",
       "path": "Lógica y Estructuras Discretas/Demostración informal.md"
-    },
-    {
-      "basename": "Axiomas",
-      "path": "Lógica y Estructuras Discretas/Axiomas.md"
-    },
-    {
-      "basename": "Implicación lógica",
-      "path": "Lógica y Estructuras Discretas/Implicación lógica.md"
-    },
-    {
-      "basename": "Equivalencia lógica",
-      "path": "Lógica y Estructuras Discretas/Equivalencia lógica.md"
-    },
-    {
-      "basename": "Bicondicional (↔)",
-      "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
-    },
-    {
-      "basename": "Implicación (→)",
-      "path": "Lógica y Estructuras Discretas/Implicación (→).md"
-    },
-    {
-      "basename": "Inteligencia artificial simbólica",
-      "path": "Inteligencia Artificial/Inteligencia artificial simbólica.md"
     }
   ],
   "omittedPaths": [],

@@ -35,15 +35,13 @@ $$
 
 ## Caso recursivo
 
-Si $n\geq3$, $A \in k^{n \times n}$, el determinante de dicha matriz será la suma de los productos entre las coordenadas de ==una fila o columna y su respectivo adjunto==, es decir:
+Si $n\geq3$, $A \in k^{n \times n}$, el determinante de dicha matriz será la suma de los productos entre las coordenadas de ==una fila o columna y su respectivo adjunto==.
 
-$$
-\sum_{j=i}^n a_{ij} \cdot A_{ij}
-$$
+El [[Teorema de Laplace]] nos demuestra que podemos realizar este cálculo utilizando cualquier fila o columna.
 
-El Teorema de Laplace nos demuestra que podemos
+![[Teorema de Laplace]]
 
-Por ejemplo:
+### Ejemplo
 
 $$
 A=
