@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Composición de relaciones",
+      "path": "Lógica y Estructuras Discretas/Composición de relaciones.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Relación",
+      "path": "Lógica y Estructuras Discretas/Relación.md"
+    },
+    {
+      "basename": "Diferencia simétrica",
+      "path": "Lógica y Estructuras Discretas/Diferencia simétrica.md"
+    },
+    {
       "basename": "Unión (∪)",
       "path": "Lógica y Estructuras Discretas/Unión (∪).md"
     },
@@ -15,10 +31,6 @@
     {
       "basename": "Producto cartesiano",
       "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
-    },
-    {
-      "basename": "Relación",
-      "path": "Lógica y Estructuras Discretas/Relación.md"
     },
     {
       "basename": "Función",
@@ -43,10 +55,6 @@
     {
       "basename": "Intersección (∩)",
       "path": "Lógica y Estructuras Discretas/Intersección (∩).md"
-    },
-    {
-      "basename": "Diferencia simétrica",
-      "path": "Lógica y Estructuras Discretas/Diferencia simétrica.md"
     },
     {
       "basename": "Compuerta NOT",
@@ -87,10 +95,6 @@
     {
       "basename": "Conjunto singleton",
       "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
-    },
-    {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
     },
     {
       "basename": "Teoría intuitiva de conjuntos",
@@ -195,10 +199,6 @@
     {
       "basename": "Teoría General de Sistemas (TGS)",
       "path": "Sistemas y Procesos de Negocios/Teoría General de Sistemas (TGS).md"
-    },
-    {
-      "basename": "Cuerpo",
-      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
     }
   ],
   "omittedPaths": [],
