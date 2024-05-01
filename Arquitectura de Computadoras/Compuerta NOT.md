@@ -1,19 +1,18 @@
 # Compuerta NOT
 
-Es una [[Compuertas lógicas|compuerta lógica]], actúa como un ==inversor==. Se comporta igual que una [[Negación (-)]].
+Es una [[Compuertas lógicas|compuerta lógica]], actúa como un ==inversor==. Se comporta de forma similar a una [[Negación (-)]] o [[Complemento]].
 
 ## Representación simbólica
 
 Podemos representarla de forma simbólica, de tres formas:
 
-- $\bar{Z}$
+- $\overline{Z}$
 - $-Z$
 - $\lnot Z$
 
 ## Representación gráfica
 
 Podemos representarla de forma gráfica.
-
 
 ```mermaid
 flowchart RL

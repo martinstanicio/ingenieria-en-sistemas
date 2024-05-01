@@ -1,6 +1,6 @@
 # Compuerta OR
 
-Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==suma== en el álgebra de Boole. Se comporta igual que una [[Disyunción (∨)]].
+Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==suma== en el álgebra de Boole. Se comporta de forma similar a una [[Disyunción (∨)]] o [[Unión (∪)]].
 
 ## Representación simbólica
 
@@ -8,6 +8,7 @@ Podemos representarla de forma simbólica, de dos formas:
 
 - $A + B = Z$
 - $A \lor B = Z$
+- $A \cup B = Z$
 
 ## Representación gráfica
 

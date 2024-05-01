@@ -1,6 +1,70 @@
 {
   "recentFiles": [
     {
+      "basename": "Diferencia simétrica",
+      "path": "Lógica y Estructuras Discretas/Diferencia simétrica.md"
+    },
+    {
+      "basename": "Unión (∪)",
+      "path": "Lógica y Estructuras Discretas/Unión (∪).md"
+    },
+    {
+      "basename": "Intersección (∩)",
+      "path": "Lógica y Estructuras Discretas/Intersección (∩).md"
+    },
+    {
+      "basename": "Compuerta NOT",
+      "path": "Arquitectura de Computadoras/Compuerta NOT.md"
+    },
+    {
+      "basename": "Cuantificador existencial (∃)",
+      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
+    },
+    {
+      "basename": "Diferencia",
+      "path": "Lógica y Estructuras Discretas/Diferencia.md"
+    },
+    {
+      "basename": "Complemento",
+      "path": "Lógica y Estructuras Discretas/Complemento.md"
+    },
+    {
+      "basename": "Compuerta OR",
+      "path": "Arquitectura de Computadoras/Compuerta OR.md"
+    },
+    {
+      "basename": "Compuerta AND",
+      "path": "Arquitectura de Computadoras/Compuerta AND.md"
+    },
+    {
+      "basename": "Subconjunto",
+      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
+    },
+    {
+      "basename": "Compuerta XOR",
+      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
+    },
+    {
+      "basename": "Compuerta XNOR",
+      "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
+    },
+    {
+      "basename": "Compuerta NOR",
+      "path": "Arquitectura de Computadoras/Compuerta NOR.md"
+    },
+    {
+      "basename": "Compuerta NAND",
+      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
+    },
+    {
+      "basename": "Conjunto vacío",
+      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
+    },
+    {
+      "basename": "Conjunto singleton",
+      "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
+    },
+    {
       "basename": "Conjunto",
       "path": "Lógica y Estructuras Discretas/Conjunto.md"
     },
@@ -11,10 +75,6 @@
     {
       "basename": "venn",
       "path": "Lógica y Estructuras Discretas/attachments/venn.svg"
-    },
-    {
-      "basename": "Cuantificador existencial (∃)",
-      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
     },
     {
       "basename": "Cuantificador universal (∀)",
@@ -139,66 +199,6 @@
     {
       "basename": "Disponibilidad",
       "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
-    },
-    {
-      "basename": "Integridad",
-      "path": "Sistemas y Procesos de Negocios/Integridad.md"
-    },
-    {
-      "basename": "Confidencialidad",
-      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
-    },
-    {
-      "basename": "Consejo Universitario Nacional (CIN)",
-      "path": "Ingeniería y Sociedad/Consejo Universitario Nacional (CIN).md"
-    },
-    {
-      "basename": "Proceso de caja negra",
-      "path": "Sistemas y Procesos de Negocios/Proceso de caja negra.md"
-    },
-    {
-      "basename": "Proceso de caja blanca",
-      "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
-    },
-    {
-      "basename": "Programa propio",
-      "path": "Algoritmos y Estructuras de Datos/Programa propio.md"
-    },
-    {
-      "basename": "Determinante",
-      "path": "Álgebra y Geometría Analítica/Determinante.md"
-    },
-    {
-      "basename": "Teorema de Laplace",
-      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
-    },
-    {
-      "basename": "Adjunto",
-      "path": "Álgebra y Geometría Analítica/Adjunto.md"
-    },
-    {
-      "basename": "Menor complementario",
-      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
-    },
-    {
-      "basename": "Ordenanzas y resoluciones",
-      "path": "Ingeniería y Sociedad/Ordenanzas y resoluciones.md"
-    },
-    {
-      "basename": "Regla de Chio",
-      "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
-    },
-    {
-      "basename": "20240422 - Casos posesivos",
-      "path": "Inglés I/Actividades/20240422 - Casos posesivos.md"
-    },
-    {
-      "basename": "20240415 - La frase nominal",
-      "path": "Inglés I/Actividades/20240415 - La frase nominal.md"
-    },
-    {
-      "basename": "Prueba de existencia y unicidad",
-      "path": "Lógica y Estructuras Discretas/Prueba de existencia y unicidad.md"
     }
   ],
   "omittedPaths": [],

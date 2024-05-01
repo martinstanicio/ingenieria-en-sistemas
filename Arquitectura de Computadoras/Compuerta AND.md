@@ -1,6 +1,6 @@
 # Compuerta AND
 
-Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==multiplicación== en el álgebra de Boole. Se comporta igual que una [[Conjunción (∧)]].
+Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==multiplicación== en el álgebra de Boole. Se comporta de forma similar a una [[Conjunción (∧)]] o [[Intersección (∩)]].
 
 ## Representación simbólica
 
@@ -8,6 +8,7 @@ Podemos representarla de forma simbólica, de dos formas:
 
 - $A \cdot B = Z$
 - $A \land B = Z$
+- $A \cap B = Z$
 
 ## Representación gráfica
 
