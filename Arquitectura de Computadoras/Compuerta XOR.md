@@ -1,6 +1,6 @@
 # Compuerta XOR
 
-Es una [[Compuertas lógicas|compuerta lógica]] que se comporta igual que una [[Disyunción exclusiva (⊕)]].
+Es una [[Compuertas lógicas|compuerta lógica]] que se comporta de forma similar a una [[Disyunción exclusiva (⊕)]] o [[Diferencia simétrica]].
 
 ## Representación simbólica
 
@@ -11,7 +11,7 @@ Podemos representarla de forma simbólica, de dos formas:
 
 ## Representación gráfica
 
-Podemos representarla de forma gráfica, de dos formas:
+Podemos representarla de forma gráfica:
 
 ```mermaid
 flowchart LR

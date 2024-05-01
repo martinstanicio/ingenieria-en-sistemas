@@ -1,16 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "Relación",
+      "path": "Lógica y Estructuras Discretas/Relación.md"
+    },
+    {
+      "basename": "Producto cartesiano",
+      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
+    },
+    {
+      "basename": "Cardinal",
+      "path": "Álgebra y Geometría Analítica/Cardinal.md"
+    },
+    {
+      "basename": "Potencia de un conjunto",
+      "path": "Lógica y Estructuras Discretas/Potencia de un conjunto.md"
+    },
+    {
+      "basename": "Conjunto vacío",
+      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
+    },
+    {
+      "basename": "Subconjunto",
+      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
+    },
+    {
+      "basename": "Compuerta XOR",
+      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
+    },
+    {
+      "basename": "Subconjunto propio",
+      "path": "Lógica y Estructuras Discretas/Subconjunto propio.md"
+    },
+    {
+      "basename": "Intersección (∩)",
+      "path": "Lógica y Estructuras Discretas/Intersección (∩).md"
+    },
+    {
       "basename": "Diferencia simétrica",
       "path": "Lógica y Estructuras Discretas/Diferencia simétrica.md"
     },
     {
       "basename": "Unión (∪)",
       "path": "Lógica y Estructuras Discretas/Unión (∪).md"
-    },
-    {
-      "basename": "Intersección (∩)",
-      "path": "Lógica y Estructuras Discretas/Intersección (∩).md"
     },
     {
       "basename": "Compuerta NOT",
@@ -37,14 +69,6 @@
       "path": "Arquitectura de Computadoras/Compuerta AND.md"
     },
     {
-      "basename": "Subconjunto",
-      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
-    },
-    {
-      "basename": "Compuerta XOR",
-      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
-    },
-    {
       "basename": "Compuerta XNOR",
       "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
     },
@@ -55,10 +79,6 @@
     {
       "basename": "Compuerta NAND",
       "path": "Arquitectura de Computadoras/Compuerta NAND.md"
-    },
-    {
-      "basename": "Conjunto vacío",
-      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
     },
     {
       "basename": "Conjunto singleton",
@@ -103,10 +123,6 @@
     {
       "basename": "Universo",
       "path": "Lógica y Estructuras Discretas/Universo.md"
-    },
-    {
-      "basename": "Cardinal",
-      "path": "Álgebra y Geometría Analítica/Cardinal.md"
     },
     {
       "basename": "Prueba exhaustiva",
@@ -183,22 +199,6 @@
     {
       "basename": "Conjunto linealmente independiente",
       "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Dato",
-      "path": "Sistemas y Procesos de Negocios/Dato.md"
-    },
-    {
-      "basename": "Disponibilidad",
-      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
     }
   ],
   "omittedPaths": [],
