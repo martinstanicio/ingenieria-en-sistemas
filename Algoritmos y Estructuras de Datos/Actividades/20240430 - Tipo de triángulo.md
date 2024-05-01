@@ -26,6 +26,7 @@ sino
             mostrar("Isosceles")
         sino
             mostrar("Escaleno")
+        fin si
     fin si
 fin si
 
@@ -37,40 +38,39 @@ fin
 ```mermaid
 flowchart TB
 	comienzo([comienzo])
-
-	variables["`numero1 = real
-	numero2 = real
-	numero3 = real
-	numero4 = real
-	numero_mayor = real`"]
-
-	leer1[/numero1/]
-    leer2[/numero2/]
-    leer3[/numero3/]
-    leer4[/numero4/]
-
-    numero_mayor[numero_mayor = numero1]
-
-    si2{numero2 >= numero_mayor}
-	mayor2["numero_mayor = numero2"]
-
-    si3{numero3 >= numero_mayor}
-	mayor3["numero_mayor = numero3"]
-
-    si4{numero4 >= numero_mayor}
-	mayor4["numero_mayor = numero4"]
-
-    mostrar{{"numero_mayor"}}
-
+    
+	variables["`ladoA = real
+	ladoB = real
+	ladoC = real`"]
+    
+	leerA[/ladoA/]
+    leerB[/ladoB/]
+    leerC[/ladoC/]
+    
+    si1{ladoA == ladoB}
+    
+	si2{ladoA == ladoC}
+	si2si{{Equilatero}}
+	si2no{{Isosceles}}
+    
+    si3{ladoA == ladoC}
+	si3si{{Isosceles}}
+    
+    si4{ladoB == ladoC}
+	si4si{{Isosceles}}
+	si4no{{Escaleno}}
+    
 	fin([fin])
-
-	comienzo --> variables --> leer1 --> leer2 --> leer3 --> leer4 --> numero_mayor --> si2
-	si2 -- Sí --> mayor2 --> si3
-	si2 -- No --> si3
-	si3 -- Sí --> mayor3 --> si4
+    
+	comienzo --> variables --> leerA --> leerB --> leerC --> si1
+	si1 -- Sí --> si2
+	si1 -- No --> si3
+	si2 -- Sí --> si2si --> fin
+	si2 -- No --> si2no --> fin
+	si3 -- Sí --> si3si --> fin
 	si3 -- No --> si4
-	si4 -- Sí --> mayor4 --> mostrar
-	si4 -- No --> mostrar
+	si4 -- Sí --> si4si --> fin
+	si4 -- No --> si4no --> fin
 	
 	mostrar --> fin
 ```
@@ -95,17 +95,15 @@ except ValueError:
 
 if ladoA == ladoB:
     if ladoA == ladoC:
-        mostrar("Equilatero")
+        print("Equilatero")
     else:
-        mostrar("Isosceles")
+        print("Isosceles")
 else:
     if ladoA == ladoC:
-        mostrar("Isosceles")
+        print("Isosceles")
     else:
-        si ladoB == ladoC entonces
-            mostrar("Isosceles")
-        sino
-            mostrar("Escaleno")
-    fin si
-fin si
+        if ladoB == ladoC:
+            print("Isosceles")
+        else:
+            print("Escaleno")
 ```
