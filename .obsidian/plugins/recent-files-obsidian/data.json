@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Generalización existencial",
+      "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
+    },
+    {
       "basename": "Especificación universal",
       "path": "Lógica y Estructuras Discretas/Especificación universal.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "20240416 - Triángulo rectángulo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
-    },
-    {
-      "basename": "20240419 - Bifurcación doble",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
     }
   ],
   "omittedPaths": [],
