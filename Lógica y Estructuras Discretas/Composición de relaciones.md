@@ -14,5 +14,5 @@ R_2: B \rightarrow C
 $$
 
 $$
-R_1 \circ R_2: A \rightarrow C = \{ (x,z): (x \in A) \land (z \in C) \}
+R_1 \circ R_2: A \rightarrow C = \{ (x,z): (x \in A) \land (z \in C) \land (\exists y \in B: ((x,y) \in A \times B) \land ((y,z) \in B \times C)) \}
 $$
