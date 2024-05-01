@@ -1,22 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Disponibilidad",
-      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
-    },
-    {
-      "basename": "Integridad",
-      "path": "Sistemas y Procesos de Negocios/Integridad.md"
-    },
-    {
-      "basename": "Confidencialidad",
-      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
-    },
-    {
       "basename": "Consejo Universitario Nacional (CIN)",
       "path": "Ingeniería y Sociedad/Consejo Universitario Nacional (CIN).md"
     },
@@ -199,6 +183,22 @@
     {
       "basename": "Conjunto vacío",
       "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
+    },
+    {
+      "basename": "Teoría de conjuntos",
+      "path": "Lógica y Estructuras Discretas/Teoría de conjuntos.md"
+    },
+    {
+      "basename": "Prueba exhaustiva",
+      "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
+    },
+    {
+      "basename": "Pruebas vacías",
+      "path": "Lógica y Estructuras Discretas/Pruebas vacías.md"
+    },
+    {
+      "basename": "Pruebas triviales",
+      "path": "Lógica y Estructuras Discretas/Pruebas triviales.md"
     }
   ],
   "omittedPaths": [],

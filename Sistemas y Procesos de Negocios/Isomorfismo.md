@@ -6,4 +6,4 @@ Etimológicamente significa =="igual forma"==, y aplicado a la [[Teoría General
 
 El concepto de isomorfismo, también se refiere al diseño de [[Modelo|modelos sistémicos]] similares al sistema original.
 
-El [[Enfoque de sistemas]] busca **generalizaciones** que nos ayudan a explicar cómo los sistemas responden y se adaptan a las diferentes [[Entradas]] del medio, y como procesan la información.
+El [[Enfoque de sistemas]] busca **generalizaciones** que nos ayudan a explicar cómo los sistemas responden y se adaptan a las diferentes [[Entradas]] del medio, y como procesan la [[Información]].
