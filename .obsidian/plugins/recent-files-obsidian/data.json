@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Especificación universal",
+      "path": "Lógica y Estructuras Discretas/Especificación universal.md"
+    },
+    {
+      "basename": "Especificación existencial",
+      "path": "Lógica y Estructuras Discretas/Especificación existencial.md"
+    },
+    {
+      "basename": "Equivalencia lógica",
+      "path": "Lógica y Estructuras Discretas/Equivalencia lógica.md"
+    },
+    {
       "basename": "20240430 - Tipo de triángulo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
     },
@@ -11,6 +23,10 @@
     {
       "basename": "20240430 - Bifurcaciones anidadas 2",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
+    },
+    {
+      "basename": "20240430 - Bifurcaciones anidadas 1",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
     },
     {
       "basename": "20240426 - Número mayor",
@@ -35,10 +51,6 @@
     {
       "basename": "Sistemas",
       "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 1",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
     },
     {
       "basename": "Información",
@@ -187,18 +199,6 @@
     {
       "basename": "20240419 - Bifurcación doble",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
-    },
-    {
-      "basename": "20240426 - Conectivos lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
     }
   ],
   "omittedPaths": [],
