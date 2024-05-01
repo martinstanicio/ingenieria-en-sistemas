@@ -1,6 +1,6 @@
 # Función
 
-Una ==relación== entre, por lo menos, dos variables, una independiente y la otra dependiente, de forma que a cada valor de la variable independiente, **le corresponde** (existencia de imagen) **un único valor** (unicidad de imagen) de la variable dependiente.
+Una ==[[Relación]]== entre, por lo menos, dos variables, una independiente y la otra dependiente, de forma que a cada valor de la variable independiente, **le corresponde** (existencia de imagen) **un único valor** (unicidad de imagen) de la variable dependiente.
 
 Por lo tanto, la relación $f: A \rightarrow B$ es una función si y solo sí:
 

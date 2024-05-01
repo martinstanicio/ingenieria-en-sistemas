@@ -1,24 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Relación",
-      "path": "Lógica y Estructuras Discretas/Relación.md"
+      "basename": "Unión (∪)",
+      "path": "Lógica y Estructuras Discretas/Unión (∪).md"
     },
     {
-      "basename": "Producto cartesiano",
-      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
-    },
-    {
-      "basename": "Cardinal",
-      "path": "Álgebra y Geometría Analítica/Cardinal.md"
+      "basename": "Conjunto vacío",
+      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
     },
     {
       "basename": "Potencia de un conjunto",
       "path": "Lógica y Estructuras Discretas/Potencia de un conjunto.md"
     },
     {
-      "basename": "Conjunto vacío",
-      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
+      "basename": "Producto cartesiano",
+      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
+    },
+    {
+      "basename": "Relación",
+      "path": "Lógica y Estructuras Discretas/Relación.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Cardinal",
+      "path": "Álgebra y Geometría Analítica/Cardinal.md"
     },
     {
       "basename": "Subconjunto",
@@ -39,10 +47,6 @@
     {
       "basename": "Diferencia simétrica",
       "path": "Lógica y Estructuras Discretas/Diferencia simétrica.md"
-    },
-    {
-      "basename": "Unión (∪)",
-      "path": "Lógica y Estructuras Discretas/Unión (∪).md"
     },
     {
       "basename": "Compuerta NOT",
@@ -195,10 +199,6 @@
     {
       "basename": "Cuerpo",
       "path": "Álgebra y Geometría Analítica/Cuerpo.md"
-    },
-    {
-      "basename": "Conjunto linealmente independiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
     }
   ],
   "omittedPaths": [],

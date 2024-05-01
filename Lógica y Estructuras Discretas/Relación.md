@@ -6,4 +6,14 @@ $$
 R \subseteq (A \times B)
 $$
 
-El ==dominio== de una relación son todos aquellos valores de la primera componente para los cuales existe un valor de la segunda
+Toda relación tiene un ==dominio==, formado por todos los valores utilizados en la primera componente de los elementos del subconjunto.
+
+$$
+Dominio_R = \{ x \in A: (\exists y \in B) \land ((x,y) \in R) \}
+$$
+
+Y también tiene una ==imagen==, formada por todos los valores utilizados en la segunda componente de los elementos del subconjunto.
+
+$$
+Imagen_R = \{ y \in B: (\exists x \in A) \land ((x,y) \in R) \}
+$$
