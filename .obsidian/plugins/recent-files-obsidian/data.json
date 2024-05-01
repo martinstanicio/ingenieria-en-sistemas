@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Implicación (→)",
+      "path": "Lógica y Estructuras Discretas/Implicación (→).md"
+    },
+    {
+      "basename": "Lógica",
+      "path": "Lógica y Estructuras Discretas/Lógica.md"
+    },
+    {
+      "basename": "Inteligencia artificial simbólica",
+      "path": "Inteligencia Artificial/Inteligencia artificial simbólica.md"
+    },
+    {
+      "basename": "Diagrama de Transición de Estado (DTE)",
+      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado (DTE).md"
+    },
+    {
+      "basename": "Vocabulario procedimental",
+      "path": "Inglés I/Vocabulario procedimental.md"
+    },
+    {
       "basename": "Generalización existencial",
       "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Leyes de Newton",
       "path": "Física I/Leyes de Newton.md"
-    },
-    {
-      "basename": "Movimiento",
-      "path": "Física I/Movimiento.md"
-    },
-    {
-      "basename": "20240409 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
-    },
-    {
-      "basename": "20240409 - Triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Triángulo.md"
-    },
-    {
-      "basename": "20240416 - Palindromo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
-    },
-    {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
     }
   ],
   "omittedPaths": [],
