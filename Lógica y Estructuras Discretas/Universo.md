@@ -1,3 +1,10 @@
+---
+aliases:
+  - Conjunto universal
+  - Conjunto referencial
+---
 # Universo
 
-Es el [[Conjunto]] del cuál sacamos a los elementos que van a ser evaluados en un [[Predicados|predicado]]. Es similar al dominio de una [[Función]].
+Aquel [[Conjunto]] del cual obtenemos los elementos del conjunto el cual estamos construyendo. Es similar al dominio de una [[Función]].
+
+También es llamado ==conjunto universal o referencial==.

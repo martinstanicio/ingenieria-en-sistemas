@@ -1,6 +1,6 @@
 # Conjunto
 
-Existen diferentes formas de definir un conjunto.
+Una ==colección desordenada== de elementos. Existen diferentes formas de definir un conjunto particular.
 
 ## Definición por extensión
 
@@ -12,13 +12,15 @@ $$
 
 ## Definición por comprensión
 
-Se especifica el conjunto de dónde tomar los elementos, y la condición que deben cumplir.
+Se especifica el conjunto de dónde tomar los elementos, y la condición que deben cumplir. Se puede utilizar tanto para conjuntos infinitos como finitos.
 
 $$
-A=\{x\in U: x\in\mathbb{N} \land x ≤ 10 \land x=2k, k\in\mathbb{Z}\}
+A=\{x\in\mathbb{N}: x \leq 10 \land x=2k, k\in\mathbb{Z}\}
 $$
 
 ## Definición por diagrama de Venn
+
+![[venn.svg]]
 
 ## Definición por puntos suspensivos
 

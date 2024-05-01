@@ -1,6 +1,58 @@
 {
   "recentFiles": [
     {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Teoría intuitiva de conjuntos",
+      "path": "Lógica y Estructuras Discretas/Teoría intuitiva de conjuntos.md"
+    },
+    {
+      "basename": "venn",
+      "path": "Lógica y Estructuras Discretas/attachments/venn.svg"
+    },
+    {
+      "basename": "Cuantificador existencial (∃)",
+      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
+    },
+    {
+      "basename": "Cuantificador universal (∀)",
+      "path": "Lógica y Estructuras Discretas/Cuantificador universal (∀).md"
+    },
+    {
+      "basename": "Física",
+      "path": "Física I/Física.md"
+    },
+    {
+      "basename": "Predicados",
+      "path": "Lógica y Estructuras Discretas/Predicados.md"
+    },
+    {
+      "basename": "Sustantivos genéricos",
+      "path": "Inglés I/Sustantivos genéricos.md"
+    },
+    {
+      "basename": "Tipos de sistemas",
+      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
+    },
+    {
+      "basename": "Universo",
+      "path": "Física I/Universo.md"
+    },
+    {
+      "basename": "Universo",
+      "path": "Lógica y Estructuras Discretas/Universo.md"
+    },
+    {
+      "basename": "Cardinal",
+      "path": "Álgebra y Geometría Analítica/Cardinal.md"
+    },
+    {
+      "basename": "Prueba exhaustiva",
+      "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
+    },
+    {
       "basename": "Implicación (→)",
       "path": "Lógica y Estructuras Discretas/Implicación (→).md"
     },
@@ -147,58 +199,6 @@
     {
       "basename": "Prueba de existencia y unicidad",
       "path": "Lógica y Estructuras Discretas/Prueba de existencia y unicidad.md"
-    },
-    {
-      "basename": "RREF",
-      "path": "Álgebra y Geometría Analítica/RREF.md"
-    },
-    {
-      "basename": "Matriz simétrica",
-      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
-    },
-    {
-      "basename": "Matriz periódica",
-      "path": "Álgebra y Geometría Analítica/Matriz periódica.md"
-    },
-    {
-      "basename": "Matriz nilpotente",
-      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
-    },
-    {
-      "basename": "Matriz involutiva",
-      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
-    },
-    {
-      "basename": "Matriz inversa",
-      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
-    },
-    {
-      "basename": "Matriz identidad",
-      "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
-    },
-    {
-      "basename": "Matriz idempotente",
-      "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
-    },
-    {
-      "basename": "Matriz escalonada reducida",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
-    },
-    {
-      "basename": "Matriz escalonada",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
-    },
-    {
-      "basename": "Dinámica",
-      "path": "Física I/Dinámica.md"
-    },
-    {
-      "basename": "Fuerza",
-      "path": "Física I/Fuerza.md"
-    },
-    {
-      "basename": "Leyes de Newton",
-      "path": "Física I/Leyes de Newton.md"
     }
   ],
   "omittedPaths": [],
