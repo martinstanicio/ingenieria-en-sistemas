@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "20240430 - Bifurcaciones anidadas 2",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
+    },
+    {
+      "basename": "20240430 - Bifurcaciones anidadas 1",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
+    },
+    {
+      "basename": "20240426 - Número mayor",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
+    },
+    {
       "basename": "Información",
       "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "Dato",
+      "path": "Sistemas y Procesos de Negocios/Dato.md"
     },
     {
       "basename": "Disponibilidad",
@@ -129,10 +145,6 @@
       "path": "Física I/Leyes de Newton.md"
     },
     {
-      "basename": "20240426 - Número mayor",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
-    },
-    {
       "basename": "Movimiento",
       "path": "Física I/Movimiento.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Conjunto",
       "path": "Lógica y Estructuras Discretas/Conjunto.md"
-    },
-    {
-      "basename": "Ecuación lineal",
-      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
-    },
-    {
-      "basename": "Subconjunto",
-      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
-    },
-    {
-      "basename": "Conjunto vacío",
-      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
     }
   ],
   "omittedPaths": [],
