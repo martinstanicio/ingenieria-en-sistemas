@@ -17,15 +17,15 @@ leer(numero4)
 numero_mayor = numero1
 
 si numero2 >= numero_mayor entonces
-  numero_mayor = numero2
+    numero_mayor = numero2
 fin si
 
 si numero3 >= numero_mayor entonces
-  numero_mayor = numero3
+    numero_mayor = numero3
 fin si
 
 si numero4 >= numero_mayor entonces
-  numero_mayor = numero4
+    numero_mayor = numero4
 fin si
 
 fin

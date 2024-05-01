@@ -12,9 +12,9 @@ declarar numero = real
 leer(numero)
 
 si numero >= 0 entonces
-  mostrar("Positivo")
+    mostrar("Positivo")
 sino
-  mostrar("Negativo")
+    mostrar("Negativo")
 
 fin
 ```

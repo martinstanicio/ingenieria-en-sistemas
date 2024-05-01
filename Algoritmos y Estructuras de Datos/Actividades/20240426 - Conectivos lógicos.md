@@ -14,15 +14,15 @@ leer(numero2)
 leer(numero3)
 
 si (numero1 >= numero2) y (numero1 >= numero3) entonces
-  print(numero1)
+    print(numero1)
 fin si
 
 si (numero2 >= numero1) y (numero2 >= numero3) entonces
-  print(numero2)
+    print(numero2)
 fin si
 
 si (numero3 >= numero1) y (numero3 >= numero2) entonces
-  print(numero3)
+    print(numero3)
 fin si
 
 fin

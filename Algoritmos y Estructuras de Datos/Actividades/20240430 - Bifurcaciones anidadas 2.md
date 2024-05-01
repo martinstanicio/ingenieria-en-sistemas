@@ -39,20 +39,20 @@ flowchart TB
 comienzo
 
 si C1 entonces
-  A
-  B
+    A
+    B
 sino
-  si C2 entonces
-    C
-    D
-  sino
-    si C3 entonces
-      E
-      F
+    si C2 entonces
+        C
+        D
     sino
-      G
+        si C3 entonces
+            E
+            F
+        sino
+            G
+        fin si
     fin si
-  fin si
 fin si
 
 fin

@@ -1,56 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "20240430 - Tipo de triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 3",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 3.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 2",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
-    },
-    {
       "basename": "20240426 - Número mayor",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
     },
     {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Teoría General de Sistemas (TGS)",
-      "path": "Sistemas y Procesos de Negocios/Teoría General de Sistemas (TGS).md"
-    },
-    {
-      "basename": "Cuerpo",
-      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
-    },
-    {
-      "basename": "Conjunto linealmente independiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 1",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
+      "basename": "Disponibilidad",
+      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
     },
     {
       "basename": "Información",
       "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Dato",
-      "path": "Sistemas y Procesos de Negocios/Dato.md"
-    },
-    {
-      "basename": "Disponibilidad",
-      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
     },
     {
       "basename": "Integridad",
@@ -111,6 +71,14 @@
     {
       "basename": "Prueba de existencia y unicidad",
       "path": "Lógica y Estructuras Discretas/Prueba de existencia y unicidad.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Cuerpo",
+      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
     },
     {
       "basename": "RREF",
@@ -199,6 +167,38 @@
     {
       "basename": "Python",
       "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "Conectivos lógicos",
+      "path": "Lógica y Estructuras Discretas/Conectivos lógicos.md"
+    },
+    {
+      "basename": "Compuerta AND",
+      "path": "Arquitectura de Computadoras/Compuerta AND.md"
+    },
+    {
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Ecuación lineal",
+      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
+    },
+    {
+      "basename": "Subconjunto",
+      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
+    },
+    {
+      "basename": "Conjunto vacío",
+      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
     }
   ],
   "omittedPaths": [],
