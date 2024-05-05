@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Propiedades de determinantes",
+      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
+    },
+    {
       "basename": "Matriz inversa",
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Compuerta NOT",
       "path": "Arquitectura de Computadoras/Compuerta NOT.md"
-    },
-    {
-      "basename": "Cuantificador existencial (∃)",
-      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
     }
   ],
   "omittedPaths": [],
