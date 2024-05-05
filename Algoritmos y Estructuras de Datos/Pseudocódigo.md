@@ -49,3 +49,26 @@ sino
   instruccion2
 fin-si
 ```
+
+## [[Estructura de casos]]
+
+```
+comienzo
+
+segun_sea variable hacer
+    constanteA:
+        A1
+        A2
+    constanteB:
+        B1
+        B2
+    constanteC:
+        C1
+        C2
+fin_segun_sea
+
+fin
+```
+
+^estructura-de-casos
+

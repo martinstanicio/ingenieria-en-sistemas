@@ -87,9 +87,9 @@ ladoB = 0.0
 ladoC = 0.0
 
 try:
-    numero1 = float(input("Ingrese el lado A: "))
-    numero2 = float(input("Ingrese el lado B: "))
-    numero3 = float(input("Ingrese el lado C: "))
+    ladoA = float(input("Ingrese el lado A: "))
+    ladoB = float(input("Ingrese el lado B: "))
+    ladoC = float(input("Ingrese el lado C: "))
 except ValueError:
     print("\nPor favor ingrese números válidos")
 

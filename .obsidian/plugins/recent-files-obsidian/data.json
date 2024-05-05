@@ -5,12 +5,104 @@
       "path": "Lógica y Estructuras Discretas/Composición de relaciones.md"
     },
     {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Teorema de Rouche Frobeniuos",
+      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
+    },
+    {
+      "basename": "Traza de una matriz",
+      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
+    },
+    {
+      "basename": "Ecuación lineal",
+      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
+    },
+    {
+      "basename": "Rango de una matriz",
+      "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
+    },
+    {
+      "basename": "20240426 - Número mayor",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
+    },
+    {
+      "basename": "20240430 - Bifurcaciones anidadas 1",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
+    },
+    {
+      "basename": "20240416 - Triángulo rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
+    },
+    {
+      "basename": "20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14)",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14).md"
+    },
+    {
+      "basename": "Estructura de casos",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
+    },
+    {
+      "basename": "20240503 - Operaciones matemáticas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas.md"
+    },
+    {
+      "basename": "20240430 - Tipo de triángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "Operador ternario",
+      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
+    },
+    {
+      "basename": "Función característica",
+      "path": "Lógica y Estructuras Discretas/Función característica.md"
+    },
+    {
+      "basename": "Sentencia fantasma",
+      "path": "Algoritmos y Estructuras de Datos/Sentencia fantasma.md"
+    },
+    {
+      "basename": "Pseudocódigo",
+      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
+    },
+    {
+      "basename": "Estructuras de control",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "Conjunto potencia",
+      "path": "Lógica y Estructuras Discretas/Conjunto potencia.md"
     },
     {
       "basename": "Relación",
       "path": "Lógica y Estructuras Discretas/Relación.md"
+    },
+    {
+      "basename": "Producto cartesiano",
+      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
+    },
+    {
+      "basename": "Términos primitivos",
+      "path": "Lógica y Estructuras Discretas/Términos primitivos.md"
+    },
+    {
+      "basename": "Teoría intuitiva de conjuntos",
+      "path": "Lógica y Estructuras Discretas/Teoría intuitiva de conjuntos.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
     },
     {
       "basename": "Diferencia simétrica",
@@ -23,14 +115,6 @@
     {
       "basename": "Conjunto vacío",
       "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
-    },
-    {
-      "basename": "Potencia de un conjunto",
-      "path": "Lógica y Estructuras Discretas/Potencia de un conjunto.md"
-    },
-    {
-      "basename": "Producto cartesiano",
-      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
     },
     {
       "basename": "Función",
@@ -97,10 +181,6 @@
       "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
     },
     {
-      "basename": "Teoría intuitiva de conjuntos",
-      "path": "Lógica y Estructuras Discretas/Teoría intuitiva de conjuntos.md"
-    },
-    {
       "basename": "venn",
       "path": "Lógica y Estructuras Discretas/attachments/venn.svg"
     },
@@ -119,86 +199,6 @@
     {
       "basename": "Sustantivos genéricos",
       "path": "Inglés I/Sustantivos genéricos.md"
-    },
-    {
-      "basename": "Tipos de sistemas",
-      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
-    },
-    {
-      "basename": "Universo",
-      "path": "Física I/Universo.md"
-    },
-    {
-      "basename": "Universo",
-      "path": "Lógica y Estructuras Discretas/Universo.md"
-    },
-    {
-      "basename": "Prueba exhaustiva",
-      "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
-    },
-    {
-      "basename": "Implicación (→)",
-      "path": "Lógica y Estructuras Discretas/Implicación (→).md"
-    },
-    {
-      "basename": "Lógica",
-      "path": "Lógica y Estructuras Discretas/Lógica.md"
-    },
-    {
-      "basename": "Inteligencia artificial simbólica",
-      "path": "Inteligencia Artificial/Inteligencia artificial simbólica.md"
-    },
-    {
-      "basename": "Diagrama de Transición de Estado (DTE)",
-      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado (DTE).md"
-    },
-    {
-      "basename": "Vocabulario procedimental",
-      "path": "Inglés I/Vocabulario procedimental.md"
-    },
-    {
-      "basename": "Generalización existencial",
-      "path": "Lógica y Estructuras Discretas/Generalización existencial.md"
-    },
-    {
-      "basename": "Especificación universal",
-      "path": "Lógica y Estructuras Discretas/Especificación universal.md"
-    },
-    {
-      "basename": "Especificación existencial",
-      "path": "Lógica y Estructuras Discretas/Especificación existencial.md"
-    },
-    {
-      "basename": "Equivalencia lógica",
-      "path": "Lógica y Estructuras Discretas/Equivalencia lógica.md"
-    },
-    {
-      "basename": "20240430 - Tipo de triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 3",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 3.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 2",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 1",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
-    },
-    {
-      "basename": "20240426 - Número mayor",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Teoría General de Sistemas (TGS)",
-      "path": "Sistemas y Procesos de Negocios/Teoría General de Sistemas (TGS).md"
     }
   ],
   "omittedPaths": [],
