@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "Generalización universal",
+      "path": "Lógica y Estructuras Discretas/Generalización universal.md"
+    },
+    {
+      "basename": "Vocabulario técnico",
+      "path": "Inglés I/Vocabulario técnico.md"
+    },
+    {
+      "basename": "Generaciones de hardware",
+      "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
+    },
+    {
+      "basename": "Sistema binario",
+      "path": "Arquitectura de Computadoras/Sistema binario.md"
+    },
+    {
+      "basename": "Ley de Coulomb",
+      "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
+    },
+    {
+      "basename": "Leyes de Newton",
+      "path": "Física I/Leyes de Newton.md"
+    },
+    {
       "basename": "Composición de relaciones",
       "path": "Lógica y Estructuras Discretas/Composición de relaciones.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "Compuerta NAND",
       "path": "Arquitectura de Computadoras/Compuerta NAND.md"
-    },
-    {
-      "basename": "Conjunto singleton",
-      "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
-    },
-    {
-      "basename": "venn",
-      "path": "Lógica y Estructuras Discretas/attachments/venn.svg"
-    },
-    {
-      "basename": "Cuantificador universal (∀)",
-      "path": "Lógica y Estructuras Discretas/Cuantificador universal (∀).md"
-    },
-    {
-      "basename": "Física",
-      "path": "Física I/Física.md"
-    },
-    {
-      "basename": "Predicados",
-      "path": "Lógica y Estructuras Discretas/Predicados.md"
-    },
-    {
-      "basename": "Sustantivos genéricos",
-      "path": "Inglés I/Sustantivos genéricos.md"
     }
   ],
   "omittedPaths": [],

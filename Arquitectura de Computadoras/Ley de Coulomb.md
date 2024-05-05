@@ -1,6 +1,6 @@
 # Ley de Coulomb
 
-Establece que la fuerza entre dos cargas puntuales es directamente proporcional al producto de sus magnitudes e inversamente proporcional al cuadrado de la distancia entre ellas.
+Establece que la [[Fuerza]] entre dos cargas puntuales es directamente proporcional al producto de sus magnitudes e inversamente proporcional al cuadrado de la distancia entre ellas.
 
 $$
 F = \frac{k \cdot (q_1 \cdot q_2)}{r^2}

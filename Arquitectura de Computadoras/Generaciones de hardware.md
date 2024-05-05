@@ -8,14 +8,14 @@ Trabaja con triodos, que tienen la función de amplificar, conmutar, oscilar, se
 
 ## 2° generación (1955 - 1963): electrónica basada en transistores
 
-Los transistores permitieron rediseñar los sistemas ya existentes de una manera mucho más compactas. Trabajan con 0 y 1.
+Los [[Transistor|transistores]] permitieron rediseñar los sistemas ya existentes de una manera mucho más compactas. Trabajan con el [[Sistema binario]].
 
 ## 3° generación (1964 - actualidad): electrónica basada en circuitos integrados (CI)
 
-Los circuitos integrados (CI), también llamados chips o microchips, son componentes semiconductores, generalmente hechos con silicio, lleva el circuito grabado en sí mismo, y va recubierto con un elemento plástico protector.
+Los circuitos integrados (CI), también llamados chips o microchips, son componentes semiconductores, generalmente hechos con [[Silicio]], lleva el circuito grabado en sí mismo, y va recubierto con un elemento plástico protector.
 
-Permitieron mejorar la performance y diseñar sistemas mucho más compactos, mediante una precisión manométrica. Trabajan con 0 y 1.
+Permitieron mejorar la performance y diseñar sistemas mucho más compactos, mediante una precisión manométrica. Trabajan con el [[Sistema binario]].
 
 ## 4° generación (futuro): computación cuántica
 
-Son sistemas que trabajan con bits cuánticos o *cubits* (*qubits* en inglés). La velocidad de procesamiento es drásticamente mayor, y utiliza un tipo de arquitectura completamente diferente.
+Son [[Sistemas]] que trabajan con bits cuánticos o *cubits* (*qubits* en inglés). La velocidad de procesamiento es drásticamente mayor, y utiliza un tipo de arquitectura completamente diferente.
