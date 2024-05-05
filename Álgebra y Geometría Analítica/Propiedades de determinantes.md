@@ -11,4 +11,6 @@ Al momento de utilizar [[Determinante|determinantes]] de [[Matriz|matrices]], ex
 7. Si en $A \in k^{n \times n}$ se reemplaza una línea por la suma de ella más un múltiplo de otra, el determinante de la nueva matriz es igual a $det(A)$.
 8. Sea $A \in k^{n \times n}$, $|A| = |A^t|$.
 9. Sea $A, B \in k^{n \times n}$, $|A \cdot B| = |A| \cdot |B|$.
-10. Si $A \in k^{n \times n}$, y es inversible $\exists A^{-1} \in k^{n \times n}$ tal que $A \cdot A^{-1} = I$, $|A^{-1}| = \frac{1}{|A|}$
+10. Si $A \in k^{n \times n}$, y es inversible $\exists A^{-1} \in k^{n \times n}$ tal que $A \cdot A^{-1} = I$, $|A^{-1}| = \frac{1}{|A|}, |A| \neq 0$.
+11. Si se multiplican los elementos de una línea por los adjuntos de otra línea, y se suman los productos, el resultado es $0$.
+12. El determinante de una matriz triangular es el producto de los elementos de su diagonal principal.

@@ -9,6 +9,10 @@
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     },
     {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
       "basename": "Regla de Chio",
       "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
     },
@@ -31,10 +35,6 @@
     {
       "basename": "Elemento neutro",
       "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Generalización universal",
