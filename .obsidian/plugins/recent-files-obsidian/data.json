@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Adjunto",
-      "path": "Álgebra y Geometría Analítica/Adjunto.md"
+      "basename": "Matriz inversa",
+      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
+    },
+    {
+      "basename": "Regla de Chio",
+      "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
     },
     {
       "basename": "Determinante",
       "path": "Álgebra y Geometría Analítica/Determinante.md"
     },
     {
-      "basename": "Menor complementario",
-      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
+      "basename": "Adjunto",
+      "path": "Álgebra y Geometría Analítica/Adjunto.md"
     },
     {
-      "basename": "Matriz inversa",
-      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
+      "basename": "Menor complementario",
+      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
     },
     {
       "basename": "Matriz involutiva",
@@ -195,10 +199,6 @@
     {
       "basename": "Cuantificador existencial (∃)",
       "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
-    },
-    {
-      "basename": "Diferencia",
-      "path": "Lógica y Estructuras Discretas/Diferencia.md"
     }
   ],
   "omittedPaths": [],
