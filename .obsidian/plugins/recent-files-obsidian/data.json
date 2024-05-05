@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Determinante",
+      "path": "Álgebra y Geometría Analítica/Determinante.md"
+    },
+    {
       "basename": "Propiedades de determinantes",
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
+    },
+    {
+      "basename": "Teorema de Laplace",
+      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
     },
     {
       "basename": "Matriz inversa",
@@ -15,10 +23,6 @@
     {
       "basename": "Regla de Chio",
       "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
-    },
-    {
-      "basename": "Determinante",
-      "path": "Álgebra y Geometría Analítica/Determinante.md"
     },
     {
       "basename": "Adjunto",
@@ -195,10 +199,6 @@
     {
       "basename": "Intersección (∩)",
       "path": "Lógica y Estructuras Discretas/Intersección (∩).md"
-    },
-    {
-      "basename": "Compuerta NOT",
-      "path": "Arquitectura de Computadoras/Compuerta NOT.md"
     }
   ],
   "omittedPaths": [],
