@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Adjunto",
+      "path": "Álgebra y Geometría Analítica/Adjunto.md"
+    },
+    {
+      "basename": "Determinante",
+      "path": "Álgebra y Geometría Analítica/Determinante.md"
+    },
+    {
+      "basename": "Menor complementario",
+      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
+    },
+    {
+      "basename": "Matriz inversa",
+      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
+    },
+    {
+      "basename": "Matriz involutiva",
+      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
       "basename": "Generalización universal",
       "path": "Lógica y Estructuras Discretas/Generalización universal.md"
     },
@@ -27,10 +55,6 @@
     {
       "basename": "Composición de relaciones",
       "path": "Lógica y Estructuras Discretas/Composición de relaciones.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Teorema de Rouche Frobeniuos",
@@ -175,30 +199,6 @@
     {
       "basename": "Diferencia",
       "path": "Lógica y Estructuras Discretas/Diferencia.md"
-    },
-    {
-      "basename": "Complemento",
-      "path": "Lógica y Estructuras Discretas/Complemento.md"
-    },
-    {
-      "basename": "Compuerta OR",
-      "path": "Arquitectura de Computadoras/Compuerta OR.md"
-    },
-    {
-      "basename": "Compuerta AND",
-      "path": "Arquitectura de Computadoras/Compuerta AND.md"
-    },
-    {
-      "basename": "Compuerta XNOR",
-      "path": "Arquitectura de Computadoras/Compuerta XNOR.md"
-    },
-    {
-      "basename": "Compuerta NOR",
-      "path": "Arquitectura de Computadoras/Compuerta NOR.md"
-    },
-    {
-      "basename": "Compuerta NAND",
-      "path": "Arquitectura de Computadoras/Compuerta NAND.md"
     }
   ],
   "omittedPaths": [],
