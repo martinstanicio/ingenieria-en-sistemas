@@ -31,17 +31,44 @@
     "iconsInLinksEnabled": true,
     "debugMode": false
   },
-  "Física I": "FasBolt",
-  "Lógica y Estructuras Discretas": "FasGreaterThanEqual",
-  "Sistemas y Procesos de Negocios": "FasDiagramProject",
-  "Inglés I": "FasLanguage",
+  "Física I": {
+    "iconName": "FasBolt",
+    "iconColor": "#ffeb3c"
+  },
+  "Lógica y Estructuras Discretas": {
+    "iconName": "FasGreaterThanEqual",
+    "iconColor": "#00bcd5"
+  },
+  "Sistemas y Procesos de Negocios": {
+    "iconName": "FasDiagramProject",
+    "iconColor": "#9c28b1"
+  },
+  "Inglés I": {
+    "iconName": "FasLanguage",
+    "iconColor": "#4cb050"
+  },
   "Sistemas y procesos de negocios": "FasDiagramProject",
-  "Algoritmos y Estructuras de Datos": "FasLayerGroup",
-  "Análisis Matemático I": "FasSquareRootVariable",
-  "Arquitectura de Computadoras": "FasServer",
-  "Ingeniería y Sociedad": "FasUserGroup",
+  "Algoritmos y Estructuras de Datos": {
+    "iconName": "FasLayerGroup",
+    "iconColor": "#5cadd6"
+  },
+  "Análisis Matemático I": {
+    "iconName": "FasSquareRootVariable",
+    "iconColor": "#f44236"
+  },
+  "Arquitectura de Computadoras": {
+    "iconName": "FasServer",
+    "iconColor": "#607d8b"
+  },
+  "Ingeniería y Sociedad": {
+    "iconName": "FasUserGroup",
+    "iconColor": "#ff9700"
+  },
   "Inteligencia Artificial": "FasBrain",
-  "Álgebra y Geometría Analítica": "FasInfinity",
+  "Álgebra y Geometría Analítica": {
+    "iconName": "FasInfinity",
+    "iconColor": "#ea163a"
+  },
   "Inglés I/Actividades": "FasPencil",
   "Algoritmos y Estructuras de Datos/Actividades": "FasPencil"
 }

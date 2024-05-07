@@ -39,9 +39,9 @@ flowchart TB
 	numero2 = entero
 	operacion = cadena`"]
     
-	leerNumero1[/numero1/]
-    leerNumero2[/numero2/]
-    leerOperacion[/operacion/]
+	numero1[/numero1/]
+    numero2[/numero2/]
+    operacion[/operacion/]
     
     condicion{operacion}
     
@@ -57,7 +57,7 @@ flowchart TB
     
 	fin([fin])
     
-	comienzo --> condicion
+	comienzo --> variables --> numero1 --> numero2 --> operacion --> condicion
 	condicion -- "S" --> S
 	condicion -- "R" --> R
 	condicion -- "C" --> CCondicion
@@ -67,6 +67,7 @@ flowchart TB
 	S --> fin
 	R --> fin
 	CSi --> fin
+	CNo --> fin
 	M --> fin
 ```
 

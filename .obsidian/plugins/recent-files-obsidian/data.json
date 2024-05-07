@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Entradas",
+      "path": "Sistemas y Procesos de Negocios/Entradas.md"
+    },
+    {
+      "basename": "Estructura de casos",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
+    },
+    {
+      "basename": "20240503 - Operaciones matemáticas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas.md"
+    },
+    {
       "basename": "Equifinalidad",
       "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
     },
@@ -11,10 +27,6 @@
     {
       "basename": "Salidas",
       "path": "Sistemas y Procesos de Negocios/Salidas.md"
-    },
-    {
-      "basename": "20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14)",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14).md"
     },
     {
       "basename": "Objetivo",
@@ -117,14 +129,6 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
     },
     {
-      "basename": "Estructura de casos",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
-    },
-    {
-      "basename": "20240503 - Operaciones matemáticas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas.md"
-    },
-    {
       "basename": "20240430 - Tipo de triángulo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Función",
       "path": "Análisis Matemático I/Función.md"
-    },
-    {
-      "basename": "Cardinal",
-      "path": "Álgebra y Geometría Analítica/Cardinal.md"
     }
   ],
   "omittedPaths": [],

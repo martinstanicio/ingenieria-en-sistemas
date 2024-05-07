@@ -2,7 +2,7 @@
 
 Un tipo de [[Estructuras de control#De selección]] que ejecuta un 
 
-Se puede representar con [[Pseudocódigo]] o [[Diagrama de flujo]], pero Python no cuenta con esta estructura.
+Se puede representar con [[Pseudocódigo]] o [[Diagrama de flujo]]. [[Python]] implementó está estructura en la versión 3.10, pero también se puede hacer algo similar utilizando [[Bifurcaciones]] anidadas con `elif`.
 
 ## Diagrama de flujo
 
@@ -34,20 +34,4 @@ flowchart TB
 
 ## Pseudocódigo
 
-```
-comienzo
-
-segun_sea variable hacer
-    constanteA:
-        A1
-        A2
-    constanteB:
-        B1
-        B2
-    constanteC:
-        C1
-        C2
-fin_
-
-fin
-```
+![[Pseudocódigo#^estructura-de-casos]]
