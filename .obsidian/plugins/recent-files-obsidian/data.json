@@ -5,6 +5,10 @@
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
     {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
       "basename": "Matriz inversa",
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "Teorema de Laplace",
       "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Regla de Chio",
