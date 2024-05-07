@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Equifinalidad",
+      "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
+    },
+    {
+      "basename": "Ambiente",
+      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
+    },
+    {
+      "basename": "Salidas",
+      "path": "Sistemas y Procesos de Negocios/Salidas.md"
+    },
+    {
+      "basename": "20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14)",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14).md"
+    },
+    {
+      "basename": "Objetivo",
+      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
+    },
+    {
       "basename": "Propiedades de determinantes",
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
@@ -97,10 +117,6 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
     },
     {
-      "basename": "20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14)",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas (conflict 2024-05-03-18-52-14).md"
-    },
-    {
       "basename": "Estructura de casos",
       "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "Cardinal",
       "path": "Álgebra y Geometría Analítica/Cardinal.md"
-    },
-    {
-      "basename": "Subconjunto",
-      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
-    },
-    {
-      "basename": "Compuerta XOR",
-      "path": "Arquitectura de Computadoras/Compuerta XOR.md"
-    },
-    {
-      "basename": "Subconjunto propio",
-      "path": "Lógica y Estructuras Discretas/Subconjunto propio.md"
-    },
-    {
-      "basename": "Intersección (∩)",
-      "path": "Lógica y Estructuras Discretas/Intersección (∩).md"
     }
   ],
   "omittedPaths": [],

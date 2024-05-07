@@ -1,4 +1,8 @@
-# Salidas o resultados
+---
+aliases:
+  - Resultados
+---
+# Salidas
 
 Son creadas por el [[Sistemas|sistema]] y se envían al [[Ambiente]] con el fin de tener un efecto.
 
