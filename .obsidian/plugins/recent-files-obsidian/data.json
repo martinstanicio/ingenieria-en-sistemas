@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Estructura",
+      "path": "Sistemas y Procesos de Negocios/Estructura.md"
+    },
+    {
+      "basename": "Sinergia",
+      "path": "Sistemas y Procesos de Negocios/Sinergia.md"
+    },
+    {
       "basename": "Entradas",
       "path": "Sistemas y Procesos de Negocios/Entradas.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Unión (∪)",
       "path": "Lógica y Estructuras Discretas/Unión (∪).md"
-    },
-    {
-      "basename": "Conjunto vacío",
-      "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
     }
   ],
   "omittedPaths": [],
