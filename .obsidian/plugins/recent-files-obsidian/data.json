@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Sistema binario",
+      "path": "Arquitectura de Computadoras/Sistema binario.md"
+    },
+    {
       "basename": "Sistema decimal",
       "path": "Arquitectura de Computadoras/Sistema decimal.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "Sistema hexadecimal",
       "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
-    },
-    {
-      "basename": "Sistema binario",
-      "path": "Arquitectura de Computadoras/Sistema binario.md"
     },
     {
       "basename": "Sistema octal",
