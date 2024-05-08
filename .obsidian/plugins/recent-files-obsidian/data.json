@@ -1,24 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "Sistema octal",
-      "path": "Arquitectura de Computadoras/Sistema octal.md"
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
     },
     {
-      "basename": "Sistema numérico",
-      "path": "Arquitectura de Computadoras/Sistema numérico.md"
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
     },
     {
-      "basename": "Sistema hexadecimal",
-      "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Bandera",
+      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
+    },
+    {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
     },
     {
       "basename": "Sistema decimal",
       "path": "Arquitectura de Computadoras/Sistema decimal.md"
     },
     {
+      "basename": "Sistema hexadecimal",
+      "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
+    },
+    {
       "basename": "Sistema binario",
       "path": "Arquitectura de Computadoras/Sistema binario.md"
+    },
+    {
+      "basename": "Sistema octal",
+      "path": "Arquitectura de Computadoras/Sistema octal.md"
+    },
+    {
+      "basename": "Sistema numérico",
+      "path": "Arquitectura de Computadoras/Sistema numérico.md"
     },
     {
       "basename": "Compuertas lógicas",
@@ -65,28 +85,12 @@
       "path": "Lógica y Estructuras Discretas/Árboles semánticos.md"
     },
     {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
       "basename": "Estructuras de control",
       "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
     },
     {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
       "basename": "Python",
       "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
     },
     {
       "basename": "20240503 - Operaciones matemáticas",
@@ -115,10 +119,6 @@
     {
       "basename": "20240426 - Conectivos lógicos",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
-    },
-    {
-      "basename": "Bandera",
-      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
     },
     {
       "basename": "20240419 - Bifurcación doble",

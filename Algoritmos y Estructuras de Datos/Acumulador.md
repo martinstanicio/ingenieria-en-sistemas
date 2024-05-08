@@ -2,7 +2,7 @@
 aliases:
   - Contador
 created: 2024-05-07 22:15:17
-modified: 2024-05-08 01:33:30
+modified: 2024-05-08 11:55:00
 title: Acumulador
 ---
 
