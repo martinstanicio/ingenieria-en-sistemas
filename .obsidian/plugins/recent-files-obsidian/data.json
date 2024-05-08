@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "20240507 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
+    },
+    {
+      "basename": "Bandera",
+      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
+    },
+    {
+      "basename": "20240430 - Tipo de triángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
+    },
+    {
       "basename": "Estructura",
       "path": "Sistemas y Procesos de Negocios/Estructura.md"
     },
@@ -137,10 +149,6 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
     },
     {
-      "basename": "20240430 - Tipo de triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
-    },
-    {
       "basename": "Bifurcaciones",
       "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Conjunto",
       "path": "Lógica y Estructuras Discretas/Conjunto.md"
-    },
-    {
-      "basename": "Diferencia simétrica",
-      "path": "Lógica y Estructuras Discretas/Diferencia simétrica.md"
-    },
-    {
-      "basename": "Unión (∪)",
-      "path": "Lógica y Estructuras Discretas/Unión (∪).md"
     }
   ],
   "omittedPaths": [],
