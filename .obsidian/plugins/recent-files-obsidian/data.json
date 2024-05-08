@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Sistema decimal",
+      "path": "Arquitectura de Computadoras/Sistema decimal.md"
+    },
+    {
+      "basename": "20240507 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
+    },
+    {
+      "basename": "Funciones",
+      "path": "Algoritmos y Estructuras de Datos/Funciones.md"
+    },
+    {
       "basename": "Ciclo mientras",
       "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
     },
@@ -19,10 +31,6 @@
     {
       "basename": "Acumulador",
       "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
-      "basename": "Sistema decimal",
-      "path": "Arquitectura de Computadoras/Sistema decimal.md"
     },
     {
       "basename": "Sistema hexadecimal",
@@ -51,10 +59,6 @@
     {
       "basename": "Compuerta AND",
       "path": "Arquitectura de Computadoras/Compuerta AND.md"
-    },
-    {
-      "basename": "20240507 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
     },
     {
       "basename": "Cinemática",
@@ -195,10 +199,6 @@
     {
       "basename": "Matriz inversa",
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
-    },
-    {
-      "basename": "Determinante",
-      "path": "Álgebra y Geometría Analítica/Determinante.md"
     }
   ],
   "omittedPaths": [],
