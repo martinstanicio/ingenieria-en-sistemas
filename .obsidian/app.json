@@ -43,5 +43,6 @@
   "userIgnoreFilters": [
     "/.*README/"
   ],
-  "mobilePullAction": "editor:save-file"
+  "mobilePullAction": "editor:save-file",
+  "showUnsupportedFiles": true
 }
