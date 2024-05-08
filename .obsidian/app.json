@@ -44,5 +44,7 @@
     "/.*README/"
   ],
   "mobilePullAction": "editor:save-file",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "readableLineLength": true,
+  "vimMode": false
 }
