@@ -6,11 +6,11 @@
     "emojiStyle": "none",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasInfinity",
-      "FasRobot",
-      "FasUserGroup",
       "FasPencil",
-      "FasLanguage"
+      "FasImages",
+      "FabMarkdown",
+      "FabPython",
+      "FasInfinity"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -70,5 +70,12 @@
     "iconColor": "#ea163a"
   },
   "Inglés I/Actividades": "FasPencil",
-  "Algoritmos y Estructuras de Datos/Actividades": "FasPencil"
+  "Algoritmos y Estructuras de Datos/Actividades": "FasPencil",
+  "Algoritmos y Estructuras de Datos/python": "FabPython",
+  "Algoritmos y Estructuras de Datos/attachments": "FasImages",
+  "Análisis Matemático I/attachments": "FasImages",
+  "Arquitectura de Computadoras/Actividades": "FasPencil",
+  "Arquitectura de Computadoras/attachments": "FasImages",
+  "Lógica y Estructuras Discretas/attachments": "FasImages",
+  "Sistemas y Procesos de Negocios/attachments": "FasImages"
 }

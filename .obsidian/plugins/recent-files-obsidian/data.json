@@ -1,24 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "20240507 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
-    },
-    {
-      "basename": "Estructuras de control",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
     },
     {
       "basename": "Ciclo desde-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
     },
     {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+      "basename": "Estructuras de control",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "20240507 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
     },
     {
       "basename": "Acumulador",
@@ -103,10 +111,6 @@
     {
       "basename": "Entradas",
       "path": "Sistemas y Procesos de Negocios/Entradas.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "Estructura de casos",
@@ -195,10 +199,6 @@
     {
       "basename": "Composición de relaciones",
       "path": "Lógica y Estructuras Discretas/Composición de relaciones.md"
-    },
-    {
-      "basename": "Teorema de Rouche Frobeniuos",
-      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
     }
   ],
   "omittedPaths": [],

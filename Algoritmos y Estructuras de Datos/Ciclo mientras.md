@@ -1,11 +1,19 @@
 # Ciclo mientras
+
 Es una [[Estructuras de control#De repetición]] que ejecuta una serie de instrucciones dadas **mientras** se cumpla una condición.
+
+Para evitar que se vuelva un ciclo infinito, podemos utilizar diferentes estrategias:
+
+- Utilizar un [[Acumulador]]
+- Controlar con una opción a continuar
+- Controlar con valor centinela
+- Controlar con una [[Bandera]]
 
 ```mermaid
 flowchart TB
 	comienzo([comienzo])
     
-    C1{{"Condición"}}
+    condicion{{"Condición"}}
     
     A[A]
     B[B]
@@ -15,12 +23,17 @@ flowchart TB
     
 	fin([fin])
     
-	comienzo --> C1
-	C1 -- Sí --> A --> B --> C -->
-	match -- "B" --> B
-	match -- "C" --> C
-	match -- "Otro" --> categoria_invalida
-	A & B & C & categoria_invalida --> validez
-	validez -- Sí --> sueldo --> mostrar_sueldo
-	validez -- NO --> mostrar_categoria_incorrecta
-	mostrar_sueldo & mostrar_categoria_incorrecta --> fin
+	comienzo --> condicion
+	condicion -- Sí --> A --> B --> C --> condicion
+	condicion -- No --> X ---> fin
+```
+
+## Python
+
+```python
+c = 0
+
+while c < 4:
+    c = c + 1
+    print(f"El ciclo se ejecutó {c} veces")
+```
