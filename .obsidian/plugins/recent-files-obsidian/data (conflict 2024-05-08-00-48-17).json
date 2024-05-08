@@ -1,20 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "20240508 - Test",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240508 - Test.md"
-    },
-    {
       "basename": "20240507 - Sueldo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
     },
     {
-      "basename": "Árboles semánticos",
-      "path": "Lógica y Estructuras Discretas/Árboles semánticos.md"
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Ciclo repetir-hasta",
@@ -35,6 +27,10 @@
     {
       "basename": "Python",
       "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
     },
     {
       "basename": "Acumulador",
@@ -145,10 +141,6 @@
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
     {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
       "basename": "Matriz inversa",
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     },
@@ -199,6 +191,14 @@
     {
       "basename": "Ley de Coulomb",
       "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
+    },
+    {
+      "basename": "Leyes de Newton",
+      "path": "Física I/Leyes de Newton.md"
+    },
+    {
+      "basename": "Composición de relaciones",
+      "path": "Lógica y Estructuras Discretas/Composición de relaciones.md"
     }
   ],
   "omittedPaths": [],
