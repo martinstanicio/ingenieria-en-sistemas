@@ -10,10 +10,10 @@ Se ejecuta una instrucción después de la otra, el 100% de las veces.
 
 Se evalúa una condición por verdadero o falso, y se ejecutan las instrucciones correspondientes.
 
-Por ejemplo: [[Bifurcaciones]] (`if`) o estructuras de casos (`switch`).
+Por ejemplo: [[Bifurcaciones]] (`if`) o [[Estructura de casos]] (`match`).
 
 ## De repetición
 
 Las instrucciones que especifiquemos se ejecutan múltiples veces, según las condiciones que le demos al bucle o *loop*.
 
-Por ejemplo: `for`, `while`, `do while`.
+Por ejemplo: [[Ciclo desde-hasta]] (`for`), [[Ciclo mientras]] (`while`), [[Ciclo repetir-hasta]] (`repeat`).

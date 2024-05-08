@@ -5,7 +5,7 @@ aliases:
 
 # Bandera
 
-Se utiliza para saber si la ejecución de un [[Programa propio]] pasó por un cierto punto del código o no. Es decir, es una variable que puede ser verdadero o falso.
+Se utiliza para saber si la ejecución de un [[Programa propio]] pasó por un cierto punto del código o no. Es decir, es una [[Variables|variable]] que puede ser verdadera o falsa.
 
 Por ejemplo, podemos utilizarla para saber si una de las ramas de una [[Bifurcaciones|bifurcación]] fue ejecutada o no.
 

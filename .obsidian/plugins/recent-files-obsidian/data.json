@@ -1,16 +1,96 @@
 {
   "recentFiles": [
     {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
       "basename": "20240507 - Sueldo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
+    },
+    {
+      "basename": "Estructuras de control",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+    },
+    {
+      "basename": "20240503 - Operaciones matemáticas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas.md"
+    },
+    {
+      "basename": "20240430 - Tipo de triángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
+    },
+    {
+      "basename": "20240430 - Bifurcaciones anidadas 3",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 3.md"
+    },
+    {
+      "basename": "20240430 - Bifurcaciones anidadas 2",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
+    },
+    {
+      "basename": "20240430 - Bifurcaciones anidadas 1",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
+    },
+    {
+      "basename": "20240426 - Número mayor",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
+    },
+    {
+      "basename": "20240426 - Conectivos lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
     },
     {
       "basename": "Bandera",
       "path": "Algoritmos y Estructuras de Datos/Bandera.md"
     },
     {
-      "basename": "20240430 - Tipo de triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
+      "basename": "20240419 - Bifurcación doble",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
+    },
+    {
+      "basename": "20240416 - Triángulo rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
+    },
+    {
+      "basename": "20240416 - Palindromo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
+    },
+    {
+      "basename": "20240409 - Triángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Triángulo.md"
+    },
+    {
+      "basename": "20240409 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
+    },
+    {
+      "basename": "20240409 - Circunferencia",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Circunferencia.md"
+    },
+    {
+      "basename": "20240405 - Energía",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Energía.md"
+    },
+    {
+      "basename": "20240405 - Cuadrática",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Cuadrática.md"
+    },
+    {
+      "basename": "Variables",
+      "path": "Algoritmos y Estructuras de Datos/Variables.md"
     },
     {
       "basename": "Estructura",
@@ -31,10 +111,6 @@
     {
       "basename": "Estructura de casos",
       "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
-    },
-    {
-      "basename": "20240503 - Operaciones matemáticas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas.md"
     },
     {
       "basename": "Equifinalidad",
@@ -123,82 +199,6 @@
     {
       "basename": "Teorema de Rouche Frobeniuos",
       "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
-    },
-    {
-      "basename": "Traza de una matriz",
-      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
-    },
-    {
-      "basename": "Ecuación lineal",
-      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
-    },
-    {
-      "basename": "Rango de una matriz",
-      "path": "Álgebra y Geometría Analítica/Rango de una matriz.md"
-    },
-    {
-      "basename": "20240426 - Número mayor",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 1",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
-    },
-    {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
-    },
-    {
-      "basename": "Bifurcaciones",
-      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
-    },
-    {
-      "basename": "Operador ternario",
-      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
-    },
-    {
-      "basename": "Función característica",
-      "path": "Lógica y Estructuras Discretas/Función característica.md"
-    },
-    {
-      "basename": "Sentencia fantasma",
-      "path": "Algoritmos y Estructuras de Datos/Sentencia fantasma.md"
-    },
-    {
-      "basename": "Pseudocódigo",
-      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
-    },
-    {
-      "basename": "Estructuras de control",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Conjunto potencia",
-      "path": "Lógica y Estructuras Discretas/Conjunto potencia.md"
-    },
-    {
-      "basename": "Relación",
-      "path": "Lógica y Estructuras Discretas/Relación.md"
-    },
-    {
-      "basename": "Producto cartesiano",
-      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
-    },
-    {
-      "basename": "Términos primitivos",
-      "path": "Lógica y Estructuras Discretas/Términos primitivos.md"
-    },
-    {
-      "basename": "Teoría intuitiva de conjuntos",
-      "path": "Lógica y Estructuras Discretas/Teoría intuitiva de conjuntos.md"
-    },
-    {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
     }
   ],
   "omittedPaths": [],
