@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 12:04:48
+modified: 2024-05-08 01:33:30
+title: Compuerta XOR
+---
+
 # Compuerta XOR
 
 Es una [[Compuertas lógicas|compuerta lógica]] que se comporta de forma similar a una [[Disyunción exclusiva (⊕)]] o [[Diferencia simétrica]].

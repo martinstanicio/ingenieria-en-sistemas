@@ -1,3 +1,9 @@
+---
+created: 2024-04-26 15:12:37
+modified: 2024-05-08 01:33:30
+title: Subconjunto
+---
+
 # Subconjunto
 
 Cuando todos los elementos de un [[Conjunto]] $B$ son parte de un conjunto $A$, se dice que $B$ es un subconjunto de $A$.

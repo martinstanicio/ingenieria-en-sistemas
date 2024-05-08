@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 11:06:21
+modified: 2024-05-08 01:33:30
+title: Compuerta OR
+---
+
 # Compuerta OR
 
 Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==suma== en el álgebra de Boole. Se comporta de forma similar a una [[Disyunción (∨)]] o [[Unión (∪)]].

@@ -1,3 +1,9 @@
+---
+created: 2024-03-24 22:09:58
+modified: 2024-05-08 01:33:30
+title: 01 - Uso del diccionario bilingüe
+---
+
 # 01 - Uso del diccionario bilingüe
 
 1. Traduzca las siguientes palabras (sin uso del diccionario si cree conocer el significado)
@@ -9,7 +15,6 @@
 	6. **Conductor:** director de orquesta
 	7. **Carpet:** alfombra
 	8. **Career:** carrera profesional
-	
 
     Todas las palabras son [[False friends]].
 

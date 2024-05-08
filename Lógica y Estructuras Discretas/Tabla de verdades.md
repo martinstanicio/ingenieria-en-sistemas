@@ -1,3 +1,9 @@
+---
+created: 2024-03-22 14:51:19
+modified: 2024-05-08 01:33:30
+title: Tabla de verdades
+---
+
 # Tabla de verdades
 
 Nos permite obtener el resultado de una proposición para cualquier valor de sus [[Proposiciones simples]].

@@ -1,3 +1,9 @@
+---
+created: 2024-04-22 11:45:25
+modified: 2024-05-08 01:33:29
+title: Operaciones con matrices
+---
+
 # Operaciones con matrices
 
 Existen ciertas condiciones para realizar operaciones con [[Matriz|matrices]].

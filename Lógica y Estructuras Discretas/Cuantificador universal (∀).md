@@ -1,3 +1,9 @@
+---
+created: 2024-04-19 13:12:06
+modified: 2024-05-08 01:33:30
+title: Cuantificador universal (∀)
+---
+
 # Cuantificador universal (∀)
 
 Se utiliza para referirse a la ==totalidad de los elementos del [[Lógica y Estructuras Discretas/Universo|Universo]]== o [[Conjunto]] en el que estamos trabajando. Utiliza el símbolo "$\forall$".

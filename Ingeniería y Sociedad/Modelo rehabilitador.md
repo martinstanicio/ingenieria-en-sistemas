@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 17:30:54
+modified: 2024-05-08 01:33:30
+title: Modelo rehabilitador
+---
+
 # Modelo rehabilitador
 
 Era una forma de ver a la [[Discapacidad]], tenía una **justificación científica**, y se consideraba que estas personas podían ser útiles en la medida que sean ==rehabilitadas o normalizadas==.

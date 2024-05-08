@@ -1,3 +1,9 @@
+---
+created: 2024-03-20 16:04:05
+modified: 2024-05-08 01:33:31
+title: Diagrama de flujo
+---
+
 # Diagrama de flujo
 
 Es una manera de **representar gráficamente** un algoritmo o un proceso de alguna naturaleza, a través de una serie de pasos estructurados y vinculados que permiten su revisión como un todo.

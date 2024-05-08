@@ -1,3 +1,9 @@
+---
+created: 2024-04-03 20:16:11
+modified: 2024-05-08 01:33:30
+title: Ley de Coulomb
+---
+
 # Ley de Coulomb
 
 Establece que la [[Fuerza]] entre dos cargas puntuales es directamente proporcional al producto de sus magnitudes e inversamente proporcional al cuadrado de la distancia entre ellas.

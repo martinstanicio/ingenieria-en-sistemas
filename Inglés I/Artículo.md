@@ -1,3 +1,9 @@
+---
+created: 2024-04-21 17:30:30
+modified: 2024-05-08 01:33:30
+title: Artículo
+---
+
 # Artículo
 
 Es la palabra que ==acompaña al [[Sustantivo]]== en la [[Frase o grupo nominal]].

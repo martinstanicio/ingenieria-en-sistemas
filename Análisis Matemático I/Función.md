@@ -1,3 +1,9 @@
+---
+created: 2024-03-22 22:31:56
+modified: 2024-05-08 01:33:30
+title: Función
+---
+
 # Función
 
 Una ==[[Relación]]== entre, por lo menos, dos variables, una independiente y la otra dependiente, de forma que a cada valor de la variable independiente, **le corresponde** (existencia de imagen) **un único valor** (unicidad de imagen) de la variable dependiente.

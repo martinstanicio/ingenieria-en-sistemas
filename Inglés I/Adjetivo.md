@@ -1,3 +1,9 @@
+---
+created: 2024-04-21 17:44:25
+modified: 2024-05-08 01:33:30
+title: Adjetivo
+---
+
 # Adjetivo
 
 Palabra que define al [[Sustantivo]], ==designa una cualidad==. No varía en género y número.. Por ejemplo:

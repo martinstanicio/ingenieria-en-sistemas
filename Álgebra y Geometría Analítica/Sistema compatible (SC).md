@@ -1,3 +1,9 @@
+---
+created: 2024-04-14 16:22:29
+modified: 2024-05-08 01:33:29
+title: Sistema compatible (SC)
+---
+
 # Sistema compatible (SC)
 
 Un [[Sistema de ecuaciones lineales (SEL)]] que tiene un conjunto solución no vacío, que puede contener un único elemento, o infinitos.

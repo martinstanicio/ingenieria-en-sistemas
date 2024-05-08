@@ -1,3 +1,9 @@
+---
+created: 2024-04-22 17:39:06
+modified: 2024-05-08 01:33:30
+title: 20240422 - Casos posesivos
+---
+
 # 20240422 - Casos posesivos
 
 Traduzca los siguientes ejemplos.

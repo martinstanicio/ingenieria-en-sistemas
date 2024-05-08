@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 17:36:48
+modified: 2024-05-08 01:33:30
+title: Convención de los derechos de las personas con discapacidad
+---
+
 # Convención de los derechos de las personas con discapacidad
 
 Quien debe elegir como desea vivir, es la persona con [[Discapacidad]].

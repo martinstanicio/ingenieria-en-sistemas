@@ -1,3 +1,9 @@
+---
+created: 2024-04-03 19:08:57
+modified: 2024-05-08 01:33:30
+title: Diodo
+---
+
 # Diodo
 
 Es capaz de ser conductor y aislante, lo pues solo permite el pasaje de energía a partir de los 0,7 V.

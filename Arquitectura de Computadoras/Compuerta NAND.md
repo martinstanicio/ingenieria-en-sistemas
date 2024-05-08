@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 11:53:07
+modified: 2024-05-08 01:33:30
+title: Compuerta NAND
+---
+
 # Compuerta NAND
 
 Es una [[Compuertas lógicas|compuerta lógica]] que representa a una [[Compuerta AND]] seguida por una [[Compuerta NOT]].

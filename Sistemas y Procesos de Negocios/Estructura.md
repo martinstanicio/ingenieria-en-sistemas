@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 15:45:01
+modified: 2024-05-08 01:33:31
+title: Estructura
+---
+
 # Estructura
 
 Está formada por las ==interrelaciones medianamente estables== entre los [[Elemento|elementos]] de un [[Sistemas|sistema]], que ==pueden ser verificadas== (identificadas) en un momento dado. 

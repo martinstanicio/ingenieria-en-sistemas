@@ -1,3 +1,9 @@
+---
+created: 2024-04-26 13:41:33
+modified: 2024-05-08 01:33:30
+title: Pruebas triviales
+---
+
 # Pruebas triviales
 
 Es un [[Teorema]] en el que las hipótesis son redundantes.

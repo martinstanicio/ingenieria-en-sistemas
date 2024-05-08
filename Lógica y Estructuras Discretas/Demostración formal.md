@@ -1,3 +1,9 @@
+---
+created: 2024-04-05 14:11:33
+modified: 2024-05-08 01:33:30
+title: Demostración formal
+---
+
 # Demostración formal
 
 Consiste en partir de una situación inicial, y realizar una secuencia de pasos hasta poder llegar a la situación final, siempre y cuando el [[Razonamiento]] sea válido. Por ejemplo:

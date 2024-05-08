@@ -1,3 +1,9 @@
+---
+created: 2024-04-28 19:14:54
+modified: 2024-05-08 01:33:29
+title: Determinante
+---
+
 # Determinante
 
 Es una [[Función]] por partes, recursiva, que ==asocia a cada [[Matriz]] **cuadrada** un número==, que nos permite trabajar de una forma más sencilla. Toda matriz tiene ==como máximo un único determinante==, pero multiples matrices pueden compartir el mismo.

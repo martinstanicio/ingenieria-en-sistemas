@@ -1,3 +1,9 @@
+---
+created: 2024-03-24 21:31:54
+modified: 2024-05-08 01:33:31
+title: Tipos de sistemas
+---
+
 # Tipos de sistemas
 
 |                         | Cerrados                                                                                                                                                                                                                                                              | Aislados                                         | Abiertos                                                                                                                                                                                                                                      |

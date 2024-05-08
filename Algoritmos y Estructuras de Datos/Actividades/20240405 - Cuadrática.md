@@ -1,3 +1,9 @@
+---
+created: 2024-04-05 17:51:50
+modified: 2024-05-08 01:33:31
+title: 20240405 - Cuadrática
+---
+
 # 20240405 - Cuadrática
 
 Se ingresan los términos A,B, y C de la función cuadrática. Hallar las raices y mostrarlas por pantalla.

@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 18:46:52
+modified: 2024-05-08 01:33:30
+title: Sistema decimal
+---
+
 # Sistema decimal
 
 Es un [[Sistema numérico]]. Está conformado por ==diez elementos==, el [[Conjunto]] decimal: $\{0,1,\dots,9\}$.

@@ -1,3 +1,9 @@
+---
+created: 2024-04-10 19:42:20
+modified: 2024-05-08 01:33:30
+title: 202403410 - Unión e intersección
+---
+
 # 202403410 - Unión e intersección
 
 1. $A+\bar{A}=1$

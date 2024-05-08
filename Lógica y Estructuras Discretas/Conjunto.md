@@ -1,3 +1,9 @@
+---
+created: 2024-04-26 15:04:27
+modified: 2024-05-08 01:33:30
+title: Conjunto
+---
+
 # Conjunto
 
 Una ==colección desordenada== de elementos. Existen diferentes formas de definir un conjunto particular.

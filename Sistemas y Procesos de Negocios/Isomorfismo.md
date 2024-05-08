@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 14:35:16
+modified: 2024-05-08 01:33:31
+title: Isomorfismo
+---
+
 # Isomorfismo
 
 Etimológicamente significa =="igual forma"==, y aplicado a la [[Teoría General de Sistemas (TGS)|TGS]] se refiere a que dos [[Sistemas]] aparentemente muy ==diferentes en su *dominio*==, es decir, en cuanto a contenido, o técnicamente, pueden ser similares o ==idénticos en su estructura== o funcionamiento.

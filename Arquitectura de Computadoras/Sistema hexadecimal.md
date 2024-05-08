@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 18:07:07
+modified: 2024-05-08 01:33:30
+title: Sistema hexadecimal
+---
+
 # Sistema hexadecimal
 
 Es un [[Sistema numérico]]. Está conformado por ==dieciséis elementos==, el [[Conjunto]] hexadecimal: $\{0, 1,\dots, 9, A, B, C, D, E, F\}$.

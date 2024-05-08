@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 22:23:00
+modified: 2024-05-08 01:33:31
+title: 20240416 - Triángulo rectángulo
+---
+
 # 20240416 - Triángulo rectángulo
 
 Se ingresan los catetos de un triángulo rectángulo, hallar la hipotenusa.

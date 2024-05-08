@@ -1,3 +1,9 @@
+---
+created: 2024-04-09 19:00:34
+modified: 2024-05-08 01:33:31
+title: Notación de modelos de procesos de negocios (BPMN)
+---
+
 # Notación de modelos de procesos de negocios (BPMN)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BbT0IN3y2V4?si=SNnIoo6RVllxmkuj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,3 +1,9 @@
+---
+created: 2024-04-14 13:07:12
+modified: 2024-05-08 01:33:29
+title: Sistema de ecuaciones lineales (SEL)
+---
+
 # Sistema de ecuaciones lineales (SEL)
 
 Un grupo de varias [[Ecuación lineal|ecuaciones lineales]]. Puede ser un [[Sistema compatible (SC)]] o un [[Sistema incompatible (SI)]].

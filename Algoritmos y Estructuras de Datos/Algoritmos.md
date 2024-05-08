@@ -1,3 +1,9 @@
+---
+created: 2024-03-20 15:51:48
+modified: 2024-05-08 01:33:31
+title: Algoritmos
+---
+
 # Algoritmos
 
 Es un conjunto **preciso** (orden), **definido** (si se ejecuta múltiples veces debemos llegar a la solución) y finito de operaciones simples a través del cual podemos hallar la solución a un problema.

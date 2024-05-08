@@ -1,3 +1,9 @@
+---
+created: 2024-03-26 19:31:51
+modified: 2024-05-08 01:34:00
+title: Atributos
+---
+
 # Atributos
 
 Cada [[Elemento]] de un [[Sistemas|sistema]] tiene sus propios atributos: ==características estructurales o funcionales== que lo caracterizan.

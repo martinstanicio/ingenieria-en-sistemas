@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 18:04:59
+modified: 2024-05-08 01:33:30
+title: Sistema binario
+---
+
 # Sistema binario
 
 Es un [[Sistema numérico]]. Está conformado por ==dos elementos==, el [[Conjunto binario]].

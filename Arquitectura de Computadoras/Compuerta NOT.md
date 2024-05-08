@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 11:12:45
+modified: 2024-05-08 01:33:30
+title: Compuerta NOT
+---
+
 # Compuerta NOT
 
 Es una [[Compuertas lógicas|compuerta lógica]], actúa como un ==inversor==. Se comporta de forma similar a una [[Negación (-)]] o [[Complemento]].

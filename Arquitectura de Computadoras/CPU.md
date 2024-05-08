@@ -1,3 +1,9 @@
+---
+created: 2024-03-21 23:34:05
+modified: 2024-05-08 01:33:30
+title: CPU
+---
+
 # CPU
 
 La CPU (Central Processing Unit) es considerada el cerebro de la máquina. Es un circuito electrónico que se encarga de **interpretar, procesar y ejecutar** las instrucciones del software.

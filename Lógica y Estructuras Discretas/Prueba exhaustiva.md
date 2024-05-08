@@ -1,3 +1,9 @@
+---
+created: 2024-04-26 13:54:17
+modified: 2024-05-08 01:33:30
+title: Prueba exhaustiva
+---
+
 # Prueba exhaustiva
 
 Es un tipo de [[Prueba de casos]] en el que se pueden enumerar todos los casos del dominio, y verificarlos uno por uno.

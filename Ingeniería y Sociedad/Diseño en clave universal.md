@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 17:55:48
+modified: 2024-05-08 01:33:30
+title: Diseño en clave universal
+---
+
 # Diseño en clave universal
 
 También llamado **diseño con perspectiva de discapacidad**.

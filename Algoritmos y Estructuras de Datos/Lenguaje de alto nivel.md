@@ -1,3 +1,9 @@
+---
+created: 2024-03-20 15:53:00
+modified: 2024-05-08 01:33:31
+title: Lenguaje de alto nivel
+---
+
 # Lenguaje de alto nivel
 
 Utiliza lenguaje humano en su sintaxis, es mucho más simple que un [[Lenguaje de bajo nivel o ensamblador]], lo cual tiene sus ventajas.

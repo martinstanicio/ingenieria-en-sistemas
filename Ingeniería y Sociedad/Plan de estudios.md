@@ -1,3 +1,9 @@
+---
+created: 2024-03-26 18:45:55
+modified: 2024-05-08 01:33:30
+title: Plan de estudios
+---
+
 # Plan de estudios
 
 Conjunto de materias o asignaturas ubicadas a través de diferentes niveles, vinculadas por ==lazos llamados *correlatividades*==.

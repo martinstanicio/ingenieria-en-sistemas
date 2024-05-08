@@ -2,6 +2,9 @@
 aliases:
   - Contexto
   - Entorno
+created: 2024-03-24 20:51:59
+modified: 2024-05-08 01:33:31
+title: Ambiente
 ---
 
 # Ambiente

@@ -1,3 +1,9 @@
+---
+created: 2024-04-26 18:00:16
+modified: 2024-05-08 01:33:31
+title: 20240426 - Conectivos lógicos
+---
+
 # 20240426 - Conectivos lógicos
 
 Se ingresan 3 números, obtener el mayor utilizando [[Conectivos lógicos]].

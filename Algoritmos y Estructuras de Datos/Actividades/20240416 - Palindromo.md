@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 21:09:05
+modified: 2024-05-08 01:33:31
+title: 20240416 - Palindromo
+---
+
 # 20240416 - Palindromo
 
 Se ingresa un número entero de 4 dígitos, mostrar el número inverso.

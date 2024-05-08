@@ -1,3 +1,9 @@
+---
+created: 2024-04-05 13:43:55
+modified: 2024-05-08 01:33:30
+title: Razonamiento
+---
+
 # Razonamiento
 
 Cuando tenemos un razonamiento, nos interesa que siempre que las **premisas** sean verdaderas, la conclusión también; en este caso, se dice que es un razonamiento **válido**.

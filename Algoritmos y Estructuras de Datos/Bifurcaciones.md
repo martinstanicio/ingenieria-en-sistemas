@@ -1,3 +1,9 @@
+---
+created: 2024-04-19 17:10:23
+modified: 2024-05-08 01:33:30
+title: Bifurcaciones
+---
+
 # Bifurcaciones
 
 Es una condición en nuestro programa. Dependiendo del ==valor de verdad== de la condición evaluada, el código ejecutado será uno u otro. Está formada por 3 partes básicas:

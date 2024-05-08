@@ -1,3 +1,9 @@
+---
+created: 2024-04-08 17:59:39
+modified: 2024-05-08 01:33:30
+title: Sustantivos genéricos
+---
+
 # Sustantivos genéricos
 
 Son aquellos [[Sustantivo|sustantivos]] que ==no llevan [[Artículo]] en inglés==, pero sí lo llevan en español.

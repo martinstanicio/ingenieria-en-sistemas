@@ -1,3 +1,9 @@
+---
+created: 2024-04-08 17:27:41
+modified: 2024-05-08 01:33:30
+title: Sustantivos compuestos
+---
+
 # Sustantivos compuestos
 
 [[Sustantivo|Sustantivos]] que ==modifican a otros sustantivos==. Siempre que se utilizan dos sustantivos, el primero actúa como [[Adjetivo]] del segundo. Por ejemplo:

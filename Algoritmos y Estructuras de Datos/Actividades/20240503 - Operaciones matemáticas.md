@@ -1,3 +1,9 @@
+---
+created: 2024-05-03 18:15:46
+modified: 2024-05-08 01:33:30
+title: 20240503 - Operaciones matemáticas
+---
+
 # 20240503 - Operaciones matemáticas
 
 Se ingresan dos números enteros y una letra que representa la operación matemática a resolver ("S" para suma, "R" para resta, "C" para cociente, y "M" para multiplicar). Realizar la operación por la letra y mostrar el resultado.

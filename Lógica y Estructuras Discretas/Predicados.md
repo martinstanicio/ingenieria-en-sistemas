@@ -1,3 +1,9 @@
+---
+created: 2024-04-12 15:04:46
+modified: 2024-05-08 01:33:30
+title: Predicados
+---
+
 # Predicados
 
 Es más poderosa que la lógica con [[Proposiciones]], ya que nos permite trabajar con incógnitas, o [[Conjunto|conjuntos de elementos]].

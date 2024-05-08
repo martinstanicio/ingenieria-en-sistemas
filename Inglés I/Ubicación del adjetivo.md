@@ -1,3 +1,9 @@
+---
+created: 2024-04-15 17:37:29
+modified: 2024-05-08 01:33:30
+title: Ubicación del adjetivo
+---
+
 # Ubicación del adjetivo
 
 En inglés, el [[Adjetivo]] puede estar ==antes del [[Sustantivo]]==, por ejemplo:

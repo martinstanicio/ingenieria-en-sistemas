@@ -1,3 +1,9 @@
+---
+created: 2024-03-24 11:04:43
+modified: 2024-05-08 01:33:30
+title: Implicación (→)
+---
+
 # Implicación (→)
 
 Solo es falsa si el **antecedente** ($p$, también llamado condición suficiente) es verdadero y el **consecuento** ($q$, también llamado condición necesaria) es falso. Por ejemplo, "si gano las elecciones, bajaré los impuestos". Utiliza el símbolo "$\rightarrow$".

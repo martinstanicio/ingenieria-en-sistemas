@@ -1,3 +1,9 @@
+---
+created: 2024-04-21 17:09:21
+modified: 2024-05-08 01:33:30
+title: Sustantivos plurales
+---
+
 # Sustantivos plurales
 
 Como formar el plural de un [[Sustantivo]] dependiendo de su terminación.

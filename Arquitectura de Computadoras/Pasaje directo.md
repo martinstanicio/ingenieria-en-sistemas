@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 19:06:19
+modified: 2024-05-08 01:33:30
+title: Pasaje directo
+---
+
 # Pasaje directo
 
 Para realizar un pasaje directo entre dos [[Sistema numérico|sistemas numéricos]], realizamos lo siguiente.

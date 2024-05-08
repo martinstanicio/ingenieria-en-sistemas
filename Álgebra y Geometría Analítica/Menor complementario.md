@@ -1,3 +1,9 @@
+---
+created: 2024-04-29 12:12:55
+modified: 2024-05-08 01:33:29
+title: Menor complementario
+---
+
 # Menor complementario
 
 Sea $A \in k^{n \times n}$, se llama menor *$ij$-ésimo* a la [[Matriz]] $M_{ij} \in k^{n-1 \times n-1}$ que resulta de ==eliminar la fila $i$ y la columna $j$== de $A$. Por ejemplo, para la siguiente matriz:

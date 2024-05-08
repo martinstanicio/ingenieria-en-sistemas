@@ -1,3 +1,9 @@
+---
+created: 2024-04-06 20:17:07
+modified: 2024-05-08 01:33:30
+title: Espacio vectorial
+---
+
 # Espacio vectorial
 
 Un espacio vectorial $V$ es un [[Conjunto]] **vectores**, que posee dos operaciones: **suma** y **multiplicación** por un [[Escalar]], y que satisfacen los diez axiomas enumerados a continuación. Se representa de la siguiente forma.

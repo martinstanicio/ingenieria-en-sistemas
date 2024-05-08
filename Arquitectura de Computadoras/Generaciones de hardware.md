@@ -1,3 +1,9 @@
+---
+created: 2024-03-27 18:13:49
+modified: 2024-05-08 01:33:30
+title: Generaciones de hardware
+---
+
 # Generaciones de hardware
 
 ## 1° generación (1938 - 1954): electrónica

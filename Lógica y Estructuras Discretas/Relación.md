@@ -1,3 +1,9 @@
+---
+created: 2024-05-01 16:39:04
+modified: 2024-05-08 01:33:30
+title: Relación
+---
+
 # Relación
 
 Se le llama relación a cualquier [[Conjunto]] que es ==[[Subconjunto]] de un [[Producto cartesiano]]==.

@@ -1,6 +1,9 @@
 ---
 aliases:
   - Campo
+created: 2024-03-29 21:06:45
+modified: 2024-05-08 01:33:30
+title: Cuerpo
 ---
 
 # Cuerpo

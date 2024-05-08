@@ -1,3 +1,9 @@
+---
+created: 2024-04-03 19:16:15
+modified: 2024-05-08 01:33:30
+title: Transistor
+---
+
 # Transistor
 
 Con una pequeña corriente, puede controlar el paso de una corriente más grande, por lo tanto, es capaz de amplificar señales. Es similar a un [[Diodo]], pero con la capacidad de controlar el flujo de energía mediante una señal externa.

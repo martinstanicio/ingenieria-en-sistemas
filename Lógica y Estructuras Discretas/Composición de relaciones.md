@@ -1,3 +1,9 @@
+---
+created: 2024-05-01 17:34:29
+modified: 2024-05-08 01:33:30
+title: Composición de relaciones
+---
+
 # Composición de relaciones
 
 La composición de dos [[Relación|relaciones]] es el [[Conjunto]] de pares ordenados, donde:

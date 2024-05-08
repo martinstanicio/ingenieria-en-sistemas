@@ -1,3 +1,9 @@
+---
+created: 2024-04-15 17:42:52
+modified: 2024-05-08 01:33:30
+title: 20240415 - La frase nominal
+---
+
 # 20240415 - La frase nominal
 
 ## Identify nouns in these sentences

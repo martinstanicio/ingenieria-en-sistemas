@@ -1,3 +1,9 @@
+---
+created: 2024-03-20 15:41:58
+modified: 2024-05-08 01:33:31
+title: Sistemas
+---
+
 # Sistemas
 
 Conjunto de dos o más **partes esenciales**, interrelacionadas, interdependientes, que ==trabajan en conjunto para un [[Objetivo]]==. Es una [[Sinergia]], pues las partes esenciales separadas no pueden hacer nada, pero cuando las interrelacionamos, podemos formar un sistema.

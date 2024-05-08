@@ -1,3 +1,9 @@
+---
+created: 2024-04-14 18:17:53
+modified: 2024-05-08 01:33:29
+title: Sistema de ecuaciones lineales homogéneo (SELH)
+---
+
 # Sistema de ecuaciones lineales homogéneo (SELH)
 
 Es un [[Sistema de ecuaciones lineales (SEL)]] en el cual todos ==los términos independientes son 0==.

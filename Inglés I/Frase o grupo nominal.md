@@ -1,3 +1,9 @@
+---
+created: 2024-04-08 17:22:50
+modified: 2024-05-08 01:33:30
+title: Frase o grupo nominal
+---
+
 # Frase o grupo nominal
 
 ==Conjunto de palabras== que tiene como **núcleo** (palabra principal) un [[Sustantivo]].

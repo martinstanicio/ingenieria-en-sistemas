@@ -1,3 +1,9 @@
+---
+created: 2024-04-23 13:59:32
+modified: 2024-05-08 01:33:30
+title: Continuidad
+---
+
 # Continuidad
 
 Una [[Función]] es continua si cuando tomamos dos puntos *cercanos* de su dominio, sus imágenes también serán *cercanas*, es decir, ==no hay saltos en la gráfica== de la misma. También podemos decir que una función es continua cuando podemos dibujarla sin levantar el lápiz del papel.

@@ -1,3 +1,9 @@
+---
+created: 2024-03-25 12:09:44
+modified: 2024-05-08 01:33:30
+title: Números complejos
+---
+
 # Números complejos
 
 Un ==par ordenado de números reales==, es decir, $\mathbb{C}=\mathbb{R}^2$. Donde la primera componente es la **parte real**, y la segunda es la **parte imaginaria**. Es decir:

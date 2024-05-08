@@ -1,3 +1,9 @@
+---
+created: 2024-05-03 17:32:33
+modified: 2024-05-08 01:33:30
+title: Estructura de casos
+---
+
 # Estructura de casos
 
 Un tipo de [[Estructuras de control#De selección]] que ejecuta un 

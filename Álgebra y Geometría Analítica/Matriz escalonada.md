@@ -1,3 +1,9 @@
+---
+created: 2024-04-14 16:13:26
+modified: 2024-05-08 01:33:29
+title: Matriz escalonada
+---
+
 # Matriz escalonada
 
 Es una forma de [[Matriz|Representación matricial]], y debe cumplir con una serie de condiciones:

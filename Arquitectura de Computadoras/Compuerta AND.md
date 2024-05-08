@@ -1,3 +1,9 @@
+---
+created: 2024-04-17 18:30:07
+modified: 2024-05-08 01:33:30
+title: Compuerta AND
+---
+
 # Compuerta AND
 
 Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==multiplicación== en el álgebra de Boole. Se comporta de forma similar a una [[Conjunción (∧)]] o [[Intersección (∩)]].

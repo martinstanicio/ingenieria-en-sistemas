@@ -1,3 +1,9 @@
+---
+created: 2024-04-19 18:06:08
+modified: 2024-05-08 01:33:31
+title: 20240419 - Bifurcación doble
+---
+
 # 20240419 - Bifurcación doble
 
 Se ingresa un número entero, mostrar "número positivo o número negativo" según corresponda. Se toma el 0 como positivo.

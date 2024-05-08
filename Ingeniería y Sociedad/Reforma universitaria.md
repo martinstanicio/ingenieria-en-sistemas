@@ -1,3 +1,9 @@
+---
+created: 2024-03-26 18:45:56
+modified: 2024-05-08 01:33:30
+title: Reforma universitaria
+---
+
 # Reforma universitaria
 
 Fue en **1918** y trajo consigo una serie de cambios:

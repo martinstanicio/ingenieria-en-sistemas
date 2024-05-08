@@ -1,3 +1,9 @@
+---
+created: 2024-04-24 12:11:16
+modified: 2024-05-08 01:33:30
+title: Compuerta XNOR
+---
+
 # Compuerta XNOR
 
 Es una [[Compuertas lógicas|compuerta lógica]] que representa a una [[Compuerta XOR]] seguida por una [[Compuerta NOT]]. Se comporta igual que un [[Bicondicional (↔)]].

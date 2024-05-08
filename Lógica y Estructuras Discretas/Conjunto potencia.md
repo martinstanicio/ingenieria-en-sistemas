@@ -1,6 +1,9 @@
 ---
 aliases:
   - Conjunto de partes
+created: 2024-05-03 13:28:59
+modified: 2024-05-08 01:33:30
+title: Conjunto potencia
 ---
 
 # Conjunto potencia

@@ -1,3 +1,9 @@
+---
+created: 2024-04-09 17:32:42
+modified: 2024-05-08 01:33:30
+title: Autoridades legislativas
+---
+
 # Autoridades legislativas
 
 Los cargos unipersonales son electos cada 4 años, los consejeros cada 2 años.

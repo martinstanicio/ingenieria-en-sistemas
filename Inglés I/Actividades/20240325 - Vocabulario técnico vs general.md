@@ -1,3 +1,9 @@
+---
+created: 2024-03-25 18:37:52
+modified: 2024-05-08 01:33:30
+title: 20240325 - Vocabulario técnico vs general
+---
+
 # 20240325 - Vocabulario técnico vs general
 
 - Dynamo (técnico): dínamo.

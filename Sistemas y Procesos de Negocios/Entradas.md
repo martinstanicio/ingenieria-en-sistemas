@@ -1,3 +1,9 @@
+---
+created: 2024-04-09 19:13:59
+modified: 2024-05-08 01:33:31
+title: Entradas
+---
+
 # Entradas
 
 Los elementos que entran al [[Sistemas|sistema]].

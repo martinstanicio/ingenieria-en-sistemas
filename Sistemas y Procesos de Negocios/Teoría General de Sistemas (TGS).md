@@ -1,3 +1,9 @@
+---
+created: 2024-03-24 19:55:26
+modified: 2024-05-08 01:33:31
+title: Teoría General de Sistemas (TGS)
+---
+
 # Teoría General de Sistemas (TGS)
 
 Área de la ciencia que estudia a los [[Sistemas]] y sus relaciones. En vez de analizar a las partes del mismo de forma aislada, estudia cómo se relacionan y funcionan para formar un todo.

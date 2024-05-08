@@ -1,3 +1,9 @@
+---
+created: 2024-04-05 14:26:27
+modified: 2024-05-08 01:33:30
+title: Reglas de sustitución
+---
+
 # Reglas de sustitución
 
 Podemos utilizarlas para realizar una [[Demostración formal]], junto con todas las leyes de equivalencia e implicación.

@@ -1,3 +1,9 @@
+---
+created: 2024-03-21 23:35:02
+modified: 2024-05-08 01:33:30
+title: RAM
+---
+
 # RAM
 
 La RAM (Random Access Memory), es un tipo de memoria volátil que se utiliza para almacenar datos e instrucciones que la [[CPU]] necesita para ejecutar programas.

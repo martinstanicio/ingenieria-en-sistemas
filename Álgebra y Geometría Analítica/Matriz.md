@@ -1,6 +1,9 @@
 ---
 aliases:
   - Representación matricial
+created: 2024-04-14 15:28:49
+modified: 2024-05-08 01:33:29
+title: Matriz
 ---
 
 # Matriz

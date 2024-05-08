@@ -1,3 +1,9 @@
+---
+created: 2024-04-08 17:40:06
+modified: 2024-05-08 01:33:30
+title: 20240408 - Sustantivos compuestos
+---
+
 # 20240408 - Sustantivos compuestos
 
 Clasificar los siguientes sustantivos compuestos de acuerdo a la relación que expresan.

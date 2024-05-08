@@ -1,3 +1,9 @@
+---
+created: 2024-03-26 18:46:00
+modified: 2024-05-08 01:33:30
+title: Universidad Tecnológica Nacional (UTN)
+---
+
 # Universidad Tecnológica Nacional (UTN)
 
 Se funda el 14 de octubre de 1959 por la Ley 14.855, cómo sucesora de la [[Universidad Obrera Nacional (UON)]], para retomar la cursada que había sido interrumpida. Se crea con la misión específica de crear, preservar, y transmitir la técnica de la cultura universal en el campo de la tecnología.

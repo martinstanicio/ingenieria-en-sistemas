@@ -1,3 +1,9 @@
+---
+created: 2024-04-09 21:02:32
+modified: 2024-05-08 01:33:31
+title: 20240409 - Circunferencia
+---
+
 # 20240409 - Circunferencia
 
 Se ingresa el radio de una circunferencia. Calcular el área y perímetro.

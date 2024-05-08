@@ -1,3 +1,9 @@
+---
+created: 2024-04-12 13:47:45
+modified: 2024-05-08 01:33:30
+title: Árboles semánticos
+---
+
 # Árboles semánticos
 
 Se utiliza para verificar que una serie de [[Proposiciones]] no pueden ser todas verdaderas simultáneamente. Para esto, se evalúa la conjunción de todas las premisas, y la negación de la conclusión.

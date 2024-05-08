@@ -1,3 +1,9 @@
+---
+created: 2024-03-24 20:31:14
+modified: 2024-05-08 01:33:31
+title: Niklas Luhmann
+---
+
 # Niklas Luhmann
 
 En su [[Teoría General de Sistemas (TGS)]], dice que cada sociedad está fraccionada en varios sistemas:

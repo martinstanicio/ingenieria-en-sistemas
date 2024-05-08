@@ -1,3 +1,9 @@
+---
+created: 2024-03-24 11:09:23
+modified: 2024-05-08 01:33:30
+title: Bicondicional (↔)
+---
+
 # Bicondicional (↔)
 
 Solo es verdadera si $p$ y $q$ tienen el mismo valor de verdad. Utiliza el símbolo "$\leftrightarrow$".

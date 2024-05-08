@@ -1,3 +1,9 @@
+---
+created: 2024-04-09 17:53:34
+modified: 2024-05-08 01:33:30
+title: Asamblea universitaria
+---
+
 # Asamblea universitaria
 
 Tiene un ==funcionamiento esporádico==: se reúnen cada 4 años para:

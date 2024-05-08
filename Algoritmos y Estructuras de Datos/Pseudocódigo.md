@@ -1,3 +1,9 @@
+---
+created: 2024-03-20 16:02:09
+modified: 2024-05-08 01:33:31
+title: Pseudocódigo
+---
+
 # Pseudocódigo
 
 El pseudocódigo es una **manera sencilla de expresar** los pasos que debe realizar un programa hasta alcanzar su objetivo, utilizando **oraciones en idioma nativo**.
@@ -71,4 +77,3 @@ fin
 ```
 
 ^estructura-de-casos
-

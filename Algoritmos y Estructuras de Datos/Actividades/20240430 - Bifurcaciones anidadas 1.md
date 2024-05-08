@@ -1,3 +1,9 @@
+---
+created: 2024-04-30 21:17:10
+modified: 2024-05-08 01:33:31
+title: 20240430 - Bifurcaciones anidadas 1
+---
+
 # 20240430 - Bifurcaciones anidadas 1
 
 Replicar el diagrama de flujo en pseudocódigo.

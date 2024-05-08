@@ -1,6 +1,9 @@
 ---
 aliases:
   - Señal
+created: 2024-05-07 21:08:58
+modified: 2024-05-08 01:33:30
+title: Bandera
 ---
 
 # Bandera

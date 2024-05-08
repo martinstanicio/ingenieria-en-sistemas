@@ -1,3 +1,9 @@
+---
+created: 2024-05-05 17:14:13
+modified: 2024-05-08 01:33:29
+title: Propiedades de determinantes
+---
+
 # Propiedades de determinantes
 
 Al momento de utilizar [[Determinante|determinantes]] de [[Matriz|matrices]], existe una serie de propiedades que podemos utilizar.

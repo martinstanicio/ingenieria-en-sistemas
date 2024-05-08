@@ -1,3 +1,9 @@
+---
+created: 2024-04-29 14:08:45
+modified: 2024-05-08 01:33:29
+title: Teorema de Laplace
+---
+
 # Teorema de Laplace
 
 Sea una [[Matriz]] $A \in k^{n \times n}$, luego se puede calcular el [[Determinante]] de $A$ desarrollando la definición por cualquier fila o columna.

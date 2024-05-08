@@ -1,3 +1,9 @@
+---
+created: 2024-04-26 17:42:10
+modified: 2024-05-08 01:33:31
+title: 20240426 - Número mayor
+---
+
 # 20240426 - Número mayor
 
 Se ingresan 4 números, obtener el mayor. Solo utilizar [[Bifurcaciones#Bifurcación simple|bifurcaciones simples]] o [[Bifurcaciones#Bifurcación doble|dobles]].

@@ -1,3 +1,9 @@
+---
+created: 2024-04-30 22:36:38
+modified: 2024-05-08 01:33:30
+title: 20240430 - Tipo de triángulo
+---
+
 # 20240430 - Tipo de triángulo
 
 Se ingresan los 3 lados de un triángulo, mostrar qué tipo de triángulo es según sus lados.

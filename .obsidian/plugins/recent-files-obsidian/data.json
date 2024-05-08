@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "20240507 - Sueldo 1",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo 1.md"
+    },
+    {
       "basename": "20240507 - Sueldo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
+    },
+    {
+      "basename": "Cinemática",
+      "path": "Física I/Cinemática.md"
+    },
+    {
+      "basename": "Atributos",
+      "path": "Sistemas y Procesos de Negocios/Atributos.md"
+    },
+    {
+      "basename": "Ambiente",
+      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
+    },
+    {
+      "basename": "dte",
+      "path": "Sistemas y Procesos de Negocios/attachments/dte.png"
+    },
+    {
+      "basename": "Inteligencia artificial neuronal",
+      "path": "Inteligencia Artificial/Inteligencia artificial neuronal.md"
     },
     {
       "basename": "README",
@@ -125,10 +149,6 @@
       "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
     },
     {
-      "basename": "Ambiente",
-      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
-    },
-    {
       "basename": "Salidas",
       "path": "Sistemas y Procesos de Negocios/Salidas.md"
     },
@@ -179,22 +199,6 @@
     {
       "basename": "Generalización universal",
       "path": "Lógica y Estructuras Discretas/Generalización universal.md"
-    },
-    {
-      "basename": "Vocabulario técnico",
-      "path": "Inglés I/Vocabulario técnico.md"
-    },
-    {
-      "basename": "Generaciones de hardware",
-      "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
-    },
-    {
-      "basename": "Sistema binario",
-      "path": "Arquitectura de Computadoras/Sistema binario.md"
-    },
-    {
-      "basename": "Ley de Coulomb",
-      "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
     }
   ],
   "omittedPaths": [],

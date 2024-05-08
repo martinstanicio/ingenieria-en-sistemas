@@ -1,3 +1,9 @@
+---
+created: 2024-04-19 13:23:27
+modified: 2024-05-08 01:33:30
+title: Cuantificador existencial (∃)
+---
+
 # Cuantificador existencial (∃)
 
 Se utiliza para referirse a **por lo menos uno o más** de los elementos del [[Lógica y Estructuras Discretas/Universo|Universo]] o [[Conjunto]] en el que estamos trabajando. Utiliza el símbolo "$\exists$".

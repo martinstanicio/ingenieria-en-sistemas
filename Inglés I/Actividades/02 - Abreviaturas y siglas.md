@@ -1,3 +1,9 @@
+---
+created: 2024-04-06 15:22:18
+modified: 2024-05-08 01:33:30
+title: 02 - Abreviaturas y siglas
+---
+
 # 02 - Abreviaturas y siglas
 
 1. Determine si las siguientes son abreviaturas (ABREV), iniciales (INI) o siglas (S).

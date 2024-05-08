@@ -1,3 +1,9 @@
+---
+created: 2024-04-23 14:09:56
+modified: 2024-05-08 01:33:30
+title: Límite
+---
+
 # Límite
 
 El límite de una [[Función]] en un punto es el ==valor al cual se aproximan las imágenes== de sus puntos cercanos y adyacentes.

@@ -1,3 +1,9 @@
+---
+created: 2024-04-16 15:14:17
+modified: 2024-05-08 01:33:31
+title: Recursividad
+---
+
 # Recursividad
 
 La ==recreación cíclica== de [[Elemento|elementos]] o relaciones en un sistema a través de la aplicación de cierta realimentación o conjunto de realimentaciones.

@@ -1,3 +1,9 @@
+---
+created: 2024-04-04 18:59:30
+modified: 2024-05-08 01:33:31
+title: Ecuaciones horarias
+---
+
 # Ecuaciones horarias
 
 Velocidad final:

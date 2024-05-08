@@ -1,3 +1,9 @@
+---
+created: 2024-03-21 23:53:05
+modified: 2024-05-08 01:33:31
+title: Compilador
+---
+
 # Compilador
 
 Es un programa especial que traduce código escrito en un [[Lenguaje de programación]] a [[Lenguaje de máquina]].

@@ -1,7 +1,11 @@
 ---
 aliases:
   - Resultados
+created: 2024-04-16 15:07:59
+modified: 2024-05-08 01:33:31
+title: Salidas
 ---
+
 # Salidas
 
 Son creadas por el [[Sistemas|sistema]] y se envían al [[Ambiente]] con el fin de tener un efecto.

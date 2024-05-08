@@ -1,3 +1,9 @@
+---
+created: 2024-04-14 16:43:12
+modified: 2024-05-08 01:33:29
+title: Teorema de Rouche Frobeniuos
+---
+
 # Teorema de Rouche Frobeniuos
 
 > Un [[Sistema de ecuaciones lineales (SEL)]] de $m \times n$ es [[Sistema compatible (SC)|compatible]] si y solo si el [[Rango de una matriz|rango]] de la [[Matriz#Matriz de coeficientes|matriz de coeficientes]] del sistema es igual al rango de la [[Matriz#Matriz ampliada|matriz ampliada]] con los términos independientes.

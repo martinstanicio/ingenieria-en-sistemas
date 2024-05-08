@@ -1,3 +1,9 @@
+---
+created: 2024-04-25 18:25:20
+modified: 2024-05-08 01:33:31
+title: Leyes de Newton
+---
+
 # Leyes de Newton
 
 ## 1° Ley (Ley de inercia)

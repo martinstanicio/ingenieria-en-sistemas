@@ -1,3 +1,9 @@
+---
+created: 2024-04-09 17:42:23
+modified: 2024-05-08 01:33:30
+title: Consejo superior
+---
+
 # Consejo superior
 
 Preside el [[Rector]].

@@ -1,6 +1,9 @@
 ---
 aliases:
   - Cofactor
+created: 2024-04-29 13:24:45
+modified: 2024-05-08 01:33:29
+title: Adjunto
 ---
 
 # Adjunto

@@ -1,3 +1,9 @@
+---
+created: 2024-03-22 18:21:23
+modified: 2024-05-08 01:33:31
+title: Estructuras de control
+---
+
 # Estructuras de control
 
 Todo [[Programa propio]] se puede construir utilizando 3 estructuras.

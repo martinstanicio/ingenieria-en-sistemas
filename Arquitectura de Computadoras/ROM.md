@@ -1,3 +1,9 @@
+---
+created: 2024-03-21 23:34:57
+modified: 2024-05-08 01:33:30
+title: ROM
+---
+
 # ROM
 
 La ROM (Read Only Memory) es un tipo de memoria no volátil que se utiliza para almacenar datos que no se puede modificar por el usuario.
