@@ -2,7 +2,7 @@
 aliases:
   - Campo
 created: 2024-03-29 21:06:45
-modified: 2024-05-08 01:33:30
+modified: 2024-05-08 22:42:04
 title: Cuerpo
 ---
 

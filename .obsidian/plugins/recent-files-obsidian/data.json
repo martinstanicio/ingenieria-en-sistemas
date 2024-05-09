@@ -1,16 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "Sistema binario",
-      "path": "Arquitectura de Computadoras/Sistema binario.md"
-    },
-    {
-      "basename": "Sistema decimal",
-      "path": "Arquitectura de Computadoras/Sistema decimal.md"
+      "basename": "Pasaje directo",
+      "path": "Arquitectura de Computadoras/Pasaje directo.md"
     },
     {
       "basename": "20240507 - Sueldo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
+    },
+    {
+      "basename": "Determinante",
+      "path": "Álgebra y Geometría Analítica/Determinante.md"
+    },
+    {
+      "basename": "Cuerpo",
+      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Entradas",
+      "path": "Sistemas y Procesos de Negocios/Entradas.md"
+    },
+    {
+      "basename": "Elemento",
+      "path": "Sistemas y Procesos de Negocios/Elemento.md"
+    },
+    {
+      "basename": "Diagrama de Transición de Estado (DTE)",
+      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado (DTE).md"
+    },
+    {
+      "basename": "Dato",
+      "path": "Sistemas y Procesos de Negocios/Dato.md"
+    },
+    {
+      "basename": "Confidencialidad",
+      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
+    },
+    {
+      "basename": "Ambiente",
+      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
+    },
+    {
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
+      "basename": "Sistema binario",
+      "path": "Arquitectura de Computadoras/Sistema binario.md"
+    },
+    {
+      "basename": "Byte",
+      "path": "Arquitectura de Computadoras/Byte.md"
+    },
+    {
+      "basename": "Sistema numérico",
+      "path": "Arquitectura de Computadoras/Sistema numérico.md"
+    },
+    {
+      "basename": "Sistema decimal",
+      "path": "Arquitectura de Computadoras/Sistema decimal.md"
     },
     {
       "basename": "Funciones",
@@ -45,10 +97,6 @@
       "path": "Arquitectura de Computadoras/Sistema octal.md"
     },
     {
-      "basename": "Sistema numérico",
-      "path": "Arquitectura de Computadoras/Sistema numérico.md"
-    },
-    {
       "basename": "Compuertas lógicas",
       "path": "Arquitectura de Computadoras/Compuertas lógicas.md"
     },
@@ -67,10 +115,6 @@
     {
       "basename": "Atributos",
       "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "Ambiente",
-      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
     },
     {
       "basename": "dte",
@@ -155,50 +199,6 @@
     {
       "basename": "20240405 - Cuadrática",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Cuadrática.md"
-    },
-    {
-      "basename": "Variables",
-      "path": "Algoritmos y Estructuras de Datos/Variables.md"
-    },
-    {
-      "basename": "Estructura",
-      "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "Sinergia",
-      "path": "Sistemas y Procesos de Negocios/Sinergia.md"
-    },
-    {
-      "basename": "Entradas",
-      "path": "Sistemas y Procesos de Negocios/Entradas.md"
-    },
-    {
-      "basename": "Estructura de casos",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
-    },
-    {
-      "basename": "Equifinalidad",
-      "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
-    },
-    {
-      "basename": "Salidas",
-      "path": "Sistemas y Procesos de Negocios/Salidas.md"
-    },
-    {
-      "basename": "Objetivo",
-      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
-    },
-    {
-      "basename": "Propiedades de determinantes",
-      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Matriz inversa",
-      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     }
   ],
   "omittedPaths": [],
