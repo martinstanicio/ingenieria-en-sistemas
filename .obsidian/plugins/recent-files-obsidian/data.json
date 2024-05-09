@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Producto cartesiano",
+      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
+    },
+    {
+      "basename": "Pruebas vacías",
+      "path": "Lógica y Estructuras Discretas/Pruebas vacías.md"
+    },
+    {
+      "basename": "Teorema",
+      "path": "Lógica y Estructuras Discretas/Teorema.md"
+    },
+    {
+      "basename": "Pruebas triviales",
+      "path": "Lógica y Estructuras Discretas/Pruebas triviales.md"
+    },
+    {
+      "basename": "Prueba exhaustiva",
+      "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
+    },
+    {
       "basename": "Pasaje directo",
       "path": "Arquitectura de Computadoras/Pasaje directo.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "20240416 - Palindromo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
-    },
-    {
-      "basename": "20240409 - Triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Triángulo.md"
-    },
-    {
-      "basename": "20240409 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
-    },
-    {
-      "basename": "20240409 - Circunferencia",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Circunferencia.md"
-    },
-    {
-      "basename": "20240405 - Energía",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Energía.md"
-    },
-    {
-      "basename": "20240405 - Cuadrática",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Cuadrática.md"
     }
   ],
   "omittedPaths": [],
