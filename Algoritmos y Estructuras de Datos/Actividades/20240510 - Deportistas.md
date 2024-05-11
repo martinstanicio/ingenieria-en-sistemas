@@ -33,12 +33,14 @@ mientras continuar != "no" entonces
     
     cantidad_de_deportistas = cantidad_de_deportistas + 1
     
+    sumatoria_de_edad = sumatoria_de_edad + edad
+    
     segun_sea sexo entonces
         "H": cantidad_de_hombres = cantidad_de_hombres + 1
         "M": cantidad_de_mujeres = cantidad_de_mujeres + 1
         sino: mostrar("Sexo no contemplado")
     
-    sumatoria_de_edad = sumatoria_de_edad + edad
+    leer(continuar)
 
 promedio_de_edad = sumatoria_de_edad / cantidad_de_deportistas
 
@@ -56,34 +58,57 @@ fin
 flowchart TB
 	comienzo([comienzo])
     
-	variables["`sueldo = real
-	cantidad_de_empleados = entero
-	contador_empleado = entero
-	sumatoria_de_sueldos = real
-	promedio_de_sueldos = real`"]
+	variables["`cantidad_de_deportistas = entero
+	cantidad_de_hombres = entero
+	cantidad_de_mujeres = entero
+	sumatoria_de_edad = entero
+	promedio_de_edad = real
+	continuar = cadena
+	apellido = cadena
+	edad = entero
+	sexo = cadena`"]
     
-    cantidad_de_empleados["cantidad_de_empleados = 5"]
-    contador_empleado["contador_empleado = 0"]
+    cantidad_de_deportistas["cantidad_de_deportistas = 0"]
+    continuar["continuar = ''"]
+    cantidad_de_hombres["cantidad_de_hombres = 0"]
+    cantidad_de_mujeres["cantidad_de_mujeres = 0"]
+    sumatoria_de_edad["sumatoria_de_edad = 0"]
     
-    mientras{"contador_empleado < cantidad_de_empleados"}
+    mientras{"continuar != 'no'"}
     
-    contador_empleado_suma["contador_empleado = contador_empleado + 1"]
+    apellido[/apellido/]
+    edad[/edad/]
+    sexo[/sexo/]
     
-    sueldo[/sueldo/]
+    cantidad_de_deportistas_suma["cantidad_de_deportistas = cantidad_de_deportistas + 1"]
     
-    sumatoria_de_sueldos["sumatoria_de_sueldos = sumatoria_de_sueldos + sueldo"]
+    sumatoria_de_edad_suma["sumatoria_de_edad = sumatoria_de_edad + edad"]
     
-    promedio_de_sueldos["promedio_de_sueldos = sumatoria_de_sueldos / cantidad_de_empleados"]
+    match{{sexo}}
     
-	mostrar_sumatoria{{sumatoria_de_sueldos}}
-	mostrar_promedio{{promedio_de_sueldos}}
+    H["cantidad_de_hombres = cantidad_de_hombres + 1"]
+    M["cantidad_de_mujeres = cantidad_de_mujeres + 1"]
+    otro{{"Sexo no contemplado"}}
+    
+    desea_continuar[/continuar/]
+    
+    promedio_de_edad["promedio_de_edad = sumatoria_de_edad / cantidad_de_deportistas"]
+    
+	mostrar_cantidad_de_deportistas{{cantidad_de_deportistas}}
+	mostrar_cantidad_de_hombres{{cantidad_de_hombres}}
+	mostrar_cantidad_de_mujeres{{cantidad_de_mujeres}}
+	mostrar_promedio_de_edad{{promedio_de_edad}}
 	
 	fin([fin])
     
-	comienzo --> variables --> cantidad_de_empleados --> contador_empleado --> mientras
-	mientras -- Sí --> contador_empleado_suma --> sueldo --> sumatoria_de_sueldos --> mientras
-	mientras -- No --> promedio_de_sueldos
-	promedio_de_sueldos --> mostrar_sumatoria --> mostrar_promedio --> fin
+	comienzo --> variables --> cantidad_de_deportistas --> continuar --> cantidad_de_hombres --> cantidad_de_mujeres --> sumatoria_de_edad --> mientras
+	mientras -- Sí --> apellido --> edad --> sexo --> cantidad_de_deportistas_suma --> sumatoria_de_edad_suma --> match
+	match -- "H" --> H
+	match -- "M" --> M
+	match -- "Otro" --> otro
+	H & M & otro --> desea_continuar --> mientras
+	mientras --- No ---> promedio_de_edad
+	promedio_de_edad --> mostrar_cantidad_de_deportistas --> mostrar_cantidad_de_hombres --> mostrar_cantidad_de_mujeres --> mostrar_promedio_de_edad --> fin
 ```
 
 ## Código
