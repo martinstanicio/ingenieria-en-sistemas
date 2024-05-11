@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Retroalimentación",
+      "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
+    },
+    {
+      "basename": "Permeabilidad",
+      "path": "Sistemas y Procesos de Negocios/Permeabilidad.md"
+    },
+    {
+      "basename": "Ambiente",
+      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
+    },
+    {
       "basename": "20240510 - Deportistas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Deportistas.md"
     },
@@ -83,10 +95,6 @@
     {
       "basename": "Confidencialidad",
       "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
-    },
-    {
-      "basename": "Ambiente",
-      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
     },
     {
       "basename": "Números signados en formato de punto fijo",
@@ -191,14 +199,6 @@
     {
       "basename": "20240430 - Bifurcaciones anidadas 3",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 3.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 2",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 1",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
     }
   ],
   "omittedPaths": [],
