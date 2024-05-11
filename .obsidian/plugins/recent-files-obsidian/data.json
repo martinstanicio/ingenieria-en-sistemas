@@ -5,6 +5,30 @@
       "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
     },
     {
+      "basename": "Sucesión monótona",
+      "path": "Análisis Matemático I/Sucesión monótona.md"
+    },
+    {
+      "basename": "Cota",
+      "path": "Análisis Matemático I/Cota.md"
+    },
+    {
+      "basename": "Sucesión",
+      "path": "Análisis Matemático I/Sucesión.md"
+    },
+    {
+      "basename": "20240510 - Deportistas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Deportistas.md"
+    },
+    {
+      "basename": "20240507 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
+    },
+    {
+      "basename": "20240510 - Sueldos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Sueldos.md"
+    },
+    {
       "basename": "Pruebas vacías",
       "path": "Lógica y Estructuras Discretas/Pruebas vacías.md"
     },
@@ -23,10 +47,6 @@
     {
       "basename": "Pasaje directo",
       "path": "Arquitectura de Computadoras/Pasaje directo.md"
-    },
-    {
-      "basename": "20240507 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
     },
     {
       "basename": "Determinante",
@@ -179,26 +199,6 @@
     {
       "basename": "20240430 - Bifurcaciones anidadas 1",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
-    },
-    {
-      "basename": "20240426 - Número mayor",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
-    },
-    {
-      "basename": "20240426 - Conectivos lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
-    },
-    {
-      "basename": "20240419 - Bifurcación doble",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
-    },
-    {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
-    },
-    {
-      "basename": "20240416 - Palindromo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
     }
   ],
   "omittedPaths": [],
