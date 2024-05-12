@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Adjunto",
+      "path": "Álgebra y Geometría Analítica/Adjunto.md"
+    },
+    {
+      "basename": "Teorema de Laplace",
+      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
+    },
+    {
+      "basename": "Traza de una matriz",
+      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
+    },
+    {
       "basename": "Retroalimentación",
       "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Estructuras de control",
       "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "20240430 - Tipo de triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 3",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 3.md"
     }
   ],
   "omittedPaths": [],
