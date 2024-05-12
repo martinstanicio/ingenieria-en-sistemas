@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Propiedades de determinantes",
+      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
+    },
+    {
       "basename": "Adjunto",
       "path": "Álgebra y Geometría Analítica/Adjunto.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Árboles semánticos",
       "path": "Lógica y Estructuras Discretas/Árboles semánticos.md"
-    },
-    {
-      "basename": "Estructuras de control",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
     }
   ],
   "omittedPaths": [],
