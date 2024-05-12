@@ -5,6 +5,18 @@
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
     {
+      "basename": "Sucesión monótona",
+      "path": "Análisis Matemático I/Sucesión monótona.md"
+    },
+    {
+      "basename": "Cota",
+      "path": "Análisis Matemático I/Cota.md"
+    },
+    {
+      "basename": "Sucesión",
+      "path": "Análisis Matemático I/Sucesión.md"
+    },
+    {
       "basename": "Adjunto",
       "path": "Álgebra y Geometría Analítica/Adjunto.md"
     },
@@ -47,18 +59,6 @@
     {
       "basename": "Producto cartesiano",
       "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
-    },
-    {
-      "basename": "Sucesión monótona",
-      "path": "Análisis Matemático I/Sucesión monótona.md"
-    },
-    {
-      "basename": "Cota",
-      "path": "Análisis Matemático I/Cota.md"
-    },
-    {
-      "basename": "Sucesión",
-      "path": "Análisis Matemático I/Sucesión.md"
     },
     {
       "basename": "Pruebas vacías",
