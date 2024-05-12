@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Matriz simétrica",
+      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
+    },
+    {
       "basename": "Propiedades de determinantes",
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "Árboles semánticos",
-      "path": "Lógica y Estructuras Discretas/Árboles semánticos.md"
     }
   ],
   "omittedPaths": [],
