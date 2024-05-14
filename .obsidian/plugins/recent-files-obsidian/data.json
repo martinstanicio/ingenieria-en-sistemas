@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+    },
+    {
+      "basename": "Sucesión monótona",
+      "path": "Análisis Matemático I/Sucesión monótona.md"
+    },
+    {
       "basename": "Matriz simétrica",
       "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
     },
     {
       "basename": "Propiedades de determinantes",
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
-    },
-    {
-      "basename": "Sucesión monótona",
-      "path": "Análisis Matemático I/Sucesión monótona.md"
     },
     {
       "basename": "Cota",
@@ -155,10 +159,6 @@
     {
       "basename": "Bandera",
       "path": "Algoritmos y Estructuras de Datos/Bandera.md"
-    },
-    {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
     },
     {
       "basename": "Sistema hexadecimal",
