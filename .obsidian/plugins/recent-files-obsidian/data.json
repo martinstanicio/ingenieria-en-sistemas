@@ -1,52 +1,132 @@
 {
   "recentFiles": [
     {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+      "basename": "20240510 - Sueldos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Sueldos.md"
     },
     {
-      "basename": "Sucesión monótona",
-      "path": "Análisis Matemático I/Sucesión monótona.md"
+      "basename": "Sistema de información",
+      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
     },
     {
-      "basename": "Matriz simétrica",
-      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
+      "basename": "Subsistema",
+      "path": "Sistemas y Procesos de Negocios/Subsistema.md"
     },
     {
-      "basename": "Propiedades de determinantes",
-      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
+      "basename": "Sistema de comunicación",
+      "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
+    },
+    {
+      "basename": "Sistema informático",
+      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "Información directiva",
+      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
+    },
+    {
+      "basename": "Información operativa",
+      "path": "Sistemas y Procesos de Negocios/Información operativa.md"
+    },
+    {
+      "basename": "Integridad",
+      "path": "Sistemas y Procesos de Negocios/Integridad.md"
+    },
+    {
+      "basename": "Confidencialidad",
+      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
+    },
+    {
+      "basename": "Confiabilidad",
+      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
+    },
+    {
+      "basename": "Propiedades de un elemento",
+      "path": "Sistemas y Procesos de Negocios/Propiedades de un elemento.md"
+    },
+    {
+      "basename": "Legalidad",
+      "path": "Sistemas y Procesos de Negocios/Legalidad.md"
+    },
+    {
+      "basename": "No repudio",
+      "path": "Sistemas y Procesos de Negocios/No repudio.md"
+    },
+    {
+      "basename": "No duplicidad",
+      "path": "Sistemas y Procesos de Negocios/No duplicidad.md"
+    },
+    {
+      "basename": "Trazabilidad",
+      "path": "Sistemas y Procesos de Negocios/Trazabilidad.md"
+    },
+    {
+      "basename": "Autenticidad",
+      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
+    },
+    {
+      "basename": "Uptime",
+      "path": "Sistemas y Procesos de Negocios/Uptime.md"
+    },
+    {
+      "basename": "Dato",
+      "path": "Sistemas y Procesos de Negocios/Dato.md"
+    },
+    {
+      "basename": "Instancia",
+      "path": "Sistemas y Procesos de Negocios/Instancia.md"
+    },
+    {
+      "basename": "Relación",
+      "path": "Lógica y Estructuras Discretas/Relación.md"
+    },
+    {
+      "basename": "Tecnología",
+      "path": "Ingeniería y Sociedad/Tecnología.md"
+    },
+    {
+      "basename": "Epistemología",
+      "path": "Ingeniería y Sociedad/Epistemología.md"
+    },
+    {
+      "basename": "Lenguaje",
+      "path": "Ingeniería y Sociedad/Lenguaje.md"
+    },
+    {
+      "basename": "Investigación científica",
+      "path": "Ingeniería y Sociedad/Investigación científica.md"
+    },
+    {
+      "basename": "Filosofía de la ciencia",
+      "path": "Ingeniería y Sociedad/Filosofía de la ciencia.md"
+    },
+    {
+      "basename": "Pensamiento",
+      "path": "Ingeniería y Sociedad/Pensamiento.md"
+    },
+    {
+      "basename": "Ciencia",
+      "path": "Ingeniería y Sociedad/Ciencia.md"
+    },
+    {
+      "basename": "Conocimiento",
+      "path": "Ingeniería y Sociedad/Conocimiento.md"
     },
     {
       "basename": "Cota",
       "path": "Análisis Matemático I/Cota.md"
     },
     {
+      "basename": "Sucesión monótona",
+      "path": "Análisis Matemático I/Sucesión monótona.md"
+    },
+    {
       "basename": "Sucesión",
       "path": "Análisis Matemático I/Sucesión.md"
-    },
-    {
-      "basename": "Adjunto",
-      "path": "Álgebra y Geometría Analítica/Adjunto.md"
-    },
-    {
-      "basename": "Teorema de Laplace",
-      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
-    },
-    {
-      "basename": "Traza de una matriz",
-      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
-    },
-    {
-      "basename": "Retroalimentación",
-      "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
-    },
-    {
-      "basename": "Permeabilidad",
-      "path": "Sistemas y Procesos de Negocios/Permeabilidad.md"
-    },
-    {
-      "basename": "Ambiente",
-      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
     },
     {
       "basename": "20240510 - Deportistas",
@@ -61,144 +141,64 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas.md"
     },
     {
-      "basename": "20240510 - Sueldos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Sueldos.md"
+      "basename": "20240430 - Tipo de triángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
     },
     {
-      "basename": "Producto cartesiano",
-      "path": "Lógica y Estructuras Discretas/Producto cartesiano.md"
+      "basename": "20240430 - Bifurcaciones anidadas 3",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 3.md"
     },
     {
-      "basename": "Pruebas vacías",
-      "path": "Lógica y Estructuras Discretas/Pruebas vacías.md"
+      "basename": "20240430 - Bifurcaciones anidadas 2",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
     },
     {
-      "basename": "Teorema",
-      "path": "Lógica y Estructuras Discretas/Teorema.md"
+      "basename": "20240430 - Bifurcaciones anidadas 1",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
     },
     {
-      "basename": "Pruebas triviales",
-      "path": "Lógica y Estructuras Discretas/Pruebas triviales.md"
+      "basename": "20240426 - Número mayor",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
     },
     {
-      "basename": "Prueba exhaustiva",
-      "path": "Lógica y Estructuras Discretas/Prueba exhaustiva.md"
+      "basename": "20240426 - Conectivos lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
     },
     {
-      "basename": "Pasaje directo",
-      "path": "Arquitectura de Computadoras/Pasaje directo.md"
+      "basename": "20240419 - Bifurcación doble",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
     },
     {
-      "basename": "Determinante",
-      "path": "Álgebra y Geometría Analítica/Determinante.md"
+      "basename": "20240416 - Triángulo rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
     },
     {
-      "basename": "Cuerpo",
-      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
+      "basename": "20240416 - Palindromo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
     },
     {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+      "basename": "20240409 - Triángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Triángulo.md"
     },
     {
-      "basename": "Entradas",
-      "path": "Sistemas y Procesos de Negocios/Entradas.md"
+      "basename": "20240409 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
     },
     {
-      "basename": "Elemento",
-      "path": "Sistemas y Procesos de Negocios/Elemento.md"
+      "basename": "20240409 - Circunferencia",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Circunferencia.md"
     },
     {
-      "basename": "Diagrama de Transición de Estado (DTE)",
-      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado (DTE).md"
+      "basename": "20240405 - Presión",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Presión.md"
     },
     {
-      "basename": "Dato",
-      "path": "Sistemas y Procesos de Negocios/Dato.md"
+      "basename": "20240405 - Intercambio de variables",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Intercambio de variables.md"
     },
     {
-      "basename": "Confidencialidad",
-      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
-    },
-    {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
-    },
-    {
-      "basename": "Sistema binario",
-      "path": "Arquitectura de Computadoras/Sistema binario.md"
-    },
-    {
-      "basename": "Byte",
-      "path": "Arquitectura de Computadoras/Byte.md"
-    },
-    {
-      "basename": "Sistema numérico",
-      "path": "Arquitectura de Computadoras/Sistema numérico.md"
-    },
-    {
-      "basename": "Sistema decimal",
-      "path": "Arquitectura de Computadoras/Sistema decimal.md"
-    },
-    {
-      "basename": "Funciones",
-      "path": "Algoritmos y Estructuras de Datos/Funciones.md"
-    },
-    {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
-      "basename": "Bandera",
-      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
-    },
-    {
-      "basename": "Sistema hexadecimal",
-      "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
-    },
-    {
-      "basename": "Sistema octal",
-      "path": "Arquitectura de Computadoras/Sistema octal.md"
-    },
-    {
-      "basename": "Compuertas lógicas",
-      "path": "Arquitectura de Computadoras/Compuertas lógicas.md"
-    },
-    {
-      "basename": "Componentes básicos de una computadora",
-      "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
-    },
-    {
-      "basename": "Compuerta AND",
-      "path": "Arquitectura de Computadoras/Compuerta AND.md"
-    },
-    {
-      "basename": "Cinemática",
-      "path": "Física I/Cinemática.md"
-    },
-    {
-      "basename": "Atributos",
-      "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "dte",
-      "path": "Sistemas y Procesos de Negocios/attachments/dte.png"
-    },
-    {
-      "basename": "Inteligencia artificial neuronal",
-      "path": "Inteligencia Artificial/Inteligencia artificial neuronal.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
+      "basename": "20240405 - Energía",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Energía.md"
     }
   ],
   "omittedPaths": [],
