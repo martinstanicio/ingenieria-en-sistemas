@@ -1,12 +1,12 @@
 ---
 created: 2024-05-07 22:33:21
-modified: 2024-05-08 01:33:30
+modified: 2024-05-14 21:14:27
 title: Ciclo mientras
 ---
 
 # Ciclo mientras
 
-Es una [[Estructuras de control#De repetición]] que ejecuta una serie de instrucciones dadas **mientras** se cumpla una condición.
+Es una [[Estructura de repetición]] que ejecuta una serie de instrucciones dadas **mientras** se cumpla una condición.
 
 Para evitar que se vuelva un ciclo infinito, podemos utilizar diferentes estrategias:
 

@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Sistema
 created: 2024-03-20 15:41:58
-modified: 2024-05-08 01:33:31
+modified: 2024-05-14 20:50:39
 title: Sistemas
 ---
 

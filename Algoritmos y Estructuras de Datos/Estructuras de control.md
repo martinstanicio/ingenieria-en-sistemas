@@ -1,12 +1,16 @@
 ---
 created: 2024-03-22 18:21:23
-modified: 2024-05-08 01:33:31
+modified: 2024-05-14 21:12:45
 title: Estructuras de control
 ---
 
 # Estructuras de control
 
-Todo [[Programa propio]] se puede construir utilizando 3 estructuras.
+Todo [[Programa propio]] se puede construir utilizando 3 estructuras:
+
+- [[Estructura secuencial]]
+- [[Estructura de selección]]
+- [[Estructura de repetición]]
 
 ## Secuencial
 

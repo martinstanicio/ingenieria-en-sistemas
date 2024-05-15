@@ -1,24 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "20240510 - Sueldos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Sueldos.md"
+      "basename": "Valor centinela",
+      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Estructura de casos",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
+    },
+    {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+    },
+    {
+      "basename": "Estructuras de control",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+    },
+    {
+      "basename": "Estructura secuencial",
+      "path": "Algoritmos y Estructuras de Datos/Estructura secuencial.md"
+    },
+    {
+      "basename": "Estructura de selección",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
+    },
+    {
+      "basename": "Estructura de repetición",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
+    },
+    {
+      "basename": "Entidad",
+      "path": "Sistemas y Procesos de Negocios/Entidad.md"
+    },
+    {
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
+      "basename": "Entradas",
+      "path": "Sistemas y Procesos de Negocios/Entradas.md"
     },
     {
       "basename": "Sistema de información",
       "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
     },
     {
-      "basename": "Subsistema",
-      "path": "Sistemas y Procesos de Negocios/Subsistema.md"
+      "basename": "Sistema informático",
+      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
     },
     {
       "basename": "Sistema de comunicación",
       "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
     },
     {
-      "basename": "Sistema informático",
-      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
+      "basename": "20240510 - Sueldos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Sueldos.md"
+    },
+    {
+      "basename": "Subsistema",
+      "path": "Sistemas y Procesos de Negocios/Subsistema.md"
     },
     {
       "basename": "Información",
@@ -151,54 +199,6 @@
     {
       "basename": "20240430 - Bifurcaciones anidadas 2",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 1",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 1.md"
-    },
-    {
-      "basename": "20240426 - Número mayor",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Número mayor.md"
-    },
-    {
-      "basename": "20240426 - Conectivos lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240426 - Conectivos lógicos.md"
-    },
-    {
-      "basename": "20240419 - Bifurcación doble",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240419 - Bifurcación doble.md"
-    },
-    {
-      "basename": "20240416 - Triángulo rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Triángulo rectángulo.md"
-    },
-    {
-      "basename": "20240416 - Palindromo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240416 - Palindromo.md"
-    },
-    {
-      "basename": "20240409 - Triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Triángulo.md"
-    },
-    {
-      "basename": "20240409 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
-    },
-    {
-      "basename": "20240409 - Circunferencia",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Circunferencia.md"
-    },
-    {
-      "basename": "20240405 - Presión",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Presión.md"
-    },
-    {
-      "basename": "20240405 - Intercambio de variables",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Intercambio de variables.md"
-    },
-    {
-      "basename": "20240405 - Energía",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240405 - Energía.md"
     }
   ],
   "omittedPaths": [],
