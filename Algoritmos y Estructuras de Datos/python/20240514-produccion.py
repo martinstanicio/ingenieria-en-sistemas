@@ -18,7 +18,7 @@ toneladas_producidas_turno = float(
 while toneladas_producidas_turno != -9999:
     if toneladas_producidas_turno != -9999:
         fecha_produccion = input("Ingrese la fecha de produccion: ")
-        turno_produccion = input("Ingrese el turno de produccion: ")
+        turno_produccion = input("Ingrese el turno de produccion (M o T): ")
 
         match turno_produccion:
             case "M":
