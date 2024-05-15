@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "20240514 - Producción",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
+    },
+    {
       "basename": "Valor centinela",
       "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "20240430 - Bifurcaciones anidadas 3",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 3.md"
-    },
-    {
-      "basename": "20240430 - Bifurcaciones anidadas 2",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Bifurcaciones anidadas 2.md"
     }
   ],
   "omittedPaths": [],
