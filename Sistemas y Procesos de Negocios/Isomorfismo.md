@@ -1,6 +1,6 @@
 ---
 created: 2024-04-16 14:35:16
-modified: 2024-05-08 01:33:31
+modified: 2024-05-15 10:00:14
 title: Isomorfismo
 ---
 
@@ -10,6 +10,7 @@ Etimológicamente significa =="igual forma"==, y aplicado a la [[Teoría General
 
 > Existencia de semejanzas y correspondencias formales entre diversos tipos de sistemas, a veces muy aparentemente disímiles entre sí en cuando al contenido. Así, las semejanzas son de forma más que de contenido: sistemas formalmente idénticos pueden ser aplicados, en efecto, a diferentes dominios.
 
-El concepto de isomorfismo, también se refiere al diseño de [[Modelo|modelos sistémicos]] similares al sistema original.
+> [!info] Modelos similares
+> El concepto de isomorfismo, también se refiere al diseño de [[Modelo|modelos sistémicos]] similares al sistema original.
 
 El [[Enfoque de sistemas]] busca **generalizaciones** que nos ayudan a explicar cómo los sistemas responden y se adaptan a las diferentes [[Entradas]] del medio, y como procesan la [[Información]].

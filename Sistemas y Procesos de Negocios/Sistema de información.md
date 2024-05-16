@@ -1,6 +1,6 @@
 ---
 created: 2024-05-14 20:29:19
-modified: 2024-05-14 21:00:29
+modified: 2024-05-15 09:57:57
 title: Sistema de información
 ---
 

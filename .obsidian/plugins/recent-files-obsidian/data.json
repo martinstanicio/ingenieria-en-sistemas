@@ -1,12 +1,68 @@
 {
   "recentFiles": [
     {
+      "basename": "Ecuaciones horarias",
+      "path": "Física I/Ecuaciones horarias.md"
+    },
+    {
       "basename": "20240514 - Producción",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
     },
     {
+      "basename": "Flags",
+      "path": "Arquitectura de Computadoras/Flags.md"
+    },
+    {
+      "basename": "ALU",
+      "path": "Arquitectura de Computadoras/ALU.md"
+    },
+    {
+      "basename": "Arquitectura Von Neumann",
+      "path": "Arquitectura de Computadoras/Arquitectura Von Neumann.md"
+    },
+    {
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
       "basename": "20240510 - Deportistas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Deportistas.md"
+    },
+    {
+      "basename": "Autenticidad",
+      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
+    },
+    {
+      "basename": "Confiabilidad",
+      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
+    },
+    {
+      "basename": "Entradas",
+      "path": "Sistemas y Procesos de Negocios/Entradas.md"
+    },
+    {
+      "basename": "Transición de estado",
+      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
+    },
+    {
+      "basename": "Suprasistema",
+      "path": "Sistemas y Procesos de Negocios/Suprasistema.md"
+    },
+    {
+      "basename": "Sistema de información",
+      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
+    },
+    {
+      "basename": "Proceso de caja blanca",
+      "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
+    },
+    {
+      "basename": "Macro ambiente",
+      "path": "Sistemas y Procesos de Negocios/Macro ambiente.md"
+    },
+    {
+      "basename": "Isomorfismo",
+      "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
     },
     {
       "basename": "Valor centinela",
@@ -43,18 +99,6 @@
     {
       "basename": "Entidad",
       "path": "Sistemas y Procesos de Negocios/Entidad.md"
-    },
-    {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
-    },
-    {
-      "basename": "Entradas",
-      "path": "Sistemas y Procesos de Negocios/Entradas.md"
-    },
-    {
-      "basename": "Sistema de información",
-      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
     },
     {
       "basename": "Sistema informático",
@@ -97,10 +141,6 @@
       "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
     },
     {
-      "basename": "Confiabilidad",
-      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
-    },
-    {
       "basename": "Propiedades de un elemento",
       "path": "Sistemas y Procesos de Negocios/Propiedades de un elemento.md"
     },
@@ -119,10 +159,6 @@
     {
       "basename": "Trazabilidad",
       "path": "Sistemas y Procesos de Negocios/Trazabilidad.md"
-    },
-    {
-      "basename": "Autenticidad",
-      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
     },
     {
       "basename": "Uptime",
@@ -163,38 +199,6 @@
     {
       "basename": "Pensamiento",
       "path": "Ingeniería y Sociedad/Pensamiento.md"
-    },
-    {
-      "basename": "Ciencia",
-      "path": "Ingeniería y Sociedad/Ciencia.md"
-    },
-    {
-      "basename": "Conocimiento",
-      "path": "Ingeniería y Sociedad/Conocimiento.md"
-    },
-    {
-      "basename": "Cota",
-      "path": "Análisis Matemático I/Cota.md"
-    },
-    {
-      "basename": "Sucesión monótona",
-      "path": "Análisis Matemático I/Sucesión monótona.md"
-    },
-    {
-      "basename": "Sucesión",
-      "path": "Análisis Matemático I/Sucesión.md"
-    },
-    {
-      "basename": "20240507 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
-    },
-    {
-      "basename": "20240503 - Operaciones matemáticas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240503 - Operaciones matemáticas.md"
-    },
-    {
-      "basename": "20240430 - Tipo de triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
     }
   ],
   "omittedPaths": [],
