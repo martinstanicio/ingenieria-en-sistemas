@@ -1,6 +1,6 @@
 ---
 created: 2024-05-19 18:13:45
-modified: 2024-05-19 18:21:27
+modified: 2024-05-19 18:30:51
 title: Base
 ---
 
@@ -12,4 +12,4 @@ title: Base
 >El conjunto más pequeño posible cuyo espacio generado es igual al del conjunto original.
 
 >[!warning]
->Pueden y suelen existir ==múltiples bases posibles== para un mismo [[Conjunto]].
+>Pueden y suelen existir ==infinitas bases posibles== para un mismo [[Conjunto]].
