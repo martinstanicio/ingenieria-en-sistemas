@@ -5,6 +5,22 @@
       "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
     },
     {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
+      "basename": "Combinación lineal trivial",
+      "path": "Álgebra y Geometría Analítica/Combinación lineal trivial.md"
+    },
+    {
+      "basename": "Conjunto linealmente independiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+    },
+    {
+      "basename": "Combinación lineal",
+      "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
+    },
+    {
       "basename": "Ecuaciones horarias",
       "path": "Física I/Ecuaciones horarias.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "No duplicidad",
       "path": "Sistemas y Procesos de Negocios/No duplicidad.md"
-    },
-    {
-      "basename": "Trazabilidad",
-      "path": "Sistemas y Procesos de Negocios/Trazabilidad.md"
-    },
-    {
-      "basename": "Uptime",
-      "path": "Sistemas y Procesos de Negocios/Uptime.md"
-    },
-    {
-      "basename": "Dato",
-      "path": "Sistemas y Procesos de Negocios/Dato.md"
-    },
-    {
-      "basename": "Instancia",
-      "path": "Sistemas y Procesos de Negocios/Instancia.md"
     }
   ],
   "omittedPaths": [],
