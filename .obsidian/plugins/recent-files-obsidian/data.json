@@ -1,8 +1,76 @@
 {
   "recentFiles": [
     {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
+      "basename": "Espacio generado",
+      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
+    },
+    {
       "basename": "Conjunto linealmente independiente",
       "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+    },
+    {
+      "basename": "Sistema de información",
+      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
+    },
+    {
+      "basename": "Transición de estado",
+      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
+    },
+    {
+      "basename": "Confiabilidad",
+      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
+    },
+    {
+      "basename": "20240510 - Deportistas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Deportistas.md"
+    },
+    {
+      "basename": "Proceso de caja blanca",
+      "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
+    },
+    {
+      "basename": "Valor centinela",
+      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
+    },
+    {
+      "basename": "Estructuras de control",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+    },
+    {
+      "basename": "Estructura de repetición",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
+    },
+    {
+      "basename": "Estructura de selección",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
+    },
+    {
+      "basename": "Estructura secuencial",
+      "path": "Algoritmos y Estructuras de Datos/Estructura secuencial.md"
+    },
+    {
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
+      "basename": "Principio de inducción",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción.md"
+    },
+    {
+      "basename": "Principio del buen ordenamiento",
+      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
+    },
+    {
+      "basename": "20240517 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
+    },
+    {
+      "basename": "Serie",
+      "path": "Análisis Matemático I/Serie.md"
     },
     {
       "basename": "Conjunto linealmente dependiente",
@@ -23,26 +91,6 @@
     {
       "basename": "Ecuaciones horarias",
       "path": "Física I/Ecuaciones horarias.md"
-    },
-    {
-      "basename": "Serie",
-      "path": "Análisis Matemático I/Serie.md"
-    },
-    {
-      "basename": "20240517 - Producciones",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
-    },
-    {
-      "basename": "Principio del buen ordenamiento",
-      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
-    },
-    {
-      "basename": "Principio de inducción",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción.md"
-    },
-    {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
     },
     {
       "basename": "Mínimo",
@@ -69,36 +117,16 @@
       "path": "Arquitectura de Computadoras/Arquitectura Von Neumann.md"
     },
     {
-      "basename": "20240510 - Deportistas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Deportistas.md"
-    },
-    {
       "basename": "Autenticidad",
       "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
-    },
-    {
-      "basename": "Confiabilidad",
-      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
     },
     {
       "basename": "Entradas",
       "path": "Sistemas y Procesos de Negocios/Entradas.md"
     },
     {
-      "basename": "Transición de estado",
-      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
-    },
-    {
       "basename": "Suprasistema",
       "path": "Sistemas y Procesos de Negocios/Suprasistema.md"
-    },
-    {
-      "basename": "Sistema de información",
-      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
-    },
-    {
-      "basename": "Proceso de caja blanca",
-      "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
     },
     {
       "basename": "Macro ambiente",
@@ -107,10 +135,6 @@
     {
       "basename": "Isomorfismo",
       "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
-    },
-    {
-      "basename": "Valor centinela",
-      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
     },
     {
       "basename": "Ciclo mientras",
@@ -123,22 +147,6 @@
     {
       "basename": "Acumulador",
       "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
-      "basename": "Estructuras de control",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
-    },
-    {
-      "basename": "Estructura secuencial",
-      "path": "Algoritmos y Estructuras de Datos/Estructura secuencial.md"
-    },
-    {
-      "basename": "Estructura de selección",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
-    },
-    {
-      "basename": "Estructura de repetición",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
     },
     {
       "basename": "Entidad",
@@ -191,14 +199,6 @@
     {
       "basename": "Legalidad",
       "path": "Sistemas y Procesos de Negocios/Legalidad.md"
-    },
-    {
-      "basename": "No repudio",
-      "path": "Sistemas y Procesos de Negocios/No repudio.md"
-    },
-    {
-      "basename": "No duplicidad",
-      "path": "Sistemas y Procesos de Negocios/No duplicidad.md"
     }
   ],
   "omittedPaths": [],
