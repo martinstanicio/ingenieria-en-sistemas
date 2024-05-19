@@ -1,12 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Conjunto linealmente dependiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+    },
+    {
       "basename": "Ecuaciones horarias",
       "path": "Física I/Ecuaciones horarias.md"
     },
     {
+      "basename": "Serie",
+      "path": "Análisis Matemático I/Serie.md"
+    },
+    {
+      "basename": "20240517 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
+    },
+    {
+      "basename": "Principio del buen ordenamiento",
+      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
+    },
+    {
+      "basename": "Principio de inducción",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción.md"
+    },
+    {
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
+      "basename": "Mínimo",
+      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
+    },
+    {
       "basename": "20240514 - Producción",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
+    },
+    {
+      "basename": "Regla de inferencia",
+      "path": "Lógica y Estructuras Discretas/Regla de inferencia.md"
     },
     {
       "basename": "Flags",
@@ -19,10 +51,6 @@
     {
       "basename": "Arquitectura Von Neumann",
       "path": "Arquitectura de Computadoras/Arquitectura Von Neumann.md"
-    },
-    {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
     },
     {
       "basename": "20240510 - Deportistas",
@@ -171,34 +199,6 @@
     {
       "basename": "Instancia",
       "path": "Sistemas y Procesos de Negocios/Instancia.md"
-    },
-    {
-      "basename": "Relación",
-      "path": "Lógica y Estructuras Discretas/Relación.md"
-    },
-    {
-      "basename": "Tecnología",
-      "path": "Ingeniería y Sociedad/Tecnología.md"
-    },
-    {
-      "basename": "Epistemología",
-      "path": "Ingeniería y Sociedad/Epistemología.md"
-    },
-    {
-      "basename": "Lenguaje",
-      "path": "Ingeniería y Sociedad/Lenguaje.md"
-    },
-    {
-      "basename": "Investigación científica",
-      "path": "Ingeniería y Sociedad/Investigación científica.md"
-    },
-    {
-      "basename": "Filosofía de la ciencia",
-      "path": "Ingeniería y Sociedad/Filosofía de la ciencia.md"
-    },
-    {
-      "basename": "Pensamiento",
-      "path": "Ingeniería y Sociedad/Pensamiento.md"
     }
   ],
   "omittedPaths": [],
