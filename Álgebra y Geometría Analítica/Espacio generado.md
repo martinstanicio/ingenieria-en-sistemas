@@ -1,6 +1,6 @@
 ---
 created: 2024-04-14 01:06:41
-modified: 2024-05-19 18:10:25
+modified: 2024-05-19 21:33:00
 title: Espacio generado
 ---
 
@@ -13,7 +13,7 @@ $$H=gen\{v_1, v_2, \ldots, v_n\} = \{w \in V: w=\alpha_1 v_1 + \alpha_2 v_2 + \l
 >[!info]
 >El espacio generado de un [[Conjunto]] son todas las posibles [[Combinación lineal|combinaciones lineales]] que se pueden formar a partir del mismo.
 
- Por lo tanto, siempre será un [[Subespacio vectorial]] del conjunto original, por las siguientes razones:
+ Por lo tanto, siempre será un [[Subespacio vectorial]] del conjunto al que pertenecen los vectores, por las siguientes razones:
 
  1. **Contiene al [[Elemento neutro|Vector nulo]]:** podemos obtenerlo multiplicando a todos los vectores por $0$.
  2. **Es cerrado bajo la multiplicación por un escalar:** ya que todos los elementos son obtenidos multiplicando a los vectores por escalares.
