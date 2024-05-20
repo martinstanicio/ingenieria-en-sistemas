@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Independencia lineal
 created: 2024-04-08 22:33:49
-modified: 2024-05-19 19:41:25
+modified: 2024-05-19 21:58:26
 title: Conjunto linealmente independiente
 ---
 

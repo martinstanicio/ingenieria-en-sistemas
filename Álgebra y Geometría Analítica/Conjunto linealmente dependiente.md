@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Dependencia lineal
 created: 2024-04-08 22:30:35
-modified: 2024-05-19 19:50:19
+modified: 2024-05-19 21:58:18
 title: Conjunto linealmente dependiente
 ---
 
