@@ -1,6 +1,6 @@
 ---
 created: 2024-04-14 16:22:29
-modified: 2024-05-08 01:33:29
+modified: 2024-05-20 11:51:25
 title: Sistema compatible (SC)
 ---
 
@@ -9,6 +9,44 @@ title: Sistema compatible (SC)
 Un [[Sistema de ecuaciones lineales (SEL)]] que tiene un conjunto solución no vacío, que puede contener un único elemento, o infinitos.
 
 También puede ser llamado **sistema consistente**.
+
+>[!info]
+>Un [[Sistema de ecuaciones lineales (SEL)|SEL]] es compatible cuando su [[Matriz#Vector de términos independientes]] es [[Combinación lineal]] de los vectores columna de la [[Matriz#Matriz de coeficientes]].
+>
+>$$
+>x \left( 
+>    \begin{array}{c}
+>        a_{11} \\
+>        a_{21} \\
+>        \vdots \\
+>        a_{n1}
+>    \end{array} 
+>\right) +
+>y \left( 
+>    \begin{array}{c}
+>        a_{12} \\
+>        a_{22} \\
+>        \vdots \\
+>        a_{n2}
+>    \end{array} 
+>\right) +
+>z \left( 
+>    \begin{array}{c}
+>        a_{13} \\
+>        a_{23} \\
+>        \vdots \\
+>        a_{n3}
+>    \end{array} 
+>\right) =
+>\left( 
+>    \begin{array}{c}
+>        b_1 \\
+>        b_2 \\
+>        \vdots \\
+>        b_n
+>    \end{array} 
+>\right)
+>$$
 
 ## Sistema compatible determinado (SCD)
 

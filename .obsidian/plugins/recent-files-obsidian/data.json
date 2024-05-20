@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Sistema compatible (SC)",
+      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Sistema de ecuaciones lineales (SEL)",
+      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
+    },
+    {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Información directiva",
       "path": "Sistemas y Procesos de Negocios/Información directiva.md"
-    },
-    {
-      "basename": "Información operativa",
-      "path": "Sistemas y Procesos de Negocios/Información operativa.md"
-    },
-    {
-      "basename": "Integridad",
-      "path": "Sistemas y Procesos de Negocios/Integridad.md"
-    },
-    {
-      "basename": "Confidencialidad",
-      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
     }
   ],
   "omittedPaths": [],

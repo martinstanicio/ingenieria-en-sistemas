@@ -1,7 +1,9 @@
 ---
 created: 2024-04-14 13:07:12
-modified: 2024-05-08 01:33:29
+modified: 2024-05-20 11:40:42
 title: Sistema de ecuaciones lineales (SEL)
+aliases:
+  - SEL
 ---
 
 # Sistema de ecuaciones lineales (SEL)
