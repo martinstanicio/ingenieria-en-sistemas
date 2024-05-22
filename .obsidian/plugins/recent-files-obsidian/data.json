@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Espacio generado",
+      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
+    },
+    {
+      "basename": "Dimensión",
+      "path": "Álgebra y Geometría Analítica/Dimensión.md"
+    },
+    {
       "basename": "Sistema compatible (SC)",
       "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
+    },
+    {
+      "basename": "Lenguaje formal",
+      "path": "Ingeniería y Sociedad/Lenguaje formal.md"
+    },
+    {
+      "basename": "Entes ideales",
+      "path": "Ingeniería y Sociedad/Entes ideales.md"
+    },
+    {
+      "basename": "Ciencias formales",
+      "path": "Ingeniería y Sociedad/Ciencias formales.md"
+    },
+    {
+      "basename": "Ciencia",
+      "path": "Ingeniería y Sociedad/Ciencia.md"
+    },
+    {
+      "basename": "Serie",
+      "path": "Análisis Matemático I/Serie.md"
     },
     {
       "basename": "Matriz",
@@ -15,14 +51,6 @@
     {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
-    },
-    {
-      "basename": "Dimensión",
-      "path": "Álgebra y Geometría Analítica/Dimensión.md"
-    },
-    {
-      "basename": "Espacio generado",
-      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
     },
     {
       "basename": "Conjunto linealmente independiente",
@@ -97,10 +125,6 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
     },
     {
-      "basename": "Serie",
-      "path": "Análisis Matemático I/Serie.md"
-    },
-    {
       "basename": "Combinación lineal trivial",
       "path": "Álgebra y Geometría Analítica/Combinación lineal trivial.md"
     },
@@ -157,10 +181,6 @@
       "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
     },
     {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
       "basename": "Estructura de casos",
       "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Sistema de comunicación",
       "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "20240510 - Sueldos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Sueldos.md"
-    },
-    {
-      "basename": "Subsistema",
-      "path": "Sistemas y Procesos de Negocios/Subsistema.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Información directiva",
-      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
     }
   ],
   "omittedPaths": [],
