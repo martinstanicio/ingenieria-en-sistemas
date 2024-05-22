@@ -1,6 +1,6 @@
 ---
 created: 2024-05-07 22:33:21
-modified: 2024-05-14 21:14:27
+modified: 2024-05-21 21:23:26
 title: Ciclo mientras
 ---
 
@@ -14,6 +14,19 @@ Para evitar que se vuelva un ciclo infinito, podemos utilizar diferentes estrate
 - Controlar con una opción a continuar
 - Controlar con valor centinela
 - Controlar con una [[Bandera]]
+
+## Pseudocódigo
+
+```
+c = 0
+
+mientras c < 4 entonces
+    c = c + 1
+    mostrar("El ciclo se ejecutó {c} veces")
+fin_mientras
+```
+
+## Diagrama de flujo
 
 ```mermaid
 flowchart TB

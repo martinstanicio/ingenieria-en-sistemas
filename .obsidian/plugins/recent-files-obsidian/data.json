@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+      "basename": "20240521 - Club",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
     },
     {
       "basename": "Ciclo mientras",
       "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "20240517 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
     },
     {
       "basename": "Espacio generado",
@@ -121,10 +129,6 @@
       "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
     },
     {
-      "basename": "20240517 - Producciones",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
-    },
-    {
       "basename": "Combinación lineal trivial",
       "path": "Álgebra y Geometría Analítica/Combinación lineal trivial.md"
     },
@@ -191,14 +195,6 @@
     {
       "basename": "Entidad",
       "path": "Sistemas y Procesos de Negocios/Entidad.md"
-    },
-    {
-      "basename": "Sistema informático",
-      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
-    },
-    {
-      "basename": "Sistema de comunicación",
-      "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
     }
   ],
   "omittedPaths": [],
