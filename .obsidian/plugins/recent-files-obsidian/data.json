@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Infinitos",
+      "path": "Análisis Matemático I/Infinitos.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
+    },
+    {
       "basename": "Comportamiento final",
       "path": "Análisis Matemático I/Comportamiento final.md"
     },
     {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
     },
     {
       "basename": "Continuidad",
@@ -191,14 +199,6 @@
     {
       "basename": "Entradas",
       "path": "Sistemas y Procesos de Negocios/Entradas.md"
-    },
-    {
-      "basename": "Suprasistema",
-      "path": "Sistemas y Procesos de Negocios/Suprasistema.md"
-    },
-    {
-      "basename": "Macro ambiente",
-      "path": "Sistemas y Procesos de Negocios/Macro ambiente.md"
     }
   ],
   "omittedPaths": [],
