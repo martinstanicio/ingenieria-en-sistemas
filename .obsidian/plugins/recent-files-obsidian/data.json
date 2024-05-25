@@ -1,8 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "20240521 - Club",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
+      "basename": "Flags",
+      "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
       "basename": "Ciclo mientras",
@@ -11,6 +11,10 @@
     {
       "basename": "Ciclo repetir-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "20240521 - Club",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
     },
     {
       "basename": "20240517 - Producciones",
@@ -151,10 +155,6 @@
     {
       "basename": "Regla de inferencia",
       "path": "Lógica y Estructuras Discretas/Regla de inferencia.md"
-    },
-    {
-      "basename": "Flags",
-      "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
       "basename": "ALU",
