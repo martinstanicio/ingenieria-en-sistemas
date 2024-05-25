@@ -195,10 +195,6 @@
     {
       "basename": "Proceso de caja blanca",
       "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
-    },
-    {
-      "basename": "Valor centinela",
-      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
     }
   ],
   "omittedPaths": [],

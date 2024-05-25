@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 14:45:10
-modified: 2024-05-25 15:36:38
+modified: 2024-05-25 16:24:53
 title: Infinitos
 ---
 
@@ -11,14 +11,14 @@ Cuando tenemos $\lim\limits_{x \to \alpha} f(x) = \infty$, podemos decir que $y 
 > [!info] $x \rightarrow \alpha$
 > Cuando tenemos $x \rightarrow \alpha$, equivale a decir $x \rightarrow c \in \mathbb{R}$, $x \rightarrow +\infty$ o $x \rightarrow -\infty$.
 
-Si sabemos que $y = f(x)$ es un infinito para $x \rightarrow \alpha$, entonces $y = k \cdot f(x), k \neq 0$ es un infinito para $x \rightarrow \alpha$.f
+Si sabemos que $y = f(x)$ es un infinito para $x \rightarrow \alpha$, entonces $y = k \cdot f(x), k \neq 0$ es un infinito para $x \rightarrow \alpha$.
 
 ## Orden de los infinitos
 
-La *rapidez* con la que crece cada infinito a medida que $x \rightarrow \alpha$.
+La *rapidez* con la que crece cada infinito a medida que calculamos su [[Límite]] con $x$ tendiendo a $\alpha$.
 
 $$
-ln(x) \ll x^a \ll b^x \ll x
+ln(x) \ll \sqrt{x} \ll ax \ll a^x \ll x! \ll x^x
 $$
 
 > [!info]
