@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 16:25:55
-modified: 2024-05-25 17:16:54
+modified: 2024-05-25 17:36:31
 title: Infinitésimos
 ---
 
@@ -16,8 +16,11 @@ Cuando tenemos $\lim\limits_{x \to \alpha} f(x) = 0$, podemos decir que $y = f(x
 La *rapidez* con la que cada infinitésimo se aproxima a cero a medida que calculamos su [[Límite]] con $x$ tendiendo a $\alpha$.
 
 $$
-\ln^m (x) \ll x^p \ll a^x \ll x! \ll x^{kx}, (m > 0 \wedge p > 0 \wedge a > 1 \wedge k > 0)
+\ln^m (x) \ll x^p \ll a^\frac{1}{x} \ll x^\frac{1}{kx}, (m < 0 \wedge p > 0 \wedge 0 < a < 1 \wedge k > 0)
 $$
+
+> [!info]
+> Al multiplicar un infinitésimo por una constante **no nula**, se obtiene un infinitésimo de mismo orden.
 
 ### Infinitésimo de mayor orden: $f(x) \gg g(x)$
 
