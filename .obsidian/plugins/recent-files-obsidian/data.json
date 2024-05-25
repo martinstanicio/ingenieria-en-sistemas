@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Asíntota vertical",
-      "path": "Análisis Matemático I/Asíntota vertical.md"
+      "basename": "Comportamiento final",
+      "path": "Análisis Matemático I/Comportamiento final.md"
+    },
+    {
+      "basename": "Asíntota no vertical",
+      "path": "Análisis Matemático I/Asíntota no vertical.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
     },
     {
       "basename": "Continuidad",
       "path": "Análisis Matemático I/Continuidad.md"
     },
     {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
+      "basename": "Asíntota vertical",
+      "path": "Análisis Matemático I/Asíntota vertical.md"
     },
     {
       "basename": "Flags",
@@ -191,14 +199,6 @@
     {
       "basename": "Macro ambiente",
       "path": "Sistemas y Procesos de Negocios/Macro ambiente.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
-    },
-    {
-      "basename": "Estructura de casos",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
     }
   ],
   "omittedPaths": [],
