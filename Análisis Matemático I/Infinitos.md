@@ -18,7 +18,7 @@ Si sabemos que $y = f(x)$ es un infinito para $x \rightarrow \alpha$, entonces $
 La *rapidez* con la que crece cada infinito a medida que calculamos su [[Límite]] con $x$ tendiendo a $\alpha$.
 
 $$
-ln(x) \ll \sqrt{x} \ll ax \ll a^x \ll x! \ll x^x
+\ln^m (x) \ll x^p \ll a^x \ll x! \ll x^{kx}, (m > 0 \wedge p > 0 \wedge a > 1 \wedge k > 0)
 $$
 
 > [!info]

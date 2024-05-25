@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 16:25:55
-modified: 2024-05-25 16:52:22
+modified: 2024-05-25 17:16:54
 title: Infinitésimos
 ---
 
@@ -16,7 +16,7 @@ Cuando tenemos $\lim\limits_{x \to \alpha} f(x) = 0$, podemos decir que $y = f(x
 La *rapidez* con la que cada infinitésimo se aproxima a cero a medida que calculamos su [[Límite]] con $x$ tendiendo a $\alpha$.
 
 $$
-ln(x) \ll \sqrt{x} \ll ax \ll a^x \ll x! \ll x^x
+\ln^m (x) \ll x^p \ll a^x \ll x! \ll x^{kx}, (m > 0 \wedge p > 0 \wedge a > 1 \wedge k > 0)
 $$
 
 ### Infinitésimo de mayor orden: $f(x) \gg g(x)$
@@ -58,6 +58,18 @@ $$
 
 Existen una serie de [[Infinitésimos#Infinitésimos equivalentes $f(x) approx g(x)$|infinitésimos equivalentes]] notables.
 
-- $ln(x + 1)$ y $x$ para $x \rightarrow 0$
-- $e^x - 1$ y $x$ para $x \rightarrow 0$
-- $\sin x$ y $x$ para $x \rightarrow 0$
+Con $x \rightarrow 0$:
+
+- $e^x - 1 \approx x$
+- $a^x - 1 \approx x \cdot \ln a, a > 0$
+- $\sin x \approx x$
+- $\tan x \approx x$
+- $1 - \cos x \approx \frac{x^2}{2}$
+- $\arcsin x \approx x$
+- $\arctan x \approx x$
+- $\ln(x + 1) \approx x$
+
+Con $x \rightarrow 1$:
+
+- $\ln(x) \approx x - 1$
+- $x^a - 1 \approx a(x - 1), a \neq 0$
