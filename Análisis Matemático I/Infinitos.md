@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 14:45:10
-modified: 2024-05-25 15:25:03
+modified: 2024-05-25 15:36:38
 title: Infinitos
 ---
 
@@ -11,9 +11,18 @@ Cuando tenemos $\lim\limits_{x \to \alpha} f(x) = \infty$, podemos decir que $y 
 > [!info] $x \rightarrow \alpha$
 > Cuando tenemos $x \rightarrow \alpha$, equivale a decir $x \rightarrow c \in \mathbb{R}$, $x \rightarrow +\infty$ o $x \rightarrow -\infty$.
 
-Si sabemos que $y = f(x)$ es un infinito para $x \rightarrow \alpha$, entonces $y = k \cdot f(x), k \neq 0$ es un infinito para $x \rightarrow \alpha$.
+Si sabemos que $y = f(x)$ es un infinito para $x \rightarrow \alpha$, entonces $y = k \cdot f(x), k \neq 0$ es un infinito para $x \rightarrow \alpha$.f
 
 ## Orden de los infinitos
+
+La *rapidez* con la que crece cada infinito a medida que $x \rightarrow \alpha$.
+
+$$
+ln(x) \ll x^a \ll b^x \ll x
+$$
+
+> [!info]
+> Al multiplicar un infinito por una constante **no nula**, se obtiene un infinito de mismo orden.
 
 ### Infinito de mayor orden ($f(x) \gg g(x)$)
 
@@ -41,5 +50,11 @@ $$
 
 ### Infinitos equivalentes ($f(x) \approx g(x)$)
 
-Decimos que dos infinitos son ==similares== cuando ==son del mismo orden==, es decir, crecen de forma muy similar.
-- Si sabemos que $f(x) \approx g(x)$: $\lim\limits_{x \rightarrow \alpha} \frac{f(x)}{g(x)} = L \in \mathbb{R}, L \neq 0$
+Decimos que dos infinitos son ==equivalentes== cuando ==crecen con exactamente la misma rapidez==.
+
+$$
+\lim\limits_{x \rightarrow \alpha} \frac{f(x)}{g(x)} = L = 1
+$$
+
+> [!info]
+> Todo factor o divisor de una expresión se puede **sustituir** por un infinito **equivalente** sin que esto altere el límite de la expresión.

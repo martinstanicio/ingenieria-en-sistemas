@@ -5,6 +5,78 @@
       "path": "Análisis Matemático I/Infinitos.md"
     },
     {
+      "basename": "Salidas",
+      "path": "Sistemas y Procesos de Negocios/Salidas.md"
+    },
+    {
+      "basename": "Uptime",
+      "path": "Sistemas y Procesos de Negocios/Uptime.md"
+    },
+    {
+      "basename": "Trazabilidad",
+      "path": "Sistemas y Procesos de Negocios/Trazabilidad.md"
+    },
+    {
+      "basename": "Transición de estado",
+      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
+    },
+    {
+      "basename": "Tipos de sistemas",
+      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
+    },
+    {
+      "basename": "Objetivo",
+      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
+    },
+    {
+      "basename": "Niklas Luhmann",
+      "path": "Sistemas y Procesos de Negocios/Niklas Luhmann.md"
+    },
+    {
+      "basename": "Ludwig von Bertalanffy",
+      "path": "Sistemas y Procesos de Negocios/Ludwig von Bertalanffy.md"
+    },
+    {
+      "basename": "Teoría General de Sistemas (TGS)",
+      "path": "Sistemas y Procesos de Negocios/Teoría General de Sistemas (TGS).md"
+    },
+    {
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
+      "basename": "Sinergia",
+      "path": "Sistemas y Procesos de Negocios/Sinergia.md"
+    },
+    {
+      "basename": "Enfoque de sistemas",
+      "path": "Sistemas y Procesos de Negocios/Enfoque de sistemas.md"
+    },
+    {
+      "basename": "Equifinalidad",
+      "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
+    },
+    {
+      "basename": "Permeabilidad",
+      "path": "Sistemas y Procesos de Negocios/Permeabilidad.md"
+    },
+    {
+      "basename": "Límites",
+      "path": "Sistemas y Procesos de Negocios/Límites.md"
+    },
+    {
+      "basename": "Ambiente",
+      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
+    },
+    {
+      "basename": "Alcance",
+      "path": "Sistemas y Procesos de Negocios/Alcance.md"
+    },
+    {
+      "basename": "Propósito",
+      "path": "Sistemas y Procesos de Negocios/Propósito.md"
+    },
+    {
       "basename": "Límite",
       "path": "Análisis Matemático I/Límite.md"
     },
@@ -113,10 +185,6 @@
       "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
     },
     {
-      "basename": "Transición de estado",
-      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
-    },
-    {
       "basename": "Confiabilidad",
       "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
     },
@@ -131,74 +199,6 @@
     {
       "basename": "Valor centinela",
       "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
-    },
-    {
-      "basename": "Estructuras de control",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
-    },
-    {
-      "basename": "Estructura de repetición",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
-    },
-    {
-      "basename": "Estructura de selección",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
-    },
-    {
-      "basename": "Estructura secuencial",
-      "path": "Algoritmos y Estructuras de Datos/Estructura secuencial.md"
-    },
-    {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
-    },
-    {
-      "basename": "Principio de inducción",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción.md"
-    },
-    {
-      "basename": "Principio del buen ordenamiento",
-      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
-    },
-    {
-      "basename": "Combinación lineal trivial",
-      "path": "Álgebra y Geometría Analítica/Combinación lineal trivial.md"
-    },
-    {
-      "basename": "Combinación lineal",
-      "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
-    },
-    {
-      "basename": "Ecuaciones horarias",
-      "path": "Física I/Ecuaciones horarias.md"
-    },
-    {
-      "basename": "Mínimo",
-      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
-    },
-    {
-      "basename": "20240514 - Producción",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
-    },
-    {
-      "basename": "Regla de inferencia",
-      "path": "Lógica y Estructuras Discretas/Regla de inferencia.md"
-    },
-    {
-      "basename": "ALU",
-      "path": "Arquitectura de Computadoras/ALU.md"
-    },
-    {
-      "basename": "Arquitectura Von Neumann",
-      "path": "Arquitectura de Computadoras/Arquitectura Von Neumann.md"
-    },
-    {
-      "basename": "Autenticidad",
-      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
-    },
-    {
-      "basename": "Entradas",
-      "path": "Sistemas y Procesos de Negocios/Entradas.md"
     }
   ],
   "omittedPaths": [],
