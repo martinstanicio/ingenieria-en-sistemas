@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Continuidad",
+      "path": "Análisis Matemático I/Continuidad.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
       "basename": "Flags",
       "path": "Arquitectura de Computadoras/Flags.md"
     },
@@ -187,14 +195,6 @@
     {
       "basename": "Estructura de casos",
       "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
-    },
-    {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
-      "basename": "Entidad",
-      "path": "Sistemas y Procesos de Negocios/Entidad.md"
     }
   ],
   "omittedPaths": [],

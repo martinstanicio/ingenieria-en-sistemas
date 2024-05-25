@@ -1,6 +1,6 @@
 ---
 created: 2024-04-23 14:09:56
-modified: 2024-05-08 01:33:30
+modified: 2024-05-25 12:10:54
 title: Límite
 ---
 
@@ -43,4 +43,7 @@ Son aquellos que se aproximan a un valor indefinido:
 - Cero sobre cero: $\frac{0}{0}$
 - Infinito sobre infinito: $\frac{\infty}{\infty}$
 
-Cuando encontramos un límite indeterminado, debemos **salvarlo**, es decir, ==escribirlo de una forma equivalente para poder simplificar== y que pase a ser un límite determinado. Para esto, debemos factorizar.
+Cuando encontramos un límite indeterminado, debemos **salvarlo**.
+
+> [!info] Salvar un límite
+> Escribir la expresión de una **forma equivalente** para poder simplificar y que pase a ser un [[Límite#Límites determinados|Límite determinado]]
