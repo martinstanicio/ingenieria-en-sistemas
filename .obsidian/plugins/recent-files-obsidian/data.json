@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Infinitésimos",
+      "path": "Análisis Matemático I/Infinitésimos.md"
+    },
+    {
       "basename": "Infinitos",
       "path": "Análisis Matemático I/Infinitos.md"
+    },
+    {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
       "basename": "Salidas",
@@ -79,10 +87,6 @@
     {
       "basename": "Límite",
       "path": "Análisis Matemático I/Límite.md"
-    },
-    {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
       "basename": "Comportamiento final",
