@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 14:03:04
-modified: 2024-05-25 14:10:06
+modified: 2024-05-25 18:33:54
 title: Asíntota no vertical
 ---
 
@@ -18,3 +18,22 @@ $$
 
 > [!info]
 > Si se cumple que $\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to -\infty} f(x) = b$, podemos expresarlo como $\lim\limits_{x \to \infty} f(x) = b$.
+
+## Pendiente
+
+Para calcular la pendiente $m$ de la asíntota no vertical, debemos realizar el siguiente cálculo.
+
+$$
+m = \lim\limits_{x \rightarrow \infty} \frac{f(x)}{x}
+$$
+
+> [!info] Asíntota horizontal
+> Si la pendiente es $m = 0$, estamos ante una **asíntota horizontal**.
+
+## Ordenada al origen
+
+Para calcular la ordenada al origen $b$ de la asíntota no vertical, debemos realizar el siguiente cálculo.
+
+$$
+b = \lim\limits_{x \rightarrow \infty} (f(x) - mx)
+$$
