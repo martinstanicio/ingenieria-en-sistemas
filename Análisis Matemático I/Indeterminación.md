@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 14:35:53
-modified: 2024-05-25 14:38:49
+modified: 2024-05-26 13:21:58
 title: Indeterminación
 ---
 
@@ -20,3 +20,5 @@ En las matemáticas existen 7 indeterminaciones, y son las siguientes:
 - $\infty^0$
 
 Cuando nos encontremos alguno de estos casos, deberemos ==salvar la indeterminación==, es decir, escribirlo la expresión de una ==forma equivalente== que nos permita, por ejemplo, simplificar, para poder llegar a una expresión cuyo resultado sea determinado.
+
+![[indeterminaciones.jpg]]
