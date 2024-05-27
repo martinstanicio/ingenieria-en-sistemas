@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Análisis Matemático I/README.md"
+    },
+    {
+      "basename": "Sustantivos compuestos",
+      "path": "Inglés I/Sustantivos compuestos.md"
+    },
+    {
+      "basename": "Adjetivo",
+      "path": "Inglés I/Adjetivo.md"
+    },
+    {
+      "basename": "Frase o grupo nominal",
+      "path": "Inglés I/Frase o grupo nominal.md"
+    },
+    {
+      "basename": "Adjetivos o pronombres demostrativos",
+      "path": "Inglés I/Adjetivos o pronombres demostrativos.md"
+    },
+    {
+      "basename": "Artículo",
+      "path": "Inglés I/Artículo.md"
+    },
+    {
       "basename": "Indeterminación",
       "path": "Análisis Matemático I/Indeterminación.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "Conjunto linealmente independiente",
       "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
-    },
-    {
-      "basename": "Conjunto linealmente dependiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
-    },
-    {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
-    },
-    {
-      "basename": "Conjunto generador",
-      "path": "Álgebra y Geometría Analítica/Conjunto generador.md"
-    },
-    {
-      "basename": "Sistema de información",
-      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
-    },
-    {
-      "basename": "Confiabilidad",
-      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
-    },
-    {
-      "basename": "20240510 - Deportistas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240510 - Deportistas.md"
-    },
-    {
-      "basename": "Proceso de caja blanca",
-      "path": "Sistemas y Procesos de Negocios/Proceso de caja blanca.md"
     }
   ],
   "omittedPaths": [],
