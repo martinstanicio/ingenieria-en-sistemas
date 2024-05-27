@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Dimensión",
+      "path": "Álgebra y Geometría Analítica/Dimensión.md"
+    },
+    {
+      "basename": "Espacio generado",
+      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
+    },
+    {
+      "basename": "Propiedades de determinantes",
+      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -153,14 +169,6 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
     },
     {
-      "basename": "Espacio generado",
-      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
-    },
-    {
-      "basename": "Dimensión",
-      "path": "Álgebra y Geometría Analítica/Dimensión.md"
-    },
-    {
       "basename": "Sistema compatible (SC)",
       "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
     },
@@ -185,20 +193,12 @@
       "path": "Análisis Matemático I/Serie.md"
     },
     {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
       "basename": "Sistema de ecuaciones lineales (SEL)",
       "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
     },
     {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
-    },
-    {
-      "basename": "Conjunto linealmente independiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
     }
   ],
   "omittedPaths": [],
