@@ -1,6 +1,6 @@
 ---
 created: 2024-04-21 23:51:31
-modified: 2024-05-27 00:44:40
+modified: 2024-05-27 00:51:34
 title: Ingeniería en Sistemas
 ---
 
@@ -55,5 +55,4 @@ title: Ingeniería en Sistemas
 33. [Sistemas de Gestión](Sistemas%20de%20Gestión/README.md)
 34. [Gestión Gerencial](Gestión%20Gerencial/README.md)
 35. [Seguridad en los Sistemas de Información](Seguridad%20en%20los%20Sistemas%20de%20Información/README.md)
-
 36. [Proyecto Final](Proyecto%20Final/README.md)
