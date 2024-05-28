@@ -1,6 +1,6 @@
 ---
 created: 2024-03-26 19:31:51
-modified: 2024-05-08 01:34:00
+modified: 2024-05-28 15:16:51
 title: Atributos
 ---
 
@@ -8,7 +8,7 @@ title: Atributos
 
 Cada [[Elemento]] de un [[Sistemas|sistema]] tiene sus propios atributos: ==características estructurales o funcionales== que lo caracterizan.
 
-Pueden ser ==cuantitativos== o ==cualitativos==. Los cuantitativos suelen ser más difíciles de definir y comparar que los cualitativos.
+Pueden ser ==cuantitativos== o ==cualitativos==. Los cualitativos suelen ser más difíciles de definir y comparar que los cuantitativos.
 
 ## Atributos definidores
 
