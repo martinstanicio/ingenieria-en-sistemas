@@ -5,6 +5,18 @@
       "path": "Álgebra y Geometría Analítica/Dimensión.md"
     },
     {
+      "basename": "20240527 - Traducción",
+      "path": "Inglés I/Actividades/20240527 - Traducción.md"
+    },
+    {
+      "basename": "Adjetivo",
+      "path": "Inglés I/Adjetivo.md"
+    },
+    {
+      "basename": "Adjetivos o pronombres demostrativos",
+      "path": "Inglés I/Adjetivos o pronombres demostrativos.md"
+    },
+    {
       "basename": "Espacio generado",
       "path": "Álgebra y Geometría Analítica/Espacio generado.md"
     },
@@ -29,16 +41,8 @@
       "path": "Inglés I/Sustantivos compuestos.md"
     },
     {
-      "basename": "Adjetivo",
-      "path": "Inglés I/Adjetivo.md"
-    },
-    {
       "basename": "Frase o grupo nominal",
       "path": "Inglés I/Frase o grupo nominal.md"
-    },
-    {
-      "basename": "Adjetivos o pronombres demostrativos",
-      "path": "Inglés I/Adjetivos o pronombres demostrativos.md"
     },
     {
       "basename": "Artículo",
@@ -195,10 +199,6 @@
     {
       "basename": "Sistema de ecuaciones lineales (SEL)",
       "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales (SEL).md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
     }
   ],
   "omittedPaths": [],
