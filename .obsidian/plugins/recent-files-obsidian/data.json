@@ -5,6 +5,14 @@
       "path": "Análisis Matemático I/Asíntota no vertical.md"
     },
     {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
+    },
+    {
+      "basename": "Salidas",
+      "path": "Sistemas y Procesos de Negocios/Salidas.md"
+    },
+    {
       "basename": "Recursos",
       "path": "Sistemas y Procesos de Negocios/Recursos.md"
     },
@@ -23,10 +31,6 @@
     {
       "basename": "20240527 - Traducción",
       "path": "Inglés I/Actividades/20240527 - Traducción.md"
-    },
-    {
-      "basename": "Salidas",
-      "path": "Sistemas y Procesos de Negocios/Salidas.md"
     },
     {
       "basename": "Entradas",
@@ -143,10 +147,6 @@
     {
       "basename": "Artículo",
       "path": "Inglés I/Artículo.md"
-    },
-    {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
       "basename": "Asíntota vertical",
