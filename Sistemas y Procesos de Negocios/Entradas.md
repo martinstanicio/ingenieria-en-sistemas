@@ -1,6 +1,6 @@
 ---
 created: 2024-04-09 19:13:59
-modified: 2024-05-08 01:33:31
+modified: 2024-05-28 15:59:45
 title: Entradas
 ---
 
@@ -12,4 +12,4 @@ Existen tres tipos de entradas:
 
 - **al azar o aleatorias:** no sé cuál será la próxima tarea que se le pedirá al sistema (siempre dentro de un [[Conjunto]] finito de posibilidades).
 - **en serie:** cuando una entrada debe pasar por una cierta actividad antes de pasar por otra.
-- **de retroalimentación:** cuando necesito [[Información]] de la salida de otra actividad para tomar decisiones en el sistema.
+- **de retroalimentación:** cuando necesito [[Información]] de la [[Salidas|Salida]] de otra actividad para tomar decisiones en el sistema.

@@ -1,6 +1,62 @@
 {
   "recentFiles": [
     {
+      "basename": "Asíntota no vertical",
+      "path": "Análisis Matemático I/Asíntota no vertical.md"
+    },
+    {
+      "basename": "Recursos",
+      "path": "Sistemas y Procesos de Negocios/Recursos.md"
+    },
+    {
+      "basename": "20240528 - Aleatorios",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
+    },
+    {
+      "basename": "20240517 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
+    },
+    {
+      "basename": "Entidad",
+      "path": "Sistemas y Procesos de Negocios/Entidad.md"
+    },
+    {
+      "basename": "20240527 - Traducción",
+      "path": "Inglés I/Actividades/20240527 - Traducción.md"
+    },
+    {
+      "basename": "Salidas",
+      "path": "Sistemas y Procesos de Negocios/Salidas.md"
+    },
+    {
+      "basename": "Entradas",
+      "path": "Sistemas y Procesos de Negocios/Entradas.md"
+    },
+    {
+      "basename": "Proceso de caja negra",
+      "path": "Sistemas y Procesos de Negocios/Proceso de caja negra.md"
+    },
+    {
+      "basename": "Propiedades emergentes",
+      "path": "Sistemas y Procesos de Negocios/Propiedades emergentes.md"
+    },
+    {
+      "basename": "Estructura",
+      "path": "Sistemas y Procesos de Negocios/Estructura.md"
+    },
+    {
+      "basename": "Modelo",
+      "path": "Sistemas y Procesos de Negocios/Modelo.md"
+    },
+    {
+      "basename": "Rango",
+      "path": "Sistemas y Procesos de Negocios/Rango.md"
+    },
+    {
+      "basename": "Nivel",
+      "path": "Sistemas y Procesos de Negocios/Nivel.md"
+    },
+    {
       "basename": "Jerarquía",
       "path": "Sistemas y Procesos de Negocios/Jerarquía.md"
     },
@@ -49,10 +105,6 @@
       "path": "Álgebra y Geometría Analítica/Dimensión.md"
     },
     {
-      "basename": "20240527 - Traducción",
-      "path": "Inglés I/Actividades/20240527 - Traducción.md"
-    },
-    {
       "basename": "Adjetivo",
       "path": "Inglés I/Adjetivo.md"
     },
@@ -97,10 +149,6 @@
       "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
       "basename": "Asíntota vertical",
       "path": "Análisis Matemático I/Asíntota vertical.md"
     },
@@ -115,10 +163,6 @@
     {
       "basename": "Infinitos",
       "path": "Análisis Matemático I/Infinitos.md"
-    },
-    {
-      "basename": "Salidas",
-      "path": "Sistemas y Procesos de Negocios/Salidas.md"
     },
     {
       "basename": "Uptime",
@@ -151,54 +195,6 @@
     {
       "basename": "Sinergia",
       "path": "Sistemas y Procesos de Negocios/Sinergia.md"
-    },
-    {
-      "basename": "Enfoque de sistemas",
-      "path": "Sistemas y Procesos de Negocios/Enfoque de sistemas.md"
-    },
-    {
-      "basename": "Límites",
-      "path": "Sistemas y Procesos de Negocios/Límites.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
-    },
-    {
-      "basename": "Comportamiento final",
-      "path": "Análisis Matemático I/Comportamiento final.md"
-    },
-    {
-      "basename": "Flags",
-      "path": "Arquitectura de Computadoras/Flags.md"
-    },
-    {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
-    },
-    {
-      "basename": "20240521 - Club",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
-    },
-    {
-      "basename": "20240517 - Producciones",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
-    },
-    {
-      "basename": "Sistema compatible (SC)",
-      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
-    },
-    {
-      "basename": "Lenguaje formal",
-      "path": "Ingeniería y Sociedad/Lenguaje formal.md"
-    },
-    {
-      "basename": "Entes ideales",
-      "path": "Ingeniería y Sociedad/Entes ideales.md"
     }
   ],
   "omittedPaths": [],
