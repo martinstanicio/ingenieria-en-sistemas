@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "Operador ternario",
+      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
+    },
+    {
+      "basename": "Ley de Hooke",
+      "path": "Física I/Ley de Hooke.md"
+    },
+    {
+      "basename": "Recursividad",
+      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
+    },
+    {
+      "basename": "Definición recursiva",
+      "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
+    },
+    {
+      "basename": "Energía",
+      "path": "Física I/Energía.md"
+    },
+    {
+      "basename": "Energía Potencial Elástica",
+      "path": "Física I/Energía Potencial Elástica.md"
+    },
+    {
+      "basename": "Trabajo",
+      "path": "Física I/Trabajo.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Estructura de repetición",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
+    },
+    {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
     },
@@ -63,10 +99,6 @@
     {
       "basename": "Jerarquía",
       "path": "Sistemas y Procesos de Negocios/Jerarquía.md"
-    },
-    {
-      "basename": "Recursividad",
-      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
     },
     {
       "basename": "Equifinalidad",
@@ -163,38 +195,6 @@
     {
       "basename": "Infinitos",
       "path": "Análisis Matemático I/Infinitos.md"
-    },
-    {
-      "basename": "Uptime",
-      "path": "Sistemas y Procesos de Negocios/Uptime.md"
-    },
-    {
-      "basename": "Trazabilidad",
-      "path": "Sistemas y Procesos de Negocios/Trazabilidad.md"
-    },
-    {
-      "basename": "Transición de estado",
-      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
-    },
-    {
-      "basename": "Objetivo",
-      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
-    },
-    {
-      "basename": "Niklas Luhmann",
-      "path": "Sistemas y Procesos de Negocios/Niklas Luhmann.md"
-    },
-    {
-      "basename": "Ludwig von Bertalanffy",
-      "path": "Sistemas y Procesos de Negocios/Ludwig von Bertalanffy.md"
-    },
-    {
-      "basename": "Teoría General de Sistemas (TGS)",
-      "path": "Sistemas y Procesos de Negocios/Teoría General de Sistemas (TGS).md"
-    },
-    {
-      "basename": "Sinergia",
-      "path": "Sistemas y Procesos de Negocios/Sinergia.md"
     }
   ],
   "omittedPaths": [],
