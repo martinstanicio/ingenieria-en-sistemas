@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "20240528 - Aleatorios",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
+    },
+    {
+      "basename": "20240521 - Club",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
+    },
+    {
+      "basename": "20240517 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
+    },
+    {
+      "basename": "20240514 - Producción",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
+    },
+    {
       "basename": "Operador ternario",
       "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
     },
@@ -51,14 +67,6 @@
     {
       "basename": "Recursos",
       "path": "Sistemas y Procesos de Negocios/Recursos.md"
-    },
-    {
-      "basename": "20240528 - Aleatorios",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
-    },
-    {
-      "basename": "20240517 - Producciones",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
     },
     {
       "basename": "Entidad",
@@ -191,10 +199,6 @@
     {
       "basename": "Infinitésimos",
       "path": "Análisis Matemático I/Infinitésimos.md"
-    },
-    {
-      "basename": "Infinitos",
-      "path": "Análisis Matemático I/Infinitos.md"
     }
   ],
   "omittedPaths": [],
