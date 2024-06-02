@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+    },
+    {
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
+    },
+    {
+      "basename": "Variables",
+      "path": "Algoritmos y Estructuras de Datos/Variables.md"
+    },
+    {
+      "basename": "Valor centinela",
+      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
+    },
+    {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
+    },
+    {
       "basename": "20240528 - Aleatorios",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
     },
@@ -55,10 +75,6 @@
     {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
       "basename": "Salidas",
@@ -183,22 +199,6 @@
     {
       "basename": "Frase o grupo nominal",
       "path": "Inglés I/Frase o grupo nominal.md"
-    },
-    {
-      "basename": "Artículo",
-      "path": "Inglés I/Artículo.md"
-    },
-    {
-      "basename": "Asíntota vertical",
-      "path": "Análisis Matemático I/Asíntota vertical.md"
-    },
-    {
-      "basename": "Continuidad",
-      "path": "Análisis Matemático I/Continuidad.md"
-    },
-    {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
     }
   ],
   "omittedPaths": [],
