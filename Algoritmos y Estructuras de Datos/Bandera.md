@@ -2,7 +2,7 @@
 aliases:
   - Señal
 created: 2024-05-07 21:08:58
-modified: 2024-05-08 11:55:13
+modified: 2024-06-02 20:11:19
 title: Bandera
 ---
 
@@ -20,7 +20,7 @@ flowchart TB
     
     C1{C1}
     
-	bandera[["bandera = 1"]]
+	bandera["bandera = 1"]
 
     C2{"bandera = 1"}
     C2si{{"Se ejecutó la rama del 'sí' de la birfurcación"}}

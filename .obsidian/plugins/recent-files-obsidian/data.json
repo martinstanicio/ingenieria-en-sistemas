@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "Bandera",
+      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
+    },
+    {
       "basename": "Acumulador",
       "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
     },
@@ -183,22 +191,6 @@
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Análisis Matemático I/README.md"
-    },
-    {
-      "basename": "Sustantivos compuestos",
-      "path": "Inglés I/Sustantivos compuestos.md"
-    },
-    {
-      "basename": "Frase o grupo nominal",
-      "path": "Inglés I/Frase o grupo nominal.md"
     }
   ],
   "omittedPaths": [],
