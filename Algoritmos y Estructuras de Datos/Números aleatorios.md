@@ -1,6 +1,6 @@
 ---
 created: 2024-06-04 00:19:54
-modified: 2024-06-04 00:29:57
+modified: 2024-06-04 12:33:16
 title: Números aleatorios
 ---
 
@@ -41,11 +41,11 @@ Para generar números enteros, utilizamos la [[Funciones|Función]] `randint`.
 
 Esta función requiere dos parámetros, que nos permiten especificar el ==intervalo cerrado== del cual queremos obtener un número aleatorio:
 
-1. Valor mínimo (cerrado, incluido en el intervalo)
-2. Valor máximo (abierto, **no** incluido en el intervalo)
+1. Valor mínimo
+2. Valor máximo
 
 ```python
 import random
 
-x = random.randint(10, 100) # [10, 100]
+z = random.randint(10, 100) # [10, 100]
 ```
