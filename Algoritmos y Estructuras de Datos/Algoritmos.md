@@ -1,6 +1,6 @@
 ---
 created: 2024-03-20 15:51:48
-modified: 2024-05-08 01:33:31
+modified: 2024-06-04 00:31:44
 title: Algoritmos
 ---
 
@@ -8,7 +8,8 @@ title: Algoritmos
 
 Es un conjunto **preciso** (orden), **definido** (si se ejecuta múltiples veces debemos llegar a la solución) y finito de operaciones simples a través del cual podemos hallar la solución a un problema.
 
-Podemos crear dos algoritmos con el mismo objetivo, pero que difieran en su rapidez o eficiencia, y aún así llegar al mismo resultado.
+> [!info]
+> Podemos crear dos algoritmos con el mismo [[Objetivo]], pero que difieran en su rapidez o eficiencia, y aún así llegar al mismo [[Salidas|Resultado]].
 
 Para diseñar un algoritmo, podemos utilizar [[Pseudocódigo]] y/o un [[Diagrama de flujo]].
 

@@ -8,9 +8,9 @@ title: Bifurcaciones
 
 Es una condición en nuestro programa. Dependiendo del ==valor de verdad== de la condición evaluada, el código ejecutado será uno u otro. Está formada por 3 partes básicas:
 
-1. Variable
+1. [[Variables|Variable]]
 2. Operador de relación u [[Operadores lógicos|operador lógico]]
-3. Constante o variable
+3. Constante o [[Variables|Variable]]
 
 Por ejemplo:
 

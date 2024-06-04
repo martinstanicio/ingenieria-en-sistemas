@@ -1,32 +1,164 @@
 {
   "recentFiles": [
     {
+      "basename": "Variables",
+      "path": "Algoritmos y Estructuras de Datos/Variables.md"
+    },
+    {
+      "basename": "Bandera",
+      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
+    },
+    {
+      "basename": "Valor centinela",
+      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
+    },
+    {
+      "basename": "Sentencia fantasma",
+      "path": "Algoritmos y Estructuras de Datos/Sentencia fantasma.md"
+    },
+    {
+      "basename": "README",
+      "path": "Algoritmos y Estructuras de Datos/README.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "Pseudocódigo",
+      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
+    },
+    {
+      "basename": "Lenguaje natural",
+      "path": "Lógica y Estructuras Discretas/Lenguaje natural.md"
+    },
+    {
+      "basename": "Programación modular",
+      "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
+    },
+    {
+      "basename": "Programa propio",
+      "path": "Algoritmos y Estructuras de Datos/Programa propio.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
+      "basename": "Operador ternario",
+      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
+    },
+    {
       "basename": "Números aleatorios",
       "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
+    },
+    {
+      "basename": "Mínimo",
+      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
     },
     {
       "basename": "Librería",
       "path": "Algoritmos y Estructuras de Datos/Librería.md"
     },
     {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+      "basename": "Lenguaje de programación",
+      "path": "Algoritmos y Estructuras de Datos/Lenguaje de programación.md"
     },
     {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+      "basename": "Lenguaje de máquina",
+      "path": "Algoritmos y Estructuras de Datos/Lenguaje de máquina.md"
     },
     {
-      "basename": "Variables",
-      "path": "Algoritmos y Estructuras de Datos/Variables.md"
+      "basename": "Lenguaje de bajo nivel o ensamblador",
+      "path": "Algoritmos y Estructuras de Datos/Lenguaje de bajo nivel o ensamblador.md"
+    },
+    {
+      "basename": "Lenguaje de alto nivel",
+      "path": "Algoritmos y Estructuras de Datos/Lenguaje de alto nivel.md"
+    },
+    {
+      "basename": "Interpretador",
+      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
+    },
+    {
+      "basename": "Funciones",
+      "path": "Algoritmos y Estructuras de Datos/Funciones.md"
+    },
+    {
+      "basename": "Estructuras de datos",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
+    },
+    {
+      "basename": "Estructuras de control",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
+    },
+    {
+      "basename": "Estructura secuencial",
+      "path": "Algoritmos y Estructuras de Datos/Estructura secuencial.md"
+    },
+    {
+      "basename": "Estructura de selección",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
+    },
+    {
+      "basename": "Estructura de casos",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
+    },
+    {
+      "basename": "Estructura de repetición",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
     },
     {
       "basename": "Ciclo repetir-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
     },
     {
-      "basename": "Sentencia fantasma",
-      "path": "Algoritmos y Estructuras de Datos/Sentencia fantasma.md"
+      "basename": "Errores",
+      "path": "Algoritmos y Estructuras de Datos/Errores.md"
+    },
+    {
+      "basename": "Error lógico",
+      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
+    },
+    {
+      "basename": "Error de sintaxis o compilación",
+      "path": "Algoritmos y Estructuras de Datos/Error de sintaxis o compilación.md"
+    },
+    {
+      "basename": "Error de ejecución",
+      "path": "Algoritmos y Estructuras de Datos/Error de ejecución.md"
+    },
+    {
+      "basename": "Diseño descendente",
+      "path": "Algoritmos y Estructuras de Datos/Diseño descendente.md"
+    },
+    {
+      "basename": "Diagrama de flujo",
+      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
+    },
+    {
+      "basename": "Compilador",
+      "path": "Algoritmos y Estructuras de Datos/Compilador.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
+    },
+    {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
     },
     {
       "basename": "20240521 - Club",
@@ -41,32 +173,12 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
     },
     {
-      "basename": "Bandera",
-      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
-    },
-    {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
-      "basename": "Algoritmos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Valor centinela",
-      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
-    },
-    {
       "basename": "Indeterminación",
       "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
       "basename": "20240528 - Aleatorios",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
-    },
-    {
-      "basename": "Operador ternario",
-      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
     },
     {
       "basename": "Ley de Hooke",
@@ -87,118 +199,6 @@
     {
       "basename": "Energía Potencial Elástica",
       "path": "Física I/Energía Potencial Elástica.md"
-    },
-    {
-      "basename": "Trabajo",
-      "path": "Física I/Trabajo.md"
-    },
-    {
-      "basename": "Estructura de repetición",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
-    },
-    {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Salidas",
-      "path": "Sistemas y Procesos de Negocios/Salidas.md"
-    },
-    {
-      "basename": "Recursos",
-      "path": "Sistemas y Procesos de Negocios/Recursos.md"
-    },
-    {
-      "basename": "Entidad",
-      "path": "Sistemas y Procesos de Negocios/Entidad.md"
-    },
-    {
-      "basename": "20240527 - Traducción",
-      "path": "Inglés I/Actividades/20240527 - Traducción.md"
-    },
-    {
-      "basename": "Entradas",
-      "path": "Sistemas y Procesos de Negocios/Entradas.md"
-    },
-    {
-      "basename": "Proceso de caja negra",
-      "path": "Sistemas y Procesos de Negocios/Proceso de caja negra.md"
-    },
-    {
-      "basename": "Propiedades emergentes",
-      "path": "Sistemas y Procesos de Negocios/Propiedades emergentes.md"
-    },
-    {
-      "basename": "Estructura",
-      "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "Modelo",
-      "path": "Sistemas y Procesos de Negocios/Modelo.md"
-    },
-    {
-      "basename": "Rango",
-      "path": "Sistemas y Procesos de Negocios/Rango.md"
-    },
-    {
-      "basename": "Nivel",
-      "path": "Sistemas y Procesos de Negocios/Nivel.md"
-    },
-    {
-      "basename": "Jerarquía",
-      "path": "Sistemas y Procesos de Negocios/Jerarquía.md"
-    },
-    {
-      "basename": "Equifinalidad",
-      "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
-    },
-    {
-      "basename": "Tipos de sistemas",
-      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "Permeabilidad",
-      "path": "Sistemas y Procesos de Negocios/Permeabilidad.md"
-    },
-    {
-      "basename": "Retroalimentación",
-      "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
-    },
-    {
-      "basename": "Ambiente",
-      "path": "Sistemas y Procesos de Negocios/Ambiente.md"
-    },
-    {
-      "basename": "Alcance",
-      "path": "Sistemas y Procesos de Negocios/Alcance.md"
-    },
-    {
-      "basename": "Propósito",
-      "path": "Sistemas y Procesos de Negocios/Propósito.md"
-    },
-    {
-      "basename": "Atributos",
-      "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "Dimensión",
-      "path": "Álgebra y Geometría Analítica/Dimensión.md"
-    },
-    {
-      "basename": "Adjetivo",
-      "path": "Inglés I/Adjetivo.md"
-    },
-    {
-      "basename": "Adjetivos o pronombres demostrativos",
-      "path": "Inglés I/Adjetivos o pronombres demostrativos.md"
-    },
-    {
-      "basename": "Espacio generado",
-      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
     }
   ],
   "omittedPaths": [],

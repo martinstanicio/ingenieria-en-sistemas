@@ -12,7 +12,7 @@ Para evitar que se vuelva un ciclo infinito, podemos utilizar diferentes estrate
 
 - Utilizar un [[Acumulador]]
 - Controlar con una opción a continuar
-- Controlar con valor centinela
+- Controlar con [[Valor centinela]]
 - Controlar con una [[Bandera]]
 
 ## Pseudocódigo

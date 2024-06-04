@@ -1,9 +1,9 @@
 ---
 created: 2024-05-14 21:06:38
-modified: 2024-05-14 21:17:07
+modified: 2024-06-04 00:46:39
 title: Valor centinela
 ---
 
 # Valor centinela
 
-Estar en el [[Estructura de repetición|Ciclo]] hasta que una [[Variables|variable]] ingresada por el usuario tenga un valor absurdo, y **no debe procesarse**.
+Una [[Variables|variable]] ingresada por el usuario, que al recibir un ==valor absurdo==, indica que un proceso (generalmente un [[Estructura de repetición|Ciclo]]) debe detenerse, y la [[Información]] ingresada en esta última iteración y ==no debe procesarse==.

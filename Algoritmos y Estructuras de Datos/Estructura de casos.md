@@ -1,12 +1,12 @@
 ---
 created: 2024-05-03 17:32:33
-modified: 2024-05-08 01:33:30
+modified: 2024-06-04 00:39:16
 title: Estructura de casos
 ---
 
 # Estructura de casos
 
-Un tipo de [[Estructura de selección]] que ejecuta un 
+Un tipo de [[Estructura de selección]] que compara una [[Variables|Variable]] con una serie de *casos*, y ejecuta las instrucciones correspondientes dependiendo del valor de la misma.
 
 Se puede representar con [[Pseudocódigo]] o [[Diagrama de flujo]]. [[Python]] implementó está estructura en la versión 3.10, pero también se puede hacer algo similar utilizando [[Bifurcaciones]] anidadas con `elif`.
 
