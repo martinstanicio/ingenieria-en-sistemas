@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Variables",
+      "path": "Algoritmos y Estructuras de Datos/Variables.md"
+    },
+    {
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "Sentencia fantasma",
+      "path": "Algoritmos y Estructuras de Datos/Sentencia fantasma.md"
+    },
+    {
       "basename": "20240521 - Club",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
     },
@@ -13,10 +33,6 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
     },
     {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
-    },
-    {
       "basename": "Bandera",
       "path": "Algoritmos y Estructuras de Datos/Bandera.md"
     },
@@ -27,10 +43,6 @@
     {
       "basename": "Algoritmos",
       "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Variables",
-      "path": "Algoritmos y Estructuras de Datos/Variables.md"
     },
     {
       "basename": "Valor centinela",
@@ -71,10 +83,6 @@
     {
       "basename": "Trabajo",
       "path": "Física I/Trabajo.md"
-    },
-    {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
     },
     {
       "basename": "Estructura de repetición",

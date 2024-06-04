@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Variable
 created: 2024-03-26 21:11:00
-modified: 2024-05-08 01:33:31
+modified: 2024-06-03 23:55:21
 title: Variables
 ---
 
