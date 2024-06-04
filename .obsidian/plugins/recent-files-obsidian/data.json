@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "Números aleatorios",
+      "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
+    },
+    {
       "basename": "Variables",
       "path": "Algoritmos y Estructuras de Datos/Variables.md"
     },
@@ -47,10 +59,6 @@
     {
       "basename": "Operador ternario",
       "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
-    },
-    {
-      "basename": "Números aleatorios",
-      "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
     },
     {
       "basename": "Mínimo",
@@ -109,10 +117,6 @@
       "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
     },
     {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
-    },
-    {
       "basename": "Errores",
       "path": "Algoritmos y Estructuras de Datos/Errores.md"
     },
@@ -143,10 +147,6 @@
     {
       "basename": "Ciclo mientras",
       "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
     },
     {
       "basename": "Bifurcaciones",
