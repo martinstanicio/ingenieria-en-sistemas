@@ -1,12 +1,92 @@
 {
   "recentFiles": [
     {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
+    },
+    {
       "basename": "Números aleatorios",
       "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
     },
     {
+      "basename": "Comportamiento final",
+      "path": "Análisis Matemático I/Comportamiento final.md"
+    },
+    {
+      "basename": "Infinitésimos",
+      "path": "Análisis Matemático I/Infinitésimos.md"
+    },
+    {
+      "basename": "Mínimo",
+      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
+    },
+    {
+      "basename": "Funciones",
+      "path": "Algoritmos y Estructuras de Datos/Funciones.md"
+    },
+    {
+      "basename": "Estructura de selección",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
+    },
+    {
+      "basename": "Error lógico",
+      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
+    },
+    {
       "basename": "Ciclo desde-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "Generaciones de hardware",
+      "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
+    },
+    {
+      "basename": "Arquitectura Von Neumann",
+      "path": "Arquitectura de Computadoras/Arquitectura Von Neumann.md"
+    },
+    {
+      "basename": "Compuerta AND",
+      "path": "Arquitectura de Computadoras/Compuerta AND.md"
+    },
+    {
+      "basename": "Álgebra de Boole",
+      "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
+    },
+    {
+      "basename": "ALU",
+      "path": "Arquitectura de Computadoras/ALU.md"
+    },
+    {
+      "basename": "Compuerta OR",
+      "path": "Arquitectura de Computadoras/Compuerta OR.md"
+    },
+    {
+      "basename": "Disyunción (∨)",
+      "path": "Lógica y Estructuras Discretas/Disyunción (∨).md"
+    },
+    {
+      "basename": "Conjunción (∧)",
+      "path": "Lógica y Estructuras Discretas/Conjunción (∧).md"
+    },
+    {
+      "basename": "Conectivos lógicos",
+      "path": "Lógica y Estructuras Discretas/Conectivos lógicos.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
+      "basename": "Estructura",
+      "path": "Sistemas y Procesos de Negocios/Estructura.md"
+    },
+    {
+      "basename": "Bandera",
+      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
     },
     {
       "basename": "Ciclo repetir-hasta",
@@ -15,10 +95,6 @@
     {
       "basename": "Variables",
       "path": "Algoritmos y Estructuras de Datos/Variables.md"
-    },
-    {
-      "basename": "Bandera",
-      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
     },
     {
       "basename": "Valor centinela",
@@ -53,16 +129,8 @@
       "path": "Algoritmos y Estructuras de Datos/Programa propio.md"
     },
     {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
       "basename": "Operador ternario",
       "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
-    },
-    {
-      "basename": "Mínimo",
-      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
     },
     {
       "basename": "Librería",
@@ -89,10 +157,6 @@
       "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
     },
     {
-      "basename": "Funciones",
-      "path": "Algoritmos y Estructuras de Datos/Funciones.md"
-    },
-    {
       "basename": "Estructuras de datos",
       "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
     },
@@ -105,10 +169,6 @@
       "path": "Algoritmos y Estructuras de Datos/Estructura secuencial.md"
     },
     {
-      "basename": "Estructura de selección",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
-    },
-    {
       "basename": "Estructura de casos",
       "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
     },
@@ -119,10 +179,6 @@
     {
       "basename": "Errores",
       "path": "Algoritmos y Estructuras de Datos/Errores.md"
-    },
-    {
-      "basename": "Error lógico",
-      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
     },
     {
       "basename": "Error de sintaxis o compilación",
@@ -143,62 +199,6 @@
     {
       "basename": "Compilador",
       "path": "Algoritmos y Estructuras de Datos/Compilador.md"
-    },
-    {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "Bifurcaciones",
-      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
-    },
-    {
-      "basename": "Algoritmos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
-      "basename": "20240521 - Club",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
-    },
-    {
-      "basename": "20240517 - Producciones",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
-    },
-    {
-      "basename": "20240514 - Producción",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240514 - Producción.md"
-    },
-    {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
-    },
-    {
-      "basename": "20240528 - Aleatorios",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
-    },
-    {
-      "basename": "Ley de Hooke",
-      "path": "Física I/Ley de Hooke.md"
-    },
-    {
-      "basename": "Recursividad",
-      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
-    },
-    {
-      "basename": "Definición recursiva",
-      "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
-    },
-    {
-      "basename": "Energía",
-      "path": "Física I/Energía.md"
-    },
-    {
-      "basename": "Energía Potencial Elástica",
-      "path": "Física I/Energía Potencial Elástica.md"
     }
   ],
   "omittedPaths": [],

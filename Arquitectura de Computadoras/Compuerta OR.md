@@ -1,6 +1,6 @@
 ---
 created: 2024-04-24 11:06:21
-modified: 2024-05-08 01:33:30
+modified: 2024-06-05 18:48:11
 title: Compuerta OR
 ---
 
@@ -10,11 +10,11 @@ Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==suma== 
 
 ## Representación simbólica
 
-Podemos representarla de forma simbólica, de dos formas:
+Podemos representarla de forma simbólica.
 
-- $A + B = Z$
-- $A \lor B = Z$
-- $A \cup B = Z$
+$$
+A + B = A \lor B = A \cup B = Z
+$$
 
 ## Representación gráfica
 

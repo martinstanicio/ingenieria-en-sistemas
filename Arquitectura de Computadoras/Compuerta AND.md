@@ -1,6 +1,6 @@
 ---
 created: 2024-04-17 18:30:07
-modified: 2024-05-08 01:33:30
+modified: 2024-06-05 18:46:23
 title: Compuerta AND
 ---
 
@@ -10,11 +10,11 @@ Es una [[Compuertas lógicas|compuerta lógica]], representada por una ==multipl
 
 ## Representación simbólica
 
-Podemos representarla de forma simbólica, de dos formas:
+Podemos representarla de forma simbólica.
 
-- $A \cdot B = Z$
-- $A \land B = Z$
-- $A \cap B = Z$
+$$
+A \cdot B = A \land B = A \cap B = Z
+$$
 
 ## Representación gráfica
 
