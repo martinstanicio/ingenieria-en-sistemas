@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Ecuaciones horarias",
+      "path": "Física I/Ecuaciones horarias.md"
+    },
+    {
+      "basename": "Dinámica",
+      "path": "Física I/Dinámica.md"
+    },
+    {
+      "basename": "Cinemática",
+      "path": "Física I/Cinemática.md"
+    },
+    {
+      "basename": "Movimiento Circular Uniforme (MCU)",
+      "path": "Física I/Movimiento Circular Uniforme (MCU).md"
+    },
+    {
+      "basename": "Movimiento",
+      "path": "Física I/Movimiento.md"
+    },
+    {
       "basename": "Indeterminación",
       "path": "Análisis Matemático I/Indeterminación.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Lenguaje de máquina",
       "path": "Algoritmos y Estructuras de Datos/Lenguaje de máquina.md"
-    },
-    {
-      "basename": "Lenguaje de bajo nivel o ensamblador",
-      "path": "Algoritmos y Estructuras de Datos/Lenguaje de bajo nivel o ensamblador.md"
-    },
-    {
-      "basename": "Lenguaje de alto nivel",
-      "path": "Algoritmos y Estructuras de Datos/Lenguaje de alto nivel.md"
-    },
-    {
-      "basename": "Interpretador",
-      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
-    },
-    {
-      "basename": "Estructuras de datos",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
-    },
-    {
-      "basename": "Estructuras de control",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
     }
   ],
   "omittedPaths": [],
