@@ -1,6 +1,6 @@
 ---
 created: 2024-04-23 13:59:32
-modified: 2024-05-25 18:06:47
+modified: 2024-06-07 14:57:53
 title: Continuidad
 ---
 
@@ -23,4 +23,4 @@ Si una [[Función]] $y = f(x)$ no es continua en un punto $c$, ya que ==no exist
 
 ## Discontinuidad evitable
 
-Si una [[Función]] $y = f(x)$ no es continua en un punto $c$, ya que ==no existe la imagen== de $f(x)$, o ==no coincide con el [[Límite]]==, se dice que tiene una discontinuidad esencial en $c$.
+Si una [[Función]] $y = f(x)$ no es continua en un punto $c$, ya que ==no existe la imagen== de $f(x)$, o ==no coincide con el [[Límite]]==, se dice que tiene una discontinuidad evitable en $c$.

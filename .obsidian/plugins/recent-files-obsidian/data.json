@@ -5,16 +5,52 @@
       "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
+      "basename": "Continuidad",
+      "path": "Análisis Matemático I/Continuidad.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
+      "basename": "Infinitésimos",
+      "path": "Análisis Matemático I/Infinitésimos.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Cota",
+      "path": "Análisis Matemático I/Cota.md"
+    },
+    {
+      "basename": "Sucesión monótona",
+      "path": "Análisis Matemático I/Sucesión monótona.md"
+    },
+    {
+      "basename": "Sucesión",
+      "path": "Análisis Matemático I/Sucesión.md"
+    },
+    {
+      "basename": "Serie",
+      "path": "Análisis Matemático I/Serie.md"
+    },
+    {
+      "basename": "Asíntota vertical",
+      "path": "Análisis Matemático I/Asíntota vertical.md"
+    },
+    {
+      "basename": "Asíntota no vertical",
+      "path": "Análisis Matemático I/Asíntota no vertical.md"
+    },
+    {
       "basename": "Números aleatorios",
       "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
     },
     {
       "basename": "Comportamiento final",
       "path": "Análisis Matemático I/Comportamiento final.md"
-    },
-    {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
     },
     {
       "basename": "Mínimo",
@@ -163,42 +199,6 @@
     {
       "basename": "Estructuras de control",
       "path": "Algoritmos y Estructuras de Datos/Estructuras de control.md"
-    },
-    {
-      "basename": "Estructura secuencial",
-      "path": "Algoritmos y Estructuras de Datos/Estructura secuencial.md"
-    },
-    {
-      "basename": "Estructura de casos",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
-    },
-    {
-      "basename": "Estructura de repetición",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
-    },
-    {
-      "basename": "Errores",
-      "path": "Algoritmos y Estructuras de Datos/Errores.md"
-    },
-    {
-      "basename": "Error de sintaxis o compilación",
-      "path": "Algoritmos y Estructuras de Datos/Error de sintaxis o compilación.md"
-    },
-    {
-      "basename": "Error de ejecución",
-      "path": "Algoritmos y Estructuras de Datos/Error de ejecución.md"
-    },
-    {
-      "basename": "Diseño descendente",
-      "path": "Algoritmos y Estructuras de Datos/Diseño descendente.md"
-    },
-    {
-      "basename": "Diagrama de flujo",
-      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
-    },
-    {
-      "basename": "Compilador",
-      "path": "Algoritmos y Estructuras de Datos/Compilador.md"
     }
   ],
   "omittedPaths": [],

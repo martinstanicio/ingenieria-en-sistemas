@@ -1,6 +1,6 @@
 ---
 created: 2024-04-23 14:09:56
-modified: 2024-05-25 12:10:54
+modified: 2024-06-07 16:44:34
 title: Límite
 ---
 
@@ -36,7 +36,7 @@ Son aquellos que se aproximan a un número real $\mathbb{R}$.
 
 Son aquellos que se aproximan a $\infty$ o $-\infty$.
 
-### Límites infinitos
+### Límites indeterminados
 
 Son aquellos que se aproximan a un valor indefinido:
 
