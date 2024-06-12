@@ -1,6 +1,6 @@
 ---
 created: 2024-05-03 17:32:33
-modified: 2024-06-04 00:39:16
+modified: 2024-06-11 21:50:53
 title: Estructura de casos
 ---
 
@@ -41,3 +41,19 @@ flowchart TB
 ## Pseudocódigo
 
 ![[Pseudocódigo#^estructura-de-casos]]
+
+## Python
+
+En [[Python]] tenemos la posibilidad de especificar múltiples posibles valores dentro de un mismo caso, utilizando `|`.
+
+```python
+x = 3
+
+match x:
+    case 1:
+	    print("El número es 1")
+	case 2|3:
+	    print("El número es 2 o 3")
+	case _:
+		print("El número no es ni 1, ni 2, ni 3")
+```

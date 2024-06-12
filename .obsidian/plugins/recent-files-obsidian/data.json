@@ -1,12 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Funciones trigonométricas",
-      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+    },
+    {
+      "basename": "Contador",
+      "path": "Algoritmos y Estructuras de Datos/Contador.md"
+    },
+    {
+      "basename": "Variables",
+      "path": "Algoritmos y Estructuras de Datos/Variables.md"
+    },
+    {
+      "basename": "Estructura de casos",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
     },
     {
       "basename": "Números aleatorios",
       "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
+    },
+    {
+      "basename": "Funciones trigonométricas",
+      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
     },
     {
       "basename": "Transición de estado",
@@ -161,10 +181,6 @@
       "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
     },
     {
-      "basename": "Variables",
-      "path": "Algoritmos y Estructuras de Datos/Variables.md"
-    },
-    {
       "basename": "Valor centinela",
       "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
     },
@@ -177,28 +193,12 @@
       "path": "Algoritmos y Estructuras de Datos/README.md"
     },
     {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
       "basename": "Pseudocódigo",
       "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
     },
     {
       "basename": "Lenguaje natural",
       "path": "Lógica y Estructuras Discretas/Lenguaje natural.md"
-    },
-    {
-      "basename": "Programación modular",
-      "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
-    },
-    {
-      "basename": "Programa propio",
-      "path": "Algoritmos y Estructuras de Datos/Programa propio.md"
-    },
-    {
-      "basename": "Operador ternario",
-      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
     }
   ],
   "omittedPaths": [],

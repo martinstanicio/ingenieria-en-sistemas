@@ -10,7 +10,7 @@ Es una [[Estructura de repetición]] que ejecuta una serie de instrucciones dada
 
 Para evitar que se vuelva un ciclo infinito, podemos utilizar diferentes estrategias:
 
-- Utilizar un [[Acumulador]]
+- Utilizar un [[Contador]]
 - Controlar con una opción a continuar
 - Controlar con [[Valor centinela]]
 - Controlar con una [[Bandera]]
