@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Funciones trigonométricas",
+      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
+    },
+    {
+      "basename": "Números aleatorios",
+      "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
+    },
+    {
+      "basename": "Transición de estado",
+      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
+    },
+    {
       "basename": "Ecuaciones horarias",
       "path": "Física I/Ecuaciones horarias.md"
+    },
+    {
+      "basename": "Operadores lineales",
+      "path": "Álgebra y Geometría Analítica/Operadores lineales.md"
     },
     {
       "basename": "Dinámica",
@@ -63,10 +79,6 @@
     {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Números aleatorios",
-      "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
     },
     {
       "basename": "Comportamiento final",
@@ -187,18 +199,6 @@
     {
       "basename": "Operador ternario",
       "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
-    },
-    {
-      "basename": "Librería",
-      "path": "Algoritmos y Estructuras de Datos/Librería.md"
-    },
-    {
-      "basename": "Lenguaje de programación",
-      "path": "Algoritmos y Estructuras de Datos/Lenguaje de programación.md"
-    },
-    {
-      "basename": "Lenguaje de máquina",
-      "path": "Algoritmos y Estructuras de Datos/Lenguaje de máquina.md"
     }
   ],
   "omittedPaths": [],
