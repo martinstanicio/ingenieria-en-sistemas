@@ -6,7 +6,7 @@ title: Sucesión
 
 # Sucesión
 
-Una [[Función]] que va de naturales a reales.
+Una [[Análisis Matemático I/Función]] que va de naturales a reales.
 
 $$
 a: \mathbb{N} \rightarrow \mathbb{R}

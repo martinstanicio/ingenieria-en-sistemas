@@ -6,4 +6,4 @@ title: Asíntota vertical
 
 # Asíntota vertical
 
-Un punto $x = c$ de una [[Función]] es **asíntota vertical** si su distancia a las imágenes de la [[Función]] $y = f(x)$ se hace tan pequeña como yo quiera, si y solo si tomo valores $x$ del dominio lo suficientemente cercanos a $c$, $x \neq c$.
+Un punto $x = c$ de una [[Análisis Matemático I/Función]] es **asíntota vertical** si su distancia a las imágenes de la [[Análisis Matemático I/Función]] $y = f(x)$ se hace tan pequeña como yo quiera, si y solo si tomo valores $x$ del dominio lo suficientemente cercanos a $c$, $x \neq c$.

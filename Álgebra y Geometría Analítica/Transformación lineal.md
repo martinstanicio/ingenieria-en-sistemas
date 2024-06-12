@@ -6,7 +6,7 @@ title: Transformación lineal
 
 # Transformación lineal
 
-Una [[Función]] que toma un vector de un [[Espacio vectorial]] y lo transforma en otro vector de otro [[Espacio vectorial]].
+Una [[Análisis Matemático I/Función]] que toma un vector de un [[Espacio vectorial]] y lo transforma en otro vector de otro [[Espacio vectorial]].
 
 ## Propiedades
 

@@ -6,7 +6,7 @@ title: Álgebra de Boole
 
 # Álgebra de Boole
 
-El **álgebra booleana** busca simplificar una [[Función]] a su expresión más sencilla, breve, y con mínimo uso de [[Recursos]], algo que una [[Tabla de verdades]] no nos permite.
+El **álgebra booleana** busca simplificar una [[Análisis Matemático I/Función]] a su expresión más sencilla, breve, y con mínimo uso de [[Recursos]], algo que una [[Tabla de verdades]] no nos permite.
 
 Su uso permite crear [[Sistemas]] [[Lógica|lógicos]] eficientes y confiables.
 

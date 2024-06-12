@@ -6,7 +6,7 @@ title: Funciones trigonométricas
 
 # Funciones trigonométricas
 
-Para utilizar [[Funciones|funciones]] trigonométricas en [[Python]], debemos ==importar== la [[Librería]] `math`.
+Para utilizar [[Algoritmos y Estructuras de Datos/Función|funciones]] trigonométricas en [[Python]], debemos ==importar== la [[Librería]] `math`.
 
 > [!warning]
 > Las funciones trigonométricas en [[Python]] trabajan con **radianes**.

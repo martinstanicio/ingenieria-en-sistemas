@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+      "basename": "Procedimiento",
+      "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Algoritmos y Estructuras de Datos/Función.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
     },
     {
       "basename": "Contador",
       "path": "Algoritmos y Estructuras de Datos/Contador.md"
+    },
+    {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
     },
     {
       "basename": "Variables",
@@ -73,10 +85,6 @@
       "path": "Análisis Matemático I/Infinitésimos.md"
     },
     {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
-    },
-    {
       "basename": "Cota",
       "path": "Análisis Matemático I/Cota.md"
     },
@@ -107,10 +115,6 @@
     {
       "basename": "Mínimo",
       "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
-    },
-    {
-      "basename": "Funciones",
-      "path": "Algoritmos y Estructuras de Datos/Funciones.md"
     },
     {
       "basename": "Estructura de selección",
@@ -195,10 +199,6 @@
     {
       "basename": "Pseudocódigo",
       "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
-    },
-    {
-      "basename": "Lenguaje natural",
-      "path": "Lógica y Estructuras Discretas/Lenguaje natural.md"
     }
   ],
   "omittedPaths": [],

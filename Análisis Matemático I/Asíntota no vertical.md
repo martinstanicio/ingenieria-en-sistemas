@@ -6,7 +6,7 @@ title: Asíntota no vertical
 
 # Asíntota no vertical
 
-Si se cumple que las imágenes de una [[Función]] $y = f(x)$ se acercan tanto como uno quiera al número $b$ con $x$ lo suficientemente grande (ya sea $+\infty$ o $-\infty$), la recta $y = b$ es asíntota al gráfico de $y = f(x)$.
+Si se cumple que las imágenes de una [[Análisis Matemático I/Función]] $y = f(x)$ se acercan tanto como uno quiera al número $b$ con $x$ lo suficientemente grande (ya sea $+\infty$ o $-\infty$), la recta $y = b$ es asíntota al gráfico de $y = f(x)$.
 
 $$
 \lim\limits_{x \to +\infty} f(x) = b \Rightarrow y = b \text{ es asíntota horizontal para } x \rightarrow +\infty

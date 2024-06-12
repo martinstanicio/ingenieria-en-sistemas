@@ -14,7 +14,7 @@ import random
 
 ## Números reales
 
-Para generar números reales, utilizamos la [[Funciones|Función]] `random`.
+Para generar números reales, utilizamos la [[Algoritmos y Estructuras de Datos/Función|Función]] `random`.
 
 Si no utilizamos ningún parámetro, obtendremos un valor entre $0$ (cerrado) y $1$ (abierto), es decir $[0, 1)$.
 
@@ -37,7 +37,7 @@ y = random.random(-5, 10) # [-5, 10)
 
 ## Números enteros
 
-Para generar números enteros, utilizamos la [[Funciones|Función]] `randint`.
+Para generar números enteros, utilizamos la [[Algoritmos y Estructuras de Datos/Función|Función]] `randint`.
 
 Esta función requiere dos parámetros, que nos permiten especificar el ==intervalo cerrado== del cual queremos obtener un número aleatorio:
 

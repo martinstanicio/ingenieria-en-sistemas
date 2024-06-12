@@ -6,7 +6,7 @@ title: Límite
 
 # Límite
 
-El límite de una [[Función]] en un punto es el ==valor al cual se aproximan las imágenes== de sus puntos cercanos y adyacentes.
+El límite de una [[Análisis Matemático I/Función]] en un punto es el ==valor al cual se aproximan las imágenes== de sus puntos cercanos y adyacentes.
 
 Si nos aproximamos por derecha y por izquierda del punto, y la imagen se acerca cada vez más a aquella del punto que estamos analizando, decimos que **el límite existe**.
 

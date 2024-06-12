@@ -13,7 +13,7 @@ acu = acu + valor
 ```
 
 > [!info]
-> En [[Python]], también podemos realizar la asignación de una forma abreviada.
+> En [[Python]], también podemos realizar esta asignación de una forma abreviada.
 >
 > ```python
 > acu += valor
