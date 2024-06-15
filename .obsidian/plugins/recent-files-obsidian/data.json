@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "Disponibilidad",
+      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
+    },
+    {
+      "basename": "Uptime",
+      "path": "Sistemas y Procesos de Negocios/Uptime.md"
+    },
+    {
       "basename": "Autenticidad",
       "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Generaciones de hardware",
       "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
-    },
-    {
-      "basename": "Arquitectura Von Neumann",
-      "path": "Arquitectura de Computadoras/Arquitectura Von Neumann.md"
-    },
-    {
-      "basename": "Compuerta AND",
-      "path": "Arquitectura de Computadoras/Compuerta AND.md"
-    },
-    {
-      "basename": "Álgebra de Boole",
-      "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
     }
   ],
   "omittedPaths": [],
