@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Autenticidad",
+      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Álgebra de Boole",
       "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
-    },
-    {
-      "basename": "ALU",
-      "path": "Arquitectura de Computadoras/ALU.md"
     }
   ],
   "omittedPaths": [],
