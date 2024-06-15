@@ -5,16 +5,32 @@
       "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
     },
     {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
+      "basename": "Recta tangente",
+      "path": "Análisis Matemático I/Recta tangente.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
       "basename": "Función",
       "path": "Algoritmos y Estructuras de Datos/Función.md"
     },
     {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
+      "basename": "Parámetros",
+      "path": "Algoritmos y Estructuras de Datos/Parámetros.md"
     },
     {
-      "basename": "Contador",
-      "path": "Algoritmos y Estructuras de Datos/Contador.md"
+      "basename": "20240614 - Rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
+    },
+    {
+      "basename": "20240614 - Hipotenusa",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Hipotenusa.md"
     },
     {
       "basename": "Acumulador",
@@ -23,6 +39,30 @@
     {
       "basename": "Variables",
       "path": "Algoritmos y Estructuras de Datos/Variables.md"
+    },
+    {
+      "basename": "Efecto lateral",
+      "path": "Algoritmos y Estructuras de Datos/Efecto lateral.md"
+    },
+    {
+      "basename": "Estructura algebráica",
+      "path": "Lógica y Estructuras Discretas/Estructura algebráica.md"
+    },
+    {
+      "basename": "Operación",
+      "path": "Lógica y Estructuras Discretas/Operación.md"
+    },
+    {
+      "basename": "Operadores lineales",
+      "path": "Álgebra y Geometría Analítica/Operadores lineales.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Contador",
+      "path": "Algoritmos y Estructuras de Datos/Contador.md"
     },
     {
       "basename": "Estructura de casos",
@@ -49,10 +89,6 @@
       "path": "Física I/Ecuaciones horarias.md"
     },
     {
-      "basename": "Operadores lineales",
-      "path": "Álgebra y Geometría Analítica/Operadores lineales.md"
-    },
-    {
       "basename": "Dinámica",
       "path": "Física I/Dinámica.md"
     },
@@ -75,10 +111,6 @@
     {
       "basename": "Continuidad",
       "path": "Análisis Matemático I/Continuidad.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
     },
     {
       "basename": "Infinitésimos",
@@ -167,38 +199,6 @@
     {
       "basename": "Conectivos lógicos",
       "path": "Lógica y Estructuras Discretas/Conectivos lógicos.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Estructura",
-      "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "Bandera",
-      "path": "Algoritmos y Estructuras de Datos/Bandera.md"
-    },
-    {
-      "basename": "Ciclo repetir-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
-    },
-    {
-      "basename": "Valor centinela",
-      "path": "Algoritmos y Estructuras de Datos/Valor centinela.md"
-    },
-    {
-      "basename": "Sentencia fantasma",
-      "path": "Algoritmos y Estructuras de Datos/Sentencia fantasma.md"
-    },
-    {
-      "basename": "README",
-      "path": "Algoritmos y Estructuras de Datos/README.md"
-    },
-    {
-      "basename": "Pseudocódigo",
-      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
     }
   ],
   "omittedPaths": [],

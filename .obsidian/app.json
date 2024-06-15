@@ -46,5 +46,6 @@
   "mobilePullAction": "editor:save-file",
   "showUnsupportedFiles": true,
   "readableLineLength": true,
-  "vimMode": false
+  "vimMode": false,
+  "spellcheck": false
 }
