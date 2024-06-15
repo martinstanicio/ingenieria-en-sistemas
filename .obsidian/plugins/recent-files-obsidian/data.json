@@ -1,6 +1,50 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "20240614 - Rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
+    },
+    {
+      "basename": "Parámetros",
+      "path": "Algoritmos y Estructuras de Datos/Parámetros.md"
+    },
+    {
+      "basename": "Acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
+      "basename": "Operador ternario",
+      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
+    },
+    {
+      "basename": "Librería",
+      "path": "Algoritmos y Estructuras de Datos/Librería.md"
+    },
+    {
+      "basename": "Números aleatorios",
+      "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
+    },
+    {
+      "basename": "Funciones trigonométricas",
+      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Algoritmos y Estructuras de Datos/Función.md"
+    },
+    {
+      "basename": "Efecto lateral",
+      "path": "Algoritmos y Estructuras de Datos/Efecto lateral.md"
+    },
+    {
       "basename": "Procedimiento",
       "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
     },
@@ -17,32 +61,12 @@
       "path": "Análisis Matemático I/Límite.md"
     },
     {
-      "basename": "Función",
-      "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Parámetros",
-      "path": "Algoritmos y Estructuras de Datos/Parámetros.md"
-    },
-    {
-      "basename": "20240614 - Rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
-    },
-    {
       "basename": "20240614 - Hipotenusa",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Hipotenusa.md"
     },
     {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
       "basename": "Variables",
       "path": "Algoritmos y Estructuras de Datos/Variables.md"
-    },
-    {
-      "basename": "Efecto lateral",
-      "path": "Algoritmos y Estructuras de Datos/Efecto lateral.md"
     },
     {
       "basename": "Estructura algebráica",
@@ -71,14 +95,6 @@
     {
       "basename": "Python",
       "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Números aleatorios",
-      "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
-    },
-    {
-      "basename": "Funciones trigonométricas",
-      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
     },
     {
       "basename": "Transición de estado",
@@ -183,22 +199,6 @@
     {
       "basename": "ALU",
       "path": "Arquitectura de Computadoras/ALU.md"
-    },
-    {
-      "basename": "Compuerta OR",
-      "path": "Arquitectura de Computadoras/Compuerta OR.md"
-    },
-    {
-      "basename": "Disyunción (∨)",
-      "path": "Lógica y Estructuras Discretas/Disyunción (∨).md"
-    },
-    {
-      "basename": "Conjunción (∧)",
-      "path": "Lógica y Estructuras Discretas/Conjunción (∧).md"
-    },
-    {
-      "basename": "Conectivos lógicos",
-      "path": "Lógica y Estructuras Discretas/Conectivos lógicos.md"
     }
   ],
   "omittedPaths": [],
