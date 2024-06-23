@@ -5,6 +5,46 @@
       "path": "Sistemas y Procesos de Negocios/Información.md"
     },
     {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
+      "basename": "Dimensión",
+      "path": "Álgebra y Geometría Analítica/Dimensión.md"
+    },
+    {
+      "basename": "Entidad",
+      "path": "Sistemas y Procesos de Negocios/Entidad.md"
+    },
+    {
+      "basename": "Cinemática",
+      "path": "Física I/Cinemática.md"
+    },
+    {
+      "basename": "Movimiento",
+      "path": "Física I/Movimiento.md"
+    },
+    {
+      "basename": "Termodinámica",
+      "path": "Física I/Termodinámica.md"
+    },
+    {
+      "basename": "Energía",
+      "path": "Física I/Energía.md"
+    },
+    {
+      "basename": "Diagrama de Transición de Estado (DTE)",
+      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado (DTE).md"
+    },
+    {
+      "basename": "Unidades básicas o fundamentales",
+      "path": "Física I/Unidades básicas o fundamentales.md"
+    },
+    {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
       "basename": "Disponibilidad",
       "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
     },
@@ -65,10 +105,6 @@
       "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
     },
     {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
-    },
-    {
       "basename": "Recta tangente",
       "path": "Análisis Matemático I/Recta tangente.md"
     },
@@ -125,16 +161,8 @@
       "path": "Física I/Dinámica.md"
     },
     {
-      "basename": "Cinemática",
-      "path": "Física I/Cinemática.md"
-    },
-    {
       "basename": "Movimiento Circular Uniforme (MCU)",
       "path": "Física I/Movimiento Circular Uniforme (MCU).md"
-    },
-    {
-      "basename": "Movimiento",
-      "path": "Física I/Movimiento.md"
     },
     {
       "basename": "Indeterminación",
@@ -171,34 +199,6 @@
     {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Comportamiento final",
-      "path": "Análisis Matemático I/Comportamiento final.md"
-    },
-    {
-      "basename": "Mínimo",
-      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
-    },
-    {
-      "basename": "Estructura de selección",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de selección.md"
-    },
-    {
-      "basename": "Error lógico",
-      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
-      "basename": "Bifurcaciones",
-      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
-    },
-    {
-      "basename": "Generaciones de hardware",
-      "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
     }
   ],
   "omittedPaths": [],
