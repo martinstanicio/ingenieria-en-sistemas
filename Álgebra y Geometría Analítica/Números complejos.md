@@ -1,6 +1,6 @@
 ---
 created: 2024-03-25 12:09:44
-modified: 2024-05-08 01:33:30
+modified: 2024-06-23 18:20:32
 title: Números complejos
 ---
 
@@ -18,9 +18,9 @@ $$
 Re(z)=a \land Im(z)=b
 $$
 
-Debido a que tanto la suma como la multiplicación en $\mathbb{C}$ cumplen las condiciones para ser un [[Grupo abeliano]], se considera a los complejos un [[Cuerpo]]. Sin embargo, a diferencia de los reales, los complejos ==**no están ordenados**==, por lo que no podemos utilizar, por ejemplo, el "mayor que" con ellos.
+Debido a que tanto la suma como la multiplicación en $\mathbb{C}$ cumplen las condiciones para ser un [[Grupo abeliano]], se considera a los complejos un [[Cuerpo]]. Sin embargo, a diferencia de los reales, los complejos ==no están ordenados==, por lo que no podemos utilizar [[Operadores lógicos]] como, por ejemplo, el "mayor que".
 
-Además, existe un [[Álgebra y Geometría Analítica/Isomorfismo]] entre los reales y un subconjunto de los complejos, pues un complejo puede ser expresado como un real cuando su parte imaginaria es 0:
+Además, existe un [[Álgebra y Geometría Analítica/Isomorfismo|Isomorfismo]] entre los reales y un [[Subconjunto]] de los complejos, pues un complejo puede ser expresado como un real cuando su parte imaginaria es 0:
 
 $$
 f(a,0)=a

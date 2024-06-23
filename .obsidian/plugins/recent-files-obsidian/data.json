@@ -1,32 +1,184 @@
 {
   "recentFiles": [
     {
-      "basename": "Matriz escalonada reducida",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
+      "basename": "Lenguaje de máquina",
+      "path": "Algoritmos y Estructuras de Datos/Lenguaje de máquina.md"
     },
     {
-      "basename": "Teorema de la dimensión",
-      "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
-    },
-    {
-      "basename": "Espacio de columnas",
-      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
-    },
-    {
-      "basename": "Espacio de filas",
-      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
-    },
-    {
-      "basename": "Dimensión",
-      "path": "Álgebra y Geometría Analítica/Dimensión.md"
+      "basename": "Funciones trigonométricas",
+      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
     },
     {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
     },
     {
+      "basename": "Operaciones con matrices",
+      "path": "Álgebra y Geometría Analítica/Operaciones con matrices.md"
+    },
+    {
+      "basename": "Números complejos",
+      "path": "Álgebra y Geometría Analítica/Números complejos.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
+      "basename": "Nulidad",
+      "path": "Álgebra y Geometría Analítica/Nulidad.md"
+    },
+    {
+      "basename": "Menor complementario",
+      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
+    },
+    {
+      "basename": "Matriz simétrica",
+      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
+    },
+    {
+      "basename": "Matriz periódica",
+      "path": "Álgebra y Geometría Analítica/Matriz periódica.md"
+    },
+    {
+      "basename": "Matriz nilpotente",
+      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
+    },
+    {
+      "basename": "Matriz involutiva",
+      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
+    },
+    {
+      "basename": "Matriz inversa",
+      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
+    },
+    {
+      "basename": "Matriz identidad",
+      "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
+    },
+    {
+      "basename": "Matriz idempotente",
+      "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
+    },
+    {
+      "basename": "Matriz escalonada reducida",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
+    },
+    {
+      "basename": "Matriz escalonada",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Logaritmo natural de un complejo",
+      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
+    },
+    {
+      "basename": "Ley de composición interna o propiedad cerrada",
+      "path": "Álgebra y Geometría Analítica/Ley de composición interna o propiedad cerrada.md"
+    },
+    {
       "basename": "Kernel",
       "path": "Álgebra y Geometría Analítica/Kernel.md"
+    },
+    {
+      "basename": "Isomorfismo",
+      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
+    },
+    {
+      "basename": "Grupo",
+      "path": "Álgebra y Geometría Analítica/Grupo.md"
+    },
+    {
+      "basename": "Grupo abeliano",
+      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
+    },
+    {
+      "basename": "Espacios vectoriales notables",
+      "path": "Álgebra y Geometría Analítica/Espacios vectoriales notables.md"
+    },
+    {
+      "basename": "Espacio vectorial trivial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
+    },
+    {
+      "basename": "Espacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
+    },
+    {
+      "basename": "Espacio generado",
+      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
+    },
+    {
+      "basename": "Espacio de filas",
+      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
+    },
+    {
+      "basename": "Espacio de columnas",
+      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
+    },
+    {
+      "basename": "Escalar",
+      "path": "Álgebra y Geometría Analítica/Escalar.md"
+    },
+    {
+      "basename": "Elemento opuesto o inverso",
+      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
+      "basename": "Ecuación lineal",
+      "path": "Álgebra y Geometría Analítica/Ecuación lineal.md"
+    },
+    {
+      "basename": "Dimensión",
+      "path": "Álgebra y Geometría Analítica/Dimensión.md"
+    },
+    {
+      "basename": "Determinante",
+      "path": "Álgebra y Geometría Analítica/Determinante.md"
+    },
+    {
+      "basename": "Cuerpo",
+      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
+    },
+    {
+      "basename": "Conmutatividad",
+      "path": "Álgebra y Geometría Analítica/Conmutatividad.md"
+    },
+    {
+      "basename": "Conjunto linealmente independiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+    },
+    {
+      "basename": "Conjunto linealmente dependiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+    },
+    {
+      "basename": "Conjunto generador",
+      "path": "Álgebra y Geometría Analítica/Conjunto generador.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Algoritmos y Estructuras de Datos/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Análisis Matemático I/README.md"
+    },
+    {
+      "basename": "Teorema de la dimensión",
+      "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
     },
     {
       "basename": "Entidad",
@@ -45,160 +197,8 @@
       "path": "Análisis Matemático I/Imagen.md"
     },
     {
-      "basename": "Nulidad",
-      "path": "Álgebra y Geometría Analítica/Nulidad.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Elemento neutro",
-      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
-    },
-    {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
-    },
-    {
-      "basename": "Dominio",
-      "path": "Análisis Matemático I/Dominio.md"
-    },
-    {
-      "basename": "Conjunto de ceros",
-      "path": "Análisis Matemático I/Conjunto de ceros.md"
-    },
-    {
-      "basename": "Espacio generado",
-      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
-    },
-    {
-      "basename": "Conjunto generador",
-      "path": "Álgebra y Geometría Analítica/Conjunto generador.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Cinemática",
-      "path": "Física I/Cinemática.md"
-    },
-    {
-      "basename": "Movimiento",
-      "path": "Física I/Movimiento.md"
-    },
-    {
-      "basename": "Termodinámica",
-      "path": "Física I/Termodinámica.md"
-    },
-    {
-      "basename": "Energía",
-      "path": "Física I/Energía.md"
-    },
-    {
-      "basename": "Diagrama de Transición de Estado (DTE)",
-      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado (DTE).md"
-    },
-    {
-      "basename": "Unidades básicas o fundamentales",
-      "path": "Física I/Unidades básicas o fundamentales.md"
-    },
-    {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
-    },
-    {
-      "basename": "Disponibilidad",
-      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
-    },
-    {
-      "basename": "Uptime",
-      "path": "Sistemas y Procesos de Negocios/Uptime.md"
-    },
-    {
-      "basename": "Autenticidad",
-      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "20240614 - Rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
-    },
-    {
-      "basename": "Parámetros",
-      "path": "Algoritmos y Estructuras de Datos/Parámetros.md"
-    },
-    {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Operador ternario",
-      "path": "Algoritmos y Estructuras de Datos/Operador ternario.md"
-    },
-    {
-      "basename": "Librería",
-      "path": "Algoritmos y Estructuras de Datos/Librería.md"
-    },
-    {
-      "basename": "Números aleatorios",
-      "path": "Algoritmos y Estructuras de Datos/Números aleatorios.md"
-    },
-    {
-      "basename": "Funciones trigonométricas",
-      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Efecto lateral",
-      "path": "Algoritmos y Estructuras de Datos/Efecto lateral.md"
-    },
-    {
-      "basename": "Procedimiento",
-      "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
-    },
-    {
-      "basename": "Recta tangente",
-      "path": "Análisis Matemático I/Recta tangente.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
-    },
-    {
-      "basename": "20240614 - Hipotenusa",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Hipotenusa.md"
-    },
-    {
-      "basename": "Variables",
-      "path": "Algoritmos y Estructuras de Datos/Variables.md"
-    },
-    {
-      "basename": "Estructura algebráica",
-      "path": "Lógica y Estructuras Discretas/Estructura algebráica.md"
-    },
-    {
-      "basename": "Operación",
-      "path": "Lógica y Estructuras Discretas/Operación.md"
-    },
-    {
-      "basename": "Operadores lineales",
-      "path": "Álgebra y Geometría Analítica/Operadores lineales.md"
     }
   ],
   "omittedPaths": [],
