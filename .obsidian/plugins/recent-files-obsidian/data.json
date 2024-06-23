@@ -1,6 +1,54 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de la dimensión",
+      "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
+    },
+    {
+      "basename": "Rango",
+      "path": "Álgebra y Geometría Analítica/Rango.md"
+    },
+    {
+      "basename": "Espacio de filas",
+      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
+    },
+    {
+      "basename": "Espacio de columnas",
+      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
+    },
+    {
+      "basename": "Rango",
+      "path": "Sistemas y Procesos de Negocios/Rango.md"
+    },
+    {
+      "basename": "Kernel",
+      "path": "Álgebra y Geometría Analítica/Kernel.md"
+    },
+    {
+      "basename": "Imagen",
+      "path": "Análisis Matemático I/Imagen.md"
+    },
+    {
+      "basename": "Nulidad",
+      "path": "Álgebra y Geometría Analítica/Nulidad.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Elemento neutro",
+      "path": "Álgebra y Geometría Analítica/Elemento neutro.md"
+    },
+    {
+      "basename": "Transformación lineal",
+      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
+    },
+    {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
       "basename": "Función",
       "path": "Análisis Matemático I/Función.md"
     },
@@ -9,24 +57,8 @@
       "path": "Análisis Matemático I/Dominio.md"
     },
     {
-      "basename": "Imagen",
-      "path": "Análisis Matemático I/Imagen.md"
-    },
-    {
       "basename": "Conjunto de ceros",
       "path": "Análisis Matemático I/Conjunto de ceros.md"
-    },
-    {
-      "basename": "Espacio de columnas",
-      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
-    },
-    {
-      "basename": "Espacio de filas",
-      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
     },
     {
       "basename": "Espacio generado",
@@ -167,38 +199,6 @@
     {
       "basename": "Contador",
       "path": "Algoritmos y Estructuras de Datos/Contador.md"
-    },
-    {
-      "basename": "Estructura de casos",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Transición de estado",
-      "path": "Sistemas y Procesos de Negocios/Transición de estado.md"
-    },
-    {
-      "basename": "Ecuaciones horarias",
-      "path": "Física I/Ecuaciones horarias.md"
-    },
-    {
-      "basename": "Dinámica",
-      "path": "Física I/Dinámica.md"
-    },
-    {
-      "basename": "Movimiento Circular Uniforme (MCU)",
-      "path": "Física I/Movimiento Circular Uniforme (MCU).md"
-    },
-    {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
-    },
-    {
-      "basename": "Continuidad",
-      "path": "Análisis Matemático I/Continuidad.md"
     }
   ],
   "omittedPaths": [],

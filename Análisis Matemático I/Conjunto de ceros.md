@@ -6,4 +6,4 @@ title: Conjunto de ceros
 
 # Conjunto de ceros
 
-El [[Conjunto]] de ceros de una [[Análisis Matemático I/Función|Función]] está formado por aquellos elementos que hacen que la [[Imagen]] de la misma sea $0$.
+El [[Conjunto]] de ceros de una [[Análisis Matemático I/Función|Función]] está formado por aquellos elementos que hacen que la [[Análisis Matemático I/Imagen]] de la misma sea $0$.
