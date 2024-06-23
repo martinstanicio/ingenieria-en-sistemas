@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Suma directa",
-      "path": "Álgebra y Geometría Analítica/Suma directa.md"
+      "basename": "Espacio vectorial trivial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
+    },
+    {
+      "basename": "Subespacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Subespacio vectorial.md"
     },
     {
       "basename": "Cardinal",
       "path": "Álgebra y Geometría Analítica/Cardinal.md"
+    },
+    {
+      "basename": "Suma directa",
+      "path": "Álgebra y Geometría Analítica/Suma directa.md"
+    },
+    {
+      "basename": "Traza de una matriz",
+      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
     },
     {
       "basename": "Base",
@@ -187,18 +199,6 @@
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Logaritmo natural de un complejo",
-      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
-    },
-    {
-      "basename": "Ley de composición interna o propiedad cerrada",
-      "path": "Álgebra y Geometría Analítica/Ley de composición interna o propiedad cerrada.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
     }
   ],
   "omittedPaths": [],

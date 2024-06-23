@@ -40,9 +40,7 @@
   "foldHeading": false,
   "foldIndent": false,
   "showLineNumber": false,
-  "userIgnoreFilters": [
-    "/.*README/"
-  ],
+  "userIgnoreFilters": null,
   "mobilePullAction": "editor:save-file",
   "showUnsupportedFiles": true,
   "readableLineLength": true,

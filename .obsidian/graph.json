@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:\"Actividades\"",
+  "search": "-path:\"Actividades\" -path:\"README\"",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -81,6 +81,6 @@
   "repelStrength": 15,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.09561258119516113,
+  "scale": 0.09911451010979132,
   "close": true
 }
