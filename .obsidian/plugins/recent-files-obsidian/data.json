@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Matriz escalonada reducida",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
+    },
+    {
+      "basename": "Teorema de la dimensión",
+      "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
+    },
+    {
+      "basename": "Espacio de columnas",
+      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
+    },
+    {
+      "basename": "Espacio de filas",
+      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
+    },
+    {
+      "basename": "Dimensión",
+      "path": "Álgebra y Geometría Analítica/Dimensión.md"
+    },
+    {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
     },
@@ -9,24 +29,12 @@
       "path": "Álgebra y Geometría Analítica/Kernel.md"
     },
     {
-      "basename": "Espacio de columnas",
-      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
-    },
-    {
-      "basename": "Teorema de la dimensión",
-      "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
-    },
-    {
       "basename": "Entidad",
       "path": "Sistemas y Procesos de Negocios/Entidad.md"
     },
     {
       "basename": "Rango",
       "path": "Álgebra y Geometría Analítica/Rango.md"
-    },
-    {
-      "basename": "Espacio de filas",
-      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
     },
     {
       "basename": "Rango",
@@ -75,10 +83,6 @@
     {
       "basename": "Información",
       "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Dimensión",
-      "path": "Álgebra y Geometría Analítica/Dimensión.md"
     },
     {
       "basename": "Cinemática",
@@ -195,10 +199,6 @@
     {
       "basename": "Operadores lineales",
       "path": "Álgebra y Geometría Analítica/Operadores lineales.md"
-    },
-    {
-      "basename": "Contador",
-      "path": "Algoritmos y Estructuras de Datos/Contador.md"
     }
   ],
   "omittedPaths": [],
