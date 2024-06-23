@@ -1,12 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Dominio",
+      "path": "Análisis Matemático I/Dominio.md"
+    },
+    {
+      "basename": "Imagen",
+      "path": "Análisis Matemático I/Imagen.md"
+    },
+    {
+      "basename": "Conjunto de ceros",
+      "path": "Análisis Matemático I/Conjunto de ceros.md"
+    },
+    {
+      "basename": "Espacio de columnas",
+      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
+    },
+    {
+      "basename": "Espacio de filas",
+      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
     },
     {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
+      "basename": "Espacio generado",
+      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
+    },
+    {
+      "basename": "Conjunto generador",
+      "path": "Álgebra y Geometría Analítica/Conjunto generador.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
     },
     {
       "basename": "Dimensión",
@@ -133,10 +165,6 @@
       "path": "Álgebra y Geometría Analítica/Operadores lineales.md"
     },
     {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
-    },
-    {
       "basename": "Contador",
       "path": "Algoritmos y Estructuras de Datos/Contador.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "Continuidad",
       "path": "Análisis Matemático I/Continuidad.md"
-    },
-    {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
-    },
-    {
-      "basename": "Cota",
-      "path": "Análisis Matemático I/Cota.md"
-    },
-    {
-      "basename": "Sucesión monótona",
-      "path": "Análisis Matemático I/Sucesión monótona.md"
-    },
-    {
-      "basename": "Sucesión",
-      "path": "Análisis Matemático I/Sucesión.md"
-    },
-    {
-      "basename": "Serie",
-      "path": "Análisis Matemático I/Serie.md"
-    },
-    {
-      "basename": "Asíntota vertical",
-      "path": "Análisis Matemático I/Asíntota vertical.md"
-    },
-    {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
     }
   ],
   "omittedPaths": [],

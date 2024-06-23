@@ -1,8 +1,6 @@
 ---
-aliases:
-  - Conjunto generador
 created: 2024-04-14 01:06:41
-modified: 2024-05-19 22:05:19
+modified: 2024-06-23 15:02:37
 title: Espacio generado
 ---
 
