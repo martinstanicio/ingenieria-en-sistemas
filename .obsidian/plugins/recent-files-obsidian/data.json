@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Suma directa",
+      "path": "Álgebra y Geometría Analítica/Suma directa.md"
+    },
+    {
+      "basename": "Cardinal",
+      "path": "Álgebra y Geometría Analítica/Cardinal.md"
+    },
+    {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Isomorfismo",
       "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
-    },
-    {
-      "basename": "Grupo",
-      "path": "Álgebra y Geometría Analítica/Grupo.md"
-    },
-    {
-      "basename": "Grupo abeliano",
-      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
     }
   ],
   "omittedPaths": [],
