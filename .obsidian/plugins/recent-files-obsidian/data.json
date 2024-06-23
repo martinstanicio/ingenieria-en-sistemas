@@ -5,6 +5,10 @@
       "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
     },
     {
+      "basename": "Entidad",
+      "path": "Sistemas y Procesos de Negocios/Entidad.md"
+    },
+    {
       "basename": "Rango",
       "path": "Álgebra y Geometría Analítica/Rango.md"
     },
@@ -75,10 +79,6 @@
     {
       "basename": "Dimensión",
       "path": "Álgebra y Geometría Analítica/Dimensión.md"
-    },
-    {
-      "basename": "Entidad",
-      "path": "Sistemas y Procesos de Negocios/Entidad.md"
     },
     {
       "basename": "Cinemática",

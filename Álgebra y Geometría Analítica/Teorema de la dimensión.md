@@ -1,6 +1,6 @@
 ---
 created: 2024-06-23 15:49:23
-modified: 2024-06-23 15:54:12
+modified: 2024-06-23 15:56:11
 title: Teorema de la dimensión
 ---
 
@@ -16,4 +16,4 @@ Donde:
 
 - $n$ es el número de columnas de $A$.
 - $r_A$ es el [[Álgebra y Geometría Analítica/Rango|Rango]] de $A$.
-- $\nu_A$ es la [[Nulidad]] de $A$.
+- $\nu_A$ es la [[Nulidad]] de $A$ (la [[Dimensión]] del [[Kernel]]).
