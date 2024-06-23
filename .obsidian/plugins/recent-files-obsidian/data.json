@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
+      "basename": "Kernel",
+      "path": "Álgebra y Geometría Analítica/Kernel.md"
+    },
+    {
+      "basename": "Espacio de columnas",
+      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
+    },
+    {
       "basename": "Teorema de la dimensión",
       "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
     },
@@ -17,16 +29,8 @@
       "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
     },
     {
-      "basename": "Espacio de columnas",
-      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
-    },
-    {
       "basename": "Rango",
       "path": "Sistemas y Procesos de Negocios/Rango.md"
-    },
-    {
-      "basename": "Kernel",
-      "path": "Álgebra y Geometría Analítica/Kernel.md"
     },
     {
       "basename": "Imagen",
@@ -47,10 +51,6 @@
     {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
     },
     {
       "basename": "Función",
