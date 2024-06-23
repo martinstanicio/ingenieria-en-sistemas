@@ -1,6 +1,6 @@
 ---
 created: 2024-06-05 17:55:39
-modified: 2024-06-05 19:02:54
+modified: 2024-06-23 18:32:11
 title: Álgebra de Boole
 ---
 
@@ -10,7 +10,7 @@ El **álgebra booleana** busca simplificar una [[Análisis Matemático I/Funció
 
 Su uso permite crear [[Sistemas]] [[Lógica|lógicos]] eficientes y confiables.
 
-> [!info]
+> [!note]
 > Es una modalidad formal de describir **operaciones lógicas**.
 
 Se diferencia del **álgebra elemental** en dos aspectos:

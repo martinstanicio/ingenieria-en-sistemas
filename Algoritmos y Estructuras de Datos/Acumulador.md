@@ -1,6 +1,6 @@
 ---
 created: 2024-05-07 22:15:17
-modified: 2024-06-11 22:13:29
+modified: 2024-06-23 18:32:04
 title: Acumulador
 ---
 
@@ -12,7 +12,7 @@ Una [[Variables|variable]] que utilizamos para llevar la cuenta de, por ejemplo,
 acu = acu + valor
 ```
 
-> [!info]
+> [!note]
 > En [[Python]], también podemos realizar esta asignación de una forma abreviada.
 >
 > ```python

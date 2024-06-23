@@ -16,5 +16,5 @@ $$
 li(V) \Leftrightarrow \nexists c_i \neq 0: c_1 v_1 + c_2 v_2 + \dots + c_n v_n = \overrightarrow{0}
 $$
 
->[!info]
+>[!note]
 >Cualquier [[Subconjunto]] de un conjunto LI también será LI.

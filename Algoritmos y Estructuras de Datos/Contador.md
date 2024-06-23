@@ -12,7 +12,7 @@ Una [[Variables|variable]] que utilizamos para llevar la cuenta de, por ejemplo,
 x = x + 1
 ```
 
-> [!info]
+> [!note]
 > En [[Python]], también podemos realizar esta asignación de una forma abreviada.
 >
 > ```python

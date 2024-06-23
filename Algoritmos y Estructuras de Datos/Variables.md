@@ -2,7 +2,7 @@
 aliases:
   - Variable
 created: 2024-03-26 21:11:00
-modified: 2024-06-14 17:53:00
+modified: 2024-06-23 18:41:04
 title: Variables
 ---
 
@@ -16,5 +16,5 @@ Las variables deben ser ==declararadas==. Para esto debemos darle un nombre, e i
 
 Llamamos ==variables locales== a aquellas variables que son declaradas y utilizadas dentro de una [[Algoritmos y Estructuras de Datos/Función|Función]], y no son accesibles fuera de la misma.
 
-> [!info] Variables globales
-> Son aquellas [[Variables]] declaradas al comienzo del [[Programa propio]], y son accesibles en cualquier lugar del mismo.
+> [!important]
+> Las [[Variables]] **globales** son aquellas declaradas en el nivel base de un [[Programa propio]], y son accesibles en cualquier lugar del mismo.

@@ -1,6 +1,6 @@
 ---
 created: 2024-03-22 17:32:46
-modified: 2024-06-14 17:44:05
+modified: 2024-06-23 18:33:57
 title: Función
 ---
 
@@ -19,5 +19,5 @@ def suma(x, y):
     return r
 ```
 
-> [!info] Salida de una función
+> [!tip]
 > Para indicar la [[Salidas|Salida]] de un [[Algoritmos y Estructuras de Datos/Función|Función]] en [[Python]], utilizamos la palabra `return`.

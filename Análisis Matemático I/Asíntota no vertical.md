@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 14:03:04
-modified: 2024-05-25 18:33:54
+modified: 2024-06-23 18:32:18
 title: Asíntota no vertical
 ---
 
@@ -16,7 +16,7 @@ $$
 \lim\limits_{x \to -\infty} f(x) = b \Rightarrow y = b \text{ es asíntota horizontal para }  x \rightarrow -\infty
 $$
 
-> [!info]
+> [!note]
 > Si se cumple que $\lim\limits_{x \to +\infty} f(x) = \lim\limits_{x \to -\infty} f(x) = b$, podemos expresarlo como $\lim\limits_{x \to \infty} f(x) = b$.
 
 ## Pendiente
@@ -27,7 +27,7 @@ $$
 m = \lim\limits_{x \rightarrow \infty} \frac{f(x)}{x}
 $$
 
-> [!info] Asíntota horizontal
+> [!note]
 > Si la pendiente es $m = 0$, estamos ante una **asíntota horizontal**.
 
 ## Ordenada al origen

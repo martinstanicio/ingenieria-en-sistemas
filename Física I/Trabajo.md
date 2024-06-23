@@ -1,6 +1,6 @@
 ---
 created: 2024-05-30 18:00:17
-modified: 2024-05-30 19:35:45
+modified: 2024-06-23 18:39:38
 title: Trabajo
 ---
 
@@ -14,7 +14,7 @@ $$
 W = F \cdot \Delta x\cdot \cos{\theta}
 $$
 
-> [!info] Trabajo y energía
-> Mientras que todo cuerpo tiene [[Energía]] por tan solo moverse, el [[Trabajo]] siempre depende de un **agente externo** a mi [[Sistemas|Sistema]], la [[Fuerza]].
+> [!note]
+> Mientras que todo cuerpo tiene [[Energía]] por tan solo moverse, el [[Trabajo]] siempre depende de un **agente externo** a mi [[Sistemas|Sistema]]: la [[Fuerza]].
 
-^804ba1
+^tye

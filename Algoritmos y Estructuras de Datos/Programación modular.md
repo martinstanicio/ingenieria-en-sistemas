@@ -6,6 +6,6 @@ title: Programación modular
 
 # Programación modular
 
-Al momento de diseñar un [[Algoritmos]], podemos dividir al problema en [[Librería|módulos]] y **submódulos**, que nos permiten simplificar las tareas que hay que realizar.
+Al momento de diseñar un [[Algoritmos]], podemos dividir al problema en [[Biblioteca|módulos]] y **submódulos**, que nos permiten simplificar las tareas que hay que realizar.
 
 Luego, cada módulo puede ser implementado mediante [[Algoritmos y Estructuras de Datos/Función]] y procedimientos.

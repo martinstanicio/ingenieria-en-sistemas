@@ -3,7 +3,7 @@ aliases:
   - Resultados
   - Salida
 created: 2024-04-16 15:07:59
-modified: 2024-05-28 16:01:21
+modified: 2024-06-23 18:38:12
 title: Salidas
 ---
 
@@ -17,5 +17,5 @@ Pueden ser bienes materiales, servicios, [[Información]] que podrán exportarse
 
 Las salidas ==actúan para alcanzar algún [[Propósito]]== en el sistema. Es decir, deben ser coherentes con el [[Objetivo]] del sistema.
 
-> [!info] Resultados finales e intermedios
+> [!note]
 > Los resultados de los sistemas son **finales**, mientras que los resultados de los [[Subsistema|subsistemas]] son **intermedios**.

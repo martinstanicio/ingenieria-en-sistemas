@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 14:45:10
-modified: 2024-05-25 16:35:24
+modified: 2024-06-23 18:35:15
 title: Infinitos
 ---
 
@@ -8,8 +8,8 @@ title: Infinitos
 
 Cuando tenemos $\lim\limits_{x \to \alpha} f(x) = \infty$, podemos decir que $y = f(x)$ es un ==infinito para $x \rightarrow \alpha$==.
 
-> [!info] $x \rightarrow \alpha$
-> Cuando tenemos $x \rightarrow \alpha$, equivale a decir $x \rightarrow c \in \mathbb{R}$, $x \rightarrow +\infty$ o $x \rightarrow -\infty$.
+> [!note]
+> Cuando decimos $x \rightarrow \alpha$, equivale a decir $x \rightarrow c \in \mathbb{R}$, $x \rightarrow +\infty$ o $x \rightarrow -\infty$.
 
 Si sabemos que $y = f(x)$ es un infinito para $x \rightarrow \alpha$, entonces $y = k \cdot f(x), k \neq 0$ es un infinito para $x \rightarrow \alpha$.
 
@@ -21,7 +21,7 @@ $$
 \ln^m (x) \ll x^p \ll a^x \ll x! \ll x^{kx}, (m > 0 \wedge p > 0 \wedge a > 1 \wedge k > 0)
 $$
 
-> [!info]
+> [!note]
 > Al multiplicar un infinito por una constante **no nula**, se obtiene un infinito de mismo orden.
 
 ### Infinito de mayor orden: $f(x) \gg g(x)$
@@ -56,5 +56,5 @@ $$
 \lim\limits_{x \rightarrow \alpha} \frac{f(x)}{g(x)} = L = 1
 $$
 
-> [!info]
+> [!note]
 > Todo factor de una expresión se puede **sustituir** por un infinito **equivalente** sin que esto altere el límite de la expresión.

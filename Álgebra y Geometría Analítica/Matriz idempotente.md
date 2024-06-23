@@ -1,6 +1,6 @@
 ---
 created: 2024-04-22 21:04:07
-modified: 2024-05-08 01:33:29
+modified: 2024-06-23 18:30:47
 title: Matriz idempotente
 ---
 

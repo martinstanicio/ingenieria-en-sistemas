@@ -1,6 +1,6 @@
 ---
 created: 2024-04-14 16:22:29
-modified: 2024-05-20 11:51:25
+modified: 2024-06-23 18:38:30
 title: Sistema compatible (SC)
 ---
 
@@ -10,7 +10,7 @@ Un [[Sistema de ecuaciones lineales (SEL)]] que tiene un conjunto solución no v
 
 También puede ser llamado **sistema consistente**.
 
->[!info]
+>[!note]
 >Un [[Sistema de ecuaciones lineales (SEL)|SEL]] es compatible cuando su [[Matriz#Vector de términos independientes]] es [[Combinación lineal]] de los vectores columna de la [[Matriz#Matriz de coeficientes]].
 >
 >$$

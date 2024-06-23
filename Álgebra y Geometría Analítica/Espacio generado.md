@@ -1,6 +1,6 @@
 ---
 created: 2024-04-14 01:06:41
-modified: 2024-06-23 15:02:37
+modified: 2024-06-23 18:33:39
 title: Espacio generado
 ---
 
@@ -12,7 +12,7 @@ $$H=gen\{v_1, v_2, \ldots, v_n\} = \{w \in V: w=\alpha_1 v_1 + \alpha_2 v_2 + \l
 
 Para que un [[Conjunto]] también sea un **espacio generador**, un [[Subconjunto]] del mismo debe ser una [[Base]] del [[Espacio vectorial]].
 
->[!info]
+>[!note]
 >El espacio generado de un [[Conjunto]] son todas las posibles [[Combinación lineal|combinaciones lineales]] que se pueden formar a partir del mismo.
 
  Por lo tanto, siempre será un [[Subespacio vectorial]] del conjunto al que pertenecen los vectores, por las siguientes razones:

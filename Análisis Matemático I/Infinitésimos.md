@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 16:25:55
-modified: 2024-05-25 17:36:31
+modified: 2024-06-23 18:34:58
 title: Infinitésimos
 ---
 
@@ -8,8 +8,8 @@ title: Infinitésimos
 
 Cuando tenemos $\lim\limits_{x \to \alpha} f(x) = 0$, podemos decir que $y = f(x)$ es un ==infinitésimo para $x \rightarrow \alpha$==.
 
-> [!info] $x \rightarrow \alpha$
-> Cuando tenemos $x \rightarrow \alpha$, equivale a decir $x \rightarrow c \in \mathbb{R}$, $x \rightarrow +\infty$ o $x \rightarrow -\infty$.
+> [!note]
+> Cuando decimos $x \rightarrow \alpha$, equivale a decir $x \rightarrow c \in \mathbb{R}$, $x \rightarrow +\infty$ o $x \rightarrow -\infty$.
 
 ## Orden de los infinitésimos
 
@@ -19,7 +19,7 @@ $$
 \ln^m (x) \ll x^p \ll a^\frac{1}{x} \ll x^\frac{1}{kx}, (m < 0 \wedge p > 0 \wedge 0 < a < 1 \wedge k > 0)
 $$
 
-> [!info]
+> [!note]
 > Al multiplicar un infinitésimo por una constante **no nula**, se obtiene un infinitésimo de mismo orden.
 
 ### Infinitésimo de mayor orden: $f(x) \gg g(x)$
@@ -54,7 +54,7 @@ $$
 \lim\limits_{x \rightarrow \alpha} \frac{f(x)}{g(x)} = L = 1
 $$
 
-> [!info]
+> [!note]
 > Todo factor de una expresión se puede **sustituir** por un infinitésimo **equivalente** sin que esto altere el límite de la expresión.
 
 ## Infinitésimos equivalentes conocidos

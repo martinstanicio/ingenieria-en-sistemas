@@ -1,6 +1,6 @@
 ---
 created: 2024-04-23 13:59:32
-modified: 2024-06-07 14:57:53
+modified: 2024-06-23 18:32:53
 title: Continuidad
 ---
 
@@ -8,7 +8,7 @@ title: Continuidad
 
 Una [[Análisis Matemático I/Función]] es continua si cuando tomamos dos puntos *cercanos* de su dominio, sus imágenes también serán *cercanas*, es decir, ==no hay saltos en la gráfica== de la misma.
 
-> [!info]
+> [!note]
 > Una [[Análisis Matemático I/Función]] es **continua** cuando podemos dibujarla sin levantar el lápiz del papel.
 
 En [[Lenguaje formal]], para que $f$ sea continua en $c \in D_f$, se deben cumplir las siguientes condiciones:

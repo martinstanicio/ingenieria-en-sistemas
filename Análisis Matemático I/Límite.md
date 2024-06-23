@@ -1,6 +1,6 @@
 ---
 created: 2024-04-23 14:09:56
-modified: 2024-06-07 16:44:34
+modified: 2024-06-23 18:37:41
 title: Límite
 ---
 
@@ -45,5 +45,5 @@ Son aquellos que se aproximan a un valor indefinido:
 
 Cuando encontramos un límite indeterminado, debemos **salvarlo**.
 
-> [!info] Salvar un límite
+> [!note]
 > Escribir la expresión de una **forma equivalente** para poder simplificar y que pase a ser un [[Límite#Límites determinados|Límite determinado]]

@@ -6,7 +6,7 @@ title: Números aleatorios
 
 # Números aleatorios
 
-Para generar **números aleatorios** en [[Python]], debemos ==importar== la [[Librería]] `random`.
+Para generar **números aleatorios** en [[Python]], debemos ==importar== la [[Biblioteca]] `random`.
 
 ```python
 import random

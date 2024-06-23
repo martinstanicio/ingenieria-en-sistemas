@@ -1,6 +1,6 @@
 ---
 created: 2024-05-30 18:00:03
-modified: 2024-06-15 09:54:21
+modified: 2024-06-23 18:39:18
 title: Energía
 ---
 
@@ -8,7 +8,7 @@ title: Energía
 
 La capacidad de realizar un [[Trabajo]].
 
-![[Trabajo#^804ba1]]
+![[Trabajo#^tye]]
 
 ## Energía mecánica
 
