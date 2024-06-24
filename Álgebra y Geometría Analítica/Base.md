@@ -1,6 +1,6 @@
 ---
 created: 2024-05-19 18:13:45
-modified: 2024-05-19 21:53:40
+modified: 2024-06-24 10:58:08
 title: Base
 ---
 
@@ -14,4 +14,4 @@ title: Base
 A diferencia de los [[Conjunto generador|Conjuntos generadores]], las bases ==no poseen información redundante== (vectores que no suman nada adicional a la dimensionalidad).
 
 >[!warning]
->Pueden y suelen existir ==infinitas bases posibles== para un mismo [[Conjunto]].
+>Siempre existen ==infinitas bases posibles== para un mismo [[Conjunto]], con excepción del [[Espacio vectorial trivial]].

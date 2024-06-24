@@ -5,6 +5,18 @@
       "path": "Álgebra y Geometría Analítica/Coordenadas.md"
     },
     {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
+      "basename": "Base estandar",
+      "path": "Base estandar.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
       "basename": "Espacio vectorial trivial",
       "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
     },
@@ -23,10 +35,6 @@
     {
       "basename": "Traza de una matriz",
       "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
     },
     {
       "basename": "Conjunto generador",
@@ -191,14 +199,6 @@
     {
       "basename": "Matriz inversa",
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
-    },
-    {
-      "basename": "Matriz identidad",
-      "path": "Álgebra y Geometría Analítica/Matriz identidad.md"
-    },
-    {
-      "basename": "Matriz escalonada",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
     }
   ],
   "omittedPaths": [],
