@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Inteligencia Artificial/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Álgebra y Geometría Analítica/README.md"
+    },
+    {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
@@ -11,14 +23,6 @@
     {
       "basename": "Base estandar",
       "path": "Álgebra y Geometría Analítica/Base estandar.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Álgebra y Geometría Analítica/README.md"
     },
     {
       "basename": "Coordenadas",
@@ -191,14 +195,6 @@
     {
       "basename": "Funciones trigonométricas",
       "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
-    },
-    {
-      "basename": "Operaciones con matrices",
-      "path": "Álgebra y Geometría Analítica/Operaciones con matrices.md"
-    },
-    {
-      "basename": "Números complejos",
-      "path": "Álgebra y Geometría Analítica/Números complejos.md"
     }
   ],
   "omittedPaths": [],
