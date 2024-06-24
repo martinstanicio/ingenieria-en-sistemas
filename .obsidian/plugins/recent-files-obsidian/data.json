@@ -5,16 +5,40 @@
       "path": "Álgebra y Geometría Analítica/Coordenadas.md"
     },
     {
+      "basename": "Sistema de ecuaciones lineales homogéneo asociado",
+      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo asociado.md"
+    },
+    {
+      "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
+      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
+    },
+    {
+      "basename": "Teorema de Rouche Frobeniuos",
+      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
+    },
+    {
+      "basename": "Matriz escalonada reducida",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Rango",
+      "path": "Álgebra y Geometría Analítica/Rango.md"
+    },
+    {
+      "basename": "Base ordenada",
+      "path": "Álgebra y Geometría Analítica/Base ordenada.md"
+    },
+    {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
     },
     {
       "basename": "Base estandar",
       "path": "Base estandar.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Espacio vectorial trivial",
@@ -63,10 +87,6 @@
     {
       "basename": "Salidas",
       "path": "Sistemas y Procesos de Negocios/Salidas.md"
-    },
-    {
-      "basename": "Matriz escalonada reducida",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
     },
     {
       "basename": "Límite",
@@ -175,30 +195,6 @@
     {
       "basename": "Nulidad",
       "path": "Álgebra y Geometría Analítica/Nulidad.md"
-    },
-    {
-      "basename": "Menor complementario",
-      "path": "Álgebra y Geometría Analítica/Menor complementario.md"
-    },
-    {
-      "basename": "Matriz simétrica",
-      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
-    },
-    {
-      "basename": "Matriz periódica",
-      "path": "Álgebra y Geometría Analítica/Matriz periódica.md"
-    },
-    {
-      "basename": "Matriz nilpotente",
-      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
-    },
-    {
-      "basename": "Matriz involutiva",
-      "path": "Álgebra y Geometría Analítica/Matriz involutiva.md"
-    },
-    {
-      "basename": "Matriz inversa",
-      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     }
   ],
   "omittedPaths": [],

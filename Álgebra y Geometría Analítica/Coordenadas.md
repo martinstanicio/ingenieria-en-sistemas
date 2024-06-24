@@ -1,6 +1,6 @@
 ---
 created: 2024-06-23 20:48:25
-modified: 2024-06-24 10:56:59
+modified: 2024-06-24 11:10:19
 title: Coordenadas
 ---
 
@@ -9,7 +9,7 @@ title: Coordenadas
 Las coordenadas de un vector en una [[Base]] determinada es el vector que contiene a los ==coeficientes== de la [[Combinación lineal]], la cual es única por ser de vectores [[Conjunto linealmente independiente|linealmente independientes]].
 
 > [!important]
-> El órden de las coordenadas 
+> Cuando trabajamos con [[Coordenadas]], siempre debemos utilizar la misma [[Base ordenada]], pues en este caso, el orden de los vectores es relevante.
 
 Dado un [[Espacio vectorial]] $V$ con la siguiente base $S$.
 
