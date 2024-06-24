@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Coordenadas",
+      "path": "Álgebra y Geometría Analítica/Coordenadas.md"
+    },
+    {
       "basename": "Espacio vectorial trivial",
       "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Matriz escalonada",
       "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     }
   ],
   "omittedPaths": [],
