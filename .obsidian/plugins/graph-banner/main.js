@@ -32,10 +32,11 @@ var import_obsidian = require("obsidian");
 var _GraphBannerPlugin = class _GraphBannerPlugin extends import_obsidian.Plugin {
   constructor() {
     super(...arguments);
-    this.onUnload = [];
+    this.unloadListeners = [];
     this.graphNode = null;
   }
   async onload() {
+    console.log("Loading GraphBannerPlugin");
     this.app.workspace.trigger("parse-style-settings");
     if (import_obsidian.Platform.isDesktopApp) {
       this.registerEvent(
@@ -43,24 +44,27 @@ var _GraphBannerPlugin = class _GraphBannerPlugin extends import_obsidian.Plugin
           if (workspaceWindow.getContainer() instanceof import_obsidian.WorkspaceRoot) return;
           await new Promise((resolve) => setTimeout(resolve, 200));
           const obsidianWindows = import_remote.BrowserWindow.getAllWindows();
-          const mainWindow = await this.tryUntilNonNull(
-            () => obsidianWindows.find((win) => win.id === 1)
+          const hiddenGraphWindow = obsidianWindows.find(
+            (win) => win.getTitle().startsWith("Graph") && !win.isVisible()
           );
-          const graphWindow = await this.tryUntilNonNull(
-            () => obsidianWindows.find((win) => win.getTitle().startsWith("Graph"))
+          if (hiddenGraphWindow) return;
+          const mainWindow = obsidianWindows.find((win) => win.id === 1);
+          const graphWindow = obsidianWindows.find(
+            (win) => win.getTitle().startsWith("Graph")
           );
           console.debug("Obsidian windows", {
             obsidianWindows: obsidianWindows.map((win) => win.getTitle()),
             mainWindow,
             graphWindow
           });
+          if (!mainWindow || !graphWindow) return;
           const title = graphWindow.getTitle();
           if (title.startsWith("Graph")) {
             console.debug(`hide graph window: ${title}`);
             graphWindow.hide();
             mainWindow.focus();
           }
-          this.onUnload.push(() => {
+          this.unloadListeners.push(() => {
             graphWindow.closable && graphWindow.close();
           });
         })
@@ -105,16 +109,33 @@ var _GraphBannerPlugin = class _GraphBannerPlugin extends import_obsidian.Plugin
           graphNode,
           noteHeader.nextSibling
         );
+        this.registerEvent(
+          this.app.workspace.on("layout-change", async () => {
+            const fileView2 = this.app.workspace.getActiveViewOfType(import_obsidian.MarkdownView);
+            if (!fileView2) return;
+            const noteHeader2 = await this.tryUntilNonNull(
+              () => fileView2.containerEl.getElementsByClassName("inline-title").item(0)
+            );
+            if (!noteHeader2.parentElement || !noteHeader2.nextSibling) {
+              throw new Error("Failed to get note header");
+            }
+            if (noteHeader2.parentElement.contains(graphNode)) return;
+            noteHeader2.parentElement.insertBefore(
+              graphNode,
+              noteHeader2.nextSibling
+            );
+          })
+        );
       })
     );
   }
-  async unload() {
+  async onunload() {
     var _a;
     console.log("Unloading GraphBannerPlugin");
     (_a = this.graphNode) == null ? void 0 : _a.removeClass(_GraphBannerPlugin.graphBannerNodeClass);
     this.graphNode = null;
-    for (const handleUnload of this.onUnload) {
-      handleUnload();
+    for (const unloadCallback of this.unloadListeners) {
+      unloadCallback();
     }
   }
   async tryUntilNonNull(f, interval = 200, maxCount = 10) {

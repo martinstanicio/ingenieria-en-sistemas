@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Transformación lineal",
+      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
+    },
+    {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
+      "basename": "Base estandar",
+      "path": "Álgebra y Geometría Analítica/Base estandar.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Álgebra y Geometría Analítica/README.md"
+    },
+    {
       "basename": "Coordenadas",
       "path": "Álgebra y Geometría Analítica/Coordenadas.md"
     },
@@ -31,14 +51,6 @@
     {
       "basename": "Base ordenada",
       "path": "Álgebra y Geometría Analítica/Base ordenada.md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
-    },
-    {
-      "basename": "Base estandar",
-      "path": "Base estandar.md"
     },
     {
       "basename": "Espacio vectorial trivial",
@@ -187,14 +199,6 @@
     {
       "basename": "Números complejos",
       "path": "Álgebra y Geometría Analítica/Números complejos.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Nulidad",
-      "path": "Álgebra y Geometría Analítica/Nulidad.md"
     }
   ],
   "omittedPaths": [],
