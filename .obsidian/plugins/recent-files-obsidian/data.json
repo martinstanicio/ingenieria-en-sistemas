@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Estructura organizacional",
+      "path": "Ingeniería y Sociedad/Estructura organizacional.canvas"
+    },
+    {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Algoritmos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
     }
   ],
   "omittedPaths": [],
