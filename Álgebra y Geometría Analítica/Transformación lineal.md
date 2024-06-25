@@ -1,6 +1,11 @@
 ---
+aliases:
+  - Mapeo lineal
+  - Linear mapping
+  - Aplicación lineal
+  - Operador lineal
 created: 2024-06-10 19:20:01
-modified: 2024-06-24 13:18:52
+modified: 2024-06-24 13:38:42
 title: Transformación lineal
 ---
 
