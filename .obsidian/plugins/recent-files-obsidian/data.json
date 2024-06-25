@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de existencia de una transformación lineal",
+      "path": "Álgebra y Geometría Analítica/Teorema de existencia de una transformación lineal.md"
+    },
+    {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Algoritmos",
       "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Álgebra de Boole",
-      "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
     }
   ],
   "omittedPaths": [],
