@@ -5,6 +5,30 @@
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
     {
+      "basename": "Transformación matricial",
+      "path": "Álgebra y Geometría Analítica/Transformación matricial.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Estructuras de datos",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
+    },
+    {
+      "basename": "Transformación de transposición",
+      "path": "Álgebra y Geometría Analítica/Transformación de transposición.md"
+    },
+    {
+      "basename": "Transformación identidad",
+      "path": "Álgebra y Geometría Analítica/Transformación identidad.md"
+    },
+    {
+      "basename": "Transformación nula",
+      "path": "Álgebra y Geometría Analítica/Transformación nula.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -43,10 +67,6 @@
     {
       "basename": "Matriz escalonada reducida",
       "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Rango",
@@ -179,22 +199,6 @@
     {
       "basename": "Álgebra de Boole",
       "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
-    },
-    {
-      "basename": "Acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Acumulador.md"
-    },
-    {
-      "basename": "Matriz idempotente",
-      "path": "Álgebra y Geometría Analítica/Matriz idempotente.md"
-    },
-    {
-      "basename": "Lenguaje de máquina",
-      "path": "Algoritmos y Estructuras de Datos/Lenguaje de máquina.md"
-    },
-    {
-      "basename": "Funciones trigonométricas",
-      "path": "Algoritmos y Estructuras de Datos/Funciones trigonométricas.md"
     }
   ],
   "omittedPaths": [],
