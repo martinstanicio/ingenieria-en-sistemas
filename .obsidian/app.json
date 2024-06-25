@@ -45,5 +45,6 @@
   "showUnsupportedFiles": true,
   "readableLineLength": true,
   "vimMode": false,
-  "spellcheck": false
+  "spellcheck": false,
+  "showRibbon": false
 }
