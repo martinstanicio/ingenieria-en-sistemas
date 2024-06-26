@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Espacio de columnas",
+      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
+    },
+    {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
+    },
+    {
+      "basename": "Regla de Chio",
+      "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
     },
     {
       "basename": "Nulidad",
@@ -191,14 +199,6 @@
     {
       "basename": "Cardinal",
       "path": "Álgebra y Geometría Analítica/Cardinal.md"
-    },
-    {
-      "basename": "Suma directa",
-      "path": "Álgebra y Geometría Analítica/Suma directa.md"
-    },
-    {
-      "basename": "Traza de una matriz",
-      "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
     }
   ],
   "omittedPaths": [],
