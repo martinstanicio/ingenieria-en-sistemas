@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "20240614 - Rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
+    },
+    {
+      "basename": "20240409 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
+    },
+    {
       "basename": "Estructura organizacional",
       "path": "Ingeniería y Sociedad/Estructura organizacional.canvas"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Conjunto linealmente dependiente",
       "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
-    },
-    {
-      "basename": "Comportamiento final",
-      "path": "Análisis Matemático I/Comportamiento final.md"
-    },
-    {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
     }
   ],
   "omittedPaths": [],
