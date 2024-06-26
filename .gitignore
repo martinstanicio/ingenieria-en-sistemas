@@ -7,3 +7,6 @@
 # exclude OS settings and caches
 .trash/
 .DS_Store
+
+# exclude python cache
+__pycache__/

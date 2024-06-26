@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "20240625 - Sueldos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Sueldos.md"
+    },
+    {
+      "basename": "20240625 - Pitágoras",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Pitágoras.md"
+    },
+    {
+      "basename": "20240618 - Procedimiento",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240618 - Procedimiento.md"
+    },
+    {
       "basename": "README",
       "path": "Proyecto Final/README.md"
     },
@@ -63,10 +75,6 @@
     {
       "basename": "README",
       "path": "Inteligencia Artificial/README.md"
-    },
-    {
-      "basename": "20240618 - Procedimiento",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240618 - Procedimiento.md"
     },
     {
       "basename": "20240614 - Rectángulo",
@@ -191,14 +199,6 @@
     {
       "basename": "Energía",
       "path": "Física I/Energía.md"
-    },
-    {
-      "basename": "Fuerza",
-      "path": "Física I/Fuerza.md"
-    },
-    {
-      "basename": "Sistema compatible (SC)",
-      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
     }
   ],
   "omittedPaths": [],
