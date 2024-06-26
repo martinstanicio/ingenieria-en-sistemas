@@ -118,15 +118,6 @@
       "key": "ArrowUp"
     }
   ],
-  "bookmarks:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "Q"
-    }
-  ],
   "app:toggle-right-sidebar": [
     {
       "modifiers": [
@@ -159,6 +150,15 @@
         "Mod"
       ],
       "key": "Q"
+    }
+  ],
+  "bookmarks:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "B"
     }
   ]
 }

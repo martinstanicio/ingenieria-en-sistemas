@@ -1,8 +1,80 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "Proyecto Final/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Seguridad en los Sistemas de Información/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Sistemas de Gestión/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Ciencia de Datos/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Administración de Sistemas de Información/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Tecnologías para la Automatización/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Simulación/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Ingeniería y Calidad de Software/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Diseño de Sistemas de Información/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Análisis Numérico/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Economía/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Comunicación de Datos/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Desarrollo de Software/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Bases de Datos/README.md"
+    },
+    {
+      "basename": "README",
+      "path": "Inteligencia Artificial/README.md"
+    },
+    {
+      "basename": "20240618 - Procedimiento",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240618 - Procedimiento.md"
+    },
+    {
       "basename": "20240614 - Rectángulo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
+    },
+    {
+      "basename": "Procedimiento",
+      "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
     },
     {
       "basename": "20240409 - Sueldo",
@@ -43,14 +115,6 @@
     {
       "basename": "Transformación nula",
       "path": "Álgebra y Geometría Analítica/Transformación nula.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Inteligencia Artificial/README.md"
     },
     {
       "basename": "README",
@@ -135,70 +199,6 @@
     {
       "basename": "Sistema compatible (SC)",
       "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
-    },
-    {
-      "basename": "Salidas",
-      "path": "Sistemas y Procesos de Negocios/Salidas.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
-    },
-    {
-      "basename": "Biblioteca",
-      "path": "Algoritmos y Estructuras de Datos/Biblioteca.md"
-    },
-    {
-      "basename": "Kernel",
-      "path": "Álgebra y Geometría Analítica/Kernel.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
-    },
-    {
-      "basename": "Infinitos",
-      "path": "Análisis Matemático I/Infinitos.md"
-    },
-    {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Espacio generado",
-      "path": "Álgebra y Geometría Analítica/Espacio generado.md"
-    },
-    {
-      "basename": "Espacio de filas",
-      "path": "Álgebra y Geometría Analítica/Espacio de filas.md"
-    },
-    {
-      "basename": "Espacio de columnas",
-      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
-    },
-    {
-      "basename": "Dimensión",
-      "path": "Álgebra y Geometría Analítica/Dimensión.md"
-    },
-    {
-      "basename": "Continuidad",
-      "path": "Análisis Matemático I/Continuidad.md"
-    },
-    {
-      "basename": "Contador",
-      "path": "Algoritmos y Estructuras de Datos/Contador.md"
-    },
-    {
-      "basename": "Conjunto linealmente independiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
-    },
-    {
-      "basename": "Conjunto linealmente dependiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
     }
   ],
   "omittedPaths": [],
