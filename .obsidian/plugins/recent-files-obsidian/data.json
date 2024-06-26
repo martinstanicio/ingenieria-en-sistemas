@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Transformación lineal",
+      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
+    },
+    {
+      "basename": "Nulidad",
+      "path": "Álgebra y Geometría Analítica/Nulidad.md"
+    },
+    {
+      "basename": "Isomorfismo",
+      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
+    },
+    {
       "basename": "Espacio vectorial trivial",
       "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
+    },
+    {
+      "basename": "Propiedades de determinantes",
+      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
     {
       "basename": "Base",
@@ -105,10 +121,6 @@
       "path": "Ingeniería y Sociedad/Estructura organizacional.canvas"
     },
     {
-      "basename": "Transformación lineal",
-      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
-    },
-    {
       "basename": "Teorema de existencia de una transformación lineal",
       "path": "Álgebra y Geometría Analítica/Teorema de existencia de una transformación lineal.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Traza de una matriz",
       "path": "Álgebra y Geometría Analítica/Traza de una matriz.md"
-    },
-    {
-      "basename": "Conjunto generador",
-      "path": "Álgebra y Geometría Analítica/Conjunto generador.md"
-    },
-    {
-      "basename": "Variables",
-      "path": "Algoritmos y Estructuras de Datos/Variables.md"
-    },
-    {
-      "basename": "Trabajo",
-      "path": "Física I/Trabajo.md"
     }
   ],
   "omittedPaths": [],
