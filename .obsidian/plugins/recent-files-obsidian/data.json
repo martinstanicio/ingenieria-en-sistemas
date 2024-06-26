@@ -9,6 +9,10 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Pitágoras.md"
     },
     {
+      "basename": "20240625 - Energía",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Energía.md"
+    },
+    {
       "basename": "20240618 - Procedimiento",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240618 - Procedimiento.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Trabajo",
       "path": "Física I/Trabajo.md"
-    },
-    {
-      "basename": "Energía",
-      "path": "Física I/Energía.md"
     }
   ],
   "omittedPaths": [],
