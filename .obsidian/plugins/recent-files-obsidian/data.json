@@ -5,6 +5,10 @@
       "path": "Álgebra y Geometría Analítica/Coordenadas.md"
     },
     {
+      "basename": "Teorema de Laplace",
+      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
+    },
+    {
       "basename": "Base",
       "path": "Álgebra y Geometría Analítica/Base.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Base ordenada",
       "path": "Álgebra y Geometría Analítica/Base ordenada.md"
-    },
-    {
-      "basename": "Subespacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Subespacio vectorial.md"
     }
   ],
   "omittedPaths": [],
