@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Diagrama de Veitch-Karnaugh",
+      "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
+    },
+    {
+      "basename": "Propiedades de determinantes",
+      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
+    },
+    {
+      "basename": "Tabla de verdades",
+      "path": "Lógica y Estructuras Discretas/Tabla de verdades.md"
+    },
+    {
+      "basename": "Minitermino",
+      "path": "Arquitectura de Computadoras/Minitermino.md"
+    },
+    {
       "basename": "Espacio de columnas",
       "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
     },
@@ -23,10 +39,6 @@
     {
       "basename": "Espacio vectorial trivial",
       "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
-    },
-    {
-      "basename": "Propiedades de determinantes",
-      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
     {
       "basename": "Base",
@@ -187,18 +199,6 @@
     {
       "basename": "Rango",
       "path": "Álgebra y Geometría Analítica/Rango.md"
-    },
-    {
-      "basename": "Base ordenada",
-      "path": "Álgebra y Geometría Analítica/Base ordenada.md"
-    },
-    {
-      "basename": "Subespacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Subespacio vectorial.md"
-    },
-    {
-      "basename": "Cardinal",
-      "path": "Álgebra y Geometría Analítica/Cardinal.md"
     }
   ],
   "omittedPaths": [],
