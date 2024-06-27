@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Coordenadas",
+      "path": "Álgebra y Geometría Analítica/Coordenadas.md"
+    },
+    {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
@@ -39,10 +47,6 @@
     {
       "basename": "Espacio vectorial trivial",
       "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
     },
     {
       "basename": "20240625 - Pitágoras",
@@ -167,10 +171,6 @@
     {
       "basename": "Base estandar",
       "path": "Álgebra y Geometría Analítica/Base estandar.md"
-    },
-    {
-      "basename": "Coordenadas",
-      "path": "Álgebra y Geometría Analítica/Coordenadas.md"
     },
     {
       "basename": "Sistema de ecuaciones lineales homogéneo asociado",
