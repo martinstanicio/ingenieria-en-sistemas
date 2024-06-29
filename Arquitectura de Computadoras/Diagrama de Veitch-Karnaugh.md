@@ -5,7 +5,7 @@ title: Diagrama de Veitch-Karnaugh
 ---
 
 # Diagrama de Veitch-Karnaugh
-
+nudnhujg
 Es una herramienta gráfica utilizada para simplificar expresiones [[Álgebra de Boole|booleanas]].
 
 > [!tip]

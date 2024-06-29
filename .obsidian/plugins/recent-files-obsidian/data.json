@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "Transformación lineal",
+      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
+    },
+    {
+      "basename": "Longitud lógica",
+      "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
+    },
+    {
+      "basename": "Procedimiento",
+      "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Algoritmos y Estructuras de Datos/Función.md"
+    },
+    {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
+      "basename": "Cuerpo",
+      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
+    },
+    {
+      "basename": "20240614 - Rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
+    },
+    {
+      "basename": "20240521 - Club",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
+    },
+    {
+      "basename": "Diagrama de Veitch-Karnaugh",
+      "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
+    },
+    {
       "basename": "Propiedades de determinantes",
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
@@ -11,14 +47,6 @@
     {
       "basename": "Teorema de Laplace",
       "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
-    },
-    {
-      "basename": "Transformación lineal",
-      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
     {
       "basename": "README",
@@ -125,14 +153,6 @@
       "path": "Inteligencia Artificial/README.md"
     },
     {
-      "basename": "20240614 - Rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
-    },
-    {
-      "basename": "Procedimiento",
-      "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
-    },
-    {
       "basename": "20240409 - Sueldo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Sistema de ecuaciones lineales homogéneo asociado",
       "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo asociado.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
-    },
-    {
-      "basename": "Teorema de Rouche Frobeniuos",
-      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
-    },
-    {
-      "basename": "Matriz escalonada reducida",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada reducida.md"
-    },
-    {
-      "basename": "Rango",
-      "path": "Álgebra y Geometría Analítica/Rango.md"
-    },
-    {
-      "basename": "Base ordenada",
-      "path": "Álgebra y Geometría Analítica/Base ordenada.md"
     }
   ],
   "omittedPaths": [],
