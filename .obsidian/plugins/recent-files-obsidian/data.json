@@ -5,6 +5,26 @@
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
     {
+      "basename": "Coordenadas",
+      "path": "Álgebra y Geometría Analítica/Coordenadas.md"
+    },
+    {
+      "basename": "Elemento opuesto o inverso",
+      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
+    },
+    {
+      "basename": "Conmutatividad",
+      "path": "Álgebra y Geometría Analítica/Conmutatividad.md"
+    },
+    {
+      "basename": "Conjunto generador",
+      "path": "Álgebra y Geometría Analítica/Conjunto generador.md"
+    },
+    {
+      "basename": "Logaritmo natural de un complejo",
+      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
+    },
+    {
       "basename": "Longitud lógica",
       "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
     },
@@ -39,10 +59,6 @@
     {
       "basename": "Propiedades de determinantes",
       "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
-    },
-    {
-      "basename": "Coordenadas",
-      "path": "Álgebra y Geometría Analítica/Coordenadas.md"
     },
     {
       "basename": "Teorema de Laplace",
@@ -183,22 +199,6 @@
     {
       "basename": "Transformación identidad",
       "path": "Álgebra y Geometría Analítica/Transformación identidad.md"
-    },
-    {
-      "basename": "Transformación nula",
-      "path": "Álgebra y Geometría Analítica/Transformación nula.md"
-    },
-    {
-      "basename": "README",
-      "path": "Álgebra y Geometría Analítica/README.md"
-    },
-    {
-      "basename": "Base estandar",
-      "path": "Álgebra y Geometría Analítica/Base estandar.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales homogéneo asociado",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo asociado.md"
     }
   ],
   "omittedPaths": [],

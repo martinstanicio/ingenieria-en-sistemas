@@ -4,8 +4,9 @@ aliases:
   - Linear mapping
   - Aplicación lineal
   - Operador lineal
+  - TL
 created: 2024-06-10 19:20:01
-modified: 2024-06-26 01:26:15
+modified: 2024-06-28 22:42:27
 title: Transformación lineal
 ---
 
@@ -30,18 +31,38 @@ Si $T$ es una [[Transformación lineal]] y $c$ es un escalar, entonces $T(c \cdo
 
 $T(0) = 0$ para toda [[Transformación lineal]] $T$.
 
+## Tipos de [[Transformación lineal]]
+
+## Monomorfismo
+
+Una [[Transformación lineal|TL]] $T: V \rightarrow W$ es **monomorfismo** si es ==inyectiva==, y viceversa. Para esto, su [[Nulidad]] debe ser $0$.
+
+$$
+\nu_T = \dim(\ker(T)) = 0
+$$
+
+Si $\dim(V) > \dim(W)$, es decir, si la [[Dimensión]] del espacio de salida $V$ es mayor que la del espacio de llegada $W$, ==no es monomorfismo==.
+
+## Epimorfismo
+
+Una [[Transformación lineal|TL]] $T: V \rightarrow W$ es **epimorfismo** si es ==sobreyectiva==, y viceversa. Para esto, la [[Dimensión]] de su espacio de salida $V$ debe ser mayor o igual a su espacio de llegada $W$.
+
+$$
+\dim(V) \geq \dim(W)
+$$
+
 ## Isomorfismo
 
-Para que una [[Transformación lineal]] $T: V \rightarrow W$ sea un [[Álgebra y Geometría Analítica/Isomorfismo|Isomorfismo]], debe ser biyectiva.
+Una [[Transformación lineal|TL]] es **isomorfismo** si es ==biyectiva==, y viceversa. Para esto, debe ser [[Transformación lineal#Monomorfismo|monomorfismo]] y [[Transformación lineal#Epimorfismo|epimorfismo]].
 
-Para que sea inyectiva, su [[Nulidad]] debe ser $0$.
+## Endomorfismo
 
-$$
-\nu_T = dim(Ker(T)) = 0
-$$
-
-Para que sea sobreyectiva, la [[Dimensión]] de su [[Imagen]] debe ser igual a la [[Dimensión]] del espacio de llegada $W$.
+Una [[Transformación lineal|TL]] $T: V \rightarrow W$ es **endomorfismo** si la [[Dimensión]] de su espacio de salida $V$ y su espacio de llegada $W$ son iguales.
 
 $$
-dim(Imagen(T)) = dim(W)
+\dim(V) = \dim(W)
 $$
+
+## Automorfismo
+
+Una [[Transformación lineal|TL]] es **automorfismo** si es [[Transformación lineal#Isomorfismo|isomorfismo]] y un [[Transformación lineal#Endomorfismo|endomorfismo]].
