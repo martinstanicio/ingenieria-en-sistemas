@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "20240625 - Sueldos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Sueldos.md"
+    },
+    {
+      "basename": "Mínimo",
+      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
+    },
+    {
       "basename": "Logaritmo natural de un complejo",
       "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
+    },
+    {
+      "basename": "Ciclo repetir-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo repetir-hasta.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
     },
     {
       "basename": "Transformación lineal",
@@ -71,10 +87,6 @@
     {
       "basename": "Conocimiento",
       "path": "Ingeniería y Sociedad/Conocimiento.md"
-    },
-    {
-      "basename": "20240625 - Sueldos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Sueldos.md"
     },
     {
       "basename": "Espacio de columnas",
@@ -183,22 +195,6 @@
     {
       "basename": "Transformación matricial",
       "path": "Álgebra y Geometría Analítica/Transformación matricial.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Estructuras de datos",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
-    },
-    {
-      "basename": "Transformación de transposición",
-      "path": "Álgebra y Geometría Analítica/Transformación de transposición.md"
-    },
-    {
-      "basename": "Transformación identidad",
-      "path": "Álgebra y Geometría Analítica/Transformación identidad.md"
     }
   ],
   "omittedPaths": [],

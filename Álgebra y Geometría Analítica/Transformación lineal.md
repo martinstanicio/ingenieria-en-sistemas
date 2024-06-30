@@ -6,7 +6,7 @@ aliases:
   - Operador lineal
   - TL
 created: 2024-06-10 19:20:01
-modified: 2024-06-28 22:42:27
+modified: 2024-06-29 09:41:22
 title: Transformación lineal
 ---
 
@@ -53,14 +53,18 @@ $$
 
 ## Isomorfismo
 
-Una [[Transformación lineal|TL]] es **isomorfismo** si es ==biyectiva==, y viceversa. Para esto, debe ser [[Transformación lineal#Monomorfismo|monomorfismo]] y [[Transformación lineal#Epimorfismo|epimorfismo]].
-
-## Endomorfismo
-
-Una [[Transformación lineal|TL]] $T: V \rightarrow W$ es **endomorfismo** si la [[Dimensión]] de su espacio de salida $V$ y su espacio de llegada $W$ son iguales.
+Una [[Transformación lineal|TL]] es **isomorfismo** si es ==biyectiva==, y viceversa. Para esto, debe ser [[Transformación lineal#Monomorfismo|monomorfismo]] y [[Transformación lineal#Epimorfismo|epimorfismo]]. Es decir, debe cumplirse lo siguiente.
 
 $$
 \dim(V) = \dim(W)
+$$
+
+## Endomorfismo
+
+Una [[Transformación lineal|TL]] $T: V \rightarrow W$ es **endomorfismo** si su espacio de salida $V$ y su espacio de llegada $W$ son iguales.
+
+$$
+V = W
 $$
 
 ## Automorfismo
