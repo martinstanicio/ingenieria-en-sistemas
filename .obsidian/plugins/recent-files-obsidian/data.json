@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "BINIT",
+      "path": "Sistemas y Procesos de Negocios/BINIT.md"
+    },
+    {
+      "basename": "Dato",
+      "path": "Sistemas y Procesos de Negocios/Dato.md"
+    },
+    {
+      "basename": "Atributos",
+      "path": "Sistemas y Procesos de Negocios/Atributos.md"
+    },
+    {
+      "basename": "Elemento",
+      "path": "Sistemas y Procesos de Negocios/Elemento.md"
+    },
+    {
+      "basename": "Entidad",
+      "path": "Sistemas y Procesos de Negocios/Entidad.md"
+    },
+    {
+      "basename": "Sistema de información",
+      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
+    },
+    {
+      "basename": "Sistema informático",
+      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
+    },
+    {
+      "basename": "Sistema de comunicación",
+      "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
       "basename": "Frase o grupo nominal",
       "path": "Inglés I/Frase o grupo nominal.md"
     },
@@ -163,42 +199,6 @@
     {
       "basename": "README",
       "path": "Análisis Numérico/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Economía/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Comunicación de Datos/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Desarrollo de Software/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Bases de Datos/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Inteligencia Artificial/README.md"
-    },
-    {
-      "basename": "20240409 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240409 - Sueldo.md"
-    },
-    {
-      "basename": "Estructura organizacional",
-      "path": "Ingeniería y Sociedad/Estructura organizacional.canvas"
-    },
-    {
-      "basename": "Teorema de existencia de una transformación lineal",
-      "path": "Álgebra y Geometría Analítica/Teorema de existencia de una transformación lineal.md"
-    },
-    {
-      "basename": "Transformación matricial",
-      "path": "Álgebra y Geometría Analítica/Transformación matricial.md"
     }
   ],
   "omittedPaths": [],
