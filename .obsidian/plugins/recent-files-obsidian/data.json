@@ -1,20 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Conocimiento",
-      "path": "Ingeniería y Sociedad/Conocimiento.md"
-    },
-    {
       "basename": "Entropía",
       "path": "Sistemas y Procesos de Negocios/Entropía.md"
     },
     {
+      "basename": "Probabilidad",
+      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
       "basename": "Neguentropia",
       "path": "Sistemas y Procesos de Negocios/Neguentropia.md"
+    },
+    {
+      "basename": "BINIT",
+      "path": "Sistemas y Procesos de Negocios/BINIT.md"
+    },
+    {
+      "basename": "Conocimiento",
+      "path": "Ingeniería y Sociedad/Conocimiento.md"
     },
     {
       "basename": "Tipos de sistemas",
@@ -27,10 +35,6 @@
     {
       "basename": "False friends",
       "path": "Inglés I/False friends.md"
-    },
-    {
-      "basename": "BINIT",
-      "path": "Sistemas y Procesos de Negocios/BINIT.md"
     },
     {
       "basename": "Bit",
@@ -195,10 +199,6 @@
     {
       "basename": "README",
       "path": "Sistemas de Gestión/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Ciencia de Datos/README.md"
     }
   ],
   "omittedPaths": [],
