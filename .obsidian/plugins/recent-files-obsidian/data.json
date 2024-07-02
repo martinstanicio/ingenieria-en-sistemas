@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Equifinalidad",
+      "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
+    },
+    {
       "basename": "Entropía",
       "path": "Sistemas y Procesos de Negocios/Entropía.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "README",
       "path": "Seguridad en los Sistemas de Información/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Sistemas de Gestión/README.md"
     }
   ],
   "omittedPaths": [],
