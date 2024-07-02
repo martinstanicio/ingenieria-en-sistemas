@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "Equifinalidad",
       "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
     },
     {
       "basename": "Entropía",
       "path": "Sistemas y Procesos de Negocios/Entropía.md"
+    },
+    {
+      "basename": "Uptime",
+      "path": "Sistemas y Procesos de Negocios/Uptime.md"
     },
     {
       "basename": "Probabilidad",
@@ -157,10 +165,6 @@
       "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "Espacio de columnas",
       "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
     },
@@ -183,22 +187,6 @@
     {
       "basename": "20240625 - Pitágoras",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Pitágoras.md"
-    },
-    {
-      "basename": "20240625 - Energía",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Energía.md"
-    },
-    {
-      "basename": "20240618 - Procedimiento",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240618 - Procedimiento.md"
-    },
-    {
-      "basename": "README",
-      "path": "Proyecto Final/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Seguridad en los Sistemas de Información/README.md"
     }
   ],
   "omittedPaths": [],
