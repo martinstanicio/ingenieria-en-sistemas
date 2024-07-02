@@ -24,7 +24,7 @@ Se sustituye $0$ por $1$ y $1$ por $0$, para representar cuánto le falta al nú
 
 Por ejemplo, el complemento, es decir, el número que representa al negativo, del número $12$ ($00001100$) es el $243$ ($11110011$).
 
-El rango de representación en $2^n - 1$, ya que existen dos representaciones del cero ($00000000$ y $11111111$). Por ejemplo, si trabajamos con 8 [[Bit|bits]], podemos representar el siguiente rango: $(-127,-0,+0,+127)$.
+El rango de representación en $2^n - 1$, ya que existen dos representaciones del cero ($00000000$ y $11111111$). Por ejemplo, si trabajamos con 8 [[Arquitectura de Computadoras/Bit|bits]], podemos representar el siguiente rango: $(-127,-0,+0,+127)$.
 
 ## Complemento a dos
 

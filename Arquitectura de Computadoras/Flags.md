@@ -9,7 +9,7 @@ title: Flags
 - PC: Program Counter
 - PSW: Processor Status Word (también llamado Flag Register Process Status Word)
 
-Son [[Bit|bits]] individuales en un registro de estado de la [[CPU]] que se utilizan para indicar el resultado de operaciones aritméticas lógicas y de comparación.
+Son [[Arquitectura de Computadoras/Bit|bits]] individuales en un registro de estado de la [[CPU]] que se utilizan para indicar el resultado de operaciones aritméticas lógicas y de comparación.
 
 Estas banderas sirven como indicadores para que la CPU tome decisiones sobre el flujo de control del programa y para optimizar el rendimiento.
 

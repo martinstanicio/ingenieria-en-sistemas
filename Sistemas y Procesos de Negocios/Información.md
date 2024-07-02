@@ -1,6 +1,6 @@
 ---
 created: 2024-04-30 19:56:40
-modified: 2024-05-14 20:01:59
+modified: 2024-07-02 12:55:20
 title: Información
 ---
 
@@ -8,9 +8,16 @@ title: Información
 
 Es el [[Conocimiento]], que en un ==contexto dado== puede ser relevante y tener un significado ==para alguien particular==.
 
->Es la ==contracara de la incertidumbre==.
+> [!note]
+> Es la inversa de la [[Entropía]].
 
-Algo solo es considerado información la primera vez que lo vemos y aprendemos, luego, pasa a ser un [[Dato]].
+Algo solo es considerado [[Información]] la primera vez que lo vemos y aprendemos, luego, pasa a ser un [[Dato]].
+
+Segun el nivel de ==sorpresa== de cada mensaje $E$, podemos calcular cuánta [[Información]] $I(E)$ aporta utilizando la [[Probabilidad]] $P(E)$ de su ocurrencia.
+
+$$
+I(E) = \log_2 \left( \frac{1}{P(E)} \right)
+$$
 
 ## Atributos primarios
 

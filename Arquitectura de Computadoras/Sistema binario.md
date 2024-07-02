@@ -12,7 +12,7 @@ $$
 0011_2 = 0 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 3
 $$
 
-Cada cifra de un número binario es un [[Bit]]. El primero se denomina **MSB** (Most Significant Bit), y el último **LSB** (Least Significant Bit).
+Cada cifra de un número binario es un [[Arquitectura de Computadoras/Bit]]. El primero se denomina **MSB** (Most Significant Bit), y el último **LSB** (Least Significant Bit).
 
 ## Operaciones con binarios no signados
 

@@ -1,8 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "Conocimiento",
+      "path": "Ingeniería y Sociedad/Conocimiento.md"
+    },
+    {
+      "basename": "Entropía",
+      "path": "Sistemas y Procesos de Negocios/Entropía.md"
+    },
+    {
+      "basename": "Neguentropia",
+      "path": "Sistemas y Procesos de Negocios/Neguentropia.md"
+    },
+    {
+      "basename": "Tipos de sistemas",
+      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
+    },
+    {
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
+      "basename": "False friends",
+      "path": "Inglés I/False friends.md"
+    },
+    {
       "basename": "BINIT",
       "path": "Sistemas y Procesos de Negocios/BINIT.md"
+    },
+    {
+      "basename": "Bit",
+      "path": "Arquitectura de Computadoras/Bit.md"
     },
     {
       "basename": "Dato",
@@ -31,10 +63,6 @@
     {
       "basename": "Sistema de comunicación",
       "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
     },
     {
       "basename": "Frase o grupo nominal",
@@ -125,10 +153,6 @@
       "path": "README.md"
     },
     {
-      "basename": "Conocimiento",
-      "path": "Ingeniería y Sociedad/Conocimiento.md"
-    },
-    {
       "basename": "Espacio de columnas",
       "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "README",
       "path": "Ciencia de Datos/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Administración de Sistemas de Información/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Tecnologías para la Automatización/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Simulación/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Ingeniería y Calidad de Software/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Diseño de Sistemas de Información/README.md"
-    },
-    {
-      "basename": "README",
-      "path": "Análisis Numérico/README.md"
     }
   ],
   "omittedPaths": [],

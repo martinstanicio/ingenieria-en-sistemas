@@ -6,7 +6,7 @@ title: Byte
 
 # Byte
 
-Unidad que representa 8 [[Bit|bits]] en el [[Sistema binario]].
+Unidad que representa 8 [[Arquitectura de Computadoras/Bit|bits]] en el [[Sistema binario]].
 
 Por ejemplo, el número 5 escrito como un número binario de 8 bits.
 
