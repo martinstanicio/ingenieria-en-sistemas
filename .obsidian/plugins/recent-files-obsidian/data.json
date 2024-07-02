@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "Estructura",
+      "path": "Sistemas y Procesos de Negocios/Estructura.md"
+    },
+    {
+      "basename": "Estado",
+      "path": "Sistemas y Procesos de Negocios/Estado.md"
+    },
+    {
+      "basename": "Atributos",
+      "path": "Sistemas y Procesos de Negocios/Atributos.md"
+    },
+    {
+      "basename": "Retroalimentación",
+      "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
+    },
+    {
+      "basename": "Jerarquía",
+      "path": "Sistemas y Procesos de Negocios/Jerarquía.md"
+    },
+    {
+      "basename": "Relación",
+      "path": "Lógica y Estructuras Discretas/Relación.md"
+    },
+    {
+      "basename": "Entropía",
+      "path": "Sistemas y Procesos de Negocios/Entropía.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
+    },
+    {
+      "basename": "BINIT",
+      "path": "Sistemas y Procesos de Negocios/BINIT.md"
+    },
+    {
       "basename": "Equifinalidad",
       "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
     },
@@ -9,16 +45,8 @@
       "path": "README.md"
     },
     {
-      "basename": "Entropía",
-      "path": "Sistemas y Procesos de Negocios/Entropía.md"
-    },
-    {
       "basename": "Uptime",
       "path": "Sistemas y Procesos de Negocios/Uptime.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
     },
     {
       "basename": "Información",
@@ -27,10 +55,6 @@
     {
       "basename": "Neguentropia",
       "path": "Sistemas y Procesos de Negocios/Neguentropia.md"
-    },
-    {
-      "basename": "BINIT",
-      "path": "Sistemas y Procesos de Negocios/BINIT.md"
     },
     {
       "basename": "Conocimiento",
@@ -55,10 +79,6 @@
     {
       "basename": "Dato",
       "path": "Sistemas y Procesos de Negocios/Dato.md"
-    },
-    {
-      "basename": "Atributos",
-      "path": "Sistemas y Procesos de Negocios/Atributos.md"
     },
     {
       "basename": "Elemento",
@@ -179,14 +199,6 @@
     {
       "basename": "Isomorfismo",
       "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
-    },
-    {
-      "basename": "Espacio vectorial trivial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial trivial.md"
-    },
-    {
-      "basename": "20240625 - Pitágoras",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Pitágoras.md"
     }
   ],
   "omittedPaths": [],

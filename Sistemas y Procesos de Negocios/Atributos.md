@@ -1,6 +1,6 @@
 ---
 created: 2024-03-26 19:31:51
-modified: 2024-07-01 12:49:17
+modified: 2024-07-02 15:20:54
 title: Atributos
 ---
 
@@ -23,4 +23,4 @@ Aquellos cuya presencia o ausencia ==no altera la forma en que se define== al [[
 
 ## Atributos de estado
 
-Son características específicas que ==describen el estado actual== del [[Elemento]], y pueden influir en ==cómo interactúa== con con el [[Sistemas|sistema]].
+Son características específicas que ==describen el [[Estado]] actual== del [[Elemento]], y pueden influir en ==cómo interactúa== con con el [[Sistemas|sistema]].
