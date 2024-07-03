@@ -5,6 +5,10 @@
       "path": "Lógica y Estructuras Discretas/Principio de inducción matemática.md"
     },
     {
+      "basename": "Conjunto potencia",
+      "path": "Lógica y Estructuras Discretas/Conjunto potencia.md"
+    },
+    {
       "basename": "Recursividad",
       "path": "Sistemas y Procesos de Negocios/Recursividad.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Ciclo mientras",
       "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "Transformación lineal",
-      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     }
   ],
   "omittedPaths": [],
