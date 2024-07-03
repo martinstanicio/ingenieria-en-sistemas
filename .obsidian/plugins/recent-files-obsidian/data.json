@@ -1,8 +1,104 @@
 {
   "recentFiles": [
     {
+      "basename": "Principio del buen ordenamiento",
+      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
+    },
+    {
+      "basename": "Principio de inducción",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción.md"
+    },
+    {
+      "basename": "Implicación (→)",
+      "path": "Lógica y Estructuras Discretas/Implicación (→).md"
+    },
+    {
+      "basename": "Cadena",
+      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
+    },
+    {
+      "basename": "20240702 - Fechas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Fechas.md"
+    },
+    {
       "basename": "Estructura",
       "path": "Sistemas y Procesos de Negocios/Estructura.md"
+    },
+    {
+      "basename": "20240702 - Empleados",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Empleados.md"
+    },
+    {
+      "basename": "20240702 - Cadena",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Cadena.md"
+    },
+    {
+      "basename": "Sistema de información",
+      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
+    },
+    {
+      "basename": "Sistema de comunicación",
+      "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
+    },
+    {
+      "basename": "Sistema informático",
+      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
+    },
+    {
+      "basename": "Dato",
+      "path": "Sistemas y Procesos de Negocios/Dato.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "Confiabilidad",
+      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
+    },
+    {
+      "basename": "Legalidad",
+      "path": "Sistemas y Procesos de Negocios/Legalidad.md"
+    },
+    {
+      "basename": "No repudio",
+      "path": "Sistemas y Procesos de Negocios/No repudio.md"
+    },
+    {
+      "basename": "No duplicidad",
+      "path": "Sistemas y Procesos de Negocios/No duplicidad.md"
+    },
+    {
+      "basename": "Trazabilidad",
+      "path": "Sistemas y Procesos de Negocios/Trazabilidad.md"
+    },
+    {
+      "basename": "Autenticidad",
+      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
+    },
+    {
+      "basename": "Disponibilidad",
+      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
+    },
+    {
+      "basename": "Integridad",
+      "path": "Sistemas y Procesos de Negocios/Integridad.md"
+    },
+    {
+      "basename": "Confidencialidad",
+      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
+    },
+    {
+      "basename": "Entropía",
+      "path": "Sistemas y Procesos de Negocios/Entropía.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
+    },
+    {
+      "basename": "Autovalores",
+      "path": "Álgebra y Geometría Analítica/Autovalores.md"
     },
     {
       "basename": "Estado",
@@ -25,14 +121,6 @@
       "path": "Lógica y Estructuras Discretas/Relación.md"
     },
     {
-      "basename": "Entropía",
-      "path": "Sistemas y Procesos de Negocios/Entropía.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
-    },
-    {
       "basename": "BINIT",
       "path": "Sistemas y Procesos de Negocios/BINIT.md"
     },
@@ -47,10 +135,6 @@
     {
       "basename": "Uptime",
       "path": "Sistemas y Procesos de Negocios/Uptime.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
     },
     {
       "basename": "Neguentropia",
@@ -77,28 +161,12 @@
       "path": "Arquitectura de Computadoras/Bit.md"
     },
     {
-      "basename": "Dato",
-      "path": "Sistemas y Procesos de Negocios/Dato.md"
-    },
-    {
       "basename": "Elemento",
       "path": "Sistemas y Procesos de Negocios/Elemento.md"
     },
     {
       "basename": "Entidad",
       "path": "Sistemas y Procesos de Negocios/Entidad.md"
-    },
-    {
-      "basename": "Sistema de información",
-      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
-    },
-    {
-      "basename": "Sistema informático",
-      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
-    },
-    {
-      "basename": "Sistema de comunicación",
-      "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
     },
     {
       "basename": "Frase o grupo nominal",
@@ -131,74 +199,6 @@
     {
       "basename": "Coordenadas",
       "path": "Álgebra y Geometría Analítica/Coordenadas.md"
-    },
-    {
-      "basename": "Elemento opuesto o inverso",
-      "path": "Álgebra y Geometría Analítica/Elemento opuesto o inverso.md"
-    },
-    {
-      "basename": "Conmutatividad",
-      "path": "Álgebra y Geometría Analítica/Conmutatividad.md"
-    },
-    {
-      "basename": "Conjunto generador",
-      "path": "Álgebra y Geometría Analítica/Conjunto generador.md"
-    },
-    {
-      "basename": "Longitud lógica",
-      "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
-    },
-    {
-      "basename": "Procedimiento",
-      "path": "Algoritmos y Estructuras de Datos/Procedimiento.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
-    },
-    {
-      "basename": "Cuerpo",
-      "path": "Álgebra y Geometría Analítica/Cuerpo.md"
-    },
-    {
-      "basename": "20240614 - Rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
-    },
-    {
-      "basename": "20240521 - Club",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
-    },
-    {
-      "basename": "Diagrama de Veitch-Karnaugh",
-      "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
-    },
-    {
-      "basename": "Propiedades de determinantes",
-      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
-    },
-    {
-      "basename": "Teorema de Laplace",
-      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
-    },
-    {
-      "basename": "Espacio de columnas",
-      "path": "Álgebra y Geometría Analítica/Espacio de columnas.md"
-    },
-    {
-      "basename": "Regla de Chio",
-      "path": "Álgebra y Geometría Analítica/Regla de Chio.md"
-    },
-    {
-      "basename": "Nulidad",
-      "path": "Álgebra y Geometría Analítica/Nulidad.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Álgebra y Geometría Analítica/Isomorfismo.md"
     }
   ],
   "omittedPaths": [],
