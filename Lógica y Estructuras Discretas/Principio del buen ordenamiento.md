@@ -8,7 +8,7 @@ title: Principio del buen ordenamiento
 
 Sea $A \subseteq \mathbb{N}, A \neq \emptyset$ luego $A$ tiene un mínimo.
 
-Es una [[Equivalencia lógica]] del [[Principio de inducción matemática]].
+Es una [[Equivalencia lógica]] del [[Principio de inducción débil]].
 
 $$
 \text{PBO} \Leftrightarrow \text{PIM}

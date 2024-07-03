@@ -1,14 +1,14 @@
 ---
 aliases:
   - Primer principio de inducción
-  - Principio de inducción débil
+  - Principio de inducción matemática
   - Principio de inducción incompleta
 created: 2024-05-17 14:24:28
-modified: 2024-07-03 03:25:43
-title: Principio de inducción matemática
+modified: 2024-07-03 03:28:24
+title: Principio de inducción débil
 ---
 
-# Principio de inducción matemática
+# Principio de inducción débil
 
 Se utiliza para probar que un [[Predicados|Predicado]] se cumple para el [[Conjunto]] de los números naturales $\mathbb{N}$.
 
@@ -30,7 +30,7 @@ Donde $b$ es el primer elemento del [[Subconjunto]] de los naturales con el que 
 
 ## Caso inductivo
 
-Aquí probamos que si $P(n)$ se cumple para un elemento, también ==se cumple para su siguiente==, para todos los elementos mayores o iguales al último elemento del [[Principio de inducción matemática#Caso base|caso base]].
+Aquí probamos que si $P(n)$ se cumple para un elemento, también ==se cumple para su siguiente==, para todos los elementos mayores o iguales al último elemento del [[Principio de inducción débil#Caso base|caso base]].
 
 $$
 \forall k \geq b: P(k) \Rightarrow P(k + 1)

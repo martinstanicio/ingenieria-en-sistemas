@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Principio de inducción matemática",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción matemática.md"
+      "basename": "Principio de inducción fuerte modificado",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte modificado.md"
+    },
+    {
+      "basename": "Definición recursiva",
+      "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
     },
     {
       "basename": "Principio de inducción fuerte",
       "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte.md"
+    },
+    {
+      "basename": "Principio de inducción débil",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción débil.md"
     },
     {
       "basename": "Predicados",
@@ -191,14 +199,6 @@
     {
       "basename": "20240625 - Sueldos",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Sueldos.md"
-    },
-    {
-      "basename": "Mínimo",
-      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
-    },
-    {
-      "basename": "Logaritmo natural de un complejo",
-      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
     }
   ],
   "omittedPaths": [],
