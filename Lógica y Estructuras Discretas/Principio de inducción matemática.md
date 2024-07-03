@@ -1,10 +1,14 @@
 ---
+aliases:
+  - Primer principio de inducción
+  - Principio de inducción débil
+  - Principio de inducción incompleta
 created: 2024-05-17 14:24:28
-modified: 2024-07-03 00:55:58
-title: Principio de inducción
+modified: 2024-07-03 01:07:27
+title: Principio de inducción matemática
 ---
 
-# Principio de inducción
+# Principio de inducción matemática
 
 Se utiliza para probar que un [[Predicados|Predicado]] se cumple para el [[Conjunto]] de los números naturales $\mathbb{N}$.
 
@@ -24,7 +28,7 @@ $$
 
 ## Caso inductivo
 
-Aquí probamos que si $P(n)$ se cumple para un elemento, también ==se cumple para su siguiente==, para todos los elementos mayores al último elemento del [[Principio de inducción#Caso base|caso base]].
+Aquí probamos que si $P(n)$ se cumple para un elemento, también ==se cumple para su siguiente==, para todos los elementos mayores o iguales al último elemento del [[Principio de inducción matemática#Caso base|caso base]].
 
 $$
 \forall k \geq 1: P(k) \Rightarrow P(k + 1)

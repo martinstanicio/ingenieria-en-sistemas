@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Principio del buen ordenamiento",
-      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
+      "basename": "Principio de inducción matemática",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción matemática.md"
     },
     {
-      "basename": "Principio de inducción",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción.md"
+      "basename": "Recursividad",
+      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
+    },
+    {
+      "basename": "Principio del buen ordenamiento",
+      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
     },
     {
       "basename": "Implicación (→)",
@@ -195,10 +199,6 @@
     {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
-    },
-    {
-      "basename": "Coordenadas",
-      "path": "Álgebra y Geometría Analítica/Coordenadas.md"
     }
   ],
   "omittedPaths": [],
