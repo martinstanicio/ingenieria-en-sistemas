@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Predicado
 created: 2024-04-12 15:04:46
-modified: 2024-05-08 01:33:30
+modified: 2024-07-03 03:19:29
 title: Predicados
 ---
 

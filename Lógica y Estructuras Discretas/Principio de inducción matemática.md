@@ -4,7 +4,7 @@ aliases:
   - Principio de inducción débil
   - Principio de inducción incompleta
 created: 2024-05-17 14:24:28
-modified: 2024-07-03 01:07:27
+modified: 2024-07-03 03:25:43
 title: Principio de inducción matemática
 ---
 
@@ -13,25 +13,27 @@ title: Principio de inducción matemática
 Se utiliza para probar que un [[Predicados|Predicado]] se cumple para el [[Conjunto]] de los números naturales $\mathbb{N}$.
 
 $$
-\left[ P(1) \land \forall k \geq 1: P(k) \Rightarrow P(k + 1) \right] \rightarrow \forall n \geq 1: P(n)
+\left[ P(b) \land \forall k \geq 1: P(k) \Rightarrow P(k + 1) \right] \rightarrow \forall n \geq b: P(n)
 $$
 
 Esta expresión puede ser dividida en un ==caso base== y un ==caso inductivo==.
 
 ## Caso base
 
-Aquí probamos que $P(n)$ se cumple para $1$, es decir, se cumple $P(1)$.
+Aquí probamos que $P(n)$ se cumple para $b$, es decir, se cumple $P(b)$.
 
 $$
-P(1)
+P(b)
 $$
+
+Donde $b$ es el primer elemento del [[Subconjunto]] de los naturales con el que estemos trabajando, que suele ser $1$
 
 ## Caso inductivo
 
 Aquí probamos que si $P(n)$ se cumple para un elemento, también ==se cumple para su siguiente==, para todos los elementos mayores o iguales al último elemento del [[Principio de inducción matemática#Caso base|caso base]].
 
 $$
-\forall k \geq 1: P(k) \Rightarrow P(k + 1)
+\forall k \geq b: P(k) \Rightarrow P(k + 1)
 $$
 
 El antecedente se llama ==hipótesis inductiva==: $P(k)$, y el consecuente se llama ==tesis inductiva==: $P(k + 1)$.
