@@ -5,6 +5,30 @@
       "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte modificado.md"
     },
     {
+      "basename": "Coeficiente de restiución",
+      "path": "Física I/Coeficiente de restiución.md"
+    },
+    {
+      "basename": "Colisión",
+      "path": "Física I/Colisión.md"
+    },
+    {
+      "basename": "Energía",
+      "path": "Física I/Energía.md"
+    },
+    {
+      "basename": "20240702 - Empleados",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Empleados.md"
+    },
+    {
+      "basename": "Principio de inducción fuerte",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte.md"
+    },
+    {
+      "basename": "Principio de inducción débil",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción débil.md"
+    },
+    {
       "basename": "Cuantificador existencial (∃)",
       "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
     },
@@ -19,14 +43,6 @@
     {
       "basename": "Definición recursiva",
       "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
-    },
-    {
-      "basename": "Principio de inducción fuerte",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte.md"
-    },
-    {
-      "basename": "Principio de inducción débil",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción débil.md"
     },
     {
       "basename": "Conjunto potencia",
@@ -55,10 +71,6 @@
     {
       "basename": "Estructura",
       "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "20240702 - Empleados",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Empleados.md"
     },
     {
       "basename": "20240702 - Cadena",
@@ -187,18 +199,6 @@
     {
       "basename": "False friends",
       "path": "Inglés I/False friends.md"
-    },
-    {
-      "basename": "Bit",
-      "path": "Arquitectura de Computadoras/Bit.md"
-    },
-    {
-      "basename": "Elemento",
-      "path": "Sistemas y Procesos de Negocios/Elemento.md"
-    },
-    {
-      "basename": "Entidad",
-      "path": "Sistemas y Procesos de Negocios/Entidad.md"
     }
   ],
   "omittedPaths": [],
