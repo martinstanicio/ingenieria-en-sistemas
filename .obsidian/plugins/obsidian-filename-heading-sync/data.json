@@ -1,7 +1,7 @@
 {
   "userIllegalSymbols": [],
   "ignoredFiles": {},
-  "ignoreRegex": "README",
+  "ignoreRegex": "README|Templates",
   "useFileOpenHook": true,
   "useFileSaveHook": true,
   "newHeadingStyle": "Prefix",

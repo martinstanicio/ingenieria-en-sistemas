@@ -1,8 +1,88 @@
 {
   "recentFiles": [
     {
-      "basename": "Untitled",
-      "path": "Análisis Matemático I/Untitled.md"
+      "basename": "AyED - Actividad",
+      "path": "Templates/AyED - Actividad.md"
+    },
+    {
+      "basename": "Transformación nula",
+      "path": "Álgebra y Geometría Analítica/Transformación nula.md"
+    },
+    {
+      "basename": "Principio del buen ordenamiento",
+      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
+    },
+    {
+      "basename": "Programación modular",
+      "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
+    },
+    {
+      "basename": "Entidad",
+      "path": "Sistemas y Procesos de Negocios/Entidad.md"
+    },
+    {
+      "basename": "20240705 - Palabras",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Palabras.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "20240517 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
+    },
+    {
+      "basename": "20240521 - Club",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
+    },
+    {
+      "basename": "20240528 - Aleatorios",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
+    },
+    {
+      "basename": "20240614 - Hipotenusa",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Hipotenusa.md"
+    },
+    {
+      "basename": "20240614 - Rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
+    },
+    {
+      "basename": "20240618 - Procedimiento",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240618 - Procedimiento.md"
+    },
+    {
+      "basename": "20240625 - Energía",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Energía.md"
+    },
+    {
+      "basename": "20240625 - Pitágoras",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Pitágoras.md"
+    },
+    {
+      "basename": "20240625 - Sueldos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Sueldos.md"
+    },
+    {
+      "basename": "20240702 - Cadena",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Cadena.md"
+    },
+    {
+      "basename": "20240705 - Mayúsculas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Mayúsculas.md"
+    },
+    {
+      "basename": "20240705 - Consonantes",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Consonantes.md"
+    },
+    {
+      "basename": "Función compuesta",
+      "path": "Análisis Matemático I/Función compuesta.md"
+    },
+    {
+      "basename": "Regla de la cadena",
+      "path": "Análisis Matemático I/Regla de la cadena.md"
     },
     {
       "basename": "Principio de inducción fuerte modificado",
@@ -15,18 +95,6 @@
     {
       "basename": "Recta tangente",
       "path": "Análisis Matemático I/Recta tangente.md"
-    },
-    {
-      "basename": "20240705 - Palabras",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Palabras.md"
-    },
-    {
-      "basename": "20240705 - Consonantes",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Consonantes.md"
-    },
-    {
-      "basename": "20240705 - Mayúsculas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Mayúsculas.md"
     },
     {
       "basename": "Ciclo desde-hasta",
@@ -93,10 +161,6 @@
       "path": "Sistemas y Procesos de Negocios/Recursividad.md"
     },
     {
-      "basename": "Principio del buen ordenamiento",
-      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
-    },
-    {
       "basename": "Implicación (→)",
       "path": "Lógica y Estructuras Discretas/Implicación (→).md"
     },
@@ -111,10 +175,6 @@
     {
       "basename": "Estructura",
       "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "20240702 - Cadena",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Cadena.md"
     },
     {
       "basename": "Sistema de información",
@@ -139,66 +199,6 @@
     {
       "basename": "Confiabilidad",
       "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
-    },
-    {
-      "basename": "Legalidad",
-      "path": "Sistemas y Procesos de Negocios/Legalidad.md"
-    },
-    {
-      "basename": "No repudio",
-      "path": "Sistemas y Procesos de Negocios/No repudio.md"
-    },
-    {
-      "basename": "No duplicidad",
-      "path": "Sistemas y Procesos de Negocios/No duplicidad.md"
-    },
-    {
-      "basename": "Trazabilidad",
-      "path": "Sistemas y Procesos de Negocios/Trazabilidad.md"
-    },
-    {
-      "basename": "Autenticidad",
-      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
-    },
-    {
-      "basename": "Disponibilidad",
-      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
-    },
-    {
-      "basename": "Integridad",
-      "path": "Sistemas y Procesos de Negocios/Integridad.md"
-    },
-    {
-      "basename": "Confidencialidad",
-      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
-    },
-    {
-      "basename": "Entropía",
-      "path": "Sistemas y Procesos de Negocios/Entropía.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
-    },
-    {
-      "basename": "Autovalores",
-      "path": "Álgebra y Geometría Analítica/Autovalores.md"
-    },
-    {
-      "basename": "Estado",
-      "path": "Sistemas y Procesos de Negocios/Estado.md"
-    },
-    {
-      "basename": "Atributos",
-      "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "Retroalimentación",
-      "path": "Sistemas y Procesos de Negocios/Retroalimentación.md"
-    },
-    {
-      "basename": "Jerarquía",
-      "path": "Sistemas y Procesos de Negocios/Jerarquía.md"
     }
   ],
   "omittedPaths": [],
