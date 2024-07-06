@@ -1,12 +1,52 @@
 {
   "recentFiles": [
     {
+      "basename": "Untitled",
+      "path": "Análisis Matemático I/Untitled.md"
+    },
+    {
       "basename": "Principio de inducción fuerte modificado",
       "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte modificado.md"
     },
     {
-      "basename": "Coeficiente de restiución",
-      "path": "Física I/Coeficiente de restiución.md"
+      "basename": "Recta normal",
+      "path": "Análisis Matemático I/Recta normal.md"
+    },
+    {
+      "basename": "Recta tangente",
+      "path": "Análisis Matemático I/Recta tangente.md"
+    },
+    {
+      "basename": "20240705 - Palabras",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Palabras.md"
+    },
+    {
+      "basename": "20240705 - Consonantes",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Consonantes.md"
+    },
+    {
+      "basename": "20240705 - Mayúsculas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Mayúsculas.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "20240507 - Sueldo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
+    },
+    {
+      "basename": "Función CHR",
+      "path": "Algoritmos y Estructuras de Datos/Función CHR.md"
+    },
+    {
+      "basename": "Función ORD",
+      "path": "Algoritmos y Estructuras de Datos/Función ORD.md"
+    },
+    {
+      "basename": "Coeficiente de restitución",
+      "path": "Física I/Coeficiente de restitución.md"
     },
     {
       "basename": "Colisión",
@@ -159,46 +199,6 @@
     {
       "basename": "Jerarquía",
       "path": "Sistemas y Procesos de Negocios/Jerarquía.md"
-    },
-    {
-      "basename": "Relación",
-      "path": "Lógica y Estructuras Discretas/Relación.md"
-    },
-    {
-      "basename": "BINIT",
-      "path": "Sistemas y Procesos de Negocios/BINIT.md"
-    },
-    {
-      "basename": "Equifinalidad",
-      "path": "Sistemas y Procesos de Negocios/Equifinalidad.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "Uptime",
-      "path": "Sistemas y Procesos de Negocios/Uptime.md"
-    },
-    {
-      "basename": "Neguentropia",
-      "path": "Sistemas y Procesos de Negocios/Neguentropia.md"
-    },
-    {
-      "basename": "Conocimiento",
-      "path": "Ingeniería y Sociedad/Conocimiento.md"
-    },
-    {
-      "basename": "Tipos de sistemas",
-      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "False friends",
-      "path": "Inglés I/False friends.md"
     }
   ],
   "omittedPaths": [],

@@ -18,7 +18,7 @@ Existen tres tipos de colisiones.
 
 ## Colisión totalmente elástica
 
-El [[Coeficiente de restiución]] $e$ es $1$, y la [[Energía#Energía cinética]] de los cuerpos se conserva.
+El [[Coeficiente de restitución]] $e$ es $1$, y la [[Energía#Energía cinética]] de los cuerpos se conserva.
 
 $$
 E_c^0 = E_c
@@ -28,7 +28,7 @@ Por lo tanto, la velocidad también se conserva.
 
 ## Colisión inelástica
 
-El [[Coeficiente de restiución]] $e$ está comprendido entre $0$ y $1$.
+El [[Coeficiente de restitución]] $e$ está comprendido entre $0$ y $1$.
 
 $$
 0 < e < 1
@@ -36,4 +36,4 @@ $$
 
 ## Colisión plástica
 
-El [[Coeficiente de restiución]] $e$ es $0$. Luego del choque, los cuerpos quedan unidos.
+El [[Coeficiente de restitución]] $e$ es $0$. Luego del choque, los cuerpos quedan unidos.

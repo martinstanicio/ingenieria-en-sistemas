@@ -1,10 +1,10 @@
 ---
 created: 2024-07-04 17:43:36
-modified: 2024-07-04 18:29:00
-title: Coeficiente de restiución
+modified: 2024-07-05 17:20:08
+title: Coeficiente de restitución
 ---
 
-# Coeficiente de restiución
+# Coeficiente de restitución
 
 Es la capacidad de un cuerpo de volver a su forma original. Es a dimensional, y está comprendido entre $0$ y $1$.
 
