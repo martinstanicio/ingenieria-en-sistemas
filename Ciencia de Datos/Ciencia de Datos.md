@@ -16,5 +16,5 @@ title: Ciencia de Datos
 
 ### Aprobadas
 
-17. [Probabilidades y Estadísticas](Probabilidades%20y%20Estadísticas/README.md)
+17. [Probabilidades y Estadísticas](Probabilidades%20y%20Estadísticas.md)
 19. [Bases de Datos](Bases%20de%20Datos.md)

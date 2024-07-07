@@ -16,5 +16,5 @@ title: Inteligencia Artificial
 
 ### Aprobadas
 
-17. [Probabilidades y Estadísticas](Probabilidades%20y%20Estadísticas/README.md)
+17. [Probabilidades y Estadísticas](Probabilidades%20y%20Estadísticas.md)
 22. [Análisis Numérico](Análisis%20numérico.md)
