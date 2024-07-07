@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Autovalor",
-      "path": "Álgebra y Geometría Analítica/Autovalor.md"
+      "basename": "Matriz inversa",
+      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
+    },
+    {
+      "basename": "Matriz inversible",
+      "path": "Álgebra y Geometría Analítica/Matriz inversible.md"
     },
     {
       "basename": "Autovector",
       "path": "Álgebra y Geometría Analítica/Autovector.md"
+    },
+    {
+      "basename": "Autovalor",
+      "path": "Álgebra y Geometría Analítica/Autovalor.md"
+    },
+    {
+      "basename": "Término independiente",
+      "path": "Álgebra y Geometría Analítica/Término independiente.md"
     },
     {
       "basename": "Álgebra y Geometría Analítica",
@@ -187,18 +199,6 @@
     {
       "basename": "Límite",
       "path": "Análisis Matemático I/Límite.md"
-    },
-    {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
-    },
-    {
-      "basename": "AyED - Actividad",
-      "path": "Templates/AyED - Actividad.md"
-    },
-    {
-      "basename": "Transformación nula",
-      "path": "Álgebra y Geometría Analítica/Transformación nula.md"
     }
   ],
   "omittedPaths": [],
