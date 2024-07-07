@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "-path:\"Actividades\" -path:\"README\"",
+  "search": "tag:#index",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -15,7 +15,7 @@
       }
     },
     {
-      "query": "path:\"Inglés I\"  ",
+      "query": "path:\"Inglés\"  ",
       "color": {
         "a": 1,
         "rgb": 5025872
@@ -57,7 +57,7 @@
       }
     },
     {
-      "query": "path:\"Análisis Matemático I\"  ",
+      "query": "path:\"Análisis Matemático\"",
       "color": {
         "a": 1,
         "rgb": 16007734
@@ -81,6 +81,6 @@
   "repelStrength": 15,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.09911451010979132,
+  "scale": 0.5368473555134844,
   "close": true
 }

@@ -132,11 +132,11 @@
         },
         {
           "type": "graph",
-          "ctime": 1719181415112,
-          "title": "READMEs",
+          "ctime": 1720311573493,
+          "title": "Indexes",
           "options": {
             "collapse-filter": false,
-            "search": "path:\"README\"",
+            "search": "tag:#index",
             "showTags": false,
             "showAttachments": false,
             "hideUnresolved": false,
@@ -217,7 +217,7 @@
             "repelStrength": 15,
             "linkStrength": 1,
             "linkDistance": 250,
-            "scale": 0.7526508111462293,
+            "scale": 0.3829200458615142,
             "close": false
           }
         }

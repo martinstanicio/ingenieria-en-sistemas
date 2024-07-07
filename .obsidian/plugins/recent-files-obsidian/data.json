@@ -2,7 +2,171 @@
   "recentFiles": [
     {
       "basename": "README",
-      "path": "Análisis Matemático I/README.md"
+      "path": "README.md"
+    },
+    {
+      "basename": "Análisis numérico",
+      "path": "Análisis Numérico/Análisis numérico.md"
+    },
+    {
+      "basename": "Ingeniería y Calidad de Software",
+      "path": "Ingeniería y Calidad de Software/Ingeniería y Calidad de Software.md"
+    },
+    {
+      "basename": "Administración de Sistemas de Información",
+      "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
+    },
+    {
+      "basename": "Proyecto Final",
+      "path": "Proyecto Final/Proyecto Final.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Inglés II",
+      "path": "Inglés II/Inglés II.md"
+    },
+    {
+      "basename": "Sistemas Operativos",
+      "path": "Sistemas Operativos/Sistemas Operativos.md"
+    },
+    {
+      "basename": "Sintaxis y Semántica de los Lenguajes",
+      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis y Semántica de los Lenguajes.md"
+    },
+    {
+      "basename": "Redes de Datos",
+      "path": "Redes de Datos/Redes de Datos.md"
+    },
+    {
+      "basename": "Probabilidades y Estadísticas",
+      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
+    },
+    {
+      "basename": "Paradigmas de Programación",
+      "path": "Paradigmas de Programación/Paradigmas de Programación.md"
+    },
+    {
+      "basename": "Legislación",
+      "path": "Legislación/Legislación.md"
+    },
+    {
+      "basename": "Investigación Operativa",
+      "path": "Investigación Operativa/Investigación Operativa.md"
+    },
+    {
+      "basename": "Gestión Gerencial",
+      "path": "Gestión Gerencial/Gestión Gerencial.md"
+    },
+    {
+      "basename": "Física II",
+      "path": "Física II/Física II.md"
+    },
+    {
+      "basename": "README",
+      "path": "Análisis Matemático II/README.md"
+    },
+    {
+      "basename": "Tecnologías para la Automatización",
+      "path": "Tecnologías para la Automatización/Tecnologías para la Automatización.md"
+    },
+    {
+      "basename": "Análisis Matemático II",
+      "path": "Análisis Matemático II/Análisis Matemático II.md"
+    },
+    {
+      "basename": "Sistemas y Procesos de Negocios",
+      "path": "Sistemas y Procesos de Negocios/Sistemas y Procesos de Negocios.md"
+    },
+    {
+      "basename": "Sistemas de Gestión",
+      "path": "Sistemas de Gestión/Sistemas de Gestión.md"
+    },
+    {
+      "basename": "Simulación",
+      "path": "Simulación/Simulación.md"
+    },
+    {
+      "basename": "Seguridad en los Sistemas de Información",
+      "path": "Seguridad en los Sistemas de Información/Seguridad en los Sistemas de Información.md"
+    },
+    {
+      "basename": "Lógica y Estructuras Discretas",
+      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
+    },
+    {
+      "basename": "Inteligencia Artificial",
+      "path": "Inteligencia Artificial/Inteligencia Artificial.md"
+    },
+    {
+      "basename": "Inglés I",
+      "path": "Inglés I/Inglés I.md"
+    },
+    {
+      "basename": "Ingeniería y Sociedad",
+      "path": "Ingeniería y Sociedad/Ingeniería y Sociedad.md"
+    },
+    {
+      "basename": "Física I",
+      "path": "Física I/Física I.md"
+    },
+    {
+      "basename": "Economía",
+      "path": "Economía/Economía.md"
+    },
+    {
+      "basename": "Diseño de Sistemas de Información",
+      "path": "Diseño de Sistemas de Información/Diseño de Sistemas de Información.md"
+    },
+    {
+      "basename": "Desarrollo de Software",
+      "path": "Desarrollo de Software/Desarrollo de Software.md"
+    },
+    {
+      "basename": "Comunicación de Datos",
+      "path": "Comunicación de Datos/Comunicación de Datos.md"
+    },
+    {
+      "basename": "Ciencia de Datos",
+      "path": "Ciencia de Datos/Ciencia de Datos.md"
+    },
+    {
+      "basename": "Bases de Datos",
+      "path": "Bases de Datos/Bases de Datos.md"
+    },
+    {
+      "basename": "Arquitectura de Computadoras",
+      "path": "Arquitectura de Computadoras/Arquitectura de Computadoras.md"
+    },
+    {
+      "basename": "Análisis Matemático I",
+      "path": "Análisis Matemático I/Análisis Matemático I.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Álgebra y Geometría Analítica",
+      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
+    },
+    {
+      "basename": "Salidas",
+      "path": "Sistemas y Procesos de Negocios/Salidas.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
       "basename": "AyED - Actividad",
@@ -29,176 +193,12 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Palabras.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "20240517 - Producciones",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
     },
     {
       "basename": "20240521 - Club",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
-    },
-    {
-      "basename": "20240528 - Aleatorios",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240528 - Aleatorios.md"
-    },
-    {
-      "basename": "20240614 - Hipotenusa",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Hipotenusa.md"
-    },
-    {
-      "basename": "20240614 - Rectángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
-    },
-    {
-      "basename": "20240618 - Procedimiento",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240618 - Procedimiento.md"
-    },
-    {
-      "basename": "20240625 - Energía",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Energía.md"
-    },
-    {
-      "basename": "20240625 - Pitágoras",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Pitágoras.md"
-    },
-    {
-      "basename": "20240625 - Sueldos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240625 - Sueldos.md"
-    },
-    {
-      "basename": "20240702 - Cadena",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Cadena.md"
-    },
-    {
-      "basename": "20240705 - Mayúsculas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Mayúsculas.md"
-    },
-    {
-      "basename": "20240705 - Consonantes",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Consonantes.md"
-    },
-    {
-      "basename": "Función compuesta",
-      "path": "Análisis Matemático I/Función compuesta.md"
-    },
-    {
-      "basename": "Regla de la cadena",
-      "path": "Análisis Matemático I/Regla de la cadena.md"
-    },
-    {
-      "basename": "Principio de inducción fuerte modificado",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte modificado.md"
-    },
-    {
-      "basename": "Recta normal",
-      "path": "Análisis Matemático I/Recta normal.md"
-    },
-    {
-      "basename": "Recta tangente",
-      "path": "Análisis Matemático I/Recta tangente.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
-      "basename": "20240507 - Sueldo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240507 - Sueldo.md"
-    },
-    {
-      "basename": "Función CHR",
-      "path": "Algoritmos y Estructuras de Datos/Función CHR.md"
-    },
-    {
-      "basename": "Función ORD",
-      "path": "Algoritmos y Estructuras de Datos/Función ORD.md"
-    },
-    {
-      "basename": "Coeficiente de restitución",
-      "path": "Física I/Coeficiente de restitución.md"
-    },
-    {
-      "basename": "Colisión",
-      "path": "Física I/Colisión.md"
-    },
-    {
-      "basename": "Energía",
-      "path": "Física I/Energía.md"
-    },
-    {
-      "basename": "20240702 - Empleados",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Empleados.md"
-    },
-    {
-      "basename": "Principio de inducción fuerte",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte.md"
-    },
-    {
-      "basename": "Principio de inducción débil",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción débil.md"
-    },
-    {
-      "basename": "Cuantificador existencial (∃)",
-      "path": "Lógica y Estructuras Discretas/Cuantificador existencial (∃).md"
-    },
-    {
-      "basename": "Predicados",
-      "path": "Lógica y Estructuras Discretas/Predicados.md"
-    },
-    {
-      "basename": "Cuantificador universal (∀)",
-      "path": "Lógica y Estructuras Discretas/Cuantificador universal (∀).md"
-    },
-    {
-      "basename": "Definición recursiva",
-      "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
-    },
-    {
-      "basename": "Conjunto potencia",
-      "path": "Lógica y Estructuras Discretas/Conjunto potencia.md"
-    },
-    {
-      "basename": "Recursividad",
-      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
-    },
-    {
-      "basename": "Implicación (→)",
-      "path": "Lógica y Estructuras Discretas/Implicación (→).md"
-    },
-    {
-      "basename": "Cadena",
-      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
-    },
-    {
-      "basename": "20240702 - Fechas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Fechas.md"
-    },
-    {
-      "basename": "Estructura",
-      "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "Sistema de información",
-      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
-    },
-    {
-      "basename": "Sistema de comunicación",
-      "path": "Sistemas y Procesos de Negocios/Sistema de comunicación.md"
-    },
-    {
-      "basename": "Sistema informático",
-      "path": "Sistemas y Procesos de Negocios/Sistema informático.md"
-    },
-    {
-      "basename": "Dato",
-      "path": "Sistemas y Procesos de Negocios/Dato.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
     }
   ],
   "omittedPaths": [],
