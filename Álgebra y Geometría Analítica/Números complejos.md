@@ -1,6 +1,6 @@
 ---
 created: 2024-03-25 12:09:44
-modified: 2024-06-23 18:20:32
+modified: 2024-07-07 14:16:35
 title: Números complejos
 ---
 
@@ -20,10 +20,14 @@ $$
 
 Debido a que tanto la suma como la multiplicación en $\mathbb{C}$ cumplen las condiciones para ser un [[Grupo abeliano]], se considera a los complejos un [[Cuerpo]]. Sin embargo, a diferencia de los reales, los complejos ==no están ordenados==, por lo que no podemos utilizar [[Operadores lógicos]] como, por ejemplo, el "mayor que".
 
-Además, existe un [[Álgebra y Geometría Analítica/Isomorfismo|Isomorfismo]] entre los reales y un [[Subconjunto]] de los complejos, pues un complejo puede ser expresado como un real cuando su parte imaginaria es 0:
+## Complejos reales
+
+Existe un ==isomorfismo== entre los reales y un [[Subconjunto]] de los [[Números complejos]], pues un complejo puede ser expresado como un real cuando su parte imaginaria es 0:
 
 $$
 f(a,0)=a
 $$
 
-A este tipo de números los llamamos **complejos reales**, y, por otro lado, aquellos con parte real nula, son llamados **complejos imaginarios**.
+## Complejos imaginarios
+
+Aquellos [[Números complejos]] con ==parte real nula==.

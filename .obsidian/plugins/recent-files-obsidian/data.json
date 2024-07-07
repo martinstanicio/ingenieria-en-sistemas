@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Transformación lineal",
+      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
+    },
+    {
+      "basename": "Álgebra y Geometría Analítica",
+      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
+    },
+    {
+      "basename": "Números complejos",
+      "path": "Álgebra y Geometría Analítica/Números complejos.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
       "basename": "Proyecto Final",
       "path": "Proyecto Final/Proyecto Final.md"
     },
@@ -149,10 +165,6 @@
       "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
     },
     {
-      "basename": "Álgebra y Geometría Analítica",
-      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
-    },
-    {
       "basename": "Salidas",
       "path": "Sistemas y Procesos de Negocios/Salidas.md"
     },
@@ -187,14 +199,6 @@
     {
       "basename": "20240705 - Palabras",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Palabras.md"
-    },
-    {
-      "basename": "20240517 - Producciones",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
-    },
-    {
-      "basename": "20240521 - Club",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240521 - Club.md"
     }
   ],
   "omittedPaths": [],
