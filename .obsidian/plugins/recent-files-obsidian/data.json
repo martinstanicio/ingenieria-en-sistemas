@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Autovector",
+      "path": "Álgebra y Geometría Analítica/Autovector.md"
+    },
+    {
+      "basename": "Autovalor",
+      "path": "Álgebra y Geometría Analítica/Autovalor.md"
+    },
+    {
       "basename": "Matriz inversa",
       "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
     },
@@ -9,12 +17,8 @@
       "path": "Álgebra y Geometría Analítica/Matriz inversible.md"
     },
     {
-      "basename": "Autovector",
-      "path": "Álgebra y Geometría Analítica/Autovector.md"
-    },
-    {
-      "basename": "Autovalor",
-      "path": "Álgebra y Geometría Analítica/Autovalor.md"
+      "basename": "Propiedades de determinantes",
+      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
     },
     {
       "basename": "Término independiente",
@@ -195,10 +199,6 @@
     {
       "basename": "Salidas",
       "path": "Sistemas y Procesos de Negocios/Salidas.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
     }
   ],
   "omittedPaths": [],
