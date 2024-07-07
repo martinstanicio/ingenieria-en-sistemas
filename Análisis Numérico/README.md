@@ -8,5 +8,5 @@ title: Análisis numérico
 
 ## Correlativas
 
-1. [Análisis Matemático I](Análisis%20Matemático%20I.md)
+1. [README](Análisis%20Matemático%20I/README.md)
 2. [Álgebra y Geometría Analítica](Álgebra%20y%20Geometría%20Analítica/README.md)
