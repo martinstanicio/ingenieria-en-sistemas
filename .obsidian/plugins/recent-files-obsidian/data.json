@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Análisis Matemático I",
+      "path": "Análisis Matemático I/Análisis Matemático I.md"
+    },
+    {
       "basename": "AyED - Actividad",
       "path": "Templates/AyED - Actividad.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Información",
       "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Confiabilidad",
-      "path": "Sistemas y Procesos de Negocios/Confiabilidad.md"
     }
   ],
   "omittedPaths": [],
