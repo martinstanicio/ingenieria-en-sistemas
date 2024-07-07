@@ -1,6 +1,8 @@
 ---
+aliases:
+  - SI
 created: 2024-04-14 16:21:36
-modified: 2024-05-08 01:33:29
+modified: 2024-07-07 20:10:43
 title: Sistema incompatible (SI)
 ---
 

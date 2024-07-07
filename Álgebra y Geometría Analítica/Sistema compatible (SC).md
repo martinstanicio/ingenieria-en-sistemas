@@ -1,6 +1,8 @@
 ---
+aliases:
+  - SC
 created: 2024-04-14 16:22:29
-modified: 2024-06-23 18:38:30
+modified: 2024-07-07 20:10:51
 title: Sistema compatible (SC)
 ---
 

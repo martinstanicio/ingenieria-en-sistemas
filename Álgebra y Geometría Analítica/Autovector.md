@@ -4,7 +4,7 @@ aliases:
   - Vector característico
   - Eigenvector
 created: 2024-07-07 19:00:40
-modified: 2024-07-07 20:02:15
+modified: 2024-07-07 20:14:59
 title: Autovector
 ---
 
@@ -37,32 +37,3 @@ Este [[Sistema de ecuaciones lineales homogéneo (SELH)]] deberá ser [[Sistema 
 $$
 |A - \lambda I| = 0
 $$
-
-## Polinomio característico
-
-Al calcular dicho [[Determinante]], obtendremos un polinomio $p(\lambda)$, llamado ==polinomio característico==.
-
-$$
-|A - \lambda I| = p(\lambda)
-$$
-
-> [!tip]
-> El [[Término independiente]] del [[Autovector#Polinomio característico|Polinomio característico]] siempre es $|A|$, pues al evaluar la expresión en $\lambda = 0$, obtenemos que $p(0) = |A - 0I| = |A|$.
-
-Si $\lambda = 0$ es [[Autovalor|Valor propio]], entonces $|A| = 0$. En este caso, $A$ no es [[Matriz inversible]].
-
-> [!note]
-> El [[Autovector#Polinomio característico|Polinomio característico]] también puede llamarse **autopolinomio**, **polinomio propio** o **eigenpolinomio**.
-
-## Ecuación característica
-
-Si igualamos al [[Autovector#Polinomio característico|Polinomio característico]] a $0$, obtenemos la ==ecuación característica==.
-
-$$
-p(\lambda) = 0
-\Leftrightarrow
-|A - \lambda I| = 0
-$$
-
-> [!note]
-> La [[Autovector#Ecuación característica|Ecuación característica]] también puede llamarse **autoecuación**, **ecuación propia** o **eigenecuación**.

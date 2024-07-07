@@ -1,12 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "Autoespacio",
+      "path": "Álgebra y Geometría Analítica/Autoespacio.md"
+    },
+    {
       "basename": "Autovector",
       "path": "Álgebra y Geometría Analítica/Autovector.md"
     },
     {
       "basename": "Autovalor",
       "path": "Álgebra y Geometría Analítica/Autovalor.md"
+    },
+    {
+      "basename": "Multiplicidad algebraica",
+      "path": "Álgebra y Geometría Analítica/Multiplicidad algebraica.md"
+    },
+    {
+      "basename": "Kernel",
+      "path": "Álgebra y Geometría Analítica/Kernel.md"
+    },
+    {
+      "basename": "Autopolinomio",
+      "path": "Álgebra y Geometría Analítica/Autopolinomio.md"
+    },
+    {
+      "basename": "Autoecuación",
+      "path": "Álgebra y Geometría Analítica/Autoecuación.md"
+    },
+    {
+      "basename": "Sistema incompatible (SI)",
+      "path": "Álgebra y Geometría Analítica/Sistema incompatible (SI).md"
+    },
+    {
+      "basename": "Sistema compatible (SC)",
+      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
+    },
+    {
+      "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
+      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
+    },
+    {
+      "basename": "Matriz escalonada",
+      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
     },
     {
       "basename": "Matriz inversa",
@@ -163,42 +199,6 @@
     {
       "basename": "Física II",
       "path": "Física II/Física II.md"
-    },
-    {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
-    },
-    {
-      "basename": "Sistemas y Procesos de Negocios",
-      "path": "Sistemas y Procesos de Negocios/Sistemas y Procesos de Negocios.md"
-    },
-    {
-      "basename": "Lógica y Estructuras Discretas",
-      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
-    },
-    {
-      "basename": "Inglés I",
-      "path": "Inglés I/Inglés I.md"
-    },
-    {
-      "basename": "Ingeniería y Sociedad",
-      "path": "Ingeniería y Sociedad/Ingeniería y Sociedad.md"
-    },
-    {
-      "basename": "Física I",
-      "path": "Física I/Física I.md"
-    },
-    {
-      "basename": "Arquitectura de Computadoras",
-      "path": "Arquitectura de Computadoras/Arquitectura de Computadoras.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
-    },
-    {
-      "basename": "Salidas",
-      "path": "Sistemas y Procesos de Negocios/Salidas.md"
     }
   ],
   "omittedPaths": [],

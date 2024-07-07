@@ -1,6 +1,8 @@
 ---
+aliases:
+  - SELH
 created: 2024-04-14 18:17:53
-modified: 2024-05-08 01:33:29
+modified: 2024-07-07 20:10:04
 title: Sistema de ecuaciones lineales homogéneo (SELH)
 ---
 
