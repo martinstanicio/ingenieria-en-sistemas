@@ -1,12 +1,11 @@
 ---
-aliases:
-  - Autovectores
+aliases: []
 created: 2024-07-01 19:22:44
-modified: 2024-07-01 20:06:55
-title: Autovalores
+modified: 2024-07-07 19:01:23
+title: Autovalor
 ---
 
-# Autovalores
+# Autovalor
 
 Dada una [[Transformación lineal]] $T: V \rightarrow V$ (es decir, un [[Transformación lineal#Endomorfismo]]), siendo $V$ un [[Espacio vectorial]] de [[Dimensión]] finita, si existe $w \in V - \left\{ \overrightarrow{0} \right\}$ tal que $Aw = \lambda w$ siendo $A$ la [[Matriz]] asociada a $T$ y $\lambda \in k$, $w$ es autovector.
 

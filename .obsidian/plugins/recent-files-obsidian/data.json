@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Autovalor",
+      "path": "Álgebra y Geometría Analítica/Autovalor.md"
+    },
+    {
+      "basename": "Autovector",
+      "path": "Álgebra y Geometría Analítica/Autovector.md"
+    },
+    {
+      "basename": "Álgebra y Geometría Analítica",
+      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
+    },
+    {
       "basename": "Derivada",
       "path": "Análisis Matemático I/Derivada.md"
     },
@@ -11,10 +23,6 @@
     {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
-    },
-    {
-      "basename": "Álgebra y Geometría Analítica",
-      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
     },
     {
       "basename": "Números complejos",
@@ -191,14 +199,6 @@
     {
       "basename": "Transformación nula",
       "path": "Álgebra y Geometría Analítica/Transformación nula.md"
-    },
-    {
-      "basename": "Principio del buen ordenamiento",
-      "path": "Lógica y Estructuras Discretas/Principio del buen ordenamiento.md"
-    },
-    {
-      "basename": "Programación modular",
-      "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
     }
   ],
   "omittedPaths": [],
