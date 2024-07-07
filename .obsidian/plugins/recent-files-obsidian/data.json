@@ -1,108 +1,132 @@
 {
   "recentFiles": [
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "Análisis numérico",
-      "path": "Análisis Numérico/Análisis numérico.md"
-    },
-    {
-      "basename": "Ingeniería y Calidad de Software",
-      "path": "Ingeniería y Calidad de Software/Ingeniería y Calidad de Software.md"
-    },
-    {
-      "basename": "Administración de Sistemas de Información",
-      "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
-    },
-    {
       "basename": "Proyecto Final",
       "path": "Proyecto Final/Proyecto Final.md"
-    },
-    {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
-    },
-    {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
-    },
-    {
-      "basename": "Inglés II",
-      "path": "Inglés II/Inglés II.md"
-    },
-    {
-      "basename": "Sistemas Operativos",
-      "path": "Sistemas Operativos/Sistemas Operativos.md"
-    },
-    {
-      "basename": "Sintaxis y Semántica de los Lenguajes",
-      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis y Semántica de los Lenguajes.md"
-    },
-    {
-      "basename": "Redes de Datos",
-      "path": "Redes de Datos/Redes de Datos.md"
-    },
-    {
-      "basename": "Probabilidades y Estadísticas",
-      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
-    },
-    {
-      "basename": "Paradigmas de Programación",
-      "path": "Paradigmas de Programación/Paradigmas de Programación.md"
-    },
-    {
-      "basename": "Legislación",
-      "path": "Legislación/Legislación.md"
-    },
-    {
-      "basename": "Investigación Operativa",
-      "path": "Investigación Operativa/Investigación Operativa.md"
-    },
-    {
-      "basename": "Gestión Gerencial",
-      "path": "Gestión Gerencial/Gestión Gerencial.md"
-    },
-    {
-      "basename": "Física II",
-      "path": "Física II/Física II.md"
-    },
-    {
-      "basename": "README",
-      "path": "Análisis Matemático II/README.md"
-    },
-    {
-      "basename": "Tecnologías para la Automatización",
-      "path": "Tecnologías para la Automatización/Tecnologías para la Automatización.md"
-    },
-    {
-      "basename": "Análisis Matemático II",
-      "path": "Análisis Matemático II/Análisis Matemático II.md"
-    },
-    {
-      "basename": "Sistemas y Procesos de Negocios",
-      "path": "Sistemas y Procesos de Negocios/Sistemas y Procesos de Negocios.md"
-    },
-    {
-      "basename": "Sistemas de Gestión",
-      "path": "Sistemas de Gestión/Sistemas de Gestión.md"
-    },
-    {
-      "basename": "Simulación",
-      "path": "Simulación/Simulación.md"
     },
     {
       "basename": "Seguridad en los Sistemas de Información",
       "path": "Seguridad en los Sistemas de Información/Seguridad en los Sistemas de Información.md"
     },
     {
-      "basename": "Lógica y Estructuras Discretas",
-      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Gestión Gerencial",
+      "path": "Gestión Gerencial/Gestión Gerencial.md"
+    },
+    {
+      "basename": "Sistemas de Gestión",
+      "path": "Sistemas de Gestión/Sistemas de Gestión.md"
+    },
+    {
+      "basename": "Ciencia de Datos",
+      "path": "Ciencia de Datos/Ciencia de Datos.md"
     },
     {
       "basename": "Inteligencia Artificial",
       "path": "Inteligencia Artificial/Inteligencia Artificial.md"
+    },
+    {
+      "basename": "Administración de Sistemas de Información",
+      "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
+    },
+    {
+      "basename": "Tecnologías para la Automatización",
+      "path": "Tecnologías para la Automatización/Tecnologías para la Automatización.md"
+    },
+    {
+      "basename": "Simulación",
+      "path": "Simulación/Simulación.md"
+    },
+    {
+      "basename": "Investigación Operativa",
+      "path": "Investigación Operativa/Investigación Operativa.md"
+    },
+    {
+      "basename": "Redes de Datos",
+      "path": "Redes de Datos/Redes de Datos.md"
+    },
+    {
+      "basename": "Ingeniería y Calidad de Software",
+      "path": "Ingeniería y Calidad de Software/Ingeniería y Calidad de Software.md"
+    },
+    {
+      "basename": "Legislación",
+      "path": "Legislación/Legislación.md"
+    },
+    {
+      "basename": "Diseño de Sistemas de Información",
+      "path": "Diseño de Sistemas de Información/Diseño de Sistemas de Información.md"
+    },
+    {
+      "basename": "Análisis numérico",
+      "path": "Análisis Numérico/Análisis numérico.md"
+    },
+    {
+      "basename": "Comunicación de Datos",
+      "path": "Comunicación de Datos/Comunicación de Datos.md"
+    },
+    {
+      "basename": "Análisis Matemático II",
+      "path": "Análisis Matemático II/Análisis Matemático II.md"
+    },
+    {
+      "basename": "Análisis Matemático I",
+      "path": "Análisis Matemático I/Análisis Matemático I.md"
+    },
+    {
+      "basename": "Desarrollo de Software",
+      "path": "Desarrollo de Software/Desarrollo de Software.md"
+    },
+    {
+      "basename": "Bases de Datos",
+      "path": "Bases de Datos/Bases de Datos.md"
+    },
+    {
+      "basename": "Sistemas Operativos",
+      "path": "Sistemas Operativos/Sistemas Operativos.md"
+    },
+    {
+      "basename": "Probabilidades y Estadísticas",
+      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
+    },
+    {
+      "basename": "Economía",
+      "path": "Economía/Economía.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
+      "basename": "Paradigmas de Programación",
+      "path": "Paradigmas de Programación/Paradigmas de Programación.md"
+    },
+    {
+      "basename": "Sintaxis y Semántica de los Lenguajes",
+      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis y Semántica de los Lenguajes.md"
+    },
+    {
+      "basename": "Inglés II",
+      "path": "Inglés II/Inglés II.md"
+    },
+    {
+      "basename": "Física II",
+      "path": "Física II/Física II.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Sistemas y Procesos de Negocios",
+      "path": "Sistemas y Procesos de Negocios/Sistemas y Procesos de Negocios.md"
+    },
+    {
+      "basename": "Lógica y Estructuras Discretas",
+      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
     },
     {
       "basename": "Inglés I",
@@ -117,36 +141,8 @@
       "path": "Física I/Física I.md"
     },
     {
-      "basename": "Economía",
-      "path": "Economía/Economía.md"
-    },
-    {
-      "basename": "Diseño de Sistemas de Información",
-      "path": "Diseño de Sistemas de Información/Diseño de Sistemas de Información.md"
-    },
-    {
-      "basename": "Desarrollo de Software",
-      "path": "Desarrollo de Software/Desarrollo de Software.md"
-    },
-    {
-      "basename": "Comunicación de Datos",
-      "path": "Comunicación de Datos/Comunicación de Datos.md"
-    },
-    {
-      "basename": "Ciencia de Datos",
-      "path": "Ciencia de Datos/Ciencia de Datos.md"
-    },
-    {
-      "basename": "Bases de Datos",
-      "path": "Bases de Datos/Bases de Datos.md"
-    },
-    {
       "basename": "Arquitectura de Computadoras",
       "path": "Arquitectura de Computadoras/Arquitectura de Computadoras.md"
-    },
-    {
-      "basename": "Análisis Matemático I",
-      "path": "Análisis Matemático I/Análisis Matemático I.md"
     },
     {
       "basename": "Algoritmos y Estructuras de Datos",
