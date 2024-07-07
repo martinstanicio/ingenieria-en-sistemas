@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
+      "basename": "Pendiente",
+      "path": "Análisis Matemático I/Pendiente.md"
+    },
+    {
       "basename": "Transformación lineal",
       "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Programación modular",
       "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
-    },
-    {
-      "basename": "Entidad",
-      "path": "Sistemas y Procesos de Negocios/Entidad.md"
-    },
-    {
-      "basename": "20240705 - Palabras",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Palabras.md"
     }
   ],
   "omittedPaths": [],

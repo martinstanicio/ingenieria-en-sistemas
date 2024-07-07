@@ -1,12 +1,12 @@
 ---
 created: 2024-06-14 20:56:27
-modified: 2024-06-14 21:24:52
+modified: 2024-07-07 16:05:50
 title: Derivada
 ---
 
 # Derivada
 
-La ==pendiente $m$== de la [[Recta tangente]] de una [[Análisis Matemático I/Función|Función]] en un punto dado $x$.
+La [[Pendiente]] $m$ de la [[Recta tangente]] de una [[Análisis Matemático I/Función|Función]] en un punto dado $x$.
 
 $$
 f'(c) =
