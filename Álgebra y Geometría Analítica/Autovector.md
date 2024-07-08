@@ -4,7 +4,7 @@ aliases:
   - Vector característico
   - Eigenvector
 created: 2024-07-07 19:00:40
-modified: 2024-07-07 20:14:59
+modified: 2024-07-07 20:38:37
 title: Autovector
 ---
 
@@ -23,6 +23,13 @@ Donde:
 - $w$ es un vector diferente al [[Elemento neutro|Vector nulo]] y $w \in \mathbb{C}^n$
 
 Podemos afirmar que $\lambda$ es [[Autovalor]] de $T$, y $w$ es el [[Autovector]] asociado a $\lambda$.
+
+> [!important]
+> Para que un vector $w$ sea [[Autovector]], debe pertenecer al [[Autoespacio]], pero ser diferente del [[Elemento neutro|Vector nulo]].
+>
+> $$
+> w \in E_\lambda - \left\{ \overrightarrow{0} \right\}
+> $$
 
 ## Cálculo de $w$
 

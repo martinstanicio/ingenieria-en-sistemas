@@ -4,13 +4,13 @@ aliases:
   - Espacio característico
   - Eigenespacio
 created: 2024-07-07 20:08:09
-modified: 2024-07-07 20:34:22
+modified: 2024-07-07 20:34:57
 title: Autoespacio
 ---
 
 # Autoespacio
 
-Para obtener los [[Autovector|Autovectores]] o [[Autovalor|Autovalores]] asociados a una [[Transformación lineal]] con [[Matriz]] asociada $A$, igualamos la ecuación original $Aw = \lambda w$ a $0$ para obtener un [[Sistema de ecuaciones lineales homogéneo (SELH)|SELH]].
+Para obtener los [[Autovector|Autovectores]] o [[Autovalor|Autovalores]] asociados a una [[Transformación lineal]] con [[Matriz]] asociada $A \in k^{n \times n}$, igualamos la ecuación original $Aw = \lambda w$ a $0$ para obtener un [[Sistema de ecuaciones lineales homogéneo (SELH)|SELH]].
 
 $$
 (A - \lambda I) \overrightarrow{w} = \overrightarrow{0}
