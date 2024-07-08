@@ -1,16 +1,15 @@
 ---
 aliases:
   - SC
+  - Sistema consistente
 created: 2024-04-14 16:22:29
-modified: 2024-07-07 20:10:51
+modified: 2024-07-07 21:19:59
 title: Sistema compatible (SC)
 ---
 
 # Sistema compatible (SC)
 
-Un [[Sistema de ecuaciones lineales (SEL)]] que tiene un conjunto solución no vacío, que puede contener un único elemento, o infinitos.
-
-También puede ser llamado **sistema consistente**.
+Un [[Sistema de ecuaciones lineales (SEL)]] que tiene un [[Conjunto]] solución no vacío, que puede contener un único elemento, o infinitos.
 
 >[!note]
 >Un [[Sistema de ecuaciones lineales (SEL)|SEL]] es compatible cuando su [[Matriz#Vector de términos independientes]] es [[Combinación lineal]] de los vectores columna de la [[Matriz#Matriz de coeficientes]].
@@ -58,7 +57,7 @@ Tiene una ==única solución==, es decir, existe un valor específico para cada 
 
 Tiene ==infinitas soluciones==, es decir, existen una cantidad infinita de valores posibles para cada incógnita, de modo que cada [[Ecuación lineal]] puede ser verificada con éxito.
 
-El conjunto solución siempre tendrá una forma determinada, por ejemplo:
+El [[Conjunto]] solución siempre tendrá una forma determinada, por ejemplo:
 
 $$
 S=\{(2+2\lambda, 2-2\lambda, \lambda\}

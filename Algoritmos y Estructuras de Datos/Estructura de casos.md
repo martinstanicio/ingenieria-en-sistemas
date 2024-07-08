@@ -50,10 +50,10 @@ En [[Python]] tenemos la posibilidad de especificar múltiples posibles valores 
 x = 3
 
 match x:
-    case 1:
-	    print("El número es 1")
-	case 2|3:
-	    print("El número es 2 o 3")
-	case _:
-		print("El número no es ni 1, ni 2, ni 3")
+    case 1:
+        print("El número es 1")
+    case 2 | 3:
+        print("El número es 2 o 3")
+    case _:
+        print("El número no es ni 1, ni 2, ni 3")
 ```

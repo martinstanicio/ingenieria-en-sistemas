@@ -4,13 +4,13 @@ aliases:
   - Polinomio característico
   - Eigenpolinomio
 created: 2024-07-07 20:08:09
-modified: 2024-07-07 20:13:27
+modified: 2024-07-07 21:20:53
 title: Autopolinomio
 ---
 
 # Autopolinomio
 
-Para obtener los [[Autovector|Autovectores]] o [[Autovalor|Autovalores]] asociados a una [[Transformación lineal]] con [[Matriz]] asociada $A$, deberemos calcular un [[Determinante]] para asegurarnos que el [[Sistema de ecuaciones lineales homogéneo (SELH)|SELH]] sea [[Sistema incompatible (SI)|SI]].
+Para obtener los [[Autovector|Autovectores]] o [[Autovalor|Autovalores]] asociados a una [[Transformación lineal]] con [[Matriz]] asociada $A$, deberemos calcular un [[Determinante]] para asegurarnos que el [[Sistema de ecuaciones lineales homogéneo (SELH)|SELH]] sea [[Sistema compatible (SC)#Sistema compatible indeterminado (SCI)|SCI]].
 
 $$
 |A - \lambda I| = p(\lambda)

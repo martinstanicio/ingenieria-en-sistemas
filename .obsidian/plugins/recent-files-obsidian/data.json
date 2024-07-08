@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "Diagrama de flujo",
+      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
+    },
+    {
+      "basename": "Pseudocódigo",
+      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
+    },
+    {
+      "basename": "Estructura de casos",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Álgebra y Geometría Analítica",
+      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
+    },
+    {
       "basename": "Autovector",
       "path": "Álgebra y Geometría Analítica/Autovector.md"
     },
@@ -9,32 +33,64 @@
       "path": "Álgebra y Geometría Analítica/Autoespacio.md"
     },
     {
+      "basename": "Teorema de la dimensión",
+      "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
+    },
+    {
+      "basename": "Teorema de Laplace",
+      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
+    },
+    {
+      "basename": "Teorema de Rouche Frobeniuos",
+      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
+    },
+    {
+      "basename": "Teorema de existencia de una transformación lineal",
+      "path": "Álgebra y Geometría Analítica/Teorema de existencia de una transformación lineal.md"
+    },
+    {
+      "basename": "Multiplicidad geométrica",
+      "path": "Álgebra y Geometría Analítica/Multiplicidad geométrica.md"
+    },
+    {
+      "basename": "Base",
+      "path": "Álgebra y Geometría Analítica/Base.md"
+    },
+    {
       "basename": "Autovalor",
       "path": "Álgebra y Geometría Analítica/Autovalor.md"
-    },
-    {
-      "basename": "Multiplicidad algebraica",
-      "path": "Álgebra y Geometría Analítica/Multiplicidad algebraica.md"
-    },
-    {
-      "basename": "Kernel",
-      "path": "Álgebra y Geometría Analítica/Kernel.md"
     },
     {
       "basename": "Autopolinomio",
       "path": "Álgebra y Geometría Analítica/Autopolinomio.md"
     },
     {
-      "basename": "Autoecuación",
-      "path": "Álgebra y Geometría Analítica/Autoecuación.md"
+      "basename": "Sistema compatible (SC)",
+      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
     },
     {
       "basename": "Sistema incompatible (SI)",
       "path": "Álgebra y Geometría Analítica/Sistema incompatible (SI).md"
     },
     {
-      "basename": "Sistema compatible (SC)",
-      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
+      "basename": "Autoecuación",
+      "path": "Álgebra y Geometría Analítica/Autoecuación.md"
+    },
+    {
+      "basename": "Multiplicidad algebraica",
+      "path": "Álgebra y Geometría Analítica/Multiplicidad algebraica.md"
+    },
+    {
+      "basename": "IEEE754",
+      "path": "Arquitectura de Computadoras/IEEE754.md"
+    },
+    {
+      "basename": "Diseño de Sistemas de Información",
+      "path": "Diseño de Sistemas de Información/Diseño de Sistemas de Información.md"
+    },
+    {
+      "basename": "Kernel",
+      "path": "Álgebra y Geometría Analítica/Kernel.md"
     },
     {
       "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
@@ -59,10 +115,6 @@
     {
       "basename": "Término independiente",
       "path": "Álgebra y Geometría Analítica/Término independiente.md"
-    },
-    {
-      "basename": "Álgebra y Geometría Analítica",
-      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
     },
     {
       "basename": "Derivada",
@@ -141,64 +193,12 @@
       "path": "Legislación/Legislación.md"
     },
     {
-      "basename": "Diseño de Sistemas de Información",
-      "path": "Diseño de Sistemas de Información/Diseño de Sistemas de Información.md"
-    },
-    {
       "basename": "Análisis numérico",
       "path": "Análisis Numérico/Análisis numérico.md"
     },
     {
       "basename": "Comunicación de Datos",
       "path": "Comunicación de Datos/Comunicación de Datos.md"
-    },
-    {
-      "basename": "Análisis Matemático II",
-      "path": "Análisis Matemático II/Análisis Matemático II.md"
-    },
-    {
-      "basename": "Análisis Matemático I",
-      "path": "Análisis Matemático I/Análisis Matemático I.md"
-    },
-    {
-      "basename": "Desarrollo de Software",
-      "path": "Desarrollo de Software/Desarrollo de Software.md"
-    },
-    {
-      "basename": "Bases de Datos",
-      "path": "Bases de Datos/Bases de Datos.md"
-    },
-    {
-      "basename": "Sistemas Operativos",
-      "path": "Sistemas Operativos/Sistemas Operativos.md"
-    },
-    {
-      "basename": "Probabilidades y Estadísticas",
-      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
-    },
-    {
-      "basename": "Economía",
-      "path": "Economía/Economía.md"
-    },
-    {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
-    },
-    {
-      "basename": "Paradigmas de Programación",
-      "path": "Paradigmas de Programación/Paradigmas de Programación.md"
-    },
-    {
-      "basename": "Sintaxis y Semántica de los Lenguajes",
-      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis y Semántica de los Lenguajes.md"
-    },
-    {
-      "basename": "Inglés II",
-      "path": "Inglés II/Inglés II.md"
-    },
-    {
-      "basename": "Física II",
-      "path": "Física II/Física II.md"
     }
   ],
   "omittedPaths": [],
