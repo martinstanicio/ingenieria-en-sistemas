@@ -3,6 +3,7 @@ created: 2024-06-25 21:18:08
 modified: 2024-07-06 21:47:36
 tags:
   - index
+  - tercer-año
 title: Bases de Datos
 ---
 

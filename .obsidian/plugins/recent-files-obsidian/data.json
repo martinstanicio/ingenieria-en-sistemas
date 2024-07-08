@@ -1,168 +1,56 @@
 {
   "recentFiles": [
     {
-      "basename": "Diagrama de flujo",
-      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
-    },
-    {
-      "basename": "Pseudocódigo",
-      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
-    },
-    {
-      "basename": "Estructura de casos",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+      "basename": "Matriz inversible",
+      "path": "Álgebra y Geometría Analítica/Matriz inversible.md"
     },
     {
       "basename": "Álgebra y Geometría Analítica",
       "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
     },
     {
-      "basename": "Autovector",
-      "path": "Álgebra y Geometría Analítica/Autovector.md"
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
     },
     {
-      "basename": "Autoespacio",
-      "path": "Álgebra y Geometría Analítica/Autoespacio.md"
+      "basename": "Grupo abeliano",
+      "path": "Álgebra y Geometría Analítica/Grupo abeliano.md"
     },
     {
-      "basename": "Teorema de la dimensión",
-      "path": "Álgebra y Geometría Analítica/Teorema de la dimensión.md"
+      "basename": "Ingeniería y Sociedad",
+      "path": "Ingeniería y Sociedad/Ingeniería y Sociedad.md"
     },
     {
-      "basename": "Teorema de Laplace",
-      "path": "Álgebra y Geometría Analítica/Teorema de Laplace.md"
+      "basename": "Plan de estudios",
+      "path": "Ingeniería y Sociedad/Plan de estudios.md"
     },
     {
-      "basename": "Teorema de Rouche Frobeniuos",
-      "path": "Álgebra y Geometría Analítica/Teorema de Rouche Frobeniuos.md"
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
     },
     {
-      "basename": "Teorema de existencia de una transformación lineal",
-      "path": "Álgebra y Geometría Analítica/Teorema de existencia de una transformación lineal.md"
+      "basename": "Análisis Matemático I",
+      "path": "Análisis Matemático I/Análisis Matemático I.md"
     },
     {
-      "basename": "Multiplicidad geométrica",
-      "path": "Álgebra y Geometría Analítica/Multiplicidad geométrica.md"
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
     },
     {
-      "basename": "Base",
-      "path": "Álgebra y Geometría Analítica/Base.md"
+      "basename": "Cota",
+      "path": "Análisis Matemático I/Cota.md"
     },
     {
-      "basename": "Autovalor",
-      "path": "Álgebra y Geometría Analítica/Autovalor.md"
-    },
-    {
-      "basename": "Autopolinomio",
-      "path": "Álgebra y Geometría Analítica/Autopolinomio.md"
-    },
-    {
-      "basename": "Sistema compatible (SC)",
-      "path": "Álgebra y Geometría Analítica/Sistema compatible (SC).md"
-    },
-    {
-      "basename": "Sistema incompatible (SI)",
-      "path": "Álgebra y Geometría Analítica/Sistema incompatible (SI).md"
-    },
-    {
-      "basename": "Autoecuación",
-      "path": "Álgebra y Geometría Analítica/Autoecuación.md"
-    },
-    {
-      "basename": "Multiplicidad algebraica",
-      "path": "Álgebra y Geometría Analítica/Multiplicidad algebraica.md"
-    },
-    {
-      "basename": "IEEE754",
-      "path": "Arquitectura de Computadoras/IEEE754.md"
-    },
-    {
-      "basename": "Diseño de Sistemas de Información",
-      "path": "Diseño de Sistemas de Información/Diseño de Sistemas de Información.md"
-    },
-    {
-      "basename": "Kernel",
-      "path": "Álgebra y Geometría Analítica/Kernel.md"
-    },
-    {
-      "basename": "Sistema de ecuaciones lineales homogéneo (SELH)",
-      "path": "Álgebra y Geometría Analítica/Sistema de ecuaciones lineales homogéneo (SELH).md"
-    },
-    {
-      "basename": "Matriz escalonada",
-      "path": "Álgebra y Geometría Analítica/Matriz escalonada.md"
-    },
-    {
-      "basename": "Matriz inversa",
-      "path": "Álgebra y Geometría Analítica/Matriz inversa.md"
-    },
-    {
-      "basename": "Matriz inversible",
-      "path": "Álgebra y Geometría Analítica/Matriz inversible.md"
-    },
-    {
-      "basename": "Propiedades de determinantes",
-      "path": "Álgebra y Geometría Analítica/Propiedades de determinantes.md"
-    },
-    {
-      "basename": "Término independiente",
-      "path": "Álgebra y Geometría Analítica/Término independiente.md"
-    },
-    {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
-    },
-    {
-      "basename": "Pendiente",
-      "path": "Análisis Matemático I/Pendiente.md"
-    },
-    {
-      "basename": "Transformación lineal",
-      "path": "Álgebra y Geometría Analítica/Transformación lineal.md"
-    },
-    {
-      "basename": "Números complejos",
-      "path": "Álgebra y Geometría Analítica/Números complejos.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+      "basename": "README",
+      "path": "README.md"
     },
     {
       "basename": "Proyecto Final",
       "path": "Proyecto Final/Proyecto Final.md"
     },
     {
-      "basename": "Tecnologías para la Automatización",
-      "path": "Tecnologías para la Automatización/Tecnologías para la Automatización.md"
-    },
-    {
-      "basename": "Simulación",
-      "path": "Simulación/Simulación.md"
-    },
-    {
-      "basename": "Ciencia de Datos",
-      "path": "Ciencia de Datos/Ciencia de Datos.md"
-    },
-    {
-      "basename": "Inteligencia Artificial",
-      "path": "Inteligencia Artificial/Inteligencia Artificial.md"
-    },
-    {
       "basename": "Seguridad en los Sistemas de Información",
       "path": "Seguridad en los Sistemas de Información/Seguridad en los Sistemas de Información.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
     },
     {
       "basename": "Gestión Gerencial",
@@ -173,8 +61,24 @@
       "path": "Sistemas de Gestión/Sistemas de Gestión.md"
     },
     {
+      "basename": "Ciencia de Datos",
+      "path": "Ciencia de Datos/Ciencia de Datos.md"
+    },
+    {
+      "basename": "Inteligencia Artificial",
+      "path": "Inteligencia Artificial/Inteligencia Artificial.md"
+    },
+    {
       "basename": "Administración de Sistemas de Información",
       "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
+    },
+    {
+      "basename": "Tecnologías para la Automatización",
+      "path": "Tecnologías para la Automatización/Tecnologías para la Automatización.md"
+    },
+    {
+      "basename": "Simulación",
+      "path": "Simulación/Simulación.md"
     },
     {
       "basename": "Investigación Operativa",
@@ -185,20 +89,116 @@
       "path": "Redes de Datos/Redes de Datos.md"
     },
     {
+      "basename": "Legislación",
+      "path": "Legislación/Legislación.md"
+    },
+    {
       "basename": "Ingeniería y Calidad de Software",
       "path": "Ingeniería y Calidad de Software/Ingeniería y Calidad de Software.md"
     },
     {
-      "basename": "Legislación",
-      "path": "Legislación/Legislación.md"
+      "basename": "Diseño de Sistemas de Información",
+      "path": "Diseño de Sistemas de Información/Diseño de Sistemas de Información.md"
     },
     {
       "basename": "Análisis numérico",
       "path": "Análisis Numérico/Análisis numérico.md"
     },
     {
+      "basename": "Desarrollo de Software",
+      "path": "Desarrollo de Software/Desarrollo de Software.md"
+    },
+    {
       "basename": "Comunicación de Datos",
       "path": "Comunicación de Datos/Comunicación de Datos.md"
+    },
+    {
+      "basename": "Economía",
+      "path": "Economía/Economía.md"
+    },
+    {
+      "basename": "Bases de Datos",
+      "path": "Bases de Datos/Bases de Datos.md"
+    },
+    {
+      "basename": "Probabilidades y Estadísticas",
+      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
+      "basename": "Sistemas Operativos",
+      "path": "Sistemas Operativos/Sistemas Operativos.md"
+    },
+    {
+      "basename": "Paradigmas de Programación",
+      "path": "Paradigmas de Programación/Paradigmas de Programación.md"
+    },
+    {
+      "basename": "Sintaxis y Semántica de los Lenguajes",
+      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis y Semántica de los Lenguajes.md"
+    },
+    {
+      "basename": "Inglés II",
+      "path": "Inglés II/Inglés II.md"
+    },
+    {
+      "basename": "Física II",
+      "path": "Física II/Física II.md"
+    },
+    {
+      "basename": "Análisis Matemático II",
+      "path": "Análisis Matemático II/Análisis Matemático II.md"
+    },
+    {
+      "basename": "Sistemas y Procesos de Negocios",
+      "path": "Sistemas y Procesos de Negocios/Sistemas y Procesos de Negocios.md"
+    },
+    {
+      "basename": "Arquitectura de Computadoras",
+      "path": "Arquitectura de Computadoras/Arquitectura de Computadoras.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Lógica y Estructuras Discretas",
+      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
+    },
+    {
+      "basename": "Inglés I",
+      "path": "Inglés I/Inglés I.md"
+    },
+    {
+      "basename": "Física I",
+      "path": "Física I/Física I.md"
+    },
+    {
+      "basename": "Estructura de casos",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de casos.md"
+    },
+    {
+      "basename": "Pseudocódigo",
+      "path": "Algoritmos y Estructuras de Datos/Pseudocódigo.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
+    },
+    {
+      "basename": "Variables",
+      "path": "Algoritmos y Estructuras de Datos/Variables.md"
+    },
+    {
+      "basename": "Diagrama de flujo",
+      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
+    },
+    {
+      "basename": "Autovector",
+      "path": "Álgebra y Geometría Analítica/Autovector.md"
     }
   ],
   "omittedPaths": [],

@@ -1,6 +1,6 @@
 ---
 created: 2024-04-21 23:51:31
-modified: 2024-07-06 21:19:52
+modified: 2024-07-07 21:47:14
 tags:
   - index
 title: Ingeniería en Sistemas

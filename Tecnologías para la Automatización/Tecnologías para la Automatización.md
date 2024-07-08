@@ -3,6 +3,7 @@ created: 2024-06-25 21:24:24
 modified: 2024-07-06 21:52:10
 tags:
   - index
+  - cuarto-año
 title: Tecnologías para la Automatización
 ---
 

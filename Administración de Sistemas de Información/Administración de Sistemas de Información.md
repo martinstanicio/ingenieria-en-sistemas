@@ -3,6 +3,7 @@ created: 2024-06-25 21:24:45
 modified: 2024-07-06 21:52:36
 tags:
   - index
+  - cuarto-año
 title: Administración de Sistemas de Información
 ---
 

@@ -3,6 +3,7 @@ created: 2024-07-06 21:18:24
 modified: 2024-07-06 21:46:39
 tags:
   - index
+  - tercer-año
 title: Probabilidades y Estadísticas
 ---
 

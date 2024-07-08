@@ -3,6 +3,7 @@ created: 2024-07-06 21:17:32
 modified: 2024-07-06 21:46:22
 tags:
   - index
+  - segundo-año
 title: Análisis de Sistemas de Información
 ---
 

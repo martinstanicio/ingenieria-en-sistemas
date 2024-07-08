@@ -3,6 +3,7 @@ created: 2024-07-06 21:17:45
 modified: 2024-07-06 21:54:48
 tags:
   - index
+  - quinto-año
 title: Gestión Gerencial
 ---
 

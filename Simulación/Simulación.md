@@ -3,6 +3,7 @@ created: 2024-06-25 21:23:53
 modified: 2024-07-06 21:51:46
 tags:
   - index
+  - cuarto-año
 title: Simulación
 ---
 

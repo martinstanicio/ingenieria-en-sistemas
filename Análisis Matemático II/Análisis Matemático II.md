@@ -3,6 +3,7 @@ created: 2024-07-06 21:14:28
 modified: 2024-07-06 21:43:38
 tags:
   - index
+  - segundo-año
 title: Análisis Matemático II
 ---
 

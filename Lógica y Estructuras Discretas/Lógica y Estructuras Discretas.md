@@ -3,6 +3,7 @@ created: 2024-04-21 23:59:34
 modified: 2024-07-06 21:12:26
 tags:
   - index
+  - primer-año
 title: Lógica y Estructuras Discretas
 ---
 

@@ -3,6 +3,7 @@ created: 2024-07-06 21:18:37
 modified: 2024-07-06 21:45:21
 tags:
   - index
+  - segundo-año
 title: Sintaxis y Semántica de los Lenguajes
 ---
 

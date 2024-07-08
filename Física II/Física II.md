@@ -3,6 +3,7 @@ created: 2024-07-06 21:17:42
 modified: 2024-07-06 21:43:56
 tags:
   - index
+  - segundo-año
 title: Física II
 ---
 

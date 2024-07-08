@@ -3,6 +3,7 @@ created: 2024-07-06 21:18:07
 modified: 2024-07-06 21:50:57
 tags:
   - index
+  - cuarto-año
 title: Investigación Operativa
 ---
 

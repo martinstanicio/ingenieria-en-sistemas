@@ -3,6 +3,7 @@ created: 2024-06-25 21:21:16
 modified: 2024-07-06 21:49:04
 tags:
   - index
+  - tercer-año
 title: Diseño de Sistemas de Información
 ---
 

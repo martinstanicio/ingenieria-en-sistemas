@@ -3,6 +3,7 @@ created: 2024-06-25 21:26:08
 modified: 2024-07-06 21:53:57
 tags:
   - index
+  - quinto-año
 title: Sistemas de Gestión
 ---
 

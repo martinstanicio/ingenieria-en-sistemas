@@ -3,6 +3,7 @@ created: 2024-07-06 21:18:18
 modified: 2024-07-06 21:45:35
 tags:
   - index
+  - segundo-año
 title: Paradigmas de Programación
 ---
 

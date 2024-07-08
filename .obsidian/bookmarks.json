@@ -133,7 +133,7 @@
         {
           "type": "graph",
           "ctime": 1720311573493,
-          "title": "Indexes",
+          "title": "Indexes (Por materia)",
           "options": {
             "collapse-filter": false,
             "search": "tag:#index",
@@ -218,6 +218,69 @@
             "linkStrength": 1,
             "linkDistance": 250,
             "scale": 0.3829200458615142,
+            "close": false
+          }
+        },
+        {
+          "type": "graph",
+          "ctime": 1720399665492,
+          "title": "Indexes (Por nivel)",
+          "options": {
+            "collapse-filter": false,
+            "search": "tag:#index -path:README",
+            "showTags": false,
+            "showAttachments": false,
+            "hideUnresolved": false,
+            "showOrphans": true,
+            "collapse-color-groups": false,
+            "colorGroups": [
+              {
+                "query": "tag:#primer-año",
+                "color": {
+                  "a": 1,
+                  "rgb": 14048348
+                }
+              },
+              {
+                "query": "tag:#segundo-año",
+                "color": {
+                  "a": 1,
+                  "rgb": 14067036
+                }
+              },
+              {
+                "query": "tag:#tercer-año",
+                "color": {
+                  "a": 1,
+                  "rgb": 7657052
+                }
+              },
+              {
+                "query": "tag:#cuarto-año",
+                "color": {
+                  "a": 1,
+                  "rgb": 6084237
+                }
+              },
+              {
+                "query": "tag:#quinto-año",
+                "color": {
+                  "a": 1,
+                  "rgb": 6084310
+                }
+              }
+            ],
+            "collapse-display": false,
+            "showArrow": false,
+            "textFadeMultiplier": 0,
+            "nodeSizeMultiplier": 1,
+            "lineSizeMultiplier": 1,
+            "collapse-forces": false,
+            "centerStrength": 0,
+            "repelStrength": 15.0520833333333,
+            "linkStrength": 1,
+            "linkDistance": 250,
+            "scale": 0.27312747285927924,
             "close": false
           }
         }
