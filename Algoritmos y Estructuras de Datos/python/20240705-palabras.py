@@ -27,7 +27,7 @@ for caracter in range(len(frase)):
         case " ":
             if caracter != 0 and caracter != len(frase) - 1:
                 palabras += 1
-    
+
     if caracter == len(frase) - 1:
         palabras += 1
 
