@@ -6,4 +6,4 @@ title: Matriz inversa
 
 # Matriz inversa
 
-Similar al [[Elemento opuesto o inverso]] de una [[Matriz]], pero al multiplicar a una matriz por su inversa, obtenemos la [[Matriz identidad]].
+Similar al [[Elemento simétrico]] de una [[Matriz]], pero al multiplicar a una matriz por su inversa, obtenemos la [[Matriz identidad]].

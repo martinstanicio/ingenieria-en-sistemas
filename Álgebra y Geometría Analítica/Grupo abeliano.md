@@ -1,9 +1,11 @@
 ---
+aliases:
+  - Grupo conmutativo
 created: 2024-03-29 20:55:29
-modified: 2024-05-08 01:33:30
+modified: 2024-07-12 13:56:07
 title: Grupo abeliano
 ---
 
 # Grupo abeliano
 
-Cuando una operación en un [[Conjunto]] numérico cumple con las condiciones necesarias para ser un [[Grupo]], y además posee la propiedad de [[Conmutatividad]], es considerada un **grupo abeliano**.
+Cuando un [[Grupo]] también cumple la [[Ley conmutativa]], es un ==grupo conmutativo== o ==grupo abeliano==.

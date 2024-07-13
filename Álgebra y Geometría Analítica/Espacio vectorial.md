@@ -1,6 +1,6 @@
 ---
 created: 2024-04-06 20:17:07
-modified: 2024-05-08 01:33:30
+modified: 2024-07-12 14:31:42
 title: Espacio vectorial
 ---
 
@@ -13,9 +13,9 @@ $$(V, +, k, \cdot)$$
 Donde:
 
 1. $V$ es el nombre del mismo
-2. $+$ es la operación de suma
+2. $+$ es la [[Operación]] de suma
 3. $k$ es el [[Cuerpo]] que representa a los escalares
-4. $\cdot$ es la operación de multiplicación
+4. $\cdot$ es la [[Operación]] de multiplicación
 
 Por ejemplo:
 

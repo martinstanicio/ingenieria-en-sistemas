@@ -1,12 +1,12 @@
 ---
 created: 2024-07-04 17:43:36
-modified: 2024-07-05 17:20:08
+modified: 2024-07-11 18:05:47
 title: Coeficiente de restitución
 ---
 
 # Coeficiente de restitución
 
-Es la capacidad de un cuerpo de volver a su forma original. Es a dimensional, y está comprendido entre $0$ y $1$.
+Es la capacidad de un cuerpo de ==volver a su forma original==. Es adimensional, y está comprendido entre $0$ y $1$.
 
 $$
 0 \leq e \leq 1

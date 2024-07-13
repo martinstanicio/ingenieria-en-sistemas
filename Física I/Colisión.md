@@ -2,17 +2,13 @@
 aliases:
   - Choque
 created: 2024-07-04 17:40:09
-modified: 2024-07-04 18:07:07
+modified: 2024-07-11 17:55:55
 title: Colisión
 ---
 
 # Colisión
 
-En toda colisión la cantidad de [[Movimiento]] es ==constante==, es decir, $\overrightarrow{P}_0 = \overrightarrow{P}_f$, y se calcula multiplicando la masa por la velocidad.
-
-$$
-\overrightarrow{P} = m \cdot v
-$$
+En toda colisión la [[Cantidad de movimiento]] es ==constante==, es decir, $\overrightarrow{P}_0 = \overrightarrow{P}_f$.
 
 Existen tres tipos de colisiones.
 

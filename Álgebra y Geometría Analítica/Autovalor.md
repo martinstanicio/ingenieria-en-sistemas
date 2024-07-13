@@ -4,7 +4,7 @@ aliases:
   - Valor característico
   - Eigenvalor
 created: 2024-07-01 19:22:44
-modified: 2024-07-07 19:55:46
+modified: 2024-07-10 13:51:57
 title: Autovalor
 ---
 
@@ -17,3 +17,6 @@ Aw = \lambda w
 $$
 
 Suponiendo que $\dim(V) = n$, siempre existen $n$ [[Autovalor|Autovalores]], que pueden o no repetirse.
+
+> [!tip]
+> Los [[Autovalor|Autovalores]] de una [[Matriz triangular]] o [[Matriz diagonal]] son los elementos de su **diagonal principal**.

@@ -152,4 +152,4 @@ AB^t = C =
 \right)
 $$
 
-La multiplicación de matrices ==no es [[Conmutatividad|conmutativa]]==.
+La multiplicación de matrices ==no es [[Ley conmutativa|conmutativa]]==.
