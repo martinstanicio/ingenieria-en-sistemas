@@ -6,11 +6,11 @@
       "items": [
         {
           "type": "graph",
-          "ctime": 1719181333633,
+          "ctime": 1720908766074,
           "title": "Global",
           "options": {
             "collapse-filter": false,
-            "search": "-path:\"Actividades\" -path:\"README\"",
+            "search": "-path:\"Actividades\" -path:\"README\" -path:\"Templates\" -tag:#index",
             "showTags": false,
             "showAttachments": false,
             "hideUnresolved": false,

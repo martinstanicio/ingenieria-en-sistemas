@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Regla de la cadena",
+      "path": "Análisis Matemático I/Regla de la cadena.md"
+    },
+    {
+      "basename": "Función compuesta",
+      "path": "Análisis Matemático I/Función compuesta.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Sintaxis y Semántica de los Lenguajes",
+      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis y Semántica de los Lenguajes.md"
+    },
+    {
+      "basename": "AyED - Actividad",
+      "path": "Templates/AyED - Actividad.md"
+    },
+    {
       "basename": "20240712 - Fecha",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240712 - Fecha.md"
+    },
+    {
+      "basename": "20240517 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240517 - Producciones.md"
+    },
+    {
+      "basename": "20240614 - Rectángulo",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240614 - Rectángulo.md"
+    },
+    {
+      "basename": "Diagrama de flujo",
+      "path": "Algoritmos y Estructuras de Datos/Diagrama de flujo.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
     },
     {
       "basename": "20240705 - Mayúsculas",
@@ -11,10 +47,6 @@
     {
       "basename": "20240705 - Palabras",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Palabras.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
     },
     {
       "basename": "20240702 - Fechas",
@@ -167,38 +199,6 @@
     {
       "basename": "Código libre",
       "path": "Arquitectura de Computadoras/Código libre.md"
-    },
-    {
-      "basename": "Código ponderado",
-      "path": "Arquitectura de Computadoras/Código ponderado.md"
-    },
-    {
-      "basename": "Binary Code Digit",
-      "path": "Arquitectura de Computadoras/Binary Code Digit.md"
-    },
-    {
-      "basename": "Álgebra y Geometría Analítica",
-      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
-    },
-    {
-      "basename": "Autovalor",
-      "path": "Álgebra y Geometría Analítica/Autovalor.md"
-    },
-    {
-      "basename": "Matriz triangular",
-      "path": "Álgebra y Geometría Analítica/Matriz triangular.md"
-    },
-    {
-      "basename": "Matriz diagonal",
-      "path": "Álgebra y Geometría Analítica/Matriz diagonal.md"
-    },
-    {
-      "basename": "Matriz nilpotente",
-      "path": "Álgebra y Geometría Analítica/Matriz nilpotente.md"
-    },
-    {
-      "basename": "Matriz simétrica",
-      "path": "Álgebra y Geometría Analítica/Matriz simétrica.md"
     }
   ],
   "omittedPaths": [],
