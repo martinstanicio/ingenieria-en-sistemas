@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
       "basename": "Función ORD",
       "path": "Algoritmos y Estructuras de Datos/Función ORD.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "Función compuesta",
       "path": "Análisis Matemático I/Función compuesta.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
     },
     {
       "basename": "Sintaxis y Semántica de los Lenguajes",
@@ -187,18 +191,6 @@
     {
       "basename": "Ecuaciones horarias",
       "path": "Física I/Ecuaciones horarias.md"
-    },
-    {
-      "basename": "Energía",
-      "path": "Física I/Energía.md"
-    },
-    {
-      "basename": "Unidades básicas",
-      "path": "Física I/Unidades básicas.md"
-    },
-    {
-      "basename": "Código de Hamming",
-      "path": "Arquitectura de Computadoras/Código de Hamming.md"
     }
   ],
   "omittedPaths": [],
