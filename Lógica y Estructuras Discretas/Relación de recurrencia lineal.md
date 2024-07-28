@@ -1,6 +1,6 @@
 ---
 created: 2024-07-28 11:16:22
-modified: 2024-07-28 11:36:31
+modified: 2024-07-28 11:44:48
 title: Relación de recurrencia lineal
 ---
 
@@ -47,6 +47,35 @@ $$
 Si $c_k \neq 0$, se dice que es de orden $k$.
 
 #### Teorema 2
+
 Si $a_n^p$ es una ==solución particular== y $a_n^h$ es la ==solución de la relación homogénea asociada==, luego cualquier solución es de la forma:
+
 $$
-a_n = 
+a_n = a_n^p + a_n^h
+$$
+
+#### Teorema 3
+
+Si el [[Término independiente]] $F(n)$ es la forma:
+
+$$
+F(n) = (b_0 + b_1 n^1 + \dots + b_j n^j) \cdot s^n
+$$
+
+Con $b_0, \dots, b_j, s \in \mathbb{R}$, luego:
+
+##### Caso 1
+
+Si $s$ ==no es raíz== de la ecuación característica de la ==ecuación homogénea asociada==.
+
+$$
+a_n^p = (d_0 + d_1 n^1 + \dots + d_j n^j) \cdot s^n
+$$
+
+##### Caso 2
+
+Si $s$ ==es raíz== de [[Multiplicidad algebraica]] $m$ de la ecuación característica de la ==ecuación homogénea asociada==.
+
+$$
+a_n^p = (d_0 + d_1 n^1 + \dots + d_j n^j) \cdot n^m \cdot s^n
+$$

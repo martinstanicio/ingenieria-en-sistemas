@@ -5,6 +5,14 @@
       "path": "Lógica y Estructuras Discretas/Relación de recurrencia lineal.md"
     },
     {
+      "basename": "Semigrupo",
+      "path": "Lógica y Estructuras Discretas/Semigrupo.md"
+    },
+    {
+      "basename": "Semigrupo conmutativo",
+      "path": "Lógica y Estructuras Discretas/Semigrupo conmutativo.md"
+    },
+    {
       "basename": "Multiplicidad algebraica",
       "path": "Álgebra y Geometría Analítica/Multiplicidad algebraica.md"
     },
@@ -185,20 +193,12 @@
       "path": "Lógica y Estructuras Discretas/Monoide conmutativo.md"
     },
     {
-      "basename": "Semigrupo conmutativo",
-      "path": "Lógica y Estructuras Discretas/Semigrupo conmutativo.md"
-    },
-    {
       "basename": "Movimiento",
       "path": "Física I/Movimiento.md"
     },
     {
       "basename": "Ley de Hooke",
       "path": "Física I/Ley de Hooke.md"
-    },
-    {
-      "basename": "Física",
-      "path": "Física I/Física.md"
     }
   ],
   "omittedPaths": [],
