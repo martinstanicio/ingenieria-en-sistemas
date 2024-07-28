@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "Relación de recurrencia lineal",
+      "path": "Lógica y Estructuras Discretas/Relación de recurrencia lineal.md"
+    },
+    {
+      "basename": "Multiplicidad algebraica",
+      "path": "Álgebra y Geometría Analítica/Multiplicidad algebraica.md"
+    },
+    {
+      "basename": "Multiplicidad geométrica",
+      "path": "Álgebra y Geometría Analítica/Multiplicidad geométrica.md"
+    },
+    {
+      "basename": "Autoecuación",
+      "path": "Álgebra y Geometría Analítica/Autoecuación.md"
+    },
+    {
+      "basename": "Relación de recurrencia",
+      "path": "Lógica y Estructuras Discretas/Relación de recurrencia.md"
+    },
+    {
+      "basename": "Sucesión",
+      "path": "Análisis Matemático I/Sucesión.md"
+    },
+    {
+      "basename": "Definición recursiva",
+      "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
+    },
+    {
+      "basename": "Recursividad",
+      "path": "Sistemas y Procesos de Negocios/Recursividad.md"
+    },
+    {
+      "basename": "Lógica y Estructuras Discretas",
+      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
+    },
+    {
       "basename": "Logaritmo natural de un complejo",
       "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
     },
@@ -163,42 +199,6 @@
     {
       "basename": "Física",
       "path": "Física I/Física.md"
-    },
-    {
-      "basename": "Impulso",
-      "path": "Física I/Impulso.md"
-    },
-    {
-      "basename": "Dinámica",
-      "path": "Física I/Dinámica.md"
-    },
-    {
-      "basename": "Cantidad de movimiento",
-      "path": "Física I/Cantidad de movimiento.md"
-    },
-    {
-      "basename": "Colisión",
-      "path": "Física I/Colisión.md"
-    },
-    {
-      "basename": "Coeficiente de restitución",
-      "path": "Física I/Coeficiente de restitución.md"
-    },
-    {
-      "basename": "Cinemática",
-      "path": "Física I/Cinemática.md"
-    },
-    {
-      "basename": "Fuerza",
-      "path": "Física I/Fuerza.md"
-    },
-    {
-      "basename": "Electromagnetismo",
-      "path": "Física I/Electromagnetismo.md"
-    },
-    {
-      "basename": "Ecuaciones horarias",
-      "path": "Física I/Ecuaciones horarias.md"
     }
   ],
   "omittedPaths": [],
