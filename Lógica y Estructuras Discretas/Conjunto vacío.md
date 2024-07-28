@@ -1,6 +1,6 @@
 ---
 created: 2024-04-26 15:09:12
-modified: 2024-05-08 01:33:30
+modified: 2024-07-28 14:03:05
 title: Conjunto vacío
 ---
 
@@ -8,4 +8,5 @@ title: Conjunto vacío
 
 Es un [[Conjunto]] sin elementos. Se puede representar como $\emptyset$ o $\{\}$.
 
-Un conjunto vacío es [[Subconjunto]] de cualquier otro [[Conjunto]].
+> [!tip]
+> El [[Conjunto vacío]] es [[Subconjunto]] de cualquier otro [[Conjunto]].
