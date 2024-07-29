@@ -34,39 +34,49 @@ var _GraphBannerPlugin = class _GraphBannerPlugin extends import_obsidian.Plugin
     super(...arguments);
     this.unloadListeners = [];
     this.graphNode = null;
+    this.graphWindowID = null;
   }
   async onload() {
     console.log("Loading GraphBannerPlugin");
     this.app.workspace.trigger("parse-style-settings");
     if (import_obsidian.Platform.isDesktopApp) {
+      const hideGraphWindow = () => {
+        const obsidianWindows = import_remote.BrowserWindow.getAllWindows();
+        const hiddenGraphWindow = obsidianWindows.find(
+          (win) => win.id === this.graphWindowID && !win.isVisible()
+        );
+        if (hiddenGraphWindow) return;
+        const graphWindow = obsidianWindows.find(
+          (win) => win.getTitle().startsWith("Graph")
+        );
+        if (!graphWindow) return;
+        this.graphWindowID = graphWindow.id;
+        graphWindow.hide();
+        this.unloadListeners.push(() => {
+          graphWindow.closable && graphWindow.close();
+        });
+      };
+      this.addCommand({
+        id: "hide-window",
+        name: "Hide the local window used for banner",
+        callback: hideGraphWindow
+      });
+      const showGraphWindows = () => {
+        const obsidianWindows = import_remote.BrowserWindow.getAllWindows();
+        for (const win of obsidianWindows) {
+          !win.isVisible() && win.show();
+        }
+      };
+      this.addCommand({
+        id: "show-hidden-windows",
+        name: "Show hidden local graph windows",
+        callback: showGraphWindows
+      });
       this.registerEvent(
         this.app.workspace.on("window-open", async (workspaceWindow) => {
           if (workspaceWindow.getContainer() instanceof import_obsidian.WorkspaceRoot) return;
           await new Promise((resolve) => setTimeout(resolve, 200));
-          const obsidianWindows = import_remote.BrowserWindow.getAllWindows();
-          const hiddenGraphWindow = obsidianWindows.find(
-            (win) => win.getTitle().startsWith("Graph") && !win.isVisible()
-          );
-          if (hiddenGraphWindow) return;
-          const mainWindow = obsidianWindows.find((win) => win.id === 1);
-          const graphWindow = obsidianWindows.find(
-            (win) => win.getTitle().startsWith("Graph")
-          );
-          console.debug("Obsidian windows", {
-            obsidianWindows: obsidianWindows.map((win) => win.getTitle()),
-            mainWindow,
-            graphWindow
-          });
-          if (!mainWindow || !graphWindow) return;
-          const title = graphWindow.getTitle();
-          if (title.startsWith("Graph")) {
-            console.debug(`hide graph window: ${title}`);
-            graphWindow.hide();
-            mainWindow.focus();
-          }
-          this.unloadListeners.push(() => {
-            graphWindow.closable && graphWindow.close();
-          });
+          hideGraphWindow();
         })
       );
     }

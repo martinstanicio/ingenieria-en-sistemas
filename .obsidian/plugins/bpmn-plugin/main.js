@@ -45,8 +45,7 @@ var require_classnames = __commonJS({
         var classes4 = [];
         for (var i7 = 0; i7 < arguments.length; i7++) {
           var arg = arguments[i7];
-          if (!arg)
-            continue;
+          if (!arg) continue;
           var argType = typeof arg;
           if (argType === "string" || argType === "number") {
             classes4.push(arg);
@@ -256,7 +255,7 @@ var require_dist = __commonJS({
         }
         sorted.push(entry);
       });
-      return map4(sorted, (e7) => e7.v);
+      return map4(sorted, (e8) => e8.v);
     }
     function matchPattern2(pattern) {
       return function(el) {
@@ -266,13 +265,13 @@ var require_dist = __commonJS({
       };
     }
     function toExtractor2(extractor) {
-      return isFunction2(extractor) ? extractor : (e7) => {
-        return e7[extractor];
+      return isFunction2(extractor) ? extractor : (e8) => {
+        return e8[extractor];
       };
     }
     function toMatcher2(matcher) {
-      return isFunction2(matcher) ? matcher : (e7) => {
-        return e7 === matcher;
+      return isFunction2(matcher) ? matcher : (e8) => {
+        return e8 === matcher;
       };
     }
     function identity3(arg) {
@@ -543,10 +542,10 @@ var require_zeebe = __commonJS({
         }
       });
     }
-    function add3(elements, e7, unique) {
-      var canAdd = !unique || elements.indexOf(e7) === -1;
+    function add3(elements, e8, unique) {
+      var canAdd = !unique || elements.indexOf(e8) === -1;
       if (canAdd) {
-        elements.push(e7);
+        elements.push(e8);
       }
       return canAdd;
     }
@@ -745,22 +744,22 @@ var require_zeebe = __commonJS({
       return getVariablesForScope2(getScope2(element), getRootElement3(element), additionalExtractors);
     }
     function getScope2(element) {
-      const bo = getBusinessObject2(element);
-      if (is5(element, "bpmn:Participant")) {
+      const bo = getBusinessObject3(element);
+      if (is6(element, "bpmn:Participant")) {
         return bo.processRef.id;
       }
       return bo.id;
     }
     function getRootElement3(element) {
-      const businessObject = getBusinessObject2(element);
-      if (is5(businessObject, "bpmn:Participant")) {
+      const businessObject = getBusinessObject3(element);
+      if (is6(businessObject, "bpmn:Participant")) {
         return businessObject.processRef;
       }
-      if (is5(businessObject, "bpmn:Process")) {
+      if (is6(businessObject, "bpmn:Process")) {
         return businessObject;
       }
       let parent = businessObject;
-      while (parent.$parent && !is5(parent, "bpmn:Process")) {
+      while (parent.$parent && !is6(parent, "bpmn:Process")) {
         parent = parent.$parent;
       }
       return parent;
@@ -768,11 +767,11 @@ var require_zeebe = __commonJS({
     function combineArrays(a6, b5) {
       return a6.concat(b5);
     }
-    function getBusinessObject2(element) {
+    function getBusinessObject3(element) {
       return element && element.businessObject || element;
     }
-    function is5(element, type) {
-      var bo = getBusinessObject2(element);
+    function is6(element, type) {
+      var bo = getBusinessObject3(element);
       return bo && typeof bo.$instanceOf === "function" && bo.$instanceOf(type);
     }
     exports.getProcessVariables = getProcessVariables;
@@ -851,10 +850,10 @@ var require_dist2 = __commonJS({
         }
       });
     }
-    function add3(elements, e7, unique) {
-      var canAdd = !unique || elements.indexOf(e7) === -1;
+    function add3(elements, e8, unique) {
+      var canAdd = !unique || elements.indexOf(e8) === -1;
       if (canAdd) {
-        elements.push(e7);
+        elements.push(e8);
       }
       return canAdd;
     }
@@ -1003,7 +1002,7 @@ var require_dist2 = __commonJS({
         return eventDefinitions;
       }
       return minDash.filter(eventDefinitions, function(definition) {
-        return is5(definition, type);
+        return is6(definition, type);
       });
     }
     function getErrorEventDefinitions(element) {
@@ -1012,7 +1011,7 @@ var require_dist2 = __commonJS({
     function getEscalationEventDefinitions(element) {
       return getEventDefinitions2(element, "bpmn:EscalationEventDefinition");
     }
-    function is5(element, type) {
+    function is6(element, type) {
       return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
     }
     function extractEventDefinitionVariables(options2) {
@@ -1483,8 +1482,7 @@ var require_randomColor = __commonJS({
       function stringToInteger(string) {
         var total = 0;
         for (var i7 = 0; i7 !== string.length; i7++) {
-          if (total >= Number.MAX_SAFE_INTEGER)
-            break;
+          if (total >= Number.MAX_SAFE_INTEGER) break;
           total += string.charCodeAt(i7);
         }
         return total;
@@ -1556,8 +1554,8 @@ var require_hammer = __commonJS({
       function deprecate(method, name2, message) {
         var deprecationMessage = "DEPRECATED METHOD: " + name2 + "\n" + message + " AT \n";
         return function() {
-          var e7 = new Error("get-stack-trace");
-          var stack = e7 && e7.stack ? e7.stack.replace(/^[^\(]+?[\n$]/gm, "").replace(/^\s+at\s+/gm, "").replace(/^Object.<anonymous>\s*\(/gm, "{anonymous}()@") : "Unknown Stack Trace";
+          var e8 = new Error("get-stack-trace");
+          var stack = e8 && e8.stack ? e8.stack.replace(/^[^\(]+?[\n$]/gm, "").replace(/^\s+at\s+/gm, "").replace(/^Object.<anonymous>\s*\(/gm, "{anonymous}()@") : "Unknown Stack Trace";
           var log = window2.console && (window2.console.warn || window2.console.log);
           if (log) {
             log.call(window2.console, deprecationMessage, stack);
@@ -1572,8 +1570,8 @@ var require_hammer = __commonJS({
             throw new TypeError("Cannot convert undefined or null to object");
           }
           var output = Object(target);
-          for (var index4 = 1; index4 < arguments.length; index4++) {
-            var source = arguments[index4];
+          for (var index5 = 1; index5 < arguments.length; index5++) {
+            var source = arguments[index5];
             if (source !== undefined2 && source !== null) {
               for (var nextKey in source) {
                 if (source.hasOwnProperty(nextKey)) {
@@ -2433,9 +2431,9 @@ var require_hammer = __commonJS({
             return this;
           }
           otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-          var index4 = inArray(this.requireFail, otherRecognizer);
-          if (index4 > -1) {
-            this.requireFail.splice(index4, 1);
+          var index5 = inArray(this.requireFail, otherRecognizer);
+          if (index5 > -1) {
+            this.requireFail.splice(index5, 1);
           }
           return this;
         },
@@ -2656,7 +2654,7 @@ var require_hammer = __commonJS({
         directionTest: function(input) {
           var options2 = this.options;
           var hasMoved = true;
-          var distance3 = input.distance;
+          var distance4 = input.distance;
           var direction = input.direction;
           var x6 = input.deltaX;
           var y5 = input.deltaY;
@@ -2664,15 +2662,15 @@ var require_hammer = __commonJS({
             if (options2.direction & DIRECTION_HORIZONTAL) {
               direction = x6 === 0 ? DIRECTION_NONE : x6 < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
               hasMoved = x6 != this.pX;
-              distance3 = Math.abs(input.deltaX);
+              distance4 = Math.abs(input.deltaX);
             } else {
               direction = y5 === 0 ? DIRECTION_NONE : y5 < 0 ? DIRECTION_UP : DIRECTION_DOWN;
               hasMoved = y5 != this.pY;
-              distance3 = Math.abs(input.deltaY);
+              distance4 = Math.abs(input.deltaY);
             }
           }
           input.direction = direction;
-          return hasMoved && distance3 > options2.threshold && direction & options2.direction;
+          return hasMoved && distance4 > options2.threshold && direction & options2.direction;
         },
         attrTest: function(input) {
           return AttrRecognizer.prototype.attrTest.call(this, input) && (this.state & STATE_BEGAN || !(this.state & STATE_BEGAN) && this.directionTest(input));
@@ -3140,9 +3138,9 @@ var require_hammer = __commonJS({
           recognizer = this.get(recognizer);
           if (recognizer) {
             var recognizers = this.recognizers;
-            var index4 = inArray(recognizers, recognizer);
-            if (index4 !== -1) {
-              recognizers.splice(index4, 1);
+            var index5 = inArray(recognizers, recognizer);
+            if (index5 !== -1) {
+              recognizers.splice(index5, 1);
               this.touchAction.update();
             }
           }
@@ -3331,6 +3329,7 @@ var ObsidianBpmnPluginSettings = class {
     this.enable_minimap = true;
     this.enable_zeebe_properties = false;
     this.enable_grid = true;
+    this.enable_sketchy = false;
   }
 };
 var BPMNParameterInfoModal = class extends import_obsidian.Modal {
@@ -3375,6 +3374,10 @@ var ObsidianBpmnPluginSettingsTab = class extends import_obsidian.PluginSettingT
     new import_obsidian.Setting(containerEl).setName("General").setHeading();
     new import_obsidian.Setting(containerEl).setName("Default force white background").setDesc("Set the default for forcing a white background").setTooltip("forcewhitebackground: True/False", { delay: 200 }).addToggle((toggle2) => toggle2.setValue(this.plugin.settings.force_white_background_by_default).onChange((value) => {
       this.plugin.settings.force_white_background_by_default = value;
+      this.plugin.saveData(this.plugin.settings);
+    }));
+    new import_obsidian.Setting(containerEl).setName("Use sketchy visualization").setDesc("The visualization of the BPMN is like a sketch.").addToggle((toggle2) => toggle2.setValue(this.plugin.settings.enable_sketchy).onChange((value) => {
+      this.plugin.settings.enable_sketchy = value;
       this.plugin.saveData(this.plugin.settings);
     }));
     new import_obsidian.Setting(containerEl).setName("BPMN Block").setHeading();
@@ -3429,8 +3432,8 @@ var ObsidianBpmnPluginSettingsTab = class extends import_obsidian.PluginSettingT
 };
 
 // node_modules/inherits-browser/dist/index.es.js
-function e(e7, t7) {
-  t7 && (e7.super_ = t7, e7.prototype = Object.create(t7.prototype, { constructor: { value: e7, enumerable: false, writable: true, configurable: true } }));
+function e(e8, t7) {
+  t7 && (e8.super_ = t7, e8.prototype = Object.create(t7.prototype, { constructor: { value: e8, enumerable: false, writable: true, configurable: true } }));
 }
 
 // node_modules/min-dash/dist/index.esm.js
@@ -3601,7 +3604,7 @@ function sortBy(collection, extractor) {
     }
     sorted.push(entry);
   });
-  return map(sorted, (e7) => e7.v);
+  return map(sorted, (e8) => e8.v);
 }
 function matchPattern(pattern) {
   return function(el) {
@@ -3611,13 +3614,13 @@ function matchPattern(pattern) {
   };
 }
 function toExtractor(extractor) {
-  return isFunction(extractor) ? extractor : (e7) => {
-    return e7[extractor];
+  return isFunction(extractor) ? extractor : (e8) => {
+    return e8[extractor];
   };
 }
 function toMatcher(matcher) {
-  return isFunction(matcher) ? matcher : (e7) => {
-    return e7 === matcher;
+  return isFunction(matcher) ? matcher : (e8) => {
+    return e8 === matcher;
   };
 }
 function identity(arg) {
@@ -3959,7 +3962,7 @@ function ensureImported(element, target) {
   if (element.ownerDocument !== target.ownerDocument) {
     try {
       return target.ownerDocument.importNode(element, true);
-    } catch (e7) {
+    } catch (e8) {
     }
   }
   return element;
@@ -4119,17 +4122,10 @@ ClassList.prototype.array = function() {
 ClassList.prototype.has = ClassList.prototype.contains = function(name2) {
   return this.list.contains(name2);
 };
-function remove(element) {
-  var parent = element.parentNode;
-  if (parent) {
-    parent.removeChild(element);
-  }
-  return element;
-}
 function clear(element) {
   var child;
   while (child = element.firstChild) {
-    remove(child);
+    element.removeChild(child);
   }
   return element;
 }
@@ -4169,6 +4165,7 @@ function parseDocument(svg) {
 }
 function create(name2, attrs) {
   var element;
+  name2 = name2.trim();
   if (name2.charAt(0) === "<") {
     element = parse(name2).firstChild;
     element = document.importNode(element, true);
@@ -4194,7 +4191,7 @@ function extend(object, props) {
   }
   return object;
 }
-function createMatrix(a6, b5, c5, d5, e7, f6) {
+function createMatrix(a6, b5, c5, d5, e8, f6) {
   var matrix = getNode().createSVGMatrix();
   switch (arguments.length) {
     case 0:
@@ -4207,7 +4204,7 @@ function createMatrix(a6, b5, c5, d5, e7, f6) {
         b: b5,
         c: c5,
         d: d5,
-        e: e7,
+        e: e8,
         f: f6
       });
   }
@@ -4299,8 +4296,8 @@ function innerSVG(element, svg) {
   if (svg !== void 0) {
     try {
       set2(element, svg);
-    } catch (e7) {
-      throw new Error("error parsing SVG: " + e7.message);
+    } catch (e8) {
+      throw new Error("error parsing SVG: " + e8.message);
     }
     return element;
   } else {
@@ -4310,11 +4307,18 @@ function innerSVG(element, svg) {
 function slice(arr) {
   return Array.prototype.slice.call(arr);
 }
-function wrapMatrix(transformList, transform3) {
-  if (transform3 instanceof SVGMatrix) {
-    return transformList.createSVGTransformFromMatrix(transform3);
+function remove(element) {
+  var parent = element.parentNode;
+  if (parent) {
+    parent.removeChild(element);
   }
-  return transform3;
+  return element;
+}
+function wrapMatrix(transformList, transform4) {
+  if (transform4 instanceof SVGMatrix) {
+    return transformList.createSVGTransformFromMatrix(transform4);
+  }
+  return transform4;
 }
 function setTransforms(transformList, transforms) {
   var i7, t7;
@@ -4397,11 +4401,11 @@ function createLine(points, attrs, radius) {
   if (!attrs) {
     attrs = {};
   }
-  const line = create("path", attrs);
+  const line2 = create("path", attrs);
   if (isNumber(radius)) {
-    line.dataset.cornerRadius = String(radius);
+    line2.dataset.cornerRadius = String(radius);
   }
-  return updateLine(line, points);
+  return updateLine(line2, points);
 }
 function updateLine(gfx, points) {
   const cornerRadius = parseInt(gfx.dataset.cornerRadius, 10) || 0;
@@ -4502,14 +4506,14 @@ function getHeight(bounds, overrides = {}) {
 
 // node_modules/min-dom/dist/index.esm.js
 function _mergeNamespaces(n4, m5) {
-  m5.forEach(function(e7) {
-    e7 && typeof e7 !== "string" && !Array.isArray(e7) && Object.keys(e7).forEach(function(k6) {
+  m5.forEach(function(e8) {
+    e8 && typeof e8 !== "string" && !Array.isArray(e8) && Object.keys(e8).forEach(function(k6) {
       if (k6 !== "default" && !(k6 in n4)) {
-        var d5 = Object.getOwnPropertyDescriptor(e7, k6);
+        var d5 = Object.getOwnPropertyDescriptor(e8, k6);
         Object.defineProperty(n4, k6, d5.get ? d5 : {
           enumerable: true,
           get: function() {
-            return e7[k6];
+            return e8[k6];
           }
         });
       }
@@ -4619,26 +4623,16 @@ ClassList2.prototype.array = function() {
 ClassList2.prototype.has = ClassList2.prototype.contains = function(name2) {
   return this.list.contains(name2);
 };
-function clear2(el) {
-  var c5;
-  while (el.childNodes.length) {
-    c5 = el.childNodes[0];
-    el.removeChild(c5);
+function clear2(element) {
+  var child;
+  while (child = element.firstChild) {
+    element.removeChild(child);
   }
-  return el;
-}
-function matches(element, selector) {
-  return element && typeof element.matches === "function" && element.matches(selector);
+  return element;
 }
 function closest(element, selector, checkYourSelf) {
-  var currentElem = checkYourSelf ? element : element.parentNode;
-  while (currentElem && currentElem.nodeType !== document.DOCUMENT_NODE && currentElem.nodeType !== document.DOCUMENT_FRAGMENT_NODE) {
-    if (matches(currentElem, selector)) {
-      return currentElem;
-    }
-    currentElem = currentElem.parentNode;
-  }
-  return matches(currentElem, selector) ? currentElem : null;
+  var actualElement = checkYourSelf ? element : element.parentNode;
+  return actualElement && typeof actualElement.closest === "function" && actualElement.closest(selector) || null;
 }
 var componentEvent = {};
 var bind$1;
@@ -4650,14 +4644,12 @@ function detect() {
   prefix = bind$1 !== "addEventListener" ? "on" : "";
 }
 var bind_1 = componentEvent.bind = function(el, type, fn2, capture) {
-  if (!bind$1)
-    detect();
+  if (!bind$1) detect();
   el[bind$1](prefix + type, fn2, capture || false);
   return fn2;
 };
 var unbind_1 = componentEvent.unbind = function(el, type, fn2, capture) {
-  if (!unbind$1)
-    detect();
+  if (!unbind$1) detect();
   el[unbind$1](prefix + type, fn2, capture || false);
   return fn2;
 };
@@ -4672,11 +4664,11 @@ function bind2(el, selector, type, fn2, capture) {
   if (forceCaptureEvents.indexOf(type) !== -1) {
     capture = true;
   }
-  return event.bind(el, type, function(e7) {
-    var target = e7.target || e7.srcElement;
-    e7.delegateTarget = closest(target, selector, true);
-    if (e7.delegateTarget) {
-      fn2.call(el, e7);
+  return event.bind(el, type, function(e8) {
+    var target = e8.target || e8.srcElement;
+    e8.delegateTarget = closest(target, selector, true);
+    if (e8.delegateTarget) {
+      fn2.call(el, e8);
     }
   }, capture);
 }
@@ -4712,13 +4704,10 @@ map2.option = map2.optgroup = [1, '<select multiple="multiple">', "</select>"];
 map2.thead = map2.tbody = map2.colgroup = map2.caption = map2.tfoot = [1, "<table>", "</table>"];
 map2.polyline = map2.ellipse = map2.polygon = map2.circle = map2.text = map2.line = map2.path = map2.rect = map2.g = [1, '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">', "</svg>"];
 function parse2(html, doc) {
-  if ("string" != typeof html)
-    throw new TypeError("String expected");
-  if (!doc)
-    doc = document;
+  if ("string" != typeof html) throw new TypeError("String expected");
+  if (!doc) doc = document;
   var m5 = /<([\w:]+)/.exec(html);
-  if (!m5)
-    return doc.createTextNode(html);
+  if (!m5) return doc.createTextNode(html);
   html = html.replace(/^\s+|\s+$/g, "");
   var tag = m5[1];
   if (tag == "body") {
@@ -4732,8 +4721,7 @@ function parse2(html, doc) {
   var suffix = wrap2[2];
   var el = doc.createElement("div");
   el.innerHTML = prefix4 + html + suffix;
-  while (depth--)
-    el = el.lastChild;
+  while (depth--) el = el.lastChild;
   if (el.firstChild == el.lastChild) {
     return el.removeChild(el.firstChild);
   }
@@ -4744,6 +4732,9 @@ function parse2(html, doc) {
   return fragment;
 }
 var domify$1 = domify;
+function matches(element, selector) {
+  return element && typeof element.matches === "function" && element.matches(selector) || false;
+}
 function query(selector, el) {
   el = el || document;
   return el.querySelector(selector);
@@ -4758,23 +4749,23 @@ function remove2(el) {
 
 // node_modules/diagram-js/lib/util/SvgTransformUtil.js
 function transform2(gfx, x6, y5, angle, amount) {
-  var translate3 = createTransform();
-  translate3.setTranslate(x6, y5);
-  var rotate2 = createTransform();
-  rotate2.setRotate(angle || 0, 0, 0);
+  var translate4 = createTransform();
+  translate4.setTranslate(x6, y5);
+  var rotate3 = createTransform();
+  rotate3.setRotate(angle || 0, 0, 0);
   var scale = createTransform();
   scale.setScale(amount || 1, amount || 1);
-  transform(gfx, [translate3, rotate2, scale]);
+  transform(gfx, [translate4, rotate3, scale]);
 }
 function translate(gfx, x6, y5) {
-  var translate3 = createTransform();
-  translate3.setTranslate(x6, y5);
-  transform(gfx, translate3);
+  var translate4 = createTransform();
+  translate4.setTranslate(x6, y5);
+  transform(gfx, translate4);
 }
 function rotate(gfx, angle) {
-  var rotate2 = createTransform();
-  rotate2.setRotate(angle, 0, 0);
-  transform(gfx, rotate2);
+  var rotate3 = createTransform();
+  rotate3.setRotate(angle, 0, 0);
+  transform(gfx, rotate3);
 }
 
 // node_modules/ids/dist/index.esm.js
@@ -4783,12 +4774,9 @@ function createCommonjsModule(fn2, module2) {
 }
 var hat_1 = createCommonjsModule(function(module2) {
   var hat = module2.exports = function(bits, base) {
-    if (!base)
-      base = 16;
-    if (bits === void 0)
-      bits = 128;
-    if (bits <= 0)
-      return "0";
+    if (!base) base = 16;
+    if (bits === void 0) bits = 128;
+    if (bits <= 0) return "0";
     var digits = Math.log(Math.pow(2, bits)) / Math.log(base);
     for (var i7 = 2; digits === Infinity; i7 *= 2) {
       digits = Math.log(Math.pow(2, bits / i7)) / Math.log(base) * i7;
@@ -4807,18 +4795,15 @@ var hat_1 = createCommonjsModule(function(module2) {
     var parsed = parseInt(res, base);
     if (parsed !== Infinity && parsed >= Math.pow(2, bits)) {
       return hat(bits, base);
-    } else
-      return res;
+    } else return res;
   };
   hat.rack = function(bits, base, expandBy) {
     var fn2 = function(data) {
       var iters = 0;
       do {
         if (iters++ > 10) {
-          if (expandBy)
-            bits += expandBy;
-          else
-            throw new Error("too many ID collisions, use more bits");
+          if (expandBy) bits += expandBy;
+          else throw new Error("too many ID collisions, use more bits");
         }
         var id = hat(bits, base);
       } while (Object.hasOwnProperty.call(hats, id));
@@ -4874,7 +4859,7 @@ Ids.prototype.clear = function() {
 var index_esm_default = Ids;
 
 // node_modules/bpmn-js/lib/draw/BpmnRenderer.js
-var rendererIds = new index_esm_default();
+var markerIds = new index_esm_default();
 var ELEMENT_LABEL_DISTANCE = 10;
 var INNER_OUTER_DIST = 3;
 var PARTICIPANT_STROKE_WIDTH = 1.5;
@@ -4885,8 +4870,6 @@ var LOW_OPACITY = 0.25;
 function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, priority) {
   BaseRenderer.call(this, eventBus, priority);
   var defaultFillColor = config && config.defaultFillColor, defaultStrokeColor = config && config.defaultStrokeColor, defaultLabelColor = config && config.defaultLabelColor;
-  var rendererId = rendererIds.next();
-  var markers = {};
   function shapeStyle(attrs) {
     return styles.computeStyle(attrs, {
       strokeLinecap: "round",
@@ -4908,7 +4891,8 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
     var {
       ref = { x: 0, y: 0 },
       scale = 1,
-      element
+      element,
+      parentGfx = canvas._svg
     } = options2;
     var marker2 = create("marker", {
       id,
@@ -4920,25 +4904,19 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       orient: "auto"
     });
     append(marker2, element);
-    var defs = query("defs", canvas._svg);
+    var defs = query(":scope > defs", parentGfx);
     if (!defs) {
       defs = create("defs");
-      append(canvas._svg, defs);
+      append(parentGfx, defs);
     }
     append(defs, marker2);
-    markers[id] = marker2;
   }
-  function colorEscape(str) {
-    return str.replace(/[^0-9a-zA-Z]+/g, "_");
-  }
-  function marker(type, fill, stroke) {
-    var id = type + "-" + colorEscape(fill) + "-" + colorEscape(stroke) + "-" + rendererId;
-    if (!markers[id]) {
-      createMarker(id, type, fill, stroke);
-    }
+  function marker(parentGfx, type, fill, stroke) {
+    var id = markerIds.nextPrefixed("marker-");
+    createMarker(parentGfx, id, type, fill, stroke);
     return "url(#" + id + ")";
   }
-  function createMarker(id, type, fill, stroke) {
+  function createMarker(parentGfx, id, type, fill, stroke) {
     if (type === "sequenceflow-end") {
       var sequenceflowEnd = create("path", {
         d: "M 1 5 L 11 10 L 1 15 Z",
@@ -4951,7 +4929,8 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       addMarker(id, {
         element: sequenceflowEnd,
         ref: { x: 11, y: 10 },
-        scale: 0.5
+        scale: 0.5,
+        parentGfx
       });
     }
     if (type === "messageflow-start") {
@@ -4970,7 +4949,8 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       });
       addMarker(id, {
         element: messageflowStart,
-        ref: { x: 6, y: 6 }
+        ref: { x: 6, y: 6 },
+        parentGfx
       });
     }
     if (type === "messageflow-end") {
@@ -4987,7 +4967,8 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       });
       addMarker(id, {
         element: messageflowEnd,
-        ref: { x: 8.5, y: 5 }
+        ref: { x: 8.5, y: 5 },
+        parentGfx
       });
     }
     if (type === "association-start") {
@@ -5005,7 +4986,8 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       addMarker(id, {
         element: associationStart,
         ref: { x: 1, y: 10 },
-        scale: 0.5
+        scale: 0.5,
+        parentGfx
       });
     }
     if (type === "association-end") {
@@ -5023,7 +5005,8 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       addMarker(id, {
         element: associationEnd,
         ref: { x: 11, y: 10 },
-        scale: 0.5
+        scale: 0.5,
+        parentGfx
       });
     }
     if (type === "conditional-flow-marker") {
@@ -5037,20 +5020,23 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       addMarker(id, {
         element: conditionalFlowMarker,
         ref: { x: -1, y: 10 },
-        scale: 0.5
+        scale: 0.5,
+        parentGfx
       });
     }
     if (type === "conditional-default-flow-marker") {
       var defaultFlowMarker = create("path", {
         d: "M 6 4 L 10 16",
         ...shapeStyle({
-          stroke
+          stroke,
+          fill: "none"
         })
       });
       addMarker(id, {
         element: defaultFlowMarker,
         ref: { x: 0, y: 10 },
-        scale: 0.5
+        scale: 0.5,
+        parentGfx
       });
     }
   }
@@ -5103,18 +5089,18 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       return point.x + "," + point.y;
     }).join(" ");
     attrs = shapeStyle(attrs);
-    var polygon = create("polygon", {
+    var polygon2 = create("polygon", {
       ...attrs,
       points: pointsString
     });
-    append(parentGfx, polygon);
-    return polygon;
+    append(parentGfx, polygon2);
+    return polygon2;
   }
   function drawLine(parentGfx, waypoints, attrs, radius) {
     attrs = lineStyle(attrs);
-    var line = createLine(waypoints, attrs, radius);
-    append(parentGfx, line);
-    return line;
+    var line2 = createLine(waypoints, attrs, radius);
+    append(parentGfx, line2);
+    return line2;
   }
   function drawConnectionSegments(parentGfx, waypoints, attrs) {
     return drawLine(parentGfx, waypoints, attrs, 5);
@@ -5673,10 +5659,10 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
     var semantic = getBusinessObject(element);
     var fill = getFillColor(element, defaultFillColor, attrs.fill), stroke = getStrokeColor(element, defaultStrokeColor, attrs.stroke);
     if (semantic.get("associationDirection") === "One" || semantic.get("associationDirection") === "Both") {
-      attrs.markerEnd = marker("association-end", fill, stroke);
+      attrs.markerEnd = marker(parentGfx, "association-end", fill, stroke);
     }
     if (semantic.get("associationDirection") === "Both") {
-      attrs.markerStart = marker("association-start", fill, stroke);
+      attrs.markerStart = marker(parentGfx, "association-start", fill, stroke);
     }
     attrs = pickAttrs(attrs, [
       "markerStart",
@@ -5913,7 +5899,7 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       ]);
       return renderAssociation(parentGfx, element, {
         ...attrs,
-        markerEnd: marker("association-end", getFillColor(element, defaultFillColor, attrs.fill), getStrokeColor(element, defaultStrokeColor, attrs.stroke))
+        markerEnd: marker(parentGfx, "association-end", getFillColor(element, defaultFillColor, attrs.fill), getStrokeColor(element, defaultStrokeColor, attrs.stroke))
       });
     },
     "bpmn:DataObject": function(parentGfx, element, attrs = {}) {
@@ -5945,7 +5931,7 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       ]);
       return renderAssociation(parentGfx, element, {
         ...attrs,
-        markerEnd: marker("association-end", getFillColor(element, defaultFillColor, attrs.fill), getStrokeColor(element, defaultStrokeColor, attrs.stroke))
+        markerEnd: marker(parentGfx, "association-end", getFillColor(element, defaultFillColor, attrs.fill), getStrokeColor(element, defaultStrokeColor, attrs.stroke))
       });
     },
     "bpmn:DataStoreReference": function(parentGfx, element, attrs = {}) {
@@ -6167,8 +6153,8 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       var semantic = getBusinessObject(element), di = getDi(element);
       var fill = getFillColor(element, defaultFillColor, attrs.fill), stroke = getStrokeColor(element, defaultStrokeColor, attrs.stroke);
       var path = drawConnectionSegments(parentGfx, element.waypoints, {
-        markerEnd: marker("messageflow-end", fill, stroke),
-        markerStart: marker("messageflow-start", fill, stroke),
+        markerEnd: marker(parentGfx, "messageflow-end", fill, stroke),
+        markerStart: marker(parentGfx, "messageflow-start", fill, stroke),
         stroke,
         strokeDasharray: "10, 11",
         strokeWidth: 1.5
@@ -6376,7 +6362,7 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       ]);
       var fill = getFillColor(element, defaultFillColor, attrs.fill), stroke = getStrokeColor(element, defaultStrokeColor, attrs.stroke);
       var connection = drawConnectionSegments(parentGfx, element.waypoints, {
-        markerEnd: marker("sequenceflow-end", fill, stroke),
+        markerEnd: marker(parentGfx, "sequenceflow-end", fill, stroke),
         stroke
       });
       var semantic = getBusinessObject(element);
@@ -6385,12 +6371,12 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
         var sourceSemantic = getBusinessObject(source);
         if (semantic.get("conditionExpression") && is(sourceSemantic, "bpmn:Activity")) {
           attr(connection, {
-            markerStart: marker("conditional-flow-marker", fill, stroke)
+            markerStart: marker(parentGfx, "conditional-flow-marker", fill, stroke)
           });
         }
         if (sourceSemantic.get("default") && (is(sourceSemantic, "bpmn:Gateway") || is(sourceSemantic, "bpmn:Activity")) && sourceSemantic.get("default") === semantic) {
           attr(connection, {
-            markerStart: marker("conditional-default-flow-marker", fill, stroke)
+            markerStart: marker(parentGfx, "conditional-default-flow-marker", fill, stroke)
           });
         }
       }
@@ -6686,7 +6672,7 @@ function getTextBBox(text, fakeText) {
       bbox.width = 0;
     }
     return bbox;
-  } catch (e7) {
+  } catch (e8) {
     return { width: 0, height: 0 };
   }
 }
@@ -6714,8 +6700,8 @@ function fit(lines, fitLine, originalLine, textBBox) {
   };
 }
 var SOFT_BREAK = "\xAD";
-function semanticShorten(line, maxLength) {
-  var parts = line.split(/(\s|-|\u00AD)/g), part, shortenedParts = [], length2 = 0;
+function semanticShorten(line2, maxLength) {
+  var parts = line2.split(/(\s|-|\u00AD)/g), part, shortenedParts = [], length2 = 0;
   if (parts.length > 1) {
     while (part = parts.shift()) {
       if (part.length + length2 < maxLength) {
@@ -6735,11 +6721,11 @@ function semanticShorten(line, maxLength) {
   }
   return shortenedParts.join("");
 }
-function shortenLine(line, width, maxWidth) {
-  var length2 = Math.max(line.length * (maxWidth / width), 1);
-  var shortenedLine = semanticShorten(line, length2);
+function shortenLine(line2, width, maxWidth) {
+  var length2 = Math.max(line2.length * (maxWidth / width), 1);
+  var shortenedLine = semanticShorten(line2, length2);
   if (!shortenedLine) {
-    shortenedLine = line.slice(0, Math.max(Math.round(length2 - 1), 1));
+    shortenedLine = line2.slice(0, Math.max(Math.round(length2 - 1), 1));
   }
   return shortenedLine;
 }
@@ -6790,11 +6776,11 @@ Text.prototype.layoutText = function(text, options2) {
   if (align.vertical === "middle") {
     padding.top = padding.bottom = 0;
   }
-  var totalHeight = reduce(layouted, function(sum, line, idx) {
-    return sum + (lineHeight || line.height);
+  var totalHeight = reduce(layouted, function(sum, line2, idx) {
+    return sum + (lineHeight || line2.height);
   }, 0) + padding.top + padding.bottom;
-  var maxLineWidth = reduce(layouted, function(sum, line, idx) {
-    return line.width > sum ? line.width : sum;
+  var maxLineWidth = reduce(layouted, function(sum, line2, idx) {
+    return line2.width > sum ? line2.width : sum;
   }, 0);
   var y5 = padding.top;
   if (align.vertical === "middle") {
@@ -6803,22 +6789,22 @@ Text.prototype.layoutText = function(text, options2) {
   y5 -= (lineHeight || layouted[0].height) / 4;
   var textElement = create("text");
   attr(textElement, style);
-  forEach(layouted, function(line) {
+  forEach(layouted, function(line2) {
     var x6;
-    y5 += lineHeight || line.height;
+    y5 += lineHeight || line2.height;
     switch (align.horizontal) {
       case "left":
         x6 = padding.left;
         break;
       case "right":
-        x6 = (fitBox ? maxLineWidth : maxWidth) - padding.right - line.width;
+        x6 = (fitBox ? maxLineWidth : maxWidth) - padding.right - line2.width;
         break;
       default:
-        x6 = Math.max(((fitBox ? maxLineWidth : maxWidth) - line.width) / 2 + padding.left, 0);
+        x6 = Math.max(((fitBox ? maxLineWidth : maxWidth) - line2.width) / 2 + padding.left, 0);
     }
     var tspan = create("tspan");
     attr(tspan, { x: x6, y: y5 });
-    tspan.textContent = line.text;
+    tspan.textContent = line2.text;
     append(textElement, tspan);
   });
   remove(helperText);
@@ -7293,10 +7279,9 @@ function clone2(obj) {
   return res;
 }
 function repush(array, item) {
-  for (var i7 = 0, ii = array.length; i7 < ii; i7++)
-    if (array[i7] === item) {
-      return array.push(array.splice(i7, 1)[0]);
-    }
+  for (var i7 = 0, ii = array.length; i7 < ii; i7++) if (array[i7] === item) {
+    return array.push(array.splice(i7, 1)[0]);
+  }
 }
 function cacher(f6) {
   function newf() {
@@ -7463,21 +7448,21 @@ function findBezierIntersections(bez1, bez2, justCount) {
   }
   for (i7 = 0; i7 < n1; i7++) {
     for (var j6 = 0; j6 < n22; j6++) {
-      var di = dots1[i7], di1 = dots1[i7 + 1], dj = dots2[j6], dj1 = dots2[j6 + 1], ci = abs(di1.x - di.x) < 0.01 ? "y" : "x", cj = abs(dj1.x - dj.x) < 0.01 ? "y" : "x", is5 = intersectLines(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y), key;
-      if (is5) {
-        key = is5.x.toFixed(9) + "#" + is5.y.toFixed(9);
+      var di = dots1[i7], di1 = dots1[i7 + 1], dj = dots2[j6], dj1 = dots2[j6 + 1], ci = abs(di1.x - di.x) < 0.01 ? "y" : "x", cj = abs(dj1.x - dj.x) < 0.01 ? "y" : "x", is6 = intersectLines(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y), key;
+      if (is6) {
+        key = is6.x.toFixed(9) + "#" + is6.y.toFixed(9);
         if (xy[key]) {
           continue;
         }
         xy[key] = true;
-        var t1 = di.t + abs((is5[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t), t22 = dj.t + abs((is5[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
+        var t1 = di.t + abs((is6[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t), t22 = dj.t + abs((is6[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
         if (t1 >= 0 && t1 <= 1 && t22 >= 0 && t22 <= 1) {
           if (justCount) {
             res++;
           } else {
             res.push({
-              x: is5.x,
-              y: is5.y,
+              x: is6.x,
+              y: is6.y,
               t1,
               t2: t22
             });
@@ -7644,15 +7629,15 @@ function qubicToCurve(x1, y1, ax, ay, x22, y22) {
   ];
 }
 function arcToCurve(x1, y1, rx, ry, angle, large_arc_flag, sweep_flag, x22, y22, recursive) {
-  var _120 = PI * 120 / 180, rad = PI / 180 * (+angle || 0), res = [], xy, rotate2 = cacher(function(x7, y6, rad2) {
+  var _120 = PI * 120 / 180, rad = PI / 180 * (+angle || 0), res = [], xy, rotate3 = cacher(function(x7, y6, rad2) {
     var X2 = x7 * math.cos(rad2) - y6 * math.sin(rad2), Y2 = x7 * math.sin(rad2) + y6 * math.cos(rad2);
     return { x: X2, y: Y2 };
   });
   if (!recursive) {
-    xy = rotate2(x1, y1, -rad);
+    xy = rotate3(x1, y1, -rad);
     x1 = xy.x;
     y1 = xy.y;
-    xy = rotate2(x22, y22, -rad);
+    xy = rotate3(x22, y22, -rad);
     x22 = xy.x;
     y22 = xy.y;
     var x6 = (x1 - x22) / 2, y5 = (y1 - y22) / 2;
@@ -7697,7 +7682,7 @@ function arcToCurve(x1, y1, rx, ry, angle, large_arc_flag, sweep_flag, x22, y22,
     res = [m22, m32, m42].concat(res).join().split(",");
     var newres = [];
     for (var i7 = 0, ii = res.length; i7 < ii; i7++) {
-      newres[i7] = i7 % 2 ? rotate2(res[i7 - 1], res[i7], rad).y : rotate2(res[i7], res[i7 + 1], rad).x;
+      newres[i7] = i7 % 2 ? rotate3(res[i7 - 1], res[i7], rad).y : rotate3(res[i7], res[i7 + 1], rad).x;
     }
     return newres;
   }
@@ -7834,8 +7819,7 @@ function pathToCurve(path) {
       i7 && (pathCommand2 = pathCommands[i7 - 1]);
     }
     curvedPath[i7] = processPath(curvedPath[i7], attrs, pathCommand2);
-    if (pathCommands[i7] != "A" && pfirst == "C")
-      pathCommands[i7] = "C";
+    if (pathCommands[i7] != "A" && pfirst == "C") pathCommands[i7] = "C";
     fixArc(curvedPath, i7);
     var seg = curvedPath[i7], seglen = seg.length;
     attrs.x = seg[seglen - 2];
@@ -7886,8 +7870,8 @@ function getBoundsMid(bounds) {
 }
 function getConnectionMid(connection) {
   var waypoints = connection.waypoints;
-  var parts = waypoints.reduce(function(parts2, point, index4) {
-    var lastPoint = waypoints[index4 - 1];
+  var parts = waypoints.reduce(function(parts2, point, index5) {
+    var lastPoint = waypoints[index5 - 1];
     if (lastPoint) {
       var lastPart = parts2[parts2.length - 1];
       var startLength = lastPart && lastPart.endLength || 0;
@@ -7946,10 +7930,10 @@ function getElementLineIntersection(elementPath, linePath2, cropStart) {
     return roundPoint(intersections[0]);
   } else if (intersections.length > 1) {
     intersections = sortBy(intersections, function(i7) {
-      var distance3 = Math.floor(i7.t2 * 100) || 1;
-      distance3 = 100 - distance3;
-      distance3 = (distance3 < 10 ? "0" : "") + distance3;
-      return i7.segment2 + "#" + distance3;
+      var distance4 = Math.floor(i7.t2 * 100) || 1;
+      distance4 = 100 - distance4;
+      distance4 = (distance4 < 10 ? "0" : "") + distance4;
+      return i7.segment2 + "#" + distance4;
     });
     return roundPoint(intersections[cropStart ? 0 : intersections.length - 1]);
   }
@@ -7978,11 +7962,11 @@ function distance(a6, b5) {
 }
 
 // node_modules/bpmn-js/lib/import/Util.js
-function elementToString(e7) {
-  if (!e7) {
+function elementToString(e8) {
+  if (!e8) {
     return "<null>";
   }
-  return "<" + e7.$type + (e7.id ? ' id="' + e7.id : "") + '" />';
+  return "<" + e8.$type + (e8.id ? ' id="' + e8.id : "") + '" />';
 }
 
 // node_modules/bpmn-js/lib/import/BpmnImporter.js
@@ -8173,8 +8157,8 @@ var core_default = {
 // node_modules/diagram-js/lib/util/Elements.js
 function getParents(elements) {
   return filter(elements, function(element) {
-    return !find(elements, function(e7) {
-      return e7 !== element && getParent(element, e7);
+    return !find(elements, function(e8) {
+      return e8 !== element && getParent(element, e8);
     });
   });
 }
@@ -8237,8 +8221,8 @@ function getClosure(elements, isTopLevel, closure) {
   var allShapes = copyObject(closure.allShapes), allConnections = copyObject(closure.allConnections), enclosedElements = copyObject(closure.enclosedElements), enclosedConnections = copyObject(closure.enclosedConnections);
   var topLevel = copyObject(
     closure.topLevel,
-    isTopLevel && groupBy(elements, function(e7) {
-      return e7.id;
+    isTopLevel && groupBy(elements, function(e8) {
+      return e8.id;
     })
   );
   function handleConnection(c5) {
@@ -8305,18 +8289,18 @@ function getBBox(elements, stopRecursion) {
 function getEnclosedElements(elements, bbox) {
   var filteredElements = {};
   forEach(elements, function(element) {
-    var e7 = element;
-    if (e7.waypoints) {
-      e7 = getBBox(e7);
+    var e8 = element;
+    if (e8.waypoints) {
+      e8 = getBBox(e8);
     }
-    if (!isNumber(bbox.y) && e7.x > bbox.x) {
+    if (!isNumber(bbox.y) && e8.x > bbox.x) {
       filteredElements[element.id] = element;
     }
-    if (!isNumber(bbox.x) && e7.y > bbox.y) {
+    if (!isNumber(bbox.x) && e8.y > bbox.y) {
       filteredElements[element.id] = element;
     }
-    if (e7.x > bbox.x && e7.y > bbox.y) {
-      if (isNumber(bbox.width) && isNumber(bbox.height) && e7.width + e7.x < bbox.width + bbox.x && e7.height + e7.y < bbox.height + bbox.y) {
+    if (e8.x > bbox.x && e8.y > bbox.y) {
+      if (isNumber(bbox.width) && isNumber(bbox.height) && e8.width + e8.x < bbox.width + bbox.x && e8.height + e8.y < bbox.height + bbox.y) {
         filteredElements[element.id] = element;
       } else if (!isNumber(bbox.width) || !isNumber(bbox.height)) {
         filteredElements[element.id] = element;
@@ -8567,7 +8551,7 @@ Overlays.prototype._updateOverlayVisibilty = function(overlay, viewbox) {
 };
 Overlays.prototype._updateOverlayScale = function(overlay, viewbox) {
   var shouldScale = overlay.scale, minScale, maxScale, htmlContainer = overlay.htmlContainer;
-  var scale, transform3 = "";
+  var scale, transform4 = "";
   if (shouldScale !== true) {
     if (shouldScale === false) {
       minScale = 1;
@@ -8584,9 +8568,9 @@ Overlays.prototype._updateOverlayScale = function(overlay, viewbox) {
     }
   }
   if (isDefined(scale)) {
-    transform3 = "scale(" + scale + "," + scale + ")";
+    transform4 = "scale(" + scale + "," + scale + ")";
   }
-  setTransform(htmlContainer, transform3);
+  setTransform(htmlContainer, transform4);
 };
 Overlays.prototype._updateOverlaysVisibilty = function(viewbox) {
   var self2 = this;
@@ -8608,8 +8592,8 @@ Overlays.prototype._init = function() {
   eventBus.on("canvas.viewbox.changed", function(event3) {
     updateViewbox(event3.viewbox);
   });
-  eventBus.on(["shape.remove", "connection.remove"], function(e7) {
-    var element = e7.element;
+  eventBus.on(["shape.remove", "connection.remove"], function(e8) {
+    var element = e8.element;
     var overlays = self2.get({ element });
     forEach(overlays, function(o5) {
       self2.remove(o5.id);
@@ -8623,8 +8607,8 @@ Overlays.prototype._init = function() {
       }
     }
   });
-  eventBus.on("element.changed", LOW_PRIORITY, function(e7) {
-    var element = e7.element;
+  eventBus.on("element.changed", LOW_PRIORITY, function(e8) {
+    var element = e8.element;
     var container = self2._getOverlayContainer(element, true);
     if (container) {
       forEach(container.overlays, function(overlay) {
@@ -8633,10 +8617,10 @@ Overlays.prototype._init = function() {
       self2._updateOverlayContainer(container);
     }
   });
-  eventBus.on("element.marker.update", function(e7) {
-    var container = self2._getOverlayContainer(e7.element, true);
+  eventBus.on("element.marker.update", function(e8) {
+    var container = self2._getOverlayContainer(e8.element, true);
     if (container) {
-      classes2(container.html)[e7.add ? "add" : "remove"](e7.marker);
+      classes2(container.html)[e8.add ? "add" : "remove"](e8.marker);
     }
   });
   eventBus.on("root.set", function() {
@@ -8662,10 +8646,10 @@ function setPosition(el, x6, y5) {
 function setVisible(el, visible) {
   el.style.display = visible === false ? "none" : "";
 }
-function setTransform(el, transform3) {
+function setTransform(el, transform4) {
   el.style["transform-origin"] = "top left";
   ["", "-ms-", "-webkit-"].forEach(function(prefix4) {
-    el.style[prefix4 + "transform"] = transform3;
+    el.style[prefix4 + "transform"] = transform4;
   });
 }
 
@@ -8689,8 +8673,8 @@ function ChangeSupport(eventBus, canvas, elementRegistry, graphicsFactory) {
   });
   eventBus.on("elements.changed", function(event3) {
     var elements = event3.elements;
-    elements.forEach(function(e7) {
-      eventBus.fire("element.changed", { element: e7 });
+    elements.forEach(function(e8) {
+      eventBus.fire("element.changed", { element: e8 });
     });
     graphicsFactory.updateContainments(elements);
   });
@@ -8751,8 +8735,8 @@ CommandInterceptor.prototype.on = function(events, hook, priority, handlerFn, un
   }
   var eventBus = this._eventBus;
   forEach(events, function(event3) {
-    var fullEvent = ["commandStack", event3, hook].filter(function(e7) {
-      return e7;
+    var fullEvent = ["commandStack", event3, hook].filter(function(e8) {
+      return e8;
     }).join(".");
     eventBus.on(fullEvent, priority, unwrap ? unwrapEvent(handlerFn, that) : handlerFn, that);
   });
@@ -8874,17 +8858,20 @@ function DrilldownBreadcrumbs(eventBus, elementRegistry, canvas) {
     if (element) {
       businessObjectParents = getBusinessObjectParentChain(element);
     }
-    var path = businessObjectParents.map(function(parent) {
-      var title = escapeHTML(parent.name || parent.id);
-      var link = domify$1('<li><span class="bjs-crumb"><a title="' + title + '">' + title + "</a></span></li>");
+    var path = businessObjectParents.flatMap(function(parent) {
       var parentPlane = canvas.findRoot(getPlaneIdFromShape(parent)) || canvas.findRoot(parent.id);
       if (!parentPlane && is(parent, "bpmn:Process")) {
         var participant = elementRegistry.find(function(element2) {
           var businessObject = getBusinessObject(element2);
-          return businessObject && businessObject.get("processRef") && businessObject.get("processRef") === parent;
+          return businessObject && businessObject.get("processRef") === parent;
         });
-        parentPlane = canvas.findRoot(participant.id);
+        parentPlane = participant && canvas.findRoot(participant.id);
       }
+      if (!parentPlane) {
+        return [];
+      }
+      var title = escapeHTML(parent.name || parent.id);
+      var link = domify$1('<li><span class="bjs-crumb"><a title="' + title + '">' + title + "</a></span></li>");
       link.addEventListener("click", function() {
         canvas.setRootElement(parentPlane);
       });
@@ -8927,7 +8914,7 @@ function DrilldownCentering(eventBus, canvas) {
       zoom: currentViewbox.scale
     });
     currentRoot = newRoot;
-    if (is(newRoot, "bpmn:Collaboration") && !storedViewbox) {
+    if (!is(newRoot, "bpmn:SubProcess") && !storedViewbox) {
       return;
     }
     storedViewbox = storedViewbox || { x: 0, y: 0, zoom: 1 };
@@ -8997,7 +8984,7 @@ function SubprocessCompatibility(eventBus, moddle) {
   this._eventBus = eventBus;
   this._moddle = moddle;
   var self2 = this;
-  eventBus.on("import.render.start", 1500, function(e7, context) {
+  eventBus.on("import.render.start", 1500, function(e8, context) {
     self2._handleImport(context.definitions);
   });
 }
@@ -9014,11 +9001,7 @@ SubprocessCompatibility.prototype._handleImport = function(definitions) {
     }
     self2._processToDiagramMap[diagram.plane.bpmnElement.id] = diagram;
   });
-  var newDiagrams = [];
-  definitions.diagrams.forEach(function(diagram) {
-    var createdDiagrams = self2._createNewDiagrams(diagram.plane);
-    Array.prototype.push.apply(newDiagrams, createdDiagrams);
-  });
+  var newDiagrams = definitions.diagrams.filter((diagram) => diagram.plane).flatMap((diagram) => self2._createNewDiagrams(diagram.plane));
   newDiagrams.forEach(function(diagram) {
     self2._movePlaneElementsToOrigin(diagram.plane);
   });
@@ -9140,12 +9123,13 @@ function shouldMoveToPlane(businessObject, plane) {
 var LOW_PRIORITY2 = 250;
 var ARROW_DOWN_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.81801948,3.50735931 L10.4996894,9.1896894 L10.5,4 L12,4 L12,12 L4,12 L4,10.5 L9.6896894,10.4996894 L3.75735931,4.56801948 C3.46446609,4.27512627 3.46446609,3.80025253 3.75735931,3.50735931 C4.05025253,3.21446609 4.52512627,3.21446609 4.81801948,3.50735931 Z"/></svg>';
 var EMPTY_MARKER = "bjs-drilldown-empty";
-function DrilldownOverlayBehavior(canvas, eventBus, elementRegistry, overlays) {
+function DrilldownOverlayBehavior(canvas, eventBus, elementRegistry, overlays, translate4) {
   CommandInterceptor.call(this, eventBus);
   this._canvas = canvas;
   this._eventBus = eventBus;
   this._elementRegistry = elementRegistry;
   this._overlays = overlays;
+  this._translate = translate4;
   var self2 = this;
   this.executed("shape.toggleCollapse", LOW_PRIORITY2, function(context) {
     var shape = context.shape;
@@ -9192,8 +9176,8 @@ function DrilldownOverlayBehavior(canvas, eventBus, elementRegistry, overlays) {
     true
   );
   eventBus.on("import.render.complete", function() {
-    elementRegistry.filter(function(e7) {
-      return self2._canDrillDown(e7);
+    elementRegistry.filter(function(e8) {
+      return self2._canDrillDown(e8);
     }).map(function(el) {
       self2._addOverlay(el);
     });
@@ -9225,12 +9209,13 @@ DrilldownOverlayBehavior.prototype._updateOverlayVisibility = function(element) 
   classes2(overlay.html).toggle(EMPTY_MARKER, !hasFlowElements);
 };
 DrilldownOverlayBehavior.prototype._addOverlay = function(element) {
-  var canvas = this._canvas, overlays = this._overlays;
+  var canvas = this._canvas, overlays = this._overlays, bo = getBusinessObject(element);
   var existingOverlays = overlays.get({ element, type: "drilldown" });
   if (existingOverlays.length) {
     this._removeOverlay(element);
   }
-  var button = domify$1('<button class="bjs-drilldown">' + ARROW_DOWN_SVG + "</button>");
+  var button = domify$1('<button type="button" class="bjs-drilldown">' + ARROW_DOWN_SVG + "</button>"), elementName = bo.get("name") || bo.get("id"), title = this._translate("Open {element}", { element: elementName });
+  button.setAttribute("title", title);
   button.addEventListener("click", function() {
     canvas.setRootElement(canvas.findRoot(getPlaneIdFromShape(element)));
   });
@@ -9254,7 +9239,8 @@ DrilldownOverlayBehavior.$inject = [
   "canvas",
   "eventBus",
   "elementRegistry",
-  "overlays"
+  "overlays",
+  "translate"
 ];
 
 // node_modules/bpmn-js/lib/features/drilldown/index.js
@@ -9411,7 +9397,7 @@ OutlineProvider.prototype.getOutline = function(element) {
       width: element.width - 4,
       height: element.height - 4
     }, OUTLINE_STYLE));
-  } else if (isAny(element, ["bpmn:Task", "bpmn:SubProcess", "bpmn:Group"])) {
+  } else if (isAny(element, ["bpmn:Task", "bpmn:SubProcess", "bpmn:Group", "bpmn:CallActivity"])) {
     outline = create("rect");
     attr(outline, assign({
       x: -DEFAULT_OFFSET,
@@ -9767,11 +9753,11 @@ function Selection(eventBus, canvas) {
   this._canvas = canvas;
   this._selectedElements = [];
   var self2 = this;
-  eventBus.on(["shape.remove", "connection.remove"], function(e7) {
-    var element = e7.element;
+  eventBus.on(["shape.remove", "connection.remove"], function(e8) {
+    var element = e8.element;
     self2.deselect(element);
   });
-  eventBus.on(["diagram.clear", "root.set"], function(e7) {
+  eventBus.on(["diagram.clear", "root.set"], function(e8) {
     self2.select(null);
   });
 }
@@ -9824,11 +9810,11 @@ function SelectionVisuals(canvas, eventBus, selection2) {
   this._canvas = canvas;
   var self2 = this;
   this._multiSelectionBox = null;
-  function addMarker(e7, cls) {
-    canvas.addMarker(e7, cls);
+  function addMarker(e8, cls) {
+    canvas.addMarker(e8, cls);
   }
-  function removeMarker(e7, cls) {
-    canvas.removeMarker(e7, cls);
+  function removeMarker(e8, cls) {
+    canvas.removeMarker(e8, cls);
   }
   eventBus.on("element.hover", function(event3) {
     addMarker(event3.element, MARKER_HOVER);
@@ -9844,14 +9830,14 @@ function SelectionVisuals(canvas, eventBus, selection2) {
       addMarker(s5, MARKER_SELECTED);
     }
     var oldSelection = event3.oldSelection, newSelection = event3.newSelection;
-    forEach(oldSelection, function(e7) {
-      if (newSelection.indexOf(e7) === -1) {
-        deselect(e7);
+    forEach(oldSelection, function(e8) {
+      if (newSelection.indexOf(e8) === -1) {
+        deselect(e8);
       }
     });
-    forEach(newSelection, function(e7) {
-      if (oldSelection.indexOf(e7) === -1) {
-        select(e7);
+    forEach(newSelection, function(e8) {
+      if (oldSelection.indexOf(e8) === -1) {
+        select(e8);
       }
     });
     self2._updateSelectionOutline(newSelection);
@@ -10275,9 +10261,9 @@ DefaultRenderer.prototype.drawShape = function drawShape(visuals, element, attrs
   return rect;
 };
 DefaultRenderer.prototype.drawConnection = function drawConnection(visuals, connection, attrs) {
-  var line = createLine(connection.waypoints, assign({}, this.CONNECTION_STYLE, attrs || {}));
-  append(visuals, line);
-  return line;
+  var line2 = createLine(connection.waypoints, assign({}, this.CONNECTION_STYLE, attrs || {}));
+  append(visuals, line2);
+  return line2;
 };
 DefaultRenderer.prototype.getShapePath = function getShapePath(shape) {
   var x6 = shape.x, y5 = shape.y, width = shape.width, height = shape.height;
@@ -10418,8 +10404,8 @@ function createContainer(options2) {
 function createGroup(parent, cls, childIndex) {
   const group = create("g");
   classes(group).add(cls);
-  const index4 = childIndex !== void 0 ? childIndex : parent.childNodes.length - 1;
-  parent.insertBefore(group, parent.childNodes[index4] || null);
+  const index5 = childIndex !== void 0 ? childIndex : parent.childNodes.length - 1;
+  parent.insertBefore(group, parent.childNodes[index5] || null);
   return group;
 }
 var BASE_LAYER = "base";
@@ -10507,35 +10493,35 @@ Canvas.prototype._clear = function() {
 Canvas.prototype.getDefaultLayer = function() {
   return this.getLayer(BASE_LAYER, PLANE_LAYER_INDEX);
 };
-Canvas.prototype.getLayer = function(name2, index4) {
+Canvas.prototype.getLayer = function(name2, index5) {
   if (!name2) {
     throw new Error("must specify a name");
   }
   let layer = this._layers[name2];
   if (!layer) {
-    layer = this._layers[name2] = this._createLayer(name2, index4);
+    layer = this._layers[name2] = this._createLayer(name2, index5);
   }
-  if (typeof index4 !== "undefined" && layer.index !== index4) {
-    throw new Error("layer <" + name2 + "> already created at index <" + index4 + ">");
+  if (typeof index5 !== "undefined" && layer.index !== index5) {
+    throw new Error("layer <" + name2 + "> already created at index <" + index5 + ">");
   }
   return layer.group;
 };
-Canvas.prototype._getChildIndex = function(index4) {
+Canvas.prototype._getChildIndex = function(index5) {
   return reduce(this._layers, function(childIndex, layer) {
-    if (layer.visible && index4 >= layer.index) {
+    if (layer.visible && index5 >= layer.index) {
       childIndex++;
     }
     return childIndex;
   }, 0);
 };
-Canvas.prototype._createLayer = function(name2, index4) {
-  if (typeof index4 === "undefined") {
-    index4 = UTILITY_LAYER_INDEX;
+Canvas.prototype._createLayer = function(name2, index5) {
+  if (typeof index5 === "undefined") {
+    index5 = UTILITY_LAYER_INDEX;
   }
-  const childIndex = this._getChildIndex(index4);
+  const childIndex = this._getChildIndex(index5);
   return {
     group: createGroup(this._viewport, "layer-" + name2, childIndex),
-    index: index4,
+    index: index5,
     visible: true
   };
 };
@@ -10549,11 +10535,11 @@ Canvas.prototype.showLayer = function(name2) {
   }
   const viewport = this._viewport;
   const group = layer.group;
-  const index4 = layer.index;
+  const index5 = layer.index;
   if (layer.visible) {
     return group;
   }
-  const childIndex = this._getChildIndex(index4);
+  const childIndex = this._getChildIndex(index5);
   viewport.insertBefore(group, viewport.childNodes[childIndex] || null);
   layer.visible = true;
   return group;
@@ -10618,6 +10604,7 @@ Canvas.prototype._updateMarker = function(element, marker, add3) {
   if (!element.id) {
     element = this._elementRegistry.get(element);
   }
+  element.markers = element.markers || /* @__PURE__ */ new Set();
   container = this._elementRegistry._elements[element.id];
   if (!container) {
     return;
@@ -10625,8 +10612,10 @@ Canvas.prototype._updateMarker = function(element, marker, add3) {
   forEach([container.gfx, container.secondaryGfx], function(gfx) {
     if (gfx) {
       if (add3) {
+        element.markers.add(marker);
         classes(gfx).add(marker);
       } else {
+        element.markers.delete(marker);
         classes(gfx).remove(marker);
       }
     }
@@ -10643,8 +10632,10 @@ Canvas.prototype.hasMarker = function(element, marker) {
   if (!element.id) {
     element = this._elementRegistry.get(element);
   }
-  const gfx = this.getGraphics(element);
-  return classes(gfx).has(marker);
+  if (!element.markers) {
+    return false;
+  }
+  return element.markers.has(marker);
 };
 Canvas.prototype.toggleMarker = function(element, marker) {
   if (this.hasMarker(element, marker)) {
@@ -10817,12 +10808,12 @@ Canvas.prototype.viewbox = function(box) {
     return this._cachedViewbox;
   }
   const viewport = this._viewport, outerBox = this.getSize();
-  let innerBox, matrix, activeLayer, transform3, scale, x6, y5;
+  let innerBox, matrix, activeLayer, transform4, scale, x6, y5;
   if (!box) {
     activeLayer = this._rootElement ? this.getActiveLayer() : null;
     innerBox = activeLayer && activeLayer.getBBox() || {};
-    transform3 = transform(viewport);
-    matrix = transform3 ? transform3.matrix : createMatrix();
+    transform4 = transform(viewport);
+    matrix = transform4 ? transform4.matrix : createMatrix();
     scale = round(matrix.a, 1e3);
     x6 = round(-matrix.e || 0, 1e3);
     y5 = round(-matrix.f || 0, 1e3);
@@ -11081,8 +11072,8 @@ ElementRegistry.prototype.find = function(fn2) {
   }
 };
 ElementRegistry.prototype.getAll = function() {
-  return this.filter(function(e7) {
-    return e7;
+  return this.filter(function(e8) {
+    return e8;
   });
 };
 ElementRegistry.prototype.forEach = function(fn2) {
@@ -11150,8 +11141,8 @@ function extend2(collection, refs, property, target) {
 function isExtended(collection) {
   return collection.__refs_collection === true;
 }
-function hasOwnProperty(e7, property) {
-  return Object.prototype.hasOwnProperty.call(e7, property.name || property);
+function hasOwnProperty(e8, property) {
+  return Object.prototype.hasOwnProperty.call(e8, property.name || property);
 }
 function defineCollectionProperty(ref, property, target) {
   var collection = extend2(target[property.name] || [], ref, property, target);
@@ -11360,8 +11351,8 @@ EventBus.prototype.on = function(events, priority, callback, that) {
     actualCallback[FN_REF] = callback[FN_REF] || callback;
   }
   var self2 = this;
-  events.forEach(function(e7) {
-    self2._addListener(e7, {
+  events.forEach(function(e8) {
+    self2._addListener(e8, {
       priority,
       callback: actualCallback,
       next: null
@@ -11596,9 +11587,9 @@ GraphicsFactory.prototype.create = function(type, element, parentIndex) {
 };
 GraphicsFactory.prototype.updateContainments = function(elements) {
   var self2 = this, elementRegistry = this._elementRegistry, parents;
-  parents = reduce(elements, function(map4, e7) {
-    if (e7.parent) {
-      map4[e7.parent.id] = e7.parent;
+  parents = reduce(elements, function(map4, e8) {
+    if (e8.parent) {
+      map4[e8.parent.id] = e8.parent;
     }
     return map4;
   }, {});
@@ -12270,11 +12261,11 @@ function getter(getFn) {
   };
 }
 function cloneNsMatrix(nsMatrix) {
-  var clone3 = {}, key;
+  var clone4 = {}, key;
   for (key in nsMatrix) {
-    clone3[key] = nsMatrix[key];
+    clone4[key] = nsMatrix[key];
   }
-  return clone3;
+  return clone4;
 }
 function uriPrefix(prefix4) {
   return prefix4 + "$uri";
@@ -12578,7 +12569,7 @@ function Parser(options2) {
     }
     function getParseContext() {
       var splitsRe = /(\r\n|\r|\n)/g;
-      var line = 0;
+      var line2 = 0;
       var column = 0;
       var startOfLine = 0;
       var endOfLine = j6;
@@ -12593,7 +12584,7 @@ function Parser(options2) {
         if (endOfLine > i7) {
           break;
         }
-        line += 1;
+        line2 += 1;
         startOfLine = endOfLine;
       }
       if (i7 == -1) {
@@ -12607,7 +12598,7 @@ function Parser(options2) {
       }
       return {
         "data": data,
-        "line": line,
+        "line": line2,
         "column": column
       };
     }
@@ -13208,11 +13199,11 @@ Reader.prototype.fromXML = function(xml2, options2, done) {
   stack.push(rootHandler);
   function handleError(err, getContext, lax2) {
     var ctx = getContext();
-    var line = ctx.line, column = ctx.column, data = ctx.data;
+    var line2 = ctx.line, column = ctx.column, data = ctx.data;
     if (data.charAt(0) === "<" && data.indexOf(" ") !== -1) {
       data = data.slice(0, data.indexOf(" ")) + ">";
     }
-    var message = "unparsable content " + (data ? data + " " : "") + "detected\n	line: " + line + "\n	column: " + column + "\n	nested error: " + err.message;
+    var message = "unparsable content " + (data ? data + " " : "") + "detected\n	line: " + line2 + "\n	column: " + column + "\n	nested error: " + err.message;
     if (lax2) {
       context.addWarning({
         message,
@@ -13328,8 +13319,8 @@ Reader.prototype.fromXML = function(xml2, options2, done) {
     try {
       parser4.parse(xml2);
       resolveReferences();
-    } catch (e7) {
-      err = e7;
+    } catch (e8) {
+      err = e8;
     }
     var rootElement = rootHandler.element;
     if (!err && !rootElement) {
@@ -13668,7 +13659,7 @@ ElementSerializer.prototype.parseGenericAttributes = function(element, attribute
     }
     try {
       self2.addAttribute(self2.nsAttributeName(attr3.name), attr3.value);
-    } catch (e7) {
+    } catch (e8) {
       console.warn(
         "missing namespace information for ",
         attr3.name,
@@ -13676,7 +13667,7 @@ ElementSerializer.prototype.parseGenericAttributes = function(element, attribute
         attr3.value,
         "on",
         element,
-        e7
+        e8
       );
     }
   });
@@ -17580,8 +17571,8 @@ function is2(element, type) {
   return element.$instanceOf(type);
 }
 function findDisplayCandidate(definitions) {
-  return find(definitions.rootElements, function(e7) {
-    return is2(e7, "bpmn:Process") || is2(e7, "bpmn:Collaboration");
+  return find(definitions.rootElements, function(e8) {
+    return is2(e8, "bpmn:Process") || is2(e8, "bpmn:Collaboration");
   });
 }
 function BpmnTreeWalker(handler) {
@@ -17589,8 +17580,8 @@ function BpmnTreeWalker(handler) {
   var deferred = [];
   var diMap = {};
   function contextual(fn2, ctx) {
-    return function(e7) {
-      fn2(e7, ctx);
+    return function(e8) {
+      fn2(e8, ctx);
     };
   }
   function handled(element) {
@@ -17603,7 +17594,7 @@ function BpmnTreeWalker(handler) {
     var gfx = element.gfx;
     if (gfx) {
       throw new Error(
-        "already rendered ${ elementToString(element) }"
+        `already rendered ${elementToString(element)}`
       );
     }
     return handler.element(element, diMap[element.id], ctx);
@@ -17712,8 +17703,8 @@ function BpmnTreeWalker(handler) {
     handled(process2);
   }
   function handleUnhandledProcesses(rootElements, ctx) {
-    var processes = filter(rootElements, function(e7) {
-      return !isHandled(e7) && is2(e7, "bpmn:Process") && e7.laneSets;
+    var processes = filter(rootElements, function(e8) {
+      return !isHandled(e8) && is2(e8, "bpmn:Process") && e8.laneSets;
     });
     processes.forEach(contextual(handleProcess, ctx));
   }
@@ -17736,13 +17727,13 @@ function BpmnTreeWalker(handler) {
     visitIfDi(artifact, context);
   }
   function handleArtifacts(artifacts, context) {
-    forEach(artifacts, function(e7) {
-      if (is2(e7, "bpmn:Association")) {
+    forEach(artifacts, function(e8) {
+      if (is2(e8, "bpmn:Association")) {
         deferred.push(function() {
-          handleArtifact(e7, context);
+          handleArtifact(e8, context);
         });
       } else {
-        handleArtifact(e7, context);
+        handleArtifact(e8, context);
       }
     });
   }
@@ -17891,14 +17882,14 @@ function importBpmnDiagram(diagram, definitions, bpmnDiagram) {
         warnings
       });
       return resolve({ warnings });
-    } catch (e7) {
-      e7.warnings = warnings;
-      return reject(e7);
+    } catch (e8) {
+      e8.warnings = warnings;
+      return reject(e8);
     }
   });
 }
 function getDiagramsToImport(definitions, bpmnDiagram) {
-  if (!bpmnDiagram) {
+  if (!bpmnDiagram || !bpmnDiagram.plane) {
     return;
   }
   var bpmnElement = bpmnDiagram.plane.bpmnElement, rootElement = bpmnElement;
@@ -17929,6 +17920,9 @@ function getDiagramsToImport(definitions, bpmnDiagram) {
   var diagramsToImport = [bpmnDiagram];
   var handledElements = [bpmnElement];
   forEach(definitions.diagrams, function(diagram) {
+    if (!diagram.plane) {
+      return;
+    }
     var businessObject = diagram.plane.bpmnElement;
     if (allChildren.indexOf(businessObject) !== -1 && handledElements.indexOf(businessObject) === -1) {
       diagramsToImport.push(diagram);
@@ -18128,12 +18122,12 @@ BaseViewer.prototype.saveSVG = async function saveSVG() {
   let svg, err;
   try {
     const canvas = this.get("canvas");
-    const contentNode = canvas.getActiveLayer(), defsNode = query("defs", canvas._svg);
+    const contentNode = canvas.getActiveLayer(), defsNode = query(":scope > defs", canvas._svg);
     const contents = innerSVG(contentNode), defs = defsNode ? "<defs>" + innerSVG(defsNode) + "</defs>" : "";
     const bbox = contentNode.getBBox();
     svg = '<?xml version="1.0" encoding="utf-8"?>\n<!-- created with bpmn-js / http://bpmn.io -->\n<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="' + bbox.width + '" height="' + bbox.height + '" viewBox="' + bbox.x + " " + bbox.y + " " + bbox.width + " " + bbox.height + '" version="1.1">' + defs + contents + "</svg>";
-  } catch (e7) {
-    err = e7;
+  } catch (e8) {
+    err = e8;
   }
   this._emit("saveSVG.done", {
     error: err,
@@ -18652,8 +18646,8 @@ function delta(a6, b5) {
 var THRESHOLD = 15;
 function MoveCanvas(eventBus, canvas) {
   var context;
-  eventBus.on("element.mousedown", 500, function(e7) {
-    return handleStart(e7.originalEvent);
+  eventBus.on("element.mousedown", 500, function(e8) {
+    return handleStart(e8.originalEvent);
   });
   function handleMove(event3) {
     var start = context.start, button = context.button, position = toPoint(event3), delta2 = delta(position, start);
@@ -18747,7 +18741,7 @@ function ZoomScroll(config, eventBus, canvas) {
   this._totalDelta = 0;
   this._scale = config.scale || DEFAULT_SCALE;
   var self2 = this;
-  eventBus.on("canvas.init", function(e7) {
+  eventBus.on("canvas.init", function(e8) {
     self2._init(config.enabled !== false);
   });
 }
@@ -18859,6 +18853,3750 @@ NavigatedViewer.prototype._modules = [].concat(
   Viewer.prototype._modules,
   NavigatedViewer.prototype._navigationModules
 );
+
+// node_modules/bpmn-js-sketchy/dist/index.esm.js
+function e2(e8, t7) {
+  t7 && (e8.super_ = t7, e8.prototype = Object.create(t7.prototype, { constructor: { value: e8, enumerable: false, writable: true, configurable: true } }));
+}
+function rotatePoints(points, center2, degrees) {
+  if (points && points.length) {
+    const [cx, cy] = center2;
+    const angle = Math.PI / 180 * degrees;
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    points.forEach((p5) => {
+      const [x6, y5] = p5;
+      p5[0] = (x6 - cx) * cos - (y5 - cy) * sin + cx;
+      p5[1] = (x6 - cx) * sin + (y5 - cy) * cos + cy;
+    });
+  }
+}
+function rotateLines(lines, center2, degrees) {
+  const points = [];
+  lines.forEach((line2) => points.push(...line2));
+  rotatePoints(points, center2, degrees);
+}
+function lineLength(line2) {
+  const p1 = line2[0];
+  const p22 = line2[1];
+  return Math.sqrt(Math.pow(p1[0] - p22[0], 2) + Math.pow(p1[1] - p22[1], 2));
+}
+function polygonHachureLines(polygonList, o5) {
+  const angle = o5.hachureAngle + 90;
+  let gap = o5.hachureGap;
+  if (gap < 0) {
+    gap = o5.strokeWidth * 4;
+  }
+  gap = Math.max(gap, 0.1);
+  const rotationCenter = [0, 0];
+  if (angle) {
+    for (const polygon2 of polygonList) {
+      rotatePoints(polygon2, rotationCenter, angle);
+    }
+  }
+  const lines = straightHachureLines(polygonList, gap);
+  if (angle) {
+    for (const polygon2 of polygonList) {
+      rotatePoints(polygon2, rotationCenter, -angle);
+    }
+    rotateLines(lines, rotationCenter, -angle);
+  }
+  return lines;
+}
+function straightHachureLines(polygonList, gap) {
+  const vertexArray = [];
+  for (const polygon2 of polygonList) {
+    const vertices = [...polygon2];
+    if (vertices[0].join(",") !== vertices[vertices.length - 1].join(",")) {
+      vertices.push([vertices[0][0], vertices[0][1]]);
+    }
+    if (vertices.length > 2) {
+      vertexArray.push(vertices);
+    }
+  }
+  const lines = [];
+  gap = Math.max(gap, 0.1);
+  const edges = [];
+  for (const vertices of vertexArray) {
+    for (let i7 = 0; i7 < vertices.length - 1; i7++) {
+      const p1 = vertices[i7];
+      const p22 = vertices[i7 + 1];
+      if (p1[1] !== p22[1]) {
+        const ymin = Math.min(p1[1], p22[1]);
+        edges.push({
+          ymin,
+          ymax: Math.max(p1[1], p22[1]),
+          x: ymin === p1[1] ? p1[0] : p22[0],
+          islope: (p22[0] - p1[0]) / (p22[1] - p1[1])
+        });
+      }
+    }
+  }
+  edges.sort((e1, e22) => {
+    if (e1.ymin < e22.ymin) {
+      return -1;
+    }
+    if (e1.ymin > e22.ymin) {
+      return 1;
+    }
+    if (e1.x < e22.x) {
+      return -1;
+    }
+    if (e1.x > e22.x) {
+      return 1;
+    }
+    if (e1.ymax === e22.ymax) {
+      return 0;
+    }
+    return (e1.ymax - e22.ymax) / Math.abs(e1.ymax - e22.ymax);
+  });
+  if (!edges.length) {
+    return lines;
+  }
+  let activeEdges = [];
+  let y5 = edges[0].ymin;
+  while (activeEdges.length || edges.length) {
+    if (edges.length) {
+      let ix = -1;
+      for (let i7 = 0; i7 < edges.length; i7++) {
+        if (edges[i7].ymin > y5) {
+          break;
+        }
+        ix = i7;
+      }
+      const removed = edges.splice(0, ix + 1);
+      removed.forEach((edge) => {
+        activeEdges.push({ s: y5, edge });
+      });
+    }
+    activeEdges = activeEdges.filter((ae) => {
+      if (ae.edge.ymax <= y5) {
+        return false;
+      }
+      return true;
+    });
+    activeEdges.sort((ae1, ae2) => {
+      if (ae1.edge.x === ae2.edge.x) {
+        return 0;
+      }
+      return (ae1.edge.x - ae2.edge.x) / Math.abs(ae1.edge.x - ae2.edge.x);
+    });
+    if (activeEdges.length > 1) {
+      for (let i7 = 0; i7 < activeEdges.length; i7 = i7 + 2) {
+        const nexti = i7 + 1;
+        if (nexti >= activeEdges.length) {
+          break;
+        }
+        const ce = activeEdges[i7].edge;
+        const ne = activeEdges[nexti].edge;
+        lines.push([
+          [Math.round(ce.x), y5],
+          [Math.round(ne.x), y5]
+        ]);
+      }
+    }
+    y5 += gap;
+    activeEdges.forEach((ae) => {
+      ae.edge.x = ae.edge.x + gap * ae.edge.islope;
+    });
+  }
+  return lines;
+}
+var HachureFiller = class {
+  constructor(helper2) {
+    this.helper = helper2;
+  }
+  fillPolygons(polygonList, o5) {
+    return this._fillPolygons(polygonList, o5);
+  }
+  _fillPolygons(polygonList, o5) {
+    const lines = polygonHachureLines(polygonList, o5);
+    const ops = this.renderLines(lines, o5);
+    return { type: "fillSketch", ops };
+  }
+  renderLines(lines, o5) {
+    const ops = [];
+    for (const line2 of lines) {
+      ops.push(...this.helper.doubleLineOps(line2[0][0], line2[0][1], line2[1][0], line2[1][1], o5));
+    }
+    return ops;
+  }
+};
+var ZigZagFiller = class extends HachureFiller {
+  fillPolygons(polygonList, o5) {
+    let gap = o5.hachureGap;
+    if (gap < 0) {
+      gap = o5.strokeWidth * 4;
+    }
+    gap = Math.max(gap, 0.1);
+    const o22 = Object.assign({}, o5, { hachureGap: gap });
+    const lines = polygonHachureLines(polygonList, o22);
+    const zigZagAngle = Math.PI / 180 * o5.hachureAngle;
+    const zigzagLines = [];
+    const dgx = gap * 0.5 * Math.cos(zigZagAngle);
+    const dgy = gap * 0.5 * Math.sin(zigZagAngle);
+    for (const [p1, p22] of lines) {
+      if (lineLength([p1, p22])) {
+        zigzagLines.push([
+          [p1[0] - dgx, p1[1] + dgy],
+          [...p22]
+        ], [
+          [p1[0] + dgx, p1[1] - dgy],
+          [...p22]
+        ]);
+      }
+    }
+    const ops = this.renderLines(zigzagLines, o5);
+    return { type: "fillSketch", ops };
+  }
+};
+var HatchFiller = class extends HachureFiller {
+  fillPolygons(polygonList, o5) {
+    const set4 = this._fillPolygons(polygonList, o5);
+    const o22 = Object.assign({}, o5, { hachureAngle: o5.hachureAngle + 90 });
+    const set22 = this._fillPolygons(polygonList, o22);
+    set4.ops = set4.ops.concat(set22.ops);
+    return set4;
+  }
+};
+var DotFiller = class {
+  constructor(helper2) {
+    this.helper = helper2;
+  }
+  fillPolygons(polygonList, o5) {
+    o5 = Object.assign({}, o5, { hachureAngle: 0 });
+    const lines = polygonHachureLines(polygonList, o5);
+    return this.dotsOnLines(lines, o5);
+  }
+  dotsOnLines(lines, o5) {
+    const ops = [];
+    let gap = o5.hachureGap;
+    if (gap < 0) {
+      gap = o5.strokeWidth * 4;
+    }
+    gap = Math.max(gap, 0.1);
+    let fweight = o5.fillWeight;
+    if (fweight < 0) {
+      fweight = o5.strokeWidth / 2;
+    }
+    const ro = gap / 4;
+    for (const line2 of lines) {
+      const length2 = lineLength(line2);
+      const dl = length2 / gap;
+      const count = Math.ceil(dl) - 1;
+      const offset = length2 - count * gap;
+      const x6 = (line2[0][0] + line2[1][0]) / 2 - gap / 4;
+      const minY = Math.min(line2[0][1], line2[1][1]);
+      for (let i7 = 0; i7 < count; i7++) {
+        const y5 = minY + offset + i7 * gap;
+        const cx = x6 - ro + Math.random() * 2 * ro;
+        const cy = y5 - ro + Math.random() * 2 * ro;
+        const el = this.helper.ellipse(cx, cy, fweight, fweight, o5);
+        ops.push(...el.ops);
+      }
+    }
+    return { type: "fillSketch", ops };
+  }
+};
+var DashedFiller = class {
+  constructor(helper2) {
+    this.helper = helper2;
+  }
+  fillPolygons(polygonList, o5) {
+    const lines = polygonHachureLines(polygonList, o5);
+    return { type: "fillSketch", ops: this.dashedLine(lines, o5) };
+  }
+  dashedLine(lines, o5) {
+    const offset = o5.dashOffset < 0 ? o5.hachureGap < 0 ? o5.strokeWidth * 4 : o5.hachureGap : o5.dashOffset;
+    const gap = o5.dashGap < 0 ? o5.hachureGap < 0 ? o5.strokeWidth * 4 : o5.hachureGap : o5.dashGap;
+    const ops = [];
+    lines.forEach((line2) => {
+      const length2 = lineLength(line2);
+      const count = Math.floor(length2 / (offset + gap));
+      const startOffset = (length2 + gap - count * (offset + gap)) / 2;
+      let p1 = line2[0];
+      let p22 = line2[1];
+      if (p1[0] > p22[0]) {
+        p1 = line2[1];
+        p22 = line2[0];
+      }
+      const alpha = Math.atan((p22[1] - p1[1]) / (p22[0] - p1[0]));
+      for (let i7 = 0; i7 < count; i7++) {
+        const lstart = i7 * (offset + gap);
+        const lend = lstart + offset;
+        const start = [p1[0] + lstart * Math.cos(alpha) + startOffset * Math.cos(alpha), p1[1] + lstart * Math.sin(alpha) + startOffset * Math.sin(alpha)];
+        const end = [p1[0] + lend * Math.cos(alpha) + startOffset * Math.cos(alpha), p1[1] + lend * Math.sin(alpha) + startOffset * Math.sin(alpha)];
+        ops.push(...this.helper.doubleLineOps(start[0], start[1], end[0], end[1], o5));
+      }
+    });
+    return ops;
+  }
+};
+var ZigZagLineFiller = class {
+  constructor(helper2) {
+    this.helper = helper2;
+  }
+  fillPolygons(polygonList, o5) {
+    const gap = o5.hachureGap < 0 ? o5.strokeWidth * 4 : o5.hachureGap;
+    const zo = o5.zigzagOffset < 0 ? gap : o5.zigzagOffset;
+    o5 = Object.assign({}, o5, { hachureGap: gap + zo });
+    const lines = polygonHachureLines(polygonList, o5);
+    return { type: "fillSketch", ops: this.zigzagLines(lines, zo, o5) };
+  }
+  zigzagLines(lines, zo, o5) {
+    const ops = [];
+    lines.forEach((line2) => {
+      const length2 = lineLength(line2);
+      const count = Math.round(length2 / (2 * zo));
+      let p1 = line2[0];
+      let p22 = line2[1];
+      if (p1[0] > p22[0]) {
+        p1 = line2[1];
+        p22 = line2[0];
+      }
+      const alpha = Math.atan((p22[1] - p1[1]) / (p22[0] - p1[0]));
+      for (let i7 = 0; i7 < count; i7++) {
+        const lstart = i7 * 2 * zo;
+        const lend = (i7 + 1) * 2 * zo;
+        const dz = Math.sqrt(2 * Math.pow(zo, 2));
+        const start = [p1[0] + lstart * Math.cos(alpha), p1[1] + lstart * Math.sin(alpha)];
+        const end = [p1[0] + lend * Math.cos(alpha), p1[1] + lend * Math.sin(alpha)];
+        const middle = [start[0] + dz * Math.cos(alpha + Math.PI / 4), start[1] + dz * Math.sin(alpha + Math.PI / 4)];
+        ops.push(...this.helper.doubleLineOps(start[0], start[1], middle[0], middle[1], o5), ...this.helper.doubleLineOps(middle[0], middle[1], end[0], end[1], o5));
+      }
+    });
+    return ops;
+  }
+};
+var fillers = {};
+function getFiller(o5, helper2) {
+  let fillerName = o5.fillStyle || "hachure";
+  if (!fillers[fillerName]) {
+    switch (fillerName) {
+      case "zigzag":
+        if (!fillers[fillerName]) {
+          fillers[fillerName] = new ZigZagFiller(helper2);
+        }
+        break;
+      case "cross-hatch":
+        if (!fillers[fillerName]) {
+          fillers[fillerName] = new HatchFiller(helper2);
+        }
+        break;
+      case "dots":
+        if (!fillers[fillerName]) {
+          fillers[fillerName] = new DotFiller(helper2);
+        }
+        break;
+      case "dashed":
+        if (!fillers[fillerName]) {
+          fillers[fillerName] = new DashedFiller(helper2);
+        }
+        break;
+      case "zigzag-line":
+        if (!fillers[fillerName]) {
+          fillers[fillerName] = new ZigZagLineFiller(helper2);
+        }
+        break;
+      case "hachure":
+      default:
+        fillerName = "hachure";
+        if (!fillers[fillerName]) {
+          fillers[fillerName] = new HachureFiller(helper2);
+        }
+        break;
+    }
+  }
+  return fillers[fillerName];
+}
+function randomSeed() {
+  return Math.floor(Math.random() * 2 ** 31);
+}
+var Random = class {
+  constructor(seed) {
+    this.seed = seed;
+  }
+  next() {
+    if (this.seed) {
+      return (2 ** 31 - 1 & (this.seed = Math.imul(48271, this.seed))) / 2 ** 31;
+    } else {
+      return Math.random();
+    }
+  }
+};
+var COMMAND = 0;
+var NUMBER = 1;
+var EOD = 2;
+var PARAMS = { A: 7, a: 7, C: 6, c: 6, H: 1, h: 1, L: 2, l: 2, M: 2, m: 2, Q: 4, q: 4, S: 4, s: 4, T: 2, t: 2, V: 1, v: 1, Z: 0, z: 0 };
+function tokenize(d5) {
+  const tokens = new Array();
+  while (d5 !== "") {
+    if (d5.match(/^([ \t\r\n,]+)/)) {
+      d5 = d5.substr(RegExp.$1.length);
+    } else if (d5.match(/^([aAcChHlLmMqQsStTvVzZ])/)) {
+      tokens[tokens.length] = { type: COMMAND, text: RegExp.$1 };
+      d5 = d5.substr(RegExp.$1.length);
+    } else if (d5.match(/^(([-+]?[0-9]+(\.[0-9]*)?|[-+]?\.[0-9]+)([eE][-+]?[0-9]+)?)/)) {
+      tokens[tokens.length] = { type: NUMBER, text: `${parseFloat(RegExp.$1)}` };
+      d5 = d5.substr(RegExp.$1.length);
+    } else {
+      return [];
+    }
+  }
+  tokens[tokens.length] = { type: EOD, text: "" };
+  return tokens;
+}
+function isType(token, type) {
+  return token.type === type;
+}
+function parsePath(d5) {
+  const segments = [];
+  const tokens = tokenize(d5);
+  let mode = "BOD";
+  let index5 = 0;
+  let token = tokens[index5];
+  while (!isType(token, EOD)) {
+    let paramsCount = 0;
+    const params = [];
+    if (mode === "BOD") {
+      if (token.text === "M" || token.text === "m") {
+        index5++;
+        paramsCount = PARAMS[token.text];
+        mode = token.text;
+      } else {
+        return parsePath("M0,0" + d5);
+      }
+    } else if (isType(token, NUMBER)) {
+      paramsCount = PARAMS[mode];
+    } else {
+      index5++;
+      paramsCount = PARAMS[token.text];
+      mode = token.text;
+    }
+    if (index5 + paramsCount < tokens.length) {
+      for (let i7 = index5; i7 < index5 + paramsCount; i7++) {
+        const numbeToken = tokens[i7];
+        if (isType(numbeToken, NUMBER)) {
+          params[params.length] = +numbeToken.text;
+        } else {
+          throw new Error("Param not a number: " + mode + "," + numbeToken.text);
+        }
+      }
+      if (typeof PARAMS[mode] === "number") {
+        const segment = { key: mode, data: params };
+        segments.push(segment);
+        index5 += paramsCount;
+        token = tokens[index5];
+        if (mode === "M")
+          mode = "L";
+        if (mode === "m")
+          mode = "l";
+      } else {
+        throw new Error("Bad segment: " + mode);
+      }
+    } else {
+      throw new Error("Path data ended short");
+    }
+  }
+  return segments;
+}
+function absolutize(segments) {
+  let cx = 0, cy = 0;
+  let subx = 0, suby = 0;
+  const out = [];
+  for (const { key, data } of segments) {
+    switch (key) {
+      case "M":
+        out.push({ key: "M", data: [...data] });
+        [cx, cy] = data;
+        [subx, suby] = data;
+        break;
+      case "m":
+        cx += data[0];
+        cy += data[1];
+        out.push({ key: "M", data: [cx, cy] });
+        subx = cx;
+        suby = cy;
+        break;
+      case "L":
+        out.push({ key: "L", data: [...data] });
+        [cx, cy] = data;
+        break;
+      case "l":
+        cx += data[0];
+        cy += data[1];
+        out.push({ key: "L", data: [cx, cy] });
+        break;
+      case "C":
+        out.push({ key: "C", data: [...data] });
+        cx = data[4];
+        cy = data[5];
+        break;
+      case "c": {
+        const newdata = data.map((d5, i7) => i7 % 2 ? d5 + cy : d5 + cx);
+        out.push({ key: "C", data: newdata });
+        cx = newdata[4];
+        cy = newdata[5];
+        break;
+      }
+      case "Q":
+        out.push({ key: "Q", data: [...data] });
+        cx = data[2];
+        cy = data[3];
+        break;
+      case "q": {
+        const newdata = data.map((d5, i7) => i7 % 2 ? d5 + cy : d5 + cx);
+        out.push({ key: "Q", data: newdata });
+        cx = newdata[2];
+        cy = newdata[3];
+        break;
+      }
+      case "A":
+        out.push({ key: "A", data: [...data] });
+        cx = data[5];
+        cy = data[6];
+        break;
+      case "a":
+        cx += data[5];
+        cy += data[6];
+        out.push({ key: "A", data: [data[0], data[1], data[2], data[3], data[4], cx, cy] });
+        break;
+      case "H":
+        out.push({ key: "H", data: [...data] });
+        cx = data[0];
+        break;
+      case "h":
+        cx += data[0];
+        out.push({ key: "H", data: [cx] });
+        break;
+      case "V":
+        out.push({ key: "V", data: [...data] });
+        cy = data[0];
+        break;
+      case "v":
+        cy += data[0];
+        out.push({ key: "V", data: [cy] });
+        break;
+      case "S":
+        out.push({ key: "S", data: [...data] });
+        cx = data[2];
+        cy = data[3];
+        break;
+      case "s": {
+        const newdata = data.map((d5, i7) => i7 % 2 ? d5 + cy : d5 + cx);
+        out.push({ key: "S", data: newdata });
+        cx = newdata[2];
+        cy = newdata[3];
+        break;
+      }
+      case "T":
+        out.push({ key: "T", data: [...data] });
+        cx = data[0];
+        cy = data[1];
+        break;
+      case "t":
+        cx += data[0];
+        cy += data[1];
+        out.push({ key: "T", data: [cx, cy] });
+        break;
+      case "Z":
+      case "z":
+        out.push({ key: "Z", data: [] });
+        cx = subx;
+        cy = suby;
+        break;
+    }
+  }
+  return out;
+}
+function normalize(segments) {
+  const out = [];
+  let lastType = "";
+  let cx = 0, cy = 0;
+  let subx = 0, suby = 0;
+  let lcx = 0, lcy = 0;
+  for (const { key, data } of segments) {
+    switch (key) {
+      case "M":
+        out.push({ key: "M", data: [...data] });
+        [cx, cy] = data;
+        [subx, suby] = data;
+        break;
+      case "C":
+        out.push({ key: "C", data: [...data] });
+        cx = data[4];
+        cy = data[5];
+        lcx = data[2];
+        lcy = data[3];
+        break;
+      case "L":
+        out.push({ key: "L", data: [...data] });
+        [cx, cy] = data;
+        break;
+      case "H":
+        cx = data[0];
+        out.push({ key: "L", data: [cx, cy] });
+        break;
+      case "V":
+        cy = data[0];
+        out.push({ key: "L", data: [cx, cy] });
+        break;
+      case "S": {
+        let cx1 = 0, cy1 = 0;
+        if (lastType === "C" || lastType === "S") {
+          cx1 = cx + (cx - lcx);
+          cy1 = cy + (cy - lcy);
+        } else {
+          cx1 = cx;
+          cy1 = cy;
+        }
+        out.push({ key: "C", data: [cx1, cy1, ...data] });
+        lcx = data[0];
+        lcy = data[1];
+        cx = data[2];
+        cy = data[3];
+        break;
+      }
+      case "T": {
+        const [x6, y5] = data;
+        let x1 = 0, y1 = 0;
+        if (lastType === "Q" || lastType === "T") {
+          x1 = cx + (cx - lcx);
+          y1 = cy + (cy - lcy);
+        } else {
+          x1 = cx;
+          y1 = cy;
+        }
+        const cx1 = cx + 2 * (x1 - cx) / 3;
+        const cy1 = cy + 2 * (y1 - cy) / 3;
+        const cx2 = x6 + 2 * (x1 - x6) / 3;
+        const cy2 = y5 + 2 * (y1 - y5) / 3;
+        out.push({ key: "C", data: [cx1, cy1, cx2, cy2, x6, y5] });
+        lcx = x1;
+        lcy = y1;
+        cx = x6;
+        cy = y5;
+        break;
+      }
+      case "Q": {
+        const [x1, y1, x6, y5] = data;
+        const cx1 = cx + 2 * (x1 - cx) / 3;
+        const cy1 = cy + 2 * (y1 - cy) / 3;
+        const cx2 = x6 + 2 * (x1 - x6) / 3;
+        const cy2 = y5 + 2 * (y1 - y5) / 3;
+        out.push({ key: "C", data: [cx1, cy1, cx2, cy2, x6, y5] });
+        lcx = x1;
+        lcy = y1;
+        cx = x6;
+        cy = y5;
+        break;
+      }
+      case "A": {
+        const r1 = Math.abs(data[0]);
+        const r22 = Math.abs(data[1]);
+        const angle = data[2];
+        const largeArcFlag = data[3];
+        const sweepFlag = data[4];
+        const x6 = data[5];
+        const y5 = data[6];
+        if (r1 === 0 || r22 === 0) {
+          out.push({ key: "C", data: [cx, cy, x6, y5, x6, y5] });
+          cx = x6;
+          cy = y5;
+        } else {
+          if (cx !== x6 || cy !== y5) {
+            const curves = arcToCubicCurves(cx, cy, x6, y5, r1, r22, angle, largeArcFlag, sweepFlag);
+            curves.forEach(function(curve2) {
+              out.push({ key: "C", data: curve2 });
+            });
+            cx = x6;
+            cy = y5;
+          }
+        }
+        break;
+      }
+      case "Z":
+        out.push({ key: "Z", data: [] });
+        cx = subx;
+        cy = suby;
+        break;
+    }
+    lastType = key;
+  }
+  return out;
+}
+function degToRad(degrees) {
+  return Math.PI * degrees / 180;
+}
+function rotate$1(x6, y5, angleRad) {
+  const X2 = x6 * Math.cos(angleRad) - y5 * Math.sin(angleRad);
+  const Y2 = x6 * Math.sin(angleRad) + y5 * Math.cos(angleRad);
+  return [X2, Y2];
+}
+function arcToCubicCurves(x1, y1, x22, y22, r1, r22, angle, largeArcFlag, sweepFlag, recursive) {
+  const angleRad = degToRad(angle);
+  let params = [];
+  let f1 = 0, f22 = 0, cx = 0, cy = 0;
+  if (recursive) {
+    [f1, f22, cx, cy] = recursive;
+  } else {
+    [x1, y1] = rotate$1(x1, y1, -angleRad);
+    [x22, y22] = rotate$1(x22, y22, -angleRad);
+    const x6 = (x1 - x22) / 2;
+    const y5 = (y1 - y22) / 2;
+    let h5 = x6 * x6 / (r1 * r1) + y5 * y5 / (r22 * r22);
+    if (h5 > 1) {
+      h5 = Math.sqrt(h5);
+      r1 = h5 * r1;
+      r22 = h5 * r22;
+    }
+    const sign3 = largeArcFlag === sweepFlag ? -1 : 1;
+    const r1Pow = r1 * r1;
+    const r2Pow = r22 * r22;
+    const left = r1Pow * r2Pow - r1Pow * y5 * y5 - r2Pow * x6 * x6;
+    const right = r1Pow * y5 * y5 + r2Pow * x6 * x6;
+    const k6 = sign3 * Math.sqrt(Math.abs(left / right));
+    cx = k6 * r1 * y5 / r22 + (x1 + x22) / 2;
+    cy = k6 * -r22 * x6 / r1 + (y1 + y22) / 2;
+    f1 = Math.asin(parseFloat(((y1 - cy) / r22).toFixed(9)));
+    f22 = Math.asin(parseFloat(((y22 - cy) / r22).toFixed(9)));
+    if (x1 < cx) {
+      f1 = Math.PI - f1;
+    }
+    if (x22 < cx) {
+      f22 = Math.PI - f22;
+    }
+    if (f1 < 0) {
+      f1 = Math.PI * 2 + f1;
+    }
+    if (f22 < 0) {
+      f22 = Math.PI * 2 + f22;
+    }
+    if (sweepFlag && f1 > f22) {
+      f1 = f1 - Math.PI * 2;
+    }
+    if (!sweepFlag && f22 > f1) {
+      f22 = f22 - Math.PI * 2;
+    }
+  }
+  let df = f22 - f1;
+  if (Math.abs(df) > Math.PI * 120 / 180) {
+    const f2old = f22;
+    const x2old = x22;
+    const y2old = y22;
+    if (sweepFlag && f22 > f1) {
+      f22 = f1 + Math.PI * 120 / 180 * 1;
+    } else {
+      f22 = f1 + Math.PI * 120 / 180 * -1;
+    }
+    x22 = cx + r1 * Math.cos(f22);
+    y22 = cy + r22 * Math.sin(f22);
+    params = arcToCubicCurves(x22, y22, x2old, y2old, r1, r22, angle, 0, sweepFlag, [f22, f2old, cx, cy]);
+  }
+  df = f22 - f1;
+  const c1 = Math.cos(f1);
+  const s1 = Math.sin(f1);
+  const c22 = Math.cos(f22);
+  const s22 = Math.sin(f22);
+  const t7 = Math.tan(df / 4);
+  const hx = 4 / 3 * r1 * t7;
+  const hy = 4 / 3 * r22 * t7;
+  const m1 = [x1, y1];
+  const m22 = [x1 + hx * s1, y1 - hy * c1];
+  const m32 = [x22 + hx * s22, y22 - hy * c22];
+  const m42 = [x22, y22];
+  m22[0] = 2 * m1[0] - m22[0];
+  m22[1] = 2 * m1[1] - m22[1];
+  if (recursive) {
+    return [m22, m32, m42].concat(params);
+  } else {
+    params = [m22, m32, m42].concat(params);
+    const curves = [];
+    for (let i7 = 0; i7 < params.length; i7 += 3) {
+      const r12 = rotate$1(params[i7][0], params[i7][1], angleRad);
+      const r23 = rotate$1(params[i7 + 1][0], params[i7 + 1][1], angleRad);
+      const r32 = rotate$1(params[i7 + 2][0], params[i7 + 2][1], angleRad);
+      curves.push([r12[0], r12[1], r23[0], r23[1], r32[0], r32[1]]);
+    }
+    return curves;
+  }
+}
+var helper = {
+  randOffset,
+  randOffsetWithRange,
+  ellipse,
+  doubleLineOps: doubleLineFillOps
+};
+function line(x1, y1, x22, y22, o5) {
+  return { type: "path", ops: _doubleLine(x1, y1, x22, y22, o5) };
+}
+function linearPath(points, close, o5) {
+  const len = (points || []).length;
+  if (len > 2) {
+    const ops = [];
+    for (let i7 = 0; i7 < len - 1; i7++) {
+      ops.push(..._doubleLine(points[i7][0], points[i7][1], points[i7 + 1][0], points[i7 + 1][1], o5));
+    }
+    if (close) {
+      ops.push(..._doubleLine(points[len - 1][0], points[len - 1][1], points[0][0], points[0][1], o5));
+    }
+    return { type: "path", ops };
+  } else if (len === 2) {
+    return line(points[0][0], points[0][1], points[1][0], points[1][1], o5);
+  }
+  return { type: "path", ops: [] };
+}
+function polygon(points, o5) {
+  return linearPath(points, true, o5);
+}
+function rectangle(x6, y5, width, height, o5) {
+  const points = [
+    [x6, y5],
+    [x6 + width, y5],
+    [x6 + width, y5 + height],
+    [x6, y5 + height]
+  ];
+  return polygon(points, o5);
+}
+function curve(points, o5) {
+  let o1 = _curveWithOffset(points, 1 * (1 + o5.roughness * 0.2), o5);
+  if (!o5.disableMultiStroke) {
+    const o22 = _curveWithOffset(points, 1.5 * (1 + o5.roughness * 0.22), cloneOptionsAlterSeed(o5));
+    o1 = o1.concat(o22);
+  }
+  return { type: "path", ops: o1 };
+}
+function ellipse(x6, y5, width, height, o5) {
+  const params = generateEllipseParams(width, height, o5);
+  return ellipseWithParams(x6, y5, o5, params).opset;
+}
+function generateEllipseParams(width, height, o5) {
+  const psq = Math.sqrt(Math.PI * 2 * Math.sqrt((Math.pow(width / 2, 2) + Math.pow(height / 2, 2)) / 2));
+  const stepCount = Math.ceil(Math.max(o5.curveStepCount, o5.curveStepCount / Math.sqrt(200) * psq));
+  const increment = Math.PI * 2 / stepCount;
+  let rx = Math.abs(width / 2);
+  let ry = Math.abs(height / 2);
+  const curveFitRandomness = 1 - o5.curveFitting;
+  rx += _offsetOpt(rx * curveFitRandomness, o5);
+  ry += _offsetOpt(ry * curveFitRandomness, o5);
+  return { increment, rx, ry };
+}
+function ellipseWithParams(x6, y5, o5, ellipseParams) {
+  const [ap1, cp1] = _computeEllipsePoints(ellipseParams.increment, x6, y5, ellipseParams.rx, ellipseParams.ry, 1, ellipseParams.increment * _offset(0.1, _offset(0.4, 1, o5), o5), o5);
+  let o1 = _curve(ap1, null, o5);
+  if (!o5.disableMultiStroke && o5.roughness !== 0) {
+    const [ap2] = _computeEllipsePoints(ellipseParams.increment, x6, y5, ellipseParams.rx, ellipseParams.ry, 1.5, 0, o5);
+    const o22 = _curve(ap2, null, o5);
+    o1 = o1.concat(o22);
+  }
+  return {
+    estimatedPoints: cp1,
+    opset: { type: "path", ops: o1 }
+  };
+}
+function arc(x6, y5, width, height, start, stop, closed, roughClosure, o5) {
+  const cx = x6;
+  const cy = y5;
+  let rx = Math.abs(width / 2);
+  let ry = Math.abs(height / 2);
+  rx += _offsetOpt(rx * 0.01, o5);
+  ry += _offsetOpt(ry * 0.01, o5);
+  let strt = start;
+  let stp = stop;
+  while (strt < 0) {
+    strt += Math.PI * 2;
+    stp += Math.PI * 2;
+  }
+  if (stp - strt > Math.PI * 2) {
+    strt = 0;
+    stp = Math.PI * 2;
+  }
+  const ellipseInc = Math.PI * 2 / o5.curveStepCount;
+  const arcInc = Math.min(ellipseInc / 2, (stp - strt) / 2);
+  const ops = _arc(arcInc, cx, cy, rx, ry, strt, stp, 1, o5);
+  if (!o5.disableMultiStroke) {
+    const o22 = _arc(arcInc, cx, cy, rx, ry, strt, stp, 1.5, o5);
+    ops.push(...o22);
+  }
+  if (closed) {
+    if (roughClosure) {
+      ops.push(..._doubleLine(cx, cy, cx + rx * Math.cos(strt), cy + ry * Math.sin(strt), o5), ..._doubleLine(cx, cy, cx + rx * Math.cos(stp), cy + ry * Math.sin(stp), o5));
+    } else {
+      ops.push({ op: "lineTo", data: [cx, cy] }, { op: "lineTo", data: [cx + rx * Math.cos(strt), cy + ry * Math.sin(strt)] });
+    }
+  }
+  return { type: "path", ops };
+}
+function svgPath(path, o5) {
+  const segments = normalize(absolutize(parsePath(path)));
+  const ops = [];
+  let first2 = [0, 0];
+  let current = [0, 0];
+  for (const { key, data } of segments) {
+    switch (key) {
+      case "M": {
+        const ro = 1 * (o5.maxRandomnessOffset || 0);
+        const pv = o5.preserveVertices;
+        ops.push({ op: "move", data: data.map((d5) => d5 + (pv ? 0 : _offsetOpt(ro, o5))) });
+        current = [data[0], data[1]];
+        first2 = [data[0], data[1]];
+        break;
+      }
+      case "L":
+        ops.push(..._doubleLine(current[0], current[1], data[0], data[1], o5));
+        current = [data[0], data[1]];
+        break;
+      case "C": {
+        const [x1, y1, x22, y22, x6, y5] = data;
+        ops.push(..._bezierTo(x1, y1, x22, y22, x6, y5, current, o5));
+        current = [x6, y5];
+        break;
+      }
+      case "Z":
+        ops.push(..._doubleLine(current[0], current[1], first2[0], first2[1], o5));
+        current = [first2[0], first2[1]];
+        break;
+    }
+  }
+  return { type: "path", ops };
+}
+function solidFillPolygon(polygonList, o5) {
+  const ops = [];
+  for (const points of polygonList) {
+    if (points.length) {
+      const offset = o5.maxRandomnessOffset || 0;
+      const len = points.length;
+      if (len > 2) {
+        ops.push({ op: "move", data: [points[0][0] + _offsetOpt(offset, o5), points[0][1] + _offsetOpt(offset, o5)] });
+        for (let i7 = 1; i7 < len; i7++) {
+          ops.push({ op: "lineTo", data: [points[i7][0] + _offsetOpt(offset, o5), points[i7][1] + _offsetOpt(offset, o5)] });
+        }
+      }
+    }
+  }
+  return { type: "fillPath", ops };
+}
+function patternFillPolygons(polygonList, o5) {
+  return getFiller(o5, helper).fillPolygons(polygonList, o5);
+}
+function patternFillArc(x6, y5, width, height, start, stop, o5) {
+  const cx = x6;
+  const cy = y5;
+  let rx = Math.abs(width / 2);
+  let ry = Math.abs(height / 2);
+  rx += _offsetOpt(rx * 0.01, o5);
+  ry += _offsetOpt(ry * 0.01, o5);
+  let strt = start;
+  let stp = stop;
+  while (strt < 0) {
+    strt += Math.PI * 2;
+    stp += Math.PI * 2;
+  }
+  if (stp - strt > Math.PI * 2) {
+    strt = 0;
+    stp = Math.PI * 2;
+  }
+  const increment = (stp - strt) / o5.curveStepCount;
+  const points = [];
+  for (let angle = strt; angle <= stp; angle = angle + increment) {
+    points.push([cx + rx * Math.cos(angle), cy + ry * Math.sin(angle)]);
+  }
+  points.push([cx + rx * Math.cos(stp), cy + ry * Math.sin(stp)]);
+  points.push([cx, cy]);
+  return patternFillPolygons([points], o5);
+}
+function randOffset(x6, o5) {
+  return _offsetOpt(x6, o5);
+}
+function randOffsetWithRange(min5, max8, o5) {
+  return _offset(min5, max8, o5);
+}
+function doubleLineFillOps(x1, y1, x22, y22, o5) {
+  return _doubleLine(x1, y1, x22, y22, o5, true);
+}
+function cloneOptionsAlterSeed(ops) {
+  const result = Object.assign({}, ops);
+  result.randomizer = void 0;
+  if (ops.seed) {
+    result.seed = ops.seed + 1;
+  }
+  return result;
+}
+function random(ops) {
+  if (!ops.randomizer) {
+    ops.randomizer = new Random(ops.seed || 0);
+  }
+  return ops.randomizer.next();
+}
+function _offset(min5, max8, ops, roughnessGain = 1) {
+  return ops.roughness * roughnessGain * (random(ops) * (max8 - min5) + min5);
+}
+function _offsetOpt(x6, ops, roughnessGain = 1) {
+  return _offset(-x6, x6, ops, roughnessGain);
+}
+function _doubleLine(x1, y1, x22, y22, o5, filling = false) {
+  const singleStroke = filling ? o5.disableMultiStrokeFill : o5.disableMultiStroke;
+  const o1 = _line(x1, y1, x22, y22, o5, true, false);
+  if (singleStroke) {
+    return o1;
+  }
+  const o22 = _line(x1, y1, x22, y22, o5, true, true);
+  return o1.concat(o22);
+}
+function _line(x1, y1, x22, y22, o5, move2, overlay) {
+  const lengthSq = Math.pow(x1 - x22, 2) + Math.pow(y1 - y22, 2);
+  const length2 = Math.sqrt(lengthSq);
+  let roughnessGain = 1;
+  if (length2 < 200) {
+    roughnessGain = 1;
+  } else if (length2 > 500) {
+    roughnessGain = 0.4;
+  } else {
+    roughnessGain = -16668e-7 * length2 + 1.233334;
+  }
+  let offset = o5.maxRandomnessOffset || 0;
+  if (offset * offset * 100 > lengthSq) {
+    offset = length2 / 10;
+  }
+  const halfOffset = offset / 2;
+  const divergePoint = 0.2 + random(o5) * 0.2;
+  let midDispX = o5.bowing * o5.maxRandomnessOffset * (y22 - y1) / 200;
+  let midDispY = o5.bowing * o5.maxRandomnessOffset * (x1 - x22) / 200;
+  midDispX = _offsetOpt(midDispX, o5, roughnessGain);
+  midDispY = _offsetOpt(midDispY, o5, roughnessGain);
+  const ops = [];
+  const randomHalf = () => _offsetOpt(halfOffset, o5, roughnessGain);
+  const randomFull = () => _offsetOpt(offset, o5, roughnessGain);
+  const preserveVertices = o5.preserveVertices;
+  if (move2) {
+    if (overlay) {
+      ops.push({
+        op: "move",
+        data: [
+          x1 + (preserveVertices ? 0 : randomHalf()),
+          y1 + (preserveVertices ? 0 : randomHalf())
+        ]
+      });
+    } else {
+      ops.push({
+        op: "move",
+        data: [
+          x1 + (preserveVertices ? 0 : _offsetOpt(offset, o5, roughnessGain)),
+          y1 + (preserveVertices ? 0 : _offsetOpt(offset, o5, roughnessGain))
+        ]
+      });
+    }
+  }
+  if (overlay) {
+    ops.push({
+      op: "bcurveTo",
+      data: [
+        midDispX + x1 + (x22 - x1) * divergePoint + randomHalf(),
+        midDispY + y1 + (y22 - y1) * divergePoint + randomHalf(),
+        midDispX + x1 + 2 * (x22 - x1) * divergePoint + randomHalf(),
+        midDispY + y1 + 2 * (y22 - y1) * divergePoint + randomHalf(),
+        x22 + (preserveVertices ? 0 : randomHalf()),
+        y22 + (preserveVertices ? 0 : randomHalf())
+      ]
+    });
+  } else {
+    ops.push({
+      op: "bcurveTo",
+      data: [
+        midDispX + x1 + (x22 - x1) * divergePoint + randomFull(),
+        midDispY + y1 + (y22 - y1) * divergePoint + randomFull(),
+        midDispX + x1 + 2 * (x22 - x1) * divergePoint + randomFull(),
+        midDispY + y1 + 2 * (y22 - y1) * divergePoint + randomFull(),
+        x22 + (preserveVertices ? 0 : randomFull()),
+        y22 + (preserveVertices ? 0 : randomFull())
+      ]
+    });
+  }
+  return ops;
+}
+function _curveWithOffset(points, offset, o5) {
+  const ps = [];
+  ps.push([
+    points[0][0] + _offsetOpt(offset, o5),
+    points[0][1] + _offsetOpt(offset, o5)
+  ]);
+  ps.push([
+    points[0][0] + _offsetOpt(offset, o5),
+    points[0][1] + _offsetOpt(offset, o5)
+  ]);
+  for (let i7 = 1; i7 < points.length; i7++) {
+    ps.push([
+      points[i7][0] + _offsetOpt(offset, o5),
+      points[i7][1] + _offsetOpt(offset, o5)
+    ]);
+    if (i7 === points.length - 1) {
+      ps.push([
+        points[i7][0] + _offsetOpt(offset, o5),
+        points[i7][1] + _offsetOpt(offset, o5)
+      ]);
+    }
+  }
+  return _curve(ps, null, o5);
+}
+function _curve(points, closePoint, o5) {
+  const len = points.length;
+  const ops = [];
+  if (len > 3) {
+    const b5 = [];
+    const s5 = 1 - o5.curveTightness;
+    ops.push({ op: "move", data: [points[1][0], points[1][1]] });
+    for (let i7 = 1; i7 + 2 < len; i7++) {
+      const cachedVertArray = points[i7];
+      b5[0] = [cachedVertArray[0], cachedVertArray[1]];
+      b5[1] = [cachedVertArray[0] + (s5 * points[i7 + 1][0] - s5 * points[i7 - 1][0]) / 6, cachedVertArray[1] + (s5 * points[i7 + 1][1] - s5 * points[i7 - 1][1]) / 6];
+      b5[2] = [points[i7 + 1][0] + (s5 * points[i7][0] - s5 * points[i7 + 2][0]) / 6, points[i7 + 1][1] + (s5 * points[i7][1] - s5 * points[i7 + 2][1]) / 6];
+      b5[3] = [points[i7 + 1][0], points[i7 + 1][1]];
+      ops.push({ op: "bcurveTo", data: [b5[1][0], b5[1][1], b5[2][0], b5[2][1], b5[3][0], b5[3][1]] });
+    }
+    if (closePoint && closePoint.length === 2) {
+      const ro = o5.maxRandomnessOffset;
+      ops.push({ op: "lineTo", data: [closePoint[0] + _offsetOpt(ro, o5), closePoint[1] + _offsetOpt(ro, o5)] });
+    }
+  } else if (len === 3) {
+    ops.push({ op: "move", data: [points[1][0], points[1][1]] });
+    ops.push({
+      op: "bcurveTo",
+      data: [
+        points[1][0],
+        points[1][1],
+        points[2][0],
+        points[2][1],
+        points[2][0],
+        points[2][1]
+      ]
+    });
+  } else if (len === 2) {
+    ops.push(..._doubleLine(points[0][0], points[0][1], points[1][0], points[1][1], o5));
+  }
+  return ops;
+}
+function _computeEllipsePoints(increment, cx, cy, rx, ry, offset, overlap, o5) {
+  const coreOnly = o5.roughness === 0;
+  const corePoints = [];
+  const allPoints = [];
+  if (coreOnly) {
+    increment = increment / 4;
+    allPoints.push([
+      cx + rx * Math.cos(-increment),
+      cy + ry * Math.sin(-increment)
+    ]);
+    for (let angle = 0; angle <= Math.PI * 2; angle = angle + increment) {
+      const p5 = [
+        cx + rx * Math.cos(angle),
+        cy + ry * Math.sin(angle)
+      ];
+      corePoints.push(p5);
+      allPoints.push(p5);
+    }
+    allPoints.push([
+      cx + rx * Math.cos(0),
+      cy + ry * Math.sin(0)
+    ]);
+    allPoints.push([
+      cx + rx * Math.cos(increment),
+      cy + ry * Math.sin(increment)
+    ]);
+  } else {
+    const radOffset = _offsetOpt(0.5, o5) - Math.PI / 2;
+    allPoints.push([
+      _offsetOpt(offset, o5) + cx + 0.9 * rx * Math.cos(radOffset - increment),
+      _offsetOpt(offset, o5) + cy + 0.9 * ry * Math.sin(radOffset - increment)
+    ]);
+    const endAngle = Math.PI * 2 + radOffset - 0.01;
+    for (let angle = radOffset; angle < endAngle; angle = angle + increment) {
+      const p5 = [
+        _offsetOpt(offset, o5) + cx + rx * Math.cos(angle),
+        _offsetOpt(offset, o5) + cy + ry * Math.sin(angle)
+      ];
+      corePoints.push(p5);
+      allPoints.push(p5);
+    }
+    allPoints.push([
+      _offsetOpt(offset, o5) + cx + rx * Math.cos(radOffset + Math.PI * 2 + overlap * 0.5),
+      _offsetOpt(offset, o5) + cy + ry * Math.sin(radOffset + Math.PI * 2 + overlap * 0.5)
+    ]);
+    allPoints.push([
+      _offsetOpt(offset, o5) + cx + 0.98 * rx * Math.cos(radOffset + overlap),
+      _offsetOpt(offset, o5) + cy + 0.98 * ry * Math.sin(radOffset + overlap)
+    ]);
+    allPoints.push([
+      _offsetOpt(offset, o5) + cx + 0.9 * rx * Math.cos(radOffset + overlap * 0.5),
+      _offsetOpt(offset, o5) + cy + 0.9 * ry * Math.sin(radOffset + overlap * 0.5)
+    ]);
+  }
+  return [allPoints, corePoints];
+}
+function _arc(increment, cx, cy, rx, ry, strt, stp, offset, o5) {
+  const radOffset = strt + _offsetOpt(0.1, o5);
+  const points = [];
+  points.push([
+    _offsetOpt(offset, o5) + cx + 0.9 * rx * Math.cos(radOffset - increment),
+    _offsetOpt(offset, o5) + cy + 0.9 * ry * Math.sin(radOffset - increment)
+  ]);
+  for (let angle = radOffset; angle <= stp; angle = angle + increment) {
+    points.push([
+      _offsetOpt(offset, o5) + cx + rx * Math.cos(angle),
+      _offsetOpt(offset, o5) + cy + ry * Math.sin(angle)
+    ]);
+  }
+  points.push([
+    cx + rx * Math.cos(stp),
+    cy + ry * Math.sin(stp)
+  ]);
+  points.push([
+    cx + rx * Math.cos(stp),
+    cy + ry * Math.sin(stp)
+  ]);
+  return _curve(points, null, o5);
+}
+function _bezierTo(x1, y1, x22, y22, x6, y5, current, o5) {
+  const ops = [];
+  const ros = [o5.maxRandomnessOffset || 1, (o5.maxRandomnessOffset || 1) + 0.3];
+  let f6 = [0, 0];
+  const iterations = o5.disableMultiStroke ? 1 : 2;
+  const preserveVertices = o5.preserveVertices;
+  for (let i7 = 0; i7 < iterations; i7++) {
+    if (i7 === 0) {
+      ops.push({ op: "move", data: [current[0], current[1]] });
+    } else {
+      ops.push({ op: "move", data: [current[0] + (preserveVertices ? 0 : _offsetOpt(ros[0], o5)), current[1] + (preserveVertices ? 0 : _offsetOpt(ros[0], o5))] });
+    }
+    f6 = preserveVertices ? [x6, y5] : [x6 + _offsetOpt(ros[i7], o5), y5 + _offsetOpt(ros[i7], o5)];
+    ops.push({
+      op: "bcurveTo",
+      data: [
+        x1 + _offsetOpt(ros[i7], o5),
+        y1 + _offsetOpt(ros[i7], o5),
+        x22 + _offsetOpt(ros[i7], o5),
+        y22 + _offsetOpt(ros[i7], o5),
+        f6[0],
+        f6[1]
+      ]
+    });
+  }
+  return ops;
+}
+function clone3(p5) {
+  return [...p5];
+}
+function curveToBezier(pointsIn, curveTightness = 0) {
+  const len = pointsIn.length;
+  if (len < 3) {
+    throw new Error("A curve must have at least three points.");
+  }
+  const out = [];
+  if (len === 3) {
+    out.push(clone3(pointsIn[0]), clone3(pointsIn[1]), clone3(pointsIn[2]), clone3(pointsIn[2]));
+  } else {
+    const points = [];
+    points.push(pointsIn[0], pointsIn[0]);
+    for (let i7 = 1; i7 < pointsIn.length; i7++) {
+      points.push(pointsIn[i7]);
+      if (i7 === pointsIn.length - 1) {
+        points.push(pointsIn[i7]);
+      }
+    }
+    const b5 = [];
+    const s5 = 1 - curveTightness;
+    out.push(clone3(points[0]));
+    for (let i7 = 1; i7 + 2 < points.length; i7++) {
+      const cachedVertArray = points[i7];
+      b5[0] = [cachedVertArray[0], cachedVertArray[1]];
+      b5[1] = [cachedVertArray[0] + (s5 * points[i7 + 1][0] - s5 * points[i7 - 1][0]) / 6, cachedVertArray[1] + (s5 * points[i7 + 1][1] - s5 * points[i7 - 1][1]) / 6];
+      b5[2] = [points[i7 + 1][0] + (s5 * points[i7][0] - s5 * points[i7 + 2][0]) / 6, points[i7 + 1][1] + (s5 * points[i7][1] - s5 * points[i7 + 2][1]) / 6];
+      b5[3] = [points[i7 + 1][0], points[i7 + 1][1]];
+      out.push(b5[1], b5[2], b5[3]);
+    }
+  }
+  return out;
+}
+function distance2(p1, p22) {
+  return Math.sqrt(distanceSq(p1, p22));
+}
+function distanceSq(p1, p22) {
+  return Math.pow(p1[0] - p22[0], 2) + Math.pow(p1[1] - p22[1], 2);
+}
+function distanceToSegmentSq(p5, v5, w6) {
+  const l22 = distanceSq(v5, w6);
+  if (l22 === 0) {
+    return distanceSq(p5, v5);
+  }
+  let t7 = ((p5[0] - v5[0]) * (w6[0] - v5[0]) + (p5[1] - v5[1]) * (w6[1] - v5[1])) / l22;
+  t7 = Math.max(0, Math.min(1, t7));
+  return distanceSq(p5, lerp(v5, w6, t7));
+}
+function lerp(a6, b5, t7) {
+  return [
+    a6[0] + (b5[0] - a6[0]) * t7,
+    a6[1] + (b5[1] - a6[1]) * t7
+  ];
+}
+function flatness(points, offset) {
+  const p1 = points[offset + 0];
+  const p22 = points[offset + 1];
+  const p32 = points[offset + 2];
+  const p42 = points[offset + 3];
+  let ux = 3 * p22[0] - 2 * p1[0] - p42[0];
+  ux *= ux;
+  let uy = 3 * p22[1] - 2 * p1[1] - p42[1];
+  uy *= uy;
+  let vx = 3 * p32[0] - 2 * p42[0] - p1[0];
+  vx *= vx;
+  let vy = 3 * p32[1] - 2 * p42[1] - p1[1];
+  vy *= vy;
+  if (ux < vx) {
+    ux = vx;
+  }
+  if (uy < vy) {
+    uy = vy;
+  }
+  return ux + uy;
+}
+function getPointsOnBezierCurveWithSplitting(points, offset, tolerance, newPoints) {
+  const outPoints = newPoints || [];
+  if (flatness(points, offset) < tolerance) {
+    const p0 = points[offset + 0];
+    if (outPoints.length) {
+      const d5 = distance2(outPoints[outPoints.length - 1], p0);
+      if (d5 > 1) {
+        outPoints.push(p0);
+      }
+    } else {
+      outPoints.push(p0);
+    }
+    outPoints.push(points[offset + 3]);
+  } else {
+    const t7 = 0.5;
+    const p1 = points[offset + 0];
+    const p22 = points[offset + 1];
+    const p32 = points[offset + 2];
+    const p42 = points[offset + 3];
+    const q1 = lerp(p1, p22, t7);
+    const q22 = lerp(p22, p32, t7);
+    const q32 = lerp(p32, p42, t7);
+    const r1 = lerp(q1, q22, t7);
+    const r22 = lerp(q22, q32, t7);
+    const red = lerp(r1, r22, t7);
+    getPointsOnBezierCurveWithSplitting([p1, q1, r1, red], 0, tolerance, outPoints);
+    getPointsOnBezierCurveWithSplitting([red, r22, q32, p42], 0, tolerance, outPoints);
+  }
+  return outPoints;
+}
+function simplify(points, distance4) {
+  return simplifyPoints(points, 0, points.length, distance4);
+}
+function simplifyPoints(points, start, end, epsilon, newPoints) {
+  const outPoints = newPoints || [];
+  const s5 = points[start];
+  const e8 = points[end - 1];
+  let maxDistSq = 0;
+  let maxNdx = 1;
+  for (let i7 = start + 1; i7 < end - 1; ++i7) {
+    const distSq = distanceToSegmentSq(points[i7], s5, e8);
+    if (distSq > maxDistSq) {
+      maxDistSq = distSq;
+      maxNdx = i7;
+    }
+  }
+  if (Math.sqrt(maxDistSq) > epsilon) {
+    simplifyPoints(points, start, maxNdx + 1, epsilon, outPoints);
+    simplifyPoints(points, maxNdx, end, epsilon, outPoints);
+  } else {
+    if (!outPoints.length) {
+      outPoints.push(s5);
+    }
+    outPoints.push(e8);
+  }
+  return outPoints;
+}
+function pointsOnBezierCurves(points, tolerance = 0.15, distance4) {
+  const newPoints = [];
+  const numSegments = (points.length - 1) / 3;
+  for (let i7 = 0; i7 < numSegments; i7++) {
+    const offset = i7 * 3;
+    getPointsOnBezierCurveWithSplitting(points, offset, tolerance, newPoints);
+  }
+  if (distance4 && distance4 > 0) {
+    return simplifyPoints(newPoints, 0, newPoints.length, distance4);
+  }
+  return newPoints;
+}
+function pointsOnPath(path, tolerance, distance4) {
+  const segments = parsePath(path);
+  const normalized = normalize(absolutize(segments));
+  const sets = [];
+  let currentPoints = [];
+  let start = [0, 0];
+  let pendingCurve = [];
+  const appendPendingCurve = () => {
+    if (pendingCurve.length >= 4) {
+      currentPoints.push(...pointsOnBezierCurves(pendingCurve, tolerance));
+    }
+    pendingCurve = [];
+  };
+  const appendPendingPoints = () => {
+    appendPendingCurve();
+    if (currentPoints.length) {
+      sets.push(currentPoints);
+      currentPoints = [];
+    }
+  };
+  for (const { key, data } of normalized) {
+    switch (key) {
+      case "M":
+        appendPendingPoints();
+        start = [data[0], data[1]];
+        currentPoints.push(start);
+        break;
+      case "L":
+        appendPendingCurve();
+        currentPoints.push([data[0], data[1]]);
+        break;
+      case "C":
+        if (!pendingCurve.length) {
+          const lastPoint = currentPoints.length ? currentPoints[currentPoints.length - 1] : start;
+          pendingCurve.push([lastPoint[0], lastPoint[1]]);
+        }
+        pendingCurve.push([data[0], data[1]]);
+        pendingCurve.push([data[2], data[3]]);
+        pendingCurve.push([data[4], data[5]]);
+        break;
+      case "Z":
+        appendPendingCurve();
+        currentPoints.push([start[0], start[1]]);
+        break;
+    }
+  }
+  appendPendingPoints();
+  if (!distance4) {
+    return sets;
+  }
+  const out = [];
+  for (const set4 of sets) {
+    const simplifiedSet = simplify(set4, distance4);
+    if (simplifiedSet.length) {
+      out.push(simplifiedSet);
+    }
+  }
+  return out;
+}
+var NOS = "none";
+var RoughGenerator = class {
+  constructor(config) {
+    this.defaultOptions = {
+      maxRandomnessOffset: 2,
+      roughness: 1,
+      bowing: 1,
+      stroke: "#000",
+      strokeWidth: 1,
+      curveTightness: 0,
+      curveFitting: 0.95,
+      curveStepCount: 9,
+      fillStyle: "hachure",
+      fillWeight: -1,
+      hachureAngle: -41,
+      hachureGap: -1,
+      dashOffset: -1,
+      dashGap: -1,
+      zigzagOffset: -1,
+      seed: 0,
+      disableMultiStroke: false,
+      disableMultiStrokeFill: false,
+      preserveVertices: false
+    };
+    this.config = config || {};
+    if (this.config.options) {
+      this.defaultOptions = this._o(this.config.options);
+    }
+  }
+  static newSeed() {
+    return randomSeed();
+  }
+  _o(options2) {
+    return options2 ? Object.assign({}, this.defaultOptions, options2) : this.defaultOptions;
+  }
+  _d(shape, sets, options2) {
+    return { shape, sets: sets || [], options: options2 || this.defaultOptions };
+  }
+  line(x1, y1, x22, y22, options2) {
+    const o5 = this._o(options2);
+    return this._d("line", [line(x1, y1, x22, y22, o5)], o5);
+  }
+  rectangle(x6, y5, width, height, options2) {
+    const o5 = this._o(options2);
+    const paths2 = [];
+    const outline = rectangle(x6, y5, width, height, o5);
+    if (o5.fill) {
+      const points = [[x6, y5], [x6 + width, y5], [x6 + width, y5 + height], [x6, y5 + height]];
+      if (o5.fillStyle === "solid") {
+        paths2.push(solidFillPolygon([points], o5));
+      } else {
+        paths2.push(patternFillPolygons([points], o5));
+      }
+    }
+    if (o5.stroke !== NOS) {
+      paths2.push(outline);
+    }
+    return this._d("rectangle", paths2, o5);
+  }
+  ellipse(x6, y5, width, height, options2) {
+    const o5 = this._o(options2);
+    const paths2 = [];
+    const ellipseParams = generateEllipseParams(width, height, o5);
+    const ellipseResponse = ellipseWithParams(x6, y5, o5, ellipseParams);
+    if (o5.fill) {
+      if (o5.fillStyle === "solid") {
+        const shape = ellipseWithParams(x6, y5, o5, ellipseParams).opset;
+        shape.type = "fillPath";
+        paths2.push(shape);
+      } else {
+        paths2.push(patternFillPolygons([ellipseResponse.estimatedPoints], o5));
+      }
+    }
+    if (o5.stroke !== NOS) {
+      paths2.push(ellipseResponse.opset);
+    }
+    return this._d("ellipse", paths2, o5);
+  }
+  circle(x6, y5, diameter, options2) {
+    const ret = this.ellipse(x6, y5, diameter, diameter, options2);
+    ret.shape = "circle";
+    return ret;
+  }
+  linearPath(points, options2) {
+    const o5 = this._o(options2);
+    return this._d("linearPath", [linearPath(points, false, o5)], o5);
+  }
+  arc(x6, y5, width, height, start, stop, closed = false, options2) {
+    const o5 = this._o(options2);
+    const paths2 = [];
+    const outline = arc(x6, y5, width, height, start, stop, closed, true, o5);
+    if (closed && o5.fill) {
+      if (o5.fillStyle === "solid") {
+        const fillOptions = Object.assign({}, o5);
+        fillOptions.disableMultiStroke = true;
+        const shape = arc(x6, y5, width, height, start, stop, true, false, fillOptions);
+        shape.type = "fillPath";
+        paths2.push(shape);
+      } else {
+        paths2.push(patternFillArc(x6, y5, width, height, start, stop, o5));
+      }
+    }
+    if (o5.stroke !== NOS) {
+      paths2.push(outline);
+    }
+    return this._d("arc", paths2, o5);
+  }
+  curve(points, options2) {
+    const o5 = this._o(options2);
+    const paths2 = [];
+    const outline = curve(points, o5);
+    if (o5.fill && o5.fill !== NOS && points.length >= 3) {
+      const bcurve = curveToBezier(points);
+      const polyPoints = pointsOnBezierCurves(bcurve, 10, (1 + o5.roughness) / 2);
+      if (o5.fillStyle === "solid") {
+        paths2.push(solidFillPolygon([polyPoints], o5));
+      } else {
+        paths2.push(patternFillPolygons([polyPoints], o5));
+      }
+    }
+    if (o5.stroke !== NOS) {
+      paths2.push(outline);
+    }
+    return this._d("curve", paths2, o5);
+  }
+  polygon(points, options2) {
+    const o5 = this._o(options2);
+    const paths2 = [];
+    const outline = linearPath(points, true, o5);
+    if (o5.fill) {
+      if (o5.fillStyle === "solid") {
+        paths2.push(solidFillPolygon([points], o5));
+      } else {
+        paths2.push(patternFillPolygons([points], o5));
+      }
+    }
+    if (o5.stroke !== NOS) {
+      paths2.push(outline);
+    }
+    return this._d("polygon", paths2, o5);
+  }
+  path(d5, options2) {
+    const o5 = this._o(options2);
+    const paths2 = [];
+    if (!d5) {
+      return this._d("path", paths2, o5);
+    }
+    d5 = (d5 || "").replace(/\n/g, " ").replace(/(-\s)/g, "-").replace("/(ss)/g", " ");
+    const hasFill = o5.fill && o5.fill !== "transparent" && o5.fill !== NOS;
+    const hasStroke = o5.stroke !== NOS;
+    const simplified = !!(o5.simplification && o5.simplification < 1);
+    const distance4 = simplified ? 4 - 4 * o5.simplification : (1 + o5.roughness) / 2;
+    const sets = pointsOnPath(d5, 1, distance4);
+    if (hasFill) {
+      if (o5.fillStyle === "solid") {
+        paths2.push(solidFillPolygon(sets, o5));
+      } else {
+        paths2.push(patternFillPolygons(sets, o5));
+      }
+    }
+    if (hasStroke) {
+      if (simplified) {
+        sets.forEach((set4) => {
+          paths2.push(linearPath(set4, false, o5));
+        });
+      } else {
+        paths2.push(svgPath(d5, o5));
+      }
+    }
+    return this._d("path", paths2, o5);
+  }
+  opsToPath(drawing, fixedDecimals) {
+    let path = "";
+    for (const item of drawing.ops) {
+      const data = typeof fixedDecimals === "number" && fixedDecimals >= 0 ? item.data.map((d5) => +d5.toFixed(fixedDecimals)) : item.data;
+      switch (item.op) {
+        case "move":
+          path += `M${data[0]} ${data[1]} `;
+          break;
+        case "bcurveTo":
+          path += `C${data[0]} ${data[1]}, ${data[2]} ${data[3]}, ${data[4]} ${data[5]} `;
+          break;
+        case "lineTo":
+          path += `L${data[0]} ${data[1]} `;
+          break;
+      }
+    }
+    return path.trim();
+  }
+  toPaths(drawable) {
+    const sets = drawable.sets || [];
+    const o5 = drawable.options || this.defaultOptions;
+    const paths2 = [];
+    for (const drawing of sets) {
+      let path = null;
+      switch (drawing.type) {
+        case "path":
+          path = {
+            d: this.opsToPath(drawing),
+            stroke: o5.stroke,
+            strokeWidth: o5.strokeWidth,
+            fill: NOS
+          };
+          break;
+        case "fillPath":
+          path = {
+            d: this.opsToPath(drawing),
+            stroke: NOS,
+            strokeWidth: 0,
+            fill: o5.fill || NOS
+          };
+          break;
+        case "fillSketch":
+          path = this.fillSketch(drawing, o5);
+          break;
+      }
+      if (path) {
+        paths2.push(path);
+      }
+    }
+    return paths2;
+  }
+  fillSketch(drawing, o5) {
+    let fweight = o5.fillWeight;
+    if (fweight < 0) {
+      fweight = o5.strokeWidth / 2;
+    }
+    return {
+      d: this.opsToPath(drawing),
+      stroke: o5.fill || NOS,
+      strokeWidth: fweight,
+      fill: NOS
+    };
+  }
+};
+var RoughCanvas = class {
+  constructor(canvas, config) {
+    this.canvas = canvas;
+    this.ctx = this.canvas.getContext("2d");
+    this.gen = new RoughGenerator(config);
+  }
+  draw(drawable) {
+    const sets = drawable.sets || [];
+    const o5 = drawable.options || this.getDefaultOptions();
+    const ctx = this.ctx;
+    const precision = drawable.options.fixedDecimalPlaceDigits;
+    for (const drawing of sets) {
+      switch (drawing.type) {
+        case "path":
+          ctx.save();
+          ctx.strokeStyle = o5.stroke === "none" ? "transparent" : o5.stroke;
+          ctx.lineWidth = o5.strokeWidth;
+          if (o5.strokeLineDash) {
+            ctx.setLineDash(o5.strokeLineDash);
+          }
+          if (o5.strokeLineDashOffset) {
+            ctx.lineDashOffset = o5.strokeLineDashOffset;
+          }
+          this._drawToContext(ctx, drawing, precision);
+          ctx.restore();
+          break;
+        case "fillPath": {
+          ctx.save();
+          ctx.fillStyle = o5.fill || "";
+          const fillRule = drawable.shape === "curve" || drawable.shape === "polygon" || drawable.shape === "path" ? "evenodd" : "nonzero";
+          this._drawToContext(ctx, drawing, precision, fillRule);
+          ctx.restore();
+          break;
+        }
+        case "fillSketch":
+          this.fillSketch(ctx, drawing, o5);
+          break;
+      }
+    }
+  }
+  fillSketch(ctx, drawing, o5) {
+    let fweight = o5.fillWeight;
+    if (fweight < 0) {
+      fweight = o5.strokeWidth / 2;
+    }
+    ctx.save();
+    if (o5.fillLineDash) {
+      ctx.setLineDash(o5.fillLineDash);
+    }
+    if (o5.fillLineDashOffset) {
+      ctx.lineDashOffset = o5.fillLineDashOffset;
+    }
+    ctx.strokeStyle = o5.fill || "";
+    ctx.lineWidth = fweight;
+    this._drawToContext(ctx, drawing, o5.fixedDecimalPlaceDigits);
+    ctx.restore();
+  }
+  _drawToContext(ctx, drawing, fixedDecimals, rule = "nonzero") {
+    ctx.beginPath();
+    for (const item of drawing.ops) {
+      const data = typeof fixedDecimals === "number" && fixedDecimals >= 0 ? item.data.map((d5) => +d5.toFixed(fixedDecimals)) : item.data;
+      switch (item.op) {
+        case "move":
+          ctx.moveTo(data[0], data[1]);
+          break;
+        case "bcurveTo":
+          ctx.bezierCurveTo(data[0], data[1], data[2], data[3], data[4], data[5]);
+          break;
+        case "lineTo":
+          ctx.lineTo(data[0], data[1]);
+          break;
+      }
+    }
+    if (drawing.type === "fillPath") {
+      ctx.fill(rule);
+    } else {
+      ctx.stroke();
+    }
+  }
+  get generator() {
+    return this.gen;
+  }
+  getDefaultOptions() {
+    return this.gen.defaultOptions;
+  }
+  line(x1, y1, x22, y22, options2) {
+    const d5 = this.gen.line(x1, y1, x22, y22, options2);
+    this.draw(d5);
+    return d5;
+  }
+  rectangle(x6, y5, width, height, options2) {
+    const d5 = this.gen.rectangle(x6, y5, width, height, options2);
+    this.draw(d5);
+    return d5;
+  }
+  ellipse(x6, y5, width, height, options2) {
+    const d5 = this.gen.ellipse(x6, y5, width, height, options2);
+    this.draw(d5);
+    return d5;
+  }
+  circle(x6, y5, diameter, options2) {
+    const d5 = this.gen.circle(x6, y5, diameter, options2);
+    this.draw(d5);
+    return d5;
+  }
+  linearPath(points, options2) {
+    const d5 = this.gen.linearPath(points, options2);
+    this.draw(d5);
+    return d5;
+  }
+  polygon(points, options2) {
+    const d5 = this.gen.polygon(points, options2);
+    this.draw(d5);
+    return d5;
+  }
+  arc(x6, y5, width, height, start, stop, closed = false, options2) {
+    const d5 = this.gen.arc(x6, y5, width, height, start, stop, closed, options2);
+    this.draw(d5);
+    return d5;
+  }
+  curve(points, options2) {
+    const d5 = this.gen.curve(points, options2);
+    this.draw(d5);
+    return d5;
+  }
+  path(d5, options2) {
+    const drawing = this.gen.path(d5, options2);
+    this.draw(drawing);
+    return drawing;
+  }
+};
+var SVGNS = "http://www.w3.org/2000/svg";
+var RoughSVG = class {
+  constructor(svg, config) {
+    this.svg = svg;
+    this.gen = new RoughGenerator(config);
+  }
+  draw(drawable) {
+    const sets = drawable.sets || [];
+    const o5 = drawable.options || this.getDefaultOptions();
+    const doc = this.svg.ownerDocument || window.document;
+    const g6 = doc.createElementNS(SVGNS, "g");
+    const precision = drawable.options.fixedDecimalPlaceDigits;
+    for (const drawing of sets) {
+      let path = null;
+      switch (drawing.type) {
+        case "path": {
+          path = doc.createElementNS(SVGNS, "path");
+          path.setAttribute("d", this.opsToPath(drawing, precision));
+          path.setAttribute("stroke", o5.stroke);
+          path.setAttribute("stroke-width", o5.strokeWidth + "");
+          path.setAttribute("fill", "none");
+          if (o5.strokeLineDash) {
+            path.setAttribute("stroke-dasharray", o5.strokeLineDash.join(" ").trim());
+          }
+          if (o5.strokeLineDashOffset) {
+            path.setAttribute("stroke-dashoffset", `${o5.strokeLineDashOffset}`);
+          }
+          break;
+        }
+        case "fillPath": {
+          path = doc.createElementNS(SVGNS, "path");
+          path.setAttribute("d", this.opsToPath(drawing, precision));
+          path.setAttribute("stroke", "none");
+          path.setAttribute("stroke-width", "0");
+          path.setAttribute("fill", o5.fill || "");
+          if (drawable.shape === "curve" || drawable.shape === "polygon") {
+            path.setAttribute("fill-rule", "evenodd");
+          }
+          break;
+        }
+        case "fillSketch": {
+          path = this.fillSketch(doc, drawing, o5);
+          break;
+        }
+      }
+      if (path) {
+        g6.appendChild(path);
+      }
+    }
+    return g6;
+  }
+  fillSketch(doc, drawing, o5) {
+    let fweight = o5.fillWeight;
+    if (fweight < 0) {
+      fweight = o5.strokeWidth / 2;
+    }
+    const path = doc.createElementNS(SVGNS, "path");
+    path.setAttribute("d", this.opsToPath(drawing, o5.fixedDecimalPlaceDigits));
+    path.setAttribute("stroke", o5.fill || "");
+    path.setAttribute("stroke-width", fweight + "");
+    path.setAttribute("fill", "none");
+    if (o5.fillLineDash) {
+      path.setAttribute("stroke-dasharray", o5.fillLineDash.join(" ").trim());
+    }
+    if (o5.fillLineDashOffset) {
+      path.setAttribute("stroke-dashoffset", `${o5.fillLineDashOffset}`);
+    }
+    return path;
+  }
+  get generator() {
+    return this.gen;
+  }
+  getDefaultOptions() {
+    return this.gen.defaultOptions;
+  }
+  opsToPath(drawing, fixedDecimalPlaceDigits) {
+    return this.gen.opsToPath(drawing, fixedDecimalPlaceDigits);
+  }
+  line(x1, y1, x22, y22, options2) {
+    const d5 = this.gen.line(x1, y1, x22, y22, options2);
+    return this.draw(d5);
+  }
+  rectangle(x6, y5, width, height, options2) {
+    const d5 = this.gen.rectangle(x6, y5, width, height, options2);
+    return this.draw(d5);
+  }
+  ellipse(x6, y5, width, height, options2) {
+    const d5 = this.gen.ellipse(x6, y5, width, height, options2);
+    return this.draw(d5);
+  }
+  circle(x6, y5, diameter, options2) {
+    const d5 = this.gen.circle(x6, y5, diameter, options2);
+    return this.draw(d5);
+  }
+  linearPath(points, options2) {
+    const d5 = this.gen.linearPath(points, options2);
+    return this.draw(d5);
+  }
+  polygon(points, options2) {
+    const d5 = this.gen.polygon(points, options2);
+    return this.draw(d5);
+  }
+  arc(x6, y5, width, height, start, stop, closed = false, options2) {
+    const d5 = this.gen.arc(x6, y5, width, height, start, stop, closed, options2);
+    return this.draw(d5);
+  }
+  curve(points, options2) {
+    const d5 = this.gen.curve(points, options2);
+    return this.draw(d5);
+  }
+  path(d5, options2) {
+    const drawing = this.gen.path(d5, options2);
+    return this.draw(drawing);
+  }
+};
+var rough = {
+  canvas(canvas, config) {
+    return new RoughCanvas(canvas, config);
+  },
+  svg(svg, config) {
+    return new RoughSVG(svg, config);
+  },
+  generator(config) {
+    return new RoughGenerator(config);
+  },
+  newSeed() {
+    return RoughGenerator.newSeed();
+  }
+};
+var DEFAULT_RENDER_PRIORITY3 = 1e3;
+function BaseRenderer2(eventBus, renderPriority) {
+  var self2 = this;
+  renderPriority = renderPriority || DEFAULT_RENDER_PRIORITY3;
+  eventBus.on(["render.shape", "render.connection"], renderPriority, function(evt, context) {
+    var type = evt.type, element = context.element, visuals = context.gfx, attrs = context.attrs;
+    if (self2.canRender(element)) {
+      if (type === "render.shape") {
+        return self2.drawShape(visuals, element, attrs);
+      } else {
+        return self2.drawConnection(visuals, element, attrs);
+      }
+    }
+  });
+  eventBus.on(["render.getShapePath", "render.getConnectionPath"], renderPriority, function(evt, element) {
+    if (self2.canRender(element)) {
+      if (evt.type === "render.getShapePath") {
+        return self2.getShapePath(element);
+      } else {
+        return self2.getConnectionPath(element);
+      }
+    }
+  });
+}
+BaseRenderer2.prototype.canRender = function(element) {
+};
+BaseRenderer2.prototype.drawShape = function(visuals, shape) {
+};
+BaseRenderer2.prototype.drawConnection = function(visuals, connection) {
+};
+BaseRenderer2.prototype.getShapePath = function(shape) {
+};
+BaseRenderer2.prototype.getConnectionPath = function(connection) {
+};
+function is3(element, type) {
+  var bo = getBusinessObject2(element);
+  return bo && typeof bo.$instanceOf === "function" && bo.$instanceOf(type);
+}
+function getBusinessObject2(element) {
+  return element && element.businessObject || element;
+}
+function getDi2(element) {
+  return element && element.di;
+}
+function getLabelAttr2(semantic) {
+  if (is3(semantic, "bpmn:FlowElement") || is3(semantic, "bpmn:Participant") || is3(semantic, "bpmn:Lane") || is3(semantic, "bpmn:SequenceFlow") || is3(semantic, "bpmn:MessageFlow") || is3(semantic, "bpmn:DataInput") || is3(semantic, "bpmn:DataOutput")) {
+    return "name";
+  }
+  if (is3(semantic, "bpmn:TextAnnotation")) {
+    return "text";
+  }
+  if (is3(semantic, "bpmn:Group")) {
+    return "categoryValueRef";
+  }
+}
+function getCategoryValue2(semantic) {
+  var categoryValueRef = semantic["categoryValueRef"];
+  if (!categoryValueRef) {
+    return "";
+  }
+  return categoryValueRef.value || "";
+}
+function getLabel2(element) {
+  var semantic = element.businessObject, attr3 = getLabelAttr2(semantic);
+  if (attr3) {
+    if (attr3 === "categoryValueRef") {
+      return getCategoryValue2(semantic);
+    }
+    return semantic[attr3] || "";
+  }
+}
+function isExpanded2(element, di) {
+  if (is3(element, "bpmn:CallActivity")) {
+    return false;
+  }
+  if (is3(element, "bpmn:SubProcess")) {
+    di = di || getDi2(element);
+    if (di && is3(di, "bpmndi:BPMNPlane")) {
+      return true;
+    }
+    return di && !!di.isExpanded;
+  }
+  if (is3(element, "bpmn:Participant")) {
+    return !!getBusinessObject2(element).processRef;
+  }
+  return true;
+}
+function isEventSubProcess2(element) {
+  return element && !!getBusinessObject2(element).triggeredByEvent;
+}
+function componentsToPath2(elements) {
+  return elements.flat().join(",").replace(/,?([A-z]),?/g, "$1");
+}
+var black2 = "hsl(225, 10%, 15%)";
+function isTypedEvent2(event3, eventDefinitionType, filter2) {
+  function matches4(definition, filter3) {
+    return every(filter3, function(val, key) {
+      return definition[key] == val;
+    });
+  }
+  return some(event3.eventDefinitions, function(definition) {
+    return definition.$type === eventDefinitionType && matches4(event3, filter2);
+  });
+}
+function isThrowEvent2(event3) {
+  return event3.$type === "bpmn:IntermediateThrowEvent" || event3.$type === "bpmn:EndEvent";
+}
+function isCollection2(element) {
+  var dataObject = element.dataObjectRef;
+  return element.isCollection || dataObject && dataObject.isCollection;
+}
+function getSemantic(element) {
+  return element.businessObject;
+}
+function getFillColor2(element, defaultColor) {
+  var di = getDi2(element);
+  return di.get("color:background-color") || di.get("bioc:fill") || defaultColor || "white";
+}
+function getStrokeColor2(element, defaultColor) {
+  var di = getDi2(element);
+  return di.get("color:border-color") || di.get("bioc:stroke") || defaultColor || black2;
+}
+function getCirclePath2(shape) {
+  var cx = shape.x + shape.width / 2, cy = shape.y + shape.height / 2, radius = shape.width / 2;
+  var circlePath2 = [
+    ["M", cx, cy],
+    ["m", 0, -radius],
+    ["a", radius, radius, 0, 1, 1, 0, 2 * radius],
+    ["a", radius, radius, 0, 1, 1, 0, -2 * radius],
+    ["z"]
+  ];
+  return componentsToPath2(circlePath2);
+}
+function getRoundRectPath2(shape, borderRadius) {
+  var x6 = shape.x, y5 = shape.y, width = shape.width, height = shape.height;
+  var roundRectPath = [
+    ["M", x6 + borderRadius, y5],
+    ["l", width - borderRadius * 2, 0],
+    ["a", borderRadius, borderRadius, 0, 0, 1, borderRadius, borderRadius],
+    ["l", 0, height - borderRadius * 2],
+    ["a", borderRadius, borderRadius, 0, 0, 1, -borderRadius, borderRadius],
+    ["l", borderRadius * 2 - width, 0],
+    ["a", borderRadius, borderRadius, 0, 0, 1, -borderRadius, -borderRadius],
+    ["l", 0, borderRadius * 2 - height],
+    ["a", borderRadius, borderRadius, 0, 0, 1, borderRadius, -borderRadius],
+    ["z"]
+  ];
+  return componentsToPath2(roundRectPath);
+}
+function getDiamondPath2(shape) {
+  var width = shape.width, height = shape.height, x6 = shape.x, y5 = shape.y, halfWidth = width / 2, halfHeight = height / 2;
+  var diamondPath = [
+    ["M", x6 + halfWidth, y5],
+    ["l", halfWidth, halfHeight],
+    ["l", -halfWidth, halfHeight],
+    ["l", -halfWidth, -halfHeight],
+    ["z"]
+  ];
+  return componentsToPath2(diamondPath);
+}
+function getRectPath2(shape) {
+  var x6 = shape.x, y5 = shape.y, width = shape.width, height = shape.height;
+  var rectPath = [
+    ["M", x6, y5],
+    ["l", width, 0],
+    ["l", 0, height],
+    ["l", -width, 0],
+    ["z"]
+  ];
+  return componentsToPath2(rectPath);
+}
+function transform3(gfx, x6, y5, angle, amount) {
+  var translate4 = createTransform();
+  translate4.setTranslate(x6, y5);
+  var rotate3 = createTransform();
+  rotate3.setRotate(angle || 0, 0, 0);
+  var scale = createTransform();
+  scale.setScale(amount || 1, amount || 1);
+  transform(gfx, [translate4, rotate3, scale]);
+}
+function translate3(gfx, x6, y5) {
+  var translate4 = createTransform();
+  translate4.setTranslate(x6, y5);
+  transform(gfx, translate4);
+}
+function rotate2(gfx, angle) {
+  var rotate3 = createTransform();
+  rotate3.setRotate(angle, 0, 0);
+  transform(gfx, rotate3);
+}
+function createCommonjsModule2(fn2, module2) {
+  return module2 = { exports: {} }, fn2(module2, module2.exports), module2.exports;
+}
+var hat_12 = createCommonjsModule2(function(module2) {
+  var hat = module2.exports = function(bits, base) {
+    if (!base) base = 16;
+    if (bits === void 0) bits = 128;
+    if (bits <= 0) return "0";
+    var digits = Math.log(Math.pow(2, bits)) / Math.log(base);
+    for (var i7 = 2; digits === Infinity; i7 *= 2) {
+      digits = Math.log(Math.pow(2, bits / i7)) / Math.log(base) * i7;
+    }
+    var rem = digits - Math.floor(digits);
+    var res = "";
+    for (var i7 = 0; i7 < Math.floor(digits); i7++) {
+      var x6 = Math.floor(Math.random() * base).toString(base);
+      res = x6 + res;
+    }
+    if (rem) {
+      var b5 = Math.pow(base, rem);
+      var x6 = Math.floor(Math.random() * b5).toString(base);
+      res = x6 + res;
+    }
+    var parsed = parseInt(res, base);
+    if (parsed !== Infinity && parsed >= Math.pow(2, bits)) {
+      return hat(bits, base);
+    } else return res;
+  };
+  hat.rack = function(bits, base, expandBy) {
+    var fn2 = function(data) {
+      var iters = 0;
+      do {
+        if (iters++ > 10) {
+          if (expandBy) bits += expandBy;
+          else throw new Error("too many ID collisions, use more bits");
+        }
+        var id = hat(bits, base);
+      } while (Object.hasOwnProperty.call(hats, id));
+      hats[id] = data;
+      return id;
+    };
+    var hats = fn2.hats = {};
+    fn2.get = function(id) {
+      return fn2.hats[id];
+    };
+    fn2.set = function(id, value) {
+      fn2.hats[id] = value;
+      return fn2;
+    };
+    fn2.bits = bits || 128;
+    fn2.base = base || 16;
+    return fn2;
+  };
+});
+function Ids2(seed) {
+  if (!(this instanceof Ids2)) {
+    return new Ids2(seed);
+  }
+  seed = seed || [128, 36, 1];
+  this._seed = seed.length ? hat_12.rack(seed[0], seed[1], seed[2]) : seed;
+}
+Ids2.prototype.next = function(element) {
+  return this._seed(element || true);
+};
+Ids2.prototype.nextPrefixed = function(prefix4, element) {
+  var id;
+  do {
+    id = prefix4 + this.next(true);
+  } while (this.assigned(id));
+  this.claim(id, element);
+  return id;
+};
+Ids2.prototype.claim = function(id, element) {
+  this._seed.set(id, element || true);
+};
+Ids2.prototype.assigned = function(id) {
+  return this._seed.get(id) || false;
+};
+Ids2.prototype.unclaim = function(id) {
+  delete this._seed.hats[id];
+};
+Ids2.prototype.clear = function() {
+  var hats = this._seed.hats, id;
+  for (id in hats) {
+    this.unclaim(id);
+  }
+};
+var RENDERER_IDS = new Ids2();
+var TASK_BORDER_RADIUS2 = 10;
+var INNER_OUTER_DIST2 = 7;
+var DEFAULT_FILL_OPACITY = 0.95;
+var HIGH_FILL_OPACITY = 0.35;
+function BpmnRenderer2(config, eventBus, styles, pathMap, canvas, textRenderer, priority) {
+  BaseRenderer2.call(this, eventBus, priority);
+  var defaultFillColor = config.bpmnRenderer && config.bpmnRenderer.defaultFillColor, defaultStrokeColor = config.bpmnRenderer && config.bpmnRenderer.defaultStrokeColor;
+  var rc = rough.svg(canvas._svg);
+  var rendererId = RENDERER_IDS.next();
+  var markers = {};
+  function shapeStyle(attrs) {
+    return styles.computeStyle(attrs, {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      stroke: black2,
+      strokeWidth: 2,
+      fill: "white"
+    });
+  }
+  function lineStyle(attrs) {
+    return styles.computeStyle(attrs, ["no-fill"], {
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      stroke: black2,
+      strokeWidth: 2
+    });
+  }
+  function addMarker(id, options2) {
+    var {
+      ref = { x: 0, y: 0 },
+      scale = 1,
+      element
+    } = options2;
+    var marker2 = create("marker", {
+      id,
+      viewBox: "0 0 20 20",
+      refX: ref.x,
+      refY: ref.y,
+      markerWidth: 20 * scale,
+      markerHeight: 20 * scale,
+      orient: "auto"
+    });
+    append(marker2, element);
+    var defs = query("defs", canvas._svg);
+    if (!defs) {
+      defs = create("defs");
+      append(canvas._svg, defs);
+    }
+    append(defs, marker2);
+    markers[id] = marker2;
+  }
+  function colorEscape(str) {
+    return str.replace(/[^0-9a-zA-z]+/g, "_");
+  }
+  function marker(type, fill, stroke) {
+    var id = type + "-" + colorEscape(fill) + "-" + colorEscape(stroke) + "-" + rendererId;
+    if (!markers[id]) {
+      createMarker(id, type, fill, stroke);
+    }
+    return "url(#" + id + ")";
+  }
+  function createMarker(id, type, fill, stroke) {
+    if (type === "sequenceflow-end") {
+      var sequenceflowEnd = create("path", {
+        d: "M 1 5 L 11 10 L 1 15 Z",
+        ...shapeStyle({
+          fill: stroke,
+          stroke,
+          strokeWidth: 1
+        })
+      });
+      addMarker(id, {
+        element: sequenceflowEnd,
+        ref: { x: 11, y: 10 },
+        scale: 0.5
+      });
+    }
+    if (type === "messageflow-start") {
+      var messageflowStart = create("circle", {
+        cx: 6,
+        cy: 6,
+        r: 3.5,
+        ...shapeStyle({
+          fill,
+          stroke,
+          strokeWidth: 1,
+          // fix for safari / chrome / firefox bug not correctly
+          // resetting stroke dash array
+          strokeDasharray: [1e4, 1]
+        })
+      });
+      addMarker(id, {
+        element: messageflowStart,
+        ref: { x: 6, y: 6 }
+      });
+    }
+    if (type === "messageflow-end") {
+      var messageflowEnd = create("path", {
+        d: "m 1 5 l 0 -3 l 7 3 l -7 3 z",
+        ...shapeStyle({
+          fill,
+          stroke,
+          strokeWidth: 1,
+          // fix for safari / chrome / firefox bug not correctly
+          // resetting stroke dash array
+          strokeDasharray: [1e4, 1]
+        })
+      });
+      addMarker(id, {
+        element: messageflowEnd,
+        ref: { x: 8.5, y: 5 }
+      });
+    }
+    if (type === "association-start") {
+      var associationStart = create("path", {
+        d: "M 11 5 L 1 10 L 11 15",
+        ...lineStyle({
+          stroke,
+          strokeWidth: 1.5,
+          // fix for safari / chrome / firefox bug not correctly
+          // resetting stroke dash array
+          strokeDasharray: [1e4, 1]
+        })
+      });
+      addMarker(id, {
+        element: associationStart,
+        ref: { x: 1, y: 10 },
+        scale: 0.5
+      });
+    }
+    if (type === "association-end") {
+      var associationEnd = create("path", {
+        d: "M 1 5 L 11 10 L 1 15",
+        ...lineStyle({
+          stroke,
+          strokeWidth: 1.5,
+          // fix for safari / chrome / firefox bug not correctly
+          // resetting stroke dash array
+          strokeDasharray: [1e4, 1]
+        })
+      });
+      addMarker(id, {
+        element: associationEnd,
+        ref: { x: 11, y: 10 },
+        scale: 0.5
+      });
+    }
+    if (type === "conditional-flow-marker") {
+      var conditionalFlowMarker = create("path", {
+        d: "M 0 10 L 8 6 L 16 10 L 8 14 Z",
+        ...shapeStyle({
+          fill,
+          stroke
+        })
+      });
+      addMarker(id, {
+        element: conditionalFlowMarker,
+        ref: { x: -1, y: 10 },
+        scale: 0.5
+      });
+    }
+    if (type === "conditional-default-flow-marker") {
+      var defaultFlowMarker = create("path", {
+        d: "M 6 4 L 10 16",
+        ...shapeStyle({
+          stroke
+        })
+      });
+      addMarker(id, {
+        element: defaultFlowMarker,
+        ref: { x: 0, y: 10 },
+        scale: 0.5
+      });
+    }
+  }
+  function drawCircle(parentGfx, width, height, offset, attrs) {
+    if (isObject(offset)) {
+      attrs = offset;
+      offset = 0;
+    }
+    offset = offset || 0;
+    attrs = shapeStyle({
+      stroke: "black",
+      strokeWidth: 2,
+      fill: "white",
+      fillStyle: "solid",
+      roughness: 0.5,
+      ...attrs
+    });
+    if (attrs.fill === "none") {
+      delete attrs.fillOpacity;
+    }
+    var cx = width / 2, cy = height / 2;
+    var circle = rc.circle(cx, cy, Math.round((width + height) / 2 - offset), attrs);
+    append(parentGfx, circle);
+    return circle;
+  }
+  function drawRect(parentGfx, width, height, r7, offset, attrs) {
+    if (isObject(offset)) {
+      attrs = offset;
+      offset = 0;
+    }
+    offset = offset || 0;
+    attrs = shapeStyle({
+      stroke: "black",
+      strokeWidth: 2,
+      fill: "white",
+      fillStyle: "solid",
+      ...attrs
+    });
+    var rect = rc.rectangle(offset, offset, width - offset * 2, height - offset * 2, attrs);
+    append(parentGfx, rect);
+    return rect;
+  }
+  function drawDiamond(parentGfx, width, height, attrs) {
+    var x_2 = width / 2;
+    var y_2 = height / 2;
+    var points = [{ x: x_2, y: 0 }, { x: width, y: y_2 }, { x: x_2, y: height }, { x: 0, y: y_2 }];
+    var pointsArray = points.map(function(point) {
+      return [point.x, point.y];
+    });
+    attrs = shapeStyle({
+      stroke: "black",
+      strokeWidth: 2,
+      fill: "white",
+      ...attrs
+    });
+    var polygon2 = rc.polygon(pointsArray, attrs);
+    append(parentGfx, polygon2);
+    return polygon2;
+  }
+  function drawLine(parentGfx, waypoints, attrs, radius) {
+    attrs = lineStyle({
+      ...attrs,
+      roughness: 0.5
+    });
+    var line2 = rc.linearPath(waypoints.map(function(waypoint) {
+      return [waypoint.x, waypoint.y];
+    }), attrs);
+    append(parentGfx, line2);
+    attr(line2, attrs);
+    return line2;
+  }
+  function drawConnectionSegments(parentGfx, waypoints, attrs) {
+    return drawLine(parentGfx, waypoints, attrs);
+  }
+  function drawPath2(parentGfx, d5, attrs, hints) {
+    attrs = lineStyle({
+      strokeWidth: 2,
+      stroke: "black",
+      fillStyle: "solid",
+      ...attrs
+    });
+    var path = rc.path(d5, attrs);
+    attr(path, attrs);
+    append(parentGfx, path);
+    return path;
+  }
+  function drawMarker(type, parentGfx, path, attrs) {
+    if (!attrs) {
+      attrs = {};
+    }
+    return drawPath2(parentGfx, path, assign({ "data-marker": type }, assign(attrs, {
+      roughness: 0.5
+    })));
+  }
+  function as(type) {
+    return function(parentGfx, element) {
+      return handlers[type](parentGfx, element);
+    };
+  }
+  function renderer(type) {
+    return handlers[type];
+  }
+  function renderEventContent(element, parentGfx) {
+    var event3 = getSemantic(element);
+    var isThrowing = isThrowEvent2(event3);
+    if (isTypedEvent2(event3, "bpmn:MessageEventDefinition")) {
+      return renderer("bpmn:MessageEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:TimerEventDefinition")) {
+      return renderer("bpmn:TimerEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:ConditionalEventDefinition")) {
+      return renderer("bpmn:ConditionalEventDefinition")(parentGfx, element);
+    }
+    if (isTypedEvent2(event3, "bpmn:SignalEventDefinition")) {
+      return renderer("bpmn:SignalEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:CancelEventDefinition") && isTypedEvent2(event3, "bpmn:TerminateEventDefinition", { parallelMultiple: false })) {
+      return renderer("bpmn:MultipleEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:CancelEventDefinition") && isTypedEvent2(event3, "bpmn:TerminateEventDefinition", { parallelMultiple: true })) {
+      return renderer("bpmn:ParallelMultipleEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:EscalationEventDefinition")) {
+      return renderer("bpmn:EscalationEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:LinkEventDefinition")) {
+      return renderer("bpmn:LinkEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:ErrorEventDefinition")) {
+      return renderer("bpmn:ErrorEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:CancelEventDefinition")) {
+      return renderer("bpmn:CancelEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:CompensateEventDefinition")) {
+      return renderer("bpmn:CompensateEventDefinition")(parentGfx, element, isThrowing);
+    }
+    if (isTypedEvent2(event3, "bpmn:TerminateEventDefinition")) {
+      return renderer("bpmn:TerminateEventDefinition")(parentGfx, element, isThrowing);
+    }
+    return null;
+  }
+  function renderLabel(parentGfx, label, options2) {
+    options2 = assign({
+      size: {
+        width: 100
+      }
+    }, options2);
+    var text = textRenderer.createText(label || "", options2);
+    classes(text).add("djs-label");
+    append(parentGfx, text);
+    return text;
+  }
+  function renderEmbeddedLabel(parentGfx, element, align) {
+    var semantic = getSemantic(element);
+    return renderLabel(parentGfx, semantic.name, {
+      box: element,
+      align,
+      padding: 5,
+      style: {
+        fill: getStrokeColor2(element, defaultStrokeColor)
+      }
+    });
+  }
+  function renderExternalLabel(parentGfx, element) {
+    var box = {
+      width: 90,
+      height: 30,
+      x: element.width / 2 + element.x,
+      y: element.height / 2 + element.y
+    };
+    var target = element.labelTarget;
+    var align = target.y > element.y ? "center-bottom" : "center-top";
+    return renderLabel(parentGfx, getLabel2(element), {
+      box,
+      align,
+      fitBox: true,
+      style: assign(
+        {},
+        textRenderer.getExternalStyle(),
+        {
+          fill: getStrokeColor2(element, defaultStrokeColor)
+        }
+      )
+    });
+  }
+  function renderLaneLabel(parentGfx, text, element) {
+    var textBox = renderLabel(parentGfx, text, {
+      box: {
+        height: 30,
+        width: element.height
+      },
+      align: "center-middle",
+      style: {
+        fill: getStrokeColor2(element, defaultStrokeColor)
+      }
+    });
+    var top = -1 * element.height;
+    transform3(textBox, 0, -top, 270);
+  }
+  var handlers = this.handlers = {
+    "bpmn:Event": function(parentGfx, element, attrs) {
+      if (!("fillOpacity" in attrs)) {
+        attrs.fillOpacity = DEFAULT_FILL_OPACITY;
+      }
+      return drawCircle(parentGfx, element.width, element.height, attrs);
+    },
+    "bpmn:StartEvent": function(parentGfx, element) {
+      var attrs = {
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.5
+      };
+      var semantic = getSemantic(element);
+      var circle = renderer("bpmn:Event")(parentGfx, element, attrs);
+      if (!semantic.isInterrupting) {
+        attr(circle, {
+          strokeDasharray: "6, 6",
+          strokeLinecap: "round"
+        });
+      }
+      renderEventContent(element, parentGfx);
+      return circle;
+    },
+    "bpmn:MessageEventDefinition": function(parentGfx, element, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_MESSAGE", {
+        xScaleFactor: 0.9,
+        yScaleFactor: 0.9,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0.235,
+          my: 0.315
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(element, defaultStrokeColor) : getFillColor2(element, defaultFillColor);
+      var stroke = isThrowing ? getFillColor2(element, defaultFillColor) : getStrokeColor2(element, defaultStrokeColor);
+      var messagePath = drawPath2(parentGfx, pathData, {
+        strokeWidth: isThrowing ? 2 : 1,
+        fill,
+        stroke
+      });
+      return messagePath;
+    },
+    "bpmn:TimerEventDefinition": function(parentGfx, element) {
+      var circle = drawCircle(parentGfx, element.width, element.height, 0.2 * element.height, {
+        strokeWidth: 2,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      var pathData = pathMap.getScaledPath("EVENT_TIMER_WH", {
+        xScaleFactor: 0.75,
+        yScaleFactor: 0.75,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0.5,
+          my: 0.5
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 2,
+        strokeLinecap: "square",
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.2
+      });
+      for (var i7 = 0; i7 < 12; i7++) {
+        var linePathData = pathMap.getScaledPath("EVENT_TIMER_LINE", {
+          xScaleFactor: 0.75,
+          yScaleFactor: 0.75,
+          containerWidth: element.width,
+          containerHeight: element.height,
+          position: {
+            mx: 0.5,
+            my: 0.5
+          }
+        });
+        var width = element.width / 2;
+        var height = element.height / 2;
+        drawPath2(parentGfx, linePathData, {
+          strokeWidth: 1,
+          strokeLinecap: "square",
+          transform: "rotate(" + i7 * 30 + "," + height + "," + width + ")",
+          stroke: getStrokeColor2(element, defaultStrokeColor),
+          roughness: 0.75
+        });
+      }
+      return circle;
+    },
+    "bpmn:EscalationEventDefinition": function(parentGfx, event3, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_ESCALATION", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.5,
+          my: 0.2
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill,
+        stroke: getStrokeColor2(event3, defaultStrokeColor)
+      });
+    },
+    "bpmn:ConditionalEventDefinition": function(parentGfx, event3) {
+      var pathData = pathMap.getScaledPath("EVENT_CONDITIONAL", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.5,
+          my: 0.222
+        }
+      });
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        stroke: getStrokeColor2(event3, defaultStrokeColor),
+        roughness: 0.5
+      });
+    },
+    "bpmn:LinkEventDefinition": function(parentGfx, event3, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_LINK", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.57,
+          my: 0.263
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill,
+        stroke: getStrokeColor2(event3, defaultStrokeColor)
+      });
+    },
+    "bpmn:ErrorEventDefinition": function(parentGfx, event3, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_ERROR", {
+        xScaleFactor: 1.1,
+        yScaleFactor: 1.1,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.2,
+          my: 0.722
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill,
+        stroke: getStrokeColor2(event3, defaultStrokeColor)
+      });
+    },
+    "bpmn:CancelEventDefinition": function(parentGfx, event3, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_CANCEL_45", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.638,
+          my: -0.055
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var path = drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill,
+        stroke: getStrokeColor2(event3, defaultStrokeColor)
+      });
+      rotate2(path, 45);
+      return path;
+    },
+    "bpmn:CompensateEventDefinition": function(parentGfx, event3, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_COMPENSATION", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.22,
+          my: 0.5
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill,
+        stroke: getStrokeColor2(event3, defaultStrokeColor)
+      });
+    },
+    "bpmn:SignalEventDefinition": function(parentGfx, event3, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_SIGNAL", {
+        xScaleFactor: 0.9,
+        yScaleFactor: 0.9,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.5,
+          my: 0.2
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill,
+        stroke: getStrokeColor2(event3, defaultStrokeColor)
+      });
+    },
+    "bpmn:MultipleEventDefinition": function(parentGfx, event3, isThrowing) {
+      var pathData = pathMap.getScaledPath("EVENT_MULTIPLE", {
+        xScaleFactor: 1.1,
+        yScaleFactor: 1.1,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.222,
+          my: 0.36
+        }
+      });
+      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill
+      });
+    },
+    "bpmn:ParallelMultipleEventDefinition": function(parentGfx, event3) {
+      var pathData = pathMap.getScaledPath("EVENT_PARALLEL_MULTIPLE", {
+        xScaleFactor: 1.2,
+        yScaleFactor: 1.2,
+        containerWidth: event3.width,
+        containerHeight: event3.height,
+        position: {
+          mx: 0.458,
+          my: 0.194
+        }
+      });
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getStrokeColor2(event3, defaultStrokeColor),
+        stroke: getStrokeColor2(event3, defaultStrokeColor)
+      });
+    },
+    "bpmn:EndEvent": function(parentGfx, element) {
+      var circle = renderer("bpmn:Event")(parentGfx, element, {
+        strokeWidth: 4,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      renderEventContent(element, parentGfx);
+      return circle;
+    },
+    "bpmn:TerminateEventDefinition": function(parentGfx, element) {
+      var circle = drawCircle(parentGfx, element.width, element.height, 14, {
+        strokeWidth: 4,
+        fill: getStrokeColor2(element, defaultStrokeColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        fillStyle: "solid"
+      });
+      return circle;
+    },
+    "bpmn:IntermediateEvent": function(parentGfx, element) {
+      var outer = renderer("bpmn:Event")(parentGfx, element, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      drawCircle(parentGfx, element.width, element.height, INNER_OUTER_DIST2, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, "none"),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      renderEventContent(element, parentGfx);
+      return outer;
+    },
+    "bpmn:IntermediateCatchEvent": as("bpmn:IntermediateEvent"),
+    "bpmn:IntermediateThrowEvent": as("bpmn:IntermediateEvent"),
+    "bpmn:Activity": function(parentGfx, element, attrs) {
+      attrs = attrs || {};
+      if (!("fillOpacity" in attrs)) {
+        attrs.fillOpacity = DEFAULT_FILL_OPACITY;
+      }
+      var pathData = getRoundRectPath2(assign({}, element, { x: 0, y: 0 }), TASK_BORDER_RADIUS2);
+      return drawPath2(parentGfx, pathData, assign(attrs, {
+        roughness: 0.4
+      }));
+    },
+    "bpmn:Task": function(parentGfx, element) {
+      var attrs = {
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      };
+      var rect = renderer("bpmn:Activity")(parentGfx, element, attrs);
+      renderEmbeddedLabel(parentGfx, element, "center-middle");
+      attachTaskMarkers(parentGfx, element);
+      return rect;
+    },
+    "bpmn:ServiceTask": function(parentGfx, element) {
+      var task = renderer("bpmn:Task")(parentGfx, element);
+      var pathDataBG = pathMap.getScaledPath("TASK_TYPE_SERVICE", {
+        abspos: {
+          x: 12,
+          y: 18
+        }
+      });
+      drawPath2(parentGfx, pathDataBG, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        simplification: 0.5,
+        roughness: 0.1
+      });
+      var fillPathData = pathMap.getScaledPath("TASK_TYPE_SERVICE_FILL", {
+        abspos: {
+          x: 17.2,
+          y: 18
+        }
+      });
+      drawPath2(parentGfx, fillPathData, {
+        strokeWidth: 0,
+        fill: getFillColor2(element, defaultFillColor),
+        simplification: 0.5,
+        roughness: 0.1
+      });
+      var pathData = pathMap.getScaledPath("TASK_TYPE_SERVICE", {
+        abspos: {
+          x: 17,
+          y: 22
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        simplification: 0.5,
+        roughness: 0.1
+      });
+      return task;
+    },
+    "bpmn:UserTask": function(parentGfx, element) {
+      var task = renderer("bpmn:Task")(parentGfx, element);
+      var x6 = 15;
+      var y5 = 12;
+      var pathData = pathMap.getScaledPath("TASK_TYPE_USER_1", {
+        abspos: {
+          x: x6,
+          y: y5
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.2
+      });
+      var pathData2 = pathMap.getScaledPath("TASK_TYPE_USER_2", {
+        abspos: {
+          x: x6,
+          y: y5
+        }
+      });
+      drawPath2(parentGfx, pathData2, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.2
+      });
+      var pathData3 = pathMap.getScaledPath("TASK_TYPE_USER_3", {
+        abspos: {
+          x: x6,
+          y: y5
+        }
+      });
+      drawPath2(parentGfx, pathData3, {
+        strokeWidth: 1,
+        fill: getStrokeColor2(element, defaultStrokeColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.2
+      });
+      return task;
+    },
+    "bpmn:ManualTask": function(parentGfx, element) {
+      var task = renderer("bpmn:Task")(parentGfx, element);
+      var pathData = pathMap.getScaledPath("TASK_TYPE_MANUAL", {
+        abspos: {
+          x: 17,
+          y: 15
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        simplification: 0.9
+      });
+      return task;
+    },
+    "bpmn:SendTask": function(parentGfx, element) {
+      var task = renderer("bpmn:Task")(parentGfx, element);
+      var pathData = pathMap.getScaledPath("TASK_TYPE_SEND", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: 21,
+        containerHeight: 14,
+        position: {
+          mx: 0.285,
+          my: 0.357
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getStrokeColor2(element, defaultStrokeColor),
+        stroke: getFillColor2(element, defaultFillColor)
+      });
+      return task;
+    },
+    "bpmn:ReceiveTask": function(parentGfx, element) {
+      var semantic = getSemantic(element);
+      var task = renderer("bpmn:Task")(parentGfx, element);
+      var pathData;
+      if (semantic.instantiate) {
+        drawCircle(parentGfx, 28, 28, 20 * 0.22, { strokeWidth: 1 });
+        pathData = pathMap.getScaledPath("TASK_TYPE_INSTANTIATING_SEND", {
+          abspos: {
+            x: 7.77,
+            y: 9.52
+          }
+        });
+      } else {
+        pathData = pathMap.getScaledPath("TASK_TYPE_SEND", {
+          xScaleFactor: 0.9,
+          yScaleFactor: 0.9,
+          containerWidth: 21,
+          containerHeight: 14,
+          position: {
+            mx: 0.3,
+            my: 0.4
+          }
+        });
+      }
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      return task;
+    },
+    "bpmn:ScriptTask": function(parentGfx, element) {
+      var task = renderer("bpmn:Task")(parentGfx, element);
+      var pathData = pathMap.getScaledPath("TASK_TYPE_SCRIPT", {
+        abspos: {
+          x: 15,
+          y: 20
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.3
+      });
+      return task;
+    },
+    "bpmn:BusinessRuleTask": function(parentGfx, element) {
+      var task = renderer("bpmn:Task")(parentGfx, element);
+      var headerPathData = pathMap.getScaledPath("TASK_TYPE_BUSINESS_RULE_HEADER", {
+        abspos: {
+          x: 8,
+          y: 8
+        }
+      });
+      drawPath2(parentGfx, headerPathData, {
+        roughness: 0.5,
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      var headerData = pathMap.getScaledPath("TASK_TYPE_BUSINESS_RULE_MAIN", {
+        abspos: {
+          x: 8,
+          y: 8
+        }
+      });
+      drawPath2(parentGfx, headerData, {
+        roughness: 0.5,
+        strokeWidth: 1,
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      return task;
+    },
+    "bpmn:SubProcess": function(parentGfx, element, attrs) {
+      attrs = assign({
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      }, attrs);
+      var rect = renderer("bpmn:Activity")(parentGfx, element, attrs);
+      var expanded = isExpanded2(element);
+      if (isEventSubProcess2(element)) {
+        attr(rect, {
+          strokeDasharray: "1,2"
+        });
+      }
+      renderEmbeddedLabel(parentGfx, element, expanded ? "center-top" : "center-middle");
+      if (expanded) {
+        attachTaskMarkers(parentGfx, element);
+      } else {
+        attachTaskMarkers(parentGfx, element, ["SubProcessMarker"]);
+      }
+      return rect;
+    },
+    "bpmn:AdHocSubProcess": function(parentGfx, element) {
+      return renderer("bpmn:SubProcess")(parentGfx, element);
+    },
+    "bpmn:Transaction": function(parentGfx, element) {
+      var outer = renderer("bpmn:SubProcess")(parentGfx, element);
+      var innerAttrs = styles.style(["no-fill", "no-events"], {
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      var pathData = getRoundRectPath2({
+        x: INNER_OUTER_DIST2,
+        y: INNER_OUTER_DIST2,
+        width: element.width - 2 * INNER_OUTER_DIST2,
+        height: element.height - 2 * INNER_OUTER_DIST2
+      }, TASK_BORDER_RADIUS2);
+      drawPath2(parentGfx, pathData, assign(innerAttrs, {
+        roughness: 0.4
+      }));
+      return outer;
+    },
+    "bpmn:CallActivity": function(parentGfx, element) {
+      return renderer("bpmn:SubProcess")(parentGfx, element, {
+        strokeWidth: 5
+      });
+    },
+    "bpmn:Participant": function(parentGfx, element) {
+      var attrs = {
+        fillOpacity: DEFAULT_FILL_OPACITY,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      };
+      var lane = renderer("bpmn:Lane")(parentGfx, element, attrs);
+      var expandedPool = isExpanded2(element);
+      if (expandedPool) {
+        drawLine(parentGfx, [
+          { x: 30, y: 0 },
+          { x: 30, y: element.height }
+        ], {
+          stroke: getStrokeColor2(element, defaultStrokeColor)
+        });
+        var text = getSemantic(element).name;
+        renderLaneLabel(parentGfx, text, element);
+      } else {
+        var text2 = getSemantic(element).name;
+        renderLabel(parentGfx, text2, {
+          box: element,
+          align: "center-middle",
+          style: {
+            fill: getStrokeColor2(element, defaultStrokeColor)
+          }
+        });
+      }
+      var participantMultiplicity = !!getSemantic(element).participantMultiplicity;
+      if (participantMultiplicity) {
+        renderer("ParticipantMultiplicityMarker")(parentGfx, element);
+      }
+      return lane;
+    },
+    "bpmn:Lane": function(parentGfx, element, attrs) {
+      var rect = drawRect(parentGfx, element.width, element.height, 0, assign({
+        fill: getFillColor2(element, defaultFillColor),
+        fillOpacity: HIGH_FILL_OPACITY,
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.3
+      }, attrs));
+      var semantic = getSemantic(element);
+      if (semantic.$type === "bpmn:Lane") {
+        var text = semantic.name;
+        renderLaneLabel(parentGfx, text, element);
+      }
+      return rect;
+    },
+    "bpmn:InclusiveGateway": function(parentGfx, element) {
+      var diamond = renderer("bpmn:Gateway")(parentGfx, element);
+      drawCircle(parentGfx, element.width, element.height, element.height * 0.5, {
+        strokeWidth: 2.5,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      return diamond;
+    },
+    "bpmn:ExclusiveGateway": function(parentGfx, element) {
+      var diamond = renderer("bpmn:Gateway")(parentGfx, element);
+      var pathData = pathMap.getScaledPath("GATEWAY_EXCLUSIVE", {
+        xScaleFactor: 0.4,
+        yScaleFactor: 0.4,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0.32,
+          my: 0.3
+        }
+      });
+      if (getDi2(element).isMarkerVisible) {
+        drawPath2(parentGfx, pathData, {
+          strokeWidth: 1,
+          fill: getStrokeColor2(element, defaultStrokeColor),
+          stroke: getStrokeColor2(element, defaultStrokeColor)
+        });
+      }
+      return diamond;
+    },
+    "bpmn:ComplexGateway": function(parentGfx, element) {
+      var diamond = renderer("bpmn:Gateway")(parentGfx, element);
+      var pathData = pathMap.getScaledPath("GATEWAY_COMPLEX", {
+        xScaleFactor: 0.5,
+        yScaleFactor: 0.5,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0.46,
+          my: 0.26
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getStrokeColor2(element, defaultStrokeColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      return diamond;
+    },
+    "bpmn:ParallelGateway": function(parentGfx, element) {
+      var diamond = renderer("bpmn:Gateway")(parentGfx, element);
+      var pathData = pathMap.getScaledPath("GATEWAY_PARALLEL", {
+        xScaleFactor: 0.6,
+        yScaleFactor: 0.6,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0.46,
+          my: 0.2
+        }
+      });
+      drawPath2(parentGfx, pathData, {
+        strokeWidth: 1,
+        fill: getStrokeColor2(element, defaultStrokeColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      return diamond;
+    },
+    "bpmn:EventBasedGateway": function(parentGfx, element) {
+      var semantic = getSemantic(element);
+      var diamond = renderer("bpmn:Gateway")(parentGfx, element);
+      drawCircle(parentGfx, element.width, element.height, element.height * 0.4, {
+        strokeWidth: 1,
+        fill: "none",
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      var type = semantic.eventGatewayType;
+      var instantiate = !!semantic.instantiate;
+      function drawEvent() {
+        var pathData2 = pathMap.getScaledPath("GATEWAY_EVENT_BASED", {
+          xScaleFactor: 0.18,
+          yScaleFactor: 0.18,
+          containerWidth: element.width,
+          containerHeight: element.height,
+          position: {
+            mx: 0.36,
+            my: 0.44
+          }
+        });
+        drawPath2(parentGfx, pathData2, {
+          strokeWidth: 2,
+          fill: getFillColor2(element, defaultFillColor),
+          stroke: getStrokeColor2(element, defaultStrokeColor)
+        });
+      }
+      if (type === "Parallel") {
+        var pathData = pathMap.getScaledPath("GATEWAY_PARALLEL", {
+          xScaleFactor: 0.4,
+          yScaleFactor: 0.4,
+          containerWidth: element.width,
+          containerHeight: element.height,
+          position: {
+            mx: 0.474,
+            my: 0.296
+          }
+        });
+        drawPath2(parentGfx, pathData, {
+          strokeWidth: 1,
+          fill: getFillColor2(element, defaultFillColor),
+          stroke: getStrokeColor2(element, defaultStrokeColor)
+        });
+      } else if (type === "Exclusive") {
+        if (!instantiate) {
+          drawCircle(parentGfx, element.width, element.height, element.height * 0.55, {
+            strokeWidth: 1,
+            fill: getFillColor2(element, defaultFillColor),
+            stroke: getStrokeColor2(element, defaultStrokeColor)
+          });
+        }
+        drawEvent();
+      }
+      return diamond;
+    },
+    "bpmn:Gateway": function(parentGfx, element) {
+      var attrs = {
+        fill: getFillColor2(element, defaultFillColor),
+        fillOpacity: DEFAULT_FILL_OPACITY,
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      };
+      return drawDiamond(parentGfx, element.width, element.height, attrs);
+    },
+    "bpmn:SequenceFlow": function(parentGfx, element) {
+      var fill = getFillColor2(element, defaultFillColor), stroke = getStrokeColor2(element, defaultStrokeColor);
+      var path = drawConnectionSegments(parentGfx, element.waypoints, {
+        markerEnd: marker("sequenceflow-end", fill, stroke),
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        strokeLinejoin: "round",
+        roughness: 0.5,
+        bowing: 0
+      });
+      var sequenceFlow = getSemantic(element);
+      var source;
+      if (element.source) {
+        source = element.source.businessObject;
+        if (sequenceFlow.conditionExpression && source.$instanceOf("bpmn:Activity")) {
+          attr(path, {
+            markerStart: marker("conditional-flow-marker", fill, stroke)
+          });
+        }
+        if (source.default && (source.$instanceOf("bpmn:Gateway") || source.$instanceOf("bpmn:Activity")) && source.default === sequenceFlow) {
+          attr(path, {
+            markerStart: marker("conditional-default-flow-marker", fill, stroke)
+          });
+        }
+      }
+      return path;
+    },
+    "bpmn:Association": function(parentGfx, element, attrs) {
+      var semantic = getSemantic(element);
+      var fill = getFillColor2(element, defaultFillColor), stroke = getStrokeColor2(element, defaultStrokeColor);
+      attrs = assign({
+        strokeDasharray: "1, 5",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.5,
+        bowing: 0
+      }, attrs || {});
+      if (semantic.associationDirection === "One" || semantic.associationDirection === "Both") {
+        attrs.markerEnd = marker("association-end", fill, stroke);
+      }
+      if (semantic.associationDirection === "Both") {
+        attrs.markerStart = marker("association-start", fill, stroke);
+      }
+      return drawLine(parentGfx, element.waypoints, attrs);
+    },
+    "bpmn:DataInputAssociation": function(parentGfx, element) {
+      var fill = getFillColor2(element, defaultFillColor), stroke = getStrokeColor2(element, defaultStrokeColor);
+      return renderer("bpmn:Association")(parentGfx, element, {
+        markerEnd: marker("association-end", fill, stroke)
+      });
+    },
+    "bpmn:DataOutputAssociation": function(parentGfx, element) {
+      var fill = getFillColor2(element, defaultFillColor), stroke = getStrokeColor2(element, defaultStrokeColor);
+      return renderer("bpmn:Association")(parentGfx, element, {
+        markerEnd: marker("association-end", fill, stroke)
+      });
+    },
+    "bpmn:MessageFlow": function(parentGfx, element) {
+      var semantic = getSemantic(element), di = getDi2(element);
+      var fill = getFillColor2(element, defaultFillColor), stroke = getStrokeColor2(element, defaultStrokeColor);
+      var path = drawConnectionSegments(parentGfx, element.waypoints, {
+        markerEnd: marker("messageflow-end", fill, stroke),
+        markerStart: marker("messageflow-start", fill, stroke),
+        strokeDasharray: "10, 12",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "1.5px",
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        roughness: 0.5,
+        bowing: 0
+      });
+      if (semantic.messageRef) {
+        var midPoint = path.getPointAtLength(path.getTotalLength() / 2);
+        var markerPathData = pathMap.getScaledPath("MESSAGE_FLOW_MARKER", {
+          abspos: {
+            x: midPoint.x,
+            y: midPoint.y
+          }
+        });
+        var messageAttrs = { strokeWidth: 1 };
+        if (di.messageVisibleKind === "initiating") {
+          messageAttrs.fill = "white";
+          messageAttrs.stroke = "black";
+        } else {
+          messageAttrs.fill = "#888";
+          messageAttrs.stroke = "white";
+        }
+        drawPath2(parentGfx, markerPathData, messageAttrs);
+      }
+      return path;
+    },
+    "bpmn:DataObject": function(parentGfx, element) {
+      var pathData = pathMap.getScaledPath("DATA_OBJECT_PATH", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0.474,
+          my: 0.296
+        }
+      });
+      var elementObject = drawPath2(parentGfx, pathData, {
+        fill: getFillColor2(element, defaultFillColor),
+        fillOpacity: DEFAULT_FILL_OPACITY,
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      var semantic = getSemantic(element);
+      if (isCollection2(semantic)) {
+        renderDataItemCollection(parentGfx, element);
+      }
+      return elementObject;
+    },
+    "bpmn:DataObjectReference": as("bpmn:DataObject"),
+    "bpmn:DataInput": function(parentGfx, element) {
+      var arrowPathData = pathMap.getRawPath("DATA_ARROW");
+      var elementObject = renderer("bpmn:DataObject")(parentGfx, element);
+      drawPath2(parentGfx, arrowPathData, { strokeWidth: 1 });
+      return elementObject;
+    },
+    "bpmn:DataOutput": function(parentGfx, element) {
+      var arrowPathData = pathMap.getRawPath("DATA_ARROW");
+      var elementObject = renderer("bpmn:DataObject")(parentGfx, element);
+      drawPath2(parentGfx, arrowPathData, {
+        strokeWidth: 1,
+        fill: "black"
+      });
+      return elementObject;
+    },
+    "bpmn:DataStoreReference": function(parentGfx, element) {
+      var DATA_STORE_PATH = pathMap.getScaledPath("DATA_STORE", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0,
+          my: 0.133
+        }
+      });
+      var elementStore = drawPath2(parentGfx, DATA_STORE_PATH, {
+        strokeWidth: 2,
+        fill: getFillColor2(element, defaultFillColor),
+        fillOpacity: DEFAULT_FILL_OPACITY,
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      return elementStore;
+    },
+    "bpmn:BoundaryEvent": function(parentGfx, element) {
+      var semantic = getSemantic(element), cancel2 = semantic.cancelActivity;
+      var attrs = {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      };
+      var outerAttrs = assign({}, attrs, {
+        fillOpacity: 1,
+        roughness: 0.5
+      });
+      var innerAttrs = assign({}, attrs, {
+        fill: "none",
+        roughness: 0.5
+      });
+      var outer = renderer("bpmn:Event")(parentGfx, element, outerAttrs);
+      if (!cancel2) {
+        attr(outer, {
+          strokeDasharray: "6, 6",
+          strokeLinecap: "round"
+        });
+      }
+      var inner = drawCircle(parentGfx, element.width, element.height, INNER_OUTER_DIST2, innerAttrs);
+      if (!cancel2) {
+        attr(inner, {
+          strokeDasharray: "6, 6",
+          strokeLinecap: "round"
+        });
+      }
+      renderEventContent(element, parentGfx);
+      return outer;
+    },
+    "bpmn:Group": function(parentGfx, element) {
+      var pathData = getRoundRectPath2(assign({}, element, { x: 0, y: 0 }), TASK_BORDER_RADIUS2);
+      return drawPath2(parentGfx, pathData, {
+        strokeWidth: 1.5,
+        strokeDasharray: "8,6,1,6",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        fill: "none",
+        pointerEvents: "none",
+        roughness: 0.5,
+        bowing: 0
+      });
+    },
+    "label": function(parentGfx, element) {
+      return renderExternalLabel(parentGfx, element);
+    },
+    "bpmn:TextAnnotation": function(parentGfx, element) {
+      var style = {
+        "fill": "none",
+        "stroke": "none"
+      };
+      var textElement = drawRect(parentGfx, element.width, element.height, 0, 0, style);
+      var textPathData = pathMap.getScaledPath("TEXT_ANNOTATION", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: 0,
+          my: 0
+        }
+      });
+      drawPath2(parentGfx, textPathData, {
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      var text = getSemantic(element).text || "";
+      renderLabel(parentGfx, text, {
+        box: element,
+        align: "left-top",
+        padding: 5,
+        style: {
+          fill: getStrokeColor2(element, defaultStrokeColor)
+        }
+      });
+      return textElement;
+    },
+    "ParticipantMultiplicityMarker": function(parentGfx, element) {
+      var markerPath = pathMap.getScaledPath("MARKER_PARALLEL", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: element.width / 2 / element.width,
+          my: (element.height - 15) / element.height
+        }
+      });
+      drawMarker("participant-multiplicity", parentGfx, markerPath);
+    },
+    "SubProcessMarker": function(parentGfx, element) {
+      var markerRect = drawRect(parentGfx, 14, 14, 0, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+      translate3(markerRect, element.width / 2 - 7.5, element.height - 20);
+      var markerPath = pathMap.getScaledPath("MARKER_SUB_PROCESS", {
+        xScaleFactor: 1.5,
+        yScaleFactor: 1.5,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: (element.width / 2 - 7.5) / element.width,
+          my: (element.height - 20) / element.height
+        }
+      });
+      drawMarker("sub-process", parentGfx, markerPath, {
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+    },
+    "ParallelMarker": function(parentGfx, element, position) {
+      var markerPath = pathMap.getScaledPath("MARKER_PARALLEL", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: (element.width / 2 + position.parallel) / element.width,
+          my: (element.height - 20) / element.height
+        }
+      });
+      drawMarker("parallel", parentGfx, markerPath, {
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+    },
+    "SequentialMarker": function(parentGfx, element, position) {
+      var markerPath = pathMap.getScaledPath("MARKER_SEQUENTIAL", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: (element.width / 2 + position.seq) / element.width,
+          my: (element.height - 19) / element.height
+        }
+      });
+      drawMarker("sequential", parentGfx, markerPath, {
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+    },
+    "CompensationMarker": function(parentGfx, element, position) {
+      var markerMath = pathMap.getScaledPath("MARKER_COMPENSATION", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: (element.width / 2 + position.compensation) / element.width,
+          my: (element.height - 13) / element.height
+        }
+      });
+      drawMarker("compensation", parentGfx, markerMath, {
+        strokeWidth: 1,
+        fill: getFillColor2(element, defaultFillColor),
+        stroke: getStrokeColor2(element, defaultStrokeColor)
+      });
+    },
+    "LoopMarker": function(parentGfx, element, position) {
+      var markerPath = pathMap.getScaledPath("MARKER_LOOP", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: (element.width / 2 + position.loop) / element.width,
+          my: (element.height - 7) / element.height
+        }
+      });
+      drawMarker("loop", parentGfx, markerPath, {
+        strokeWidth: 1,
+        fill: "none",
+        stroke: getStrokeColor2(element, defaultStrokeColor),
+        strokeLinecap: "round",
+        strokeMiterlimit: 0.5
+      });
+    },
+    "AdhocMarker": function(parentGfx, element, position) {
+      var markerPath = pathMap.getScaledPath("MARKER_ADHOC", {
+        xScaleFactor: 1,
+        yScaleFactor: 1,
+        containerWidth: element.width,
+        containerHeight: element.height,
+        position: {
+          mx: (element.width / 2 + position.adhoc) / element.width,
+          my: (element.height - 15) / element.height
+        }
+      });
+      drawMarker("adhoc", parentGfx, markerPath, {
+        strokeWidth: 1,
+        fill: "black"
+      });
+    }
+  };
+  function attachTaskMarkers(parentGfx, element, taskMarkers) {
+    var obj = getSemantic(element);
+    var subprocess = taskMarkers && taskMarkers.indexOf("SubProcessMarker") !== -1;
+    var position;
+    if (subprocess) {
+      position = {
+        seq: -21,
+        parallel: -22,
+        compensation: -42,
+        loop: -18,
+        adhoc: 10
+      };
+    } else {
+      position = {
+        seq: -3,
+        parallel: -6,
+        compensation: -27,
+        loop: 0,
+        adhoc: 10
+      };
+    }
+    forEach(taskMarkers, function(marker2) {
+      renderer(marker2)(parentGfx, element, position);
+    });
+    if (obj.isForCompensation) {
+      renderer("CompensationMarker")(parentGfx, element, position);
+    }
+    if (obj.$type === "bpmn:AdHocSubProcess") {
+      renderer("AdhocMarker")(parentGfx, element, position);
+    }
+    var loopCharacteristics = obj.loopCharacteristics, isSequential = loopCharacteristics && loopCharacteristics.isSequential;
+    if (loopCharacteristics) {
+      if (isSequential === void 0) {
+        renderer("LoopMarker")(parentGfx, element, position);
+      }
+      if (isSequential === false) {
+        renderer("ParallelMarker")(parentGfx, element, position);
+      }
+      if (isSequential === true) {
+        renderer("SequentialMarker")(parentGfx, element, position);
+      }
+    }
+  }
+  function renderDataItemCollection(parentGfx, element) {
+    var yPosition = (element.height - 16) / element.height;
+    var pathData = pathMap.getScaledPath("DATA_OBJECT_COLLECTION_PATH", {
+      xScaleFactor: 1,
+      yScaleFactor: 1,
+      containerWidth: element.width,
+      containerHeight: element.height,
+      position: {
+        mx: 0.451,
+        my: yPosition
+      }
+    });
+    drawPath2(parentGfx, pathData, {
+      strokeWidth: 2
+    });
+  }
+  this._drawPath = drawPath2;
+}
+e2(BpmnRenderer2, BaseRenderer2);
+BpmnRenderer2.$inject = [
+  "config",
+  "eventBus",
+  "styles",
+  "pathMap",
+  "canvas",
+  "textRenderer"
+];
+BpmnRenderer2.prototype.canRender = function(element) {
+  return is3(element, "bpmn:BaseElement");
+};
+BpmnRenderer2.prototype.drawShape = function(parentGfx, element) {
+  var type = element.type;
+  var h5 = this.handlers[type];
+  return h5(parentGfx, element);
+};
+BpmnRenderer2.prototype.drawConnection = function(parentGfx, element) {
+  var type = element.type;
+  var h5 = this.handlers[type];
+  return h5(parentGfx, element);
+};
+BpmnRenderer2.prototype.getShapePath = function(element) {
+  if (is3(element, "bpmn:Event")) {
+    return getCirclePath2(element);
+  }
+  if (is3(element, "bpmn:Activity")) {
+    return getRoundRectPath2(element, TASK_BORDER_RADIUS2);
+  }
+  if (is3(element, "bpmn:Gateway")) {
+    return getDiamondPath2(element);
+  }
+  return getRectPath2(element);
+};
+var index = {
+  __init__: [
+    "bpmnRenderer"
+  ],
+  bpmnRenderer: ["type", BpmnRenderer2]
+};
 
 // node_modules/bpmn-js/lib/BaseModeler.js
 function BaseModeler(options2) {
@@ -18992,30 +22730,89 @@ var align_elements_default = {
   alignElements: ["type", AlignElements]
 };
 
+// node_modules/diagram-js/lib/features/scheduler/Scheduler.js
+var Ids3 = new IdGenerator();
+function Scheduler(eventBus) {
+  this._scheduled = {};
+  eventBus.on("diagram.destroy", () => {
+    Object.keys(this._scheduled).forEach((id) => {
+      this.cancel(id);
+    });
+  });
+}
+Scheduler.$inject = ["eventBus"];
+Scheduler.prototype.schedule = function(taskFn, id = Ids3.next()) {
+  this.cancel(id);
+  const newScheduled = this._schedule(taskFn, id);
+  this._scheduled[id] = newScheduled;
+  return newScheduled.promise;
+};
+Scheduler.prototype._schedule = function(taskFn, id) {
+  const {
+    promise,
+    resolve,
+    reject
+  } = defer();
+  const executionId = requestAnimationFrame(() => {
+    try {
+      resolve(taskFn());
+    } catch (error4) {
+      reject(error4);
+    }
+  });
+  return {
+    executionId,
+    promise
+  };
+};
+Scheduler.prototype.cancel = function(id) {
+  const scheduled = this._scheduled[id];
+  if (scheduled) {
+    this._cancel(scheduled);
+    this._scheduled[id] = null;
+  }
+};
+Scheduler.prototype._cancel = function(scheduled) {
+  cancelAnimationFrame(scheduled.executionId);
+};
+function defer() {
+  let resolve;
+  let reject;
+  const promise = new Promise((_resolve, _reject) => {
+    resolve = _resolve;
+    reject = _reject;
+  });
+  return {
+    promise,
+    resolve,
+    reject
+  };
+}
+
+// node_modules/diagram-js/lib/features/scheduler/index.js
+var scheduler_default = {
+  scheduler: ["type", Scheduler]
+};
+
 // node_modules/diagram-js/lib/features/context-pad/ContextPad.js
+var MARKER_HIDDEN = "djs-element-hidden";
 var entrySelector = ".entry";
 var DEFAULT_PRIORITY5 = 1e3;
-var CONTEXT_PAD_PADDING = 12;
+var CONTEXT_PAD_MARGIN = 8;
 var HOVER_DELAY = 300;
-function ContextPad(canvas, config, eventBus, overlays) {
+function ContextPad(canvas, elementRegistry, eventBus, scheduler) {
   this._canvas = canvas;
+  this._elementRegistry = elementRegistry;
   this._eventBus = eventBus;
-  this._overlays = overlays;
-  var scale = isDefined(config && config.scale) ? config.scale : {
-    min: 1,
-    max: 1
-  };
-  this._overlaysConfig = {
-    scale
-  };
+  this._scheduler = scheduler;
   this._current = null;
   this._init();
 }
 ContextPad.$inject = [
   "canvas",
-  "config.contextPad",
+  "elementRegistry",
   "eventBus",
-  "overlays"
+  "scheduler"
 ];
 ContextPad.prototype._init = function() {
   var self2 = this;
@@ -19033,17 +22830,42 @@ ContextPad.prototype._init = function() {
     if (!current) {
       return;
     }
-    var currentTarget = current.target;
-    var currentChanged = some(
-      isArray(currentTarget) ? currentTarget : [currentTarget],
-      function(element) {
-        return includes(elements, element);
+    var target = current.target;
+    var targets = isArray(target) ? target : [target];
+    var targetsChanged = targets.filter(function(element) {
+      return elements.includes(element);
+    });
+    if (targetsChanged.length) {
+      self2.close();
+      var targetsNew = targets.filter(function(element) {
+        return self2._elementRegistry.get(element.id);
+      });
+      if (targetsNew.length) {
+        self2._updateAndOpen(targetsNew.length > 1 ? targetsNew : targetsNew[0]);
       }
-    );
-    if (currentChanged) {
-      self2.open(currentTarget, true);
     }
   });
+  this._eventBus.on("canvas.viewbox.changed", function() {
+    self2._updatePosition();
+  });
+  this._eventBus.on("element.marker.update", function(event3) {
+    if (!self2.isOpen()) {
+      return;
+    }
+    var element = event3.element;
+    var current = self2._current;
+    var targets = isArray(current.target) ? current.target : [current.target];
+    if (!targets.includes(element)) {
+      return;
+    }
+    self2._updateVisibility();
+  });
+  this._container = this._createContainer();
+};
+ContextPad.prototype._createContainer = function() {
+  var container = domify$1('<div class="djs-context-pad-parent"></div>');
+  this._canvas.getContainer().appendChild(container);
+  return container;
 };
 ContextPad.prototype.registerProvider = function(priority, provider) {
   if (!provider) {
@@ -19074,6 +22896,7 @@ ContextPad.prototype.getEntries = function(target) {
   return entries;
 };
 ContextPad.prototype.trigger = function(action, event3, autoActivate) {
+  var self2 = this;
   var entry, originalEvent, button = event3.delegateTarget || event3.target;
   if (!button) {
     return event3.preventDefault();
@@ -19081,15 +22904,17 @@ ContextPad.prototype.trigger = function(action, event3, autoActivate) {
   entry = attr2(button, "data-action");
   originalEvent = event3.originalEvent || event3;
   if (action === "mouseover") {
-    this._timeout = setTimeout(() => {
-      this._mouseout = this.triggerEntry(entry, "hover", originalEvent, autoActivate);
+    this._timeout = setTimeout(function() {
+      self2._mouseout = self2.triggerEntry(entry, "hover", originalEvent, autoActivate);
     }, HOVER_DELAY);
+    return;
   } else if (action === "mouseout") {
     clearTimeout(this._timeout);
     if (this._mouseout) {
       this._mouseout();
       this._mouseout = null;
     }
+    return;
   }
   return this.triggerEntry(entry, action, originalEvent, autoActivate);
 };
@@ -19133,7 +22958,7 @@ ContextPad.prototype._getProviders = function() {
   return event3.providers;
 };
 ContextPad.prototype._updateAndOpen = function(target) {
-  var entries = this.getEntries(target), pad = this.getPad(target), html = pad.html, image;
+  var entries = this.getEntries(target), html = this._createHtml(target), image;
   forEach(entries, function(entry, id) {
     var grouping = entry.group || "default", control = domify$1(entry.html || '<div class="entry" draggable="true"></div>'), container;
     attr2(control, "data-action", id);
@@ -19160,23 +22985,17 @@ ContextPad.prototype._updateAndOpen = function(target) {
   });
   classes2(html).add("open");
   this._current = {
-    target,
     entries,
-    pad
+    html,
+    target
   };
+  this._updatePosition();
+  this._updateVisibility();
   this._eventBus.fire("contextPad.open", { current: this._current });
 };
-ContextPad.prototype.getPad = function(target) {
-  if (this.isOpen()) {
-    return this._current.pad;
-  }
+ContextPad.prototype._createHtml = function(target) {
   var self2 = this;
-  var overlays = this._overlays;
   var html = domify$1('<div class="djs-context-pad"></div>');
-  var position = this._getPosition(target);
-  var overlaysConfig = assign({
-    html
-  }, this._overlaysConfig, position);
   delegate.bind(html, entrySelector, "click", function(event3) {
     self2.trigger("click", event3);
   });
@@ -19192,22 +23011,29 @@ ContextPad.prototype.getPad = function(target) {
   event.bind(html, "mousedown", function(event3) {
     event3.stopPropagation();
   });
-  var activeRootElement = this._canvas.getRootElement();
-  this._overlayId = overlays.add(activeRootElement, "context-pad", overlaysConfig);
-  var pad = overlays.get(this._overlayId);
+  this._container.appendChild(html);
   this._eventBus.fire("contextPad.create", {
     target,
-    pad
+    pad: html
   });
-  return pad;
+  return html;
+};
+ContextPad.prototype.getPad = function(target) {
+  console.warn(new Error("ContextPad#getPad is deprecated and will be removed in future library versions, cf. https://github.com/bpmn-io/diagram-js/pull/888"));
+  let html;
+  if (this.isOpen() && targetsEqual(this._current.target, target)) {
+    html = this._current.html;
+  } else {
+    html = this._createHtml(target);
+  }
+  return { html };
 };
 ContextPad.prototype.close = function() {
   if (!this.isOpen()) {
     return;
   }
   clearTimeout(this._timeout);
-  this._overlays.remove(this._overlayId);
-  this._overlayId = null;
+  this._container.innerHTML = "";
   this._eventBus.fire("contextPad.close", { current: this._current });
   this._current = null;
 };
@@ -19225,25 +23051,112 @@ ContextPad.prototype.isOpen = function(target) {
   }
   if (isArray(target)) {
     return target.length === currentTarget.length && every(target, function(element) {
-      return includes(currentTarget, element);
+      return currentTarget.includes(element);
     });
   } else {
     return currentTarget === target;
   }
 };
 ContextPad.prototype.isShown = function() {
-  return this.isOpen() && this._overlays.isShown();
+  return this.isOpen() && classes2(this._current.html).has("open");
+};
+ContextPad.prototype.show = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+  classes2(this._current.html).add("open");
+  this._updatePosition();
+  this._eventBus.fire("contextPad.show", { current: this._current });
+};
+ContextPad.prototype.hide = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+  classes2(this._current.html).remove("open");
+  this._eventBus.fire("contextPad.hide", { current: this._current });
 };
 ContextPad.prototype._getPosition = function(target) {
-  target = isConnection(target) ? getLastWaypoint(target) : target;
-  var elements = isArray(target) ? target : [target];
-  var bBox = getBBox(elements);
+  if (!isArray(target) && isConnection(target)) {
+    var viewbox = this._canvas.viewbox();
+    var lastWaypoint = getLastWaypoint(target);
+    var x6 = lastWaypoint.x * viewbox.scale - viewbox.x * viewbox.scale, y5 = lastWaypoint.y * viewbox.scale - viewbox.y * viewbox.scale;
+    return {
+      left: x6 + CONTEXT_PAD_MARGIN * this._canvas.zoom(),
+      top: y5
+    };
+  }
+  var container = this._canvas.getContainer();
+  var containerBounds = container.getBoundingClientRect();
+  var targetBounds = this._getTargetBounds(target);
   return {
-    position: {
-      left: bBox.x + bBox.width + CONTEXT_PAD_PADDING,
-      top: bBox.y - CONTEXT_PAD_PADDING / 2
+    left: targetBounds.right - containerBounds.left + CONTEXT_PAD_MARGIN * this._canvas.zoom(),
+    top: targetBounds.top - containerBounds.top
+  };
+};
+ContextPad.prototype._updatePosition = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+  var html = this._current.html;
+  var position = this._getPosition(this._current.target);
+  if ("x" in position && "y" in position) {
+    html.style.left = position.x + "px";
+    html.style.top = position.y + "px";
+  } else {
+    [
+      "top",
+      "right",
+      "bottom",
+      "left"
+    ].forEach(function(key) {
+      if (key in position) {
+        html.style[key] = position[key] + "px";
+      }
+    });
+  }
+};
+ContextPad.prototype._updateVisibility = function() {
+  const updateFn = () => {
+    if (!this.isOpen()) {
+      return;
+    }
+    var self2 = this;
+    var target = this._current.target;
+    var targets = isArray(target) ? target : [target];
+    var isHidden6 = targets.some(function(target2) {
+      return self2._canvas.hasMarker(target2, MARKER_HIDDEN);
+    });
+    if (isHidden6) {
+      self2.hide();
+    } else {
+      self2.show();
     }
   };
+  this._scheduler.schedule(updateFn, "ContextPad#_updateVisibility");
+};
+ContextPad.prototype._getTargetBounds = function(target) {
+  var self2 = this;
+  var elements = isArray(target) ? target : [target];
+  var elementsGfx = elements.map(function(element) {
+    return self2._canvas.getGraphics(element);
+  });
+  return elementsGfx.reduce(function(bounds, elementGfx) {
+    const elementBounds = elementGfx.getBoundingClientRect();
+    bounds.top = Math.min(bounds.top, elementBounds.top);
+    bounds.right = Math.max(bounds.right, elementBounds.right);
+    bounds.bottom = Math.max(bounds.bottom, elementBounds.bottom);
+    bounds.left = Math.min(bounds.left, elementBounds.left);
+    bounds.x = bounds.left;
+    bounds.y = bounds.top;
+    bounds.width = bounds.right - bounds.left;
+    bounds.height = bounds.bottom - bounds.top;
+    return bounds;
+  }, {
+    top: Infinity,
+    right: -Infinity,
+    bottom: -Infinity,
+    left: Infinity
+  });
 };
 function addClasses(element, classNames) {
   var classes4 = classes2(element);
@@ -19252,17 +23165,22 @@ function addClasses(element, classNames) {
     classes4.add(cls);
   });
 }
-function includes(array, item) {
-  return array.indexOf(item) !== -1;
-}
 function getLastWaypoint(connection) {
   return connection.waypoints[connection.waypoints.length - 1];
+}
+function targetsEqual(target, otherTarget) {
+  target = isArray(target) ? target : [target];
+  otherTarget = isArray(otherTarget) ? otherTarget : [otherTarget];
+  return target.length === otherTarget.length && every(target, function(element) {
+    return otherTarget.includes(element);
+  });
 }
 
 // node_modules/diagram-js/lib/features/context-pad/index.js
 var context_pad_default = {
   __depends__: [
     interaction_events_default,
+    scheduler_default,
     overlays_default
   ],
   contextPad: ["type", ContextPad]
@@ -19277,7 +23195,7 @@ var i;
 var o;
 var r;
 var f;
-var e2;
+var e3;
 var c;
 var s;
 var a;
@@ -19286,8 +23204,7 @@ var v = [];
 var p = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
 var y = Array.isArray;
 function d(n4, l5) {
-  for (var u6 in l5)
-    n4[u6] = l5[u6];
+  for (var u6 in l5) n4[u6] = l5[u6];
   return n4;
 }
 function _(n4) {
@@ -19296,11 +23213,8 @@ function _(n4) {
 }
 function g(l5, u6, t7) {
   var i7, o5, r7, f6 = {};
-  for (r7 in u6)
-    "key" == r7 ? i7 = u6[r7] : "ref" == r7 ? o5 = u6[r7] : f6[r7] = u6[r7];
-  if (arguments.length > 2 && (f6.children = arguments.length > 3 ? n.call(arguments, 2) : t7), "function" == typeof l5 && null != l5.defaultProps)
-    for (r7 in l5.defaultProps)
-      void 0 === f6[r7] && (f6[r7] = l5.defaultProps[r7]);
+  for (r7 in u6) "key" == r7 ? i7 = u6[r7] : "ref" == r7 ? o5 = u6[r7] : f6[r7] = u6[r7];
+  if (arguments.length > 2 && (f6.children = arguments.length > 3 ? n.call(arguments, 2) : t7), "function" == typeof l5 && null != l5.defaultProps) for (r7 in l5.defaultProps) void 0 === f6[r7] && (f6[r7] = l5.defaultProps[r7]);
   return b(l5, f6, i7, o5, null);
 }
 function b(n4, t7, i7, o5, r7) {
@@ -19314,21 +23228,17 @@ function k(n4, l5) {
   this.props = n4, this.context = l5;
 }
 function x(n4, l5) {
-  if (null == l5)
-    return n4.__ ? x(n4.__, n4.__i + 1) : null;
-  for (var u6; l5 < n4.__k.length; l5++)
-    if (null != (u6 = n4.__k[l5]) && null != u6.__e)
-      return u6.__e;
+  if (null == l5) return n4.__ ? x(n4.__, n4.__i + 1) : null;
+  for (var u6; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) return u6.__e;
   return "function" == typeof n4.type ? x(n4) : null;
 }
 function C(n4) {
   var l5, u6;
   if (null != (n4 = n4.__) && null != n4.__c) {
-    for (n4.__e = n4.__c.base = null, l5 = 0; l5 < n4.__k.length; l5++)
-      if (null != (u6 = n4.__k[l5]) && null != u6.__e) {
-        n4.__e = n4.__c.base = u6.__e;
-        break;
-      }
+    for (n4.__e = n4.__c.base = null, l5 = 0; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) {
+      n4.__e = n4.__c.base = u6.__e;
+      break;
+    }
     return C(n4);
   }
 }
@@ -19336,30 +23246,24 @@ function P(n4) {
   (!n4.__d && (n4.__d = true) && i.push(n4) && !S.__r++ || o !== l.debounceRendering) && ((o = l.debounceRendering) || r)(S);
 }
 function S() {
-  var n4, u6, t7, o5, r7, e7, c5, s5;
-  for (i.sort(f); n4 = i.shift(); )
-    n4.__d && (u6 = i.length, o5 = void 0, e7 = (r7 = (t7 = n4).__v).__e, c5 = [], s5 = [], t7.__P && ((o5 = d({}, r7)).__v = r7.__v + 1, l.vnode && l.vnode(o5), O(t7.__P, o5, r7, t7.__n, void 0 !== t7.__P.ownerSVGElement, 32 & r7.__u ? [e7] : null, c5, null == e7 ? x(r7) : e7, !!(32 & r7.__u), s5), o5.__v = r7.__v, o5.__.__k[o5.__i] = o5, j(c5, o5, s5), o5.__e != e7 && C(o5)), i.length > u6 && i.sort(f));
+  var n4, u6, t7, o5, r7, e8, c5, s5;
+  for (i.sort(f); n4 = i.shift(); ) n4.__d && (u6 = i.length, o5 = void 0, e8 = (r7 = (t7 = n4).__v).__e, c5 = [], s5 = [], t7.__P && ((o5 = d({}, r7)).__v = r7.__v + 1, l.vnode && l.vnode(o5), O(t7.__P, o5, r7, t7.__n, void 0 !== t7.__P.ownerSVGElement, 32 & r7.__u ? [e8] : null, c5, null == e8 ? x(r7) : e8, !!(32 & r7.__u), s5), o5.__v = r7.__v, o5.__.__k[o5.__i] = o5, j(c5, o5, s5), o5.__e != e8 && C(o5)), i.length > u6 && i.sort(f));
   S.__r = 0;
 }
-function $(n4, l5, u6, t7, i7, o5, r7, f6, e7, c5, s5) {
+function $(n4, l5, u6, t7, i7, o5, r7, f6, e8, c5, s5) {
   var a6, p5, y5, d5, _5, g6 = t7 && t7.__k || v, b5 = l5.length;
-  for (u6.__d = e7, I(u6, l5, g6), e7 = u6.__d, a6 = 0; a6 < b5; a6++)
-    null != (y5 = u6.__k[a6]) && "boolean" != typeof y5 && "function" != typeof y5 && (p5 = -1 === y5.__i ? h : g6[y5.__i] || h, y5.__i = a6, O(n4, y5, p5, i7, o5, r7, f6, e7, c5, s5), d5 = y5.__e, y5.ref && p5.ref != y5.ref && (p5.ref && N(p5.ref, null, y5), s5.push(y5.ref, y5.__c || d5, y5)), null == _5 && null != d5 && (_5 = d5), 65536 & y5.__u || p5.__k === y5.__k ? (e7 && !e7.isConnected && (e7 = x(p5)), e7 = H(y5, e7, n4)) : "function" == typeof y5.type && void 0 !== y5.__d ? e7 = y5.__d : d5 && (e7 = d5.nextSibling), y5.__d = void 0, y5.__u &= -196609);
-  u6.__d = e7, u6.__e = _5;
+  for (u6.__d = e8, I(u6, l5, g6), e8 = u6.__d, a6 = 0; a6 < b5; a6++) null != (y5 = u6.__k[a6]) && "boolean" != typeof y5 && "function" != typeof y5 && (p5 = -1 === y5.__i ? h : g6[y5.__i] || h, y5.__i = a6, O(n4, y5, p5, i7, o5, r7, f6, e8, c5, s5), d5 = y5.__e, y5.ref && p5.ref != y5.ref && (p5.ref && N(p5.ref, null, y5), s5.push(y5.ref, y5.__c || d5, y5)), null == _5 && null != d5 && (_5 = d5), 65536 & y5.__u || p5.__k === y5.__k ? (e8 && !e8.isConnected && (e8 = x(p5)), e8 = H(y5, e8, n4)) : "function" == typeof y5.type && void 0 !== y5.__d ? e8 = y5.__d : d5 && (e8 = d5.nextSibling), y5.__d = void 0, y5.__u &= -196609);
+  u6.__d = e8, u6.__e = _5;
 }
 function I(n4, l5, u6) {
-  var t7, i7, o5, r7, f6, e7 = l5.length, c5 = u6.length, s5 = c5, a6 = 0;
-  for (n4.__k = [], t7 = 0; t7 < e7; t7++)
-    r7 = t7 + a6, null != (i7 = n4.__k[t7] = null == (i7 = l5[t7]) || "boolean" == typeof i7 || "function" == typeof i7 ? null : "string" == typeof i7 || "number" == typeof i7 || "bigint" == typeof i7 || i7.constructor == String ? b(null, i7, null, null, null) : y(i7) ? b(w, { children: i7 }, null, null, null) : void 0 === i7.constructor && i7.__b > 0 ? b(i7.type, i7.props, i7.key, i7.ref ? i7.ref : null, i7.__v) : i7) ? (i7.__ = n4, i7.__b = n4.__b + 1, f6 = A(i7, u6, r7, s5), i7.__i = f6, o5 = null, -1 !== f6 && (s5--, (o5 = u6[f6]) && (o5.__u |= 131072)), null == o5 || null === o5.__v ? (-1 == f6 && a6--, "function" != typeof i7.type && (i7.__u |= 65536)) : f6 !== r7 && (f6 === r7 + 1 ? a6++ : f6 > r7 ? s5 > e7 - r7 ? a6 += f6 - r7 : a6-- : f6 < r7 ? f6 == r7 - 1 && (a6 = f6 - r7) : a6 = 0, f6 !== t7 + a6 && (i7.__u |= 65536))) : (o5 = u6[r7]) && null == o5.key && o5.__e && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = x(o5)), q(o5, o5, false), u6[r7] = null, s5--);
-  if (s5)
-    for (t7 = 0; t7 < c5; t7++)
-      null != (o5 = u6[t7]) && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = x(o5)), q(o5, o5));
+  var t7, i7, o5, r7, f6, e8 = l5.length, c5 = u6.length, s5 = c5, a6 = 0;
+  for (n4.__k = [], t7 = 0; t7 < e8; t7++) r7 = t7 + a6, null != (i7 = n4.__k[t7] = null == (i7 = l5[t7]) || "boolean" == typeof i7 || "function" == typeof i7 ? null : "string" == typeof i7 || "number" == typeof i7 || "bigint" == typeof i7 || i7.constructor == String ? b(null, i7, null, null, null) : y(i7) ? b(w, { children: i7 }, null, null, null) : void 0 === i7.constructor && i7.__b > 0 ? b(i7.type, i7.props, i7.key, i7.ref ? i7.ref : null, i7.__v) : i7) ? (i7.__ = n4, i7.__b = n4.__b + 1, f6 = A(i7, u6, r7, s5), i7.__i = f6, o5 = null, -1 !== f6 && (s5--, (o5 = u6[f6]) && (o5.__u |= 131072)), null == o5 || null === o5.__v ? (-1 == f6 && a6--, "function" != typeof i7.type && (i7.__u |= 65536)) : f6 !== r7 && (f6 === r7 + 1 ? a6++ : f6 > r7 ? s5 > e8 - r7 ? a6 += f6 - r7 : a6-- : f6 < r7 ? f6 == r7 - 1 && (a6 = f6 - r7) : a6 = 0, f6 !== t7 + a6 && (i7.__u |= 65536))) : (o5 = u6[r7]) && null == o5.key && o5.__e && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = x(o5)), q(o5, o5, false), u6[r7] = null, s5--);
+  if (s5) for (t7 = 0; t7 < c5; t7++) null != (o5 = u6[t7]) && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = x(o5)), q(o5, o5));
 }
 function H(n4, l5, u6) {
   var t7, i7;
   if ("function" == typeof n4.type) {
-    for (t7 = n4.__k, i7 = 0; t7 && i7 < t7.length; i7++)
-      t7[i7] && (t7[i7].__ = n4, l5 = H(t7[i7], l5, u6));
+    for (t7 = n4.__k, i7 = 0; t7 && i7 < t7.length; i7++) t7[i7] && (t7[i7].__ = n4, l5 = H(t7[i7], l5, u6));
     return l5;
   }
   n4.__e != l5 && (u6.insertBefore(n4.__e, l5 || null), l5 = n4.__e);
@@ -19369,22 +23273,18 @@ function H(n4, l5, u6) {
   return l5;
 }
 function A(n4, l5, u6, t7) {
-  var i7 = n4.key, o5 = n4.type, r7 = u6 - 1, f6 = u6 + 1, e7 = l5[u6];
-  if (null === e7 || e7 && i7 == e7.key && o5 === e7.type && 0 == (131072 & e7.__u))
-    return u6;
-  if (t7 > (null != e7 && 0 == (131072 & e7.__u) ? 1 : 0))
-    for (; r7 >= 0 || f6 < l5.length; ) {
-      if (r7 >= 0) {
-        if ((e7 = l5[r7]) && 0 == (131072 & e7.__u) && i7 == e7.key && o5 === e7.type)
-          return r7;
-        r7--;
-      }
-      if (f6 < l5.length) {
-        if ((e7 = l5[f6]) && 0 == (131072 & e7.__u) && i7 == e7.key && o5 === e7.type)
-          return f6;
-        f6++;
-      }
+  var i7 = n4.key, o5 = n4.type, r7 = u6 - 1, f6 = u6 + 1, e8 = l5[u6];
+  if (null === e8 || e8 && i7 == e8.key && o5 === e8.type && 0 == (131072 & e8.__u)) return u6;
+  if (t7 > (null != e8 && 0 == (131072 & e8.__u) ? 1 : 0)) for (; r7 >= 0 || f6 < l5.length; ) {
+    if (r7 >= 0) {
+      if ((e8 = l5[r7]) && 0 == (131072 & e8.__u) && i7 == e8.key && o5 === e8.type) return r7;
+      r7--;
     }
+    if (f6 < l5.length) {
+      if ((e8 = l5[f6]) && 0 == (131072 & e8.__u) && i7 == e8.key && o5 === e8.type) return f6;
+      f6++;
+    }
+  }
   return -1;
 }
 function F(n4, l5, u6) {
@@ -19392,87 +23292,66 @@ function F(n4, l5, u6) {
 }
 function L(n4, l5, u6, t7, i7) {
   var o5;
-  n:
-    if ("style" === l5)
-      if ("string" == typeof u6)
-        n4.style.cssText = u6;
-      else {
-        if ("string" == typeof t7 && (n4.style.cssText = t7 = ""), t7)
-          for (l5 in t7)
-            u6 && l5 in u6 || F(n4.style, l5, "");
-        if (u6)
-          for (l5 in u6)
-            t7 && u6[l5] === t7[l5] || F(n4.style, l5, u6[l5]);
-      }
-    else if ("o" === l5[0] && "n" === l5[1])
-      o5 = l5 !== (l5 = l5.replace(/(PointerCapture)$|Capture$/i, "$1")), l5 = l5.toLowerCase() in n4 || "onFocusOut" === l5 || "onFocusIn" === l5 ? l5.toLowerCase().slice(2) : l5.slice(2), n4.l || (n4.l = {}), n4.l[l5 + o5] = u6, u6 ? t7 ? u6.u = t7.u : (u6.u = e2, n4.addEventListener(l5, o5 ? s : c, o5)) : n4.removeEventListener(l5, o5 ? s : c, o5);
-    else {
-      if (i7)
-        l5 = l5.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
-      else if ("width" != l5 && "height" != l5 && "href" != l5 && "list" != l5 && "form" != l5 && "tabIndex" != l5 && "download" != l5 && "rowSpan" != l5 && "colSpan" != l5 && "role" != l5 && l5 in n4)
-        try {
-          n4[l5] = null == u6 ? "" : u6;
-          break n;
-        } catch (n5) {
-        }
-      "function" == typeof u6 || (null == u6 || false === u6 && "-" !== l5[4] ? n4.removeAttribute(l5) : n4.setAttribute(l5, u6));
+  n: if ("style" === l5) if ("string" == typeof u6) n4.style.cssText = u6;
+  else {
+    if ("string" == typeof t7 && (n4.style.cssText = t7 = ""), t7) for (l5 in t7) u6 && l5 in u6 || F(n4.style, l5, "");
+    if (u6) for (l5 in u6) t7 && u6[l5] === t7[l5] || F(n4.style, l5, u6[l5]);
+  }
+  else if ("o" === l5[0] && "n" === l5[1]) o5 = l5 !== (l5 = l5.replace(/(PointerCapture)$|Capture$/i, "$1")), l5 = l5.toLowerCase() in n4 || "onFocusOut" === l5 || "onFocusIn" === l5 ? l5.toLowerCase().slice(2) : l5.slice(2), n4.l || (n4.l = {}), n4.l[l5 + o5] = u6, u6 ? t7 ? u6.u = t7.u : (u6.u = e3, n4.addEventListener(l5, o5 ? s : c, o5)) : n4.removeEventListener(l5, o5 ? s : c, o5);
+  else {
+    if (i7) l5 = l5.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
+    else if ("width" != l5 && "height" != l5 && "href" != l5 && "list" != l5 && "form" != l5 && "tabIndex" != l5 && "download" != l5 && "rowSpan" != l5 && "colSpan" != l5 && "role" != l5 && l5 in n4) try {
+      n4[l5] = null == u6 ? "" : u6;
+      break n;
+    } catch (n5) {
     }
+    "function" == typeof u6 || (null == u6 || false === u6 && "-" !== l5[4] ? n4.removeAttribute(l5) : n4.setAttribute(l5, u6));
+  }
 }
 function M(n4) {
   return function(u6) {
     if (this.l) {
       var t7 = this.l[u6.type + n4];
-      if (null == u6.t)
-        u6.t = e2++;
-      else if (u6.t < t7.u)
-        return;
+      if (null == u6.t) u6.t = e3++;
+      else if (u6.t < t7.u) return;
       return t7(l.event ? l.event(u6) : u6);
     }
   };
 }
-function O(n4, u6, t7, i7, o5, r7, f6, e7, c5, s5) {
+function O(n4, u6, t7, i7, o5, r7, f6, e8, c5, s5) {
   var a6, h5, v5, p5, _5, g6, b5, m5, x6, C5, P5, S3, I4, H4, T5, A6 = u6.type;
-  if (void 0 !== u6.constructor)
-    return null;
-  128 & t7.__u && (c5 = !!(32 & t7.__u), r7 = [e7 = u6.__e = t7.__e]), (a6 = l.__b) && a6(u6);
-  n:
-    if ("function" == typeof A6)
-      try {
-        if (m5 = u6.props, x6 = (a6 = A6.contextType) && i7[a6.__c], C5 = a6 ? x6 ? x6.props.value : a6.__ : i7, t7.__c ? b5 = (h5 = u6.__c = t7.__c).__ = h5.__E : ("prototype" in A6 && A6.prototype.render ? u6.__c = h5 = new A6(m5, C5) : (u6.__c = h5 = new k(m5, C5), h5.constructor = A6, h5.render = B), x6 && x6.sub(h5), h5.props = m5, h5.state || (h5.state = {}), h5.context = C5, h5.__n = i7, v5 = h5.__d = true, h5.__h = [], h5._sb = []), null == h5.__s && (h5.__s = h5.state), null != A6.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = d({}, h5.__s)), d(h5.__s, A6.getDerivedStateFromProps(m5, h5.__s))), p5 = h5.props, _5 = h5.state, h5.__v = u6, v5)
-          null == A6.getDerivedStateFromProps && null != h5.componentWillMount && h5.componentWillMount(), null != h5.componentDidMount && h5.__h.push(h5.componentDidMount);
-        else {
-          if (null == A6.getDerivedStateFromProps && m5 !== p5 && null != h5.componentWillReceiveProps && h5.componentWillReceiveProps(m5, C5), !h5.__e && (null != h5.shouldComponentUpdate && false === h5.shouldComponentUpdate(m5, h5.__s, C5) || u6.__v === t7.__v)) {
-            for (u6.__v !== t7.__v && (h5.props = m5, h5.state = h5.__s, h5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.forEach(function(n5) {
-              n5 && (n5.__ = u6);
-            }), P5 = 0; P5 < h5._sb.length; P5++)
-              h5.__h.push(h5._sb[P5]);
-            h5._sb = [], h5.__h.length && f6.push(h5);
-            break n;
-          }
-          null != h5.componentWillUpdate && h5.componentWillUpdate(m5, h5.__s, C5), null != h5.componentDidUpdate && h5.__h.push(function() {
-            h5.componentDidUpdate(p5, _5, g6);
-          });
-        }
-        if (h5.context = C5, h5.props = m5, h5.__P = n4, h5.__e = false, S3 = l.__r, I4 = 0, "prototype" in A6 && A6.prototype.render) {
-          for (h5.state = h5.__s, h5.__d = false, S3 && S3(u6), a6 = h5.render(h5.props, h5.state, h5.context), H4 = 0; H4 < h5._sb.length; H4++)
-            h5.__h.push(h5._sb[H4]);
-          h5._sb = [];
-        } else
-          do {
-            h5.__d = false, S3 && S3(u6), a6 = h5.render(h5.props, h5.state, h5.context), h5.state = h5.__s;
-          } while (h5.__d && ++I4 < 25);
-        h5.state = h5.__s, null != h5.getChildContext && (i7 = d(d({}, i7), h5.getChildContext())), v5 || null == h5.getSnapshotBeforeUpdate || (g6 = h5.getSnapshotBeforeUpdate(p5, _5)), $(n4, y(T5 = null != a6 && a6.type === w && null == a6.key ? a6.props.children : a6) ? T5 : [T5], u6, t7, i7, o5, r7, f6, e7, c5, s5), h5.base = u6.__e, u6.__u &= -161, h5.__h.length && f6.push(h5), b5 && (h5.__E = h5.__ = null);
-      } catch (n5) {
-        u6.__v = null, c5 || null != r7 ? (u6.__e = e7, u6.__u |= c5 ? 160 : 32, r7[r7.indexOf(e7)] = null) : (u6.__e = t7.__e, u6.__k = t7.__k), l.__e(n5, u6, t7);
+  if (void 0 !== u6.constructor) return null;
+  128 & t7.__u && (c5 = !!(32 & t7.__u), r7 = [e8 = u6.__e = t7.__e]), (a6 = l.__b) && a6(u6);
+  n: if ("function" == typeof A6) try {
+    if (m5 = u6.props, x6 = (a6 = A6.contextType) && i7[a6.__c], C5 = a6 ? x6 ? x6.props.value : a6.__ : i7, t7.__c ? b5 = (h5 = u6.__c = t7.__c).__ = h5.__E : ("prototype" in A6 && A6.prototype.render ? u6.__c = h5 = new A6(m5, C5) : (u6.__c = h5 = new k(m5, C5), h5.constructor = A6, h5.render = B), x6 && x6.sub(h5), h5.props = m5, h5.state || (h5.state = {}), h5.context = C5, h5.__n = i7, v5 = h5.__d = true, h5.__h = [], h5._sb = []), null == h5.__s && (h5.__s = h5.state), null != A6.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = d({}, h5.__s)), d(h5.__s, A6.getDerivedStateFromProps(m5, h5.__s))), p5 = h5.props, _5 = h5.state, h5.__v = u6, v5) null == A6.getDerivedStateFromProps && null != h5.componentWillMount && h5.componentWillMount(), null != h5.componentDidMount && h5.__h.push(h5.componentDidMount);
+    else {
+      if (null == A6.getDerivedStateFromProps && m5 !== p5 && null != h5.componentWillReceiveProps && h5.componentWillReceiveProps(m5, C5), !h5.__e && (null != h5.shouldComponentUpdate && false === h5.shouldComponentUpdate(m5, h5.__s, C5) || u6.__v === t7.__v)) {
+        for (u6.__v !== t7.__v && (h5.props = m5, h5.state = h5.__s, h5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.forEach(function(n5) {
+          n5 && (n5.__ = u6);
+        }), P5 = 0; P5 < h5._sb.length; P5++) h5.__h.push(h5._sb[P5]);
+        h5._sb = [], h5.__h.length && f6.push(h5);
+        break n;
       }
-    else
-      null == r7 && u6.__v === t7.__v ? (u6.__k = t7.__k, u6.__e = t7.__e) : u6.__e = z(t7.__e, u6, t7, i7, o5, r7, f6, c5, s5);
+      null != h5.componentWillUpdate && h5.componentWillUpdate(m5, h5.__s, C5), null != h5.componentDidUpdate && h5.__h.push(function() {
+        h5.componentDidUpdate(p5, _5, g6);
+      });
+    }
+    if (h5.context = C5, h5.props = m5, h5.__P = n4, h5.__e = false, S3 = l.__r, I4 = 0, "prototype" in A6 && A6.prototype.render) {
+      for (h5.state = h5.__s, h5.__d = false, S3 && S3(u6), a6 = h5.render(h5.props, h5.state, h5.context), H4 = 0; H4 < h5._sb.length; H4++) h5.__h.push(h5._sb[H4]);
+      h5._sb = [];
+    } else do {
+      h5.__d = false, S3 && S3(u6), a6 = h5.render(h5.props, h5.state, h5.context), h5.state = h5.__s;
+    } while (h5.__d && ++I4 < 25);
+    h5.state = h5.__s, null != h5.getChildContext && (i7 = d(d({}, i7), h5.getChildContext())), v5 || null == h5.getSnapshotBeforeUpdate || (g6 = h5.getSnapshotBeforeUpdate(p5, _5)), $(n4, y(T5 = null != a6 && a6.type === w && null == a6.key ? a6.props.children : a6) ? T5 : [T5], u6, t7, i7, o5, r7, f6, e8, c5, s5), h5.base = u6.__e, u6.__u &= -161, h5.__h.length && f6.push(h5), b5 && (h5.__E = h5.__ = null);
+  } catch (n5) {
+    u6.__v = null, c5 || null != r7 ? (u6.__e = e8, u6.__u |= c5 ? 160 : 32, r7[r7.indexOf(e8)] = null) : (u6.__e = t7.__e, u6.__k = t7.__k), l.__e(n5, u6, t7);
+  }
+  else null == r7 && u6.__v === t7.__v ? (u6.__k = t7.__k, u6.__e = t7.__e) : u6.__e = z(t7.__e, u6, t7, i7, o5, r7, f6, c5, s5);
   (a6 = l.diffed) && a6(u6);
 }
 function j(n4, u6, t7) {
   u6.__d = void 0;
-  for (var i7 = 0; i7 < t7.length; i7++)
-    N(t7[i7], t7[++i7], t7[++i7]);
+  for (var i7 = 0; i7 < t7.length; i7++) N(t7[i7], t7[++i7], t7[++i7]);
   l.__c && l.__c(u6, n4), n4.some(function(u7) {
     try {
       n4 = u7.__h, u7.__h = [], n4.some(function(n5) {
@@ -19483,36 +23362,26 @@ function j(n4, u6, t7) {
     }
   });
 }
-function z(l5, u6, t7, i7, o5, r7, f6, e7, c5) {
+function z(l5, u6, t7, i7, o5, r7, f6, e8, c5) {
   var s5, a6, v5, p5, d5, g6, b5, m5 = t7.props, w6 = u6.props, k6 = u6.type;
   if ("svg" === k6 && (o5 = true), null != r7) {
-    for (s5 = 0; s5 < r7.length; s5++)
-      if ((d5 = r7[s5]) && "setAttribute" in d5 == !!k6 && (k6 ? d5.localName === k6 : 3 === d5.nodeType)) {
-        l5 = d5, r7[s5] = null;
-        break;
-      }
+    for (s5 = 0; s5 < r7.length; s5++) if ((d5 = r7[s5]) && "setAttribute" in d5 == !!k6 && (k6 ? d5.localName === k6 : 3 === d5.nodeType)) {
+      l5 = d5, r7[s5] = null;
+      break;
+    }
   }
   if (null == l5) {
-    if (null === k6)
-      return document.createTextNode(w6);
-    l5 = o5 ? document.createElementNS("http://www.w3.org/2000/svg", k6) : document.createElement(k6, w6.is && w6), r7 = null, e7 = false;
+    if (null === k6) return document.createTextNode(w6);
+    l5 = o5 ? document.createElementNS("http://www.w3.org/2000/svg", k6) : document.createElement(k6, w6.is && w6), r7 = null, e8 = false;
   }
-  if (null === k6)
-    m5 === w6 || e7 && l5.data === w6 || (l5.data = w6);
+  if (null === k6) m5 === w6 || e8 && l5.data === w6 || (l5.data = w6);
   else {
-    if (r7 = r7 && n.call(l5.childNodes), m5 = t7.props || h, !e7 && null != r7)
-      for (m5 = {}, s5 = 0; s5 < l5.attributes.length; s5++)
-        m5[(d5 = l5.attributes[s5]).name] = d5.value;
-    for (s5 in m5)
-      d5 = m5[s5], "children" == s5 || ("dangerouslySetInnerHTML" == s5 ? v5 = d5 : "key" === s5 || s5 in w6 || L(l5, s5, null, d5, o5));
-    for (s5 in w6)
-      d5 = w6[s5], "children" == s5 ? p5 = d5 : "dangerouslySetInnerHTML" == s5 ? a6 = d5 : "value" == s5 ? g6 = d5 : "checked" == s5 ? b5 = d5 : "key" === s5 || e7 && "function" != typeof d5 || m5[s5] === d5 || L(l5, s5, d5, m5[s5], o5);
-    if (a6)
-      e7 || v5 && (a6.__html === v5.__html || a6.__html === l5.innerHTML) || (l5.innerHTML = a6.__html), u6.__k = [];
-    else if (v5 && (l5.innerHTML = ""), $(l5, y(p5) ? p5 : [p5], u6, t7, i7, o5 && "foreignObject" !== k6, r7, f6, r7 ? r7[0] : t7.__k && x(t7, 0), e7, c5), null != r7)
-      for (s5 = r7.length; s5--; )
-        null != r7[s5] && _(r7[s5]);
-    e7 || (s5 = "value", void 0 !== g6 && (g6 !== l5[s5] || "progress" === k6 && !g6 || "option" === k6 && g6 !== m5[s5]) && L(l5, s5, g6, m5[s5], false), s5 = "checked", void 0 !== b5 && b5 !== l5[s5] && L(l5, s5, b5, m5[s5], false));
+    if (r7 = r7 && n.call(l5.childNodes), m5 = t7.props || h, !e8 && null != r7) for (m5 = {}, s5 = 0; s5 < l5.attributes.length; s5++) m5[(d5 = l5.attributes[s5]).name] = d5.value;
+    for (s5 in m5) d5 = m5[s5], "children" == s5 || ("dangerouslySetInnerHTML" == s5 ? v5 = d5 : "key" === s5 || s5 in w6 || L(l5, s5, null, d5, o5));
+    for (s5 in w6) d5 = w6[s5], "children" == s5 ? p5 = d5 : "dangerouslySetInnerHTML" == s5 ? a6 = d5 : "value" == s5 ? g6 = d5 : "checked" == s5 ? b5 = d5 : "key" === s5 || e8 && "function" != typeof d5 || m5[s5] === d5 || L(l5, s5, d5, m5[s5], o5);
+    if (a6) e8 || v5 && (a6.__html === v5.__html || a6.__html === l5.innerHTML) || (l5.innerHTML = a6.__html), u6.__k = [];
+    else if (v5 && (l5.innerHTML = ""), $(l5, y(p5) ? p5 : [p5], u6, t7, i7, o5 && "foreignObject" !== k6, r7, f6, r7 ? r7[0] : t7.__k && x(t7, 0), e8, c5), null != r7) for (s5 = r7.length; s5--; ) null != r7[s5] && _(r7[s5]);
+    e8 || (s5 = "value", void 0 !== g6 && (g6 !== l5[s5] || "progress" === k6 && !g6 || "option" === k6 && g6 !== m5[s5]) && L(l5, s5, g6, m5[s5], false), s5 = "checked", void 0 !== b5 && b5 !== l5[s5] && L(l5, s5, b5, m5[s5], false));
   }
   return l5;
 }
@@ -19526,35 +23395,29 @@ function N(n4, u6, t7) {
 function q(n4, u6, t7) {
   var i7, o5;
   if (l.unmount && l.unmount(n4), (i7 = n4.ref) && (i7.current && i7.current !== n4.__e || N(i7, null, u6)), null != (i7 = n4.__c)) {
-    if (i7.componentWillUnmount)
-      try {
-        i7.componentWillUnmount();
-      } catch (n5) {
-        l.__e(n5, u6);
-      }
+    if (i7.componentWillUnmount) try {
+      i7.componentWillUnmount();
+    } catch (n5) {
+      l.__e(n5, u6);
+    }
     i7.base = i7.__P = null;
   }
-  if (i7 = n4.__k)
-    for (o5 = 0; o5 < i7.length; o5++)
-      i7[o5] && q(i7[o5], u6, t7 || "function" != typeof n4.type);
+  if (i7 = n4.__k) for (o5 = 0; o5 < i7.length; o5++) i7[o5] && q(i7[o5], u6, t7 || "function" != typeof n4.type);
   t7 || null == n4.__e || _(n4.__e), n4.__c = n4.__ = n4.__e = n4.__d = void 0;
 }
 function B(n4, l5, u6) {
   return this.constructor(n4, u6);
 }
 function D(u6, t7, i7) {
-  var o5, r7, f6, e7;
-  l.__ && l.__(u6, t7), r7 = (o5 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, f6 = [], e7 = [], O(t7, u6 = (!o5 && i7 || t7).__k = g(w, null, [u6]), r7 || h, h, void 0 !== t7.ownerSVGElement, !o5 && i7 ? [i7] : r7 ? null : t7.firstChild ? n.call(t7.childNodes) : null, f6, !o5 && i7 ? i7 : r7 ? r7.__e : t7.firstChild, o5, e7), j(f6, u6, e7);
+  var o5, r7, f6, e8;
+  l.__ && l.__(u6, t7), r7 = (o5 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, f6 = [], e8 = [], O(t7, u6 = (!o5 && i7 || t7).__k = g(w, null, [u6]), r7 || h, h, void 0 !== t7.ownerSVGElement, !o5 && i7 ? [i7] : r7 ? null : t7.firstChild ? n.call(t7.childNodes) : null, f6, !o5 && i7 ? i7 : r7 ? r7.__e : t7.firstChild, o5, e8), j(f6, u6, e8);
 }
 n = v.slice, l = { __e: function(n4, l5, u6, t7) {
-  for (var i7, o5, r7; l5 = l5.__; )
-    if ((i7 = l5.__c) && !i7.__)
-      try {
-        if ((o5 = i7.constructor) && null != o5.getDerivedStateFromError && (i7.setState(o5.getDerivedStateFromError(n4)), r7 = i7.__d), null != i7.componentDidCatch && (i7.componentDidCatch(n4, t7 || {}), r7 = i7.__d), r7)
-          return i7.__E = i7;
-      } catch (l6) {
-        n4 = l6;
-      }
+  for (var i7, o5, r7; l5 = l5.__; ) if ((i7 = l5.__c) && !i7.__) try {
+    if ((o5 = i7.constructor) && null != o5.getDerivedStateFromError && (i7.setState(o5.getDerivedStateFromError(n4)), r7 = i7.__d), null != i7.componentDidCatch && (i7.componentDidCatch(n4, t7 || {}), r7 = i7.__d), r7) return i7.__E = i7;
+  } catch (l6) {
+    n4 = l6;
+  }
   throw n4;
 } }, u = 0, t = function(n4) {
   return null != n4 && null == n4.constructor;
@@ -19565,28 +23428,27 @@ n = v.slice, l = { __e: function(n4, l5, u6, t7) {
   this.__v && (this.__e = true, n4 && this.__h.push(n4), P(this));
 }, k.prototype.render = w, i = [], r = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, f = function(n4, l5) {
   return n4.__v.__b - l5.__v.__b;
-}, S.__r = 0, e2 = 0, c = M(false), s = M(true), a = 0;
+}, S.__r = 0, e3 = 0, c = M(false), s = M(true), a = 0;
 
 // node_modules/htm/dist/htm.module.js
-var n2 = function(t7, s5, r7, e7) {
+var n2 = function(t7, s5, r7, e8) {
   var u6;
   s5[0] = 0;
   for (var h5 = 1; h5 < s5.length; h5++) {
     var p5 = s5[h5++], a6 = s5[h5] ? (s5[0] |= p5 ? 1 : 2, r7[s5[h5++]]) : s5[++h5];
-    3 === p5 ? e7[0] = a6 : 4 === p5 ? e7[1] = Object.assign(e7[1] || {}, a6) : 5 === p5 ? (e7[1] = e7[1] || {})[s5[++h5]] = a6 : 6 === p5 ? e7[1][s5[++h5]] += a6 + "" : p5 ? (u6 = t7.apply(a6, n2(t7, a6, r7, ["", null])), e7.push(u6), a6[0] ? s5[0] |= 2 : (s5[h5 - 2] = 0, s5[h5] = u6)) : e7.push(a6);
+    3 === p5 ? e8[0] = a6 : 4 === p5 ? e8[1] = Object.assign(e8[1] || {}, a6) : 5 === p5 ? (e8[1] = e8[1] || {})[s5[++h5]] = a6 : 6 === p5 ? e8[1][s5[++h5]] += a6 + "" : p5 ? (u6 = t7.apply(a6, n2(t7, a6, r7, ["", null])), e8.push(u6), a6[0] ? s5[0] |= 2 : (s5[h5 - 2] = 0, s5[h5] = u6)) : e8.push(a6);
   }
-  return e7;
+  return e8;
 };
 var t2 = /* @__PURE__ */ new Map();
 function htm_module_default(s5) {
   var r7 = t2.get(this);
   return r7 || (r7 = /* @__PURE__ */ new Map(), t2.set(this, r7)), (r7 = n2(this, r7.get(s5) || (r7.set(s5, r7 = function(n4) {
-    for (var t7, s6, r8 = 1, e7 = "", u6 = "", h5 = [0], p5 = function(n5) {
-      1 === r8 && (n5 || (e7 = e7.replace(/^\s*\n\s*|\s*\n\s*$/g, ""))) ? h5.push(0, n5, e7) : 3 === r8 && (n5 || e7) ? (h5.push(3, n5, e7), r8 = 2) : 2 === r8 && "..." === e7 && n5 ? h5.push(4, n5, 0) : 2 === r8 && e7 && !n5 ? h5.push(5, 0, true, e7) : r8 >= 5 && ((e7 || !n5 && 5 === r8) && (h5.push(r8, 0, e7, s6), r8 = 6), n5 && (h5.push(r8, n5, 0, s6), r8 = 6)), e7 = "";
+    for (var t7, s6, r8 = 1, e8 = "", u6 = "", h5 = [0], p5 = function(n5) {
+      1 === r8 && (n5 || (e8 = e8.replace(/^\s*\n\s*|\s*\n\s*$/g, ""))) ? h5.push(0, n5, e8) : 3 === r8 && (n5 || e8) ? (h5.push(3, n5, e8), r8 = 2) : 2 === r8 && "..." === e8 && n5 ? h5.push(4, n5, 0) : 2 === r8 && e8 && !n5 ? h5.push(5, 0, true, e8) : r8 >= 5 && ((e8 || !n5 && 5 === r8) && (h5.push(r8, 0, e8, s6), r8 = 6), n5 && (h5.push(r8, n5, 0, s6), r8 = 6)), e8 = "";
     }, a6 = 0; a6 < n4.length; a6++) {
       a6 && (1 === r8 && p5(), p5(a6));
-      for (var l5 = 0; l5 < n4[a6].length; l5++)
-        t7 = n4[a6][l5], 1 === r8 ? "<" === t7 ? (p5(), h5 = [h5], r8 = 3) : e7 += t7 : 4 === r8 ? "--" === e7 && ">" === t7 ? (r8 = 1, e7 = "") : e7 = t7 + e7[0] : u6 ? t7 === u6 ? u6 = "" : e7 += t7 : '"' === t7 || "'" === t7 ? u6 = t7 : ">" === t7 ? (p5(), r8 = 1) : r8 && ("=" === t7 ? (r8 = 5, s6 = e7, e7 = "") : "/" === t7 && (r8 < 5 || ">" === n4[a6][l5 + 1]) ? (p5(), 3 === r8 && (h5 = h5[0]), r8 = h5, (h5 = h5[0]).push(2, 0, r8), r8 = 0) : " " === t7 || "	" === t7 || "\n" === t7 || "\r" === t7 ? (p5(), r8 = 2) : e7 += t7), 3 === r8 && "!--" === e7 && (r8 = 4, h5 = h5[0]);
+      for (var l5 = 0; l5 < n4[a6].length; l5++) t7 = n4[a6][l5], 1 === r8 ? "<" === t7 ? (p5(), h5 = [h5], r8 = 3) : e8 += t7 : 4 === r8 ? "--" === e8 && ">" === t7 ? (r8 = 1, e8 = "") : e8 = t7 + e8[0] : u6 ? t7 === u6 ? u6 = "" : e8 += t7 : '"' === t7 || "'" === t7 ? u6 = t7 : ">" === t7 ? (p5(), r8 = 1) : r8 && ("=" === t7 ? (r8 = 5, s6 = e8, e8 = "") : "/" === t7 && (r8 < 5 || ">" === n4[a6][l5 + 1]) ? (p5(), 3 === r8 && (h5 = h5[0]), r8 = h5, (h5 = h5[0]).push(2, 0, r8), r8 = 0) : " " === t7 || "	" === t7 || "\n" === t7 || "\r" === t7 ? (p5(), r8 = 2) : e8 += t7), 3 === r8 && "!--" === e8 && (r8 = 4, h5 = h5[0]);
     }
     return p5(), h5;
   }(s5)), r7), arguments, [])).length > 1 ? r7 : r7[0];
@@ -19603,15 +23465,15 @@ var i2;
 var o2 = 0;
 var f2 = [];
 var c2 = [];
-var e3 = l;
-var a2 = e3.__b;
-var v2 = e3.__r;
-var l2 = e3.diffed;
-var m2 = e3.__c;
-var s2 = e3.unmount;
-var d2 = e3.__;
+var e4 = l;
+var a2 = e4.__b;
+var v2 = e4.__r;
+var l2 = e4.diffed;
+var m2 = e4.__c;
+var s2 = e4.unmount;
+var d2 = e4.__;
 function h2(n4, t7) {
-  e3.__h && e3.__h(r2, n4, o2 || t7), o2 = 0;
+  e4.__h && e4.__h(r2, n4, o2 || t7), o2 = 0;
   var u6 = r2.__H || (r2.__H = { __: [], __h: [] });
   return n4 >= u6.__.length && u6.__.push({ __V: c2 }), u6.__[n4];
 }
@@ -19625,15 +23487,13 @@ function y2(n4, u6, i7) {
     t7 !== r7 && (o5.__N = [r7, o5.__[1]], o5.__c.setState({}));
   }], o5.__c = r2, !r2.u)) {
     var f6 = function(n5, t7, r7) {
-      if (!o5.__c.__H)
-        return true;
+      if (!o5.__c.__H) return true;
       var u7 = o5.__c.__H.__.filter(function(n6) {
         return !!n6.__c;
       });
       if (u7.every(function(n6) {
         return !n6.__N;
-      }))
-        return !c5 || c5.call(this, n5, t7, r7);
+      })) return !c5 || c5.call(this, n5, t7, r7);
       var i8 = false;
       return u7.forEach(function(n6) {
         if (n6.__N) {
@@ -19643,24 +23503,24 @@ function y2(n4, u6, i7) {
       }), !(!i8 && o5.__c.props === n5) && (!c5 || c5.call(this, n5, t7, r7));
     };
     r2.u = true;
-    var c5 = r2.shouldComponentUpdate, e7 = r2.componentWillUpdate;
+    var c5 = r2.shouldComponentUpdate, e8 = r2.componentWillUpdate;
     r2.componentWillUpdate = function(n5, t7, r7) {
       if (this.__e) {
         var u7 = c5;
         c5 = void 0, f6(n5, t7, r7), c5 = u7;
       }
-      e7 && e7.call(this, n5, t7, r7);
+      e8 && e8.call(this, n5, t7, r7);
     }, r2.shouldComponentUpdate = f6;
   }
   return o5.__N || o5.__;
 }
 function _2(n4, u6) {
   var i7 = h2(t3++, 3);
-  !e3.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__H.__h.push(i7));
+  !e4.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__H.__h.push(i7));
 }
 function A2(n4, u6) {
   var i7 = h2(t3++, 4);
-  !e3.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__h.push(i7));
+  !e4.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__h.push(i7));
 }
 function F2(n4) {
   return o2 = 5, q2(function() {
@@ -19677,31 +23537,29 @@ function x2(n4, t7) {
   }, t7);
 }
 function j2() {
-  for (var n4; n4 = f2.shift(); )
-    if (n4.__P && n4.__H)
-      try {
-        n4.__H.__h.forEach(z2), n4.__H.__h.forEach(B2), n4.__H.__h = [];
-      } catch (t7) {
-        n4.__H.__h = [], e3.__e(t7, n4.__v);
-      }
+  for (var n4; n4 = f2.shift(); ) if (n4.__P && n4.__H) try {
+    n4.__H.__h.forEach(z2), n4.__H.__h.forEach(B2), n4.__H.__h = [];
+  } catch (t7) {
+    n4.__H.__h = [], e4.__e(t7, n4.__v);
+  }
 }
-e3.__b = function(n4) {
+e4.__b = function(n4) {
   r2 = null, a2 && a2(n4);
-}, e3.__ = function(n4, t7) {
+}, e4.__ = function(n4, t7) {
   n4 && t7.__k && t7.__k.__m && (n4.__m = t7.__k.__m), d2 && d2(n4, t7);
-}, e3.__r = function(n4) {
+}, e4.__r = function(n4) {
   v2 && v2(n4), t3 = 0;
   var i7 = (r2 = n4.__c).__H;
   i7 && (u2 === r2 ? (i7.__h = [], r2.__h = [], i7.__.forEach(function(n5) {
     n5.__N && (n5.__ = n5.__N), n5.__V = c2, n5.__N = n5.i = void 0;
   })) : (i7.__h.forEach(z2), i7.__h.forEach(B2), i7.__h = [], t3 = 0)), u2 = r2;
-}, e3.diffed = function(n4) {
+}, e4.diffed = function(n4) {
   l2 && l2(n4);
   var t7 = n4.__c;
-  t7 && t7.__H && (t7.__H.__h.length && (1 !== f2.push(t7) && i2 === e3.requestAnimationFrame || ((i2 = e3.requestAnimationFrame) || w2)(j2)), t7.__H.__.forEach(function(n5) {
+  t7 && t7.__H && (t7.__H.__h.length && (1 !== f2.push(t7) && i2 === e4.requestAnimationFrame || ((i2 = e4.requestAnimationFrame) || w2)(j2)), t7.__H.__.forEach(function(n5) {
     n5.i && (n5.__H = n5.i), n5.__V !== c2 && (n5.__ = n5.__V), n5.i = void 0, n5.__V = c2;
   })), u2 = r2 = null;
-}, e3.__c = function(n4, t7) {
+}, e4.__c = function(n4, t7) {
   t7.some(function(n5) {
     try {
       n5.__h.forEach(z2), n5.__h = n5.__h.filter(function(n6) {
@@ -19710,10 +23568,10 @@ e3.__b = function(n4) {
     } catch (r7) {
       t7.some(function(n6) {
         n6.__h && (n6.__h = []);
-      }), t7 = [], e3.__e(r7, n5.__v);
+      }), t7 = [], e4.__e(r7, n5.__v);
     }
   }), m2 && m2(n4, t7);
-}, e3.unmount = function(n4) {
+}, e4.unmount = function(n4) {
   s2 && s2(n4);
   var t7, r7 = n4.__c;
   r7 && r7.__H && (r7.__H.__.forEach(function(n5) {
@@ -19722,7 +23580,7 @@ e3.__b = function(n4) {
     } catch (n6) {
       t7 = n6;
     }
-  }), r7.__H = void 0, t7 && e3.__e(t7, r7.__v));
+  }), r7.__H = void 0, t7 && e4.__e(t7, r7.__v));
 };
 var k2 = "function" == typeof requestAnimationFrame;
 function w2(n4) {
@@ -19749,26 +23607,85 @@ function D2(n4, t7) {
 }
 
 // node_modules/clsx/dist/clsx.mjs
-function r3(e7) {
+function r3(e8) {
   var t7, f6, n4 = "";
-  if ("string" == typeof e7 || "number" == typeof e7)
-    n4 += e7;
-  else if ("object" == typeof e7)
-    if (Array.isArray(e7)) {
-      var o5 = e7.length;
-      for (t7 = 0; t7 < o5; t7++)
-        e7[t7] && (f6 = r3(e7[t7])) && (n4 && (n4 += " "), n4 += f6);
-    } else
-      for (f6 in e7)
-        e7[f6] && (n4 && (n4 += " "), n4 += f6);
+  if ("string" == typeof e8 || "number" == typeof e8) n4 += e8;
+  else if ("object" == typeof e8) if (Array.isArray(e8)) {
+    var o5 = e8.length;
+    for (t7 = 0; t7 < o5; t7++) e8[t7] && (f6 = r3(e8[t7])) && (n4 && (n4 += " "), n4 += f6);
+  } else for (f6 in e8) e8[f6] && (n4 && (n4 += " "), n4 += f6);
   return n4;
 }
 function clsx() {
-  for (var e7, t7, f6 = 0, n4 = "", o5 = arguments.length; f6 < o5; f6++)
-    (e7 = arguments[f6]) && (t7 = r3(e7)) && (n4 && (n4 += " "), n4 += t7);
+  for (var e8, t7, f6 = 0, n4 = "", o5 = arguments.length; f6 < o5; f6++) (e8 = arguments[f6]) && (t7 = r3(e8)) && (n4 && (n4 += " "), n4 += t7);
   return n4;
 }
 var clsx_default = clsx;
+
+// node_modules/diagram-js/lib/features/popup-menu/PopupMenuHeader.js
+function PopupMenuHeader(props) {
+  const {
+    headerEntries,
+    onSelect,
+    selectedEntry,
+    setSelectedEntry,
+    title
+  } = props;
+  const groups = q2(() => groupEntries(headerEntries), [headerEntries]);
+  return m`
+    <div class="djs-popup-header">
+      <h3 class="djs-popup-title" title=${title}>${title}</h3>
+      ${groups.map((group) => m`
+        <ul key=${group.id} class="djs-popup-header-group" data-header-group=${group.id}>
+
+          ${group.entries.map((entry) => m`
+            <li key=${entry.id}>
+              <${entry.action ? "button" : "span"}
+                class=${getHeaderClasses(entry, entry === selectedEntry)}
+                onClick=${(event3) => entry.action && onSelect(event3, entry)}
+                title=${entry.title || entry.label}
+                data-id=${entry.id}
+                onMouseEnter=${() => entry.action && setSelectedEntry(entry)}
+                onMouseLeave=${() => entry.action && setSelectedEntry(null)}
+                onFocus=${() => entry.action && setSelectedEntry(entry)}
+                onBlur=${() => entry.action && setSelectedEntry(null)}
+              >
+                ${entry.imageUrl && m`<img class="djs-popup-entry-icon" src=${entry.imageUrl} alt="" />` || entry.imageHtml && m`<div class="djs-popup-entry-icon" dangerouslySetInnerHTML=${{ __html: entry.imageHtml }} />`}
+                ${entry.label ? m`
+                  <span class="djs-popup-label">${entry.label}</span>
+                ` : null}
+              </${entry.action ? "button" : "span"}>
+            </li>
+          `)}
+        </ul>
+      `)}
+    </div>
+  `;
+}
+function groupEntries(entries) {
+  return entries.reduce((groups, entry) => {
+    const groupId = entry.group || "default";
+    const group = groups.find((group2) => group2.id === groupId);
+    if (group) {
+      group.entries.push(entry);
+    } else {
+      groups.push({
+        id: groupId,
+        entries: [entry]
+      });
+    }
+    return groups;
+  }, []);
+}
+function getHeaderClasses(entry, selected) {
+  return clsx_default(
+    "entry",
+    entry.className,
+    entry.active ? "active" : "",
+    entry.disabled ? "disabled" : "",
+    selected ? "selected" : ""
+  );
+}
 
 // node_modules/diagram-js/lib/features/popup-menu/PopupMenuItem.js
 function PopupMenuItem(props) {
@@ -19791,7 +23708,6 @@ function PopupMenuItem(props) {
       onMouseEnter=${onMouseEnter}
       onMouseLeave=${onMouseLeave}
       onDragStart=${(event3) => onAction(event3, entry, "dragstart")}
-      aria-role="button"
       draggable=${true}
     >
       <div class="djs-popup-entry-content">
@@ -19843,7 +23759,7 @@ function PopupMenuList(props) {
     ...restProps
   } = props;
   const resultsRef = F2();
-  const groups = q2(() => groupEntries(entries), [entries]);
+  const groups = q2(() => groupEntries2(entries), [entries]);
   A2(() => {
     const containerEl = resultsRef.current;
     if (!containerEl)
@@ -19877,7 +23793,7 @@ function PopupMenuList(props) {
     </div>
   `;
 }
-function groupEntries(entries) {
+function groupEntries2(entries) {
   const groups = [];
   const getGroup = (group) => groups.find((elem) => group.id === elem.id);
   const containsGroup = (group) => !!getGroup(group);
@@ -20005,27 +23921,13 @@ function PopupMenuComponent(props) {
       scale=${scale}
     >
       ${displayHeader && m`
-        <div class="djs-popup-header">
-          <h3 class="djs-popup-title" title=${title}>${title}</h3>
-          ${headerEntries.map((entry) => m`
-            <${entry.action ? "button" : "span"}
-              class=${getHeaderClasses(entry, entry === selectedEntry)}
-              onClick=${(event3) => onSelect(event3, entry)}
-              title=${entry.title || entry.label}
-              data-id=${entry.id}
-              onMouseEnter=${() => setSelectedEntry(entry)}
-              onMouseLeave=${() => setSelectedEntry(null)}
-              onFocus=${() => setSelectedEntry(entry)}
-              onBlur=${() => setSelectedEntry(null)}
-            >
-            ${entry.imageUrl && m`<img class="djs-popup-entry-icon" src=${entry.imageUrl} alt="" />` || entry.imageHtml && m`<div class="djs-popup-entry-icon" dangerouslySetInnerHTML=${{ __html: entry.imageHtml }} />`}
-
-              ${entry.label ? m`
-                <span class="djs-popup-label">${entry.label}</span>
-              ` : null}
-            </${entry.action ? "button" : "span"}>
-          `)}
-        </div>
+        <${PopupMenuHeader}
+          headerEntries=${headerEntries}
+          onSelect=${onSelect}
+          selectedEntry=${selectedEntry}
+          setSelectedEntry=${setSelectedEntry}
+          title=${title}
+        />
       `}
       ${originalEntries.length > 0 && m`
         <div class="djs-popup-body">
@@ -20120,15 +24022,6 @@ function getPopupStyle(props) {
     width: `${props.width}px`,
     "transform-origin": "top left"
   };
-}
-function getHeaderClasses(entry, selected) {
-  return clsx_default(
-    "entry",
-    entry.className,
-    entry.active ? "active" : "",
-    entry.disabled ? "disabled" : "",
-    selected ? "selected" : ""
-  );
 }
 
 // node_modules/diagram-js/lib/features/popup-menu/PopupMenu.js
@@ -20524,11 +24417,11 @@ var AlignElementsIcons_default = icons;
 
 // node_modules/bpmn-js/lib/features/align-elements/AlignElementsContextPadProvider.js
 var LOW_PRIORITY6 = 900;
-function AlignElementsContextPadProvider(contextPad, popupMenu, translate3, canvas) {
+function AlignElementsContextPadProvider(contextPad, popupMenu, translate4, canvas) {
   contextPad.registerProvider(LOW_PRIORITY6, this);
   this._contextPad = contextPad;
   this._popupMenu = popupMenu;
-  this._translate = translate3;
+  this._translate = translate4;
   this._canvas = canvas;
 }
 AlignElementsContextPadProvider.$inject = [
@@ -20589,9 +24482,9 @@ var ALIGNMENT_OPTIONS = [
   "middle",
   "bottom"
 ];
-function AlignElementsMenuProvider(popupMenu, alignElements, translate3, rules) {
+function AlignElementsMenuProvider(popupMenu, alignElements, translate4, rules) {
   this._alignElements = alignElements;
-  this._translate = translate3;
+  this._translate = translate4;
   this._popupMenu = popupMenu;
   this._rules = rules;
   popupMenu.registerProvider("align-elements", this);
@@ -20613,12 +24506,12 @@ AlignElementsMenuProvider.prototype._isAllowed = function(target) {
   return this._rules.allowed("elements.align", { elements: target });
 };
 AlignElementsMenuProvider.prototype._getEntries = function(target) {
-  var alignElements = this._alignElements, translate3 = this._translate, popupMenu = this._popupMenu;
+  var alignElements = this._alignElements, translate4 = this._translate, popupMenu = this._popupMenu;
   var entries = {};
   forEach(ALIGNMENT_OPTIONS, function(alignment) {
     entries["align-elements-" + alignment] = {
       group: "align",
-      title: translate3("Align elements " + alignment),
+      title: translate4("Align elements " + alignment),
       className: "bjs-align-elements-menu-entry",
       imageHtml: AlignElementsIcons_default[alignment],
       action: function() {
@@ -20791,19 +24684,19 @@ function getConnectedDistance(source, hints) {
   }
   var sourcesDistances = source.incoming.filter(filter2).map(function(connection) {
     var weight = getWeight(connection);
-    var distance3 = weight < 0 ? getDistance4(connection.source, source) : getDistance4(source, connection.source);
+    var distance4 = weight < 0 ? getDistance4(connection.source, source) : getDistance4(source, connection.source);
     return {
       id: connection.source.id,
-      distance: distance3,
+      distance: distance4,
       weight
     };
   });
   var targetsDistances = source.outgoing.filter(filter2).map(function(connection) {
     var weight = getWeight(connection);
-    var distance3 = weight > 0 ? getDistance4(source, connection.target) : getDistance4(connection.target, source);
+    var distance4 = weight > 0 ? getDistance4(source, connection.target) : getDistance4(connection.target, source);
     return {
       id: connection.target.id,
-      distance: distance3,
+      distance: distance4,
       weight
     };
   });
@@ -20812,16 +24705,16 @@ function getConnectedDistance(source, hints) {
     return accumulator;
   }, {});
   var distancesGrouped = reduce(distances, function(accumulator, currentValue) {
-    var distance3 = currentValue.distance, weight = currentValue.weight;
-    if (distance3 < 0 || distance3 > maxDistance) {
+    var distance4 = currentValue.distance, weight = currentValue.weight;
+    if (distance4 < 0 || distance4 > maxDistance) {
       return accumulator;
     }
-    if (!accumulator[String(distance3)]) {
-      accumulator[String(distance3)] = 0;
+    if (!accumulator[String(distance4)]) {
+      accumulator[String(distance4)] = 0;
     }
-    accumulator[String(distance3)] += 1 * weight;
-    if (!accumulator.distance || accumulator[accumulator.distance] < accumulator[String(distance3)]) {
-      accumulator.distance = distance3;
+    accumulator[String(distance4)] += 1 * weight;
+    if (!accumulator.distance || accumulator[accumulator.distance] < accumulator[String(distance4)]) {
+      accumulator.distance = distance4;
     }
     return accumulator;
   }, {});
@@ -20892,18 +24785,18 @@ function getNewShapePosition(source, element, hints) {
   if (!hints) {
     hints = {};
   }
-  var distance3 = hints.defaultDistance || DEFAULT_DISTANCE;
+  var distance4 = hints.defaultDistance || DEFAULT_DISTANCE;
   var sourceMid = getMid(source), sourceTrbl = asTRBL(source);
   return {
-    x: sourceTrbl.right + distance3 + element.width / 2,
+    x: sourceTrbl.right + distance4 + element.width / 2,
     y: sourceMid.y
   };
 }
 
 // node_modules/diagram-js/lib/features/auto-place/AutoPlaceSelectionBehavior.js
 function AutoPlaceSelectionBehavior(eventBus, selection2) {
-  eventBus.on("autoPlace.end", 500, function(e7) {
-    selection2.select(e7.shape);
+  eventBus.on("autoPlace.end", 500, function(e8) {
+    selection2.select(e8.shape);
   });
 }
 AutoPlaceSelectionBehavior.$inject = [
@@ -21626,8 +25519,8 @@ function AutoScroll(config, eventBus, canvas) {
     scrollStep: 10
   }, config);
   var self2 = this;
-  eventBus.on("drag.move", function(e7) {
-    var point = self2._toBorderPoint(e7);
+  eventBus.on("drag.move", function(e8) {
+    var point = self2._toBorderPoint(e8);
     self2.startScroll(point);
   });
   eventBus.on(["drag.cleanup"], function() {
@@ -21795,8 +25688,8 @@ function getApproxIntersection(waypoints, reference) {
 function vectorLength2(vector) {
   return Math.sqrt(Math.pow(vector.x, 2) + Math.pow(vector.y, 2));
 }
-function getAngle(line) {
-  return Math.atan((line[1].y - line[0].y) / (line[1].x - line[0].x));
+function getAngle(line2) {
+  return Math.atan((line2[1].y - line2[0].y) / (line2[1].x - line2[0].x));
 }
 function rotateVector(vector, angle) {
   return !angle ? vector : {
@@ -21812,14 +25705,14 @@ function solveLambaSystem(a6, b5, c5) {
   var n4 = system[0].n * b5[0] + system[1].n * b5[1], l5 = system[0].lambda * b5[0] + system[1].lambda * b5[1];
   return -n4 / l5;
 }
-function perpendicularFoot(point, line) {
-  var a6 = line[0], b5 = line[1];
+function perpendicularFoot(point, line2) {
+  var a6 = line2[0], b5 = line2[1];
   var bd = { x: b5.x - a6.x, y: b5.y - a6.y };
   var r7 = solveLambaSystem([a6.x, a6.y], [bd.x, bd.y], [point.x, point.y]);
   return { x: a6.x + r7 * bd.x, y: a6.y + r7 * bd.y };
 }
-function getDistancePointLine(point, line) {
-  var pfPoint = perpendicularFoot(point, line);
+function getDistancePointLine(point, line2) {
+  var pfPoint = perpendicularFoot(point, line2);
   var connectionVector = {
     x: pfPoint.x - point.x,
     y: pfPoint.y - point.y
@@ -21926,9 +25819,9 @@ function getClosestSegment(position, connection) {
   var waypoints = connection.waypoints;
   var minDistance = Infinity, segmentIndex;
   for (var i7 = 0; i7 < waypoints.length - 1; i7++) {
-    var start = waypoints[i7], end = waypoints[i7 + 1], distance3 = getDistancePointLine(position, [start, end]);
-    if (distance3 < minDistance) {
-      minDistance = distance3;
+    var start = waypoints[i7], end = waypoints[i7 + 1], distance4 = getDistancePointLine(position, [start, end]);
+    if (distance4 < minDistance) {
+      minDistance = distance4;
       segmentIndex = i7;
     }
   }
@@ -22727,10 +26620,9 @@ function BendpointSnapping(eventBus) {
   function snapTo2(values2, value) {
     if (isArray(values2)) {
       var i7 = values2.length;
-      while (i7--)
-        if (abs3(values2[i7] - value) <= TOLERANCE) {
-          return values2[i7];
-        }
+      while (i7--) if (abs3(values2[i7] - value) <= TOLERANCE) {
+        return values2[i7];
+      }
     } else {
       values2 = +values2;
       var rem = value % values2;
@@ -23142,6 +27034,7 @@ var connection_preview_default = {
 };
 
 // node_modules/diagram-js/lib/features/preview-support/PreviewSupport.js
+var cloneIds = new IdGenerator("ps");
 var MARKER_TYPES = [
   "marker-start",
   "marker-mid",
@@ -23161,11 +27054,6 @@ function PreviewSupport(elementRegistry, eventBus, canvas, styles) {
   this._elementRegistry = elementRegistry;
   this._canvas = canvas;
   this._styles = styles;
-  this._clonedMarkers = {};
-  var self2 = this;
-  eventBus.on("drag.cleanup", function() {
-    self2.cleanUp();
-  });
 }
 PreviewSupport.$inject = [
   "elementRegistry",
@@ -23174,11 +27062,7 @@ PreviewSupport.$inject = [
   "styles"
 ];
 PreviewSupport.prototype.cleanUp = function() {
-  var self2 = this;
-  forEach(self2._clonedMarkers, function(clonedMarker) {
-    remove(clonedMarker);
-  });
-  self2._clonedMarkers = {};
+  console.warn("PreviewSupport#cleanUp is deprecated and will be removed in future versions. You do not need to manually clean up previews anymore. cf. https://github.com/bpmn-io/diagram-js/pull/906");
 };
 PreviewSupport.prototype.getGfx = function(element) {
   return this._elementRegistry.getGraphics(element);
@@ -23208,11 +27092,11 @@ PreviewSupport.prototype.addFrame = function(shape, group) {
   attr(frame, "data-preview-support-element-id", shape.id);
   return frame;
 };
-PreviewSupport.prototype._cloneMarkers = function(gfx, className = "djs-dragger") {
+PreviewSupport.prototype._cloneMarkers = function(gfx, className = "djs-dragger", rootGfx = gfx) {
   var self2 = this;
   if (gfx.childNodes) {
     for (var i7 = 0; i7 < gfx.childNodes.length; i7++) {
-      self2._cloneMarkers(gfx.childNodes[i7], className);
+      self2._cloneMarkers(gfx.childNodes[i7], className, rootGfx);
     }
   }
   if (!canHaveMarker(gfx)) {
@@ -23221,27 +27105,24 @@ PreviewSupport.prototype._cloneMarkers = function(gfx, className = "djs-dragger"
   MARKER_TYPES.forEach(function(markerType) {
     if (attr(gfx, markerType)) {
       var marker = getMarker(gfx, markerType, self2._canvas.getContainer());
-      self2._cloneMarker(gfx, marker, markerType, className);
+      marker && self2._cloneMarker(rootGfx, gfx, marker, markerType, className);
     }
   });
 };
-PreviewSupport.prototype._cloneMarker = function(gfx, marker, markerType, className = "djs-dragger") {
-  var markerId = marker.id + "-" + className;
-  var clonedMarker = this._clonedMarkers[markerId];
-  if (!clonedMarker) {
-    clonedMarker = clone(marker);
-    var clonedMarkerId = markerId + "-clone";
-    clonedMarker.id = clonedMarkerId;
-    classes(clonedMarker).add(className);
-    this._clonedMarkers[markerId] = clonedMarker;
-    var defs = query("defs", this._canvas._svg);
-    if (!defs) {
-      defs = create("defs");
-      append(this._canvas._svg, defs);
-    }
-    append(defs, clonedMarker);
+PreviewSupport.prototype._cloneMarker = function(parentGfx, gfx, marker, markerType, className = "djs-dragger") {
+  var clonedMarkerId = [marker.id, className, cloneIds.next()].join("-");
+  var copiedMarker = query("marker#" + marker.id, parentGfx);
+  parentGfx = parentGfx || this._canvas._svg;
+  var clonedMarker = copiedMarker || clone(marker);
+  clonedMarker.id = clonedMarkerId;
+  classes(clonedMarker).add(className);
+  var defs = query(":scope > defs", parentGfx);
+  if (!defs) {
+    defs = create("defs");
+    append(parentGfx, defs);
   }
-  var reference = idToReference(this._clonedMarkers[markerId].id);
+  append(defs, clonedMarker);
+  var reference = idToReference(clonedMarker.id);
   attr(gfx, markerType, reference);
 };
 function getMarker(node2, markerType, parentNode) {
@@ -23332,7 +27213,6 @@ var ComplexPreview = class {
     clear(this._canvas.getLayer(LAYER_NAME));
     this._markers.forEach(([element, marker]) => this._canvas.removeMarker(element, marker));
     this._markers = [];
-    this._previewSupport.cleanUp();
   }
   show() {
     this._canvas.showLayer(LAYER_NAME);
@@ -23563,9 +27443,9 @@ function AttachEventBehavior(bpmnReplace, injector) {
     }
     elements.map(function(element) {
       return elements.indexOf(element);
-    }).forEach(function(index4) {
-      var host = elements[index4];
-      context.elements[index4] = self2._replaceShape(elements[index4], host);
+    }).forEach(function(index5) {
+      var host = elements[index5];
+      context.elements[index5] = self2._replaceShape(elements[index5], host);
     });
   }, true);
   this.preExecute("elements.move", LOW_PRIORITY9, function(context) {
@@ -24472,16 +28352,16 @@ function DetachEventBehavior(bpmnReplace, injector) {
       return shouldReplace2(shape, host);
     }).map(function(shape) {
       return elements.indexOf(shape);
-    }).forEach(function(index4) {
-      context.elements[index4] = self2._replaceShape(elements[index4]);
+    }).forEach(function(index5) {
+      context.elements[index5] = self2._replaceShape(elements[index5]);
     });
   }, true);
   this.preExecute("elements.move", LOW_PRIORITY11, function(context) {
     var shapes = context.shapes, newHost = context.newHost;
-    shapes.forEach(function(shape, index4) {
+    shapes.forEach(function(shape, index5) {
       var host = shape.host;
-      if (shouldReplace2(shape, includes2(shapes, host) ? host : newHost)) {
-        shapes[index4] = self2._replaceShape(shape);
+      if (shouldReplace2(shape, includes(shapes, host) ? host : newHost)) {
+        shapes[index5] = self2._replaceShape(shape);
       }
     });
   }, true);
@@ -24512,7 +28392,7 @@ function getEventDefinition2(element) {
 function shouldReplace2(shape, host) {
   return !isLabel(shape) && is(shape, "bpmn:BoundaryEvent") && !host;
 }
-function includes2(array, item) {
+function includes(array, item) {
   return array.indexOf(item) !== -1;
 }
 
@@ -24798,8 +28678,8 @@ var LOWER_PRIORITY = 770;
 function GroupBehavior(bpmnFactory, bpmnjs, elementRegistry, eventBus, injector, moddleCopy) {
   injector.invoke(CommandInterceptor, this);
   function getGroupElements() {
-    return elementRegistry.filter(function(e7) {
-      return is(e7, "bpmn:Group");
+    return elementRegistry.filter(function(e8) {
+      return is(e8, "bpmn:Group");
     });
   }
   function isReferencedCategory(elements, category) {
@@ -24904,9 +28784,9 @@ function GroupBehavior(bpmnFactory, bpmnjs, elementRegistry, eventBus, injector,
       unsetCategoryValue(shape, context);
     }
   });
-  function copy2(bo, clone3) {
+  function copy2(bo, clone4) {
     var targetBo = bpmnFactory.create(bo.$type);
-    return moddleCopy.copyElement(bo, targetBo, null, clone3);
+    return moddleCopy.copyElement(bo, targetBo, null, clone4);
   }
   eventBus.on("copyPaste.copyElement", LOWER_PRIORITY, function(context) {
     var descriptor = context.descriptor, element = context.element;
@@ -24998,8 +28878,8 @@ function ImportDockingFix(eventBus) {
       getMid(connection.target)
     );
   }
-  eventBus.on("bpmnElement.added", function(e7) {
-    var element = e7.element;
+  eventBus.on("bpmnElement.added", function(e8) {
+    var element = e8.element;
     if (element.waypoints) {
       fixDockings(element);
     }
@@ -25044,11 +28924,11 @@ function sq(n4) {
 function getDistance3(p1, p22) {
   return sqrt(sq(p1.x - p22.x) + sq(p1.y - p22.y));
 }
-function getAttachment(point, line) {
+function getAttachment(point, line2) {
   var idx = 0, segmentStart, segmentEnd, segmentStartDistance, segmentEndDistance, attachmentPosition, minDistance, intersections, attachment, attachmentDistance, closestAttachmentDistance, closestAttachment;
-  for (idx = 0; idx < line.length - 1; idx++) {
-    segmentStart = line[idx];
-    segmentEnd = line[idx + 1];
+  for (idx = 0; idx < line2.length - 1; idx++) {
+    segmentStart = line2[idx];
+    segmentEnd = line2[idx + 1];
     if (pointsEqual(segmentStart, segmentEnd)) {
       intersections = [segmentStart];
     } else {
@@ -25139,29 +29019,29 @@ function pointsEqual(p1, p22) {
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/util/LayoutUtil.js
 function findNewLineStartIndex(oldWaypoints, newWaypoints, attachment, hints) {
-  var index4 = attachment.segmentIndex;
+  var index5 = attachment.segmentIndex;
   var offset = newWaypoints.length - oldWaypoints.length;
   if (hints.segmentMove) {
     var oldSegmentStartIndex = hints.segmentMove.segmentStartIndex, newSegmentStartIndex = hints.segmentMove.newSegmentStartIndex;
-    if (index4 === oldSegmentStartIndex) {
+    if (index5 === oldSegmentStartIndex) {
       return newSegmentStartIndex;
     }
-    if (index4 >= newSegmentStartIndex) {
-      return index4 + offset < newSegmentStartIndex ? newSegmentStartIndex : index4 + offset;
+    if (index5 >= newSegmentStartIndex) {
+      return index5 + offset < newSegmentStartIndex ? newSegmentStartIndex : index5 + offset;
     }
-    return index4;
+    return index5;
   }
   if (hints.bendpointMove) {
     var insert = hints.bendpointMove.insert, bendpointIndex = hints.bendpointMove.bendpointIndex, newIndex;
     if (offset === 0) {
-      return index4;
+      return index5;
     }
-    if (index4 >= bendpointIndex) {
-      newIndex = insert ? index4 + 1 : index4 - 1;
+    if (index5 >= bendpointIndex) {
+      newIndex = insert ? index5 + 1 : index5 - 1;
     }
-    if (index4 < bendpointIndex) {
-      newIndex = index4;
-      if (insert && attachment.type !== "bendpoint" && bendpointIndex - 1 === index4) {
+    if (index5 < bendpointIndex) {
+      newIndex = index5;
+      if (insert && attachment.type !== "bendpoint" && bendpointIndex - 1 === index5) {
         var rel = relativePositionMidWaypoint(newWaypoints, bendpointIndex);
         if (rel < attachment.relativeLocation) {
           newIndex++;
@@ -25171,12 +29051,12 @@ function findNewLineStartIndex(oldWaypoints, newWaypoints, attachment, hints) {
     return newIndex;
   }
   if (offset === 0) {
-    return index4;
+    return index5;
   }
-  if (hints.connectionStart && index4 === 0) {
+  if (hints.connectionStart && index5 === 0) {
     return 0;
   }
-  if (hints.connectionEnd && index4 === oldWaypoints.length - 2) {
+  if (hints.connectionEnd && index5 === oldWaypoints.length - 2) {
     return newWaypoints.length - 2;
   }
   return Math.floor((newWaypoints.length - 2) / 2);
@@ -25246,8 +29126,8 @@ function getAngleDelta(l1, l22) {
 function getLine(waypoints, idx) {
   return [waypoints[idx], waypoints[idx + 1]];
 }
-function getRelativeFootPosition(line, foot) {
-  var length2 = getDistancePointPoint(line[0], line[1]), lengthToFoot = getDistancePointPoint(line[0], foot);
+function getRelativeFootPosition(line2, foot) {
+  var length2 = getDistancePointPoint(line2[0], line2[1]), lengthToFoot = getDistancePointPoint(line2[0], foot);
   return length2 === 0 ? 0 : lengthToFoot / length2;
 }
 
@@ -25342,14 +29222,14 @@ var TEXT_PROPERTY = "text";
 function LabelBehavior(eventBus, modeling, bpmnFactory, textRenderer) {
   CommandInterceptor.call(this, eventBus);
   this.postExecute("element.updateProperties", onPropertyUpdate);
-  this.postExecute("element.updateModdleProperties", (e7) => {
-    const elementBo = getBusinessObject(e7.context.element);
-    if (elementBo === e7.context.moddleElement) {
-      onPropertyUpdate(e7);
+  this.postExecute("element.updateModdleProperties", (e8) => {
+    const elementBo = getBusinessObject(e8.context.element);
+    if (elementBo === e8.context.moddleElement) {
+      onPropertyUpdate(e8);
     }
   });
-  function onPropertyUpdate(e7) {
-    var context = e7.context, element = context.element, properties = context.properties;
+  function onPropertyUpdate(e8) {
+    var context = e8.context, element = context.element, properties = context.properties;
     if (NAME_PROPERTY in properties) {
       modeling.updateLabel(element, properties[NAME_PROPERTY]);
     }
@@ -25366,8 +29246,8 @@ function LabelBehavior(eventBus, modeling, bpmnFactory, textRenderer) {
       modeling.updateLabel(element, properties.text, newBounds);
     }
   }
-  this.postExecute(["shape.create", "connection.create"], function(e7) {
-    var context = e7.context, hints = context.hints || {};
+  this.postExecute(["shape.create", "connection.create"], function(e8) {
+    var context = e8.context, hints = context.hints || {};
     if (hints.createElementsBehavior === false) {
       return;
     }
@@ -25746,8 +29626,8 @@ RemoveEmbeddedLabelBoundsBehavior.$inject = [
 // node_modules/bpmn-js/lib/features/modeling/behavior/RemoveElementBehavior.js
 function RemoveElementBehavior(eventBus, bpmnRules, modeling) {
   CommandInterceptor.call(this, eventBus);
-  this.preExecute("shape.delete", function(e7) {
-    var shape = e7.context.shape;
+  this.preExecute("shape.delete", function(e8) {
+    var shape = e8.context.shape;
     if (shape.incoming.length !== 1 || shape.outgoing.length !== 1) {
       return;
     }
@@ -25803,7 +29683,9 @@ function RemoveParticipantBehavior(eventBus, modeling) {
   this.postExecute("shape.delete", function(context) {
     var collaborationRoot = context.collaborationRoot;
     if (collaborationRoot && !collaborationRoot.businessObject.participants.length) {
-      modeling.makeProcess();
+      var process2 = modeling.makeProcess();
+      var children = collaborationRoot.children.slice();
+      modeling.moveElements(children, { x: 0, y: 0 }, process2);
     }
   }, true);
 }
@@ -25866,15 +29748,15 @@ function ReplaceConnectionBehavior(eventBus, modeling, bpmnRules, injector) {
     }
   }
   function cleanDraggingSelection(oldConnection, newConnection) {
-    var context = dragging.context(), previousSelection = context && context.payload.previousSelection, index4;
+    var context = dragging.context(), previousSelection = context && context.payload.previousSelection, index5;
     if (!previousSelection || !previousSelection.length) {
       return;
     }
-    index4 = previousSelection.indexOf(oldConnection);
-    if (index4 === -1) {
+    index5 = previousSelection.indexOf(oldConnection);
+    if (index5 === -1) {
       return;
     }
-    previousSelection.splice(index4, 1, newConnection);
+    previousSelection.splice(index5, 1, newConnection);
   }
   this.postExecuted("elements.move", function(context) {
     var closure = context.closure, allConnections = closure.allConnections;
@@ -25938,15 +29820,15 @@ function ReplaceElementBehaviour(bpmnReplace, bpmnRules, elementRegistry, inject
       this._replaceElements(elements, canReplace2.replacements, newHost);
     }
   }, this);
-  this.postExecute(["shape.replace"], 1500, function(e7) {
-    var context = e7.context, oldShape = context.oldShape, newShape = context.newShape, attachers = oldShape.attachers, canReplace2;
+  this.postExecute(["shape.replace"], 1500, function(e8) {
+    var context = e8.context, oldShape = context.oldShape, newShape = context.newShape, attachers = oldShape.attachers, canReplace2;
     if (attachers && attachers.length) {
       canReplace2 = bpmnRules.canReplace(attachers, newShape);
       this._replaceElements(attachers, canReplace2.replacements);
     }
   }, this);
-  this.postExecuted(["shape.replace"], 1500, function(e7) {
-    var context = e7.context, oldShape = context.oldShape, newShape = context.newShape;
+  this.postExecuted(["shape.replace"], 1500, function(e8) {
+    var context = e8.context, oldShape = context.oldShape, newShape = context.newShape;
     modeling.unclaimId(oldShape.businessObject.id, oldShape.businessObject);
     modeling.updateProperties(newShape, { id: oldShape.id });
   });
@@ -26778,8 +30660,8 @@ function ToggleElementCollapseBehaviour(eventBus, elementFactory, modeling) {
       height: defaultSize.height
     };
   }
-  this.executed(["shape.toggleCollapse"], LOW_PRIORITY14, function(e7) {
-    var context = e7.context, shape = context.shape;
+  this.executed(["shape.toggleCollapse"], LOW_PRIORITY14, function(e8) {
+    var context = e8.context, shape = context.shape;
     if (!is(shape, "bpmn:SubProcess")) {
       return;
     }
@@ -26790,8 +30672,8 @@ function ToggleElementCollapseBehaviour(eventBus, elementFactory, modeling) {
       getDi(shape).isExpanded = false;
     }
   });
-  this.reverted(["shape.toggleCollapse"], LOW_PRIORITY14, function(e7) {
-    var context = e7.context;
+  this.reverted(["shape.toggleCollapse"], LOW_PRIORITY14, function(e8) {
+    var context = e8.context;
     var shape = context.shape;
     if (!shape.collapsed) {
       getDi(shape).isExpanded = true;
@@ -26799,8 +30681,8 @@ function ToggleElementCollapseBehaviour(eventBus, elementFactory, modeling) {
       getDi(shape).isExpanded = false;
     }
   });
-  this.postExecuted(["shape.toggleCollapse"], LOW_PRIORITY14, function(e7) {
-    var shape = e7.context.shape, defaultSize = elementFactory.getDefaultSize(shape), newBounds;
+  this.postExecuted(["shape.toggleCollapse"], LOW_PRIORITY14, function(e8) {
+    var shape = e8.context.shape, defaultSize = elementFactory.getDefaultSize(shape), newBounds;
     if (shape.collapsed) {
       newBounds = collapsedBounds(shape, defaultSize);
     } else {
@@ -26818,8 +30700,8 @@ ToggleElementCollapseBehaviour.$inject = [
   "modeling"
 ];
 function filterVisible(elements) {
-  return elements.filter(function(e7) {
-    return !e7.hidden;
+  return elements.filter(function(e8) {
+    return !e8.hidden;
   });
 }
 
@@ -27551,14 +31433,14 @@ function canInsert(shape, connection, position) {
   }
   return isAny(connection, ["bpmn:SequenceFlow", "bpmn:MessageFlow"]) && !isLabel(connection) && is(shape, "bpmn:FlowNode") && !is(shape, "bpmn:BoundaryEvent") && canDrop(shape, connection.parent, position);
 }
-function includes3(elements, element) {
+function includes2(elements, element) {
   return elements && element && elements.indexOf(element) !== -1;
 }
 function canCopy(elements, element) {
   if (isLabel(element)) {
     return true;
   }
-  if (is(element, "bpmn:Lane") && !includes3(elements, element.parent)) {
+  if (is(element, "bpmn:Lane") && !includes2(elements, element.parent)) {
     return false;
   }
   return true;
@@ -27717,7 +31599,7 @@ function BpmnOrderingProvider(eventBus, canvas) {
       element.order = order = computeOrder(element);
     }
     if (!order) {
-      throw new Error("no order for <" + element.id + ">");
+      throw new Error(`no order for <${element.id}>`);
     }
     return order;
   }
@@ -27730,7 +31612,7 @@ function BpmnOrderingProvider(eventBus, canvas) {
       actualParent = actualParent.parent;
     }
     if (!actualParent) {
-      throw new Error("no parent for <" + element.id + "> in <" + (newParent && newParent.id) + ">");
+      throw new Error(`no parent for <${element.id}> in <${newParent && newParent.id}>`);
     }
     return actualParent;
   }
@@ -28159,8 +32041,8 @@ function CopyPaste(canvas, create3, clipboard, elementFactory, eventBus, modelin
     var descriptor = context.descriptor, element = context.element, elements = context.elements;
     descriptor.priority = 1;
     descriptor.id = element.id;
-    var parentCopied = find(elements, function(e7) {
-      return e7 === element.parent;
+    var parentCopied = find(elements, function(e8) {
+      return e8 === element.parent;
     });
     if (parentCopied) {
       descriptor.parent = element.parent.id;
@@ -28368,9 +32250,9 @@ CopyPaste.prototype.createTree = function(elements) {
     }
   }
   function removeElementData(elementData2, elementsData2) {
-    var index4 = elementsData2.indexOf(elementData2);
-    if (index4 !== -1) {
-      elementsData2.splice(index4, 1);
+    var index5 = elementsData2.indexOf(elementData2);
+    if (index5 !== -1) {
+      elementsData2.splice(index5, 1);
     }
     return elementsData2;
   }
@@ -28452,11 +32334,11 @@ function copyWaypoint(waypoint) {
   return assign({}, waypoint);
 }
 function removeElement(element, elements) {
-  var index4 = elements.indexOf(element);
-  if (index4 === -1) {
+  var index5 = elements.indexOf(element);
+  if (index5 === -1) {
     return elements;
   }
-  return elements.splice(index4, 1);
+  return elements.splice(index5, 1);
 }
 
 // node_modules/diagram-js/lib/features/copy-paste/index.js
@@ -28484,9 +32366,9 @@ function copyProperties(source, target, properties) {
 }
 var LOW_PRIORITY17 = 750;
 function BpmnCopyPaste(bpmnFactory, eventBus, moddleCopy) {
-  function copy2(bo, clone3) {
+  function copy2(bo, clone4) {
     var targetBo = bpmnFactory.create(bo.$type);
-    return moddleCopy.copyElement(bo, targetBo, null, clone3);
+    return moddleCopy.copyElement(bo, targetBo, null, clone4);
   }
   eventBus.on("copyPaste.copyElement", LOW_PRIORITY17, function(context) {
     var descriptor = context.descriptor, element = context.element, businessObject = getBusinessObject(element);
@@ -28611,7 +32493,7 @@ function ModdleCopy(eventBus, bpmnFactory, moddle) {
   });
   eventBus.on("moddleCopy.canSetCopiedProperty", function(context) {
     var property = context.property;
-    if (is3(property, "bpmn:ExtensionElements") && (!property.values || !property.values.length)) {
+    if (is4(property, "bpmn:ExtensionElements") && (!property.values || !property.values.length)) {
       return false;
     }
   });
@@ -28621,7 +32503,7 @@ ModdleCopy.$inject = [
   "bpmnFactory",
   "moddle"
 ];
-ModdleCopy.prototype.copyElement = function(sourceElement, targetElement, propertyNames, clone3 = false) {
+ModdleCopy.prototype.copyElement = function(sourceElement, targetElement, propertyNames, clone4 = false) {
   var self2 = this;
   if (propertyNames && !isArray(propertyNames)) {
     propertyNames = [propertyNames];
@@ -28631,7 +32513,7 @@ ModdleCopy.prototype.copyElement = function(sourceElement, targetElement, proper
     propertyNames,
     sourceElement,
     targetElement,
-    clone: clone3
+    clone: clone4
   });
   if (canCopyProperties === false) {
     return targetElement;
@@ -28644,7 +32526,7 @@ ModdleCopy.prototype.copyElement = function(sourceElement, targetElement, proper
     if (has(sourceElement, propertyName)) {
       sourceProperty = sourceElement.get(propertyName);
     }
-    var copiedProperty = self2.copyProperty(sourceProperty, targetElement, propertyName, clone3);
+    var copiedProperty = self2.copyProperty(sourceProperty, targetElement, propertyName, clone4);
     if (!isDefined(copiedProperty)) {
       return;
     }
@@ -28660,13 +32542,13 @@ ModdleCopy.prototype.copyElement = function(sourceElement, targetElement, proper
   });
   return targetElement;
 };
-ModdleCopy.prototype.copyProperty = function(property, parent, propertyName, clone3 = false) {
+ModdleCopy.prototype.copyProperty = function(property, parent, propertyName, clone4 = false) {
   var self2 = this;
   var copiedProperty = this._eventBus.fire("moddleCopy.canCopyProperty", {
     parent,
     property,
     propertyName,
-    clone: clone3
+    clone: clone4
   });
   if (copiedProperty === false) {
     return;
@@ -28682,11 +32564,11 @@ ModdleCopy.prototype.copyProperty = function(property, parent, propertyName, clo
     return;
   }
   if (propertyDescriptor.isId) {
-    return property && this._copyId(property, parent, clone3);
+    return property && this._copyId(property, parent, clone4);
   }
   if (isArray(property)) {
     return reduce(property, function(childProperties, childProperty) {
-      copiedProperty = self2.copyProperty(childProperty, parent, propertyName, clone3);
+      copiedProperty = self2.copyProperty(childProperty, parent, propertyName, clone4);
       if (copiedProperty) {
         return childProperties.concat(copiedProperty);
       }
@@ -28699,13 +32581,13 @@ ModdleCopy.prototype.copyProperty = function(property, parent, propertyName, clo
     }
     copiedProperty = self2._bpmnFactory.create(property.$type);
     copiedProperty.$parent = parent;
-    copiedProperty = self2.copyElement(property, copiedProperty, null, clone3);
+    copiedProperty = self2.copyElement(property, copiedProperty, null, clone4);
     return copiedProperty;
   }
   return property;
 };
-ModdleCopy.prototype._copyId = function(id, element, clone3 = false) {
-  if (clone3) {
+ModdleCopy.prototype._copyId = function(id, element, clone4 = false) {
+  if (clone4) {
     return id;
   }
   if (this._moddle.ids.assigned(id)) {
@@ -28723,7 +32605,7 @@ function getPropertyNames(descriptor, keepDefaultProperties) {
     return properties.concat(property.name);
   }, []);
 }
-function is3(element, type) {
+function is4(element, type) {
   return element && isFunction(element.$instanceOf) && element.$instanceOf(type);
 }
 
@@ -29074,8 +32956,8 @@ function getWaypointsUpdatingConnections(movingShapes, resizingShapes) {
     var incoming = shape.incoming, outgoing = shape.outgoing;
     forEach(incoming.concat(outgoing), function(connection) {
       var source = connection.source, target = connection.target;
-      if (includes4(movingShapes, source) || includes4(movingShapes, target) || includes4(resizingShapes, source) || includes4(resizingShapes, target)) {
-        if (!includes4(waypointsUpdatingConnections, connection)) {
+      if (includes3(movingShapes, source) || includes3(movingShapes, target) || includes3(resizingShapes, source) || includes3(resizingShapes, target)) {
+        if (!includes3(waypointsUpdatingConnections, connection)) {
           waypointsUpdatingConnections.push(connection);
         }
       }
@@ -29083,7 +32965,7 @@ function getWaypointsUpdatingConnections(movingShapes, resizingShapes) {
   });
   return waypointsUpdatingConnections;
 }
-function includes4(array, item) {
+function includes3(array, item) {
   return array.indexOf(item) !== -1;
 }
 function resizeBounds2(bounds, direction, delta2) {
@@ -29313,14 +33195,14 @@ SpaceTool.prototype.calculateAdjustments = function(elements, axis, delta2, star
   var allShapes = movingShapes.concat(resizingShapes);
   forEach(attachers, function(attacher) {
     var host = attacher.host;
-    if (includes5(allShapes, host)) {
+    if (includes4(allShapes, host)) {
       moveShape(attacher);
     }
   });
   allShapes = movingShapes.concat(resizingShapes);
   forEach(connections, function(connection) {
     var source = connection.source, target = connection.target, label = connection.label;
-    if (includes5(allShapes, source) && includes5(allShapes, target) && label) {
+    if (includes4(allShapes, source) && includes4(allShapes, target) && label) {
       moveShape(label);
     }
   });
@@ -29388,10 +33270,10 @@ function getSpaceToolConstraints(elements, axis, direction, start, minDimensions
     var attachers = resizingShape.attachers, children = resizingShape.children;
     var resizingShapeBBox = asTRBL(resizingShape);
     var nonMovingResizingChildren = filter(children, function(child) {
-      return !isConnection(child) && !isLabel(child) && !includes5(movingShapes, child) && !includes5(resizingShapes, child);
+      return !isConnection(child) && !isLabel(child) && !includes4(movingShapes, child) && !includes4(resizingShapes, child);
     });
     var movingChildren = filter(children, function(child) {
-      return !isConnection(child) && !isLabel(child) && includes5(movingShapes, child);
+      return !isConnection(child) && !isLabel(child) && includes4(movingShapes, child);
     });
     var minOrMax, nonMovingResizingChildrenBBox, movingChildrenBBox, movingAttachers = [], nonMovingAttachers = [], movingAttachersBBox, movingAttachersConstraint, nonMovingAttachersBBox, nonMovingAttachersConstraint;
     if (nonMovingResizingChildren.length) {
@@ -29422,7 +33304,7 @@ function getSpaceToolConstraints(elements, axis, direction, start, minDimensions
     }
     if (attachers && attachers.length) {
       attachers.forEach(function(attacher) {
-        if (includes5(movingShapes, attacher)) {
+        if (includes4(movingShapes, attacher)) {
           movingAttachers.push(attacher);
         } else {
           nonMovingAttachers.push(attacher);
@@ -29469,7 +33351,7 @@ function getSpaceToolConstraints(elements, axis, direction, start, minDimensions
   });
   return spaceToolConstraints;
 }
-function includes5(array, item) {
+function includes4(array, item) {
   return array.indexOf(item) !== -1;
 }
 function isAttacher2(element) {
@@ -29518,17 +33400,17 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
     }
   });
   eventBus.on("spaceTool.move", LOW_PRIORITY19, function(event3) {
-    var context = event3.context, line = context.line, axis = context.axis, movingShapes = context.movingShapes, resizingShapes = context.resizingShapes;
+    var context = event3.context, line2 = context.line, axis = context.axis, movingShapes = context.movingShapes, resizingShapes = context.resizingShapes;
     if (!context.initialized) {
       return;
     }
     if (!context.dragGroup) {
       var spaceLayer = canvas.getLayer("space");
-      line = create("path");
-      attr(line, "d", "M0,0 L0,0");
-      classes(line).add("djs-crosshair");
-      append(spaceLayer, line);
-      context.line = line;
+      line2 = create("path");
+      attr(line2, "d", "M0,0 L0,0");
+      classes(line2).add("djs-crosshair");
+      append(spaceLayer, line2);
+      context.line = line2;
       var dragGroup = create("g");
       attr(dragGroup, styles.cls("djs-drag-group", ["no-events"]));
       append(canvas.getActiveLayer(), dragGroup);
@@ -29592,7 +33474,7 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
       x: "M" + event3.x + ", -10000 L" + event3.x + ", 10000",
       y: "M -10000, " + event3.y + " L 10000, " + event3.y
     };
-    attr(line, { d: orientation[axis] });
+    attr(line2, { d: orientation[axis] });
     var opposite = { x: "y", y: "x" };
     var delta2 = { x: event3.dx, y: event3.dy };
     delta2[opposite[context.axis]] = 0;
@@ -29624,7 +33506,7 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
     });
   });
   eventBus.on("spaceTool.cleanup", function(event3) {
-    var context = event3.context, movingShapes = context.movingShapes, movingConnections = context.movingConnections, resizingShapes = context.resizingShapes, line = context.line, dragGroup = context.dragGroup, frameGroup = context.frameGroup;
+    var context = event3.context, movingShapes = context.movingShapes, movingConnections = context.movingConnections, resizingShapes = context.resizingShapes, line2 = context.line, dragGroup = context.dragGroup, frameGroup = context.frameGroup;
     forEach(movingShapes, function(shape) {
       canvas.removeMarker(shape, MARKER_DRAGGING);
     });
@@ -29632,7 +33514,7 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
       canvas.removeMarker(connection, MARKER_DRAGGING);
     });
     if (dragGroup) {
-      remove(line);
+      remove(line2);
       remove(dragGroup);
     }
     forEach(resizingShapes, function(shape) {
@@ -29939,9 +33821,9 @@ function saveClear(collection, removeFn) {
   if (!collection) {
     return;
   }
-  var e7;
-  while (e7 = collection[0]) {
-    removeFn(e7);
+  var e8;
+  while (e8 = collection[0]) {
+    removeFn(e8);
   }
   return collection;
 }
@@ -29952,13 +33834,13 @@ var HIGH_PRIORITY12 = 1400;
 function LabelSupport(injector, eventBus, modeling) {
   CommandInterceptor.call(this, eventBus);
   var movePreview = injector.get("movePreview", false);
-  eventBus.on("shape.move.start", HIGH_PRIORITY12, function(e7) {
-    var context = e7.context, shapes = context.shapes, validatedShapes = context.validatedShapes;
+  eventBus.on("shape.move.start", HIGH_PRIORITY12, function(e8) {
+    var context = e8.context, shapes = context.shapes, validatedShapes = context.validatedShapes;
     context.shapes = removeLabels(shapes);
     context.validatedShapes = removeLabels(validatedShapes);
   });
-  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY20, function(e7) {
-    var context = e7.context, shapes = context.shapes;
+  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY20, function(e8) {
+    var context = e8.context, shapes = context.shapes;
     var labels = [];
     forEach(shapes, function(element) {
       forEach(element.labels, function(label) {
@@ -29974,8 +33856,8 @@ function LabelSupport(injector, eventBus, modeling) {
       movePreview.makeDraggable(context, label, true);
     });
   });
-  this.preExecuted("elements.move", HIGH_PRIORITY12, function(e7) {
-    var context = e7.context, closure = context.closure, enclosedElements = closure.enclosedElements;
+  this.preExecuted("elements.move", HIGH_PRIORITY12, function(e8) {
+    var context = e8.context, closure = context.closure, enclosedElements = closure.enclosedElements;
     var enclosedLabels = [];
     forEach(enclosedElements, function(element) {
       forEach(element.labels, function(label) {
@@ -29989,22 +33871,22 @@ function LabelSupport(injector, eventBus, modeling) {
   this.preExecute([
     "connection.delete",
     "shape.delete"
-  ], function(e7) {
-    var context = e7.context, element = context.connection || context.shape;
+  ], function(e8) {
+    var context = e8.context, element = context.connection || context.shape;
     saveClear(element.labels, function(label) {
       modeling.removeShape(label, { nested: true });
     });
   });
-  this.execute("shape.delete", function(e7) {
-    var context = e7.context, shape = context.shape, labelTarget = shape.labelTarget;
+  this.execute("shape.delete", function(e8) {
+    var context = e8.context, shape = context.shape, labelTarget = shape.labelTarget;
     if (labelTarget) {
       context.labelTargetIndex = indexOf(labelTarget.labels, shape);
       context.labelTarget = labelTarget;
       shape.labelTarget = null;
     }
   });
-  this.revert("shape.delete", function(e7) {
-    var context = e7.context, shape = context.shape, labelTarget = context.labelTarget, labelTargetIndex = context.labelTargetIndex;
+  this.revert("shape.delete", function(e8) {
+    var context = e8.context, shape = context.shape, labelTarget = context.labelTarget, labelTargetIndex = context.labelTargetIndex;
     if (labelTarget) {
       add2(labelTarget.labels, shape, labelTargetIndex);
       shape.labelTarget = labelTarget;
@@ -30036,13 +33918,13 @@ var MARKER_ATTACH2 = "attach-ok";
 function AttachSupport(injector, eventBus, canvas, rules, modeling) {
   CommandInterceptor.call(this, eventBus);
   var movePreview = injector.get("movePreview", false);
-  eventBus.on("shape.move.start", HIGH_PRIORITY13, function(e7) {
-    var context = e7.context, shapes = context.shapes, validatedShapes = context.validatedShapes;
+  eventBus.on("shape.move.start", HIGH_PRIORITY13, function(e8) {
+    var context = e8.context, shapes = context.shapes, validatedShapes = context.validatedShapes;
     context.shapes = addAttached(shapes);
     context.validatedShapes = removeAttached(validatedShapes);
   });
-  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY21, function(e7) {
-    var context = e7.context, shapes = context.shapes, attachers = getAttachers(shapes);
+  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY21, function(e8) {
+    var context = e8.context, shapes = context.shapes, attachers = getAttachers(shapes);
     forEach(attachers, function(attacher) {
       movePreview.makeDraggable(context, attacher, true);
       forEach(attacher.labels, function(label) {
@@ -30067,14 +33949,14 @@ function AttachSupport(injector, eventBus, canvas, rules, modeling) {
       });
     }
   });
-  this.preExecuted("elements.move", HIGH_PRIORITY13, function(e7) {
-    var context = e7.context, closure = context.closure, shapes = context.shapes, attachers = getAttachers(shapes);
+  this.preExecuted("elements.move", HIGH_PRIORITY13, function(e8) {
+    var context = e8.context, closure = context.closure, shapes = context.shapes, attachers = getAttachers(shapes);
     forEach(attachers, function(attacher) {
       closure.add(attacher, closure.topLevel[attacher.host.id]);
     });
   });
-  this.postExecuted("elements.move", function(e7) {
-    var context = e7.context, shapes = context.shapes, newHost = context.newHost, attachers;
+  this.postExecuted("elements.move", function(e8) {
+    var context = e8.context, shapes = context.shapes, newHost = context.newHost, attachers;
     if (newHost && shapes.length !== 1) {
       return;
     }
@@ -30083,15 +33965,15 @@ function AttachSupport(injector, eventBus, canvas, rules, modeling) {
     } else {
       attachers = filter(shapes, function(shape) {
         var host = shape.host;
-        return isAttacher3(shape) && !includes6(shapes, host);
+        return isAttacher3(shape) && !includes5(shapes, host);
       });
     }
     forEach(attachers, function(attacher) {
       modeling.updateAttachment(attacher, newHost);
     });
   });
-  this.postExecuted("elements.move", function(e7) {
-    var shapes = e7.context.shapes;
+  this.postExecuted("elements.move", function(e8) {
+    var shapes = e8.context.shapes;
     forEach(shapes, function(shape) {
       forEach(shape.attachers, function(attacher) {
         forEach(attacher.outgoing.slice(), function(connection) {
@@ -30117,14 +33999,14 @@ function AttachSupport(injector, eventBus, canvas, rules, modeling) {
       });
     });
   });
-  this.postExecute("shape.create", function(e7) {
-    var context = e7.context, shape = context.shape, host = context.host;
+  this.postExecute("shape.create", function(e8) {
+    var context = e8.context, shape = context.shape, host = context.host;
     if (host) {
       modeling.updateAttachment(shape, host);
     }
   });
-  this.postExecute("shape.replace", function(e7) {
-    var context = e7.context, oldShape = context.oldShape, newShape = context.newShape;
+  this.postExecute("shape.replace", function(e8) {
+    var context = e8.context, oldShape = context.oldShape, newShape = context.newShape;
     saveClear(oldShape.attachers, function(attacher) {
       var allowed = rules.allowed("elements.move", {
         target: newShape,
@@ -30198,7 +34080,7 @@ function removeAttached(elements) {
 function isAttacher3(shape) {
   return !!shape.host;
 }
-function includes6(array, item) {
+function includes5(array, item) {
   return array.indexOf(item) !== -1;
 }
 
@@ -30303,8 +34185,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
   CommandInterceptor.call(this, eventBus);
   this._bpmnFactory = bpmnFactory;
   var self2 = this;
-  function cropConnection(e7) {
-    var context = e7.context, hints = context.hints || {}, connection;
+  function cropConnection(e8) {
+    var context = e8.context, hints = context.hints || {}, connection;
     if (!context.cropped && hints.createElementsBehavior !== false) {
       connection = context.connection;
       connection.waypoints = connectionDocking.getCroppedWaypoints(connection);
@@ -30315,15 +34197,15 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
     "connection.layout",
     "connection.create"
   ], cropConnection);
-  this.reverted(["connection.layout"], function(e7) {
-    delete e7.context.cropped;
+  this.reverted(["connection.layout"], function(e8) {
+    delete e8.context.cropped;
   });
-  function updateParent(e7) {
-    var context = e7.context;
+  function updateParent(e8) {
+    var context = e8.context;
     self2.updateParent(context.shape || context.connection, context.oldParent);
   }
-  function reverseUpdateParent(e7) {
-    var context = e7.context;
+  function reverseUpdateParent(e8) {
+    var context = e8.context;
     var element = context.shape || context.connection, oldParent = context.parent || context.newParent;
     self2.updateParent(element, oldParent);
   }
@@ -30353,8 +34235,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
   }
   this.executed(["canvas.updateRoot"], updateRoot);
   this.reverted(["canvas.updateRoot"], updateRoot);
-  function updateBounds(e7) {
-    var shape = e7.context.shape;
+  function updateBounds(e8) {
+    var shape = e8.context.shape;
     if (!is(shape, "bpmn:BaseElement")) {
       return;
     }
@@ -30377,8 +34259,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
       updateBounds({ context: { shape: event3.element } });
     }
   });
-  function updateConnection(e7) {
-    self2.updateConnection(e7.context);
+  function updateConnection(e8) {
+    self2.updateConnection(e8.context);
   }
   this.executed([
     "connection.create",
@@ -30392,8 +34274,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
     "connection.delete",
     "connection.reconnect"
   ], ifBpmn(updateConnection));
-  function updateConnectionWaypoints(e7) {
-    self2.updateConnectionWaypoints(e7.context.connection);
+  function updateConnectionWaypoints(e8) {
+    self2.updateConnectionWaypoints(e8.context.connection);
   }
   this.executed([
     "connection.layout",
@@ -30430,8 +34312,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
       delete newSourceBo.default;
     }
   }));
-  function updateAttachment(e7) {
-    self2.updateAttachment(e7.context);
+  function updateAttachment(e8) {
+    self2.updateAttachment(e8.context);
   }
   this.executed(["element.updateAttachment"], ifBpmn(updateAttachment));
   this.reverted(["element.updateAttachment"], ifBpmn(updateAttachment));
@@ -31784,7 +35666,7 @@ SpaceToolHandler.prototype.updateConnectionWaypoints = function(connections, del
   var self2 = this, affectedShapes = movingShapes.concat(resizingShapes);
   forEach(connections, function(connection) {
     var source = connection.source, target = connection.target, waypoints = copyWaypoints2(connection), axis = getAxisFromDirection(direction), layoutHints = {};
-    if (includes7(affectedShapes, source) && includes7(affectedShapes, target)) {
+    if (includes6(affectedShapes, source) && includes6(affectedShapes, target)) {
       waypoints = map(waypoints, function(waypoint) {
         if (shouldMoveWaypoint(waypoint, start, direction)) {
           waypoint[axis] = waypoint[axis] + delta2[axis];
@@ -31797,18 +35679,18 @@ SpaceToolHandler.prototype.updateConnectionWaypoints = function(connections, del
       self2._modeling.updateWaypoints(connection, waypoints, {
         labelBehavior: false
       });
-    } else if (includes7(affectedShapes, source) || includes7(affectedShapes, target)) {
-      if (includes7(movingShapes, source)) {
+    } else if (includes6(affectedShapes, source) || includes6(affectedShapes, target)) {
+      if (includes6(movingShapes, source)) {
         layoutHints.connectionStart = getMovedSourceAnchor(connection, source, delta2);
-      } else if (includes7(movingShapes, target)) {
+      } else if (includes6(movingShapes, target)) {
         layoutHints.connectionEnd = getMovedTargetAnchor(connection, target, delta2);
-      } else if (includes7(resizingShapes, source)) {
+      } else if (includes6(resizingShapes, source)) {
         layoutHints.connectionStart = getResizedSourceAnchor(
           connection,
           source,
           oldBounds[source.id]
         );
-      } else if (includes7(resizingShapes, target)) {
+      } else if (includes6(resizingShapes, target)) {
         layoutHints.connectionEnd = getResizedTargetAnchor(
           connection,
           target,
@@ -31851,7 +35733,7 @@ function shouldMoveWaypoint(waypoint, start, direction) {
     return waypoint[relevantAxis] < start;
   }
 }
-function includes7(array, item) {
+function includes6(array, item) {
   return array.indexOf(item) !== -1;
 }
 function getBounds2(shape) {
@@ -32838,7 +36720,7 @@ function SetColorHandler(commandStack) {
         return hexColor;
       }
     }
-    throw new Error("invalid color value: " + color);
+    throw new Error(`invalid color value: ${color}`);
   };
 }
 SetColorHandler.$inject = [
@@ -33061,6 +36943,7 @@ Modeling2.prototype.makeProcess = function() {
     newRoot: processElement
   };
   this._commandStack.execute("canvas.updateRoot", context);
+  return processElement;
 };
 Modeling2.prototype.updateLaneRefs = function(flowNodeShapes, laneShapes) {
   this._commandStack.execute("lane.updateRefs", {
@@ -33442,7 +37325,7 @@ function invertOrientation(orientation) {
     "bottom-left": "top-right"
   }[orientation];
 }
-function getDockingPoint(point, rectangle, dockingDirection, targetOrientation) {
+function getDockingPoint(point, rectangle2, dockingDirection, targetOrientation) {
   if (dockingDirection === "h") {
     dockingDirection = /left/.test(targetOrientation) ? "l" : "r";
   }
@@ -33450,16 +37333,16 @@ function getDockingPoint(point, rectangle, dockingDirection, targetOrientation) 
     dockingDirection = /top/.test(targetOrientation) ? "t" : "b";
   }
   if (dockingDirection === "t") {
-    return { original: point, x: point.x, y: rectangle.y };
+    return { original: point, x: point.x, y: rectangle2.y };
   }
   if (dockingDirection === "r") {
-    return { original: point, x: rectangle.x + rectangle.width, y: point.y };
+    return { original: point, x: rectangle2.x + rectangle2.width, y: point.y };
   }
   if (dockingDirection === "b") {
-    return { original: point, x: point.x, y: rectangle.y + rectangle.height };
+    return { original: point, x: point.x, y: rectangle2.y + rectangle2.height };
   }
   if (dockingDirection === "l") {
-    return { original: point, x: rectangle.x, y: point.y };
+    return { original: point, x: rectangle2.x, y: point.y };
   }
   throw new Error("unexpected dockingDirection: <" + dockingDirection + ">");
 }
@@ -33905,11 +37788,11 @@ var append_preview_default = {
 // node_modules/diagram-js-direct-editing/lib/TextBox.js
 var min4 = Math.min;
 var max7 = Math.max;
-function preventDefault2(e7) {
-  e7.preventDefault();
+function preventDefault2(e8) {
+  e8.preventDefault();
 }
-function stopPropagation2(e7) {
-  e7.stopPropagation();
+function stopPropagation2(e8) {
+  e8.stopPropagation();
 }
 function isTextNode(node2) {
   return node2.nodeType === Node.TEXT_NODE;
@@ -34009,12 +37892,12 @@ TextBox.prototype.create = function(bounds, style, value, options2) {
   this.setSelection(content.lastChild, content.lastChild && content.lastChild.length);
   return parent;
 };
-TextBox.prototype.handlePaste = function(e7) {
+TextBox.prototype.handlePaste = function(e8) {
   var options2 = this.options, style = this.style;
-  e7.preventDefault();
+  e8.preventDefault();
   var text;
-  if (e7.clipboardData) {
-    text = e7.clipboardData.getData("text/plain");
+  if (e8.clipboardData) {
+    text = e8.clipboardData.getData("text/plain");
   } else {
     text = window.clipboardData.getData("Text");
   }
@@ -34050,10 +37933,10 @@ TextBox.prototype._insertTextIE = function(text) {
     offset = textNode.textContent.length;
   } else {
     var startContainerChildIndex = childNodesArray.indexOf(startContainer), endContainerChildIndex = childNodesArray.indexOf(endContainer);
-    childNodesArray.forEach(function(childNode, index4) {
-      if (index4 === startContainerChildIndex) {
+    childNodesArray.forEach(function(childNode, index5) {
+      if (index5 === startContainerChildIndex) {
         childNode.textContent = startContainer.textContent.substring(0, startOffset) + text + endContainer.textContent.substring(endOffset);
-      } else if (index4 > startContainerChildIndex && index4 <= endContainerChildIndex) {
+      } else if (index5 > startContainerChildIndex && index5 <= endContainerChildIndex) {
         remove2(childNode);
       }
     });
@@ -34090,34 +37973,34 @@ TextBox.prototype.resizable = function() {
       '<div class="djs-direct-editing-resize-handle"></div>'
     );
     var startX, startY, startWidth, startHeight;
-    var onMouseDown = function(e7) {
-      preventDefault2(e7);
-      stopPropagation2(e7);
-      startX = e7.clientX;
-      startY = e7.clientY;
+    var onMouseDown = function(e8) {
+      preventDefault2(e8);
+      stopPropagation2(e8);
+      startX = e8.clientX;
+      startY = e8.clientY;
       var bounds = parent.getBoundingClientRect();
       startWidth = bounds.width;
       startHeight = bounds.height;
       event.bind(document, "mousemove", onMouseMove);
       event.bind(document, "mouseup", onMouseUp);
     };
-    var onMouseMove = function(e7) {
-      preventDefault2(e7);
-      stopPropagation2(e7);
-      var newWidth = min4(max7(startWidth + e7.clientX - startX, minWidth), maxWidth);
-      var newHeight = min4(max7(startHeight + e7.clientY - startY, minHeight), maxHeight);
+    var onMouseMove = function(e8) {
+      preventDefault2(e8);
+      stopPropagation2(e8);
+      var newWidth = min4(max7(startWidth + e8.clientX - startX, minWidth), maxWidth);
+      var newHeight = min4(max7(startHeight + e8.clientY - startY, minHeight), maxHeight);
       parent.style.width = newWidth + "px";
       parent.style.height = newHeight + "px";
       self2.resizeHandler({
         width: startWidth,
         height: startHeight,
-        dx: e7.clientX - startX,
-        dy: e7.clientY - startY
+        dx: e8.clientX - startX,
+        dy: e8.clientY - startY
       });
     };
-    var onMouseUp = function(e7) {
-      preventDefault2(e7);
-      stopPropagation2(e7);
+    var onMouseUp = function(e8) {
+      preventDefault2(e8);
+      stopPropagation2(e8);
       event.unbind(document, "mousemove", onMouseMove, false);
       event.unbind(document, "mouseup", onMouseUp, false);
     };
@@ -34229,15 +38112,15 @@ DirectEditing.prototype.complete = function() {
 DirectEditing.prototype.getValue = function() {
   return this._textbox.getValue();
 };
-DirectEditing.prototype._handleKey = function(e7) {
-  e7.stopPropagation();
-  var key = e7.keyCode || e7.charCode;
+DirectEditing.prototype._handleKey = function(e8) {
+  e8.stopPropagation();
+  var key = e8.keyCode || e8.charCode;
   if (key === 27) {
-    e7.preventDefault();
+    e8.preventDefault();
     return this.cancel();
   }
-  if (key === 13 && !e7.shiftKey) {
-    e7.preventDefault();
+  if (key === 13 && !e8.shiftKey) {
+    e8.preventDefault();
     return this.complete();
   }
 };
@@ -35154,14 +39037,14 @@ var Icons_default = {
 };
 
 // node_modules/bpmn-js/lib/features/popup-menu/ReplaceMenuProvider.js
-function ReplaceMenuProvider(bpmnFactory, popupMenu, modeling, moddle, bpmnReplace, rules, translate3, moddleCopy) {
+function ReplaceMenuProvider(bpmnFactory, popupMenu, modeling, moddle, bpmnReplace, rules, translate4, moddleCopy) {
   this._bpmnFactory = bpmnFactory;
   this._popupMenu = popupMenu;
   this._modeling = modeling;
   this._moddle = moddle;
   this._bpmnReplace = bpmnReplace;
   this._rules = rules;
-  this._translate = translate3;
+  this._translate = translate4;
   this._moddleCopy = moddleCopy;
   this._register();
 }
@@ -35372,7 +39255,7 @@ ReplaceMenuProvider.prototype._createSequenceFlowEntries = function(target, repl
   return entries;
 };
 ReplaceMenuProvider.prototype._createEntry = function(replaceOption, target, action) {
-  var translate3 = this._translate;
+  var translate4 = this._translate;
   var replaceElement = this._bpmnReplace.replaceElement;
   var replaceAction = function() {
     return replaceElement(target, replaceOption.target);
@@ -35383,14 +39266,14 @@ ReplaceMenuProvider.prototype._createEntry = function(replaceOption, target, act
   }
   action = action || replaceAction;
   return {
-    label: translate3(label),
+    label: translate4(label),
     className: replaceOption.className,
     action
   };
 };
 ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(target) {
   var self2 = this;
-  var translate3 = this._translate;
+  var translate4 = this._translate;
   function toggleLoopEntry(event3, entry) {
     if (entry.active) {
       self2._modeling.updateProperties(target, { loopCharacteristics: void 0 });
@@ -35413,7 +39296,7 @@ ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(ta
   return {
     "toggle-parallel-mi": {
       className: "bpmn-icon-parallel-mi-marker",
-      title: translate3("Parallel multi-instance"),
+      title: translate4("Parallel multi-instance"),
       active: isParallel,
       action: toggleLoopEntry,
       options: {
@@ -35423,7 +39306,7 @@ ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(ta
     },
     "toggle-sequential-mi": {
       className: "bpmn-icon-sequential-mi-marker",
-      title: translate3("Sequential multi-instance"),
+      title: translate4("Sequential multi-instance"),
       active: isSequential,
       action: toggleLoopEntry,
       options: {
@@ -35433,7 +39316,7 @@ ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(ta
     },
     "toggle-loop": {
       className: "bpmn-icon-loop-marker",
-      title: translate3("Loop"),
+      title: translate4("Loop"),
       active: isLoop,
       action: toggleLoopEntry,
       options: {
@@ -35444,7 +39327,7 @@ ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(ta
 };
 ReplaceMenuProvider.prototype._getCollectionHeaderEntries = function(target) {
   var self2 = this;
-  var translate3 = this._translate;
+  var translate4 = this._translate;
   var dataObject = target.businessObject.dataObjectRef;
   if (!dataObject) {
     return {};
@@ -35456,12 +39339,12 @@ ReplaceMenuProvider.prototype._getCollectionHeaderEntries = function(target) {
       { isCollection: !entry.active }
     );
   }
-  var isCollection2 = dataObject.isCollection;
+  var isCollection3 = dataObject.isCollection;
   return {
     "toggle-is-collection": {
       className: "bpmn-icon-parallel-mi-marker",
-      title: translate3("Collection"),
-      active: isCollection2,
+      title: translate4("Collection"),
+      active: isCollection3,
       action: toggleIsCollection
     }
   };
@@ -35469,7 +39352,7 @@ ReplaceMenuProvider.prototype._getCollectionHeaderEntries = function(target) {
 ReplaceMenuProvider.prototype._getParticipantMultiplicityHeaderEntries = function(target) {
   var self2 = this;
   var bpmnFactory = this._bpmnFactory;
-  var translate3 = this._translate;
+  var translate4 = this._translate;
   function toggleParticipantMultiplicity(event3, entry) {
     var isActive = entry.active;
     var participantMultiplicity2;
@@ -35485,21 +39368,21 @@ ReplaceMenuProvider.prototype._getParticipantMultiplicityHeaderEntries = functio
   return {
     "toggle-participant-multiplicity": {
       className: "bpmn-icon-parallel-mi-marker",
-      title: translate3("Participant multiplicity"),
+      title: translate4("Participant multiplicity"),
       active: !!participantMultiplicity,
       action: toggleParticipantMultiplicity
     }
   };
 };
 ReplaceMenuProvider.prototype._getAdHocHeaderEntries = function(element) {
-  var translate3 = this._translate;
+  var translate4 = this._translate;
   var businessObject = getBusinessObject(element);
   var isAdHoc = is(businessObject, "bpmn:AdHocSubProcess");
   var replaceElement = this._bpmnReplace.replaceElement;
   return {
     "toggle-adhoc": {
       className: "bpmn-icon-ad-hoc-marker",
-      title: translate3("Ad-hoc"),
+      title: translate4("Ad-hoc"),
       active: isAdHoc,
       action: function(event3, entry) {
         if (isAdHoc) {
@@ -35518,7 +39401,7 @@ ReplaceMenuProvider.prototype._getAdHocHeaderEntries = function(element) {
   };
 };
 ReplaceMenuProvider.prototype._getNonInterruptingHeaderEntries = function(element) {
-  const translate3 = this._translate;
+  const translate4 = this._translate;
   const businessObject = getBusinessObject(element);
   const self2 = this;
   const interruptingProperty = getInterruptingProperty(element);
@@ -35527,7 +39410,7 @@ ReplaceMenuProvider.prototype._getNonInterruptingHeaderEntries = function(elemen
   return {
     "toggle-non-interrupting": {
       imageHtml: icon,
-      title: translate3("Toggle non-interrupting"),
+      title: translate4("Toggle non-interrupting"),
       active: isNonInterrupting,
       action: function() {
         self2._modeling.updateProperties(element, {
@@ -35552,7 +39435,7 @@ var popup_menu_default2 = {
 };
 
 // node_modules/bpmn-js/lib/features/context-pad/ContextPadProvider.js
-function ContextPadProvider(config, injector, eventBus, contextPad, modeling, elementFactory, connect, create3, popupMenu, canvas, rules, translate3, appendPreview) {
+function ContextPadProvider(config, injector, eventBus, contextPad, modeling, elementFactory, connect, create3, popupMenu, canvas, rules, translate4, appendPreview) {
   config = config || {};
   contextPad.registerProvider(this);
   this._contextPad = contextPad;
@@ -35563,7 +39446,7 @@ function ContextPadProvider(config, injector, eventBus, contextPad, modeling, el
   this._popupMenu = popupMenu;
   this._canvas = canvas;
   this._rules = rules;
-  this._translate = translate3;
+  this._translate = translate4;
   this._eventBus = eventBus;
   this._appendPreview = appendPreview;
   if (config.autoPlace !== false) {
@@ -35578,6 +39461,9 @@ function ContextPadProvider(config, injector, eventBus, contextPad, modeling, el
     if (entries.replace) {
       entries.replace.action.click(event3, shape);
     }
+  });
+  eventBus.on("contextPad.close", function() {
+    appendPreview.cleanUp();
   });
 }
 ContextPadProvider.$inject = [
@@ -35619,24 +39505,37 @@ ContextPadProvider.prototype._isDeleteAllowed = function(elements) {
     elements
   });
   if (isArray(baseAllowed)) {
-    return every(baseAllowed, function(element) {
-      return includes8(baseAllowed, element);
-    });
+    return every(elements, (el) => baseAllowed.includes(el));
   }
   return baseAllowed;
 };
 ContextPadProvider.prototype.getContextPadEntries = function(element) {
-  var contextPad = this._contextPad, modeling = this._modeling, elementFactory = this._elementFactory, connect = this._connect, create3 = this._create, popupMenu = this._popupMenu, rules = this._rules, autoPlace = this._autoPlace, translate3 = this._translate, appendPreview = this._appendPreview;
+  var contextPad = this._contextPad, modeling = this._modeling, elementFactory = this._elementFactory, connect = this._connect, create3 = this._create, popupMenu = this._popupMenu, autoPlace = this._autoPlace, translate4 = this._translate, appendPreview = this._appendPreview;
   var actions = {};
   if (element.type === "label") {
+    if (this._isDeleteAllowed([element])) {
+      assign(actions, deleteAction());
+    }
     return actions;
   }
   var businessObject = element.businessObject;
   function startConnect(event3, element2) {
     connect.start(event3, element2);
   }
-  function removeElement2(e7, element2) {
+  function removeElement2(e8, element2) {
     modeling.removeElements([element2]);
+  }
+  function deleteAction() {
+    return {
+      "delete": {
+        group: "edit",
+        className: "bpmn-icon-trash",
+        title: translate4("Delete"),
+        action: {
+          click: removeElement2
+        }
+      }
+    };
   }
   function getReplaceMenuPosition(element2) {
     var Y_OFFSET = 5;
@@ -35654,12 +39553,10 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       create3.start(event3, shape, {
         source: element2
       });
-      appendPreview.cleanUp();
     }
     var append2 = autoPlace ? function(_5, element2) {
       var shape = elementFactory.createShape(assign({ type }, options2));
       autoPlace.append(element2, shape);
-      appendPreview.cleanUp();
     } : appendStart;
     var previewAppend = autoPlace ? function(_5, element2) {
       appendPreview.create(element2, type, options2);
@@ -35690,7 +39587,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "lane-insert-above": {
         group: "lane-insert-above",
         className: "bpmn-icon-lane-insert-above",
-        title: translate3("Add lane above"),
+        title: translate4("Add lane above"),
         action: {
           click: function(event3, element2) {
             modeling.addLane(element2, "top");
@@ -35704,7 +39601,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
           "lane-divide-two": {
             group: "lane-divide",
             className: "bpmn-icon-lane-divide-two",
-            title: translate3("Divide into two lanes"),
+            title: translate4("Divide into two lanes"),
             action: {
               click: splitLaneHandler(2)
             }
@@ -35716,7 +39613,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
           "lane-divide-three": {
             group: "lane-divide",
             className: "bpmn-icon-lane-divide-three",
-            title: translate3("Divide into three lanes"),
+            title: translate4("Divide into three lanes"),
             action: {
               click: splitLaneHandler(3)
             }
@@ -35728,7 +39625,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "lane-insert-below": {
         group: "lane-insert-below",
         className: "bpmn-icon-lane-insert-below",
-        title: translate3("Add lane below"),
+        title: translate4("Add lane below"),
         action: {
           click: function(event3, element2) {
             modeling.addLane(element2, "bottom");
@@ -35743,30 +39640,30 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
         "append.receive-task": appendAction(
           "bpmn:ReceiveTask",
           "bpmn-icon-receive-task",
-          translate3("Append receive task")
+          translate4("Append receive task")
         ),
         "append.message-intermediate-event": appendAction(
           "bpmn:IntermediateCatchEvent",
           "bpmn-icon-intermediate-event-catch-message",
-          translate3("Append message intermediate catch event"),
+          translate4("Append message intermediate catch event"),
           { eventDefinitionType: "bpmn:MessageEventDefinition" }
         ),
         "append.timer-intermediate-event": appendAction(
           "bpmn:IntermediateCatchEvent",
           "bpmn-icon-intermediate-event-catch-timer",
-          translate3("Append timer intermediate catch event"),
+          translate4("Append timer intermediate catch event"),
           { eventDefinitionType: "bpmn:TimerEventDefinition" }
         ),
         "append.condition-intermediate-event": appendAction(
           "bpmn:IntermediateCatchEvent",
           "bpmn-icon-intermediate-event-catch-condition",
-          translate3("Append conditional intermediate catch event"),
+          translate4("Append conditional intermediate catch event"),
           { eventDefinitionType: "bpmn:ConditionalEventDefinition" }
         ),
         "append.signal-intermediate-event": appendAction(
           "bpmn:IntermediateCatchEvent",
           "bpmn-icon-intermediate-event-catch-signal",
-          translate3("Append signal intermediate catch event"),
+          translate4("Append signal intermediate catch event"),
           { eventDefinitionType: "bpmn:SignalEventDefinition" }
         )
       });
@@ -35775,7 +39672,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
         "append.compensation-activity": appendAction(
           "bpmn:Task",
           "bpmn-icon-task",
-          translate3("Append compensation activity"),
+          translate4("Append compensation activity"),
           {
             isForCompensation: true
           }
@@ -35786,22 +39683,22 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
         "append.end-event": appendAction(
           "bpmn:EndEvent",
           "bpmn-icon-end-event-none",
-          translate3("Append end event")
+          translate4("Append end event")
         ),
         "append.gateway": appendAction(
           "bpmn:ExclusiveGateway",
           "bpmn-icon-gateway-none",
-          translate3("Append gateway")
+          translate4("Append gateway")
         ),
         "append.append-task": appendAction(
           "bpmn:Task",
           "bpmn-icon-task",
-          translate3("Append task")
+          translate4("Append task")
         ),
         "append.intermediate-event": appendAction(
           "bpmn:IntermediateThrowEvent",
           "bpmn-icon-intermediate-event-none",
-          translate3("Append intermediate/boundary event")
+          translate4("Append intermediate/boundary event")
         )
       });
     }
@@ -35811,14 +39708,14 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "replace": {
         group: "edit",
         className: "bpmn-icon-screw-wrench",
-        title: translate3("Change element"),
+        title: translate4("Change element"),
         action: {
           click: function(event3, element2) {
             var position = assign(getReplaceMenuPosition(element2), {
               cursor: { x: event3.x, y: event3.y }
             });
             popupMenu.open(element2, "bpmn-replace", position, {
-              title: translate3("Change element"),
+              title: translate4("Change element"),
               width: 300,
               search: true
             });
@@ -35832,7 +39729,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "append.text-annotation": appendAction(
         "bpmn:TextAnnotation",
         "bpmn-icon-text-annotation",
-        translate3("Add text annotation")
+        translate4("Add text annotation")
       )
     });
   }
@@ -35846,12 +39743,12 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "append.text-annotation": appendAction(
         "bpmn:TextAnnotation",
         "bpmn-icon-text-annotation",
-        translate3("Add text annotation")
+        translate4("Add text annotation")
       ),
       "connect": {
         group: "connect",
         className: "bpmn-icon-connection-multi",
-        title: translate3("Connect to other element"),
+        title: translate4("Connect to other element"),
         action: {
           click: startConnect,
           dragstart: startConnect
@@ -35864,7 +39761,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "connect": {
         group: "connect",
         className: "bpmn-icon-connection-multi",
-        title: translate3("Connect using association"),
+        title: translate4("Connect using association"),
         action: {
           click: startConnect,
           dragstart: startConnect
@@ -35877,7 +39774,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "connect": {
         group: "connect",
         className: "bpmn-icon-connection-multi",
-        title: translate3("Connect using data input association"),
+        title: translate4("Connect using data input association"),
         action: {
           click: startConnect,
           dragstart: startConnect
@@ -35890,30 +39787,17 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
       "append.text-annotation": appendAction(
         "bpmn:TextAnnotation",
         "bpmn-icon-text-annotation",
-        translate3("Add text annotation")
+        translate4("Add text annotation")
       )
     });
   }
-  var deleteAllowed = rules.allowed("elements.delete", { elements: [element] });
-  if (isArray(deleteAllowed)) {
-    deleteAllowed = deleteAllowed[0] === element;
-  }
-  if (deleteAllowed) {
-    assign(actions, {
-      "delete": {
-        group: "edit",
-        className: "bpmn-icon-trash",
-        title: translate3("Delete"),
-        action: {
-          click: removeElement2
-        }
-      }
-    });
+  if (this._isDeleteAllowed([element])) {
+    assign(actions, deleteAction());
   }
   return actions;
 };
 function isEventType(businessObject, type, eventDefinitionType) {
-  var isType2 = businessObject.$instanceOf(type);
+  var isType3 = businessObject.$instanceOf(type);
   var isDefinition = false;
   var definitions = businessObject.eventDefinitions || [];
   forEach(definitions, function(def) {
@@ -35921,10 +39805,7 @@ function isEventType(businessObject, type, eventDefinitionType) {
       isDefinition = true;
     }
   });
-  return isType2 && isDefinition;
-}
-function includes8(array, item) {
-  return array.indexOf(item) !== -1;
+  return isType3 && isDefinition;
 }
 
 // node_modules/bpmn-js/lib/features/context-pad/index.js
@@ -36078,9 +39959,9 @@ var DistributeElementsIcons_default = icons2;
 
 // node_modules/bpmn-js/lib/features/distribute-elements/DistributeElementsMenuProvider.js
 var LOW_PRIORITY22 = 900;
-function DistributeElementsMenuProvider(popupMenu, distributeElements, translate3, rules) {
+function DistributeElementsMenuProvider(popupMenu, distributeElements, translate4, rules) {
   this._distributeElements = distributeElements;
-  this._translate = translate3;
+  this._translate = translate4;
   this._popupMenu = popupMenu;
   this._rules = rules;
   popupMenu.registerProvider("align-elements", LOW_PRIORITY22, this);
@@ -36102,11 +39983,11 @@ DistributeElementsMenuProvider.prototype._isAllowed = function(elements) {
   return this._rules.allowed("elements.distribute", { elements });
 };
 DistributeElementsMenuProvider.prototype._getEntries = function(elements) {
-  var distributeElements = this._distributeElements, translate3 = this._translate, popupMenu = this._popupMenu;
+  var distributeElements = this._distributeElements, translate4 = this._translate, popupMenu = this._popupMenu;
   var entries = {
     "distribute-elements-horizontal": {
       group: "distribute",
-      title: translate3("Distribute elements horizontally"),
+      title: translate4("Distribute elements horizontally"),
       className: "bjs-align-elements-menu-entry",
       imageHtml: DistributeElementsIcons_default["horizontal"],
       action: function(event3, entry) {
@@ -36116,7 +39997,7 @@ DistributeElementsMenuProvider.prototype._getEntries = function(elements) {
     },
     "distribute-elements-vertical": {
       group: "distribute",
-      title: translate3("Distribute elements vertically"),
+      title: translate4("Distribute elements vertically"),
       imageHtml: DistributeElementsIcons_default["vertical"],
       action: function(event3, entry) {
         distributeElements.trigger(elements, "vertical");
@@ -37360,15 +41241,15 @@ function ResizeHandles(eventBus, canvas, selection2, resize) {
   this._resize = resize;
   this._canvas = canvas;
   var self2 = this;
-  eventBus.on("selection.changed", function(e7) {
-    var newSelection = e7.newSelection;
+  eventBus.on("selection.changed", function(e8) {
+    var newSelection = e8.newSelection;
     self2.removeResizers();
     if (newSelection.length === 1) {
       forEach(newSelection, bind(self2.addResizer, self2));
     }
   });
-  eventBus.on("shape.changed", function(e7) {
-    var shape = e7.element;
+  eventBus.on("shape.changed", function(e8) {
+    var shape = e8.element;
     if (selection2.isSelected(shape)) {
       self2.removeResizers();
       self2.addResizer(shape);
@@ -37508,7 +41389,7 @@ function LabelEditingProvider(eventBus, bpmnFactory, canvas, directEditing, mode
       directEditing.cancel();
     }
   });
-  eventBus.on(["commandStack.changed"], function(e7) {
+  eventBus.on(["commandStack.changed"], function(e8) {
     if (directEditing.isActive()) {
       directEditing.cancel();
     }
@@ -37775,7 +41656,7 @@ function isEmptyText2(label) {
 }
 
 // node_modules/bpmn-js/lib/features/label-editing/LabelEditingPreview.js
-var MARKER_HIDDEN = "djs-element-hidden";
+var MARKER_HIDDEN2 = "djs-element-hidden";
 var MARKER_LABEL_HIDDEN = "djs-label-hidden";
 function LabelEditingPreview(eventBus, canvas, pathMap) {
   var self2 = this;
@@ -37801,14 +41682,14 @@ function LabelEditingPreview(eventBus, canvas, pathMap) {
       attr(path, {
         d: textPathData,
         strokeWidth: 2,
-        stroke: getStrokeColor2(element)
+        stroke: getStrokeColor3(element)
       });
       append(gfx, path);
       append(defaultLayer, gfx);
       translate(gfx, element.x, element.y);
     }
     if (is(element, "bpmn:TextAnnotation") || element.labelTarget) {
-      canvas.addMarker(element, MARKER_HIDDEN);
+      canvas.addMarker(element, MARKER_HIDDEN2);
     } else if (is(element, "bpmn:Task") || is(element, "bpmn:CallActivity") || is(element, "bpmn:SubProcess") || is(element, "bpmn:Participant")) {
       canvas.addMarker(element, MARKER_LABEL_HIDDEN);
     }
@@ -37835,7 +41716,7 @@ function LabelEditingPreview(eventBus, canvas, pathMap) {
   eventBus.on(["directEditing.complete", "directEditing.cancel"], function(context) {
     var activeProvider = context.active;
     if (activeProvider) {
-      canvas.removeMarker(activeProvider.element.label || activeProvider.element, MARKER_HIDDEN);
+      canvas.removeMarker(activeProvider.element.label || activeProvider.element, MARKER_HIDDEN2);
       canvas.removeMarker(element, MARKER_LABEL_HIDDEN);
     }
     element = void 0;
@@ -37851,7 +41732,7 @@ LabelEditingPreview.$inject = [
   "canvas",
   "pathMap"
 ];
-function getStrokeColor2(element, defaultColor) {
+function getStrokeColor3(element, defaultColor) {
   var di = getDi(element);
   return di.get("stroke") || defaultColor || "black";
 }
@@ -38059,7 +41940,7 @@ var tooltips_default = {
 
 // node_modules/bpmn-js/lib/features/modeling-feedback/ModelingFeedback.js
 var COLLAB_ERR_MSG = "flow elements must be children of pools/participants";
-function ModelingFeedback(eventBus, tooltips3, translate3) {
+function ModelingFeedback(eventBus, tooltips3, translate4) {
   function showError(position, message, timeout) {
     tooltips3.add({
       position: {
@@ -38074,7 +41955,7 @@ function ModelingFeedback(eventBus, tooltips3, translate3) {
   eventBus.on(["shape.move.rejected", "create.rejected"], function(event3) {
     var context = event3.context, shape = context.shape, target = context.target;
     if (is(target, "bpmn:Collaboration") && is(shape, "bpmn:FlowNode")) {
-      showError(event3, translate3(COLLAB_ERR_MSG));
+      showError(event3, translate4(COLLAB_ERR_MSG));
     }
   });
 }
@@ -38229,10 +42110,12 @@ function MovePreview(eventBus, canvas, styles, previewSupport) {
   }
   function getAllDraggedElements(shapes) {
     var allShapes = selfAndAllChildren(shapes, true);
-    var allConnections = map(allShapes, function(shape) {
-      return (shape.incoming || []).concat(shape.outgoing || []);
-    });
-    return flatten(allShapes.concat(allConnections));
+    var allConnections = allShapes.flatMap(
+      (shape) => (shape.incoming || []).concat(shape.outgoing || [])
+    );
+    var allElements = allShapes.concat(allConnections);
+    var uniqueElements = [...new Set(allElements)];
+    return uniqueElements;
   }
   function setMarker(element, marker) {
     [MARKER_ATTACH3, MARKER_OK4, MARKER_NOT_OK4, MARKER_NEW_PARENT2].forEach(function(m5) {
@@ -38275,8 +42158,8 @@ function MovePreview(eventBus, canvas, styles, previewSupport) {
         getAllDraggedElements(dragShapes)
       ]);
     }
-    forEach(allDraggedElements, function(e7) {
-      canvas.addMarker(e7, MARKER_DRAGGING2);
+    forEach(allDraggedElements, function(e8) {
+      canvas.addMarker(e8, MARKER_DRAGGING2);
     });
     context.allDraggedElements = allDraggedElements;
     context.differentParents = haveDifferentParents(dragShapes);
@@ -38302,8 +42185,8 @@ function MovePreview(eventBus, canvas, styles, previewSupport) {
   });
   eventBus.on("shape.move.cleanup", function(event3) {
     var context = event3.context, allDraggedElements = context.allDraggedElements, dragGroup = context.dragGroup;
-    forEach(allDraggedElements, function(e7) {
-      canvas.removeMarker(e7, MARKER_DRAGGING2);
+    forEach(allDraggedElements, function(e8) {
+      canvas.removeMarker(e8, MARKER_DRAGGING2);
     });
     if (dragGroup) {
       remove(dragGroup);
@@ -38328,8 +42211,8 @@ function removeEdges(elements) {
   return filteredElements;
 }
 function haveDifferentParents(elements) {
-  return size(groupBy(elements, function(e7) {
-    return e7.parent && e7.parent.id;
+  return size(groupBy(elements, function(e8) {
+    return e8.parent && e8.parent.id;
   })) !== 1;
 }
 
@@ -38803,15 +42686,15 @@ function HandTool(eventBus, canvas, dragging, injector, toolManager, mouse) {
     self2.activateMove(event3.originalEvent, true);
     return false;
   });
-  keyboard && keyboard.addListener(HIGH_PRIORITY19, function(e7) {
-    if (!isSpace(e7.keyEvent) || self2.isActive()) {
+  keyboard && keyboard.addListener(HIGH_PRIORITY19, function(e8) {
+    if (!isSpace(e8.keyEvent) || self2.isActive()) {
       return;
     }
     var mouseEvent = self2._mouse.getLastMoveEvent();
     self2.activateMove(mouseEvent, !!mouseEvent);
   }, "keyboard.keydown");
-  keyboard && keyboard.addListener(HIGH_PRIORITY19, function(e7) {
-    if (!isSpace(e7.keyEvent) || !self2.isActive()) {
+  keyboard && keyboard.addListener(HIGH_PRIORITY19, function(e8) {
+    if (!isSpace(e8.keyEvent) || !self2.isActive()) {
       return;
     }
     self2.toggle();
@@ -38994,7 +42877,7 @@ var global_connect_default = {
 };
 
 // node_modules/bpmn-js/lib/features/palette/PaletteProvider.js
-function PaletteProvider(palette, create3, elementFactory, spaceTool, lassoTool, handTool, globalConnect, translate3) {
+function PaletteProvider(palette, create3, elementFactory, spaceTool, lassoTool, handTool, globalConnect, translate4) {
   this._palette = palette;
   this._create = create3;
   this._elementFactory = elementFactory;
@@ -39002,7 +42885,7 @@ function PaletteProvider(palette, create3, elementFactory, spaceTool, lassoTool,
   this._lassoTool = lassoTool;
   this._handTool = handTool;
   this._globalConnect = globalConnect;
-  this._translate = translate3;
+  this._translate = translate4;
   palette.registerProvider(this);
 }
 PaletteProvider.$inject = [
@@ -39016,7 +42899,7 @@ PaletteProvider.$inject = [
   "translate"
 ];
 PaletteProvider.prototype.getPaletteEntries = function() {
-  var actions = {}, create3 = this._create, elementFactory = this._elementFactory, spaceTool = this._spaceTool, lassoTool = this._lassoTool, handTool = this._handTool, globalConnect = this._globalConnect, translate3 = this._translate;
+  var actions = {}, create3 = this._create, elementFactory = this._elementFactory, spaceTool = this._spaceTool, lassoTool = this._lassoTool, handTool = this._handTool, globalConnect = this._globalConnect, translate4 = this._translate;
   function createAction2(type, group, className, title, options2) {
     function createListener(event3) {
       var shape = elementFactory.createShape(assign({ type }, options2));
@@ -39058,7 +42941,7 @@ PaletteProvider.prototype.getPaletteEntries = function() {
     "hand-tool": {
       group: "tools",
       className: "bpmn-icon-hand-tool",
-      title: translate3("Activate hand tool"),
+      title: translate4("Activate hand tool"),
       action: {
         click: function(event3) {
           handTool.activateHand(event3);
@@ -39068,7 +42951,7 @@ PaletteProvider.prototype.getPaletteEntries = function() {
     "lasso-tool": {
       group: "tools",
       className: "bpmn-icon-lasso-tool",
-      title: translate3("Activate lasso tool"),
+      title: translate4("Activate lasso tool"),
       action: {
         click: function(event3) {
           lassoTool.activateSelection(event3);
@@ -39078,7 +42961,7 @@ PaletteProvider.prototype.getPaletteEntries = function() {
     "space-tool": {
       group: "tools",
       className: "bpmn-icon-space-tool",
-      title: translate3("Activate create/remove space tool"),
+      title: translate4("Activate create/remove space tool"),
       action: {
         click: function(event3) {
           spaceTool.activateSelection(event3);
@@ -39088,7 +42971,7 @@ PaletteProvider.prototype.getPaletteEntries = function() {
     "global-connect-tool": {
       group: "tools",
       className: "bpmn-icon-connection-multi",
-      title: translate3("Activate global connect tool"),
+      title: translate4("Activate global connect tool"),
       action: {
         click: function(event3) {
           globalConnect.start(event3);
@@ -39103,48 +42986,48 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       "bpmn:StartEvent",
       "event",
       "bpmn-icon-start-event-none",
-      translate3("Create start event")
+      translate4("Create start event")
     ),
     "create.intermediate-event": createAction2(
       "bpmn:IntermediateThrowEvent",
       "event",
       "bpmn-icon-intermediate-event-none",
-      translate3("Create intermediate/boundary event")
+      translate4("Create intermediate/boundary event")
     ),
     "create.end-event": createAction2(
       "bpmn:EndEvent",
       "event",
       "bpmn-icon-end-event-none",
-      translate3("Create end event")
+      translate4("Create end event")
     ),
     "create.exclusive-gateway": createAction2(
       "bpmn:ExclusiveGateway",
       "gateway",
       "bpmn-icon-gateway-none",
-      translate3("Create gateway")
+      translate4("Create gateway")
     ),
     "create.task": createAction2(
       "bpmn:Task",
       "activity",
       "bpmn-icon-task",
-      translate3("Create task")
+      translate4("Create task")
     ),
     "create.data-object": createAction2(
       "bpmn:DataObjectReference",
       "data-object",
       "bpmn-icon-data-object",
-      translate3("Create data object reference")
+      translate4("Create data object reference")
     ),
     "create.data-store": createAction2(
       "bpmn:DataStoreReference",
       "data-store",
       "bpmn-icon-data-store",
-      translate3("Create data store reference")
+      translate4("Create data store reference")
     ),
     "create.subprocess-expanded": {
       group: "activity",
       className: "bpmn-icon-subprocess-expanded",
-      title: translate3("Create expanded sub-process"),
+      title: translate4("Create expanded sub-process"),
       action: {
         dragstart: createSubprocess,
         click: createSubprocess
@@ -39153,7 +43036,7 @@ PaletteProvider.prototype.getPaletteEntries = function() {
     "create.participant-expanded": {
       group: "collaboration",
       className: "bpmn-icon-participant",
-      title: translate3("Create pool/participant"),
+      title: translate4("Create pool/participant"),
       action: {
         dragstart: createParticipant,
         click: createParticipant
@@ -39163,7 +43046,7 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       "bpmn:Group",
       "artifact",
       "bpmn-icon-group",
-      translate3("Create group")
+      translate4("Create group")
     )
   });
   return actions;
@@ -39294,7 +43177,7 @@ function BpmnConnectSnapping(eventBus) {
       if (is(source, "bpmn:BoundaryEvent") && target === source.host) {
         snapBoundaryEventLoop(event3);
       }
-    } else if (isType(canExecute, "bpmn:MessageFlow")) {
+    } else if (isType2(canExecute, "bpmn:MessageFlow")) {
       if (is(start, "bpmn:Event")) {
         context.connectionStart = mid(start);
       }
@@ -39353,12 +43236,12 @@ function snapToPosition(event3, position) {
   setSnapped(event3, "x", position.x);
   setSnapped(event3, "y", position.y);
 }
-function isType(attrs, type) {
+function isType2(attrs, type) {
   return attrs && attrs.type === type;
 }
 function isAnyType(attrs, types3) {
   return some(types3, function(type) {
-    return isType(attrs, type);
+    return isType2(attrs, type);
   });
 }
 function getDimensionForAxis(axis, element) {
@@ -39619,7 +43502,7 @@ BpmnCreateMoveSnapping.prototype.addSnapTargetPoints = function(snapPoints, shap
   var elementRegistry = this._elementRegistry;
   forEach(shape.incoming, function(connection) {
     if (elementRegistry.get(shape.id)) {
-      if (!includes9(snapTargets, connection.source)) {
+      if (!includes7(snapTargets, connection.source)) {
         snapPoints.add("mid", getMid(connection.source));
       }
       var docking = connection.waypoints[0];
@@ -39628,7 +43511,7 @@ BpmnCreateMoveSnapping.prototype.addSnapTargetPoints = function(snapPoints, shap
   });
   forEach(shape.outgoing, function(connection) {
     if (elementRegistry.get(shape.id)) {
-      if (!includes9(snapTargets, connection.target)) {
+      if (!includes7(snapTargets, connection.target)) {
         snapPoints.add("mid", getMid(connection.target));
       }
       var docking = connection.waypoints[connection.waypoints.length - 1];
@@ -39690,7 +43573,7 @@ function setSnappedIfConstrained(event3) {
     setSnapped(event3, "y", event3.y);
   }
 }
-function includes9(array, value) {
+function includes7(array, value) {
   return array.indexOf(value) !== -1;
 }
 function getDockingSnapOrigin(docking, isMove, event3) {
@@ -39846,22 +43729,22 @@ Snapping.prototype.snap = function(event3, snapPoints) {
 };
 Snapping.prototype._createLine = function(orientation) {
   var root = this._canvas.getLayer("snap");
-  var line = create("path");
-  attr(line, { d: "M0,0 L0,0" });
-  classes(line).add("djs-snap-line");
-  append(root, line);
+  var line2 = create("path");
+  attr(line2, { d: "M0,0 L0,0" });
+  classes(line2).add("djs-snap-line");
+  append(root, line2);
   return {
     update: function(position) {
       if (!isNumber(position)) {
-        attr(line, { display: "none" });
+        attr(line2, { display: "none" });
       } else {
         if (orientation === "horizontal") {
-          attr(line, {
+          attr(line2, {
             d: "M-100000," + position + " L+100000," + position,
             display: ""
           });
         } else {
-          attr(line, {
+          attr(line2, {
             d: "M " + position + ",-100000 L " + position + ", +100000",
             display: ""
           });
@@ -39877,9 +43760,9 @@ Snapping.prototype._createSnapLines = function() {
   };
 };
 Snapping.prototype.showSnapLine = function(orientation, position) {
-  var line = this.getSnapLine(orientation);
-  if (line) {
-    line.update(position);
+  var line2 = this.getSnapLine(orientation);
+  if (line2) {
+    line2.update(position);
   }
   this._asyncHide();
 };
@@ -39919,7 +43802,7 @@ var snapping_default2 = {
 };
 
 // node_modules/diagram-js/lib/features/search-pad/SearchPad.js
-function SearchPad(canvas, eventBus, overlays, selection2, translate3) {
+function SearchPad(canvas, eventBus, overlays, selection2, translate4) {
   this._open = false;
   this._results = [];
   this._eventMaps = [];
@@ -39927,7 +43810,7 @@ function SearchPad(canvas, eventBus, overlays, selection2, translate3) {
   this._eventBus = eventBus;
   this._overlays = overlays;
   this._selection = selection2;
-  this._translate = translate3;
+  this._translate = translate4;
   this._container = this._getBoxHtml();
   this._searchInput = query(SearchPad.INPUT_SELECTOR, this._container);
   this._resultsContainer = query(SearchPad.RESULTS_CONTAINER_SELECTOR, this._container);
@@ -39950,48 +43833,48 @@ SearchPad.prototype._bindEvents = function() {
       listener: delegate.bind(el, selector, type, fn2)
     });
   }
-  listen(document, "html", "click", function(e7) {
+  listen(document, "html", "click", function(e8) {
     self2.close();
   });
-  listen(this._container, SearchPad.INPUT_SELECTOR, "click", function(e7) {
-    e7.stopPropagation();
-    e7.delegateTarget.focus();
+  listen(this._container, SearchPad.INPUT_SELECTOR, "click", function(e8) {
+    e8.stopPropagation();
+    e8.delegateTarget.focus();
   });
-  listen(this._container, SearchPad.RESULT_SELECTOR, "mouseover", function(e7) {
-    e7.stopPropagation();
-    self2._scrollToNode(e7.delegateTarget);
-    self2._preselect(e7.delegateTarget);
+  listen(this._container, SearchPad.RESULT_SELECTOR, "mouseover", function(e8) {
+    e8.stopPropagation();
+    self2._scrollToNode(e8.delegateTarget);
+    self2._preselect(e8.delegateTarget);
   });
-  listen(this._container, SearchPad.RESULT_SELECTOR, "click", function(e7) {
-    e7.stopPropagation();
-    self2._select(e7.delegateTarget);
+  listen(this._container, SearchPad.RESULT_SELECTOR, "click", function(e8) {
+    e8.stopPropagation();
+    self2._select(e8.delegateTarget);
   });
-  listen(this._container, SearchPad.INPUT_SELECTOR, "keydown", function(e7) {
-    if (isKey("ArrowUp", e7)) {
-      e7.preventDefault();
+  listen(this._container, SearchPad.INPUT_SELECTOR, "keydown", function(e8) {
+    if (isKey("ArrowUp", e8)) {
+      e8.preventDefault();
     }
-    if (isKey("ArrowDown", e7)) {
-      e7.preventDefault();
+    if (isKey("ArrowDown", e8)) {
+      e8.preventDefault();
     }
   });
-  listen(this._container, SearchPad.INPUT_SELECTOR, "keyup", function(e7) {
-    if (isKey("Escape", e7)) {
+  listen(this._container, SearchPad.INPUT_SELECTOR, "keyup", function(e8) {
+    if (isKey("Escape", e8)) {
       return self2.close();
     }
-    if (isKey("Enter", e7)) {
+    if (isKey("Enter", e8)) {
       var selected = self2._getCurrentResult();
       return selected ? self2._select(selected) : self2.close();
     }
-    if (isKey("ArrowUp", e7)) {
+    if (isKey("ArrowUp", e8)) {
       return self2._scrollToDirection(true);
     }
-    if (isKey("ArrowDown", e7)) {
+    if (isKey("ArrowDown", e8)) {
       return self2._scrollToDirection();
     }
-    if (isKey(["ArrowLeft", "ArrowRight"], e7)) {
+    if (isKey(["ArrowLeft", "ArrowRight"], e8)) {
       return;
     }
-    self2._search(e7.delegateTarget.value);
+    self2._search(e8.delegateTarget.value);
   });
 };
 SearchPad.prototype._unbindEvents = function() {
@@ -40214,7 +44097,7 @@ BpmnSearchProvider.$inject = [
   "canvas"
 ];
 BpmnSearchProvider.prototype.find = function(pattern) {
-  var rootElement = this._canvas.getRootElement();
+  var rootElements = this._canvas.getRootElements();
   var elements = this._elementRegistry.filter(function(element) {
     if (element.labelTarget) {
       return false;
@@ -40222,7 +44105,7 @@ BpmnSearchProvider.prototype.find = function(pattern) {
     return true;
   });
   elements = filter(elements, function(element) {
-    return element !== rootElement;
+    return !rootElements.includes(element);
   });
   elements = map(elements, function(element) {
     return {
@@ -40344,14 +44227,13 @@ var i3;
 var o3;
 var r4;
 var f3;
-var e4;
+var e5;
 var c3 = {};
 var s3 = [];
 var a3 = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
 var h3 = Array.isArray;
 function v3(n4, l5) {
-  for (var u6 in l5)
-    n4[u6] = l5[u6];
+  for (var u6 in l5) n4[u6] = l5[u6];
   return n4;
 }
 function p3(n4) {
@@ -40360,11 +44242,8 @@ function p3(n4) {
 }
 function y3(l5, u6, t7) {
   var i7, o5, r7, f6 = {};
-  for (r7 in u6)
-    "key" == r7 ? i7 = u6[r7] : "ref" == r7 ? o5 = u6[r7] : f6[r7] = u6[r7];
-  if (arguments.length > 2 && (f6.children = arguments.length > 3 ? n3.call(arguments, 2) : t7), "function" == typeof l5 && null != l5.defaultProps)
-    for (r7 in l5.defaultProps)
-      void 0 === f6[r7] && (f6[r7] = l5.defaultProps[r7]);
+  for (r7 in u6) "key" == r7 ? i7 = u6[r7] : "ref" == r7 ? o5 = u6[r7] : f6[r7] = u6[r7];
+  if (arguments.length > 2 && (f6.children = arguments.length > 3 ? n3.call(arguments, 2) : t7), "function" == typeof l5 && null != l5.defaultProps) for (r7 in l5.defaultProps) void 0 === f6[r7] && (f6[r7] = l5.defaultProps[r7]);
   return d3(l5, f6, i7, o5, null);
 }
 function d3(n4, t7, i7, o5, r7) {
@@ -40381,21 +44260,17 @@ function b3(n4, l5) {
   this.props = n4, this.context = l5;
 }
 function m3(n4, l5) {
-  if (null == l5)
-    return n4.__ ? m3(n4.__, n4.__i + 1) : null;
-  for (var u6; l5 < n4.__k.length; l5++)
-    if (null != (u6 = n4.__k[l5]) && null != u6.__e)
-      return u6.__e;
+  if (null == l5) return n4.__ ? m3(n4.__, n4.__i + 1) : null;
+  for (var u6; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) return u6.__e;
   return "function" == typeof n4.type ? m3(n4) : null;
 }
 function k3(n4) {
   var l5, u6;
   if (null != (n4 = n4.__) && null != n4.__c) {
-    for (n4.__e = n4.__c.base = null, l5 = 0; l5 < n4.__k.length; l5++)
-      if (null != (u6 = n4.__k[l5]) && null != u6.__e) {
-        n4.__e = n4.__c.base = u6.__e;
-        break;
-      }
+    for (n4.__e = n4.__c.base = null, l5 = 0; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) {
+      n4.__e = n4.__c.base = u6.__e;
+      break;
+    }
     return k3(n4);
   }
 }
@@ -40403,30 +44278,24 @@ function w3(n4) {
   (!n4.__d && (n4.__d = true) && i3.push(n4) && !x3.__r++ || o3 !== l3.debounceRendering) && ((o3 = l3.debounceRendering) || r4)(x3);
 }
 function x3() {
-  var n4, u6, t7, o5, r7, e7, c5, s5, a6;
-  for (i3.sort(f3); n4 = i3.shift(); )
-    n4.__d && (u6 = i3.length, o5 = void 0, e7 = (r7 = (t7 = n4).__v).__e, s5 = [], a6 = [], (c5 = t7.__P) && ((o5 = v3({}, r7)).__v = r7.__v + 1, l3.vnode && l3.vnode(o5), L2(c5, o5, r7, t7.__n, void 0 !== c5.ownerSVGElement, 32 & r7.__u ? [e7] : null, s5, null == e7 ? m3(r7) : e7, !!(32 & r7.__u), a6), o5.__.__k[o5.__i] = o5, M2(s5, o5, a6), o5.__e != e7 && k3(o5)), i3.length > u6 && i3.sort(f3));
+  var n4, u6, t7, o5, r7, e8, c5, s5, a6;
+  for (i3.sort(f3); n4 = i3.shift(); ) n4.__d && (u6 = i3.length, o5 = void 0, e8 = (r7 = (t7 = n4).__v).__e, s5 = [], a6 = [], (c5 = t7.__P) && ((o5 = v3({}, r7)).__v = r7.__v + 1, l3.vnode && l3.vnode(o5), L2(c5, o5, r7, t7.__n, void 0 !== c5.ownerSVGElement, 32 & r7.__u ? [e8] : null, s5, null == e8 ? m3(r7) : e8, !!(32 & r7.__u), a6), o5.__.__k[o5.__i] = o5, M2(s5, o5, a6), o5.__e != e8 && k3(o5)), i3.length > u6 && i3.sort(f3));
   x3.__r = 0;
 }
-function C3(n4, l5, u6, t7, i7, o5, r7, f6, e7, a6, h5) {
+function C3(n4, l5, u6, t7, i7, o5, r7, f6, e8, a6, h5) {
   var v5, p5, y5, d5, _5, g6 = t7 && t7.__k || s3, b5 = l5.length;
-  for (u6.__d = e7, P3(u6, l5, g6), e7 = u6.__d, v5 = 0; v5 < b5; v5++)
-    null != (y5 = u6.__k[v5]) && "boolean" != typeof y5 && "function" != typeof y5 && (p5 = -1 === y5.__i ? c3 : g6[y5.__i] || c3, y5.__i = v5, L2(n4, y5, p5, i7, o5, r7, f6, e7, a6, h5), d5 = y5.__e, y5.ref && p5.ref != y5.ref && (p5.ref && z3(p5.ref, null, y5), h5.push(y5.ref, y5.__c || d5, y5)), null == _5 && null != d5 && (_5 = d5), 65536 & y5.__u || p5.__k === y5.__k ? e7 = S2(y5, e7, n4) : "function" == typeof y5.type && void 0 !== y5.__d ? e7 = y5.__d : d5 && (e7 = d5.nextSibling), y5.__d = void 0, y5.__u &= -196609);
-  u6.__d = e7, u6.__e = _5;
+  for (u6.__d = e8, P3(u6, l5, g6), e8 = u6.__d, v5 = 0; v5 < b5; v5++) null != (y5 = u6.__k[v5]) && "boolean" != typeof y5 && "function" != typeof y5 && (p5 = -1 === y5.__i ? c3 : g6[y5.__i] || c3, y5.__i = v5, L2(n4, y5, p5, i7, o5, r7, f6, e8, a6, h5), d5 = y5.__e, y5.ref && p5.ref != y5.ref && (p5.ref && z3(p5.ref, null, y5), h5.push(y5.ref, y5.__c || d5, y5)), null == _5 && null != d5 && (_5 = d5), 65536 & y5.__u || p5.__k === y5.__k ? e8 = S2(y5, e8, n4) : "function" == typeof y5.type && void 0 !== y5.__d ? e8 = y5.__d : d5 && (e8 = d5.nextSibling), y5.__d = void 0, y5.__u &= -196609);
+  u6.__d = e8, u6.__e = _5;
 }
 function P3(n4, l5, u6) {
-  var t7, i7, o5, r7, f6, e7 = l5.length, c5 = u6.length, s5 = c5, a6 = 0;
-  for (n4.__k = [], t7 = 0; t7 < e7; t7++)
-    null != (i7 = n4.__k[t7] = null == (i7 = l5[t7]) || "boolean" == typeof i7 || "function" == typeof i7 ? null : "string" == typeof i7 || "number" == typeof i7 || "bigint" == typeof i7 || i7.constructor == String ? d3(null, i7, null, null, i7) : h3(i7) ? d3(g3, { children: i7 }, null, null, null) : void 0 === i7.constructor && i7.__b > 0 ? d3(i7.type, i7.props, i7.key, i7.ref ? i7.ref : null, i7.__v) : i7) ? (i7.__ = n4, i7.__b = n4.__b + 1, f6 = H2(i7, u6, r7 = t7 + a6, s5), i7.__i = f6, o5 = null, -1 !== f6 && (s5--, (o5 = u6[f6]) && (o5.__u |= 131072)), null == o5 || null === o5.__v ? (-1 == f6 && a6--, "function" != typeof i7.type && (i7.__u |= 65536)) : f6 !== r7 && (f6 === r7 + 1 ? a6++ : f6 > r7 ? s5 > e7 - r7 ? a6 += f6 - r7 : a6-- : a6 = f6 < r7 && f6 == r7 - 1 ? f6 - r7 : 0, f6 !== t7 + a6 && (i7.__u |= 65536))) : (o5 = u6[t7]) && null == o5.key && o5.__e && (o5.__e == n4.__d && (n4.__d = m3(o5)), N2(o5, o5, false), u6[t7] = null, s5--);
-  if (s5)
-    for (t7 = 0; t7 < c5; t7++)
-      null != (o5 = u6[t7]) && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = m3(o5)), N2(o5, o5));
+  var t7, i7, o5, r7, f6, e8 = l5.length, c5 = u6.length, s5 = c5, a6 = 0;
+  for (n4.__k = [], t7 = 0; t7 < e8; t7++) null != (i7 = n4.__k[t7] = null == (i7 = l5[t7]) || "boolean" == typeof i7 || "function" == typeof i7 ? null : "string" == typeof i7 || "number" == typeof i7 || "bigint" == typeof i7 || i7.constructor == String ? d3(null, i7, null, null, i7) : h3(i7) ? d3(g3, { children: i7 }, null, null, null) : void 0 === i7.constructor && i7.__b > 0 ? d3(i7.type, i7.props, i7.key, i7.ref ? i7.ref : null, i7.__v) : i7) ? (i7.__ = n4, i7.__b = n4.__b + 1, f6 = H2(i7, u6, r7 = t7 + a6, s5), i7.__i = f6, o5 = null, -1 !== f6 && (s5--, (o5 = u6[f6]) && (o5.__u |= 131072)), null == o5 || null === o5.__v ? (-1 == f6 && a6--, "function" != typeof i7.type && (i7.__u |= 65536)) : f6 !== r7 && (f6 === r7 + 1 ? a6++ : f6 > r7 ? s5 > e8 - r7 ? a6 += f6 - r7 : a6-- : a6 = f6 < r7 && f6 == r7 - 1 ? f6 - r7 : 0, f6 !== t7 + a6 && (i7.__u |= 65536))) : (o5 = u6[t7]) && null == o5.key && o5.__e && (o5.__e == n4.__d && (n4.__d = m3(o5)), N2(o5, o5, false), u6[t7] = null, s5--);
+  if (s5) for (t7 = 0; t7 < c5; t7++) null != (o5 = u6[t7]) && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = m3(o5)), N2(o5, o5));
 }
 function S2(n4, l5, u6) {
   var t7, i7;
   if ("function" == typeof n4.type) {
-    for (t7 = n4.__k, i7 = 0; t7 && i7 < t7.length; i7++)
-      t7[i7] && (t7[i7].__ = n4, l5 = S2(t7[i7], l5, u6));
+    for (t7 = n4.__k, i7 = 0; t7 && i7 < t7.length; i7++) t7[i7] && (t7[i7].__ = n4, l5 = S2(t7[i7], l5, u6));
     return l5;
   }
   return n4.__e != l5 && (u6.insertBefore(n4.__e, l5 || null), l5 = n4.__e), l5 && l5.nextSibling;
@@ -40437,22 +44306,18 @@ function $2(n4, l5) {
   }) : l5.push(n4)), l5;
 }
 function H2(n4, l5, u6, t7) {
-  var i7 = n4.key, o5 = n4.type, r7 = u6 - 1, f6 = u6 + 1, e7 = l5[u6];
-  if (null === e7 || e7 && i7 == e7.key && o5 === e7.type)
-    return u6;
-  if (t7 > (null != e7 && 0 == (131072 & e7.__u) ? 1 : 0))
-    for (; r7 >= 0 || f6 < l5.length; ) {
-      if (r7 >= 0) {
-        if ((e7 = l5[r7]) && 0 == (131072 & e7.__u) && i7 == e7.key && o5 === e7.type)
-          return r7;
-        r7--;
-      }
-      if (f6 < l5.length) {
-        if ((e7 = l5[f6]) && 0 == (131072 & e7.__u) && i7 == e7.key && o5 === e7.type)
-          return f6;
-        f6++;
-      }
+  var i7 = n4.key, o5 = n4.type, r7 = u6 - 1, f6 = u6 + 1, e8 = l5[u6];
+  if (null === e8 || e8 && i7 == e8.key && o5 === e8.type) return u6;
+  if (t7 > (null != e8 && 0 == (131072 & e8.__u) ? 1 : 0)) for (; r7 >= 0 || f6 < l5.length; ) {
+    if (r7 >= 0) {
+      if ((e8 = l5[r7]) && 0 == (131072 & e8.__u) && i7 == e8.key && o5 === e8.type) return r7;
+      r7--;
     }
+    if (f6 < l5.length) {
+      if ((e8 = l5[f6]) && 0 == (131072 & e8.__u) && i7 == e8.key && o5 === e8.type) return f6;
+      f6++;
+    }
+  }
   return -1;
 }
 function I2(n4, l5, u6) {
@@ -40460,87 +44325,66 @@ function I2(n4, l5, u6) {
 }
 function T2(n4, l5, u6, t7, i7) {
   var o5;
-  n:
-    if ("style" === l5)
-      if ("string" == typeof u6)
-        n4.style.cssText = u6;
-      else {
-        if ("string" == typeof t7 && (n4.style.cssText = t7 = ""), t7)
-          for (l5 in t7)
-            u6 && l5 in u6 || I2(n4.style, l5, "");
-        if (u6)
-          for (l5 in u6)
-            t7 && u6[l5] === t7[l5] || I2(n4.style, l5, u6[l5]);
-      }
-    else if ("o" === l5[0] && "n" === l5[1])
-      o5 = l5 !== (l5 = l5.replace(/(PointerCapture)$|Capture$/, "$1")), l5 = l5.toLowerCase() in n4 ? l5.toLowerCase().slice(2) : l5.slice(2), n4.l || (n4.l = {}), n4.l[l5 + o5] = u6, u6 ? t7 ? u6.u = t7.u : (u6.u = Date.now(), n4.addEventListener(l5, o5 ? D3 : A3, o5)) : n4.removeEventListener(l5, o5 ? D3 : A3, o5);
-    else {
-      if (i7)
-        l5 = l5.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
-      else if ("width" !== l5 && "height" !== l5 && "href" !== l5 && "list" !== l5 && "form" !== l5 && "tabIndex" !== l5 && "download" !== l5 && "rowSpan" !== l5 && "colSpan" !== l5 && "role" !== l5 && l5 in n4)
-        try {
-          n4[l5] = null == u6 ? "" : u6;
-          break n;
-        } catch (n5) {
-        }
-      "function" == typeof u6 || (null == u6 || false === u6 && "-" !== l5[4] ? n4.removeAttribute(l5) : n4.setAttribute(l5, u6));
+  n: if ("style" === l5) if ("string" == typeof u6) n4.style.cssText = u6;
+  else {
+    if ("string" == typeof t7 && (n4.style.cssText = t7 = ""), t7) for (l5 in t7) u6 && l5 in u6 || I2(n4.style, l5, "");
+    if (u6) for (l5 in u6) t7 && u6[l5] === t7[l5] || I2(n4.style, l5, u6[l5]);
+  }
+  else if ("o" === l5[0] && "n" === l5[1]) o5 = l5 !== (l5 = l5.replace(/(PointerCapture)$|Capture$/, "$1")), l5 = l5.toLowerCase() in n4 ? l5.toLowerCase().slice(2) : l5.slice(2), n4.l || (n4.l = {}), n4.l[l5 + o5] = u6, u6 ? t7 ? u6.u = t7.u : (u6.u = Date.now(), n4.addEventListener(l5, o5 ? D3 : A3, o5)) : n4.removeEventListener(l5, o5 ? D3 : A3, o5);
+  else {
+    if (i7) l5 = l5.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
+    else if ("width" !== l5 && "height" !== l5 && "href" !== l5 && "list" !== l5 && "form" !== l5 && "tabIndex" !== l5 && "download" !== l5 && "rowSpan" !== l5 && "colSpan" !== l5 && "role" !== l5 && l5 in n4) try {
+      n4[l5] = null == u6 ? "" : u6;
+      break n;
+    } catch (n5) {
     }
+    "function" == typeof u6 || (null == u6 || false === u6 && "-" !== l5[4] ? n4.removeAttribute(l5) : n4.setAttribute(l5, u6));
+  }
 }
 function A3(n4) {
   var u6 = this.l[n4.type + false];
   if (n4.t) {
-    if (n4.t <= u6.u)
-      return;
-  } else
-    n4.t = Date.now();
+    if (n4.t <= u6.u) return;
+  } else n4.t = Date.now();
   return u6(l3.event ? l3.event(n4) : n4);
 }
 function D3(n4) {
   return this.l[n4.type + true](l3.event ? l3.event(n4) : n4);
 }
-function L2(n4, u6, t7, i7, o5, r7, f6, e7, c5, s5) {
+function L2(n4, u6, t7, i7, o5, r7, f6, e8, c5, s5) {
   var a6, p5, y5, d5, _5, m5, k6, w6, x6, P5, S3, $4, H4, I4, T5, A6 = u6.type;
-  if (void 0 !== u6.constructor)
-    return null;
-  128 & t7.__u && (c5 = !!(32 & t7.__u), r7 = [e7 = u6.__e = t7.__e]), (a6 = l3.__b) && a6(u6);
-  n:
-    if ("function" == typeof A6)
-      try {
-        if (w6 = u6.props, x6 = (a6 = A6.contextType) && i7[a6.__c], P5 = a6 ? x6 ? x6.props.value : a6.__ : i7, t7.__c ? k6 = (p5 = u6.__c = t7.__c).__ = p5.__E : ("prototype" in A6 && A6.prototype.render ? u6.__c = p5 = new A6(w6, P5) : (u6.__c = p5 = new b3(w6, P5), p5.constructor = A6, p5.render = O2), x6 && x6.sub(p5), p5.props = w6, p5.state || (p5.state = {}), p5.context = P5, p5.__n = i7, y5 = p5.__d = true, p5.__h = [], p5._sb = []), null == p5.__s && (p5.__s = p5.state), null != A6.getDerivedStateFromProps && (p5.__s == p5.state && (p5.__s = v3({}, p5.__s)), v3(p5.__s, A6.getDerivedStateFromProps(w6, p5.__s))), d5 = p5.props, _5 = p5.state, p5.__v = u6, y5)
-          null == A6.getDerivedStateFromProps && null != p5.componentWillMount && p5.componentWillMount(), null != p5.componentDidMount && p5.__h.push(p5.componentDidMount);
-        else {
-          if (null == A6.getDerivedStateFromProps && w6 !== d5 && null != p5.componentWillReceiveProps && p5.componentWillReceiveProps(w6, P5), !p5.__e && (null != p5.shouldComponentUpdate && false === p5.shouldComponentUpdate(w6, p5.__s, P5) || u6.__v === t7.__v)) {
-            for (u6.__v !== t7.__v && (p5.props = w6, p5.state = p5.__s, p5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.forEach(function(n5) {
-              n5 && (n5.__ = u6);
-            }), S3 = 0; S3 < p5._sb.length; S3++)
-              p5.__h.push(p5._sb[S3]);
-            p5._sb = [], p5.__h.length && f6.push(p5);
-            break n;
-          }
-          null != p5.componentWillUpdate && p5.componentWillUpdate(w6, p5.__s, P5), null != p5.componentDidUpdate && p5.__h.push(function() {
-            p5.componentDidUpdate(d5, _5, m5);
-          });
-        }
-        if (p5.context = P5, p5.props = w6, p5.__P = n4, p5.__e = false, $4 = l3.__r, H4 = 0, "prototype" in A6 && A6.prototype.render) {
-          for (p5.state = p5.__s, p5.__d = false, $4 && $4(u6), a6 = p5.render(p5.props, p5.state, p5.context), I4 = 0; I4 < p5._sb.length; I4++)
-            p5.__h.push(p5._sb[I4]);
-          p5._sb = [];
-        } else
-          do {
-            p5.__d = false, $4 && $4(u6), a6 = p5.render(p5.props, p5.state, p5.context), p5.state = p5.__s;
-          } while (p5.__d && ++H4 < 25);
-        p5.state = p5.__s, null != p5.getChildContext && (i7 = v3(v3({}, i7), p5.getChildContext())), y5 || null == p5.getSnapshotBeforeUpdate || (m5 = p5.getSnapshotBeforeUpdate(d5, _5)), C3(n4, h3(T5 = null != a6 && a6.type === g3 && null == a6.key ? a6.props.children : a6) ? T5 : [T5], u6, t7, i7, o5, r7, f6, e7, c5, s5), p5.base = u6.__e, u6.__u &= -161, p5.__h.length && f6.push(p5), k6 && (p5.__E = p5.__ = null);
-      } catch (n5) {
-        u6.__v = null, c5 || null != r7 ? (u6.__e = e7, u6.__u |= c5 ? 160 : 32, r7[r7.indexOf(e7)] = null) : (u6.__e = t7.__e, u6.__k = t7.__k), l3.__e(n5, u6, t7);
+  if (void 0 !== u6.constructor) return null;
+  128 & t7.__u && (c5 = !!(32 & t7.__u), r7 = [e8 = u6.__e = t7.__e]), (a6 = l3.__b) && a6(u6);
+  n: if ("function" == typeof A6) try {
+    if (w6 = u6.props, x6 = (a6 = A6.contextType) && i7[a6.__c], P5 = a6 ? x6 ? x6.props.value : a6.__ : i7, t7.__c ? k6 = (p5 = u6.__c = t7.__c).__ = p5.__E : ("prototype" in A6 && A6.prototype.render ? u6.__c = p5 = new A6(w6, P5) : (u6.__c = p5 = new b3(w6, P5), p5.constructor = A6, p5.render = O2), x6 && x6.sub(p5), p5.props = w6, p5.state || (p5.state = {}), p5.context = P5, p5.__n = i7, y5 = p5.__d = true, p5.__h = [], p5._sb = []), null == p5.__s && (p5.__s = p5.state), null != A6.getDerivedStateFromProps && (p5.__s == p5.state && (p5.__s = v3({}, p5.__s)), v3(p5.__s, A6.getDerivedStateFromProps(w6, p5.__s))), d5 = p5.props, _5 = p5.state, p5.__v = u6, y5) null == A6.getDerivedStateFromProps && null != p5.componentWillMount && p5.componentWillMount(), null != p5.componentDidMount && p5.__h.push(p5.componentDidMount);
+    else {
+      if (null == A6.getDerivedStateFromProps && w6 !== d5 && null != p5.componentWillReceiveProps && p5.componentWillReceiveProps(w6, P5), !p5.__e && (null != p5.shouldComponentUpdate && false === p5.shouldComponentUpdate(w6, p5.__s, P5) || u6.__v === t7.__v)) {
+        for (u6.__v !== t7.__v && (p5.props = w6, p5.state = p5.__s, p5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.forEach(function(n5) {
+          n5 && (n5.__ = u6);
+        }), S3 = 0; S3 < p5._sb.length; S3++) p5.__h.push(p5._sb[S3]);
+        p5._sb = [], p5.__h.length && f6.push(p5);
+        break n;
       }
-    else
-      null == r7 && u6.__v === t7.__v ? (u6.__k = t7.__k, u6.__e = t7.__e) : u6.__e = j3(t7.__e, u6, t7, i7, o5, r7, f6, c5, s5);
+      null != p5.componentWillUpdate && p5.componentWillUpdate(w6, p5.__s, P5), null != p5.componentDidUpdate && p5.__h.push(function() {
+        p5.componentDidUpdate(d5, _5, m5);
+      });
+    }
+    if (p5.context = P5, p5.props = w6, p5.__P = n4, p5.__e = false, $4 = l3.__r, H4 = 0, "prototype" in A6 && A6.prototype.render) {
+      for (p5.state = p5.__s, p5.__d = false, $4 && $4(u6), a6 = p5.render(p5.props, p5.state, p5.context), I4 = 0; I4 < p5._sb.length; I4++) p5.__h.push(p5._sb[I4]);
+      p5._sb = [];
+    } else do {
+      p5.__d = false, $4 && $4(u6), a6 = p5.render(p5.props, p5.state, p5.context), p5.state = p5.__s;
+    } while (p5.__d && ++H4 < 25);
+    p5.state = p5.__s, null != p5.getChildContext && (i7 = v3(v3({}, i7), p5.getChildContext())), y5 || null == p5.getSnapshotBeforeUpdate || (m5 = p5.getSnapshotBeforeUpdate(d5, _5)), C3(n4, h3(T5 = null != a6 && a6.type === g3 && null == a6.key ? a6.props.children : a6) ? T5 : [T5], u6, t7, i7, o5, r7, f6, e8, c5, s5), p5.base = u6.__e, u6.__u &= -161, p5.__h.length && f6.push(p5), k6 && (p5.__E = p5.__ = null);
+  } catch (n5) {
+    u6.__v = null, c5 || null != r7 ? (u6.__e = e8, u6.__u |= c5 ? 160 : 32, r7[r7.indexOf(e8)] = null) : (u6.__e = t7.__e, u6.__k = t7.__k), l3.__e(n5, u6, t7);
+  }
+  else null == r7 && u6.__v === t7.__v ? (u6.__k = t7.__k, u6.__e = t7.__e) : u6.__e = j3(t7.__e, u6, t7, i7, o5, r7, f6, c5, s5);
   (a6 = l3.diffed) && a6(u6);
 }
 function M2(n4, u6, t7) {
   u6.__d = void 0;
-  for (var i7 = 0; i7 < t7.length; i7++)
-    z3(t7[i7], t7[++i7], t7[++i7]);
+  for (var i7 = 0; i7 < t7.length; i7++) z3(t7[i7], t7[++i7], t7[++i7]);
   l3.__c && l3.__c(u6, n4), n4.some(function(u7) {
     try {
       n4 = u7.__h, u7.__h = [], n4.some(function(n5) {
@@ -40551,36 +44395,26 @@ function M2(n4, u6, t7) {
     }
   });
 }
-function j3(l5, u6, t7, i7, o5, r7, f6, e7, s5) {
+function j3(l5, u6, t7, i7, o5, r7, f6, e8, s5) {
   var a6, v5, y5, d5, _5, g6, b5, k6 = t7.props, w6 = u6.props, x6 = u6.type;
   if ("svg" === x6 && (o5 = true), null != r7) {
-    for (a6 = 0; a6 < r7.length; a6++)
-      if ((_5 = r7[a6]) && "setAttribute" in _5 == !!x6 && (x6 ? _5.localName === x6 : 3 === _5.nodeType)) {
-        l5 = _5, r7[a6] = null;
-        break;
-      }
+    for (a6 = 0; a6 < r7.length; a6++) if ((_5 = r7[a6]) && "setAttribute" in _5 == !!x6 && (x6 ? _5.localName === x6 : 3 === _5.nodeType)) {
+      l5 = _5, r7[a6] = null;
+      break;
+    }
   }
   if (null == l5) {
-    if (null === x6)
-      return document.createTextNode(w6);
-    l5 = o5 ? document.createElementNS("http://www.w3.org/2000/svg", x6) : document.createElement(x6, w6.is && w6), r7 = null, e7 = false;
+    if (null === x6) return document.createTextNode(w6);
+    l5 = o5 ? document.createElementNS("http://www.w3.org/2000/svg", x6) : document.createElement(x6, w6.is && w6), r7 = null, e8 = false;
   }
-  if (null === x6)
-    k6 === w6 || e7 && l5.data === w6 || (l5.data = w6);
+  if (null === x6) k6 === w6 || e8 && l5.data === w6 || (l5.data = w6);
   else {
-    if (r7 = r7 && n3.call(l5.childNodes), k6 = t7.props || c3, !e7 && null != r7)
-      for (k6 = {}, a6 = 0; a6 < l5.attributes.length; a6++)
-        k6[(_5 = l5.attributes[a6]).name] = _5.value;
-    for (a6 in k6)
-      _5 = k6[a6], "children" == a6 || ("dangerouslySetInnerHTML" == a6 ? y5 = _5 : "key" === a6 || a6 in w6 || T2(l5, a6, null, _5, o5));
-    for (a6 in w6)
-      _5 = w6[a6], "children" == a6 ? d5 = _5 : "dangerouslySetInnerHTML" == a6 ? v5 = _5 : "value" == a6 ? g6 = _5 : "checked" == a6 ? b5 = _5 : "key" === a6 || e7 && "function" != typeof _5 || k6[a6] === _5 || T2(l5, a6, _5, k6[a6], o5);
-    if (v5)
-      e7 || y5 && (v5.__html === y5.__html || v5.__html === l5.innerHTML) || (l5.innerHTML = v5.__html), u6.__k = [];
-    else if (y5 && (l5.innerHTML = ""), C3(l5, h3(d5) ? d5 : [d5], u6, t7, i7, o5 && "foreignObject" !== x6, r7, f6, r7 ? r7[0] : t7.__k && m3(t7, 0), e7, s5), null != r7)
-      for (a6 = r7.length; a6--; )
-        null != r7[a6] && p3(r7[a6]);
-    e7 || (a6 = "value", void 0 !== g6 && (g6 !== l5[a6] || "progress" === x6 && !g6 || "option" === x6 && g6 !== k6[a6]) && T2(l5, a6, g6, k6[a6], false), a6 = "checked", void 0 !== b5 && b5 !== l5[a6] && T2(l5, a6, b5, k6[a6], false));
+    if (r7 = r7 && n3.call(l5.childNodes), k6 = t7.props || c3, !e8 && null != r7) for (k6 = {}, a6 = 0; a6 < l5.attributes.length; a6++) k6[(_5 = l5.attributes[a6]).name] = _5.value;
+    for (a6 in k6) _5 = k6[a6], "children" == a6 || ("dangerouslySetInnerHTML" == a6 ? y5 = _5 : "key" === a6 || a6 in w6 || T2(l5, a6, null, _5, o5));
+    for (a6 in w6) _5 = w6[a6], "children" == a6 ? d5 = _5 : "dangerouslySetInnerHTML" == a6 ? v5 = _5 : "value" == a6 ? g6 = _5 : "checked" == a6 ? b5 = _5 : "key" === a6 || e8 && "function" != typeof _5 || k6[a6] === _5 || T2(l5, a6, _5, k6[a6], o5);
+    if (v5) e8 || y5 && (v5.__html === y5.__html || v5.__html === l5.innerHTML) || (l5.innerHTML = v5.__html), u6.__k = [];
+    else if (y5 && (l5.innerHTML = ""), C3(l5, h3(d5) ? d5 : [d5], u6, t7, i7, o5 && "foreignObject" !== x6, r7, f6, r7 ? r7[0] : t7.__k && m3(t7, 0), e8, s5), null != r7) for (a6 = r7.length; a6--; ) null != r7[a6] && p3(r7[a6]);
+    e8 || (a6 = "value", void 0 !== g6 && (g6 !== l5[a6] || "progress" === x6 && !g6 || "option" === x6 && g6 !== k6[a6]) && T2(l5, a6, g6, k6[a6], false), a6 = "checked", void 0 !== b5 && b5 !== l5[a6] && T2(l5, a6, b5, k6[a6], false));
   }
   return l5;
 }
@@ -40594,37 +44428,33 @@ function z3(n4, u6, t7) {
 function N2(n4, u6, t7) {
   var i7, o5;
   if (l3.unmount && l3.unmount(n4), (i7 = n4.ref) && (i7.current && i7.current !== n4.__e || z3(i7, null, u6)), null != (i7 = n4.__c)) {
-    if (i7.componentWillUnmount)
-      try {
-        i7.componentWillUnmount();
-      } catch (n5) {
-        l3.__e(n5, u6);
-      }
+    if (i7.componentWillUnmount) try {
+      i7.componentWillUnmount();
+    } catch (n5) {
+      l3.__e(n5, u6);
+    }
     i7.base = i7.__P = null, n4.__c = void 0;
   }
-  if (i7 = n4.__k)
-    for (o5 = 0; o5 < i7.length; o5++)
-      i7[o5] && N2(i7[o5], u6, t7 || "function" != typeof n4.type);
+  if (i7 = n4.__k) for (o5 = 0; o5 < i7.length; o5++) i7[o5] && N2(i7[o5], u6, t7 || "function" != typeof n4.type);
   t7 || null == n4.__e || p3(n4.__e), n4.__ = n4.__e = n4.__d = void 0;
 }
 function O2(n4, l5, u6) {
   return this.constructor(n4, u6);
 }
 function q3(u6, t7, i7) {
-  var o5, r7, f6, e7;
-  l3.__ && l3.__(u6, t7), r7 = (o5 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, f6 = [], e7 = [], L2(t7, u6 = (!o5 && i7 || t7).__k = y3(g3, null, [u6]), r7 || c3, c3, void 0 !== t7.ownerSVGElement, !o5 && i7 ? [i7] : r7 ? null : t7.firstChild ? n3.call(t7.childNodes) : null, f6, !o5 && i7 ? i7 : r7 ? r7.__e : t7.firstChild, o5, e7), M2(f6, u6, e7);
+  var o5, r7, f6, e8;
+  l3.__ && l3.__(u6, t7), r7 = (o5 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, f6 = [], e8 = [], L2(t7, u6 = (!o5 && i7 || t7).__k = y3(g3, null, [u6]), r7 || c3, c3, void 0 !== t7.ownerSVGElement, !o5 && i7 ? [i7] : r7 ? null : t7.firstChild ? n3.call(t7.childNodes) : null, f6, !o5 && i7 ? i7 : r7 ? r7.__e : t7.firstChild, o5, e8), M2(f6, u6, e8);
 }
 function B3(n4, l5) {
   q3(n4, l5, B3);
 }
 function E(l5, u6, t7) {
-  var i7, o5, r7, f6, e7 = v3({}, l5.props);
-  for (r7 in l5.type && l5.type.defaultProps && (f6 = l5.type.defaultProps), u6)
-    "key" == r7 ? i7 = u6[r7] : "ref" == r7 ? o5 = u6[r7] : e7[r7] = void 0 === u6[r7] && void 0 !== f6 ? f6[r7] : u6[r7];
-  return arguments.length > 2 && (e7.children = arguments.length > 3 ? n3.call(arguments, 2) : t7), d3(l5.type, e7, i7 || l5.key, o5 || l5.ref, null);
+  var i7, o5, r7, f6, e8 = v3({}, l5.props);
+  for (r7 in l5.type && l5.type.defaultProps && (f6 = l5.type.defaultProps), u6) "key" == r7 ? i7 = u6[r7] : "ref" == r7 ? o5 = u6[r7] : e8[r7] = void 0 === u6[r7] && void 0 !== f6 ? f6[r7] : u6[r7];
+  return arguments.length > 2 && (e8.children = arguments.length > 3 ? n3.call(arguments, 2) : t7), d3(l5.type, e8, i7 || l5.key, o5 || l5.ref, null);
 }
 function F3(n4, l5) {
-  var u6 = { __c: l5 = "__cC" + e4++, __: n4, Consumer: function(n5, l6) {
+  var u6 = { __c: l5 = "__cC" + e5++, __: n4, Consumer: function(n5, l6) {
     return n5.children(l6);
   }, Provider: function(n5) {
     var u7, t7;
@@ -40645,14 +44475,11 @@ function F3(n4, l5) {
   return u6.Provider.__ = u6.Consumer.contextType = u6;
 }
 n3 = s3.slice, l3 = { __e: function(n4, l5, u6, t7) {
-  for (var i7, o5, r7; l5 = l5.__; )
-    if ((i7 = l5.__c) && !i7.__)
-      try {
-        if ((o5 = i7.constructor) && null != o5.getDerivedStateFromError && (i7.setState(o5.getDerivedStateFromError(n4)), r7 = i7.__d), null != i7.componentDidCatch && (i7.componentDidCatch(n4, t7 || {}), r7 = i7.__d), r7)
-          return i7.__E = i7;
-      } catch (l6) {
-        n4 = l6;
-      }
+  for (var i7, o5, r7; l5 = l5.__; ) if ((i7 = l5.__c) && !i7.__) try {
+    if ((o5 = i7.constructor) && null != o5.getDerivedStateFromError && (i7.setState(o5.getDerivedStateFromError(n4)), r7 = i7.__d), null != i7.componentDidCatch && (i7.componentDidCatch(n4, t7 || {}), r7 = i7.__d), r7) return i7.__E = i7;
+  } catch (l6) {
+    n4 = l6;
+  }
   throw n4;
 } }, u3 = 0, t4 = function(n4) {
   return null != n4 && null == n4.constructor;
@@ -40663,7 +44490,7 @@ n3 = s3.slice, l3 = { __e: function(n4, l5, u6, t7) {
   this.__v && (this.__e = true, n4 && this.__h.push(n4), w3(this));
 }, b3.prototype.render = g3, i3 = [], r4 = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, f3 = function(n4, l5) {
   return n4.__v.__b - l5.__v.__b;
-}, x3.__r = 0, e4 = 0;
+}, x3.__r = 0, e5 = 0;
 
 // node_modules/@bpmn-io/properties-panel/preact/hooks/dist/hooks.module.js
 var t5;
@@ -40673,7 +44500,7 @@ var i4;
 var o4 = 0;
 var f4 = [];
 var c4 = [];
-var e5 = l3.__b;
+var e6 = l3.__b;
 var a4 = l3.__r;
 var v4 = l3.diffed;
 var l4 = l3.__c;
@@ -40693,15 +44520,13 @@ function s4(n4, u6, i7) {
     t7 !== r7 && (o5.__N = [r7, o5.__[1]], o5.__c.setState({}));
   }], o5.__c = r5, !r5.u)) {
     var f6 = function(n5, t7, r7) {
-      if (!o5.__c.__H)
-        return true;
+      if (!o5.__c.__H) return true;
       var u7 = o5.__c.__H.__.filter(function(n6) {
         return n6.__c;
       });
       if (u7.every(function(n6) {
         return !n6.__N;
-      }))
-        return !c5 || c5.call(this, n5, t7, r7);
+      })) return !c5 || c5.call(this, n5, t7, r7);
       var i8 = false;
       return u7.forEach(function(n6) {
         if (n6.__N) {
@@ -40711,13 +44536,13 @@ function s4(n4, u6, i7) {
       }), !(!i8 && o5.__c.props === n5) && (!c5 || c5.call(this, n5, t7, r7));
     };
     r5.u = true;
-    var c5 = r5.shouldComponentUpdate, e7 = r5.componentWillUpdate;
+    var c5 = r5.shouldComponentUpdate, e8 = r5.componentWillUpdate;
     r5.componentWillUpdate = function(n5, t7, r7) {
       if (this.__e) {
         var u7 = c5;
         c5 = void 0, f6(n5, t7, r7), c5 = u7;
       }
-      e7 && e7.call(this, n5, t7, r7);
+      e8 && e8.call(this, n5, t7, r7);
     }, r5.shouldComponentUpdate = f6;
   }
   return o5.__N || o5.__;
@@ -40763,24 +44588,21 @@ function x4(t7, r7) {
 function V2() {
   var n4 = d4(t5++, 11);
   if (!n4.__) {
-    for (var u6 = r5.__v; null !== u6 && !u6.__m && null !== u6.__; )
-      u6 = u6.__;
+    for (var u6 = r5.__v; null !== u6 && !u6.__m && null !== u6.__; ) u6 = u6.__;
     var i7 = u6.__m || (u6.__m = [0, 0]);
     n4.__ = "P" + i7[0] + "-" + i7[1]++;
   }
   return n4.__;
 }
 function b4() {
-  for (var t7; t7 = f4.shift(); )
-    if (t7.__P && t7.__H)
-      try {
-        t7.__H.__h.forEach(k4), t7.__H.__h.forEach(w4), t7.__H.__h = [];
-      } catch (r7) {
-        t7.__H.__h = [], l3.__e(r7, t7.__v);
-      }
+  for (var t7; t7 = f4.shift(); ) if (t7.__P && t7.__H) try {
+    t7.__H.__h.forEach(k4), t7.__H.__h.forEach(w4), t7.__H.__h = [];
+  } catch (r7) {
+    t7.__H.__h = [], l3.__e(r7, t7.__v);
+  }
 }
 l3.__b = function(n4) {
-  r5 = null, e5 && e5(n4);
+  r5 = null, e6 && e6(n4);
 }, l3.__r = function(n4) {
   a4 && a4(n4), t5 = 0;
   var i7 = (r5 = n4.__c).__H;
@@ -40842,29 +44664,24 @@ function B4(n4, t7) {
 
 // node_modules/@bpmn-io/properties-panel/preact/compat/dist/compat.module.js
 function g5(n4, t7) {
-  for (var e7 in t7)
-    n4[e7] = t7[e7];
+  for (var e8 in t7) n4[e8] = t7[e8];
   return n4;
 }
 function C4(n4, t7) {
-  for (var e7 in n4)
-    if ("__source" !== e7 && !(e7 in t7))
-      return true;
-  for (var r7 in t7)
-    if ("__source" !== r7 && n4[r7] !== t7[r7])
-      return true;
+  for (var e8 in n4) if ("__source" !== e8 && !(e8 in t7)) return true;
+  for (var r7 in t7) if ("__source" !== r7 && n4[r7] !== t7[r7]) return true;
   return false;
 }
 function E2(n4) {
   this.props = n4;
 }
-function w5(n4, e7) {
+function w5(n4, e8) {
   function r7(n5) {
     var t7 = this.props.ref, r8 = t7 == n5.ref;
-    return !r8 && t7 && (t7.call ? t7(null) : t7.current = null), e7 ? !e7(this.props, n5) || !r8 : C4(this.props, n5);
+    return !r8 && t7 && (t7.call ? t7(null) : t7.current = null), e8 ? !e8(this.props, n5) || !r8 : C4(this.props, n5);
   }
-  function u6(e8) {
-    return this.shouldComponentUpdate = r7, y3(n4, e8);
+  function u6(e9) {
+    return this.shouldComponentUpdate = r7, y3(n4, e9);
   }
   return u6.displayName = "Memo(" + (n4.displayName || n4.name) + ")", u6.prototype.isReactComponent = true, u6.__f = true, u6;
 }
@@ -40878,8 +44695,8 @@ l3.__b = function(n4) {
 var R = "undefined" != typeof Symbol && Symbol.for && Symbol.for("react.forward_ref") || 3911;
 function N3(n4) {
   function t7(t8) {
-    var e7 = g5({}, t8);
-    return delete e7.ref, n4(e7, t8.ref || null);
+    var e8 = g5({}, t8);
+    return delete e8.ref, n4(e8, t8.ref || null);
   }
   return t7.$$typeof = R, t7.render = t7, t7.prototype.isReactComponent = t7.__f = true, t7.displayName = "ForwardRef(" + (n4.displayName || n4.name) + ")", t7;
 }
@@ -40890,31 +44707,28 @@ var A5 = { map: k5, forEach: k5, count: function(n4) {
   return n4 ? $2(n4).length : 0;
 }, only: function(n4) {
   var t7 = $2(n4);
-  if (1 !== t7.length)
-    throw "Children.only";
+  if (1 !== t7.length) throw "Children.only";
   return t7[0];
 }, toArray: $2 };
 var O3 = l3.__e;
-l3.__e = function(n4, t7, e7, r7) {
+l3.__e = function(n4, t7, e8, r7) {
   if (n4.then) {
-    for (var u6, o5 = t7; o5 = o5.__; )
-      if ((u6 = o5.__c) && u6.__c)
-        return null == t7.__e && (t7.__e = e7.__e, t7.__k = e7.__k), u6.__c(n4, t7);
+    for (var u6, o5 = t7; o5 = o5.__; ) if ((u6 = o5.__c) && u6.__c) return null == t7.__e && (t7.__e = e8.__e, t7.__k = e8.__k), u6.__c(n4, t7);
   }
-  O3(n4, t7, e7, r7);
+  O3(n4, t7, e8, r7);
 };
 var T4 = l3.unmount;
-function F5(n4, t7, e7) {
+function F5(n4, t7, e8) {
   return n4 && (n4.__c && n4.__c.__H && (n4.__c.__H.__.forEach(function(n5) {
     "function" == typeof n5.__c && n5.__c();
-  }), n4.__c.__H = null), null != (n4 = g5({}, n4)).__c && (n4.__c.__P === e7 && (n4.__c.__P = t7), n4.__c = null), n4.__k = n4.__k && n4.__k.map(function(n5) {
-    return F5(n5, t7, e7);
+  }), n4.__c.__H = null), null != (n4 = g5({}, n4)).__c && (n4.__c.__P === e8 && (n4.__c.__P = t7), n4.__c = null), n4.__k = n4.__k && n4.__k.map(function(n5) {
+    return F5(n5, t7, e8);
   })), n4;
 }
-function I3(n4, t7, e7) {
-  return n4 && e7 && (n4.__v = null, n4.__k = n4.__k && n4.__k.map(function(n5) {
-    return I3(n5, t7, e7);
-  }), n4.__c && n4.__c.__P === t7 && (n4.__e && e7.appendChild(n4.__e), n4.__c.__e = true, n4.__c.__P = e7)), n4;
+function I3(n4, t7, e8) {
+  return n4 && e8 && (n4.__v = null, n4.__k = n4.__k && n4.__k.map(function(n5) {
+    return I3(n5, t7, e8);
+  }), n4.__c && n4.__c.__P === t7 && (n4.__e && e8.appendChild(n4.__e), n4.__c.__e = true, n4.__c.__P = e8)), n4;
 }
 function L3() {
   this.__u = 0, this.t = null, this.__b = null;
@@ -40924,16 +44738,14 @@ function U(n4) {
   return t7 && t7.__a && t7.__a(n4);
 }
 function D4(n4) {
-  var e7, r7, u6;
+  var e8, r7, u6;
   function o5(o6) {
-    if (e7 || (e7 = n4()).then(function(n5) {
+    if (e8 || (e8 = n4()).then(function(n5) {
       r7 = n5.default || n5;
     }, function(n5) {
       u6 = n5;
-    }), u6)
-      throw u6;
-    if (!r7)
-      throw e7;
+    }), u6) throw u6;
+    if (!r7) throw e8;
     return y3(r7, o6);
   }
   return o5.displayName = "Lazy", o5.__f = true, o5;
@@ -40945,12 +44757,12 @@ l3.unmount = function(n4) {
   var t7 = n4.__c;
   t7 && t7.__R && t7.__R(), t7 && 32 & n4.__u && (n4.type = null), T4 && T4(n4);
 }, (L3.prototype = new b3()).__c = function(n4, t7) {
-  var e7 = t7.__c, r7 = this;
-  null == r7.t && (r7.t = []), r7.t.push(e7);
+  var e8 = t7.__c, r7 = this;
+  null == r7.t && (r7.t = []), r7.t.push(e8);
   var u6 = U(r7.__v), o5 = false, i7 = function() {
-    o5 || (o5 = true, e7.__R = null, u6 ? u6(l5) : l5());
+    o5 || (o5 = true, e8.__R = null, u6 ? u6(l5) : l5());
   };
-  e7.__R = i7;
+  e8.__R = i7;
   var l5 = function() {
     if (!--r7.__u) {
       if (r7.state.__a) {
@@ -40958,14 +44770,13 @@ l3.unmount = function(n4) {
         r7.__v.__k[0] = I3(n5, n5.__c.__P, n5.__c.__O);
       }
       var t8;
-      for (r7.setState({ __a: r7.__b = null }); t8 = r7.t.pop(); )
-        t8.forceUpdate();
+      for (r7.setState({ __a: r7.__b = null }); t8 = r7.t.pop(); ) t8.forceUpdate();
     }
   };
   r7.__u++ || 32 & t7.__u || r7.setState({ __a: r7.__b = r7.__v.__k[0] }), n4.then(i7, i7);
 }, L3.prototype.componentWillUnmount = function() {
   this.t = [];
-}, L3.prototype.render = function(n4, e7) {
+}, L3.prototype.render = function(n4, e8) {
   if (this.__b) {
     if (this.__v.__k) {
       var r7 = document.createElement("div"), o5 = this.__v.__k[0].__c;
@@ -40973,18 +44784,15 @@ l3.unmount = function(n4) {
     }
     this.__b = null;
   }
-  var i7 = e7.__a && y3(g3, null, n4.fallback);
-  return i7 && (i7.__u &= -33), [y3(g3, null, e7.__a ? null : n4.children), i7];
+  var i7 = e8.__a && y3(g3, null, n4.fallback);
+  return i7 && (i7.__u &= -33), [y3(g3, null, e8.__a ? null : n4.children), i7];
 };
-var V3 = function(n4, t7, e7) {
-  if (++e7[1] === e7[0] && n4.o.delete(t7), n4.props.revealOrder && ("t" !== n4.props.revealOrder[0] || !n4.o.size))
-    for (e7 = n4.u; e7; ) {
-      for (; e7.length > 3; )
-        e7.pop()();
-      if (e7[1] < e7[0])
-        break;
-      n4.u = e7 = e7[2];
-    }
+var V3 = function(n4, t7, e8) {
+  if (++e8[1] === e8[0] && n4.o.delete(t7), n4.props.revealOrder && ("t" !== n4.props.revealOrder[0] || !n4.o.size)) for (e8 = n4.u; e8; ) {
+    for (; e8.length > 3; ) e8.pop()();
+    if (e8[1] < e8[0]) break;
+    n4.u = e8 = e8[2];
+  }
 };
 function W(n4) {
   return this.getChildContext = function() {
@@ -40992,40 +44800,39 @@ function W(n4) {
   }, n4.children;
 }
 function P4(n4) {
-  var e7 = this, r7 = n4.i;
-  e7.componentWillUnmount = function() {
-    q3(null, e7.l), e7.l = null, e7.i = null;
-  }, e7.i && e7.i !== r7 && e7.componentWillUnmount(), e7.l || (e7.i = r7, e7.l = { nodeType: 1, parentNode: r7, childNodes: [], appendChild: function(n5) {
-    this.childNodes.push(n5), e7.i.appendChild(n5);
+  var e8 = this, r7 = n4.i;
+  e8.componentWillUnmount = function() {
+    q3(null, e8.l), e8.l = null, e8.i = null;
+  }, e8.i && e8.i !== r7 && e8.componentWillUnmount(), e8.l || (e8.i = r7, e8.l = { nodeType: 1, parentNode: r7, childNodes: [], appendChild: function(n5) {
+    this.childNodes.push(n5), e8.i.appendChild(n5);
   }, insertBefore: function(n5, t7) {
-    this.childNodes.push(n5), e7.i.appendChild(n5);
+    this.childNodes.push(n5), e8.i.appendChild(n5);
   }, removeChild: function(n5) {
-    this.childNodes.splice(this.childNodes.indexOf(n5) >>> 1, 1), e7.i.removeChild(n5);
-  } }), q3(y3(W, { context: e7.context }, n4.__v), e7.l);
+    this.childNodes.splice(this.childNodes.indexOf(n5) >>> 1, 1), e8.i.removeChild(n5);
+  } }), q3(y3(W, { context: e8.context }, n4.__v), e8.l);
 }
-function j5(n4, e7) {
-  var r7 = y3(P4, { __v: n4, i: e7 });
-  return r7.containerInfo = e7, r7;
+function j5(n4, e8) {
+  var r7 = y3(P4, { __v: n4, i: e8 });
+  return r7.containerInfo = e8, r7;
 }
 (M3.prototype = new b3()).__a = function(n4) {
-  var t7 = this, e7 = U(t7.__v), r7 = t7.o.get(n4);
+  var t7 = this, e8 = U(t7.__v), r7 = t7.o.get(n4);
   return r7[0]++, function(u6) {
     var o5 = function() {
       t7.props.revealOrder ? (r7.push(u6), V3(t7, n4, r7)) : u6();
     };
-    e7 ? e7(o5) : o5();
+    e8 ? e8(o5) : o5();
   };
 }, M3.prototype.render = function(n4) {
   this.u = null, this.o = /* @__PURE__ */ new Map();
   var t7 = $2(n4.children);
   n4.revealOrder && "b" === n4.revealOrder[0] && t7.reverse();
-  for (var e7 = t7.length; e7--; )
-    this.o.set(t7[e7], this.u = [1, 0, this.u]);
+  for (var e8 = t7.length; e8--; ) this.o.set(t7[e8], this.u = [1, 0, this.u]);
   return n4.children;
 }, M3.prototype.componentDidUpdate = M3.prototype.componentDidMount = function() {
   var n4 = this;
-  this.o.forEach(function(t7, e7) {
-    V3(n4, e7, t7);
+  this.o.forEach(function(t7, e8) {
+    V3(n4, e8, t7);
   });
 };
 var z5 = "undefined" != typeof Symbol && Symbol.for && Symbol.for("react.element") || 60103;
@@ -41036,11 +44843,11 @@ var Y = "undefined" != typeof document;
 var $3 = function(n4) {
   return ("undefined" != typeof Symbol && "symbol" == typeof Symbol() ? /fil|che|rad/ : /fil|che|ra/).test(n4);
 };
-function q5(n4, t7, e7) {
-  return null == t7.__k && (t7.textContent = ""), q3(n4, t7), "function" == typeof e7 && e7(), n4 ? n4.__c : null;
+function q5(n4, t7, e8) {
+  return null == t7.__k && (t7.textContent = ""), q3(n4, t7), "function" == typeof e8 && e8(), n4 ? n4.__c : null;
 }
-function G(n4, t7, e7) {
-  return B3(n4, t7), "function" == typeof e7 && e7(), n4 ? n4.__c : null;
+function G(n4, t7, e8) {
+  return B3(n4, t7), "function" == typeof e8 && e8(), n4 ? n4.__c : null;
 }
 b3.prototype.isReactComponent = {}, ["componentWillMount", "componentWillReceiveProps", "componentWillUpdate"].forEach(function(t7) {
   Object.defineProperty(b3.prototype, t7, { configurable: true, get: function() {
@@ -41068,17 +44875,17 @@ var tn = { enumerable: false, configurable: true, get: function() {
 var en = l3.vnode;
 l3.vnode = function(n4) {
   "string" == typeof n4.type && function(n5) {
-    var t7 = n5.props, e7 = n5.type, u6 = {};
+    var t7 = n5.props, e8 = n5.type, u6 = {};
     for (var o5 in t7) {
       var i7 = t7[o5];
-      if (!("value" === o5 && "defaultValue" in t7 && null == i7 || Y && "children" === o5 && "noscript" === e7 || "class" === o5 || "className" === o5)) {
+      if (!("value" === o5 && "defaultValue" in t7 && null == i7 || Y && "children" === o5 && "noscript" === e8 || "class" === o5 || "className" === o5)) {
         var l5 = o5.toLowerCase();
-        "defaultValue" === o5 && "value" in t7 && null == t7.value ? o5 = "value" : "download" === o5 && true === i7 ? i7 = "" : "ondoubleclick" === l5 ? o5 = "ondblclick" : "onchange" !== l5 || "input" !== e7 && "textarea" !== e7 || $3(t7.type) ? "onfocus" === l5 ? o5 = "onfocusin" : "onblur" === l5 ? o5 = "onfocusout" : H3.test(o5) ? o5 = l5 : -1 === e7.indexOf("-") && B5.test(o5) ? o5 = o5.replace(Z, "-$&").toLowerCase() : null === i7 && (i7 = void 0) : l5 = o5 = "oninput", "oninput" === l5 && u6[o5 = l5] && (o5 = "oninputCapture"), u6[o5] = i7;
+        "defaultValue" === o5 && "value" in t7 && null == t7.value ? o5 = "value" : "download" === o5 && true === i7 ? i7 = "" : "ondoubleclick" === l5 ? o5 = "ondblclick" : "onchange" !== l5 || "input" !== e8 && "textarea" !== e8 || $3(t7.type) ? "onfocus" === l5 ? o5 = "onfocusin" : "onblur" === l5 ? o5 = "onfocusout" : H3.test(o5) ? o5 = l5 : -1 === e8.indexOf("-") && B5.test(o5) ? o5 = o5.replace(Z, "-$&").toLowerCase() : null === i7 && (i7 = void 0) : l5 = o5 = "oninput", "oninput" === l5 && u6[o5 = l5] && (o5 = "oninputCapture"), u6[o5] = i7;
       }
     }
-    "select" == e7 && u6.multiple && Array.isArray(u6.value) && (u6.value = $2(t7.children).forEach(function(n6) {
+    "select" == e8 && u6.multiple && Array.isArray(u6.value) && (u6.value = $2(t7.children).forEach(function(n6) {
       n6.props.selected = -1 != u6.value.indexOf(n6.props.value);
-    })), "select" == e7 && null != u6.defaultValue && (u6.value = $2(t7.children).forEach(function(n6) {
+    })), "select" == e8 && null != u6.defaultValue && (u6.value = $2(t7.children).forEach(function(n6) {
       n6.props.selected = u6.multiple ? -1 != u6.defaultValue.indexOf(n6.props.value) : u6.defaultValue == n6.props.value;
     })), t7.class && !t7.className ? (u6.class = t7.class, Object.defineProperty(u6, "className", tn)) : (t7.className && !t7.class || t7.class && t7.className) && (u6.class = u6.className = t7.className), n5.props = u6;
   }(n4), n4.$$typeof = z5, en && en(n4);
@@ -41090,8 +44897,8 @@ l3.__r = function(n4) {
 var un = l3.diffed;
 l3.diffed = function(n4) {
   un && un(n4);
-  var t7 = n4.props, e7 = n4.__e;
-  null != e7 && "textarea" === n4.type && "value" in t7 && t7.value !== e7.value && (e7.value = null == t7.value ? "" : t7.value), nn = null;
+  var t7 = n4.props, e8 = n4.__e;
+  null != e8 && "textarea" === n4.type && "value" in t7 && t7.value !== e8.value && (e8.value = null == t7.value ? "" : t7.value), nn = null;
 };
 var on = { ReactCurrentDispatcher: { current: { readContext: function(n4) {
   return nn.__n[n4.__c].props.value;
@@ -41133,20 +44940,20 @@ function bn() {
 var Sn = y4;
 var gn = fn;
 function Cn(n4, t7) {
-  var e7 = t7(), r7 = h4({ h: { __: e7, v: t7 } }), u6 = r7[0].h, o5 = r7[1];
+  var e8 = t7(), r7 = h4({ h: { __: e8, v: t7 } }), u6 = r7[0].h, o5 = r7[1];
   return y4(function() {
-    u6.__ = e7, u6.v = t7, En(u6) && o5({ h: u6 });
-  }, [n4, e7, t7]), p4(function() {
+    u6.__ = e8, u6.v = t7, En(u6) && o5({ h: u6 });
+  }, [n4, e8, t7]), p4(function() {
     return En(u6) && o5({ h: u6 }), n4(function() {
       En(u6) && o5({ h: u6 });
     });
-  }, [n4]), e7;
+  }, [n4]), e8;
 }
 function En(n4) {
-  var t7, e7, r7 = n4.v, u6 = n4.__;
+  var t7, e8, r7 = n4.v, u6 = n4.__;
   try {
     var o5 = r7();
-    return !((t7 = u6) === (e7 = o5) && (0 !== t7 || 1 / t7 == 1 / e7) || t7 != t7 && e7 != e7);
+    return !((t7 = u6) === (e8 = o5) && (0 !== t7 || 1 / t7 == 1 / e8) || t7 != t7 && e8 != e8);
   } catch (n5) {
     return true;
   }
@@ -41156,14 +44963,11 @@ var wn = { useState: h4, useId: V2, useReducer: s4, useEffect: p4, useLayoutEffe
 // node_modules/@bpmn-io/properties-panel/preact/jsx-runtime/dist/jsxRuntime.module.js
 var f5 = 0;
 var i5 = Array.isArray;
-function u5(e7, t7, n4, o5, i7, u6) {
+function u5(e8, t7, n4, o5, i7, u6) {
   var a6, c5, p5 = {};
-  for (c5 in t7)
-    "ref" == c5 ? a6 = t7[c5] : p5[c5] = t7[c5];
-  var l5 = { type: e7, props: p5, key: n4, ref: a6, __k: null, __: null, __b: 0, __e: null, __d: void 0, __c: null, constructor: void 0, __v: --f5, __i: -1, __u: 0, __source: i7, __self: u6 };
-  if ("function" == typeof e7 && (a6 = e7.defaultProps))
-    for (c5 in a6)
-      void 0 === p5[c5] && (p5[c5] = a6[c5]);
+  for (c5 in t7) "ref" == c5 ? a6 = t7[c5] : p5[c5] = t7[c5];
+  var l5 = { type: e8, props: p5, key: n4, ref: a6, __k: null, __: null, __b: 0, __e: null, __d: void 0, __c: null, constructor: void 0, __v: --f5, __i: -1, __u: 0, __source: i7, __self: u6 };
+  if ("function" == typeof e8 && (a6 = e8.defaultProps)) for (c5 in a6) void 0 === p5[c5] && (p5[c5] = a6[c5]);
   return l3.vnode && l3.vnode(l5), l5;
 }
 
@@ -42182,27 +45986,27 @@ var Line = class {
     return result + this.text.slice(this.basePos);
   }
 };
-function skipForList(bl, cx, line) {
-  if (line.pos == line.text.length || bl != cx.block && line.indent >= cx.stack[line.depth + 1].value + line.baseIndent)
+function skipForList(bl, cx, line2) {
+  if (line2.pos == line2.text.length || bl != cx.block && line2.indent >= cx.stack[line2.depth + 1].value + line2.baseIndent)
     return true;
-  if (line.indent >= line.baseIndent + 4)
+  if (line2.indent >= line2.baseIndent + 4)
     return false;
-  let size2 = (bl.type == Type.OrderedList ? isOrderedList : isBulletList)(line, cx, false);
-  return size2 > 0 && (bl.type != Type.BulletList || isHorizontalRule(line, cx, false) < 0) && line.text.charCodeAt(line.pos + size2 - 1) == bl.value;
+  let size2 = (bl.type == Type.OrderedList ? isOrderedList : isBulletList)(line2, cx, false);
+  return size2 > 0 && (bl.type != Type.BulletList || isHorizontalRule(line2, cx, false) < 0) && line2.text.charCodeAt(line2.pos + size2 - 1) == bl.value;
 }
 var DefaultSkipMarkup = {
-  [Type.Blockquote](bl, cx, line) {
-    if (line.next != 62)
+  [Type.Blockquote](bl, cx, line2) {
+    if (line2.next != 62)
       return false;
-    line.markers.push(elt(Type.QuoteMark, cx.lineStart + line.pos, cx.lineStart + line.pos + 1));
-    line.moveBase(line.pos + (space(line.text.charCodeAt(line.pos + 1)) ? 2 : 1));
-    bl.end = cx.lineStart + line.text.length;
+    line2.markers.push(elt(Type.QuoteMark, cx.lineStart + line2.pos, cx.lineStart + line2.pos + 1));
+    line2.moveBase(line2.pos + (space(line2.text.charCodeAt(line2.pos + 1)) ? 2 : 1));
+    bl.end = cx.lineStart + line2.text.length;
     return true;
   },
-  [Type.ListItem](bl, _cx, line) {
-    if (line.indent < line.baseIndent + bl.value && line.next > -1)
+  [Type.ListItem](bl, _cx, line2) {
+    if (line2.indent < line2.baseIndent + bl.value && line2.next > -1)
       return false;
-    line.moveBaseColumn(line.baseIndent + bl.value);
+    line2.moveBaseColumn(line2.baseIndent + bl.value);
     return true;
   },
   [Type.OrderedList]: skipForList,
@@ -42214,46 +46018,46 @@ var DefaultSkipMarkup = {
 function space(ch) {
   return ch == 32 || ch == 9 || ch == 10 || ch == 13;
 }
-function skipSpace(line, i7 = 0) {
-  while (i7 < line.length && space(line.charCodeAt(i7)))
+function skipSpace(line2, i7 = 0) {
+  while (i7 < line2.length && space(line2.charCodeAt(i7)))
     i7++;
   return i7;
 }
-function skipSpaceBack(line, i7, to) {
-  while (i7 > to && space(line.charCodeAt(i7 - 1)))
+function skipSpaceBack(line2, i7, to) {
+  while (i7 > to && space(line2.charCodeAt(i7 - 1)))
     i7--;
   return i7;
 }
-function isFencedCode(line) {
-  if (line.next != 96 && line.next != 126)
+function isFencedCode(line2) {
+  if (line2.next != 96 && line2.next != 126)
     return -1;
-  let pos = line.pos + 1;
-  while (pos < line.text.length && line.text.charCodeAt(pos) == line.next)
+  let pos = line2.pos + 1;
+  while (pos < line2.text.length && line2.text.charCodeAt(pos) == line2.next)
     pos++;
-  if (pos < line.pos + 3)
+  if (pos < line2.pos + 3)
     return -1;
-  if (line.next == 96) {
-    for (let i7 = pos; i7 < line.text.length; i7++)
-      if (line.text.charCodeAt(i7) == 96)
+  if (line2.next == 96) {
+    for (let i7 = pos; i7 < line2.text.length; i7++)
+      if (line2.text.charCodeAt(i7) == 96)
         return -1;
   }
   return pos;
 }
-function isBlockquote(line) {
-  return line.next != 62 ? -1 : line.text.charCodeAt(line.pos + 1) == 32 ? 2 : 1;
+function isBlockquote(line2) {
+  return line2.next != 62 ? -1 : line2.text.charCodeAt(line2.pos + 1) == 32 ? 2 : 1;
 }
-function isHorizontalRule(line, cx, breaking) {
-  if (line.next != 42 && line.next != 45 && line.next != 95)
+function isHorizontalRule(line2, cx, breaking) {
+  if (line2.next != 42 && line2.next != 45 && line2.next != 95)
     return -1;
   let count = 1;
-  for (let pos = line.pos + 1; pos < line.text.length; pos++) {
-    let ch = line.text.charCodeAt(pos);
-    if (ch == line.next)
+  for (let pos = line2.pos + 1; pos < line2.text.length; pos++) {
+    let ch = line2.text.charCodeAt(pos);
+    if (ch == line2.next)
       count++;
     else if (!space(ch))
       return -1;
   }
-  if (breaking && line.next == 45 && isSetextUnderline(line) > -1 && line.depth == cx.stack.length)
+  if (breaking && line2.next == 45 && isSetextUnderline(line2) > -1 && line2.depth == cx.stack.length)
     return -1;
   return count < 3 ? -1 : 1;
 }
@@ -42263,45 +46067,45 @@ function inList(cx, type) {
       return true;
   return false;
 }
-function isBulletList(line, cx, breaking) {
-  return (line.next == 45 || line.next == 43 || line.next == 42) && (line.pos == line.text.length - 1 || space(line.text.charCodeAt(line.pos + 1))) && (!breaking || inList(cx, Type.BulletList) || line.skipSpace(line.pos + 2) < line.text.length) ? 1 : -1;
+function isBulletList(line2, cx, breaking) {
+  return (line2.next == 45 || line2.next == 43 || line2.next == 42) && (line2.pos == line2.text.length - 1 || space(line2.text.charCodeAt(line2.pos + 1))) && (!breaking || inList(cx, Type.BulletList) || line2.skipSpace(line2.pos + 2) < line2.text.length) ? 1 : -1;
 }
-function isOrderedList(line, cx, breaking) {
-  let pos = line.pos, next = line.next;
+function isOrderedList(line2, cx, breaking) {
+  let pos = line2.pos, next = line2.next;
   for (; ; ) {
     if (next >= 48 && next <= 57)
       pos++;
     else
       break;
-    if (pos == line.text.length)
+    if (pos == line2.text.length)
       return -1;
-    next = line.text.charCodeAt(pos);
+    next = line2.text.charCodeAt(pos);
   }
-  if (pos == line.pos || pos > line.pos + 9 || next != 46 && next != 41 || pos < line.text.length - 1 && !space(line.text.charCodeAt(pos + 1)) || breaking && !inList(cx, Type.OrderedList) && (line.skipSpace(pos + 1) == line.text.length || pos > line.pos + 1 || line.next != 49))
+  if (pos == line2.pos || pos > line2.pos + 9 || next != 46 && next != 41 || pos < line2.text.length - 1 && !space(line2.text.charCodeAt(pos + 1)) || breaking && !inList(cx, Type.OrderedList) && (line2.skipSpace(pos + 1) == line2.text.length || pos > line2.pos + 1 || line2.next != 49))
     return -1;
-  return pos + 1 - line.pos;
+  return pos + 1 - line2.pos;
 }
-function isAtxHeading(line) {
-  if (line.next != 35)
+function isAtxHeading(line2) {
+  if (line2.next != 35)
     return -1;
-  let pos = line.pos + 1;
-  while (pos < line.text.length && line.text.charCodeAt(pos) == 35)
+  let pos = line2.pos + 1;
+  while (pos < line2.text.length && line2.text.charCodeAt(pos) == 35)
     pos++;
-  if (pos < line.text.length && line.text.charCodeAt(pos) != 32)
+  if (pos < line2.text.length && line2.text.charCodeAt(pos) != 32)
     return -1;
-  let size2 = pos - line.pos;
+  let size2 = pos - line2.pos;
   return size2 > 6 ? -1 : size2;
 }
-function isSetextUnderline(line) {
-  if (line.next != 45 && line.next != 61 || line.indent >= line.baseIndent + 4)
+function isSetextUnderline(line2) {
+  if (line2.next != 45 && line2.next != 61 || line2.indent >= line2.baseIndent + 4)
     return -1;
-  let pos = line.pos + 1;
-  while (pos < line.text.length && line.text.charCodeAt(pos) == line.next)
+  let pos = line2.pos + 1;
+  while (pos < line2.text.length && line2.text.charCodeAt(pos) == line2.next)
     pos++;
   let end = pos;
-  while (pos < line.text.length && space(line.text.charCodeAt(pos)))
+  while (pos < line2.text.length && space(line2.text.charCodeAt(pos)))
     pos++;
-  return pos == line.text.length ? end : -1;
+  return pos == line2.text.length ? end : -1;
 }
 var EmptyLine = /^[ \t]*$/;
 var CommentEnd = /-->/;
@@ -42315,18 +46119,18 @@ var HTMLBlockStyle = [
   [/^\s*<\/?(?:address|article|aside|base|basefont|blockquote|body|caption|center|col|colgroup|dd|details|dialog|dir|div|dl|dt|fieldset|figcaption|figure|footer|form|frame|frameset|h1|h2|h3|h4|h5|h6|head|header|hr|html|iframe|legend|li|link|main|menu|menuitem|nav|noframes|ol|optgroup|option|p|param|section|source|summary|table|tbody|td|tfoot|th|thead|title|tr|track|ul)(?:\s|\/?>|$)/i, EmptyLine],
   [/^\s*(?:<\/[a-z][\w-]*\s*>|<[a-z][\w-]*(\s+[a-z:_][\w-.]*(?:\s*=\s*(?:[^\s"'=<>`]+|'[^']*'|"[^"]*"))?)*\s*>)\s*$/i, EmptyLine]
 ];
-function isHTMLBlock(line, _cx, breaking) {
-  if (line.next != 60)
+function isHTMLBlock(line2, _cx, breaking) {
+  if (line2.next != 60)
     return -1;
-  let rest = line.text.slice(line.pos);
-  for (let i7 = 0, e7 = HTMLBlockStyle.length - (breaking ? 1 : 0); i7 < e7; i7++)
+  let rest = line2.text.slice(line2.pos);
+  for (let i7 = 0, e8 = HTMLBlockStyle.length - (breaking ? 1 : 0); i7 < e8; i7++)
     if (HTMLBlockStyle[i7][0].test(rest))
       return i7;
   return -1;
 }
-function getListIndent(line, pos) {
-  let indentAfter = line.countIndent(pos, line.pos, line.indent);
-  let indented = line.countIndent(line.skipSpace(pos), pos, indentAfter);
+function getListIndent(line2, pos) {
+  let indentAfter = line2.countIndent(pos, line2.pos, line2.indent);
+  let indented = line2.countIndent(line2.skipSpace(pos), pos, indentAfter);
   return indented >= indentAfter + 5 ? indentAfter + 1 : indented;
 }
 function addCodeText(marks, from, to) {
@@ -42338,20 +46142,20 @@ function addCodeText(marks, from, to) {
 }
 var DefaultBlockParsers = {
   LinkReference: void 0,
-  IndentedCode(cx, line) {
-    let base = line.baseIndent + 4;
-    if (line.indent < base)
+  IndentedCode(cx, line2) {
+    let base = line2.baseIndent + 4;
+    if (line2.indent < base)
       return false;
-    let start = line.findColumn(base);
-    let from = cx.lineStart + start, to = cx.lineStart + line.text.length;
+    let start = line2.findColumn(base);
+    let from = cx.lineStart + start, to = cx.lineStart + line2.text.length;
     let marks = [], pendingMarks = [];
     addCodeText(marks, from, to);
-    while (cx.nextLine() && line.depth >= cx.stack.length) {
-      if (line.pos == line.text.length) {
+    while (cx.nextLine() && line2.depth >= cx.stack.length) {
+      if (line2.pos == line2.text.length) {
         addCodeText(pendingMarks, cx.lineStart - 1, cx.lineStart);
-        for (let m5 of line.markers)
+        for (let m5 of line2.markers)
           pendingMarks.push(m5);
-      } else if (line.indent < base) {
+      } else if (line2.indent < base) {
         break;
       } else {
         if (pendingMarks.length) {
@@ -42364,10 +46168,10 @@ var DefaultBlockParsers = {
           pendingMarks = [];
         }
         addCodeText(marks, cx.lineStart - 1, cx.lineStart);
-        for (let m5 of line.markers)
+        for (let m5 of line2.markers)
           marks.push(m5);
-        to = cx.lineStart + line.text.length;
-        let codeStart = cx.lineStart + line.findColumn(line.baseIndent + 4);
+        to = cx.lineStart + line2.text.length;
+        let codeStart = cx.lineStart + line2.findColumn(line2.baseIndent + 4);
         if (codeStart < to)
           addCodeText(marks, codeStart, to);
       }
@@ -42375,37 +46179,37 @@ var DefaultBlockParsers = {
     if (pendingMarks.length) {
       pendingMarks = pendingMarks.filter((m5) => m5.type != Type.CodeText);
       if (pendingMarks.length)
-        line.markers = pendingMarks.concat(line.markers);
+        line2.markers = pendingMarks.concat(line2.markers);
     }
     cx.addNode(cx.buffer.writeElements(marks, -from).finish(Type.CodeBlock, to - from), from);
     return true;
   },
-  FencedCode(cx, line) {
-    let fenceEnd = isFencedCode(line);
+  FencedCode(cx, line2) {
+    let fenceEnd = isFencedCode(line2);
     if (fenceEnd < 0)
       return false;
-    let from = cx.lineStart + line.pos, ch = line.next, len = fenceEnd - line.pos;
-    let infoFrom = line.skipSpace(fenceEnd), infoTo = skipSpaceBack(line.text, line.text.length, infoFrom);
+    let from = cx.lineStart + line2.pos, ch = line2.next, len = fenceEnd - line2.pos;
+    let infoFrom = line2.skipSpace(fenceEnd), infoTo = skipSpaceBack(line2.text, line2.text.length, infoFrom);
     let marks = [elt(Type.CodeMark, from, from + len)];
     if (infoFrom < infoTo)
       marks.push(elt(Type.CodeInfo, cx.lineStart + infoFrom, cx.lineStart + infoTo));
-    for (let first2 = true; cx.nextLine() && line.depth >= cx.stack.length; first2 = false) {
-      let i7 = line.pos;
-      if (line.indent - line.baseIndent < 4)
-        while (i7 < line.text.length && line.text.charCodeAt(i7) == ch)
+    for (let first2 = true; cx.nextLine() && line2.depth >= cx.stack.length; first2 = false) {
+      let i7 = line2.pos;
+      if (line2.indent - line2.baseIndent < 4)
+        while (i7 < line2.text.length && line2.text.charCodeAt(i7) == ch)
           i7++;
-      if (i7 - line.pos >= len && line.skipSpace(i7) == line.text.length) {
-        for (let m5 of line.markers)
+      if (i7 - line2.pos >= len && line2.skipSpace(i7) == line2.text.length) {
+        for (let m5 of line2.markers)
           marks.push(m5);
-        marks.push(elt(Type.CodeMark, cx.lineStart + line.pos, cx.lineStart + i7));
+        marks.push(elt(Type.CodeMark, cx.lineStart + line2.pos, cx.lineStart + i7));
         cx.nextLine();
         break;
       } else {
         if (!first2)
           addCodeText(marks, cx.lineStart - 1, cx.lineStart);
-        for (let m5 of line.markers)
+        for (let m5 of line2.markers)
           marks.push(m5);
-        let textStart = cx.lineStart + line.basePos, textEnd = cx.lineStart + line.text.length;
+        let textStart = cx.lineStart + line2.basePos, textEnd = cx.lineStart + line2.text.length;
         if (textStart < textEnd)
           addCodeText(marks, textStart, textEnd);
       }
@@ -42413,77 +46217,77 @@ var DefaultBlockParsers = {
     cx.addNode(cx.buffer.writeElements(marks, -from).finish(Type.FencedCode, cx.prevLineEnd() - from), from);
     return true;
   },
-  Blockquote(cx, line) {
-    let size2 = isBlockquote(line);
+  Blockquote(cx, line2) {
+    let size2 = isBlockquote(line2);
     if (size2 < 0)
       return false;
-    cx.startContext(Type.Blockquote, line.pos);
-    cx.addNode(Type.QuoteMark, cx.lineStart + line.pos, cx.lineStart + line.pos + 1);
-    line.moveBase(line.pos + size2);
+    cx.startContext(Type.Blockquote, line2.pos);
+    cx.addNode(Type.QuoteMark, cx.lineStart + line2.pos, cx.lineStart + line2.pos + 1);
+    line2.moveBase(line2.pos + size2);
     return null;
   },
-  HorizontalRule(cx, line) {
-    if (isHorizontalRule(line, cx, false) < 0)
+  HorizontalRule(cx, line2) {
+    if (isHorizontalRule(line2, cx, false) < 0)
       return false;
-    let from = cx.lineStart + line.pos;
+    let from = cx.lineStart + line2.pos;
     cx.nextLine();
     cx.addNode(Type.HorizontalRule, from);
     return true;
   },
-  BulletList(cx, line) {
-    let size2 = isBulletList(line, cx, false);
+  BulletList(cx, line2) {
+    let size2 = isBulletList(line2, cx, false);
     if (size2 < 0)
       return false;
     if (cx.block.type != Type.BulletList)
-      cx.startContext(Type.BulletList, line.basePos, line.next);
-    let newBase = getListIndent(line, line.pos + 1);
-    cx.startContext(Type.ListItem, line.basePos, newBase - line.baseIndent);
-    cx.addNode(Type.ListMark, cx.lineStart + line.pos, cx.lineStart + line.pos + size2);
-    line.moveBaseColumn(newBase);
+      cx.startContext(Type.BulletList, line2.basePos, line2.next);
+    let newBase = getListIndent(line2, line2.pos + 1);
+    cx.startContext(Type.ListItem, line2.basePos, newBase - line2.baseIndent);
+    cx.addNode(Type.ListMark, cx.lineStart + line2.pos, cx.lineStart + line2.pos + size2);
+    line2.moveBaseColumn(newBase);
     return null;
   },
-  OrderedList(cx, line) {
-    let size2 = isOrderedList(line, cx, false);
+  OrderedList(cx, line2) {
+    let size2 = isOrderedList(line2, cx, false);
     if (size2 < 0)
       return false;
     if (cx.block.type != Type.OrderedList)
-      cx.startContext(Type.OrderedList, line.basePos, line.text.charCodeAt(line.pos + size2 - 1));
-    let newBase = getListIndent(line, line.pos + size2);
-    cx.startContext(Type.ListItem, line.basePos, newBase - line.baseIndent);
-    cx.addNode(Type.ListMark, cx.lineStart + line.pos, cx.lineStart + line.pos + size2);
-    line.moveBaseColumn(newBase);
+      cx.startContext(Type.OrderedList, line2.basePos, line2.text.charCodeAt(line2.pos + size2 - 1));
+    let newBase = getListIndent(line2, line2.pos + size2);
+    cx.startContext(Type.ListItem, line2.basePos, newBase - line2.baseIndent);
+    cx.addNode(Type.ListMark, cx.lineStart + line2.pos, cx.lineStart + line2.pos + size2);
+    line2.moveBaseColumn(newBase);
     return null;
   },
-  ATXHeading(cx, line) {
-    let size2 = isAtxHeading(line);
+  ATXHeading(cx, line2) {
+    let size2 = isAtxHeading(line2);
     if (size2 < 0)
       return false;
-    let off = line.pos, from = cx.lineStart + off;
-    let endOfSpace = skipSpaceBack(line.text, line.text.length, off), after = endOfSpace;
-    while (after > off && line.text.charCodeAt(after - 1) == line.next)
+    let off = line2.pos, from = cx.lineStart + off;
+    let endOfSpace = skipSpaceBack(line2.text, line2.text.length, off), after = endOfSpace;
+    while (after > off && line2.text.charCodeAt(after - 1) == line2.next)
       after--;
-    if (after == endOfSpace || after == off || !space(line.text.charCodeAt(after - 1)))
-      after = line.text.length;
-    let buf = cx.buffer.write(Type.HeaderMark, 0, size2).writeElements(cx.parser.parseInline(line.text.slice(off + size2 + 1, after), from + size2 + 1), -from);
-    if (after < line.text.length)
+    if (after == endOfSpace || after == off || !space(line2.text.charCodeAt(after - 1)))
+      after = line2.text.length;
+    let buf = cx.buffer.write(Type.HeaderMark, 0, size2).writeElements(cx.parser.parseInline(line2.text.slice(off + size2 + 1, after), from + size2 + 1), -from);
+    if (after < line2.text.length)
       buf.write(Type.HeaderMark, after - off, endOfSpace - off);
-    let node2 = buf.finish(Type.ATXHeading1 - 1 + size2, line.text.length - off);
+    let node2 = buf.finish(Type.ATXHeading1 - 1 + size2, line2.text.length - off);
     cx.nextLine();
     cx.addNode(node2, from);
     return true;
   },
-  HTMLBlock(cx, line) {
-    let type = isHTMLBlock(line, cx, false);
+  HTMLBlock(cx, line2) {
+    let type = isHTMLBlock(line2, cx, false);
     if (type < 0)
       return false;
-    let from = cx.lineStart + line.pos, end = HTMLBlockStyle[type][1];
+    let from = cx.lineStart + line2.pos, end = HTMLBlockStyle[type][1];
     let marks = [], trailing = end != EmptyLine;
-    while (!end.test(line.text) && cx.nextLine()) {
-      if (line.depth < cx.stack.length) {
+    while (!end.test(line2.text) && cx.nextLine()) {
+      if (line2.depth < cx.stack.length) {
         trailing = false;
         break;
       }
-      for (let m5 of line.markers)
+      for (let m5 of line2.markers)
         marks.push(m5);
     }
     if (trailing)
@@ -42504,10 +46308,10 @@ var LinkReferenceParser = class {
     this.start = leaf.start;
     this.advance(leaf.content);
   }
-  nextLine(cx, line, leaf) {
+  nextLine(cx, line2, leaf) {
     if (this.stage == -1)
       return false;
-    let content = leaf.content + "\n" + line.scrub();
+    let content = leaf.content + "\n" + line2.scrub();
     let finish = this.advance(content);
     if (finish > -1 && finish < content.length)
       return this.complete(cx, leaf, finish);
@@ -42579,12 +46383,12 @@ function lineEnd(text, pos) {
   return pos;
 }
 var SetextHeadingParser = class {
-  nextLine(cx, line, leaf) {
-    let underline = line.depth < cx.stack.length ? -1 : isSetextUnderline(line);
-    let next = line.next;
+  nextLine(cx, line2, leaf) {
+    let underline = line2.depth < cx.stack.length ? -1 : isSetextUnderline(line2);
+    let next = line2.next;
     if (underline < 0)
       return false;
-    let underlineMark = elt(Type.HeaderMark, cx.lineStart + line.pos, cx.lineStart + underline);
+    let underlineMark = elt(Type.HeaderMark, cx.lineStart + line2.pos, cx.lineStart + underline);
     cx.nextLine();
     cx.addLeafElement(leaf, elt(next == 61 ? Type.SetextHeading1 : Type.SetextHeading2, leaf.start, cx.prevLineEnd(), [
       ...cx.parser.parseInline(leaf.content, leaf.start),
@@ -42605,13 +46409,13 @@ var DefaultLeafBlocks = {
   }
 };
 var DefaultEndLeaf = [
-  (_5, line) => isAtxHeading(line) >= 0,
-  (_5, line) => isFencedCode(line) >= 0,
-  (_5, line) => isBlockquote(line) >= 0,
-  (p5, line) => isBulletList(line, p5, true) >= 0,
-  (p5, line) => isOrderedList(line, p5, true) >= 0,
-  (p5, line) => isHorizontalRule(line, p5, true) >= 0,
-  (p5, line) => isHTMLBlock(line, p5, true) >= 0
+  (_5, line2) => isAtxHeading(line2) >= 0,
+  (_5, line2) => isFencedCode(line2) >= 0,
+  (_5, line2) => isBlockquote(line2) >= 0,
+  (p5, line2) => isBulletList(line2, p5, true) >= 0,
+  (p5, line2) => isOrderedList(line2, p5, true) >= 0,
+  (p5, line2) => isHorizontalRule(line2, p5, true) >= 0,
+  (p5, line2) => isHTMLBlock(line2, p5, true) >= 0
 ];
 var scanLineResult = { text: "", end: 0 };
 var BlockContext = class {
@@ -42638,62 +46442,60 @@ var BlockContext = class {
   advance() {
     if (this.stoppedAt != null && this.absoluteLineStart > this.stoppedAt)
       return this.finish();
-    let { line } = this;
+    let { line: line2 } = this;
     for (; ; ) {
       for (let markI = 0; ; ) {
-        let next = line.depth < this.stack.length ? this.stack[this.stack.length - 1] : null;
-        while (markI < line.markers.length && (!next || line.markers[markI].from < next.end)) {
-          let mark = line.markers[markI++];
+        let next = line2.depth < this.stack.length ? this.stack[this.stack.length - 1] : null;
+        while (markI < line2.markers.length && (!next || line2.markers[markI].from < next.end)) {
+          let mark = line2.markers[markI++];
           this.addNode(mark.type, mark.from, mark.to);
         }
         if (!next)
           break;
         this.finishContext();
       }
-      if (line.pos < line.text.length)
+      if (line2.pos < line2.text.length)
         break;
       if (!this.nextLine())
         return this.finish();
     }
-    if (this.fragments && this.reuseFragment(line.basePos))
+    if (this.fragments && this.reuseFragment(line2.basePos))
       return null;
-    start:
-      for (; ; ) {
-        for (let type of this.parser.blockParsers)
-          if (type) {
-            let result = type(this, line);
-            if (result != false) {
-              if (result == true)
-                return null;
-              line.forward();
-              continue start;
-            }
+    start: for (; ; ) {
+      for (let type of this.parser.blockParsers)
+        if (type) {
+          let result = type(this, line2);
+          if (result != false) {
+            if (result == true)
+              return null;
+            line2.forward();
+            continue start;
           }
-        break;
-      }
-    let leaf = new LeafBlock(this.lineStart + line.pos, line.text.slice(line.pos));
+        }
+      break;
+    }
+    let leaf = new LeafBlock(this.lineStart + line2.pos, line2.text.slice(line2.pos));
     for (let parse3 of this.parser.leafBlockParsers)
       if (parse3) {
         let parser4 = parse3(this, leaf);
         if (parser4)
           leaf.parsers.push(parser4);
       }
-    lines:
-      while (this.nextLine()) {
-        if (line.pos == line.text.length)
-          break;
-        if (line.indent < line.baseIndent + 4) {
-          for (let stop of this.parser.endLeafBlock)
-            if (stop(this, line, leaf))
-              break lines;
-        }
-        for (let parser4 of leaf.parsers)
-          if (parser4.nextLine(this, line, leaf))
-            return null;
-        leaf.content += "\n" + line.scrub();
-        for (let m5 of line.markers)
-          leaf.marks.push(m5);
+    lines: while (this.nextLine()) {
+      if (line2.pos == line2.text.length)
+        break;
+      if (line2.indent < line2.baseIndent + 4) {
+        for (let stop of this.parser.endLeafBlock)
+          if (stop(this, line2, leaf))
+            break lines;
       }
+      for (let parser4 of leaf.parsers)
+        if (parser4.nextLine(this, line2, leaf))
+          return null;
+      leaf.content += "\n" + line2.scrub();
+      for (let m5 of line2.markers)
+        leaf.marks.push(m5);
+    }
     this.finishLeaf(leaf);
     return null;
   }
@@ -42781,16 +46583,16 @@ var BlockContext = class {
   }
   /// @internal
   readLine() {
-    let { line } = this, { text, end } = this.scanLine(this.absoluteLineStart);
+    let { line: line2 } = this, { text, end } = this.scanLine(this.absoluteLineStart);
     this.absoluteLineEnd = end;
-    line.reset(text);
-    for (; line.depth < this.stack.length; line.depth++) {
-      let cx = this.stack[line.depth], handler = this.parser.skipContextMarkup[cx.type];
+    line2.reset(text);
+    for (; line2.depth < this.stack.length; line2.depth++) {
+      let cx = this.stack[line2.depth], handler = this.parser.skipContextMarkup[cx.type];
       if (!handler)
         throw new Error("Unhandled block context " + Type[cx.type]);
-      if (!handler(cx, this, line))
+      if (!handler(cx, this, line2))
         break;
-      line.forward();
+      line2.forward();
     }
   }
   lineChunkAt(pos) {
@@ -42934,7 +46736,7 @@ var MarkdownParser = class _MarkdownParser extends import_common.Parser {
         if (nodeTypes2.some((t7) => t7.name == name2))
           continue;
         if (composite)
-          skipContextMarkup[nodeTypes2.length] = (bl, cx, line) => composite(cx, line, bl.value);
+          skipContextMarkup[nodeTypes2.length] = (bl, cx, line2) => composite(cx, line2, bl.value);
         let id = nodeTypes2.length;
         let group = composite ? ["Block", "BlockContext"] : !block ? void 0 : id >= Type.ATXHeading1 && id <= Type.SetextHeading2 ? ["Block", "LeafBlock", "Heading"] : ["Block", "LeafBlock"];
         nodeTypes2.push(import_common.NodeType.define({
@@ -43010,19 +46812,18 @@ var MarkdownParser = class _MarkdownParser extends import_common.Parser {
   /// the inline content.
   parseInline(text, offset) {
     let cx = new InlineContext(this, text, offset);
-    outer:
-      for (let pos = offset; pos < cx.end; ) {
-        let next = cx.char(pos);
-        for (let token of this.inlineParsers)
-          if (token) {
-            let result = token(cx, next, pos);
-            if (result >= 0) {
-              pos = result;
-              continue outer;
-            }
+    outer: for (let pos = offset; pos < cx.end; ) {
+      let next = cx.char(pos);
+      for (let token of this.inlineParsers)
+        if (token) {
+          let result = token(cx, next, pos);
+          if (result >= 0) {
+            pos = result;
+            continue outer;
           }
-        pos++;
-      }
+        }
+      pos++;
+    }
     return cx.resolveMarkers(0);
   }
 };
@@ -43078,8 +46879,8 @@ var Buffer2 = class {
     return this;
   }
   writeElements(elts, offset = 0) {
-    for (let e7 of elts)
-      e7.writeTo(this, offset);
+    for (let e8 of elts)
+      e8.writeTo(this, offset);
     return this;
   }
   finish(type, length2) {
@@ -43517,9 +47318,9 @@ function injectMarks(elements, marks) {
     while (eI < elts.length && elts[eI].to < mark.to)
       eI++;
     if (eI < elts.length && elts[eI].from < mark.from) {
-      let e7 = elts[eI];
-      if (e7 instanceof Element2)
-        elts[eI] = new Element2(e7.type, e7.from, e7.to, injectMarks(e7.children, [mark]));
+      let e8 = elts[eI];
+      if (e8 instanceof Element2)
+        elts[eI] = new Element2(e8.type, e8.from, e8.to, injectMarks(e8.children, [mark]));
     } else {
       elts.splice(eI++, 0, mark);
     }
@@ -43669,13 +47470,13 @@ var Strikethrough = {
     after: "Emphasis"
   }]
 };
-function parseRow(cx, line, startI = 0, elts, offset = 0) {
+function parseRow(cx, line2, startI = 0, elts, offset = 0) {
   let count = 0, first2 = true, cellStart = -1, cellEnd = -1, esc = false;
   let parseCell = () => {
-    elts.push(cx.elt("TableCell", offset + cellStart, offset + cellEnd, cx.parser.parseInline(line.slice(cellStart, cellEnd), offset + cellStart)));
+    elts.push(cx.elt("TableCell", offset + cellStart, offset + cellEnd, cx.parser.parseInline(line2.slice(cellStart, cellEnd), offset + cellStart)));
   };
-  for (let i7 = startI; i7 < line.length; i7++) {
-    let next = line.charCodeAt(i7);
+  for (let i7 = startI; i7 < line2.length; i7++) {
+    let next = line2.charCodeAt(i7);
     if (next == 124 && !esc) {
       if (!first2 || cellStart > -1)
         count++;
@@ -43715,22 +47516,22 @@ var TableParser = class {
   constructor() {
     this.rows = null;
   }
-  nextLine(cx, line, leaf) {
+  nextLine(cx, line2, leaf) {
     if (this.rows == null) {
       this.rows = false;
       let lineText;
-      if ((line.next == 45 || line.next == 58 || line.next == 124) && delimiterLine.test(lineText = line.text.slice(line.pos))) {
+      if ((line2.next == 45 || line2.next == 58 || line2.next == 124) && delimiterLine.test(lineText = line2.text.slice(line2.pos))) {
         let firstRow = [], firstCount = parseRow(cx, leaf.content, 0, firstRow, leaf.start);
-        if (firstCount == parseRow(cx, lineText, line.pos))
+        if (firstCount == parseRow(cx, lineText, line2.pos))
           this.rows = [
             cx.elt("TableHeader", leaf.start, leaf.start + leaf.content.length, firstRow),
-            cx.elt("TableDelimiter", cx.lineStart + line.pos, cx.lineStart + line.text.length)
+            cx.elt("TableDelimiter", cx.lineStart + line2.pos, cx.lineStart + line2.text.length)
           ];
       }
     } else if (this.rows) {
       let content = [];
-      parseRow(cx, line.text, line.pos, content, cx.lineStart);
-      this.rows.push(cx.elt("TableRow", cx.lineStart + line.pos, cx.lineStart + line.text.length, content));
+      parseRow(cx, line2.text, line2.pos, content, cx.lineStart);
+      this.rows.push(cx.elt("TableRow", cx.lineStart + line2.pos, cx.lineStart + line2.text.length, content));
     }
     return false;
   }
@@ -43754,11 +47555,11 @@ var Table = {
     leaf(_5, leaf) {
       return hasPipe(leaf.content, 0) ? new TableParser() : null;
     },
-    endLeaf(cx, line, leaf) {
-      if (leaf.parsers.some((p5) => p5 instanceof TableParser) || !hasPipe(line.text, line.basePos))
+    endLeaf(cx, line2, leaf) {
+      if (leaf.parsers.some((p5) => p5 instanceof TableParser) || !hasPipe(line2.text, line2.basePos))
         return false;
       let next = cx.scanLine(cx.absoluteLineEnd + 1).text;
-      return delimiterLine.test(next) && parseRow(cx, line.text, line.basePos) == parseRow(cx, next, line.basePos);
+      return delimiterLine.test(next) && parseRow(cx, line2.text, line2.basePos) == parseRow(cx, next, line2.basePos);
     },
     before: "SetextHeading"
   }]
@@ -44669,8 +48470,7 @@ var feelLanguage = import_language4.LRLanguage.define({
       ParenthesizedExpression: import_language4.foldInside,
       FunctionDefinition(node2) {
         const last4 = node2.getChild(")");
-        if (!last4)
-          return null;
+        if (!last4) return null;
         return {
           from: last4.to,
           to: node2.to
@@ -45249,8 +49049,7 @@ var pathExpression = (context) => {
     }
     options2 = childVar.entries;
   }
-  if (!options2)
-    return;
+  if (!options2) return;
   options2 = options2.map((v5) => ({
     label: v5.name,
     type: "variable",
@@ -45850,26 +49649,26 @@ var isFocusable = function isFocusable2(node2, options2) {
 };
 
 // node_modules/focus-trap/dist/focus-trap.esm.js
-function ownKeys(e7, r7) {
-  var t7 = Object.keys(e7);
+function ownKeys(e8, r7) {
+  var t7 = Object.keys(e8);
   if (Object.getOwnPropertySymbols) {
-    var o5 = Object.getOwnPropertySymbols(e7);
+    var o5 = Object.getOwnPropertySymbols(e8);
     r7 && (o5 = o5.filter(function(r8) {
-      return Object.getOwnPropertyDescriptor(e7, r8).enumerable;
+      return Object.getOwnPropertyDescriptor(e8, r8).enumerable;
     })), t7.push.apply(t7, o5);
   }
   return t7;
 }
-function _objectSpread2(e7) {
+function _objectSpread2(e8) {
   for (var r7 = 1; r7 < arguments.length; r7++) {
     var t7 = null != arguments[r7] ? arguments[r7] : {};
     r7 % 2 ? ownKeys(Object(t7), true).forEach(function(r8) {
-      _defineProperty(e7, r8, t7[r8]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e7, Object.getOwnPropertyDescriptors(t7)) : ownKeys(Object(t7)).forEach(function(r8) {
-      Object.defineProperty(e7, r8, Object.getOwnPropertyDescriptor(t7, r8));
+      _defineProperty(e8, r8, t7[r8]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e8, Object.getOwnPropertyDescriptors(t7)) : ownKeys(Object(t7)).forEach(function(r8) {
+      Object.defineProperty(e8, r8, Object.getOwnPropertyDescriptor(t7, r8));
     });
   }
-  return e7;
+  return e8;
 }
 function _defineProperty(obj, key, value) {
   key = _toPropertyKey(key);
@@ -45886,13 +49685,11 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 function _toPrimitive(input, hint) {
-  if (typeof input !== "object" || input === null)
-    return input;
+  if (typeof input !== "object" || input === null) return input;
   var prim = input[Symbol.toPrimitive];
   if (prim !== void 0) {
     var res = prim.call(input, hint || "default");
-    if (typeof res !== "object")
-      return res;
+    if (typeof res !== "object") return res;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return (hint === "string" ? String : Number)(input);
@@ -45930,17 +49727,17 @@ var activeFocusTraps = {
 var isSelectableInput = function isSelectableInput2(node2) {
   return node2.tagName && node2.tagName.toLowerCase() === "input" && typeof node2.select === "function";
 };
-var isEscapeEvent = function isEscapeEvent2(e7) {
-  return (e7 === null || e7 === void 0 ? void 0 : e7.key) === "Escape" || (e7 === null || e7 === void 0 ? void 0 : e7.key) === "Esc" || (e7 === null || e7 === void 0 ? void 0 : e7.keyCode) === 27;
+var isEscapeEvent = function isEscapeEvent2(e8) {
+  return (e8 === null || e8 === void 0 ? void 0 : e8.key) === "Escape" || (e8 === null || e8 === void 0 ? void 0 : e8.key) === "Esc" || (e8 === null || e8 === void 0 ? void 0 : e8.keyCode) === 27;
 };
-var isTabEvent = function isTabEvent2(e7) {
-  return (e7 === null || e7 === void 0 ? void 0 : e7.key) === "Tab" || (e7 === null || e7 === void 0 ? void 0 : e7.keyCode) === 9;
+var isTabEvent = function isTabEvent2(e8) {
+  return (e8 === null || e8 === void 0 ? void 0 : e8.key) === "Tab" || (e8 === null || e8 === void 0 ? void 0 : e8.keyCode) === 9;
 };
-var isKeyForward = function isKeyForward2(e7) {
-  return isTabEvent(e7) && !e7.shiftKey;
+var isKeyForward = function isKeyForward2(e8) {
+  return isTabEvent(e8) && !e8.shiftKey;
 };
-var isKeyBackward = function isKeyBackward2(e7) {
-  return isTabEvent(e7) && e7.shiftKey;
+var isKeyBackward = function isKeyBackward2(e8) {
+  return isTabEvent(e8) && e8.shiftKey;
 };
 var delay = function delay2(fn2) {
   return setTimeout(fn2, 0);
@@ -46221,12 +50018,12 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     }
     return destinationNode;
   };
-  var checkPointerDown = function checkPointerDown2(e7) {
-    var target = getActualTarget(e7);
-    if (findContainerIndex(target, e7) >= 0) {
+  var checkPointerDown = function checkPointerDown2(e8) {
+    var target = getActualTarget(e8);
+    if (findContainerIndex(target, e8) >= 0) {
       return;
     }
-    if (valueOrHandler(config.clickOutsideDeactivates, e7)) {
+    if (valueOrHandler(config.clickOutsideDeactivates, e8)) {
       trap.deactivate({
         // NOTE: by setting `returnFocus: false`, deactivate() will do nothing,
         //  which will result in the outside click setting focus to the node
@@ -46238,10 +50035,10 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       });
       return;
     }
-    if (valueOrHandler(config.allowOutsideClick, e7)) {
+    if (valueOrHandler(config.allowOutsideClick, e8)) {
       return;
     }
-    e7.preventDefault();
+    e8.preventDefault();
   };
   var checkFocusIn = function checkFocusIn2(event3) {
     var target = getActualTarget(event3);
@@ -46328,19 +50125,19 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       checkKeyNav(event3, config.isKeyBackward(event3));
     }
   };
-  var checkClick = function checkClick2(e7) {
-    var target = getActualTarget(e7);
-    if (findContainerIndex(target, e7) >= 0) {
+  var checkClick = function checkClick2(e8) {
+    var target = getActualTarget(e8);
+    if (findContainerIndex(target, e8) >= 0) {
       return;
     }
-    if (valueOrHandler(config.clickOutsideDeactivates, e7)) {
+    if (valueOrHandler(config.clickOutsideDeactivates, e8)) {
       return;
     }
-    if (valueOrHandler(config.allowOutsideClick, e7)) {
+    if (valueOrHandler(config.allowOutsideClick, e8)) {
       return;
     }
-    e7.preventDefault();
-    e7.stopImmediatePropagation();
+    e8.preventDefault();
+    e8.stopImmediatePropagation();
   };
   var addListeners = function addListeners2() {
     if (!state.active) {
@@ -46787,8 +50584,8 @@ function Tooltip(props) {
     setShow(false);
     setFocusedViaKeyboard(false);
   };
-  const hideTooltipViaEscape = (e7) => {
-    e7.code === "Escape" && hideTooltip();
+  const hideTooltipViaEscape = (e8) => {
+    e8.code === "Escape" && hideTooltip();
   };
   const isTooltipHovered = ({
     x: x6,
@@ -46805,19 +50602,19 @@ function Tooltip(props) {
     if (!current) {
       return;
     }
-    const hideHoveredTooltip = (e7) => {
+    const hideHoveredTooltip = (e8) => {
       const isFocused = document.activeElement === wrapperRef.current || document.activeElement.closest(".bio-properties-panel-tooltip");
       if (visible && !isTooltipHovered({
-        x: e7.x,
-        y: e7.y
+        x: e8.x,
+        y: e8.y
       }) && !(isFocused && focusedViaKeyboard)) {
         hideTooltip();
       }
     };
-    const hideFocusedTooltip = (e7) => {
+    const hideFocusedTooltip = (e8) => {
       const {
         relatedTarget
-      } = e7;
+      } = e8;
       const isTooltipChild = (el) => !!el.closest(".bio-properties-panel-tooltip");
       if (visible && !isHovered(wrapperRef.current) && relatedTarget && !isTooltipChild(relatedTarget)) {
         hideTooltip();
@@ -46840,7 +50637,7 @@ function Tooltip(props) {
       "aria-labelledby": forId,
       style: position || getTooltipPosition(wrapperRef.current),
       ref: tooltipRef,
-      onClick: (e7) => e7.stopPropagation(),
+      onClick: (e8) => e8.stopPropagation(),
       children: [u5("div", {
         class: "bio-properties-panel-tooltip-content",
         children: value
@@ -47319,8 +51116,8 @@ var CodeEditor = N3((props, ref) => {
   });
   p4(() => {
     let editor2;
-    const onKeyDown = (e7) => {
-      if (e7.key !== "Backspace" || !editor2) {
+    const onKeyDown = (e8) => {
+      if (e8.key !== "Backspace" || !editor2) {
         return;
       }
       const selection2 = editor2.getSelection();
@@ -47408,10 +51205,10 @@ function FeelIcon2(props) {
   } = props;
   const feelRequiredLabel = "FEEL expression is mandatory";
   const feelOptionalLabel = `Click to ${active ? "remove" : "set a"} dynamic value with FEEL expression`;
-  const handleClick = (e7) => {
-    onClick(e7);
-    if (!e7.pointerType) {
-      e7.stopPropagation();
+  const handleClick = (e8) => {
+    onClick(e8);
+    if (!e8.pointerType) {
+      e8.stopPropagation();
     }
   };
   return u5("button", {
@@ -47900,9 +51697,9 @@ function ToggleSwitch(props) {
   const handleInputCallback = async () => {
     onInput(!value);
   };
-  const handleInput = (e7) => {
+  const handleInput = (e8) => {
     handleInputCallback();
-    setLocalValue(e7.target.value);
+    setLocalValue(e8.target.value);
   };
   p4(() => {
     if (value === localValue) {
@@ -48013,9 +51810,9 @@ function NumberField(props) {
       }
     });
   }, [onInput, debounce2]);
-  const handleInput = (e7) => {
-    handleInputCallback(e7.target);
-    setLocalValue(e7.target.value);
+  const handleInput = (e8) => {
+    handleInputCallback(e8.target);
+    setLocalValue(e8.target.value);
   };
   p4(() => {
     if (value === localValue) {
@@ -48284,7 +52081,7 @@ var OptionalFeelInput = N3((props, ref) => {
     autoComplete: "off",
     disabled,
     class: "bio-properties-panel-input",
-    onInput: (e7) => onInput(e7.target.value),
+    onInput: (e8) => onInput(e8.target.value),
     onFocus,
     onBlur,
     value: value || ""
@@ -48363,7 +52160,7 @@ var OptionalFeelTextArea = N3((props, ref) => {
     autoComplete: "off",
     disabled,
     class: "bio-properties-panel-input",
-    onInput: (e7) => onInput(e7.target.value),
+    onInput: (e8) => onInput(e8.target.value),
     onFocus,
     onBlur,
     value: value || "",
@@ -48905,9 +52702,9 @@ function ListGroup(props) {
     ...q4(LayoutContext),
     onShow
   };
-  const handleAddClick = (e7) => {
+  const handleAddClick = (e8) => {
     setAddTriggered(true);
-    add3(e7);
+    add3(e8);
   };
   const allErrors = useErrors();
   const hasError = items.some((item) => {
@@ -48965,7 +52762,7 @@ function ListGroup(props) {
       class: (0, import_classnames.default)("bio-properties-panel-list", open3 && hasItems ? "open" : ""),
       children: u5(LayoutContext.Provider, {
         value: propertiesPanelContext,
-        children: ordering.map((o5, index4) => {
+        children: ordering.map((o5, index5) => {
           const item = getItem(items, o5);
           if (!item) {
             return;
@@ -48978,7 +52775,7 @@ function ListGroup(props) {
             ...item,
             autoOpen,
             element,
-            index: index4,
+            index: index5,
             key: id2
           });
         })
@@ -49012,9 +52809,9 @@ function Checkbox(props) {
   }) => {
     onChange(target.checked);
   };
-  const handleChange = (e7) => {
-    handleChangeCallback(e7);
-    setLocalValue(e7.target.value);
+  const handleChange = (e8) => {
+    handleChangeCallback(e8);
+    setLocalValue(e8.target.value);
   };
   p4(() => {
     if (value === localValue) {
@@ -49203,7 +53000,7 @@ function ItemsList(props) {
   }, [newItem, autoFocusEntry, id]);
   return u5("ol", {
     class: (0, import_classnames.default)("bio-properties-panel-list-entry-items", open3 ? "open" : ""),
-    children: items.map((item, index4) => {
+    children: items.map((item, index5) => {
       const key = getKey(item);
       return u5("li", {
         class: "bio-properties-panel-list-entry-item",
@@ -49211,7 +53008,7 @@ function ItemsList(props) {
           ...restProps,
           element,
           id,
-          index: index4,
+          index: index5,
           item,
           open: item === newItem
         }), onRemove && u5("button", {
@@ -49269,9 +53066,9 @@ function Select(props) {
   }) => {
     onChange(target.value);
   };
-  const handleChange = (e7) => {
-    handleChangeCallback(e7);
-    setLocalValue(e7.target.value);
+  const handleChange = (e8) => {
+    handleChangeCallback(e8);
+    setLocalValue(e8.target.value);
   };
   p4(() => {
     if (value === localValue) {
@@ -49400,9 +53197,9 @@ function Simple(props) {
   const handleInputCallback = F4(() => {
     return debounce2((target) => setValue(target.value.length ? target.value : void 0));
   }, [setValue, debounce2]);
-  const handleInput = (e7) => {
-    handleInputCallback(e7.target);
-    setLocalValue(e7.target.value);
+  const handleInput = (e8) => {
+    handleInputCallback(e8.target);
+    setLocalValue(e8.target.value);
   };
   p4(() => {
     if (value === localValue) {
@@ -49455,10 +53252,10 @@ function TextArea(props) {
   const handleInputCallback = F4(() => {
     return debounce2((target) => onInput(target.value.length ? target.value : void 0));
   }, [onInput, debounce2]);
-  const handleInput = (e7) => {
-    handleInputCallback(e7.target);
-    autoResize && resizeToContents(e7.target);
-    setLocalValue(e7.target.value);
+  const handleInput = (e8) => {
+    handleInputCallback(e8.target);
+    autoResize && resizeToContents(e8.target);
+    setLocalValue(e8.target.value);
   };
   y4(() => {
     autoResize && resizeToContents(ref.current);
@@ -49582,9 +53379,9 @@ function Textfield(props) {
   const handleInputCallback = F4(() => {
     return debounce2((target) => onInput(target.value.length ? target.value : void 0));
   }, [onInput, debounce2]);
-  const handleInput = (e7) => {
-    handleInputCallback(e7.target);
-    setLocalValue(e7.target.value);
+  const handleInput = (e8) => {
+    handleInputCallback(e8.target);
+    setLocalValue(e8.target.value);
   };
   p4(() => {
     if (value === localValue) {
@@ -49730,7 +53527,7 @@ var FeelPopupModule = class {
   }
 };
 FeelPopupModule.$inject = ["eventBus"];
-var index = {
+var index2 = {
   feelPopup: ["type", FeelPopupModule]
 };
 
@@ -49763,18 +53560,13 @@ function useService(type, strict) {
   return getService(type, strict);
 }
 function _extends$1o() {
-  _extends$1o = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1o = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1o.apply(this, arguments);
+    return n4;
+  }, _extends$1o.apply(null, arguments);
 }
 var AssociationIcon = ({
   styles = {},
@@ -49792,18 +53584,13 @@ var AssociationIcon = ({
   d: "M1.5 30.5l29-29"
 }));
 function _extends$1n() {
-  _extends$1n = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1n = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1n.apply(this, arguments);
+    return n4;
+  }, _extends$1n.apply(null, arguments);
 }
 var BusinessRuleTaskIcon = ({
   styles = {},
@@ -49818,18 +53605,13 @@ var BusinessRuleTaskIcon = ({
   d: "M6.079 8.209v3.587H21.44V8.209z"
 }));
 function _extends$1m() {
-  _extends$1m = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1m = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1m.apply(this, arguments);
+    return n4;
+  }, _extends$1m.apply(null, arguments);
 }
 var CallActivityIcon = ({
   styles = {},
@@ -49842,18 +53624,13 @@ var CallActivityIcon = ({
   d: "M24.978 3c3.761 0 6.89 2.979 7.018 6.695l.004.238V22.4c0 3.747-3.05 6.804-6.783 6.93l-.24.003H7.023c-3.761 0-6.89-2.978-7.018-6.695L0 22.4V9.933C0 6.187 3.05 3.13 6.783 3.004L7.023 3h17.955zm0 3.667H7.022c-1.842 0-3.255 1.344-3.35 3.079l-.005.187V22.4c0 1.761 1.35 3.167 3.16 3.262l.195.005L10 25.666V15h12v10.666h2.978c1.842 0 3.255-1.344 3.35-3.079l.005-.187V9.933c0-1.761-1.35-3.166-3.16-3.261l-.195-.005zm-3.732 9.087H10.754v9.912h10.491v-9.912zm-4.475 1.817v2.658h2.658v1.542H16.77v2.658H15.23V21.77H12.57V20.23h2.658V17.57h1.542z"
 }));
 function _extends$1l() {
-  _extends$1l = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1l = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1l.apply(this, arguments);
+    return n4;
+  }, _extends$1l.apply(null, arguments);
 }
 var CollaborationIcon = ({
   styles = {},
@@ -49871,18 +53648,13 @@ var CollaborationIcon = ({
   d: "M24 8l4 7h-8l4-7zm0 2l-2.28 4h4.56L24 10zM23.5 21h1v3h-1zM23.5 15h1v3h-1zM8 24l-4-7h8l-4 7zm0-2l2.28-4H5.72L8 22zM7.5 8h1v3h-1zM7.5 14h1v3h-1z"
 })));
 function _extends$1k() {
-  _extends$1k = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1k = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1k.apply(this, arguments);
+    return n4;
+  }, _extends$1k.apply(null, arguments);
 }
 var ConditionalFlowIcon = ({
   styles = {},
@@ -49895,18 +53667,13 @@ var ConditionalFlowIcon = ({
   d: "M32 .041S20.42 5.95 14.537 8.713c1.26 1.15 2.432 2.392 3.648 3.588-5.703 5.78-3.15 3.303-8.087 8.316l-8.472 1.377L0 32l10.006-1.626.098-.598 1.279-7.873c4.975-5.052 2.403-2.555 8.118-8.346 1.218 1.214 2.43 2.435 3.648 3.648C26.29 11.018 32 .041 32 .041zM9.603 22.397L8.54 28.91 2.03 29.97l1.061-6.515 6.512-1.058z"
 }));
 function _extends$1j() {
-  _extends$1j = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1j = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1j.apply(this, arguments);
+    return n4;
+  }, _extends$1j.apply(null, arguments);
 }
 var ConnectionIcon = ({
   styles = {},
@@ -49919,18 +53686,13 @@ var ConnectionIcon = ({
   d: "M32 .06S20.33 6.014 14.403 8.798c1.27 1.16 2.451 2.41 3.676 3.616L0 30.734 1.325 32l18.08-18.32c1.227 1.223 2.448 2.453 3.676 3.676C26.247 11.12 32 .06 32 .06z"
 }));
 function _extends$1i() {
-  _extends$1i = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1i = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1i.apply(this, arguments);
+    return n4;
+  }, _extends$1i.apply(null, arguments);
 }
 var DataInputOutputAssociationIcon = ({
   styles = {},
@@ -49949,18 +53711,13 @@ var DataInputOutputAssociationIcon = ({
   d: "M31.803.197L26.5 16.107l-1.52-1.52 3.783-11.35-11.35 3.783-1.52-1.52z"
 }));
 function _extends$1h() {
-  _extends$1h = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1h = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1h.apply(this, arguments);
+    return n4;
+  }, _extends$1h.apply(null, arguments);
 }
 var DataInputIcon = ({
   styles = {},
@@ -49973,18 +53730,13 @@ var DataInputIcon = ({
   d: "M20.833 0H3.488v32H28V7.36L20.833 0zm-2.105 1.818v7.507h7.454v20.857H5.306V1.818h13.422zm1.818.493l5.06 5.196h-5.06V2.311zm-9.182.86v3.744H7.081v3.222h4.283v3.743l5.7-5.354-5.7-5.354zm.808 1.868l3.711 3.487-3.71 3.487V9.329H7.888V7.723h4.283V5.039z"
 }));
 function _extends$1g() {
-  _extends$1g = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1g = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1g.apply(this, arguments);
+    return n4;
+  }, _extends$1g.apply(null, arguments);
 }
 var DataObjectIcon = ({
   styles = {},
@@ -49997,18 +53749,13 @@ var DataObjectIcon = ({
   d: "M21.345 0H4v32h24.512V7.36L21.345 0zM19.24 1.818v7.507h7.454v20.857H5.818V1.818H19.24zm1.818.493l5.06 5.196h-5.06V2.311z"
 }));
 function _extends$1f() {
-  _extends$1f = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1f = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1f.apply(this, arguments);
+    return n4;
+  }, _extends$1f.apply(null, arguments);
 }
 var DataOutputIcon = ({
   styles = {},
@@ -50021,18 +53768,13 @@ var DataOutputIcon = ({
   d: "M20.833 0H3.488v32H28V7.36L20.833 0zm-2.105 1.818v7.507h7.454v20.857H5.306V1.818h13.422zm1.818.493l5.06 5.196h-5.06V2.311zm-9.182.86v3.744H7.081v3.222h4.283v3.743l5.7-5.354-5.7-5.354z"
 }));
 function _extends$1e() {
-  _extends$1e = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1e = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1e.apply(this, arguments);
+    return n4;
+  }, _extends$1e.apply(null, arguments);
 }
 var DataStoreIcon = ({
   styles = {},
@@ -50045,18 +53787,13 @@ var DataStoreIcon = ({
   d: "M16.008 1c-3.712 0-7.417.306-10.319.939-1.45.316-2.7.71-3.68 1.226C1.065 3.662.297 4.304.061 5.23a.823.823 0 00-.035.15L0 5.502l.017.084c-.012 7.41 0 14.46 0 22.08l.017.082c.203.985.995 1.656 1.975 2.172.98.517 2.23.91 3.68 1.226 2.902.633 6.607.94 10.319.94 3.711 0 7.416-.307 10.318-.94 1.451-.316 2.701-.71 3.68-1.226.98-.516 1.772-1.187 1.975-2.172l.017-.082V5.541a.825.825 0 000-.106v-.016l-.002-.013a.823.823 0 00-.046-.197c-.244-.916-1.007-1.55-1.943-2.044-.98-.516-2.23-.91-3.68-1.226C23.423 1.306 19.718 1 16.006 1zm0 1.646c3.62 0 7.245.308 9.968.901 1.36.297 2.497.67 3.263 1.074.612.323.932.643 1.063.882-.131.24-.451.56-1.063.882-.766.404-1.902.777-3.263 1.074-2.723.594-6.349.901-9.968.901-3.62 0-7.245-.307-9.968-.901-1.361-.297-2.497-.67-3.264-1.074-.611-.322-.931-.642-1.062-.882.13-.24.451-.56 1.062-.882.767-.403 1.903-.777 3.264-1.074 2.723-.593 6.348-.9 9.968-.9zM1.664 7.647c.112.067.227.132.345.194.98.517 2.23.91 3.68 1.226 2.902.633 6.607.94 10.319.94 3.711 0 7.416-.307 10.318-.94 1.451-.316 2.701-.71 3.68-1.226.119-.062.234-.127.346-.194v1.93c-.08.245-.398.619-1.113.995-.766.404-1.902.777-3.263 1.074-2.723.594-6.349.901-9.968.901-3.62 0-7.245-.307-9.968-.9-1.361-.298-2.497-.671-3.264-1.075-.714-.376-1.032-.75-1.112-.995v-1.93zm0 4.187c.112.067.227.132.345.195.98.516 2.23.91 3.68 1.226 2.902.632 6.607.938 10.319.938 3.711 0 7.416-.306 10.318-.938 1.451-.317 2.701-.71 3.68-1.226.119-.063.234-.128.346-.195v1.93c-.08.245-.398.619-1.113.995-.766.404-1.902.777-3.263 1.074-2.723.594-6.349.901-9.968.901-3.62 0-7.245-.307-9.968-.9-1.361-.298-2.497-.67-3.264-1.075-.714-.376-1.032-.75-1.112-.995v-1.93zm0 4.188c.112.067.227.131.345.194.98.516 2.23.91 3.68 1.226 2.902.633 6.607.939 10.319.939 3.711 0 7.416-.306 10.318-.94 1.451-.316 2.701-.709 3.68-1.225.119-.063.234-.127.346-.194V27.47c-.08.245-.398.618-1.113.995-.766.404-1.902.777-3.263 1.074-2.723.594-6.349.9-9.968.9-3.62 0-7.245-.306-9.968-.9-1.361-.297-2.497-.67-3.264-1.074-.714-.377-1.032-.75-1.112-.995V16.022z"
 }));
 function _extends$1d() {
-  _extends$1d = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1d = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1d.apply(this, arguments);
+    return n4;
+  }, _extends$1d.apply(null, arguments);
 }
 var DefaultFlowIcon = ({
   styles = {},
@@ -50069,18 +53806,13 @@ var DefaultFlowIcon = ({
   d: "M32 .06S20.33 6.014 14.403 8.798c1.27 1.16 2.451 2.41 3.676 3.616L6.84 23.804H.046v1.755h5.063L0 30.735 1.325 32l6.357-6.441h7.145v-1.756H9.414l9.99-10.123c1.228 1.223 2.45 2.453 3.677 3.676C26.247 11.12 32 .06 32 .06z"
 }));
 function _extends$1c() {
-  _extends$1c = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1c = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1c.apply(this, arguments);
+    return n4;
+  }, _extends$1c.apply(null, arguments);
 }
 var EndEventCancelIcon = ({
   styles = {},
@@ -50093,18 +53825,13 @@ var EndEventCancelIcon = ({
   d: "M15.676.051C7.943.058.834 6.501.104 14.21c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 5.009 23.394.364 16.978.083A18.532 18.532 0 0015.676.05zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm-3.955 3.918L8.94 12.072l3.985 3.985-3.913 3.913 3.048 3.047 3.913-3.913 3.987 3.987 3.096-3.096-3.987-3.987 3.913-3.913-3.047-3.048-3.913 3.913-3.985-3.985z"
 }));
 function _extends$1b() {
-  _extends$1b = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1b = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1b.apply(this, arguments);
+    return n4;
+  }, _extends$1b.apply(null, arguments);
 }
 var EndEventCompensationIcon = ({
   styles = {},
@@ -50117,18 +53844,13 @@ var EndEventCompensationIcon = ({
   d: "M15.676.051C7.943.058.834 6.501.104 14.21c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 5.009 23.394.364 16.978.083A18.532 18.532 0 0015.676.05zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm-.56 5.744l-7.407 5.23 7.408 5.234v-5.057c2.384 1.687 4.771 3.371 7.157 5.057V10.801l-7.157 5.054v-5.054z"
 }));
 function _extends$1a() {
-  _extends$1a = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1a = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1a.apply(this, arguments);
+    return n4;
+  }, _extends$1a.apply(null, arguments);
 }
 var EndEventErrorIcon = ({
   styles = {},
@@ -50141,18 +53863,13 @@ var EndEventErrorIcon = ({
   d: "M15.676.051C7.943.058.834 6.501.104 14.21c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 5.009 23.394.364 16.978.083A18.532 18.532 0 0015.676.05zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm6.132 4.166l-3.633 7.363-4.516-5.874-4.102 12.131 4.599-5.91 4.743 5.427 2.909-13.137z"
 }));
 function _extends$19() {
-  _extends$19 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$19 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$19.apply(this, arguments);
+    return n4;
+  }, _extends$19.apply(null, arguments);
 }
 var EndEventEscalationIcon = ({
   styles = {},
@@ -50165,18 +53882,13 @@ var EndEventEscalationIcon = ({
   d: "M15.676.051C7.943.058.834 6.501.104 14.21c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 5.009 23.394.364 16.978.083A18.532 18.532 0 0015.676.05zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm.006 3.9c-1.672 4.653-2.733 9.5-4.406 14.153 1.535-1.525 2.872-3.234 4.406-4.759l4.406 4.76c-1.497-4.71-2.91-9.445-4.406-14.155z"
 }));
 function _extends$18() {
-  _extends$18 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$18 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$18.apply(this, arguments);
+    return n4;
+  }, _extends$18.apply(null, arguments);
 }
 var EndEventLinkIcon = ({
   styles = {},
@@ -50189,18 +53901,13 @@ var EndEventLinkIcon = ({
   d: "M15.676 0C7.943.007.834 6.45.104 14.16c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 4.958 23.394.313 16.978.032A18.532 18.532 0 0015.676 0zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm1.78 4.065v3.555H9.779v6.713h7.994v3.554l5.828-6.91-5.828-6.912z"
 }));
 function _extends$17() {
-  _extends$17 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$17 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$17.apply(this, arguments);
+    return n4;
+  }, _extends$17.apply(null, arguments);
 }
 var EndEventMessageIcon = ({
   styles = {},
@@ -50213,18 +53920,13 @@ var EndEventMessageIcon = ({
   d: "M15.676 0C7.943.007.834 6.45.104 14.16c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 4.958 23.394.313 16.978.032A18.532 18.532 0 0015.676 0zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm-5.91 5.448l6.041 4.9 6.04-4.9H10.084zm-1.34 1.137v9.92h14.513v-9.718l-7.132 5.786-7.381-5.988z"
 }));
 function _extends$16() {
-  _extends$16 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$16 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$16.apply(this, arguments);
+    return n4;
+  }, _extends$16.apply(null, arguments);
 }
 var EndEventMultipleIcon = ({
   styles = {},
@@ -50237,18 +53939,13 @@ var EndEventMultipleIcon = ({
   d: "M15.676 0C7.943.007.834 6.45.104 14.16c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 4.958 23.394.313 16.978.032A18.529 18.529 0 0015.676 0zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm.011 3.039l-7.619 5.53 2.91 8.95h9.418l2.91-8.95-7.619-5.53z"
 }));
 function _extends$15() {
-  _extends$15 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$15 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$15.apply(this, arguments);
+    return n4;
+  }, _extends$15.apply(null, arguments);
 }
 var EndEventNoneIcon = ({
   styles = {},
@@ -50261,18 +53958,13 @@ var EndEventNoneIcon = ({
   d: "M15.84.042C8.654-.01 1.913 5.437.4 12.454-1.057 18.62 1.554 25.495 6.784 29.09c5.076 3.636 12.31 3.92 17.59.544 5.309-3.251 8.435-9.744 7.445-15.921C30.91 7.307 25.795 1.738 19.442.422a16.064 16.064 0 00-3.602-.38zm.382 5.01c5.28-.017 10.13 4.353 10.669 9.61.687 5.025-2.552 10.281-7.423 11.792-4.754 1.617-10.486-.447-12.962-4.856-2.74-4.575-1.574-11.094 2.768-14.27a11.05 11.05 0 016.948-2.276z"
 }));
 function _extends$14() {
-  _extends$14 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$14 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$14.apply(this, arguments);
+    return n4;
+  }, _extends$14.apply(null, arguments);
 }
 var EndEventSignalIcon = ({
   styles = {},
@@ -50285,18 +53977,13 @@ var EndEventSignalIcon = ({
   d: "M15.676.051C7.943.058.834 6.501.104 14.21c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 5.009 23.394.364 16.978.083A18.532 18.532 0 0015.676.05zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm.006 3.492c-2.261 4.07-4.532 8.136-6.797 12.204h13.595L15.999 8.55z"
 }));
 function _extends$13() {
-  _extends$13 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$13 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$13.apply(this, arguments);
+    return n4;
+  }, _extends$13.apply(null, arguments);
 }
 var EndEventTerminateIcon = ({
   styles = {},
@@ -50309,18 +53996,13 @@ var EndEventTerminateIcon = ({
   d: "M15.676.051C7.943.058.834 6.501.104 14.21c-.783 6.565 2.912 13.427 8.942 16.216 5.6 2.737 12.789 1.87 17.434-2.344 4.725-4.09 6.79-11.06 4.714-17.006C29.22 5.009 23.394.364 16.978.083A18.532 18.532 0 0015.676.05zm.317 5.006c5.695-.165 10.916 4.858 10.983 10.555.246 5.212-3.67 10.33-8.864 11.204-5.026 1.007-10.6-1.898-12.36-6.777-1.894-4.826.039-10.928 4.649-13.46a11.082 11.082 0 015.592-1.522zm.006 2.859c-5.264-.2-9.495 5.551-7.755 10.516 1.366 5.085 8.108 7.436 12.339 4.301 4.455-2.807 4.708-9.943.462-13.058A8.128 8.128 0 0016 7.915z"
 }));
 function _extends$12() {
-  _extends$12 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$12 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$12.apply(this, arguments);
+    return n4;
+  }, _extends$12.apply(null, arguments);
 }
 var EventSubProcessExpandedIcon = ({
   styles = {},
@@ -50334,18 +54016,13 @@ var EventSubProcessExpandedIcon = ({
   opacity: ".97"
 }));
 function _extends$11() {
-  _extends$11 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$11 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$11.apply(this, arguments);
+    return n4;
+  }, _extends$11.apply(null, arguments);
 }
 var GatewayComplexIcon = ({
   styles = {},
@@ -50358,18 +54035,13 @@ var GatewayComplexIcon = ({
   d: "M16.001 0a1.29 1.29 0 00-.917.373L.373 15.084a1.316 1.316 0 00.002 1.834l14.71 14.709a1.313 1.313 0 001.833 0l14.711-14.711a1.316 1.316 0 00-.002-1.834L16.917.372A1.294 1.294 0 0016.002 0zM16 2.181l13.821 13.821L16 29.823 2.179 16.003 16 2.18zm-.327 6.79v.007l-.145.027-.118.08-.083.123-.028.145v4.954L11.793 10.8l-.125-.08-.14-.029-.144.027-.122.082-.46.46-.085.125-.026.142.028.14.08.125 3.505 3.505H9.347l-.001-.002-.145.032-.118.08-.083.122-.028.146v.652l.029.147.082.119.12.08.144.032h4.956L10.8 20.207v-.001l-.084.124-.026.142.028.14.08.124.46.461.126.082.14.029.143-.027.124-.084L15.3 17.69v4.964-.001l.028.147.082.12.12.08.144.031h.652l.148-.03.118-.08.083-.12.028-.146v-4.962l3.505 3.505.126.082.14.027.142-.027.124-.084.461-.46.083-.123s.028-.144.027-.146l-.028-.14-.082-.126-3.496-3.496h4.948l.148-.03.119-.08.082-.12.028-.147v-.652l-.028-.145-.083-.122-.119-.08s-.147-.033-.147-.031h-4.964l3.512-3.512.082-.122.029-.144-.028-.14-.084-.124-.46-.461-.123-.082-.14-.027-.145.027-.122.082-3.507 3.507V9.348l-.028-.146-.082-.122-.12-.08-.147-.029h-.652z"
 }));
 function _extends$10() {
-  _extends$10 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$10 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$10.apply(this, arguments);
+    return n4;
+  }, _extends$10.apply(null, arguments);
 }
 var GatewayEventBasedIcon = ({
   styles = {},
@@ -50382,18 +54054,13 @@ var GatewayEventBasedIcon = ({
   d: "M16 0a1.29 1.29 0 00-.918.373L.371 15.084a1.316 1.316 0 00.002 1.834l14.71 14.709a1.313 1.313 0 001.833 0l14.711-14.711a1.316 1.316 0 00-.002-1.834L16.915.372A1.294 1.294 0 0016 0zm-.002 2.181l13.821 13.821-13.821 13.821-13.821-13.82L15.998 2.18zm0 5.876l-.254.185-7.377 5.355 2.915 8.964h9.433l2.915-8.964-7.631-5.54zm0 1.07l6.614 4.8-2.526 7.769h-8.175l-2.526-7.768 6.614-4.802z"
 }));
 function _extends$$() {
-  _extends$$ = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$$ = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$$.apply(this, arguments);
+    return n4;
+  }, _extends$$.apply(null, arguments);
 }
 var GatewayNoneIcon = ({
   styles = {},
@@ -50406,18 +54073,13 @@ var GatewayNoneIcon = ({
   d: "M.373 15.084a1.316 1.316 0 00.002 1.834l14.71 14.709a1.313 1.313 0 001.833 0l14.711-14.711a1.316 1.316 0 00-.002-1.834L16.917.373a1.313 1.313 0 00-1.833 0L.373 15.084zm1.806.918L16 2.182l13.821 13.82L16 29.823 2.179 16.003z"
 }));
 function _extends$_() {
-  _extends$_ = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$_ = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$_.apply(this, arguments);
+    return n4;
+  }, _extends$_.apply(null, arguments);
 }
 var GatewayOrIcon = ({
   styles = {},
@@ -50430,18 +54092,13 @@ var GatewayOrIcon = ({
   d: "M16.001 0a1.29 1.29 0 00-.917.373L.373 15.084a1.316 1.316 0 00.002 1.834l14.71 14.709a1.313 1.313 0 001.833 0l14.711-14.711a1.316 1.316 0 00-.002-1.834L16.917.372A1.294 1.294 0 0016.002 0zM16 2.181l13.821 13.821L16 29.823 2.179 16.003 16 2.18zm0 6.379a7.447 7.447 0 00-7.44 7.441A7.447 7.447 0 0016 23.443 7.447 7.447 0 0023.443 16a7.447 7.447 0 00-7.441-7.441zm0 .825a6.61 6.61 0 016.617 6.616A6.61 6.61 0 0116 22.618 6.61 6.61 0 019.385 16 6.61 6.61 0 0116 9.385z"
 }));
 function _extends$Z() {
-  _extends$Z = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$Z = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$Z.apply(this, arguments);
+    return n4;
+  }, _extends$Z.apply(null, arguments);
 }
 var GatewayParallelIcon = ({
   styles = {},
@@ -50454,18 +54111,13 @@ var GatewayParallelIcon = ({
   d: "M16.001 0a1.29 1.29 0 00-.917.373L.373 15.084a1.316 1.316 0 00.002 1.834l14.71 14.709a1.313 1.313 0 001.833 0l14.711-14.711a1.316 1.316 0 00-.002-1.834L16.917.372A1.294 1.294 0 0016.002 0zM16 2.181l13.821 13.821L16 29.823 2.179 16.003 16 2.18zm-.377 5.708l-.168.032-.136.092-.096.14-.032.168v6.868h-6.87l-.002-.002-.166.037-.137.092v-.002l-.095.141-.033.167v.753s.032.169.034.17l.094.138.138.092.167.036h6.87v6.867l-.001-.001.033.17.095.138.138.092s.166.035.167.037h.752l.17-.036.137-.092.095-.137.033-.17v-6.867h6.868l.17-.035.137-.092.095-.137.033-.17v-.753s-.033-.165-.032-.167l-.096-.14-.138-.093s-.17-.037-.17-.035H16.81V8.323l-.033-.168-.094-.14-.138-.092-.17-.034h-.752z"
 }));
 function _extends$Y() {
-  _extends$Y = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$Y = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$Y.apply(this, arguments);
+    return n4;
+  }, _extends$Y.apply(null, arguments);
 }
 var GatewayXorIcon = ({
   styles = {},
@@ -50478,18 +54130,13 @@ var GatewayXorIcon = ({
   d: "M16 0a1.29 1.29 0 00-.918.373L.371 15.084a1.316 1.316 0 00.002 1.834l14.71 14.709a1.313 1.313 0 001.833 0l14.711-14.711a1.316 1.316 0 00-.002-1.834L16.915.372A1.294 1.294 0 0016 0zm-.002 2.181l13.821 13.821-13.821 13.821-13.821-13.82L15.998 2.18zm-5.162 7.69l-.166.032-.141.096-.532.532s-.097.142-.097.144l-.03.164.032.162.093.144 4.857 4.858-4.855 4.855v-.001L9.9 21l-.03.164.032.162s.093.142.093.144l.531.532.146.095.162.032.164-.03.144-.097 4.855-4.856 4.857 4.857.145.095.162.032.164-.03.144-.097.531-.532.095-.14.033-.168-.033-.162-.095-.146L17.144 16 22 11.144l.095-.14.033-.166-.033-.163-.097-.144-.532-.532-.14-.095-.163-.032-.166.032-.141.095L16 14.855l-4.858-4.858v-.002l-.144-.092-.162-.032z"
 }));
 function _extends$X() {
-  _extends$X = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$X = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$X.apply(this, arguments);
+    return n4;
+  }, _extends$X.apply(null, arguments);
 }
 var GroupIcon = ({
   styles = {},
@@ -50502,18 +54149,13 @@ var GroupIcon = ({
   d: "M6.34.016c-2.333.025-4.684 1.77-5.29 4.17C.608 5.848.88 7.608.804 9.314v2.922h2.041c.038-2.332-.076-4.673.062-7C3.14 3.355 4.869 1.938 6.643 2.04h8.956V.009c-3.086 0-6.173-.02-9.258 0v.007zm13.094 2.023h1.92V.009h-1.92v2.03zm5.756 0c1.265-.069 2.66.045 3.602 1.055 1.036.983 1.201 2.523 1.122 3.91v6.313h2.078c-.03-2.677.062-5.36-.047-8.032-.17-2.743-2.62-5.111-5.215-5.236-.511-.064-1.027-.02-1.54-.033v2.023zM.803 18.319h2.041v-2.026H.804v2.026zm29.11 1.084h2.08v-2.03h-2.08v2.03zM.804 26.148c.004 2.218 1.393 4.366 3.313 5.28 1.728.853 3.681.448 5.521.544.43-.112 1.29.231 1.435-.183v-1.847c-1.788-.043-3.584.094-5.365-.082-1.67-.354-2.919-2.048-2.863-3.844v-3.644H.804v3.777zm29.11-.068c.04 1.961-1.508 3.787-3.381 3.842-1.954.06-3.914.02-5.87.026v2.03c2.118-.042 4.242.08 6.355-.063 2.524-.264 4.818-2.644 4.94-5.323.08-1.039.014-2.085.035-3.126h-2.078v2.613zm-15.006 5.898h1.92v-2.03h-1.92v2.03z"
 }));
 function _extends$W() {
-  _extends$W = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$W = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$W.apply(this, arguments);
+    return n4;
+  }, _extends$W.apply(null, arguments);
 }
 var IntermediateEventCatchCancelIcon = ({
   styles = {},
@@ -50526,18 +54168,13 @@ var IntermediateEventCatchCancelIcon = ({
   d: "M15.975.049C8.195-.111.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.454 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.215-2.282-2.022-5.3-3.217-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.082 11.082 0 0116 5.021zm-3.956 3.946l-3.096 3.097 3.985 3.985-3.913 3.913 3.047 3.048 3.913-3.913 3.988 3.987 3.097-3.096L19.076 16l3.914-3.913-3.048-3.048-3.913 3.913-3.986-3.985zm-.002 1.222l3.988 3.987 3.913-3.913 1.826 1.826-3.913 3.913 3.985 3.986-1.873 1.873-3.985-3.985-3.913 3.913-1.827-1.827 3.914-3.913-3.988-3.987 1.873-1.873z"
 }));
 function _extends$V() {
-  _extends$V = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$V = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$V.apply(this, arguments);
+    return n4;
+  }, _extends$V.apply(null, arguments);
 }
 var IntermediateEventCatchCompensationIcon = ({
   styles = {},
@@ -50550,18 +54187,13 @@ var IntermediateEventCatchCompensationIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm-.56 5.772l-7.408 5.231 7.409 5.234v-5.057c2.385 1.687 4.771 3.371 7.157 5.057V10.793l-7.157 5.055v-5.055zm-.865 1.665v7.125l-5.048-3.562 5.048-3.563zm7.161 0v7.132l-5.048-3.566 5.048-3.566z"
 }));
 function _extends$U() {
-  _extends$U = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$U = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$U.apply(this, arguments);
+    return n4;
+  }, _extends$U.apply(null, arguments);
 }
 var IntermediateEventCatchConditionIcon = ({
   styles = {},
@@ -50574,18 +54206,13 @@ var IntermediateEventCatchConditionIcon = ({
   d: "M15.97.04h-.127C8.713-.018 2.003 5.334.437 12.286c-1.51 6.123.98 13.005 6.136 16.665 5.125 3.788 12.546 4.105 17.912.623 5.272-3.276 8.33-9.766 7.325-15.916-.904-6.241-5.79-11.7-11.95-13.143A16.082 16.082 0 0015.97.04zm-.181 1.724c.115 0 .23 0 .347.003 6.625-.066 12.823 5.149 13.89 11.69 1.13 5.91-1.908 12.349-7.262 15.138-5.473 3.013-12.866 1.884-17.116-2.726C1.291 21.372.444 13.914 3.802 8.602c2.493-4.112 7.169-6.819 11.987-6.838zm.283 1.554c-.117 0-.234.002-.351.005-6.1 0-11.691 5.049-12.346 11.114-.78 5.684 2.795 11.612 8.218 13.52 5.139 1.943 11.416.101 14.624-4.38 3.461-4.583 3.262-11.538-.596-15.831-2.36-2.747-5.924-4.423-9.549-4.428zm-.078 1.695c.078 0 .156 0 .234.003 5.4 0 10.321 4.556 10.734 9.942.563 5.13-2.958 10.364-7.971 11.678-4.832 1.41-10.457-.935-12.746-5.446-2.463-4.559-1.2-10.795 3.014-13.883a11.072 11.072 0 016.735-2.294zm-5.352 4.266V22.761h10.716V9.279H10.642zm.863.866h8.987v11.75h-8.987v-11.75zm.927 1.323v.862h7.133v-.862h-7.133zm0 2.602v.866h7.133v-.866h-7.133zm0 3.008v.862h7.133v-.862h-7.133zm0 2.717v.863h7.133v-.863h-7.133z"
 }));
 function _extends$T() {
-  _extends$T = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$T = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$T.apply(this, arguments);
+    return n4;
+  }, _extends$T.apply(null, arguments);
 }
 var IntermediateEventCatchErrorIcon = ({
   styles = {},
@@ -50598,18 +54225,13 @@ var IntermediateEventCatchErrorIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm6.132 4.194c-1.21 2.455-2.422 4.91-3.633 7.364l-4.516-5.875-4.103 12.133 4.6-5.912c1.58 1.81 3.162 3.619 4.744 5.429L22.13 9.215zM14.383 13.1l4.295 5.445 1.073-2.387-1.027 4.131-4.384-5.157-1.778 2.75 1.821-4.782z"
 }));
 function _extends$S() {
-  _extends$S = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$S = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$S.apply(this, arguments);
+    return n4;
+  }, _extends$S.apply(null, arguments);
 }
 var IntermediateEventCatchEscalationIcon = ({
   styles = {},
@@ -50622,18 +54244,13 @@ var IntermediateEventCatchEscalationIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm.006 3.927c-1.672 4.654-2.734 9.502-4.406 14.155 1.534-1.525 2.872-3.234 4.406-4.759l4.406 4.76c-1.496-4.71-2.91-9.446-4.406-14.156zm.032 2.929c.822 2.586 1.598 5.186 2.42 7.771l-2.42-2.612c-.682.597-2.452 2.884-2.338 2.388.87-2.487 1.447-5.067 2.338-7.547z"
 }));
 function _extends$R() {
-  _extends$R = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$R = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$R.apply(this, arguments);
+    return n4;
+  }, _extends$R.apply(null, arguments);
 }
 var IntermediateEventCatchLinkIcon = ({
   styles = {},
@@ -50646,18 +54263,13 @@ var IntermediateEventCatchLinkIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm1.78 4.093v3.555H9.785v6.714h7.994v3.554l5.829-6.911-5.83-6.912zm.974 2.584l3.61 4.295-3.61 4.294v-1.933h-7.88v-4.688h7.88v-1.968z"
 }));
 function _extends$Q() {
-  _extends$Q = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$Q = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$Q.apply(this, arguments);
+    return n4;
+  }, _extends$Q.apply(null, arguments);
 }
 var IntermediateEventCatchMessageIcon = ({
   styles = {},
@@ -50670,18 +54282,13 @@ var IntermediateEventCatchMessageIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm-7.245 5.475v11.06h14.502v-11.06H8.754zm3.222 1.728h8.057c-1.427.878-2.854 2.806-4.281 3.016l-3.776-3.016zm9.554 1.017v6.587H10.48V13.24l5.524 4.414 5.526-4.414z"
 }));
 function _extends$P() {
-  _extends$P = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$P = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$P.apply(this, arguments);
+    return n4;
+  }, _extends$P.apply(null, arguments);
 }
 var IntermediateEventCatchMultipleIcon = ({
   styles = {},
@@ -50694,18 +54301,13 @@ var IntermediateEventCatchMultipleIcon = ({
   d: "M15.975.003C8.195-.156.935 6.24.125 13.985c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.884 23.445.407 17.201.049c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.174.872 11.679 4.985 6.916c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 4.975c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 4.975zm.006 3.073l-7.62 5.531 2.91 8.95h9.42l2.91-8.95-7.62-5.53zm0 1.067l6.604 4.794-2.523 7.757h-8.162l-2.522-7.757 6.603-4.794z"
 }));
 function _extends$O() {
-  _extends$O = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$O = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$O.apply(this, arguments);
+    return n4;
+  }, _extends$O.apply(null, arguments);
 }
 var IntermediateEventCatchNonInterruptingConditionIcon = ({
   styles = {},
@@ -50718,18 +54320,13 @@ var IntermediateEventCatchNonInterruptingConditionIcon = ({
   d: "M10.638 9.563V23.056h10.724V9.563H10.638zm.863.866h8.995v11.76H11.5V10.43zm.928 1.324v.862h7.139v-.862h-7.14zm0 2.605v.866h7.139v-.866h-7.14zm0 3.01v.863h7.139v-.863h-7.14zm0 2.72v.863h7.139v-.864h-7.14zM15.999.308h-.004l-.188.001h-.011l-.188.004h-.011L15.41.32h-.011l-.187.008h-.005L15.2.33l-.187.01h-.005l-.005.001-.187.013h-.011L14.62.37h-.01l-.186.018h-.011l-.185.02-.005.001h-.006l-.185.022-.005.001h-.005l-.185.025h-.005l-.005.001-.185.027h-.005l-.005.001-.184.029h-.005l-.005.001-.183.031-.006.001-.005.001-.182.033-.006.001-.005.001-.182.035-.005.001-.005.001-.182.038h-.005l-.005.002-.181.04h-.005l-.005.002-.18.042-.006.001-.005.001-.18.044-.005.002h-.005l-.17.045-.152.054-.139.082-.121.106-.1.127-.074.143-.046.155-.017.16.013.16.043.156.07.145.097.13.119.108.137.085.15.058.159.03.16-.001.133-.023.165-.043.168-.041.171-.04.171-.037.172-.036.17-.033.173-.03.17-.03.177-.027.171-.025.175-.022.175-.02.175-.02.176-.016.175-.014.177-.012.176-.01.177-.007.174-.006.177-.003.178-.001h.177l.178.004.174.006.177.007.176.01.177.012.175.014.176.017.175.018.175.02.175.023.171.025.176.027.17.03.174.03.17.033.171.036.154.033.16.02.161-.01.156-.04.146-.069.131-.094.111-.117.087-.135.061-.15.032-.158.002-.16-.027-.16-.057-.15L20 1.023l-.108-.12-.128-.097-.145-.073-.128-.038-.158-.035-.005-.001-.005-.001L19.14.62h-.005l-.005-.002-.182-.035h-.006L18.938.58l-.182-.033h-.006l-.005-.002-.183-.03-.005-.001-.006-.001-.183-.029h-.005l-.006-.001-.184-.027h-.005l-.005-.001-.185-.024h-.005L17.968.43 17.783.41l-.006-.001h-.005l-.185-.02h-.006l-.005-.001L17.39.37h-.005L17.38.368l-.187-.015h-.005l-.005-.001-.187-.013h-.011L16.8.328h-.011L16.6.32h-.011l-.187-.006h-.011L16.204.31h-.011L16.005.31H16zm9.016 2.935l-.16.004-.158.033-.15.062-.134.09-.116.111-.093.132-.067.147-.038.156-.01.161.022.16.05.153.078.141.103.124.102.087.045.034.142.106.137.105.14.11.136.11.135.112.134.115.134.117.13.115.132.122.128.12.127.122.126.125.124.126.124.128.121.13.118.128.118.132.117.133.113.134.113.136.11.136.109.137.109.142.104.14.103.14.101.142.1.144.099.146.095.145.094.147.093.15.092.15.087.149.087.15.084.152.084.155.08.152.08.155.04.081.084.138.11.119.128.096.145.072.155.043.16.013.16-.016.155-.046.144-.074.127-.099.106-.12.083-.14.055-.151.026-.16-.004-.16-.034-.158-.05-.124-.042-.085-.002-.004-.003-.005-.084-.165-.002-.004-.003-.005-.086-.164-.002-.004-.003-.005-.088-.162-.002-.005-.003-.005-.09-.161-.002-.005-.003-.004-.092-.16-.003-.005-.002-.005-.094-.16-.003-.004-.003-.004-.096-.159-.002-.004-.003-.005-.098-.157-.003-.004-.003-.005-.1-.156-.003-.004-.003-.005-.101-.154-.003-.005-.003-.004-.104-.154-.003-.004-.003-.005-.106-.152-.003-.005-.003-.004-.108-.151-.003-.004-.003-.005-.11-.15-.003-.004-.003-.004-.111-.15-.004-.003-.003-.005-.113-.147-.004-.004-.003-.005-.115-.146-.004-.004-.003-.004-.117-.145-.004-.004-.003-.004-.12-.144-.003-.004-.003-.004-.121-.142-.004-.004-.003-.004-.123-.141-.003-.004-.004-.004-.125-.14-.003-.004-.004-.004-.127-.138-.003-.004-.004-.004-.128-.136-.004-.004-.004-.004-.13-.135-.004-.004-.004-.004-.132-.134-.003-.004-.004-.003-.134-.133-.004-.003-.004-.004-.135-.13-.004-.004-.004-.004-.136-.128-.004-.004-.004-.004-.138-.126-.004-.004-.004-.003-.14-.125-.004-.004-.004-.003-.14-.123-.005-.004-.004-.003-.142-.121-.004-.004-.004-.003-.144-.12-.004-.003-.004-.003-.145-.117-.004-.004-.004-.003-.147-.115-.004-.004-.004-.003-.148-.113-.004-.003-.004-.004-.149-.111-.004-.003-.004-.004-.05-.036-.14-.083-.15-.055-.16-.027zm-18.381.344l-.161.008-.157.037-.147.066-.111.074-.04.032-.005.003-.004.004-.145.117-.004.003-.004.004-.144.119-.004.003-.004.004-.142.12-.004.004-.004.004-.141.123-.004.003-.004.004-.14.125-.004.003-.004.004-.138.126-.004.004-.004.004-.136.128-.004.004-.004.004-.135.13-.004.004-.004.003-.134.133-.004.003L4.682 5l-.132.134-.003.004-.004.004-.13.135-.004.004-.004.004-.128.136-.004.004-.004.004-.126.138-.004.004-.003.004-.125.14-.004.004-.003.004-.123.14-.004.005-.003.004-.121.142-.004.004-.003.004-.12.144-.003.004-.003.004-.117.145-.004.004-.003.004-.115.146-.004.005-.003.004-.113.147-.003.005-.004.004-.111.149-.003.004-.004.004-.11.15-.002.005-.003.004-.108.151-.003.004-.003.005-.106.152-.003.005-.003.004-.104.154-.003.004-.003.005-.102.154-.003.005-.002.004-.1.156-.003.005-.003.004-.098.157-.003.005-.003.004-.096.159-.002.004-.003.005-.094.16-.003.004-.002.004-.092.16-.003.005-.003.005-.09.161-.002.005-.003.005-.088.162-.002.005-.003.004-.086.164-.002.005-.002.004-.084.165-.003.005-.002.004-.082.166-.002.004-.003.005-.08.167-.002.004-.002.005-.078.168-.002.004-.002.005-.045.1-.053.153-.023.16.007.16.037.157.065.148.092.132.114.114.134.09.148.064.157.035.161.006.16-.025.152-.054.14-.08.121-.106.1-.126.065-.118.043-.095.074-.16.075-.155.077-.157.08-.155.08-.152.083-.155.085-.152.086-.15.088-.149.091-.15.094-.15.094-.147.095-.145.099-.146.1-.144.1-.142.104-.14.104-.14.11-.142.107-.137.11-.136.114-.136.113-.134.117-.133.118-.132.117-.129.122-.13.124-.127.123-.126.127-.125.127-.122.128-.12.132-.122.13-.115.133-.117.135-.115.135-.111.136-.11.037-.03.117-.11.094-.132.068-.146.04-.156.01-.161-.02-.16-.05-.154-.076-.141-.102-.125-.123-.104-.14-.08-.153-.051-.16-.023zM16 3.595h-.005l-.148.001h-.01l-.147.003h-.011l-.147.005h-.011l-.146.007h-.011l-.146.009h-.011l-.146.01h-.005l-.005.001-.146.012h-.011l-.145.014h-.006l-.005.001-.05.006-.158.031-.15.06-.135.088-.117.111-.094.13-.069.147-.04.156-.01.16.019.16.049.154.076.142.102.125.123.105.14.08.152.051.16.023.134-.003.045-.005.135-.013.133-.01.136-.01.135-.007.137-.006.136-.004.136-.003h.274l.136.003.136.004.136.006.136.007.136.01.133.01.135.013.135.014.135.016.134.018.132.018.134.021.133.023.133.024.133.025.13.027.132.03.132.03.129.031.13.034.129.035.129.036.13.04.126.038.128.042.126.042.128.045.127.047.126.047.12.048.127.051.123.052.006.002.147.048.16.021.16-.009.157-.038.147-.067.131-.093.112-.116.089-.135.062-.149.033-.158.004-.16-.027-.16-.055-.151-.083-.139-.107-.12-.127-.099-.118-.063-.004-.001-.005-.003-.005-.002-.133-.056-.005-.002-.005-.002-.134-.054-.004-.002-.005-.002-.135-.053-.005-.002-.005-.002-.135-.051-.005-.002-.005-.002-.135-.05-.005-.001-.005-.002-.137-.048-.005-.001-.005-.002-.137-.046-.005-.002-.005-.002-.137-.044-.005-.002-.005-.001-.138-.043-.006-.002-.005-.001-.138-.042-.005-.001-.005-.002-.14-.04H19.4l-.005-.002-.14-.038-.005-.001-.005-.002-.14-.036-.005-.001-.005-.001-.141-.035-.005-.001-.005-.001-.142-.033-.005-.001-.005-.001-.142-.031-.005-.002h-.005l-.142-.03-.005-.001-.005-.001-.143-.028h-.005l-.005-.002-.143-.025-.006-.001-.005-.001-.143-.024-.005-.001-.006-.001-.143-.022-.006-.001h-.005l-.144-.022h-.005l-.006-.001-.144-.019h-.005l-.006-.001-.144-.017h-.006l-.005-.001-.145-.016h-.011l-.145-.014H17.1l-.005-.001-.146-.012h-.01l-.146-.01-.006-.001h-.005l-.146-.009h-.011l-.147-.006h-.01L16.32 3.6h-.011l-.147-.003h-.011l-.147-.001H16zm-5.482 1.366l-.16.008-.157.037-.123.053-.06.032-.005.002-.004.003-.128.069-.004.002-.005.003-.126.07-.005.003-.004.002-.126.072-.005.003-.004.003-.125.073-.004.003-.005.003-.124.075-.004.003-.005.002-.123.077-.004.003-.005.003-.122.078-.004.003-.005.003-.121.08-.004.002-.005.003-.12.082-.005.003-.004.003-.12.083-.004.003-.004.003-.118.084-.005.003-.004.003-.118.086-.004.003-.004.003-.117.088-.004.003-.004.003-.116.089-.004.003-.004.004-.114.09-.005.003-.004.003-.113.092-.004.004-.004.003-.113.093-.004.004-.004.003-.111.095-.005.003-.004.004-.11.096-.004.004-.004.003-.11.098-.003.003-.004.004-.108.1-.004.003-.004.003-.107.101-.004.004-.004.003-.106.102-.004.004-.003.004-.105.103-.004.004-.004.004-.103.105-.004.004-.004.003-.102.106-.003.004-.004.004-.1.107-.004.004-.004.004-.099.108-.004.004-.003.004-.098.11-.003.003-.004.004-.096.11-.004.005-.003.004-.095.111-.003.004-.004.004-.093.113-.003.004-.004.004-.092.113-.003.004-.003.005-.09.114-.004.004-.003.004-.089.116-.003.004-.003.004-.088.117-.003.004-.003.004-.086.118-.003.004-.003.005-.084.118-.003.004-.003.005-.083.12-.003.003-.003.005-.082.12-.003.005-.002.004-.068.103-.076.142-.048.154-.018.16.011.161.041.156.07.146.095.13.117.11.136.086.15.06.158.03.162.002.158-.03.15-.057.138-.085.119-.109.082-.105.065-.099.075-.11.077-.113.077-.107.08-.11.08-.108.084-.108.083-.105.086-.106.086-.104.088-.104.089-.101.09-.102.093-.101.093-.099.094-.097.095-.096.098-.097.098-.095.099-.093.1-.092.103-.091.101-.089.104-.088.104-.086.106-.086.106-.083.106-.082.109-.082.108-.079.11-.078.11-.076.112-.076.112-.074.113-.072.113-.071.115-.07.115-.068.118-.067.117-.065.12-.065.054-.029.135-.088.116-.111.094-.132.068-.146.04-.156.009-.161-.02-.16-.05-.153-.078-.142-.102-.125-.123-.103-.141-.079-.153-.051-.16-.022zm13.91 2.116l-.162.008-.157.037-.147.066-.132.092-.113.116-.09.134-.063.148-.034.157-.005.162.025.159.055.152.082.138.086.103.09.09.094.098.092.099.093.1.091.103.089.101.088.104.086.104.086.106.083.105.083.108.08.108.081.11.077.107.077.112.075.111.075.114.072.113.071.113.07.114.068.118.067.115.065.118.064.117.062.117.061.121.059.119.059.122.056.121.054.12.055.125.051.123.051.125.048.123.048.127.047.126.044.125.043.128.042.129.039.126.038.13.022.076.058.15.085.137.11.119.129.096.145.07.155.043.16.013.161-.017.154-.046.144-.075.126-.1.106-.12.082-.14.055-.151.025-.16-.005-.16-.026-.132-.023-.082-.002-.005-.001-.005-.042-.139-.001-.005-.002-.005-.043-.138-.001-.005-.002-.005-.044-.137-.002-.005-.002-.005-.046-.137-.002-.005-.001-.005-.048-.137-.002-.005-.002-.005-.05-.135-.001-.005-.002-.005-.051-.135-.002-.005-.002-.005-.053-.135-.002-.005-.002-.005-.054-.133-.002-.005-.002-.005-.057-.133-.002-.005-.002-.005-.057-.132-.003-.005-.002-.005-.06-.132-.001-.005-.002-.004-.061-.132-.003-.004-.002-.005-.063-.13-.002-.005-.002-.005-.064-.13-.003-.004-.002-.005-.066-.129-.002-.004-.003-.005-.067-.128-.002-.005-.003-.004-.069-.128-.002-.004-.003-.005-.07-.126-.003-.005-.003-.004-.072-.126-.002-.005-.003-.004-.074-.125-.002-.004-.003-.005-.075-.124-.003-.004-.003-.005-.076-.123-.003-.004-.003-.005-.078-.122-.003-.004-.003-.005-.08-.121-.003-.004-.003-.005-.081-.12-.003-.005-.003-.004-.083-.12-.003-.004-.003-.004-.084-.118-.003-.005-.003-.004-.086-.118-.003-.004-.004-.004-.087-.117-.003-.004-.003-.004-.09-.116-.002-.004-.004-.004-.09-.114-.003-.005-.004-.004-.091-.113-.004-.004-.003-.004-.094-.113-.003-.004-.003-.004-.095-.111-.004-.004-.003-.004-.096-.11-.004-.005-.003-.004-.098-.11-.004-.003-.003-.004-.1-.108-.003-.004-.004-.004-.1-.107-.004-.004-.004-.004-.102-.106-.003-.003-.004-.004-.093-.095-.124-.103-.14-.08-.153-.05-.16-.023zM4.45 13.135l-.161.002-.158.032-.15.06-.135.088-.118.11-.094.131-.069.146-.035.129-.026.132v.005l-.002.005-.025.143-.001.005-.001.006-.024.143-.001.005-.001.006-.022.143-.001.006-.001.005-.02.144-.001.005-.001.005-.019.145v.005l-.001.006-.017.144v.006l-.001.005-.016.145v.011l-.014.145v.005l-.001.006-.012.146v.01l-.01.146-.001.006v.005l-.009.146v.011l-.007.146v.011l-.004.147v.011l-.003.147v.01l-.002.148v.01l.001.148v.01l.003.147v.011l.005.147v.01l.007.147v.011l.009.146v.011l.01.146v.01l.013.146v.011l.014.145v.005l.001.006.016.145v.011l.018.144v.006l.001.005.019.144v.006l.001.005.021.144v.005l.002.006.022.143v.006l.002.005.024.143v.005l.002.006.025.143.001.005.001.005.028.143.001.005.001.005.03.142v.005l.002.006.03.141.002.005.001.005.033.142v.005l.002.005.035.14v.006l.002.005.036.14.002.005.001.005.038.14.001.005.002.005.04.14v.005l.002.005.042.138.001.006.002.005.042.138.002.005.002.005.017.054.064.148.09.134.114.114.132.092.148.065.157.037.16.007.16-.023.153-.052.14-.08.123-.104.102-.125.076-.142.049-.153.02-.16-.011-.161-.031-.13-.017-.051-.039-.126-.038-.13-.037-.128-.035-.13-.033-.128-.033-.134-.03-.13-.029-.131-.026-.13-.026-.133-.024-.133-.023-.133-.02-.132-.02-.136-.017-.132-.016-.135-.014-.135-.012-.133-.012-.138-.009-.133-.007-.136-.006-.138-.004-.134-.003-.136v-.274l.003-.136.004-.134.006-.139.007-.136.01-.133.01-.138.013-.132.014-.135.016-.135.017-.132.02-.137.02-.13.023-.134.024-.133.024-.126.016-.16-.014-.161-.044-.155-.072-.145-.098-.128-.12-.108-.137-.084-.15-.057-.16-.029zm26.698 1.601l-.161.01-.157.04-.146.067-.131.093-.112.117-.088.135-.061.149-.033.157-.005.134.006.14.006.176.003.177.001.178-.001.177-.003.178-.006.177-.007.176-.01.177-.012.176-.015.176-.016.173-.018.175-.02.175-.024.174-.025.175-.026.17-.03.174-.03.173-.033.17-.036.172-.037.17-.04.17-.042.172-.043.168-.045.166-.048.169-.05.167-.052.168-.053.164-.056.166-.058.166-.06.16-.062.165-.062.158-.066.165-.068.16-.07.16-.07.158-.075.159-.074.155-.079.158-.08.158-.06.15-.03.158-.001.161.029.159.058.15.085.137.108.119.13.097.144.07.156.044.16.013.16-.017.155-.046.143-.074.127-.1.107-.12.07-.115.083-.164.003-.005.002-.004.082-.166.002-.005.003-.004.08-.167.002-.005.002-.004.078-.168.002-.005.002-.004.076-.169.002-.004.002-.005.074-.17.002-.004.002-.005.072-.17.002-.005.002-.005.07-.171.001-.005.002-.005.068-.172.002-.004.002-.005.065-.173.002-.005.002-.005.063-.173.002-.005.002-.005.06-.174.003-.005.001-.005.06-.175.001-.005.002-.005.057-.176.001-.005.002-.005.055-.177.001-.005.002-.005.052-.177.002-.005.001-.005.051-.178.001-.005.002-.005.048-.179.002-.005v-.005l.047-.179.001-.005.002-.005.044-.18v-.005l.002-.005.042-.18.001-.006.001-.005.04-.181.001-.005.001-.005.037-.182.002-.005v-.005l.036-.182v-.006l.002-.005.033-.182v-.006l.002-.005.03-.183.001-.005.001-.005.029-.184v-.005l.001-.006.027-.184v-.005l.001-.005.024-.185v-.005l.001-.005.022-.185v-.006l.001-.005.02-.185v-.006l.001-.005.017-.186v-.005l.001-.005.015-.187v-.005l.001-.005.013-.187v-.01l.01-.187.001-.006v-.005l.009-.187v-.011l.006-.187V16.7l.004-.188v-.011l.001-.188v-.01l-.001-.188v-.011l-.004-.188v-.011l-.006-.187v-.011l-.007-.145-.022-.16-.05-.152-.08-.141-.103-.124-.125-.102-.141-.077-.153-.05-.16-.02zm-30.21.572l-.161.001-.158.032-.15.06-.136.087-.117.11-.095.131-.068.146-.04.156-.012.133-.001.14v.01l.001.188v.011l.004.188v.011l.006.187v.011l.008.187v.011l.011.187v.005l.001.005.013.187v.01l.016.187v.01l.018.186v.011l.02.185.001.005v.006l.022.185.001.005v.005l.025.185v.005l.001.005.027.184v.006l.001.005.029.184v.005l.001.005.031.183.001.005.001.006.033.182.001.005.001.006.035.182.001.005.001.005.038.182v.005l.002.005.04.181v.005l.002.005.042.18.001.006.001.005.044.18.002.005v.005l.047.18.001.004.002.005.048.179.002.005.001.005.05.178.002.005.001.005.053.177.002.005.001.005.055.177.002.005.001.005.057.176.002.005.001.005.06.175.001.005.002.005.061.174.002.005.002.005.063.173.002.005.002.005.065.173.002.005.002.004.067.172.002.005.002.005.07.171.002.005.002.005.072.17.002.005.002.004.074.17.002.005.002.004.076.169.002.004.002.005.078.168.002.004.002.005.08.167.003.004.002.005.082.166.002.004.003.005.02.04.086.136.11.118.13.095.146.07.156.041.16.012.16-.019.155-.048.142-.075.126-.1.105-.123.08-.14.054-.152.024-.16-.006-.16-.036-.158-.051-.123-.018-.034-.078-.158-.074-.155-.074-.16-.071-.157-.07-.16-.068-.16-.067-.165-.062-.158-.062-.164-.059-.161-.058-.166-.056-.166-.053-.164-.052-.168-.05-.167-.048-.17-.045-.165-.043-.168-.043-.172-.039-.17-.037-.17-.036-.172-.033-.17-.03-.173-.03-.174-.027-.17-.025-.175-.022-.174-.021-.175-.018-.175-.017-.173-.014-.176-.012-.176-.01-.177-.007-.176-.006-.177-.003-.178-.001-.177v-.134l-.013-.16-.044-.156-.072-.144-.097-.129-.12-.108-.137-.085-.15-.057-.159-.028zm26.798 2.024l-.16.007-.157.038-.148.066-.132.092-.113.115-.09.134-.062.148-.03.127-.001.004-.023.134-.024.133-.026.133-.026.13-.03.132-.03.129-.032.134-.033.128-.035.13-.037.128-.038.13-.04.126-.04.128-.044.128-.044.126-.046.126-.048.126-.05.125-.05.125-.051.122-.054.123-.055.122-.056.12-.058.122-.06.12-.061.12-.063.119-.062.116-.067.119-.066.116-.069.115-.069.115-.07.113-.073.113-.074.112-.076.113-.077.112-.077.107-.08.11-.08.107-.085.11-.044.056-.088.135-.06.15-.033.158-.002.16.027.16.057.15.083.138.108.12.128.098.144.072.155.045.16.015.161-.016.155-.044.144-.073.128-.098.09-.099.05-.061.003-.004.003-.005.089-.115.003-.004.003-.005.088-.116.003-.004.003-.005.086-.117.003-.004.003-.005.084-.118.003-.004.003-.005.083-.12.003-.004.003-.004.081-.12.003-.005.003-.004.08-.121.003-.005.003-.004.078-.122.003-.005.003-.004.077-.123.002-.005.003-.004.075-.124.003-.005.003-.004.073-.125.003-.005.003-.004.072-.126.002-.004.003-.005.07-.126.003-.005.002-.005.07-.127.002-.004.002-.005.068-.128.002-.005.002-.004.066-.13.003-.004.002-.005.064-.13.002-.004.003-.005.062-.13.002-.005.003-.005.06-.13.003-.005.002-.005.06-.132.002-.005.002-.005.057-.132.003-.005.002-.005.056-.133.002-.005.002-.005.054-.134.002-.004.002-.005.053-.135.002-.005.002-.005.051-.135.002-.005.002-.005.05-.135.001-.005.002-.005.048-.137.001-.005.002-.005.046-.137.002-.005.002-.005.044-.137.002-.005.002-.005.042-.138.002-.005.001-.006.042-.138.001-.005.002-.005.04-.14v-.005l.002-.005.038-.14.001-.005.002-.005.036-.14.001-.005.001-.005.035-.141.001-.005.001-.005.033-.142.001-.005.001-.005.031-.141.001-.006.002-.005.029-.142v-.005l.002-.005.028-.143v-.005l.002-.005.025-.143.001-.006.001-.005.024-.143.001-.005.001-.006.001-.006.01-.161-.02-.16-.05-.154-.077-.141-.102-.125-.123-.104-.141-.079-.153-.051-.16-.022zM6.841 23.019l-.16.024-.152.053-.14.08-.122.105-.101.126-.076.142-.048.154-.018.16.011.161.041.156.07.146.077.109.04.048.003.004.003.004.095.111.003.004.004.004.096.11.004.005.003.004.098.109.003.004.004.004.1.108.003.004.003.004.101.107.004.004.003.004.102.105.004.004.004.004.103.105.004.004.004.003.105.104.003.004.004.003.106.102.004.004.004.004.107.1.004.004.004.004.108.099.004.003.004.004.11.098.003.003.004.004.11.096.004.003.005.004.11.095.005.003.004.004.113.093.004.003.004.004.113.091.004.004.005.003.114.09.004.004.004.003.116.089.004.003.004.003.117.088.004.003.004.003.118.086.004.003.005.003.118.084.004.003.005.003.119.083.004.003.005.003.12.081.005.003.004.003.121.08.005.003.004.003.122.078.005.003.004.003.123.076.005.003.004.003.124.075.005.003.004.003.125.073.004.003.005.002.126.073.004.002.005.003.126.07.005.003.004.002.128.07.004.002.005.002.128.067.005.003.004.002.13.066.004.002.005.003.13.064.004.002.005.003.13.062.005.002.004.003.132.06.004.003.005.002.132.06.005.002.005.002.132.057.005.002.005.002.133.057.005.002.005.002.133.054.005.002.005.002.13.05.154.045.16.016.16-.015.156-.045.144-.072.128-.098.108-.12.083-.138.057-.15.028-.16-.003-.16-.032-.159-.061-.149-.088-.135-.11-.117-.132-.094-.12-.058-.124-.049-.126-.051-.122-.051-.122-.054-.12-.054-.126-.058-.119-.057-.12-.06-.12-.06-.118-.063-.117-.064-.119-.066-.116-.066-.115-.068-.115-.07-.113-.07-.115-.074-.112-.074-.11-.075-.11-.076-.112-.08-.11-.08-.109-.081-.106-.082-.104-.082-.106-.086-.105-.087-.101-.086-.105-.091-.1-.09-.1-.091-.1-.094-.097-.094-.1-.098-.093-.095-.096-.1-.093-.098-.092-.101-.089-.1-.09-.102-.088-.104-.036-.043-.114-.114-.133-.091-.148-.065-.157-.036-.161-.006zm15.063 2.701l-.16.014-.156.044-.12.057-.06.034-.12.066-.117.064-.118.062-.12.061-.12.06-.118.057-.126.058-.12.054-.122.054-.122.05-.126.052-.125.05-.124.046-.127.047-.125.044-.129.043-.126.04-.13.042-.128.038-.127.035-.13.036-.131.034-.129.031-.132.03-.13.03-.135.027-.133.026-.13.023-.13.022-.137.021-.132.02-.134.017-.132.015-.138.015-.135.013-.133.01-.138.01-.136.007-.134.006-.136.004-.14.003-.16.018-.155.047-.142.076-.127.1-.105.122-.08.14-.054.151-.025.16.006.16.035.158.064.148.09.134.114.114.133.092.147.065.157.036.134.008.145-.002h.011l.147-.005h.01l.147-.007h.011l.146-.009h.011l.146-.01h.005l.005-.001.146-.012h.011l.145-.014h.005l.006-.001.145-.016h.011l.144-.018h.006l.005-.001.144-.02h.011l.144-.021.005-.001h.006l.143-.023.006-.001h.005l.143-.025h.005l.006-.002.143-.026h.005l.005-.002.143-.027.005-.001.005-.001.142-.03h.005l.005-.002.142-.03.005-.002.005-.001.142-.033.005-.001.005-.001.14-.035.006-.001.005-.001.14-.037h.005l.005-.002.14-.038.005-.002h.005l.14-.04.005-.002.005-.001.138-.042.005-.001.006-.002.138-.043.005-.001.005-.002.137-.044.005-.002.005-.002.137-.046.005-.002.005-.001.137-.048.005-.002.005-.002.135-.05.005-.001.005-.002.135-.051.005-.002.005-.002.135-.053.005-.002.004-.002.134-.054.005-.002.005-.002.133-.057.005-.002.005-.002.132-.057.005-.003.005-.002.132-.06.005-.001.004-.002.131-.061.005-.003.005-.002.13-.062.005-.003.005-.002.13-.064.004-.003.005-.002.128-.066.005-.002.005-.003.128-.067.005-.002.004-.003.127-.069.005-.002.005-.003.126-.07.005-.003.004-.003.065-.037.132-.093.112-.115.089-.135.062-.149.034-.157.003-.161-.026-.16-.055-.15-.082-.14-.107-.12-.127-.1-.144-.073-.154-.046-.16-.016zM6.33 27.127l-.16.023-.152.053-.14.08-.122.105-.101.126-.076.142-.048.154-.02.16.012.161.041.156.07.146.094.13.096.093.032.026.004.003.004.004.145.117.004.003.004.004.146.115.005.003.004.004.147.113.005.003.004.004.149.111.004.003.004.003.15.11.005.003.004.003.151.108.004.003.005.003.152.106.005.003.004.003.154.104.004.003.005.003.154.102.005.002.004.003.156.1.005.003.004.003.157.098.005.003.004.002.159.096.004.003.005.003.16.094.004.003.004.002.16.092.005.003.005.002.161.09.005.003.005.002.162.088.005.003.004.002.164.086.005.003.004.002.165.084.005.003.004.002.166.082.004.002.005.003.167.08.004.002.005.002.168.078.004.002.005.002.168.076.005.002.005.002.17.074.004.002.005.002.17.072.005.002.005.002.17.07.006.002.005.001.171.068.005.002.005.002.173.065.005.002.005.002.173.063.005.002.005.002.174.06.005.003.005.001.175.06.005.001.005.002.176.057.005.001.005.002.176.055.006.001.005.002.177.052.005.002.005.001.178.05.005.002.005.002.178.048.006.001.005.002.179.046.005.001.005.002.18.044h.005l.005.002.18.042.006.001.005.001.159.035.16.02.16-.01.157-.04.146-.069.13-.094.112-.117.087-.136.06-.149.033-.158.002-.161-.028-.159-.057-.15-.084-.138-.108-.12-.128-.098-.144-.072-.128-.039-.154-.033-.168-.04-.171-.041-.17-.044-.168-.046-.167-.047-.168-.05-.165-.051-.166-.054-.166-.056-.163-.057-.165-.06-.161-.062-.164-.064-.16-.065-.16-.068-.162-.07-.157-.07-.157-.074-.157-.075-.156-.077-.153-.079-.156-.082-.153-.082-.154-.086-.15-.086-.152-.09-.148-.09-.147-.092-.149-.095-.145-.095-.144-.098-.145-.1-.143-.102-.14-.103-.14-.104-.14-.108-.139-.11-.136-.11-.027-.022-.133-.091-.148-.065-.157-.036-.161-.006zm19.215.087l-.16.01-.157.039-.146.067-.11.076-.064.051-.139.11-.14.108-.14.104-.14.103-.143.101-.145.101-.144.098-.145.095-.149.095-.148.093-.147.089-.152.09-.15.086-.154.086-.153.082-.156.082-.153.079-.156.077-.157.075-.158.073-.157.071-.16.07-.16.068-.161.065-.164.064-.161.061-.165.06-.163.058-.166.056-.166.054-.166.051-.167.05-.167.047-.17.046-.168.044-.171.042-.168.039-.17.037-.11.023-.154.047-.143.075-.126.1-.106.122-.081.139-.054.152-.025.16.006.16.035.158.063.148.09.133.114.115.132.092.148.065.157.037.16.007.133-.016.115-.024.005-.001.005-.001.181-.04h.005l.005-.002.18-.042.006-.001.005-.001.18-.044.005-.002.005-.001.18-.046.004-.002h.005l.179-.05h.005l.005-.002.178-.05.005-.002.005-.002.177-.052.005-.002.005-.001.177-.055.005-.002.005-.001.176-.057.005-.002.005-.002.175-.059.005-.001.005-.002.174-.061.005-.002.005-.002.173-.063.005-.002.005-.002.173-.065.004-.002.005-.002.172-.068.005-.002.005-.002.171-.07.005-.001.005-.002.17-.072.005-.002.004-.002.17-.074.005-.002.004-.002.169-.076.004-.002.005-.002.168-.078.004-.002.005-.003.167-.08.004-.002.005-.002.166-.082.004-.002.005-.003.165-.084.004-.002.005-.003.163-.086.005-.002.005-.003.162-.088.005-.002.005-.003.161-.09.005-.002.004-.003.16-.092.005-.003.005-.002.16-.094.004-.003.004-.003.158-.096.005-.002.004-.003.158-.098.004-.003.005-.003.156-.1.004-.003.004-.003.155-.101.005-.003.004-.003.154-.104.004-.003.004-.003.153-.106.004-.003.005-.003.151-.108.004-.003.005-.003.15-.11.004-.003.004-.003.149-.112.004-.003.004-.003.148-.113.004-.004.004-.003.147-.115.004-.004.004-.003.068-.055.116-.113.092-.132.066-.147.038-.157.008-.16-.022-.16-.05-.153-.08-.14-.103-.125-.124-.102-.142-.077-.153-.05-.16-.02z"
 }));
 function _extends$N() {
-  _extends$N = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$N = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$N.apply(this, arguments);
+    return n4;
+  }, _extends$N.apply(null, arguments);
 }
 var IntermediateEventCatchNonInterruptingEscalationIcon = ({
   styles = {},
@@ -50742,18 +54339,13 @@ var IntermediateEventCatchNonInterruptingEscalationIcon = ({
   d: "M16.012 9.222c-1.673 4.657-2.735 9.508-4.409 14.164 1.536-1.526 2.874-3.236 4.41-4.762l4.408 4.762c-1.497-4.712-2.911-9.451-4.409-14.164zm.032 2.93c.823 2.588 1.599 5.19 2.421 7.777l-2.42-2.614c-.683.598-2.454 2.886-2.34 2.39.871-2.489 1.448-5.07 2.34-7.552zM16.012.312c-1.448.02-2.93.157-4.302.628-.852.447-.255 1.863.66 1.574 2.255-.608 4.648-.607 6.922-.108.934.075 1.228-1.376.338-1.67C18.451.44 17.227.317 16.012.311zm9.012 2.934c-.913-.104-1.272 1.258-.454 1.648 1.834 1.36 3.293 3.185 4.31 5.22.526.776 1.842.098 1.515-.78a15.522 15.522 0 00-5.06-6.006c-.1-.044-.203-.07-.31-.082zM6.65 3.59c-.762.089-1.24.809-1.805 1.267C3.38 6.295 2.163 8.007 1.37 9.905c-.266.898 1.094 1.484 1.564.675a14.825 14.825 0 014.327-5.56c.476-.515.09-1.419-.612-1.431zm9.362.007c-.698.066-1.689-.16-2.033.635-.282.733.535 1.358 1.217 1.125 1.806-.147 3.63.203 5.293.907.902.255 1.472-1.112.656-1.573-1.6-.735-3.374-1.089-5.133-1.094zm-5.479 1.365c-.835.15-1.517.76-2.21 1.226-1.203.94-2.318 2.061-3.057 3.402-.33.904 1.063 1.552 1.547.723 1.045-1.656 2.596-2.925 4.285-3.873.545-.499.171-1.463-.565-1.478zm13.903 2.115c-.875-.07-1.22 1.173-.501 1.627 1.325 1.34 2.188 3.062 2.748 4.84.468.84 1.869.21 1.557-.699-.604-2.118-1.751-4.097-3.351-5.615a.93.93 0 00-.453-.153zM4.467 13.132c-.822-.07-.996.826-1.046 1.455-.256 1.93-.094 3.933.562 5.769.406.844 1.807.365 1.612-.551a11.498 11.498 0 01-.334-5.808.874.874 0 00-.794-.865zm26.687 1.6c-.746-.037-1.014.785-.879 1.395.043 2.393-.57 4.771-1.66 6.894-.31.884 1.02 1.536 1.53.75a15.632 15.632 0 001.821-8.372.876.876 0 00-.812-.667zm-30.197.571c-.782-.073-1.044.775-.933 1.404.068 2.414.661 4.833 1.809 6.962.534.77 1.842.076 1.505-.798a14.833 14.833 0 01-1.603-6.861.876.876 0 00-.778-.707zm26.787 2.024c-.777-.048-.952.797-1.021 1.392-.354 1.692-1.202 3.231-2.216 4.608-.407.872.925 1.638 1.48.852 1.361-1.733 2.296-3.827 2.582-6.017a.874.874 0 00-.825-.835zM6.857 23.012c-.808.018-1.082 1.122-.47 1.59 1.393 1.607 3.187 2.886 5.194 3.599.91.222 1.43-1.165.598-1.596a11.495 11.495 0 01-4.723-3.396.899.899 0 00-.599-.197zm15.057 2.7c-.81.194-1.504.76-2.325.972-1.203.458-2.5.536-3.758.664-.869.307-.573 1.728.346 1.663 2.201-.034 4.412-.626 6.293-1.778.604-.495.227-1.532-.556-1.521zM6.346 27.118c-.833.008-1.11 1.218-.395 1.617 1.986 1.602 4.358 2.749 6.868 3.226.933.076 1.227-1.376.338-1.67a14.838 14.838 0 01-6.345-3.066.929.929 0 00-.466-.107zm19.208.087c-.766.09-1.241.841-1.922 1.158-1.516.991-3.251 1.58-4.996 2.005-.872.405-.346 1.849.584 1.604 2.543-.526 4.98-1.66 6.963-3.344.47-.52.072-1.42-.63-1.423z"
 }));
 function _extends$M() {
-  _extends$M = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$M = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$M.apply(this, arguments);
+    return n4;
+  }, _extends$M.apply(null, arguments);
 }
 var IntermediateEventCatchNonInterruptingMessageIcon = ({
   styles = {},
@@ -50766,18 +54358,13 @@ var IntermediateEventCatchNonInterruptingMessageIcon = ({
   d: "M8.742 10.464v11.072h14.516V10.464H8.742zm3.224 1.73h8.066a69569 69569 0 00-4.034 3.22l-4.032-3.22zm9.565 1.018v6.594H10.469v-6.593L16 17.63l5.532-4.419zM16 0h-.005l-.188.001h-.011l-.188.004h-.011l-.187.006h-.011l-.187.008h-.005L15.2.02l-.187.01h-.005l-.005.001-.187.013h-.011L14.62.06h-.01l-.186.018h-.011l-.185.02-.005.001h-.006l-.185.022-.005.001h-.005l-.185.025h-.005l-.005.001-.185.027h-.005l-.005.001-.184.029h-.005l-.005.001-.183.031-.006.001-.005.001-.182.033-.006.001-.005.001-.182.035-.005.001-.005.001-.182.038h-.005l-.005.002-.181.04h-.005l-.005.002-.18.042-.006.001-.005.001-.18.044-.005.002h-.005l-.17.045-.152.054-.139.082-.121.106-.1.127-.074.143-.046.155-.017.16.013.16.043.156.07.145.097.13.119.108.137.085.15.058.159.03.16-.001.133-.023.165-.043.168-.041.171-.04.171-.037.172-.036.17-.033.173-.03.17-.03.177-.027.171-.025.175-.022.175-.02.175-.02.176-.016.175-.014.177-.012.176-.01.177-.007.174-.006.177-.003L16 1.73h.177l.178.004.174.006.177.007.176.01.177.012.175.014.176.017.175.018.175.02.175.023.171.025.176.027.17.03.174.03.17.033.171.036.154.033.16.02.161-.01.156-.04.146-.069.131-.094.111-.117.087-.135.061-.15.032-.158.002-.16-.027-.16-.057-.15L20 .714l-.108-.12-.128-.097-.145-.073-.128-.038-.158-.035-.005-.001-.005-.001L19.14.31h-.005l-.005-.002-.182-.035h-.006l-.005-.002-.182-.033h-.006l-.005-.002-.183-.03-.005-.001-.006-.001-.183-.029h-.005l-.006-.001-.184-.027h-.005l-.005-.001-.185-.024h-.005L17.968.12 17.783.1l-.006-.001h-.005l-.185-.02h-.006l-.005-.001L17.39.06h-.005L17.38.06l-.187-.015h-.005l-.005-.001-.187-.013h-.011L16.8.02h-.011L16.6.01h-.011l-.187-.006h-.011L16.204 0h-.011L16.005 0H16zm9.015 2.935l-.16.004-.158.033-.15.062-.134.09-.116.111-.093.132-.067.147-.038.156-.01.161.022.16.05.153.078.141.103.124.102.087.045.034.142.106.137.105.14.11.136.11.135.112.134.115.134.117.13.115.132.122.128.12.127.122.126.125.124.126.124.128.121.13.118.128.118.132.117.133.113.134.113.136.11.136.109.137.109.142.104.14.103.14.101.142.1.144.099.146.095.145.094.147.093.15.092.15.087.149.087.15.084.152.084.155.08.152.08.155.04.081.084.138.11.119.128.096.145.072.155.043.16.013.16-.016.155-.046.144-.074.127-.099.106-.12.083-.14.055-.151.026-.16-.004-.16-.034-.158-.05-.124-.042-.085-.002-.004-.003-.005-.084-.165-.002-.004-.003-.005-.086-.164-.002-.004-.003-.005-.088-.162-.002-.005-.003-.005-.09-.161-.002-.005-.003-.004-.092-.16-.003-.005-.002-.005-.094-.16-.003-.004-.003-.004-.096-.159-.002-.004-.003-.005-.098-.157-.003-.004-.003-.005-.1-.156-.003-.004-.003-.005-.101-.154-.003-.005-.003-.004-.104-.154-.003-.004-.003-.005-.106-.152-.003-.005-.003-.004-.108-.151-.003-.004-.003-.005-.11-.15-.003-.004-.003-.004-.111-.15-.004-.003-.003-.005-.113-.147-.004-.004-.003-.005-.115-.146-.004-.004-.003-.004-.117-.145-.004-.004-.003-.004-.12-.144-.003-.004-.003-.004-.121-.142-.004-.004-.003-.004-.123-.141-.003-.004-.004-.004-.125-.14-.003-.004-.004-.004-.127-.138-.003-.004-.004-.004-.128-.136-.004-.004-.004-.004-.13-.135-.004-.004-.004-.004-.132-.134-.003-.004-.004-.003-.134-.133-.004-.003-.004-.004-.135-.13-.004-.004-.004-.004-.136-.128-.004-.004-.004-.004-.138-.126-.004-.004-.004-.003-.14-.125-.004-.004-.004-.003-.14-.123-.005-.004-.004-.003-.142-.121-.004-.004-.004-.003-.144-.12-.004-.003-.004-.003-.145-.117-.004-.004-.004-.003-.147-.115-.004-.004-.004-.003-.148-.113-.004-.003-.004-.004-.149-.111-.004-.003-.004-.004-.05-.036-.14-.083-.15-.055-.16-.027zM6.634 3.28l-.161.008-.157.037-.147.066-.111.074-.04.032-.005.003-.004.004-.145.117-.004.003-.004.004-.144.119-.004.003-.004.004-.142.12-.004.004-.004.004-.141.123-.004.003-.004.004-.14.125-.004.003-.004.004-.138.126-.004.004-.004.004-.136.128-.004.004-.004.004-.135.13-.004.004-.004.003-.134.133-.004.003-.004.004-.132.134-.003.004-.004.004-.13.135-.004.004-.004.004-.128.136-.004.004-.004.004-.126.138-.004.004-.003.004-.125.14-.004.004-.003.004-.123.14-.004.005-.003.004-.121.142-.004.004-.003.004-.12.144-.003.004-.003.004-.117.145-.004.004-.003.004-.115.146-.004.005-.003.004-.113.147-.003.005-.004.004-.111.149-.003.004-.004.004-.11.15-.002.005-.003.004-.108.151-.003.004-.003.005-.106.152-.003.005-.003.004-.104.154-.003.004-.003.005-.102.154-.003.005-.002.004-.1.156-.003.005-.003.004-.098.157-.003.005-.003.004-.096.159-.002.004-.003.005-.094.16-.003.004-.002.004-.092.16-.003.005-.003.005-.09.161-.002.005-.003.005-.088.162-.002.005-.003.004-.086.164-.002.005-.002.004-.084.165-.003.005-.002.004-.082.166-.002.004-.003.005-.08.167-.002.004-.002.005-.078.168-.002.004-.002.005-.045.1-.053.153-.023.16.007.16.037.157.065.148.092.132.114.114.134.09.148.064.157.035.161.006.16-.025.152-.054.14-.08.121-.106.1-.126.065-.118.043-.095.074-.16.075-.155.077-.157.08-.155.08-.152.083-.155.085-.152.086-.15.088-.149.091-.15.094-.15.094-.147.095-.145.099-.146.1-.144.1-.142.104-.14.104-.14.11-.142.107-.137.11-.136.114-.136.113-.134.117-.133.118-.132.117-.129.122-.13.124-.127.123-.126.127-.125.127-.122.128-.12.132-.122.13-.115.133-.117.135-.115.135-.111.136-.11.037-.03.117-.11.094-.132.068-.146.04-.156.01-.161-.02-.16-.05-.154-.076-.141-.102-.125-.123-.104-.14-.08-.153-.051-.16-.023zM16 3.286h-.005l-.148.001h-.01l-.147.003h-.011l-.147.005h-.011l-.146.007h-.011l-.146.009h-.011l-.146.01h-.005l-.005.001-.146.012h-.011l-.145.014h-.006l-.005.001-.05.006-.158.031-.15.06-.135.088-.117.111-.094.13-.069.147-.04.156-.01.16.019.16.049.154.076.142.102.125.123.105.14.08.152.051.16.023.134-.003.045-.005.135-.013.133-.01.136-.01.135-.007.137-.006.136-.004.136-.003h.274l.136.003.136.004.136.006.136.007.136.01.133.01.135.013.135.014.135.016.134.018.132.018.134.021.133.023.133.024.133.025.13.027.132.03.132.03.129.031.13.034.129.035.129.036.13.04.126.038.128.042.126.042.128.045.127.047.126.047.12.048.127.051.123.052.006.002.147.048.16.021.16-.009.157-.038.147-.067.131-.093.112-.116.089-.135.062-.149.033-.158.004-.16-.027-.16-.055-.151-.083-.139-.107-.12-.127-.099-.118-.063-.004-.001-.005-.003-.005-.002-.133-.056-.005-.002-.005-.002-.134-.054-.004-.002-.005-.002-.135-.053-.005-.002-.005-.002-.135-.051-.005-.002-.005-.002-.135-.05-.005-.001-.005-.002-.137-.048-.005-.001-.005-.002-.137-.046-.005-.002-.005-.002-.137-.044-.005-.002-.005-.001-.138-.043-.006-.002-.005-.001-.138-.042-.005-.001-.005-.002-.14-.04H19.4l-.005-.002-.14-.038-.005-.001-.005-.002-.14-.036-.005-.001-.005-.001-.141-.035-.005-.001-.005-.001-.142-.033-.005-.001-.005-.001-.142-.031-.005-.002h-.005l-.142-.03-.005-.001-.005-.001-.143-.028h-.005l-.005-.002-.143-.025-.006-.001-.005-.001-.143-.024-.005-.001-.006-.001-.143-.022-.006-.001h-.005l-.144-.022h-.005l-.006-.001-.144-.019h-.005l-.006-.001-.144-.017h-.006l-.005-.001-.145-.016h-.011l-.145-.014H17.1l-.005-.001-.146-.012h-.01l-.146-.01-.006-.001h-.005l-.146-.009h-.011l-.147-.006h-.01l-.147-.005h-.011l-.147-.003h-.011l-.147-.001H16zm-5.482 1.366l-.16.008-.157.037-.123.053-.06.032-.005.002-.004.003-.128.069-.004.002-.005.003-.126.07-.005.003-.004.002-.126.072-.005.003-.004.003-.125.073-.004.003-.005.003-.124.075-.004.003-.005.002-.123.077-.004.003-.005.003-.122.078-.004.003-.005.003-.121.08-.004.002-.005.003-.12.082-.005.003-.004.003-.12.083-.004.003-.004.003-.118.084-.005.003-.004.003-.118.086-.004.003-.004.003-.117.088-.004.003-.004.003-.116.089-.004.003-.004.004-.114.09-.005.003-.004.003-.113.092-.004.004-.004.003-.113.093-.004.004-.004.003-.111.095-.005.003-.004.004-.11.096-.004.004-.004.003-.11.098-.003.003-.004.004-.108.1-.004.003-.004.003-.107.101-.004.004-.004.003-.106.102-.004.004-.003.004-.105.103-.004.004-.004.004-.103.105-.004.004-.004.003-.102.106-.003.004-.004.004-.1.107-.004.004-.004.004-.099.108-.004.004-.003.004-.098.11-.003.003-.004.004-.096.11-.004.005-.003.004-.095.111-.003.004-.004.004-.093.113-.003.004-.004.004-.092.113-.003.004-.003.005-.09.114-.004.004-.003.004-.089.116-.003.004-.003.004-.088.117-.003.004-.003.004-.086.118-.003.004-.003.005-.084.118-.003.004-.003.005-.083.12-.003.003-.003.005-.082.12-.003.005-.002.004-.068.103-.076.142-.048.154-.018.16.011.161.041.156.07.146.095.13.117.11.136.086.15.06.158.03.162.002.158-.03.15-.057.138-.085.119-.109.082-.105.065-.099.075-.11.077-.113.077-.107.08-.11.08-.108.084-.108.083-.105.086-.106.086-.104.088-.104.089-.101.09-.102.093-.101.093-.099.094-.097.095-.096.098-.097.098-.095.099-.093.1-.092.103-.091.101-.089.104-.088.104-.086.106-.086.106-.083.106-.082.109-.082.108-.079.11-.078.11-.076.112-.076.112-.074.113-.072.113-.071.115-.07.115-.068.118-.067.117-.065.12-.065.054-.029.135-.088.116-.111.094-.132.068-.146.04-.156.009-.161-.02-.16-.05-.153-.078-.142-.102-.125-.123-.103-.141-.079-.153-.051-.16-.022zm13.91 2.116l-.162.008-.157.037-.147.066-.132.092-.113.116-.09.134-.063.148-.034.157-.005.162.025.159.055.152.082.138.086.103.09.09.094.098.092.099.093.1.091.103.089.101.088.104.086.104.086.106.083.105.083.108.08.108.081.11.077.107.077.112.075.111.075.114.072.113.071.113.07.114.068.118.067.115.065.118.064.117.062.117.061.121.059.119.059.122.056.121.054.12.055.125.051.123.051.125.048.123.048.127.047.126.044.125.043.128.042.129.039.126.038.13.022.076.058.15.085.137.11.119.129.096.145.07.155.043.16.013.161-.017.154-.046.144-.075.126-.1.106-.12.082-.14.055-.151.025-.16-.005-.16-.026-.132-.023-.082-.002-.005-.001-.005-.042-.139-.001-.005-.002-.005-.043-.138-.001-.005-.002-.005-.044-.137-.002-.005-.002-.005-.046-.137-.002-.005-.001-.005-.048-.137-.002-.005-.002-.005-.05-.135-.001-.005-.002-.005-.051-.135-.002-.005-.002-.005-.053-.135-.002-.005-.002-.005-.054-.133-.002-.005-.002-.005-.057-.133-.002-.005-.002-.005-.057-.132-.003-.005-.002-.005-.06-.132-.001-.005-.002-.004-.061-.132-.003-.004-.002-.005-.063-.13-.002-.005-.002-.005-.064-.13-.003-.004-.002-.005-.066-.129-.002-.004-.003-.005-.067-.128-.002-.005-.003-.004-.069-.128-.002-.004-.003-.005-.07-.126-.003-.005-.003-.004-.072-.126-.002-.005-.003-.004-.074-.125-.002-.004-.003-.005-.075-.124-.003-.004-.003-.005-.076-.123-.003-.004-.003-.005-.078-.122-.003-.004-.003-.005-.08-.121-.003-.004-.003-.005-.081-.12-.003-.005-.003-.004-.083-.12-.003-.004-.003-.004-.084-.118-.003-.005-.003-.004-.086-.118-.003-.004-.004-.004-.087-.117-.003-.004-.003-.004-.09-.116-.002-.004-.004-.004-.09-.114-.003-.005-.004-.004-.091-.113-.004-.004-.003-.004-.094-.113-.003-.004-.003-.004-.095-.111-.004-.004-.003-.004-.096-.11-.004-.005-.003-.004-.098-.11-.004-.003-.003-.004-.1-.108-.003-.004-.004-.004-.1-.107-.004-.004-.004-.004-.102-.106-.003-.003-.004-.004-.093-.095-.124-.103-.14-.08-.153-.05-.16-.023zM4.45 12.826l-.161.002-.158.032-.15.06-.135.088-.118.11-.094.131-.069.146-.035.129-.026.132v.005l-.002.005-.025.143-.001.005-.001.006-.024.143-.001.005-.001.006-.022.143-.001.006-.001.005-.02.144-.001.005-.001.005-.019.145v.005l-.001.006-.017.144v.006l-.001.005-.016.145v.011l-.014.145v.005l-.001.006-.012.146v.01l-.01.146-.001.006v.005l-.009.146v.011l-.007.146v.011l-.004.147v.011l-.003.147v.01l-.002.148v.01l.001.148v.01l.003.147v.011l.005.147v.01l.007.147v.011l.009.146v.011l.01.146v.01l.013.146v.011l.014.145v.005l.001.006.016.145v.011l.018.144v.006l.001.005.019.144v.006l.001.005.021.144v.005l.002.006.022.143v.006l.002.005.024.143v.005l.002.006.025.143.001.005.001.005.028.143.001.005.001.005.03.142v.005l.002.006.03.141.002.005.001.005.033.142v.005l.002.005.035.14v.006l.002.005.036.14.002.005.001.005.038.14.001.005.002.005.04.14v.005l.002.005.042.138.001.006.002.005.042.138.002.005.002.005.017.054.064.148.09.134.114.114.132.092.148.065.157.037.16.007.16-.023.153-.052.14-.08.123-.104.102-.125.076-.142.049-.153.02-.16-.011-.161-.031-.13-.017-.051-.039-.126-.038-.13-.037-.128-.035-.13-.033-.128-.033-.134-.03-.13-.029-.131-.026-.13-.026-.133-.024-.133-.023-.133-.02-.132-.02-.136-.017-.132-.016-.135-.014-.135-.012-.133-.012-.138-.009-.133-.007-.136-.006-.138-.004-.134-.003-.136v-.274l.003-.136.004-.134.006-.139.007-.136.01-.133.01-.138.013-.132.014-.135.016-.135.017-.132.02-.137.02-.13.023-.134.024-.133.024-.126.016-.16-.014-.161-.044-.155-.072-.145-.098-.128-.12-.108-.137-.084-.15-.057-.16-.029zm26.698 1.601l-.161.01-.157.04-.146.067-.131.093-.112.117-.088.135-.061.149-.033.157-.005.134.006.14.006.176.003.177.001.178-.001.177-.003.178-.006.177-.007.176-.01.177-.012.176-.015.176-.016.173-.018.175-.02.175-.024.174-.025.175-.026.17-.03.174-.03.173-.033.17-.036.172-.037.17-.04.17-.042.172-.043.168-.045.166-.048.169-.05.167-.052.168-.053.164-.056.166-.058.166-.06.16-.062.165-.062.158-.066.165-.068.16-.07.16-.07.158-.075.159-.074.155-.079.158-.08.158-.06.15-.03.158-.001.161.029.159.058.15.085.137.108.119.13.097.144.07.156.044.16.013.16-.017.155-.046.143-.074.127-.1.107-.12.07-.115.083-.164.003-.005.002-.004.082-.166.002-.005.003-.004.08-.167.002-.005.002-.004.078-.168.002-.005.002-.004.076-.169.002-.004.002-.005.074-.17.002-.004.002-.005.072-.17.002-.005.002-.005.07-.171.001-.005.002-.005.068-.172.002-.004.002-.005.065-.173.002-.005.002-.005.063-.173.002-.005.002-.005.06-.174.003-.005.001-.005.06-.175.001-.005.002-.005.057-.176.001-.005.002-.005.055-.177.001-.005.002-.005.052-.177.002-.005.001-.005.051-.178.001-.005.002-.005.048-.179.002-.005v-.005l.047-.179.001-.005.002-.005.044-.18v-.005l.002-.005.042-.18.001-.006.001-.005.04-.181.001-.005.001-.005.037-.182.002-.005v-.005l.036-.182v-.006l.002-.005.033-.182v-.006l.002-.005.03-.183.001-.005.001-.005.029-.184v-.005l.001-.006.027-.184v-.005l.001-.005.024-.185v-.005l.001-.005.022-.185v-.006l.001-.005.02-.185v-.006l.001-.005.017-.186v-.005l.001-.005.015-.187v-.005l.001-.005.013-.187v-.01l.01-.187.001-.006v-.005l.009-.187v-.011l.006-.187v-.011l.004-.188v-.011l.001-.188v-.01l-.001-.188v-.011l-.004-.188v-.011l-.006-.187v-.011l-.007-.145-.022-.16-.05-.152-.08-.141-.103-.124-.125-.102-.141-.077-.153-.05-.16-.02zM.938 15L.777 15l-.158.032-.15.06-.136.087-.117.11-.095.131-.068.146-.04.156-.012.133-.001.14v.01l.001.188v.011l.004.188v.011l.006.187v.011l.008.187v.011l.011.187v.005l.001.005.013.187v.01l.016.187v.01l.018.186v.011l.02.185.001.005v.006l.022.185.001.005v.005l.025.185v.005l.001.005.027.184v.006l.001.005.029.184v.005l.001.005.031.183.001.005.001.006.033.182.001.005.001.006.035.182.001.005.001.005.038.182v.005l.002.005.04.181v.005l.002.005.042.18.001.006.001.005.044.18.002.005v.005l.047.18.001.004.002.005.048.179.002.005.001.005.05.178.002.005.001.005.053.177.002.005.001.005.055.177.002.005.001.005.057.176.002.005.001.005.06.175.001.005.002.005.061.174.002.005.002.005.063.173.002.005.002.005.065.173.002.005.002.004.067.172.002.005.002.005.07.171.002.005.002.005.072.17.002.005.002.004.074.17.002.005.002.004.076.169.002.004.002.005.078.168.002.004.002.005.08.167.003.004.002.005.082.166.002.004.003.005.02.04.086.136.11.118.13.095.146.07.156.041.16.012.16-.019.155-.048.142-.075.126-.1.105-.123.08-.14.054-.152.024-.16-.006-.16-.036-.158-.051-.123-.018-.034-.078-.158L3.1 22.1l-.074-.16-.071-.157-.07-.16-.068-.16-.067-.165-.062-.158-.062-.164-.059-.161-.058-.166-.056-.166-.053-.164-.052-.168-.05-.167-.048-.17-.045-.165-.043-.168-.043-.172-.039-.17-.037-.17-.036-.172-.033-.17-.03-.173-.03-.174-.027-.17-.025-.175-.022-.174-.021-.175-.018-.175-.017-.173-.014-.176-.012-.176-.01-.177-.007-.176-.006-.177-.003-.178L1.73 16v-.134l-.013-.16-.044-.156-.072-.144-.097-.129-.12-.108-.137-.085-.15-.057L.938 15zm26.798 2.024l-.16.007-.157.038-.148.066-.132.092-.113.115-.09.134-.062.148-.03.127-.001.004-.023.134-.024.133-.026.133-.026.13-.03.132-.03.129-.032.134-.033.128-.035.13-.037.128-.038.13-.04.126-.04.128-.044.128-.044.126-.046.126-.048.126-.05.125-.05.125-.051.122-.054.123-.055.122-.056.12-.058.122-.06.12-.061.12-.063.119-.062.116-.067.119-.066.116-.069.115-.069.115-.07.113-.073.113-.074.112-.076.113-.077.112-.077.107-.08.11-.08.107-.085.11-.044.056-.088.135-.06.15-.033.158-.002.16.027.16.057.15.083.138.108.12.128.098.144.072.155.045.16.015.161-.016.155-.044.144-.073.128-.098.09-.099.05-.061.003-.004.003-.005.089-.115.003-.004.003-.005.088-.116.003-.004.003-.005.086-.117.003-.004.003-.005.084-.118.003-.004.003-.005.083-.12.003-.004.003-.004.081-.12.003-.005.003-.004.08-.121.003-.005.003-.004.078-.122.003-.005.003-.004.077-.123.002-.005.003-.004.075-.124.003-.005.003-.004.073-.125.003-.005.003-.004.072-.126.002-.004.003-.005.07-.126.003-.005.002-.005.07-.127.002-.004.002-.005.068-.128.002-.005.002-.004.066-.13.003-.004.002-.005.064-.13.002-.004.003-.005.062-.13.002-.005.003-.005.06-.13.003-.005.002-.005.06-.132.002-.005.002-.005.057-.132.003-.005.002-.005.056-.133.002-.005.002-.005.054-.134.002-.004.002-.005.053-.135.002-.005.002-.005.051-.135.002-.005.002-.005.05-.135.001-.005.002-.005.048-.137.001-.005.002-.005.046-.137.002-.005.002-.005.044-.137.002-.005.002-.005.042-.138.002-.005.001-.006.042-.138.001-.005.002-.005.04-.14V19.4l.002-.005.038-.14.001-.005.002-.005.036-.14.001-.005.001-.005.035-.141.001-.005.001-.005.033-.142.001-.005.001-.005.031-.141.001-.006.002-.005.029-.142v-.005l.002-.005.028-.143v-.005l.002-.005.025-.143.001-.006.001-.005.024-.143.001-.005.001-.006.001-.006.01-.161-.02-.16-.05-.154-.077-.141-.102-.125-.123-.104-.141-.079-.153-.051-.16-.022zM6.841 22.71l-.16.024-.152.053-.14.08-.122.105-.101.126-.076.142-.048.154-.018.16.011.161.041.156.07.146.077.109.04.048.003.004.003.004.095.111.003.004.004.004.096.11.004.005.003.004.098.109.003.004.004.004.1.108.003.004.003.004.101.107.004.004.003.004.102.105.004.004.004.004.103.105.004.004.004.003.105.104.003.004.004.003.106.102.004.004.004.004.107.1.004.004.004.004.108.099.004.003.004.004.11.098.003.003.004.004.11.096.004.003.005.004.11.095.005.003.004.004.113.093.004.003.004.004.113.091.004.004.005.003.114.09.004.004.004.003.116.089.004.003.004.003.117.088.004.003.004.003.118.086.004.003.005.003.118.084.004.003.005.003.119.083.004.003.005.003.12.081.005.003.004.003.121.08.005.003.004.003.122.078.005.003.004.003.123.076.005.003.004.003.124.075.005.003.004.003.125.073.004.003.005.002.126.073.004.002.005.003.126.07.005.003.004.002.128.07.004.002.005.002.128.067.005.003.004.002.13.066.004.002.005.003.13.064.004.002.005.003.13.062.005.002.004.003.132.06.004.003.005.002.132.06.005.002.005.002.132.057.005.002.005.002.133.057.005.002.005.002.133.054.005.002.005.002.13.05.154.045.16.016.16-.015.156-.045.144-.072.128-.098.108-.12.083-.138.057-.15.028-.16-.003-.16-.032-.159-.061-.149-.088-.135-.11-.117-.132-.094-.12-.058-.124-.049-.126-.051-.122-.051-.122-.054-.12-.054-.126-.058-.119-.057-.12-.06-.12-.06-.118-.063-.117-.064-.119-.066-.116-.066-.115-.068-.115-.07-.113-.07-.115-.074-.112-.074-.11-.075-.11-.076-.112-.08-.11-.08-.109-.081-.106-.082-.104-.082-.106-.086-.105-.087-.101-.086-.105-.091-.1-.09-.1-.091-.1-.094-.097-.094-.1-.098-.093-.095-.096-.1-.093-.098-.092-.101-.089-.1-.09-.102-.088-.104-.036-.043-.114-.114-.133-.091-.148-.065-.157-.036-.161-.006zm15.063 2.701l-.16.014-.156.044-.12.057-.06.034-.12.066-.117.064-.118.062-.12.061-.12.06-.118.057-.126.058-.12.054-.122.054-.122.05-.126.052-.125.05-.124.046-.127.047-.125.044-.129.043-.126.04-.13.042-.128.038-.127.035-.13.036-.131.034-.129.031-.132.03-.13.03-.135.027-.133.026-.13.023-.13.022-.137.021-.132.02-.134.017-.132.015-.138.015-.135.013-.133.01-.138.01-.136.007-.134.006-.136.004-.14.003-.16.018-.155.047-.142.076-.127.1-.105.122-.08.14-.054.151-.025.16.006.16.035.158.064.148.09.134.114.114.133.092.147.065.157.036.134.008.145-.002h.011l.147-.005h.01l.147-.007h.011l.146-.009h.011l.146-.01h.005l.005-.001.146-.012h.011l.145-.014h.005l.006-.001.145-.016h.011l.144-.018h.006l.005-.001.144-.02h.011l.144-.021.005-.001h.006l.143-.023.006-.001h.005l.143-.025h.005l.006-.002.143-.026h.005l.005-.002.143-.027.005-.001.005-.001.142-.03h.005l.005-.002.142-.03.005-.002.005-.001.142-.033.005-.001.005-.001.14-.035.006-.001.005-.001.14-.037h.005l.005-.002.14-.038.005-.002h.005l.14-.04.005-.002.005-.001.138-.042.005-.001.006-.002.138-.043.005-.001.005-.002.137-.044.005-.002.005-.002.137-.046.005-.002.005-.001.137-.048.005-.002.005-.002.135-.05.005-.001.005-.002.135-.051.005-.002.005-.002.135-.053.005-.002.004-.002.134-.054.005-.002.005-.002.133-.057.005-.002.005-.002.132-.057.005-.003.005-.002.132-.06.005-.001.004-.002.131-.061.005-.003.005-.002.13-.062.005-.003.005-.002.13-.064.004-.003.005-.002.128-.066.005-.002.005-.003.128-.067.005-.002.004-.003.127-.069.005-.002.005-.003.126-.07.005-.003.004-.003.065-.037.132-.093.112-.115.089-.135.062-.149.034-.157.003-.161-.026-.16-.055-.15-.082-.14-.107-.12-.127-.1-.144-.073-.154-.046-.16-.016zM6.33 26.818l-.16.023-.152.053-.14.08-.122.105-.101.126-.076.142-.048.154-.02.16.012.161.041.156.07.146.094.13.096.093.032.026.004.003.004.004.145.117.004.003.004.004.146.115.005.003.004.004.147.113.005.003.004.004.149.111.004.003.004.003.15.11.005.003.004.003.151.108.004.003.005.003.152.106.005.003.004.003.154.104.004.003.005.003.154.102.005.002.004.003.156.1.005.003.004.003.157.098.005.003.004.002.159.096.004.003.005.003.16.094.004.003.004.002.16.092.005.003.005.002.161.09.005.003.005.002.162.088.005.003.004.002.164.086.005.003.004.002.165.084.005.003.004.002.166.082.004.002.005.003.167.08.004.002.005.002.168.078.004.002.005.002.168.076.005.002.005.002.17.074.004.002.005.002.17.072.005.002.005.002.17.07.006.002.005.001.171.068.005.002.005.002.173.065.005.002.005.002.173.063.005.002.005.002.174.06.005.003.005.001.175.06.005.001.005.002.176.057.005.001.005.002.176.055.006.001.005.002.177.052.005.002.005.001.178.05.005.002.005.002.178.048.006.001.005.002.179.046.005.001.005.002.18.044h.005l.005.002.18.042.006.001.005.001.159.035.16.02.16-.01.157-.04.146-.069.13-.094.112-.117.087-.136.06-.149.033-.158.002-.161-.028-.159-.057-.15-.084-.138-.108-.12-.128-.098-.144-.072-.128-.039-.154-.033-.168-.04-.171-.041-.17-.044-.168-.046-.167-.047-.168-.05-.165-.051-.166-.054-.166-.056-.163-.057-.165-.06-.161-.062-.164-.064-.16-.065-.16-.068-.162-.07-.157-.07-.157-.074-.157-.075-.156-.077-.153-.079-.156-.082-.153-.082-.154-.086-.15-.086-.152-.09-.148-.09-.147-.092-.149-.095-.145-.095-.144-.098-.145-.1-.143-.102-.14-.103-.14-.104-.14-.108-.139-.11-.136-.11-.027-.022-.133-.091-.148-.065-.157-.036-.161-.006zm19.215.087l-.16.01-.157.039-.146.067-.11.076-.064.051-.139.11-.14.108-.14.104-.14.103-.143.101-.145.101-.144.098-.145.095-.149.095-.148.093-.147.089-.152.09-.15.086-.154.086-.153.082-.156.082-.153.079-.156.077-.157.075-.158.073-.157.071-.16.07-.16.068-.161.065-.164.064-.161.061-.165.06-.163.058-.166.056-.166.054-.166.051-.167.05-.167.047-.17.046-.168.044-.171.042-.168.039-.17.037-.11.023-.154.047-.143.075-.126.1-.106.122-.081.139-.054.152-.025.16.006.16.035.158.063.148.09.133.114.115.132.092.148.065.157.037.16.007.133-.016.115-.024.005-.001.005-.001.181-.04h.005l.005-.002.18-.042.006-.001.005-.001.18-.044.005-.002.005-.001.18-.046.004-.002h.005l.179-.05h.005l.005-.002.178-.05.005-.002.005-.002.177-.052.005-.002.005-.001.177-.055.005-.002.005-.001.176-.057.005-.002.005-.002.175-.059.005-.001.005-.002.174-.061.005-.002.005-.002.173-.063.005-.002.005-.002.173-.065.004-.002.005-.002.172-.068.005-.002.005-.002.171-.07.005-.001.005-.002.17-.072.005-.002.004-.002.17-.074.005-.002.004-.002.169-.076.004-.002.005-.002.168-.078.004-.002.005-.003.167-.08.004-.002.005-.002.166-.082.004-.002.005-.003.165-.084.004-.002.005-.003.163-.086.005-.002.005-.003.162-.088.005-.002.005-.003.161-.09.005-.002.004-.003.16-.092.005-.003.005-.002.16-.094.004-.003.004-.003.158-.096.005-.002.004-.003.158-.098.004-.003.005-.003.156-.1.004-.003.004-.003.155-.101.005-.003.004-.003.154-.104.004-.003.004-.003.153-.106.004-.003.005-.003.151-.108.004-.003.005-.003.15-.11.004-.003.004-.003.149-.112.004-.003.004-.003.148-.113.004-.004.004-.003.147-.115.004-.004.004-.003.068-.055.116-.113.092-.132.066-.147.038-.157.008-.16-.022-.16-.05-.153-.08-.14-.103-.125-.124-.102-.142-.077-.153-.05-.16-.02z"
 }));
 function _extends$L() {
-  _extends$L = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$L = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$L.apply(this, arguments);
+    return n4;
+  }, _extends$L.apply(null, arguments);
 }
 var IntermediateEventCatchNonInterruptingMultipleIcon = ({
   styles = {},
@@ -50790,18 +54377,13 @@ var IntermediateEventCatchNonInterruptingMultipleIcon = ({
   d: "M23.637 13.902l-7.625-5.535-7.624 5.535 2.912 8.956h9.425l2.912-8.956zm-1.017.33l-2.524 7.762H11.93l-2.524-7.762 6.607-4.796 6.608 4.796zM16.012.311c-1.448.02-2.93.157-4.302.628-.852.447-.255 1.863.66 1.574 2.255-.608 4.648-.607 6.922-.108.934.075 1.228-1.376.338-1.67C18.451.44 17.227.317 16.012.311zm9.012 2.934c-.913-.104-1.272 1.258-.454 1.648 1.834 1.36 3.293 3.185 4.31 5.22.526.776 1.842.098 1.515-.78a15.522 15.522 0 00-5.06-6.006c-.1-.044-.203-.07-.31-.082zM6.65 3.59c-.762.089-1.24.809-1.805 1.267C3.38 6.295 2.163 8.007 1.37 9.905c-.266.898 1.094 1.484 1.564.675a14.825 14.825 0 014.327-5.56c.476-.515.09-1.419-.612-1.431zm9.362.007c-.698.066-1.689-.16-2.033.635-.282.733.535 1.358 1.217 1.125 1.806-.147 3.63.203 5.293.907.902.255 1.472-1.112.656-1.573-1.6-.735-3.374-1.089-5.133-1.094zm-5.479 1.365c-.835.15-1.517.76-2.21 1.226-1.203.94-2.318 2.061-3.057 3.402-.33.904 1.063 1.552 1.547.723 1.045-1.656 2.596-2.925 4.285-3.873.545-.499.171-1.463-.565-1.478zm13.903 2.115c-.875-.07-1.22 1.173-.501 1.627 1.325 1.34 2.188 3.062 2.748 4.84.468.84 1.869.21 1.557-.699-.604-2.118-1.751-4.097-3.351-5.615a.93.93 0 00-.453-.153zM4.467 13.132c-.822-.07-.996.826-1.046 1.455-.256 1.93-.094 3.933.562 5.769.406.844 1.807.365 1.612-.551a11.498 11.498 0 01-.334-5.808.874.874 0 00-.794-.865zm26.687 1.6c-.746-.037-1.014.785-.879 1.395.043 2.393-.57 4.771-1.66 6.894-.31.884 1.02 1.536 1.53.75a15.632 15.632 0 001.821-8.372.876.876 0 00-.812-.667zm-30.197.571c-.782-.073-1.044.775-.933 1.404.068 2.414.661 4.833 1.809 6.962.534.77 1.842.076 1.505-.798a14.833 14.833 0 01-1.603-6.861.876.876 0 00-.778-.707zm26.787 2.024c-.777-.048-.952.797-1.021 1.392-.354 1.692-1.202 3.231-2.216 4.608-.407.872.925 1.638 1.48.852 1.361-1.733 2.296-3.827 2.582-6.017a.874.874 0 00-.825-.835zM6.857 23.012c-.808.018-1.082 1.122-.47 1.59 1.393 1.607 3.187 2.886 5.194 3.599.91.222 1.43-1.165.598-1.596a11.495 11.495 0 01-4.723-3.396.899.899 0 00-.599-.197zm15.057 2.7c-.81.194-1.504.76-2.325.972-1.203.458-2.5.536-3.758.664-.869.307-.573 1.728.346 1.663 2.201-.034 4.412-.626 6.293-1.778.604-.495.227-1.532-.556-1.521zM6.346 27.118c-.833.008-1.11 1.218-.395 1.617 1.986 1.602 4.358 2.749 6.868 3.226.933.076 1.227-1.376.338-1.67a14.838 14.838 0 01-6.345-3.066.929.929 0 00-.466-.107zm19.208.087c-.766.09-1.241.841-1.922 1.158-1.516.991-3.251 1.58-4.996 2.005-.872.405-.346 1.849.584 1.604 2.543-.526 4.98-1.66 6.963-3.344.47-.52.072-1.42-.63-1.423z"
 }));
 function _extends$K() {
-  _extends$K = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$K = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$K.apply(this, arguments);
+    return n4;
+  }, _extends$K.apply(null, arguments);
 }
 var IntermediateEventCatchNonInterruptingParallelIcon = ({
   styles = {},
@@ -50815,18 +54397,13 @@ var IntermediateEventCatchNonInterruptingParallelIcon = ({
   opacity: ".98"
 }));
 function _extends$J() {
-  _extends$J = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$J = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$J.apply(this, arguments);
+    return n4;
+  }, _extends$J.apply(null, arguments);
 }
 var IntermediateEventCatchNonInterruptingSignalIcon = ({
   styles = {},
@@ -50839,18 +54416,13 @@ var IntermediateEventCatchNonInterruptingSignalIcon = ({
   d: "M16.012 8.816L9.21 21.026h13.606l-6.803-12.21zm0 1.776l5.332 9.57H10.681l5.331-9.57zm0-10.281c-1.448.02-2.93.157-4.302.628-.852.447-.255 1.863.66 1.574 2.255-.608 4.648-.607 6.922-.108.934.075 1.228-1.376.338-1.67C18.451.44 17.227.317 16.012.311zm9.012 2.934c-.913-.104-1.272 1.258-.454 1.648 1.834 1.36 3.293 3.185 4.31 5.22.526.776 1.842.098 1.515-.78a15.522 15.522 0 00-5.06-6.006c-.1-.044-.203-.07-.31-.082zM6.65 3.59c-.762.089-1.24.809-1.805 1.267C3.38 6.295 2.163 8.007 1.37 9.905c-.266.898 1.094 1.484 1.564.675a14.825 14.825 0 014.327-5.56c.476-.515.09-1.419-.612-1.431zm9.362.007c-.698.066-1.689-.16-2.033.635-.282.733.535 1.358 1.217 1.125 1.806-.147 3.63.203 5.293.907.902.255 1.472-1.112.656-1.573-1.6-.735-3.374-1.089-5.133-1.094zm-5.479 1.365c-.835.15-1.517.76-2.21 1.226-1.203.94-2.318 2.061-3.057 3.402-.33.904 1.063 1.552 1.547.723 1.045-1.656 2.596-2.925 4.285-3.873.545-.499.171-1.463-.565-1.478zm13.903 2.115c-.875-.07-1.22 1.173-.501 1.627 1.325 1.34 2.188 3.062 2.748 4.84.468.84 1.869.21 1.557-.699-.604-2.118-1.751-4.097-3.351-5.615a.93.93 0 00-.453-.153zM4.467 13.132c-.822-.07-.996.826-1.046 1.455-.256 1.93-.094 3.933.562 5.769.406.844 1.807.365 1.612-.551a11.498 11.498 0 01-.334-5.808.874.874 0 00-.794-.865zm26.687 1.6c-.746-.037-1.014.785-.879 1.395.043 2.393-.57 4.771-1.66 6.894-.31.884 1.02 1.536 1.53.75a15.632 15.632 0 001.821-8.372.876.876 0 00-.812-.667zm-30.197.571c-.782-.073-1.044.775-.933 1.404.068 2.414.661 4.833 1.809 6.962.534.77 1.842.076 1.505-.798a14.833 14.833 0 01-1.603-6.861.876.876 0 00-.778-.707zm26.787 2.024c-.777-.048-.952.797-1.021 1.392-.354 1.692-1.202 3.231-2.216 4.608-.407.872.925 1.638 1.48.852 1.361-1.733 2.296-3.827 2.582-6.017a.874.874 0 00-.825-.835zM6.857 23.012c-.808.018-1.082 1.122-.47 1.59 1.393 1.607 3.187 2.886 5.194 3.599.91.222 1.43-1.165.598-1.596a11.495 11.495 0 01-4.723-3.396.899.899 0 00-.599-.197zm15.057 2.7c-.81.194-1.504.76-2.325.972-1.203.458-2.5.536-3.758.664-.869.307-.573 1.728.346 1.663 2.201-.034 4.412-.626 6.293-1.778.604-.495.227-1.532-.556-1.521zM6.346 27.118c-.833.008-1.11 1.218-.395 1.617 1.986 1.602 4.358 2.749 6.868 3.226.933.076 1.227-1.376.338-1.67a14.838 14.838 0 01-6.345-3.066.929.929 0 00-.466-.107zm19.208.087c-.766.09-1.241.841-1.922 1.158-1.516.991-3.251 1.58-4.996 2.005-.872.405-.346 1.849.584 1.604 2.543-.526 4.98-1.66 6.963-3.344.47-.52.072-1.42-.63-1.423z"
 }));
 function _extends$I() {
-  _extends$I = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$I = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$I.apply(this, arguments);
+    return n4;
+  }, _extends$I.apply(null, arguments);
 }
 var IntermediateEventCatchNonInterruptingTimerIcon = ({
   styles = {},
@@ -50863,18 +54435,13 @@ var IntermediateEventCatchNonInterruptingTimerIcon = ({
   d: "M15.998 8.406c-3.018-.041-5.92 1.926-7.031 4.727-1.138 2.695-.51 6.012 1.537 8.103 1.99 2.141 5.268 2.93 8.014 1.927 2.878-.98 4.992-3.827 5.068-6.87.153-2.957-1.624-5.88-4.3-7.137a7.552 7.552 0 00-3.288-.75zm0 1.384c2.759-.052 5.373 1.973 6.015 4.655.704 2.578-.482 5.517-2.791 6.867-2.358 1.48-5.682 1.086-7.618-.918-2.043-1.971-2.407-5.381-.84-7.745 1.11-1.763 3.15-2.88 5.234-2.86zm1.962 1.765l-2.074 3.762c-.64.068-.793 1.04-.202 1.3.39.27.696-.18 1.052-.165h3.17v-.865h-3.182l1.993-3.615c-.252-.14-.505-.278-.757-.417zm-1.965-8.268h-.158l-.147.003h-.011l-.147.005h-.011l-.146.007h-.011l-.146.009h-.011l-.146.01h-.005l-.005.001-.146.012h-.011l-.145.014h-.006l-.005.001-.05.006-.158.031-.15.06-.135.088-.117.111-.094.13-.069.147-.04.156-.01.16.019.16.049.154.076.142.102.125.123.105.14.08.152.051.16.023.134-.003.045-.005.135-.013.133-.01.136-.01.135-.007.137-.006.136-.004.136-.003h.274l.136.003.136.004.136.006.136.007.136.01.133.01.135.013.135.014.135.016.134.018.132.018.134.021.133.023.133.024.133.025.13.027.132.03.132.03.129.031.13.034.129.035.129.036.13.04.126.038.128.042.126.042.128.045.127.047.126.048.12.047.127.051.123.052.006.002.147.048.16.021.16-.009.157-.038.147-.067.131-.093.112-.116.089-.135.062-.149.033-.158.004-.16-.027-.16-.055-.151-.083-.138-.107-.121-.127-.099-.118-.063-.004-.001-.005-.003-.005-.002-.133-.056-.005-.002-.005-.002-.134-.054-.004-.002-.005-.002-.135-.053-.005-.002-.005-.002-.135-.051-.005-.002-.005-.002-.135-.05-.005-.001-.005-.002-.137-.048-.005-.001-.005-.002-.137-.046-.005-.002-.005-.002-.137-.044-.005-.002-.005-.001-.138-.043-.005-.002-.006-.001-.138-.042-.005-.001-.005-.002-.14-.04H19.4l-.005-.002-.14-.038-.005-.001-.005-.002-.14-.036-.005-.001-.005-.001-.141-.035-.005-.001-.005-.001-.142-.033-.005-.001-.005-.001-.141-.031-.006-.002h-.005l-.142-.03-.005-.001-.005-.001-.143-.028h-.005l-.005-.001-.143-.026-.006-.001-.005-.001-.143-.024-.005-.001-.006-.001-.143-.022-.006-.001h-.005l-.144-.022h-.005l-.006-.001-.144-.019h-.005l-.006-.001-.144-.017h-.006l-.005-.001-.145-.016h-.011l-.145-.014H17.1l-.005-.001-.146-.012h-.01l-.146-.01-.006-.001h-.005l-.146-.009h-.011l-.147-.006h-.01l-.147-.005h-.011l-.147-.003h-.01l-.148-.001h-.01zM10.357 4.66l-.156.037-.123.053-.06.032-.005.002-.004.003-.128.069-.004.002-.005.003-.126.07-.005.003-.004.002-.126.072-.005.003-.004.003-.125.073-.004.003-.005.003-.124.075-.004.003-.005.002-.123.077-.004.003-.005.003-.122.078-.004.003-.005.003-.121.08-.004.002-.005.003-.12.082-.005.003-.004.003-.12.083-.004.003-.004.003-.118.084-.005.003-.004.003-.118.086-.004.003-.004.003-.117.088-.004.003-.004.003-.116.089-.004.003-.004.004-.114.09-.005.003-.004.003-.113.092-.004.004-.004.003-.113.093-.004.004-.004.003-.111.095-.004.003-.005.004-.11.096-.004.004-.004.003-.109.098-.004.003-.004.004-.108.1-.004.003-.004.003-.107.101-.004.004-.004.003-.106.102-.003.004-.004.004-.105.103-.004.004-.004.004-.103.105-.004.004-.004.003-.102.106-.003.004-.004.004-.1.107-.004.004-.004.004-.099.108-.004.004-.003.004-.098.11-.003.003-.004.004-.096.11-.004.005-.003.004-.095.111-.003.004-.004.004-.093.113-.003.004-.004.004-.092.113-.003.004-.003.005-.09.114-.004.004-.003.004-.089.116-.003.004-.003.004-.088.117-.003.004-.003.005-.086.117-.003.004-.003.005-.084.118-.003.004-.003.005-.083.12-.003.003-.003.005-.082.12-.003.005-.002.004-.068.103-.076.142-.048.154-.018.16.011.161.041.156.07.146.095.13.117.11.136.086.15.06.158.03.162.002.158-.029.15-.058.138-.085.119-.108.082-.106.065-.099.075-.11.077-.113.077-.107.08-.11.08-.108.084-.108.083-.105.086-.106.086-.104.088-.104.089-.101.09-.102.093-.101.093-.099.094-.097.095-.096.098-.097.098-.095.099-.093.1-.092.103-.091.101-.089.104-.088.104-.086.106-.086.106-.083.106-.082.109-.082.108-.079.11-.078.11-.076.112-.076.112-.074.113-.072.113-.071.115-.07.115-.068.118-.067.117-.065.12-.065.054-.029.135-.088.116-.111.094-.132.068-.146.04-.156.009-.161-.02-.16-.05-.153-.078-.142-.102-.125-.123-.103-.141-.079-.153-.051-.16-.022-.16.008zm13.91 2.116l-.158.037-.147.066-.132.092-.113.116-.09.134-.063.148-.034.157-.005.162.026.159.054.152.082.139.086.102.09.09.094.098.093.099.092.1.091.103.089.101.088.104.086.104.086.106.083.105.083.108.08.108.081.11.077.107.077.112.075.111.075.114.072.113.071.113.07.115.068.117.067.115.065.118.064.117.062.118.061.12.059.119.059.122.056.121.054.12.055.125.051.123.051.125.048.123.049.127.046.126.044.125.043.128.042.129.039.126.038.13.022.076.058.15.086.137.109.119.129.096.145.07.155.043.16.013.161-.017.155-.046.143-.074.126-.1.106-.122.082-.138.055-.152.025-.16-.005-.16-.026-.132-.023-.082-.002-.005-.001-.005-.042-.139-.001-.005-.002-.005-.043-.138-.001-.005-.002-.005-.044-.137-.002-.005-.002-.005-.046-.137-.002-.005-.001-.005-.048-.137-.002-.005-.002-.005-.05-.135-.001-.005-.002-.005-.051-.135-.002-.005-.002-.005-.053-.135-.002-.005-.002-.005-.054-.133-.002-.005-.002-.005-.057-.133-.002-.005-.002-.005-.057-.132-.003-.005-.002-.005-.059-.132-.002-.005-.002-.004-.061-.132-.003-.004-.002-.005-.062-.13-.003-.005-.002-.005-.064-.13-.003-.004-.002-.005-.066-.129-.002-.004-.003-.005-.067-.128-.002-.005-.003-.004-.069-.128-.002-.004-.003-.005-.07-.126-.003-.005-.003-.004-.072-.126-.002-.005-.003-.004-.073-.125-.003-.004-.003-.005-.075-.124-.003-.004-.003-.005-.076-.123-.003-.004-.003-.005-.078-.122-.003-.004-.003-.005-.08-.121-.003-.004-.003-.005-.08-.12-.004-.005-.003-.004-.083-.12-.003-.004-.003-.004-.084-.118-.003-.005-.003-.004-.086-.117-.003-.005-.003-.004-.088-.117-.003-.004-.003-.004-.09-.116-.002-.004-.004-.004-.09-.114-.003-.005-.004-.004-.091-.113-.004-.004-.003-.004-.093-.113-.004-.004-.003-.004-.095-.111-.004-.004-.003-.004-.096-.11-.004-.005-.003-.004-.098-.109-.004-.004-.003-.004-.1-.108-.003-.004-.004-.004-.1-.107-.004-.004-.004-.004-.102-.106-.003-.003-.004-.004-.093-.095-.124-.103-.14-.08-.153-.05-.16-.023-.16.008zM4.288 12.828l-.158.032-.15.06-.135.088-.117.11-.095.131-.069.146-.035.129-.026.132v.005l-.002.005-.025.143-.001.005-.001.006-.024.143-.001.005-.001.006-.022.143-.001.006-.001.005-.02.144-.001.005-.001.006-.019.144v.005l-.001.006-.017.144v.006l-.001.005-.016.145v.011l-.014.145v.006l-.001.005-.012.146v.01l-.01.146-.001.006v.005l-.009.146v.011l-.007.146v.011l-.004.147v.011l-.003.147v.01l-.002.148v.01l.001.148v.01l.003.147v.011l.005.147v.01l.007.147v.011l.009.146v.011l.01.146v.01l.013.146v.011l.014.145v.005l.001.006.016.145v.011l.018.144v.006l.001.005.019.144v.006l.001.005.021.144v.005l.002.006.022.143v.006l.002.005.024.143v.005l.002.006.025.143.001.005.001.005.028.143.001.005.001.005.03.142v.005l.002.006.03.141.002.005.001.006.033.14v.006l.002.005.035.14v.006l.002.005.036.14.002.005.001.005.038.14.001.005.002.005.04.14v.005l.002.005.042.138.001.006.002.005.042.138.002.005.002.005.017.054.064.148.09.134.114.114.132.092.148.065.157.037.16.007.16-.023.153-.052.14-.08.123-.103.102-.126.076-.142.049-.153.02-.16-.01-.161-.032-.13-.017-.051-.039-.126-.038-.13-.037-.128-.035-.13-.033-.128-.033-.134-.03-.13-.029-.131-.026-.13-.026-.132-.024-.134-.023-.133-.02-.132-.02-.136-.017-.132-.016-.135-.014-.135-.012-.133-.012-.138-.009-.133-.007-.136-.006-.138-.004-.134-.003-.136v-.274l.003-.136.004-.134.006-.139.007-.136.01-.132.01-.139.013-.132.014-.135.016-.135.017-.132.02-.137.02-.13.023-.134.024-.133.024-.126.016-.16-.014-.161-.044-.155-.072-.145-.098-.128-.12-.108-.137-.084-.15-.057-.16-.029-.16.002zm23.286 4.202l-.156.038-.148.066-.132.092-.113.115-.09.134-.062.148-.03.127-.001.004-.023.134-.024.134-.026.132-.026.13-.03.132-.03.129-.032.134-.033.128-.035.13-.037.128-.038.13-.04.126-.04.128-.044.128-.044.126-.046.126-.048.126-.05.125-.05.125-.051.122-.054.123-.055.122-.056.12-.058.122-.06.12-.061.12-.062.119-.063.116-.067.119-.066.116-.068.115-.07.115-.07.113-.073.113-.074.112-.076.113-.077.112-.077.107-.08.11-.08.108-.085.109-.044.056-.088.135-.06.15-.033.158-.002.16.027.16.057.15.083.138.108.12.128.098.144.072.155.045.16.015.161-.016.155-.044.144-.073.128-.098.09-.099.05-.061.003-.004.003-.005.089-.115.003-.004.003-.005.088-.116.003-.004.003-.005.086-.117.003-.004.003-.005.084-.118.003-.004.003-.005.083-.12.003-.004.003-.004.082-.12.003-.005.002-.004.08-.121.003-.005.003-.004.078-.122.003-.005.003-.004.077-.123.002-.005.003-.004.075-.124.003-.005.003-.004.073-.125.003-.004.003-.005.072-.126.002-.004.003-.005.07-.126.003-.005.002-.005.07-.127.002-.004.002-.005.068-.128.002-.005.002-.004.066-.13.003-.004.002-.005.064-.13.002-.004.003-.005.062-.13.003-.005.002-.005.06-.13.003-.005.002-.005.06-.132.002-.005.002-.005.057-.132.003-.005.002-.005.056-.133.002-.005.002-.005.054-.134.002-.004.002-.005.053-.135.002-.005.002-.005.051-.135.002-.005.002-.005.05-.135.001-.005.002-.005.048-.137.001-.005.002-.005.046-.137.002-.005.002-.005.044-.137.002-.005.002-.005.042-.138.002-.005.002-.006.04-.138.002-.005.002-.005.04-.14V19.4l.002-.005.038-.14.001-.005.002-.005.036-.14.001-.005.001-.005.035-.141.001-.005.001-.005.033-.141.001-.006.001-.005.031-.141.002-.006v-.005l.03-.142.001-.005.001-.005.028-.143v-.005l.002-.005.025-.143.001-.006.001-.005.024-.143.001-.005.001-.006.001-.006.01-.161-.02-.16-.05-.154-.077-.141-.102-.125-.123-.104-.141-.079-.153-.051-.16-.022-.16.007zM6.681 22.734l-.152.053-.14.08-.122.105-.101.126-.076.142-.048.154-.018.16.011.161.041.156.07.146.077.11.04.047.003.004.003.004.095.111.003.004.004.004.096.11.004.005.003.004.098.109.003.004.004.004.1.108.003.004.003.004.101.107.004.004.003.004.102.106.004.003.004.004.103.105.004.004.004.004.105.103.004.004.003.003.106.102.004.004.004.004.107.1.004.004.004.004.108.099.004.003.004.004.11.098.003.003.004.004.11.096.005.004.004.003.11.095.005.003.004.004.113.093.004.003.004.004.113.091.004.004.005.003.114.09.004.004.004.003.116.089.004.003.004.003.117.088.004.003.004.003.118.086.004.003.005.003.118.084.004.003.005.003.119.083.004.003.005.003.12.081.005.003.004.003.121.08.005.003.004.003.122.078.005.003.004.003.123.076.005.003.004.003.124.075.005.003.004.003.125.073.004.003.005.003.126.072.004.002.005.003.126.07.005.003.004.002.128.07.004.002.005.002.128.068.005.002.004.002.13.066.004.003.005.002.13.064.004.002.005.003.13.062.005.002.004.003.132.06.004.003.005.002.132.06.005.002.005.002.132.057.005.002.005.003.133.056.005.002.005.002.133.054.005.002.005.002.13.05.154.045.16.016.161-.015.155-.045.144-.072.128-.098.108-.12.083-.138.057-.15.028-.16-.003-.16-.032-.158-.061-.15-.088-.135-.11-.117-.132-.094-.12-.058-.124-.049-.126-.051-.122-.051-.122-.054-.12-.054-.126-.058-.119-.057-.12-.06-.12-.06-.118-.063-.117-.064-.119-.066-.116-.066-.115-.068-.115-.07-.113-.07-.115-.074-.112-.074-.11-.075-.11-.076-.112-.079-.11-.08-.109-.082-.106-.082-.104-.082-.106-.086-.105-.087-.101-.086-.105-.091-.1-.09-.1-.091-.1-.094-.097-.094-.1-.098-.093-.095-.096-.1-.093-.098-.092-.101-.089-.1-.09-.102-.088-.104-.036-.043-.114-.114-.133-.091-.148-.065-.157-.036-.161-.006-.16.024zm15.063 2.691l-.156.044-.12.057-.06.034-.12.066-.116.064-.119.062-.12.061-.12.06-.118.057-.126.058-.12.054-.122.054-.122.05-.126.052-.125.05-.124.046-.127.047-.125.044-.129.043-.126.04-.13.042-.128.038-.127.036-.13.035-.131.034-.129.031-.132.03-.13.03-.135.027-.133.026-.13.023-.13.022-.137.021-.132.02-.134.017-.132.015-.138.015-.135.013-.133.01-.138.01-.136.007-.134.006-.136.004-.14.003-.16.018-.155.047-.142.076-.127.1-.105.122-.08.14-.054.151-.025.16.006.16.035.158.064.148.09.134.114.114.133.092.147.065.157.036.134.008.145-.002h.011l.147-.005h.01l.147-.007h.011l.146-.009h.011l.146-.01h.005l.005-.001.146-.012h.011l.145-.014h.005l.006-.001.145-.016h.011l.144-.018h.006l.005-.001.144-.02h.011l.144-.021h.005l.006-.002.143-.022h.006l.005-.002.143-.024h.005l.006-.002.143-.026h.005l.005-.002.143-.027.005-.001.005-.001.142-.03h.005l.005-.002.142-.03.005-.002.005-.001.142-.033.005-.001.005-.001.14-.035.006-.001.005-.001.14-.036.005-.002.005-.001.14-.038.005-.001.005-.002.14-.04h.005l.005-.002.138-.042.005-.001.006-.002.138-.043.005-.001.005-.002.137-.044.005-.002.005-.002.137-.046.005-.002.005-.001.137-.048.005-.002.005-.002.135-.05.005-.001.005-.002.135-.051.005-.002.005-.002.135-.053.005-.002.004-.002.134-.054.005-.002.005-.002.133-.056.005-.003.005-.002.132-.057.005-.002.005-.003.132-.059.005-.002.004-.002.131-.061.005-.003.005-.002.13-.062.005-.003.005-.002.13-.064.004-.002.005-.003.129-.066.004-.002.005-.003.128-.067.005-.002.004-.003.127-.069.005-.002.005-.003.126-.07.005-.003.004-.002.065-.038.132-.093.112-.115.089-.135.062-.149.034-.157.004-.161-.027-.16-.055-.15-.082-.14-.107-.12-.127-.1-.144-.073-.154-.045-.16-.017-.161.014zM15.994 0l-.187.001h-.011l-.188.004h-.011l-.187.006h-.011l-.187.008h-.005L15.2.02l-.187.01h-.005l-.005.001-.187.013h-.01L14.62.06h-.01l-.186.018h-.011l-.185.02-.005.001h-.006l-.185.022-.005.001h-.005l-.185.025h-.005l-.005.001-.184.027h-.006l-.005.001-.184.029h-.005l-.005.001-.183.031-.005.001-.006.001-.182.033-.006.001-.005.001-.182.035-.005.001-.005.001-.182.038h-.005l-.005.002-.181.04h-.005l-.005.002-.18.042-.006.001-.005.001-.18.044-.005.002h-.005l-.17.045-.152.054-.139.082-.121.106-.1.127-.074.143-.046.155-.017.16.013.16.043.156.07.145.097.13.119.108.137.085.15.058.159.03.16-.001.133-.023.165-.043.168-.041.171-.04.171-.037.172-.036.17-.033.173-.03.17-.03.177-.027.171-.025.175-.022.175-.02.175-.02.176-.016.175-.014.177-.012.176-.01.177-.007.174-.006.177-.003L16 1.73h.177l.178.004.174.006.177.007.176.01.177.012.175.014.176.017.175.018.175.02.175.023.171.025.177.027.17.03.173.03.17.033.171.036.154.033.16.02.161-.01.156-.04.146-.069.131-.094.111-.117.088-.135.06-.15.032-.158.002-.16-.027-.16-.057-.15L20 .714l-.108-.12-.128-.097-.144-.073-.129-.038-.158-.035-.005-.001-.005-.001L19.14.31h-.005l-.005-.002-.182-.035h-.006l-.005-.002-.182-.033h-.006l-.005-.002-.183-.03-.005-.001-.005-.001-.184-.029h-.005l-.006-.001-.184-.027h-.005l-.005-.001-.185-.024h-.005L17.968.12 17.783.1l-.006-.001h-.005l-.185-.02h-.006l-.005-.001L17.39.06 17.385.06h-.005l-.187-.015h-.005l-.005-.001-.187-.013h-.01L16.799.02h-.011L16.6.01h-.011l-.187-.006h-.011L16.204 0h-.011L16.005 0h-.01zm8.86 2.939l-.157.033-.15.062-.134.09-.116.111-.093.132-.067.147-.038.156-.01.161.022.16.05.153.078.141.103.124.102.087.045.034.142.106.137.105.14.11.136.11.135.112.134.115.134.117.13.115.132.122.128.12.127.122.127.125.123.126.124.128.121.13.118.128.118.132.117.133.113.134.113.136.11.136.109.137.109.142.104.14.103.14.101.142.1.144.099.146.095.145.094.147.093.15.092.15.087.149.087.15.085.152.083.155.08.152.08.155.04.081.084.138.11.119.128.096.145.072.155.043.16.013.161-.016.155-.046.143-.074.127-.099.106-.12.083-.14.055-.151.026-.16-.004-.16-.034-.158-.05-.124-.042-.085-.002-.004-.003-.005-.084-.165-.002-.004-.003-.005-.086-.164-.002-.004-.003-.005-.088-.162-.002-.005-.003-.005-.09-.161-.002-.005-.003-.004-.092-.16-.002-.005-.003-.005-.094-.16-.003-.004-.003-.004-.096-.159-.002-.004-.003-.005-.098-.157-.003-.004-.003-.005-.1-.156-.003-.004-.002-.005-.102-.154-.003-.005-.003-.004-.104-.154-.003-.004-.003-.005-.106-.152-.003-.004-.003-.005-.108-.151-.003-.004-.003-.005-.11-.15-.003-.004-.003-.004-.111-.15-.004-.003-.003-.005-.113-.147-.004-.004-.003-.005-.115-.146-.004-.004-.003-.004-.117-.145-.004-.004-.003-.004-.12-.144-.003-.004-.003-.004-.121-.142-.003-.004-.004-.004-.123-.141-.003-.004-.004-.004-.125-.14-.003-.004-.004-.004-.127-.138-.003-.004-.004-.004-.128-.136-.004-.004-.004-.004-.13-.135-.004-.004-.003-.004-.133-.134-.003-.004-.004-.003-.134-.133-.004-.003-.004-.004-.135-.13-.004-.004-.004-.004-.136-.128-.004-.004-.004-.004-.138-.126-.004-.004-.004-.003-.14-.125-.004-.004-.004-.003-.14-.123-.005-.004-.004-.003-.142-.121-.004-.004-.004-.003-.144-.12-.004-.003-.004-.003-.145-.117-.004-.004-.004-.003-.147-.115-.004-.004-.004-.003-.148-.113-.004-.003-.004-.004-.149-.111-.004-.003-.004-.004-.05-.036-.14-.083-.15-.055-.16-.027-.16.004zm-18.381.348l-.157.037-.147.066-.111.074-.04.032-.005.003-.004.004-.145.117-.004.003-.004.004-.144.119-.004.003-.004.004-.142.12-.004.004-.004.004-.141.123-.004.003-.004.004-.14.125-.004.003-.004.004-.138.126-.004.004-.004.004-.136.128-.004.004-.004.004-.135.13-.004.004-.004.003-.134.133-.004.003-.004.004-.132.134-.003.004-.004.004-.13.135-.004.004-.004.004-.128.136-.004.004-.004.004-.126.138-.004.004-.003.004-.125.14-.004.004-.003.004-.123.14-.004.005-.003.004-.121.142-.004.004-.003.004-.12.144-.003.004-.003.004-.117.145-.004.004-.003.004-.115.146-.004.005-.003.004-.113.147-.003.005-.004.004-.111.149-.003.004-.004.004-.11.15-.002.005-.003.004-.108.151-.003.005-.003.004-.106.152-.003.005-.003.004-.104.154-.003.004-.003.005-.102.154-.003.005-.002.004-.1.156-.003.005-.003.004-.098.157-.003.005-.003.004-.096.159-.002.004-.003.005-.094.16-.003.004-.002.004-.092.16-.003.005-.003.005-.09.161-.002.005-.003.005-.088.162-.002.005-.003.004-.086.164-.002.005-.002.004-.084.165-.003.005-.002.004-.082.166-.002.005-.003.004-.08.167-.002.004-.002.005-.078.168-.002.004-.002.005-.045.1-.053.153-.023.16.007.16.037.157.065.148.092.132.114.114.134.09.148.064.157.035.161.006.16-.025.152-.054.14-.08.121-.106.1-.126.065-.118.043-.095.074-.16.075-.155.077-.157.08-.155.08-.152.083-.155.085-.152.086-.15.088-.149.091-.15.094-.15.094-.147.095-.145.099-.146.1-.144.1-.142.104-.14.104-.14.11-.142.107-.137.11-.136.114-.136.113-.134.117-.133.118-.132.117-.129.122-.13.124-.127.123-.126.127-.125.127-.122.128-.12.132-.122.13-.115.133-.117.135-.115.135-.111.136-.11.037-.03.117-.11.094-.132.068-.146.04-.156.01-.161-.02-.16-.05-.154-.076-.141-.102-.125-.123-.104-.14-.08-.153-.051-.16-.023-.161.008zm24.514 11.15l-.157.04-.146.067-.131.093-.112.117-.088.135-.061.149-.033.157-.005.134.006.14.006.176.003.177.001.178-.001.177-.003.178-.006.177-.007.176-.01.177-.012.176-.015.176-.016.173-.018.175-.02.175-.024.174-.024.175-.027.17-.03.174-.03.173-.033.17-.036.172-.037.17-.04.17-.042.172-.043.168-.045.166-.048.169-.05.167-.052.168-.053.164-.056.166-.058.166-.06.161-.061.164-.063.158-.066.165-.068.16-.07.16-.07.158-.075.159-.074.155-.078.158-.081.158-.06.15-.03.158-.001.161.029.159.058.15.085.137.108.12.13.096.144.07.156.044.16.013.16-.017.155-.046.143-.074.127-.1.107-.12.07-.115.083-.164.003-.005.002-.004.082-.166.002-.005.003-.004.08-.167.002-.005.002-.004.078-.168.002-.004.002-.005.076-.169.002-.004.002-.005.074-.17.002-.004.002-.005.072-.17.002-.005.002-.005.07-.17.002-.006.001-.005.068-.172.002-.004.002-.005.065-.173.002-.005.002-.005.063-.173.002-.005.002-.005.06-.174.003-.005.001-.005.06-.175.001-.005.002-.005.057-.176.001-.005.002-.005.055-.177.001-.005.002-.005.052-.177.002-.005.001-.005.051-.178.001-.005.002-.005.048-.179.002-.005v-.005l.047-.179.001-.005.002-.005.044-.18v-.005l.002-.005.042-.18.001-.006.001-.005.04-.18.001-.006.001-.005.038-.182v-.005l.002-.005.035-.182v-.006l.002-.005.033-.182v-.006l.002-.005.03-.183.001-.005.001-.005.029-.184v-.005l.001-.006.027-.184v-.005l.001-.005.024-.185v-.005l.001-.005.022-.185v-.006l.001-.005.02-.185v-.006l.001-.005.017-.186v-.005l.001-.005.015-.187v-.005l.001-.005.013-.187v-.01l.01-.187.001-.006v-.005l.009-.187v-.011l.006-.187v-.011l.004-.188v-.011l.001-.188v-.01l-.001-.188v-.011l-.004-.188v-.011l-.006-.187v-.011l-.007-.145-.022-.16-.05-.152-.08-.141-.103-.124-.125-.102-.141-.077-.153-.05-.16-.02-.161.009zM.777 15l-.158.032-.15.06-.136.087-.117.11-.095.131-.068.146-.04.156-.012.133-.001.14v.01l.001.188v.011l.004.188v.011l.006.187v.011l.008.187v.011l.011.187v.005l.001.005.013.187v.01l.016.187v.01l.018.186v.011l.02.185.001.005v.006l.022.185.001.005v.005l.025.185v.005l.001.005.027.184v.006l.001.005.029.184v.005l.001.005.031.183.001.005.001.006.033.182.001.005.001.006.035.182.001.005.001.005.038.182v.005l.002.005.04.181v.005l.002.005.042.18.001.006.001.005.044.18.002.005v.005l.047.18.001.004.002.005.048.179.002.005.001.005.05.178.002.005.001.005.053.177.002.005.001.005.055.177.002.005.001.005.057.176.002.005.001.005.06.175.001.005.002.005.061.174.002.005.002.005.063.173.002.005.002.005.065.173.002.005.002.004.067.172.002.005.002.005.07.171.002.005.002.005.072.17.002.005.002.005.074.169.002.005.002.004.076.169.002.005.002.004.078.168.002.004.002.005.08.167.003.004.002.005.082.166.002.004.003.005.02.04.086.136.11.118.13.095.146.07.156.041.16.012.16-.019.155-.048.142-.075.126-.1.105-.123.08-.14.054-.152.024-.16-.006-.16-.036-.158-.051-.123-.018-.034-.078-.158L3.1 22.1l-.074-.16-.071-.156-.07-.162-.068-.16-.067-.164-.062-.158-.062-.164-.059-.161-.058-.166-.056-.166-.053-.164-.052-.168-.05-.167-.048-.17-.045-.165-.043-.168-.043-.172-.039-.17-.037-.17-.036-.172-.033-.17-.03-.173-.03-.174-.027-.17-.025-.175-.022-.174-.021-.175-.018-.175-.017-.173-.014-.176-.012-.176-.01-.177-.007-.176-.006-.177-.003-.178L1.73 16v-.134l-.013-.16-.044-.156-.072-.144-.097-.129-.12-.108-.137-.085-.15-.057L.938 15 .777 15zM6.17 26.842l-.152.052-.14.08-.122.105-.101.126-.076.142-.048.154-.02.16.012.161.041.156.07.146.094.13.096.093.032.026.004.003.004.004.145.117.004.003.004.004.146.115.005.003.004.004.147.113.005.003.004.004.149.111.004.003.004.003.15.11.005.003.004.003.151.108.005.003.004.003.152.106.005.003.004.003.154.104.004.003.005.003.154.102.005.002.004.003.156.1.005.003.004.003.157.098.005.003.004.002.159.096.004.003.005.003.16.094.004.003.004.002.16.092.005.003.005.002.161.09.005.003.005.003.162.088.005.002.004.002.164.087.005.002.004.002.165.084.005.003.004.002.166.082.004.002.005.003.167.08.004.002.005.002.168.078.004.002.005.002.169.076.004.002.005.002.17.074.004.002.005.002.17.072.005.002.005.002.17.07.006.002.005.001.171.068.005.002.005.002.173.065.005.002.005.002.173.063.005.002.005.002.174.061.005.002.005.001.175.06.005.001.005.002.176.057.005.001.005.002.177.055.005.001.005.002.177.052.005.002.005.001.178.051.005.001.005.002.178.048.006.002h.005l.179.047.005.001.005.002.18.044h.005l.005.002.18.042.006.001.005.001.159.035.16.02.16-.01.157-.04.146-.069.13-.094.112-.117.087-.136.06-.149.033-.158.002-.161-.028-.159-.057-.15-.084-.138-.108-.12-.128-.098-.144-.072-.128-.039-.154-.033-.168-.04-.171-.041-.169-.044-.17-.045-.166-.048-.168-.05-.165-.051-.166-.054-.166-.056-.163-.057-.165-.06-.161-.062-.164-.064-.16-.065-.16-.068-.162-.07-.157-.07-.157-.074-.157-.075-.156-.077-.153-.079-.156-.082-.153-.082-.154-.086-.15-.086-.152-.09-.148-.09-.147-.092-.149-.095-.145-.095-.144-.098-.145-.1-.143-.102-.14-.103-.14-.104-.14-.108-.139-.11-.136-.11-.027-.022-.133-.091-.148-.065-.157-.036-.161-.006-.16.024zm19.214.073l-.156.039-.146.067-.11.076-.064.051-.139.11-.14.108-.14.104-.14.103-.143.101-.145.101-.144.098-.145.095-.149.095-.148.093-.147.089-.152.09-.15.086-.154.086-.153.082-.156.082-.153.079-.156.077-.157.075-.157.073-.158.071-.16.07-.16.068-.161.065-.164.064-.161.061-.165.06-.163.058-.166.056-.166.054-.166.051-.167.05-.167.048-.17.045-.168.044-.171.042-.168.039-.17.037-.11.023-.154.047-.143.075-.126.1-.106.122-.081.139-.054.152-.025.16.006.16.035.158.063.148.09.133.114.115.132.092.148.065.157.037.16.008.133-.017.115-.024h.005l.005-.002.181-.04h.005l.005-.002.18-.042.006-.001.005-.001.18-.044.005-.002h.005l.18-.047.004-.001.005-.002.179-.048.005-.002.005-.001.178-.05.005-.002.005-.002.177-.052.005-.002.005-.001.177-.055.005-.002.005-.001.176-.057.005-.002.005-.002.175-.059.005-.001.005-.002.174-.061.005-.002.005-.002.173-.063.005-.002.005-.002.173-.065.005-.002.004-.002.172-.068.005-.001.005-.002.171-.07.005-.002.005-.002.17-.072.005-.002.005-.002.169-.074.005-.002.004-.002.169-.076.004-.002.005-.002.168-.078.004-.002.005-.002.167-.08.004-.003.005-.002.166-.082.004-.002.005-.003.165-.084.004-.002.005-.002.163-.087.005-.002.005-.002.162-.088.005-.003.005-.003.161-.09.005-.002.004-.003.16-.092.005-.002.005-.003.16-.094.004-.003.004-.003.158-.096.005-.002.004-.003.158-.098.004-.003.005-.003.156-.1.004-.003.004-.002.155-.102.005-.003.004-.003.154-.104.004-.003.005-.003.152-.106.004-.003.005-.003.151-.108.004-.003.005-.003.15-.11.004-.003.004-.003.149-.111.004-.004.004-.003.148-.113.004-.004.004-.003.147-.115.004-.004.004-.003.068-.055.116-.113.092-.132.066-.147.038-.157.008-.16-.022-.16-.05-.153-.08-.14-.103-.125-.124-.102-.142-.077-.153-.05-.16-.02-.16.009z"
 }));
 function _extends$H() {
-  _extends$H = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$H = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$H.apply(this, arguments);
+    return n4;
+  }, _extends$H.apply(null, arguments);
 }
 var IntermediateEventCatchParallelMultipleIcon = ({
   styles = {},
@@ -50887,18 +54454,13 @@ var IntermediateEventCatchParallelMultipleIcon = ({
   d: "M15.975.003C8.195-.157.935 6.24.125 13.985c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.884 23.445.408 17.201.049c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.174.872 11.679 4.985 6.916c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.215-2.282-2.022-5.3-3.217-8.357-3.22zM16 4.975c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.082 11.082 0 0116 4.975zm-2.15 3.281v5.534H8.213v4.38h5.636v5.534h4.31V18.17h5.639v-4.38h-5.64V8.256h-4.31zm.865.865h2.583v5.534h5.635v2.65h-5.635v5.533h-2.583v-5.534h-5.64v-2.649h5.64V9.121z"
 }));
 function _extends$G() {
-  _extends$G = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$G = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$G.apply(this, arguments);
+    return n4;
+  }, _extends$G.apply(null, arguments);
 }
 var IntermediateEventCatchSignalIcon = ({
   styles = {},
@@ -50911,18 +54473,13 @@ var IntermediateEventCatchSignalIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm.006 3.521L9.206 20.745h13.598L16.005 8.542zm0 1.775l5.329 9.564H10.677l5.328-9.564z"
 }));
 function _extends$F() {
-  _extends$F = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$F = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$F.apply(this, arguments);
+    return n4;
+  }, _extends$F.apply(null, arguments);
 }
 var IntermediateEventCatchTimerIcon = ({
   styles = {},
@@ -50935,18 +54492,13 @@ var IntermediateEventCatchTimerIcon = ({
   d: "M15.97.04h-.127C8.713-.018 2.003 5.334.437 12.286c-1.51 6.123.98 13.005 6.136 16.665 5.125 3.788 12.546 4.105 17.912.623 5.272-3.276 8.33-9.766 7.325-15.916-.904-6.241-5.79-11.7-11.95-13.143A16.082 16.082 0 0015.97.04zm-.181 1.724c.115 0 .23 0 .347.003 6.625-.066 12.823 5.149 13.89 11.69 1.13 5.91-1.908 12.349-7.262 15.138-5.473 3.013-12.866 1.884-17.116-2.726C1.291 21.372.444 13.914 3.802 8.602c2.493-4.112 7.169-6.819 11.987-6.838zm.283 1.554c-.117 0-.234.002-.351.005-6.1 0-11.691 5.049-12.346 11.114-.78 5.684 2.795 11.612 8.218 13.52 5.139 1.943 11.416.101 14.624-4.38 3.461-4.583 3.262-11.538-.596-15.831-2.36-2.747-5.924-4.423-9.549-4.428zm-.078 1.695c.078 0 .156 0 .234.003 5.4 0 10.321 4.556 10.734 9.942.563 5.13-2.958 10.364-7.971 11.678-4.832 1.41-10.457-.935-12.746-5.446-2.463-4.559-1.2-10.795 3.014-13.883a11.072 11.072 0 016.735-2.294zm-.137 3.42c-2.965.02-5.792 1.968-6.884 4.722-1.137 2.693-.509 6.007 1.536 8.096 1.988 2.14 5.263 2.929 8.007 1.926 2.875-.98 4.987-3.824 5.063-6.865.154-2.954-1.622-5.875-4.295-7.13a7.545 7.545 0 00-3.427-.75zm.27 1.381c2.708.013 5.249 2.014 5.88 4.652.704 2.576-.481 5.512-2.788 6.862-2.356 1.478-5.677 1.084-7.611-.918-2.042-1.97-2.405-5.376-.839-7.738 1.11-1.762 3.146-2.877 5.229-2.857h.13zm1.831 1.764l-2.072 3.76c-.64.068-.792 1.039-.202 1.298.39.27.696-.18 1.051-.164h3.168v-.864h-3.18l1.992-3.612-.757-.418z"
 }));
 function _extends$E() {
-  _extends$E = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$E = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$E.apply(this, arguments);
+    return n4;
+  }, _extends$E.apply(null, arguments);
 }
 var IntermediateEventNoneIcon = ({
   styles = {},
@@ -50959,18 +54511,13 @@ var IntermediateEventNoneIcon = ({
   d: "M15.848.001C8.113-.093.931 6.281.125 13.983c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.207C29.105 4.938 23.55.48 17.367.06A16.448 16.448 0 0015.848 0v.001zm.293 1.727c7.113-.099 13.662 5.97 14.077 13.08.56 6.299-3.516 12.735-9.582 14.679-5.798 2.004-12.806-.12-16.283-5.237C.717 19.159.874 11.638 5.016 6.876 7.722 3.638 11.902 1.63 16.14 1.728zm-.415 1.555C9.157 3.258 3.256 9.156 3.278 15.729c-.16 5.965 4.365 11.725 10.293 12.737 5.409 1.065 11.37-1.744 13.775-6.753 2.534-4.986 1.386-11.627-2.953-15.251-2.364-2.077-5.512-3.27-8.667-3.18zm.507 1.692c5.82-.026 11.013 5.318 10.79 11.143-.024 5.3-4.313 10.267-9.636 10.803-5.075.667-10.426-2.588-11.885-7.553-1.535-4.744.494-10.46 4.925-12.885a11.072 11.072 0 015.806-1.508z"
 }));
 function _extends$D() {
-  _extends$D = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$D = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$D.apply(this, arguments);
+    return n4;
+  }, _extends$D.apply(null, arguments);
 }
 var IntermediateEventThrowCompensationIcon = ({
   styles = {},
@@ -50983,18 +54530,13 @@ var IntermediateEventThrowCompensationIcon = ({
   d: "M15.975.003C8.195-.156.935 6.24.125 13.985c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.884 23.445.407 17.201.049c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.174.872 11.679 4.985 6.916c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 4.975c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 4.975zm-.56 5.772l-7.408 5.231 7.409 5.234v-5.057c2.385 1.687 4.771 3.371 7.157 5.057V10.747l-7.157 5.055v-5.055z"
 }));
 function _extends$C() {
-  _extends$C = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$C = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$C.apply(this, arguments);
+    return n4;
+  }, _extends$C.apply(null, arguments);
 }
 var IntermediateEventThrowEscalationIcon = ({
   styles = {},
@@ -51007,18 +54549,13 @@ var IntermediateEventThrowEscalationIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm.006 3.927c-1.672 4.654-2.734 9.502-4.406 14.155 1.534-1.525 2.872-3.234 4.406-4.759l4.406 4.76c-1.496-4.71-2.91-9.446-4.406-14.156z"
 }));
 function _extends$B() {
-  _extends$B = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$B = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$B.apply(this, arguments);
+    return n4;
+  }, _extends$B.apply(null, arguments);
 }
 var IntermediateEventThrowLinkIcon = ({
   styles = {},
@@ -51031,18 +54568,13 @@ var IntermediateEventThrowLinkIcon = ({
   d: "M15.975.049C8.195-.11.935 6.286.125 14.03c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.93 23.445.453 17.201.095c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.22.872 11.725 4.985 6.962c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 5.021c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 5.021zm1.78 4.093v3.555H9.785v6.714h7.994v3.554l5.829-6.911-5.83-6.912z"
 }));
 function _extends$A() {
-  _extends$A = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$A = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$A.apply(this, arguments);
+    return n4;
+  }, _extends$A.apply(null, arguments);
 }
 var IntermediateEventThrowMessageIcon = ({
   styles = {},
@@ -51055,18 +54587,13 @@ var IntermediateEventThrowMessageIcon = ({
   d: "M15.975.003C8.195-.156.935 6.24.125 13.985c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.884 23.445.407 17.201.049c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.174.872 11.679 4.985 6.916c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 4.975c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 4.975zm-5.91 5.475l6.04 4.901 6.042-4.9H10.088zm-1.341 1.138v9.921h14.514V11.79l-7.132 5.787-7.382-5.99z"
 }));
 function _extends$z() {
-  _extends$z = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$z = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$z.apply(this, arguments);
+    return n4;
+  }, _extends$z.apply(null, arguments);
 }
 var IntermediateEventThrowMultipleIcon = ({
   styles = {},
@@ -51079,18 +54606,13 @@ var IntermediateEventThrowMultipleIcon = ({
   d: "M15.975.003C8.195-.156.935 6.24.125 13.985c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.884 23.445.407 17.201.049c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.174.872 11.679 4.985 6.916c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 4.975c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 4.975zm.006 3.073l-7.62 5.532 2.91 8.95h9.42l2.91-8.95-7.62-5.532z"
 }));
 function _extends$y() {
-  _extends$y = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$y = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$y.apply(this, arguments);
+    return n4;
+  }, _extends$y.apply(null, arguments);
 }
 var IntermediateEventThrowSignalIcon = ({
   styles = {},
@@ -51103,18 +54625,13 @@ var IntermediateEventThrowSignalIcon = ({
   d: "M15.975.003C8.195-.156.935 6.24.125 13.985c-.855 6.55 2.741 13.46 8.74 16.314 5.666 2.847 13.012 1.99 17.71-2.33 4.745-4.162 6.727-11.243 4.532-17.206C29.09 4.884 23.445.407 17.201.049c-.408-.03-.817-.046-1.226-.046zm-.181 1.724c7.134-.269 13.84 5.68 14.399 12.804.686 6.283-3.267 12.792-9.283 14.862-5.847 2.162-13.025.06-16.557-5.141C.728 19.174.872 11.679 4.985 6.916c2.632-3.171 6.671-5.174 10.809-5.19zm.283 1.553c-6.6-.21-12.671 5.585-12.79 12.185-.292 5.964 4.129 11.817 10.034 12.953 5.47 1.198 11.584-1.613 14.025-6.702 2.525-4.97 1.396-11.585-2.912-15.216-2.282-2.021-5.3-3.216-8.357-3.22zM16 4.975c5.818-.154 11.117 5.082 11.024 10.905.103 5.384-4.23 10.5-9.636 11.043-5.075.667-10.426-2.587-11.885-7.552-1.53-4.73.48-10.428 4.888-12.864A11.083 11.083 0 0116 4.975zm.006 3.52c-2.261 4.07-4.533 8.136-6.798 12.205h13.596L16.005 8.495z"
 }));
 function _extends$x() {
-  _extends$x = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$x = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$x.apply(this, arguments);
+    return n4;
+  }, _extends$x.apply(null, arguments);
 }
 var LaneIcon = ({
   styles = {},
@@ -51127,18 +54644,13 @@ var LaneIcon = ({
   d: "M0 7v18.62h32V7H0zm1.655 17.056V8.684h28.62v15.372H1.656z"
 }));
 function _extends$w() {
-  _extends$w = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$w = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$w.apply(this, arguments);
+    return n4;
+  }, _extends$w.apply(null, arguments);
 }
 var ManualTaskIcon = ({
   styles = {},
@@ -51151,18 +54663,13 @@ var ManualTaskIcon = ({
   d: "M6.494 3C2.916 3 0 5.903 0 9.475v13.383c0 3.572 2.916 6.475 6.494 6.475h19.012c3.578 0 6.494-2.903 6.494-6.475V9.475C32 5.903 29.084 3 25.506 3H6.494zm0 2h19.012C28.015 5 30 6.98 30 9.475v13.383c0 2.495-1.985 4.475-4.494 4.475H6.494C3.985 27.333 2 25.353 2 22.858V9.475C2 6.98 3.985 5 6.494 5zm4.43 1.328c-.222.005-.43.09-.606.203-.985.638-4.356 2.977-5.096 3.486-.67.46-1.12 1.153-1.38 1.974-.27.858-.235 1.793-.232 2.576.002.59.016 1.104.17 1.727.22.908.634 1.63 1.23 2.118.597.49 1.363.732 2.23.734 3.038.012 6.078.016 9.119 0 .327-.002.645-.127.848-.37.204-.241.287-.56.291-.914a1.732 1.732 0 00-.097-.625h.327c.335 0 .641-.11.852-.316.21-.206.317-.475.374-.754a1.783 1.783 0 00-.126-1.143 1.18 1.18 0 00.877-.521c.196-.306.257-.666.258-1.025.001-.375-.088-.738-.293-1.033a1.179 1.179 0 00-.958-.512h-.478c.108-.237.156-.505.155-.782-.003-.373-.098-.721-.316-.99a1.21 1.21 0 00-.943-.43c-2.273-.004-4.236.018-6.412.012l-.19-.001c.102-.104.202-.205.312-.314.337-.336.662-.652.83-.869.4-.516.46-1.215.123-1.729-.178-.272-.439-.456-.72-.494a.93.93 0 00-.148-.008zm.029.728l.022.001c.055.008.115.027.209.172.132.201.126.606-.09.884-.079.102-.431.465-.767.8-.337.334-.657.643-.815.836-.153.186-.096.338-.056.435.04.096.085.212.298.263.063.014.066.01.086.012l.066.003c2.429.027 4.986-.004 7.223-.003.194 0 .293.056.379.162.086.105.151.286.153.533 0 .257-.065.467-.155.59-.09.124-.183.182-.37.183-1.706-.001-3.411-.005-5.117-.009v.731c2.23.004 4.461.01 6.692.012.17 0 .265.06.361.2.096.138.164.364.163.615 0 .268-.058.501-.143.634-.085.132-.162.193-.385.195-2.32-.001-4.554-.006-6.688-.003v.73c1.905 0 3.809.003 5.713.001.194.005.316.09.416.26.102.173.151.442.093.728-.04.193-.102.313-.17.38-.067.065-.148.108-.343.108h-5.71l.002.734c1.445 0 2.89-.01 4.334-.001.162 0 .232.041.297.123.064.081.123.238.12.488-.003.244-.061.385-.12.455-.06.07-.127.11-.296.11-3.037.016-6.076.012-9.113 0-.735-.002-1.316-.196-1.77-.568-.454-.372-.793-.935-.986-1.728-.134-.546-.146-.978-.148-1.558-.003-.796-.018-1.664.199-2.354.222-.705.582-1.24 1.096-1.593.75-.515 4.14-2.866 5.079-3.474a.504.504 0 01.241-.087z"
 }));
 function _extends$v() {
-  _extends$v = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$v = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$v.apply(this, arguments);
+    return n4;
+  }, _extends$v.apply(null, arguments);
 }
 var MessageFlowIcon = ({
   styles = {},
@@ -51175,18 +54682,13 @@ var MessageFlowIcon = ({
   d: "M4.073 26.607l1.295 1.296L1.325 32l-.662-.633L0 30.735l4.073-4.128zm6.953-7.046l1.296 1.296L1.325 32l7.555-7.656-1.295-1.296 1.455-1.474 1.986-2.013zM32 .06s-2.699 5.189-5.417 10.462l-.326.633c-1.14 2.214-2.265 4.407-3.176 6.2-1.228-1.222-2.449-2.452-3.676-3.675l-3.57 3.618-1.297-1.296 3.541-3.588c-.98-.964-1.932-1.958-2.923-2.91l-.753-.706c2.68-1.258 6.533-3.165 9.95-4.876l.617-.309C28.838 1.673 32 .06 32 .06zm-4.126 4.06l-.015.007-.115.057-.048.024-.115.057L17.7 9.172l5.017 4.948 5.157-10z"
 }));
 function _extends$u() {
-  _extends$u = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$u = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$u.apply(this, arguments);
+    return n4;
+  }, _extends$u.apply(null, arguments);
 }
 var ParticipantIcon = ({
   styles = {},
@@ -51199,18 +54701,13 @@ var ParticipantIcon = ({
   d: "M0 5v22.069h32V5H0zm30.276 1.684v18.82H6.62V6.684h23.655zm-28.62 0h3.31v18.82h-3.31V6.684z"
 }));
 function _extends$t() {
-  _extends$t = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$t = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$t.apply(this, arguments);
+    return n4;
+  }, _extends$t.apply(null, arguments);
 }
 var ProcessIcon = ({
   styles = {},
@@ -51224,18 +54721,13 @@ var ProcessIcon = ({
   d: "M16.177 0l.137.002c.452.009.9.037 1.342.082.346.036.62.303.68.646l.437 2.536c.055.319.296.57.608.655.986.269 1.923.653 2.796 1.14.28.155.624.145.885-.039l2.083-1.47a.775.775 0 01.937.022c.86.699 1.645 1.484 2.343 2.343.22.27.223.653.023.937l-1.439 2.038a.833.833 0 00-.031.896c.512.889.92 1.846 1.204 2.855a.833.833 0 00.653.601l2.435.42c.342.059.61.333.645.679a15.928 15.928 0 01.08 2.064l-.003.114c-.012.382-.038.76-.077 1.134a.775.775 0 01-.645.68l-2.396.412a.835.835 0 00-.656.61 12.511 12.511 0 01-1.2 2.917.832.832 0 00.034.892l1.396 1.978c.2.284.196.667-.023.936a16.104 16.104 0 01-2.343 2.343.775.775 0 01-.937.023l-1.99-1.404a.833.833 0 00-.88-.026c-.907.516-1.886.922-2.916 1.2a.833.833 0 00-.61.656l-.414 2.396a.775.775 0 01-.679.646 16.096 16.096 0 01-3.312 0 .775.775 0 01-.679-.646l-.423-2.452a.834.834 0 00-.598-.636 12.474 12.474 0 01-1.468-.514 12.49 12.49 0 01-1.417-.68.833.833 0 00-.878.03l-2.026 1.43a.775.775 0 01-.937-.023 16.069 16.069 0 01-2.342-2.342.774.774 0 01-.024-.936l1.402-1.986a.833.833 0 00.032-.896 12.507 12.507 0 01-1.214-2.911.833.833 0 00-.655-.606l-2.386-.412a.775.775 0 01-.646-.678 16.097 16.097 0 010-3.314.775.775 0 01.646-.678l2.386-.412a.833.833 0 00.655-.606 12.507 12.507 0 011.214-2.911.833.833 0 00-.032-.896L3.552 6.853a.774.774 0 01.023-.936 16.091 16.091 0 012.343-2.343.775.775 0 01.937-.023l2.03 1.433c.26.177.6.182.874.028.915-.512 1.88-.9 2.87-1.167a.833.833 0 00.612-.656l.424-2.46a.775.775 0 01.679-.645C14.845.032 15.348.004 15.85 0h.326zM16 6.4c-5.302 0-9.6 4.297-9.6 9.599 0 5.302 4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6-4.298-9.6-9.6-9.6zm-3 4.283c0-1.425 1.637-2.203 2.715-1.29l5.69 4.815c.794.672.794 1.91 0 2.583l-5.69 4.815c-1.078.913-2.715.134-2.715-1.29z"
 }));
 function _extends$s() {
-  _extends$s = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$s = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$s.apply(this, arguments);
+    return n4;
+  }, _extends$s.apply(null, arguments);
 }
 var ReceiveTaskIcon = ({
   styles = {},
@@ -51248,18 +54740,13 @@ var ReceiveTaskIcon = ({
   d: "M6.494 3C2.916 3 0 5.903 0 9.475v13.383c0 3.572 2.916 6.475 6.494 6.475h19.012c3.578 0 6.494-2.903 6.494-6.475V9.475C32 5.903 29.084 3 25.506 3H6.494zm0 2h19.012C28.015 5 30 6.98 30 9.475v13.383c0 2.495-1.985 4.475-4.494 4.475H6.494C3.985 27.333 2 25.353 2 22.858V9.475C2 6.98 3.985 5 6.494 5zM5.23 7.764v11.577h17.55V7.764H5.23zm1.816.758h13.917l-6.959 4.577-6.958-4.577zm-1.06.21l8.018 5.274 8.018-5.275v9.853H5.987V8.73z"
 }));
 function _extends$r() {
-  _extends$r = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$r = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$r.apply(this, arguments);
+    return n4;
+  }, _extends$r.apply(null, arguments);
 }
 var ScriptTaskIcon = ({
   styles = {},
@@ -51272,18 +54759,13 @@ var ScriptTaskIcon = ({
   d: "M6.494 3C2.916 3 0 5.903 0 9.475v13.383c0 3.572 2.916 6.475 6.494 6.475h19.012c3.578 0 6.494-2.903 6.494-6.475V9.475C32 5.903 29.084 3 25.506 3H6.494zm0 2h19.012C28.015 5 30 6.98 30 9.475v13.383c0 2.495-1.985 4.475-4.494 4.475H6.494C3.985 27.333 2 25.353 2 22.858V9.475C2 6.98 3.985 5 6.494 5zm2.99 3.077l-.077.045-.026.015c-1.09.646-1.84 1.239-2.336 1.818-.496.579-.735 1.162-.742 1.725-.014 1.119.812 1.958 1.544 2.708.732.75 1.385 1.456 1.446 2.041.032.298-.039.598-.364 1.008-.324.408-.911.897-1.85 1.445l-1.388.808h8.56l.101-.059c.996-.58 1.667-1.116 2.094-1.655.429-.54.603-1.107.547-1.638-.11-1.052-.967-1.818-1.688-2.556-.721-.739-1.306-1.436-1.298-2.092.004-.331.132-.7.535-1.171.402-.47 1.08-1.02 2.119-1.636l1.362-.806h-8.54zm.241.867h5.271a6.83 6.83 0 00-1.113 1.01c-.496.58-.736 1.163-.743 1.726-.014 1.119.812 1.958 1.544 2.708.732.75 1.385 1.456 1.446 2.041.032.298-.039.598-.364 1.008-.312.393-.872.862-1.753 1.386H8.728c.367-.286.658-.566.88-.847.43-.54.604-1.107.548-1.638-.11-1.052-.968-1.818-1.688-2.556-.721-.739-1.306-1.435-1.298-2.092.004-.331.132-.7.534-1.171.389-.454 1.04-.984 2.021-1.575zm-1.233 1.48v.4h4.12v-.4h-4.12zm-.154 2.158v.4H12.6v-.4H8.34zm1.931 2.158v.4h4.126v-.4H10.27zm.59 2.158v.4h4.276v-.4h-4.276z"
 }));
 function _extends$q() {
-  _extends$q = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$q = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$q.apply(this, arguments);
+    return n4;
+  }, _extends$q.apply(null, arguments);
 }
 var SendTaskIcon = ({
   styles = {},
@@ -51296,18 +54778,13 @@ var SendTaskIcon = ({
   d: "M6.494 3C2.916 3 0 5.903 0 9.475v13.383c0 3.572 2.916 6.475 6.494 6.475h19.012c3.578 0 6.494-2.903 6.494-6.475V9.475C32 5.903 29.084 3 25.506 3H6.494zm0 2h19.012C28.015 5 30 6.98 30 9.475v13.383c0 2.495-1.985 4.475-4.494 4.475H6.494C3.985 27.333 2 25.353 2 22.858V9.475C2 6.98 3.985 5 6.494 5zm-1.38 3.16l8.332 4.717L21.78 8.16H5.114zm.021 1.745v9.309H21.8V9.905l-8.353 4.655-8.31-4.655z"
 }));
 function _extends$p() {
-  _extends$p = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$p = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$p.apply(this, arguments);
+    return n4;
+  }, _extends$p.apply(null, arguments);
 }
 var ServiceTaskIcon = ({
   styles = {},
@@ -51320,18 +54797,13 @@ var ServiceTaskIcon = ({
   d: "M6.494 3C2.916 3 0 5.903 0 9.475v13.383c0 3.572 2.916 6.475 6.494 6.475h19.012c3.578 0 6.494-2.903 6.494-6.475V9.475C32 5.903 29.084 3 25.506 3H6.494zm0 2h19.012C28.015 5 30 6.98 30 9.475v13.383c0 2.495-1.985 4.475-4.494 4.475H6.494C3.985 27.333 2 25.353 2 22.858V9.475C2 6.98 3.985 5 6.494 5zm1.22 1.681V7.84c-.329.093-.63.223-.914.382l-.83-.82-1.554 1.561.83.82c-.16.288-.285.594-.372.911l-1.177.002v2.2l1.189-.004c.109.431.345.819.58 1.165v-1.898l-1.038.004v-.737l1.034-.002.058-.294c.084-.429.252-.838.493-1.203l.165-.25-.727-.718.523-.526.728.719.247-.165c.379-.25.793-.417 1.206-.505l.291-.06-.002-1.01h.75L9.19 8.417H11.16c-.185-.221-.951-.508-1.237-.588L9.93 6.68H7.713zm2.078 2.105l.003 1.158a4.19 4.19 0 00-.915.383l-.83-.821-1.553 1.562.83.82c-.16.288-.286.593-.373.91l-1.176.003v2.2l1.188-.004c.094.326.224.624.383.905l-.85.847 1.57 1.543.847-.843c.29.161.599.286.919.373v1.198c.756.006 1.56.003 2.206.003V17.81a4.19 4.19 0 00.915-.383l.847.835 1.554-1.56-.848-.836c.16-.288.286-.594.373-.912l1.152-.007V12.75l-1.165.007a4.09 4.09 0 00-.382-.905l.805-.807-1.57-1.546-.804.806a4.16 4.16 0 00-.915-.372l.007-1.147H9.792zm.732.73h.751l-.006 1.005.297.058c.43.085.844.252 1.21.492l.25.162.701-.704.528.52-.702.704.169.25c.248.374.412.779.505 1.196l.061.292 1.016-.006v.737l-1.01.006-.058.292c-.085.43-.252.838-.494 1.205l-.165.25.744.733-.523.525-.743-.734-.248.165c-.378.247-.789.418-1.203.503l-.294.058v1.067h-.745v-1.059l-.295-.057a3.395 3.395 0 01-1.21-.492l-.248-.162-.747.743-.528-.52.747-.744-.17-.25a3.546 3.546 0 01-.506-1.196l-.06-.291-1.04.004v-.738l1.034-.002.058-.294c.085-.428.252-.837.493-1.203l.165-.25-.726-.718.522-.526.728.72.248-.166a3.546 3.546 0 011.205-.504l.292-.06-.003-1.01zm.388 2.685a1.65 1.65 0 00-1.645 1.645c0 .904.74 1.645 1.645 1.645a1.65 1.65 0 001.645-1.645 1.65 1.65 0 00-1.645-1.645zm0 .73a.91.91 0 01.915.915.91.91 0 01-.915.914.91.91 0 01-.915-.914.91.91 0 01.915-.915z"
 }));
 function _extends$o() {
-  _extends$o = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$o = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$o.apply(this, arguments);
+    return n4;
+  }, _extends$o.apply(null, arguments);
 }
 var StartEventCompensationIcon = ({
   styles = {},
@@ -51344,18 +54816,13 @@ var StartEventCompensationIcon = ({
   d: "M15.995.001C9.705-.084 3.643 3.964 1.257 9.775-1.235 15.485.06 22.577 4.42 27.03c4.193 4.513 11.102 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.269.403-6.227-3.26-12.44-8.87-15.153A15.924 15.924 0 0015.994 0zm0 1.73c6.213-.108 12.122 4.355 13.726 10.357 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.626C2.101 23.171.377 16.07 2.848 10.44c2.14-5.205 7.515-8.774 13.147-8.708zm-.566 9.03l-7.415 5.235 7.415 5.238v-5.062c2.386 1.689 4.775 3.375 7.163 5.062V10.761l-7.163 5.058v-5.058zm-.866 1.666v7.13L9.51 15.993l5.052-3.565zm7.166 0v7.137l-5.052-3.568 5.052-3.569z"
 }));
 function _extends$n() {
-  _extends$n = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$n = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$n.apply(this, arguments);
+    return n4;
+  }, _extends$n.apply(null, arguments);
 }
 var StartEventConditionIcon = ({
   styles = {},
@@ -51368,18 +54835,13 @@ var StartEventConditionIcon = ({
   d: "M16 0C7.174 0 0 7.174 0 16s7.174 16 16 16 16-7.174 16-16S24.826 0 16 0zm0 1.73c7.892 0 14.27 6.378 14.27 14.27 0 7.891-6.379 14.27-14.27 14.27S1.73 23.891 1.73 16C1.73 8.108 8.108 1.73 16 1.73zm-5.362 7.523v13.493h10.724V9.253H10.638zm.863.866h8.995V21.88H11.501V10.12zm.928 1.324v.863h7.139v-.863h-7.139zm0 2.605v.867h7.139v-.867h-7.139zm0 3.01v.864h7.139v-.863h-7.139zm0 2.72v.863h7.139v-.863h-7.139z"
 }));
 function _extends$m() {
-  _extends$m = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$m = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$m.apply(this, arguments);
+    return n4;
+  }, _extends$m.apply(null, arguments);
 }
 var StartEventErrorIcon = ({
   styles = {},
@@ -51392,18 +54854,13 @@ var StartEventErrorIcon = ({
   d: "M15.995.005C9.705-.08 3.643 3.968 1.257 9.78-1.235 15.49.06 22.581 4.42 27.034c4.193 4.513 11.102 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.269.403-6.227-3.26-12.44-8.87-15.153A15.924 15.924 0 0015.994.005zm0 1.73c6.213-.108 12.122 4.355 13.726 10.357 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.626-4.814-3.838-6.538-10.939-4.067-16.57 2.14-5.205 7.515-8.774 13.147-8.708zm6.13 7.45l-3.635 7.37-4.52-5.88c-1.37 4.048-2.738 8.095-4.106 12.143l4.603-5.917 4.748 5.433 2.91-13.149zm-7.754 3.889l4.299 5.449 1.073-2.39-1.028 4.135-4.387-5.16-1.78 2.75 1.823-4.784z"
 }));
 function _extends$l() {
-  _extends$l = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$l = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$l.apply(this, arguments);
+    return n4;
+  }, _extends$l.apply(null, arguments);
 }
 var StartEventEscalationIcon = ({
   styles = {},
@@ -51416,18 +54873,13 @@ var StartEventEscalationIcon = ({
   d: "M15.995.001C9.705-.084 3.643 3.964 1.257 9.775-1.235 15.485.06 22.577 4.42 27.03c4.193 4.513 11.102 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.269.403-6.227-3.26-12.44-8.87-15.153A15.924 15.924 0 0015.994 0zm0 1.73c6.213-.108 12.122 4.355 13.726 10.357 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.626C2.101 23.171.377 16.07 2.848 10.44c2.14-5.205 7.515-8.774 13.147-8.708zm0 7.183c-1.674 4.658-2.736 9.509-4.41 14.166 1.535-1.526 2.874-3.236 4.41-4.763l4.41 4.763c-1.499-4.713-2.913-9.453-4.41-14.166zm.032 2.931c.822 2.588 1.598 5.19 2.42 7.778l-2.42-2.615c-.683.598-2.455 2.887-2.34 2.39.871-2.489 1.448-5.07 2.34-7.553z"
 }));
 function _extends$k() {
-  _extends$k = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$k = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$k.apply(this, arguments);
+    return n4;
+  }, _extends$k.apply(null, arguments);
 }
 var StartEventMessageIcon = ({
   styles = {},
@@ -51440,18 +54892,13 @@ var StartEventMessageIcon = ({
   d: "M15.995.001C9.705-.084 3.643 3.964 1.257 9.775-1.235 15.485.06 22.577 4.42 27.03c4.193 4.513 11.102 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.269.403-6.227-3.26-12.44-8.87-15.153A15.924 15.924 0 0015.994 0zm0 1.73c6.213-.108 12.122 4.355 13.726 10.357 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.626C2.101 23.171.377 16.07 2.848 10.44c2.14-5.205 7.515-8.774 13.147-8.708zm-7.257 8.732v11.069h14.513v-11.07H8.738zm3.224 1.73h8.064c-1.428.878-2.857 2.807-4.285 3.018l-3.779-3.019zm9.562 1.017v6.593H10.465V13.21l5.528 4.417 5.53-4.418z"
 }));
 function _extends$j() {
-  _extends$j = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$j = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$j.apply(this, arguments);
+    return n4;
+  }, _extends$j.apply(null, arguments);
 }
 var StartEventMultipleIcon = ({
   styles = {},
@@ -51464,18 +54911,13 @@ var StartEventMultipleIcon = ({
   d: "M15.995.001C9.705-.084 3.643 3.964 1.257 9.775-1.235 15.485.06 22.577 4.42 27.03c4.193 4.513 11.102 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.269.403-6.227-3.26-12.44-8.87-15.153A15.924 15.924 0 0015.994 0zm0 1.73c6.213-.108 12.122 4.355 13.726 10.357 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.626C2.101 23.171.377 16.07 2.848 10.44c2.14-5.205 7.515-8.774 13.147-8.708zm0 6.328l-7.626 5.536c.97 2.986 1.942 5.971 2.913 8.957h9.426l2.912-8.957-7.625-5.536zm0 1.068l6.609 4.798-2.525 7.763H11.91l-2.524-7.763 6.609-4.798z"
 }));
 function _extends$i() {
-  _extends$i = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$i = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$i.apply(this, arguments);
+    return n4;
+  }, _extends$i.apply(null, arguments);
 }
 var StartEventNonInterruptingConditionIcon = ({
   styles = {},
@@ -51488,18 +54930,13 @@ var StartEventNonInterruptingConditionIcon = ({
   d: "M10.632 9.189V22.68h10.723V9.189H10.632zm.862.865h8.994v11.76H11.494v-11.76zm.928 1.324v.863h7.138v-.863h-7.138zm0 2.605v.866h7.138v-.866h-7.138zm0 3.01v.863h7.138v-.863h-7.138zm0 2.72v.862h7.138v-.863h-7.138zM16.12 0h-.232l-.22.004h-.012l-.221.006h-.012l-.22.01h-.012l-.22.013h-.012l-.22.016h-.012l-.22.019h-.005l-.006.001-.22.021h-.006l-.005.001-.22.025h-.011l-.22.028h-.005l-.006.002-.219.03h-.005l-.006.001-.218.033-.006.001-.006.001-.217.036-.006.001-.006.001-.217.039-.006.001-.006.001-.216.042-.006.001-.006.001-.215.045-.006.001-.006.002-.215.047-.006.002-.006.001-.214.05-.006.002-.006.002-.115.029-.152.053-.14.081-.122.106-.1.126-.075.143-.047.154-.018.16.012.16.042.156.07.145.095.13.118.11.137.086.15.059.158.03h.161l.132-.022.11-.028.202-.047.203-.046.208-.043.202-.039.206-.037.206-.034.205-.03.208-.03.205-.025.209-.023.208-.02.21-.017.209-.015.207-.011.21-.009.21-.006.207-.003h.21l.21.002.207.005.207.008.212.011.207.014.208.017.209.019.208.022.205.025.206.028.207.03.208.035.205.036.202.039.052.01.16.018.16-.012.156-.042.146-.07.13-.096.109-.119.085-.136.06-.15.03-.159v-.16l-.03-.16-.059-.15-.086-.136-.109-.118-.13-.096-.145-.07-.128-.038-.057-.011-.006-.002h-.006l-.216-.042-.006-.001-.006-.001-.217-.039H18.9l-.006-.002-.217-.035-.006-.001-.006-.001-.218-.032-.006-.001-.006-.001-.218-.03h-.006l-.006-.001-.219-.027h-.011l-.22-.024-.005-.001h-.006l-.22-.021h-.006l-.006-.001-.22-.017-.005-.001h-.006L17.06.03h-.012l-.22-.012h-.012l-.22-.01h-.012l-.22-.005h-.012L16.132 0h-.012zm8.715 2.783l-.157.034-.149.063-.134.089-.116.112-.092.132-.067.147-.038.157-.008.16.021.16.051.153.079.141.103.124.102.087.052.038h.001l.087.064v.001l.082.061.002.001.076.059h.001l.084.065.082.066.002.001.079.063.002.002.077.063.081.067.002.002.077.065.076.065.001.002.08.07.078.07h.002l.075.068.077.072.002.001.073.069.077.073.072.07.002.001.077.076.07.07v.001l.075.076.07.073.002.001.074.079.002.002.069.074.069.075.074.082.07.08.002.001.068.079h.001l.067.079.068.082.065.078.001.002.068.083.067.084.063.081.001.002.067.087.002.002.063.084.001.001.064.087.008.01.008.01.095.12.093.121.09.119.087.119.088.122.086.123.084.12.081.122.001.002.084.126.08.126.08.127.077.126.079.131.074.127.075.131.073.131.07.13.07.133.069.133.045.09.086.137.109.119.13.096.144.07.156.042.16.013.16-.017.155-.047.143-.075.126-.1.106-.121.082-.14.054-.151.025-.16-.005-.16-.035-.158-.05-.124-.048-.095-.002-.004-.002-.004-.073-.14-.002-.005-.002-.004-.074-.14-.002-.004-.002-.004-.076-.14-.002-.003-.002-.004-.077-.139-.003-.004-.002-.004-.078-.138-.003-.004-.002-.003-.08-.137-.002-.004-.003-.004-.081-.136-.002-.004-.003-.004-.083-.136-.002-.003-.002-.004-.085-.135-.002-.004-.003-.003-.085-.134-.003-.004-.002-.004-.087-.132-.003-.004-.003-.004-.088-.132-.003-.003-.002-.004-.09-.13-.003-.005-.003-.003-.091-.13-.003-.004-.002-.004-.093-.129-.003-.003-.003-.004-.094-.128-.003-.004-.003-.003-.095-.127-.003-.004-.003-.004-.097-.125-.003-.004-.003-.004-.09-.114-.06-.082-.003-.003-.002-.003-.069-.091-.002-.004-.002-.003-.07-.09-.003-.003-.002-.003-.07-.09-.003-.003-.002-.003-.071-.09-.002-.003-.003-.002-.072-.089-.002-.003-.002-.003-.073-.088-.002-.003-.002-.002-.074-.087-.002-.003-.002-.003-.074-.086-.003-.003-.002-.003-.074-.086-.003-.002-.002-.003-.075-.085-.003-.003-.002-.002-.076-.084-.002-.003-.003-.003-.076-.083-.002-.003-.003-.003-.077-.082-.002-.003-.003-.002-.077-.082-.003-.003-.003-.002-.078-.081-.002-.003-.003-.003-.078-.08-.003-.002-.003-.003-.079-.08-.002-.002-.003-.002-.08-.08-.002-.002-.003-.002-.08-.078-.003-.003-.003-.002-.08-.077-.003-.003-.003-.002-.082-.077-.002-.002-.003-.002-.082-.076-.003-.002-.002-.003-.083-.075-.003-.002-.002-.003-.084-.074-.002-.002-.003-.002-.084-.074-.003-.002-.002-.002-.085-.073-.002-.002-.003-.003-.085-.071-.003-.003-.002-.002-.086-.07-.003-.003-.002-.002-.086-.07-.003-.003-.003-.002-.086-.07-.003-.002-.003-.002-.087-.069-.002-.002-.003-.002-.088-.068-.002-.002-.003-.002-.088-.067-.003-.003-.003-.002-.088-.066-.003-.002-.003-.002-.089-.066-.003-.002-.003-.002-.057-.042-.14-.082-.15-.055-.16-.026-.16.004zM6.377 3.21l-.157.037-.148.066-.111.074-.007.006-.003.002-.003.002-.086.069-.003.002-.002.002-.086.07-.003.002-.002.002-.086.07-.002.003-.003.002-.085.071-.002.002-.003.003-.084.071-.003.003-.002.002-.084.072-.003.003-.002.002-.083.073-.003.003-.002.002-.083.074-.002.002-.003.003-.082.074-.003.003-.002.002-.081.076-.003.002-.003.002-.08.077-.003.002-.003.003-.08.076-.002.003-.003.002-.08.078-.002.002-.003.003-.079.078-.002.003-.003.002-.078.08-.003.002-.002.002-.078.08-.002.003-.003.002-.077.08-.003.004-.002.002-.077.081-.002.003-.003.003-.076.082-.002.002-.003.003-.075.082-.002.003-.003.003-.074.083-.003.003-.002.003-.074.084-.003.003-.002.002-.074.085-.002.003-.002.003-.073.085-.003.003-.002.003-.072.086-.002.003-.003.003-.071.087-.003.003-.002.002-.07.088-.003.003-.002.003-.07.088-.003.003-.002.003-.07.09-.002.002-.002.003-.069.09-.002.003-.003.003-.068.09-.002.003-.002.003-.067.092-.003.003-.002.003-.067.092-.002.003-.002.003-.066.092-.002.003-.002.004-.066.093-.002.003-.002.003-.065.094-.002.003-.002.004-.064.094-.002.003-.002.004-.063.095-.002.003-.002.003-.063.097-.002.003-.002.003-.046.073-.05.07-.003.002-.002.003-.067.093-.003.003-.002.003-.066.094-.002.003-.002.003-.066.094-.002.003-.002.003-.064.094-.002.004-.002.003-.064.094-.002.004-.002.003-.062.095-.002.003-.002.003-.062.096-.002.003-.002.003-.06.096-.003.003-.002.003-.06.096-.001.004-.002.003-.059.096-.002.004-.002.003-.058.097-.002.003-.001.003-.057.098-.002.003-.002.003-.056.098-.002.003-.002.003-.055.098-.002.004-.001.003-.055.098-.001.004-.002.003-.054.099-.001.003-.002.003-.052.1-.002.002-.002.004-.051.1-.002.002-.002.004-.05.1-.002.003-.002.003-.05.1v.003l-.002.004-.05.1v.003l-.002.004-.048.1-.002.004-.001.003-.047.101-.002.003-.001.004-.013.027-.052.152-.024.16.006.16.037.157.064.148.091.133.114.114.134.09.147.065.157.036.162.006.159-.024.152-.053.14-.08.122-.105.1-.126.066-.117.01-.023.044-.095.045-.095.002-.003.042-.087.048-.097.048-.095v-.001l.048-.092.001-.001.047-.09.05-.093.002-.002.049-.09.052-.092.001-.002.051-.089.001-.002.051-.087.053-.088.001-.002.055-.091.057-.091.057-.09.001-.002.057-.089.055-.083.001-.002.06-.09.06-.088.062-.089.001-.001.06-.084.063-.088.065-.089.017-.023.016-.025.06-.094.059-.09v-.002l.058-.086.057-.086.001-.001.062-.09.062-.088.001-.002.06-.085.002-.002.06-.082.063-.087.064-.084.002-.002.061-.08.065-.084.064-.08v-.001l.067-.083.067-.082.07-.083.069-.08.063-.074.074-.083.068-.077.002-.002.07-.076.07-.075.072-.077.001-.001.067-.07.076-.078.002-.002.07-.07.075-.075.002-.002.072-.07.075-.072.002-.002.073-.069.074-.068.001-.001.08-.073.076-.068.002-.002.072-.063v-.001l.078-.067.079-.068.002-.001.08-.068.002-.002.077-.063.082-.066.001-.001.075-.06.002-.002.006-.004.117-.111.094-.131.068-.146.04-.156.01-.161-.019-.16-.049-.154-.076-.141-.102-.125-.123-.105-.14-.079-.153-.052-.16-.023-.16.007zm24.596 11.088l-.156.04-.146.067-.131.094-.112.117-.087.135-.061.15-.033.157-.004.134.007.142.005.152.004.15.002.149v.153l.001.011v.015l.004.11.002.11v.002l.002.106v.321l-.003.102-.002.106-.004.107-.005.105-.006.106-.006.106-.008.106v.002l-.008.103v.002l-.01.1-.01.105-.01.105-.013.105-.012.099v.002l-.014.108-.014.1-.016.105-.016.103v.002l-.017.099-.018.104-.019.103v.002l-.019.097-.02.104-.022.103v.001l-.022.098-.023.103v.002l-.024.096-.025.103v.002l-.024.096-.027.102v.003l-.026.093v.001l-.029.103v.002l-.03.099-.028.097v.002l-.03.095-.03.096v.001l-.033.1-.031.095v.002l-.035.1v.003l-.034.094v.003l-.035.096v.001l-.034.09v.002l-.038.098-.036.093v.002l-.038.095-.079.194-.08.188-.085.189-.087.19-.09.184-.092.183-.095.184-.05.093-.064.148-.034.158-.005.16.026.16.054.151.082.14.106.12.127.1.143.075.154.046.16.017.161-.013.156-.042.144-.071.13-.096.109-.119.072-.112.053-.099.003-.005.003-.006.102-.195.003-.006.003-.006.098-.196.003-.006.003-.006.096-.197.002-.006.003-.006.093-.2.002-.006.003-.006.09-.2.002-.006.003-.007.086-.202.003-.006.002-.006.084-.203.002-.005.001-.005.04-.102.002-.003.001-.003.04-.103.001-.003.001-.003.04-.103v-.004l.001-.003.039-.103v-.003l.002-.003.037-.104.001-.003.001-.003.037-.104v-.004l.002-.003.035-.104.002-.003v-.004l.035-.104.002-.004v-.003l.034-.105.002-.003v-.003l.034-.105v-.004l.002-.003.032-.106.001-.003.001-.003.031-.106.001-.003.001-.004.031-.106.001-.003.001-.004.03-.106v-.003l.002-.004.028-.107.001-.003.001-.003.028-.107.001-.004.001-.003.027-.107.001-.004v-.003l.027-.108.001-.003v-.004l.026-.108.001-.003v-.004l.025-.108.001-.003v-.004l.025-.108v-.004l.001-.003.023-.109v-.003l.001-.004.022-.109v-.003l.002-.004.02-.109.001-.004v-.003l.02-.11.002-.003v-.004l.02-.11v-.007l.019-.11v-.003l.001-.004.017-.11v-.004l.001-.003.017-.11v-.008l.016-.11v-.004l.001-.004.015-.11v-.008l.015-.111v-.008l.013-.111v-.007l.013-.112v-.007l.011-.112v-.004l.001-.004.01-.112v-.007l.01-.112v-.008l.008-.112v-.008l.007-.113v-.007l.007-.113v-.008l.005-.113v-.007l.005-.114v-.007l.003-.114v-.007l.003-.114v-.129l.001-.114v-.13l-.003-.114v-.008l-.003-.115v-.007l-.003-.102v-.155l-.003-.158v-.01l-.004-.158v-.01l-.006-.158v-.01l-.007-.148-.023-.16-.051-.152-.08-.14-.103-.124-.125-.102-.142-.077-.153-.05-.16-.02-.161.01zm-30.213.66l-.157.034-.149.063-.134.09-.115.113-.092.132-.067.147-.037.156-.009.134.001.11V15.95l.006.22v.012l.01.22v.012l.012.22v.006l.001.006.015.22v.005l.001.006.018.22.001.006v.006l.022.219v.006l.001.006.024.219.001.006v.006l.028.218.001.006v.006l.031.218.001.006.001.006.033.218.001.006.001.005.037.218v.006l.002.005.04.217v.006l.001.006.043.216.001.006.001.006.046.216v.005l.002.006.048.215.002.006.001.006.051.214.002.006v.006l.055.214.002.005.001.006.057.213.002.006.001.005.06.213.002.005.001.006.063.212.002.005.001.006.066.21.002.006.002.006.068.21.002.005.002.005.07.21.003.005.002.005.074.208.002.006.002.005.077.207.002.006.002.005.08.206.002.005.002.006.082.204.002.006.002.005.086.204.002.005.002.006.088.202.002.005.003.006.09.2.003.006.002.005.094.2.002.006.003.005.096.199.002.005.003.005.03.062.086.137.11.118.128.097.145.07.156.043.16.013.16-.017.155-.047.143-.074.127-.1.106-.121.081-.14.055-.15.025-.16-.005-.161-.034-.158-.05-.124-.028-.055-.092-.19-.087-.188-.087-.192-.083-.19-.08-.193-.078-.194-.076-.196-.073-.195-.07-.197-.067-.198-.065-.199-.063-.2-.059-.2-.056-.2-.055-.204-.05-.201-.049-.202-.046-.205-.043-.206-.04-.203-.038-.207-.034-.204-.032-.207-.028-.205-.026-.207-.023-.208-.02-.207-.018-.207-.014-.208-.011-.207-.009-.208-.005-.207-.002-.104-.017-.16-.046-.155-.074-.143-.1-.126-.121-.107-.139-.081-.152-.055-.159-.025-.161.004zm24.585 11.83l-.156.039-.146.068-.11.076-.015.012-.163.129-.166.127-.168.125-.17.124-.17.12-.172.118-.173.115-.176.114-.177.111-.18.11-.178.105-.182.104-.182.101-.184.1-.184.095-.189.095-.186.09-.188.089-.19.086-.19.082-.193.081-.195.078-.191.074-.197.073-.195.07-.196.065-.198.064-.198.061-.2.058-.2.055-.2.052-.2.049-.151.035-.153.05-.141.078-.125.103-.103.124-.078.14-.05.154-.022.16.009.16.038.157.067.147.093.132.116.112.134.089.149.062.158.034.16.003.133-.02.158-.035.006-.002.006-.001.213-.052.006-.002.007-.001.212-.056.006-.001.006-.002.212-.058.006-.002.006-.002.211-.061.006-.002.006-.002.21-.064.006-.002.006-.002.21-.067.005-.002.006-.002.208-.07.006-.002.006-.003.207-.073.006-.002.006-.002.206-.077.006-.002.005-.002.206-.08.005-.001.006-.003.204-.082.006-.002.005-.002.203-.085.006-.003.005-.002.202-.088.006-.002.005-.003.2-.09.006-.003.006-.003.2-.093.005-.003.005-.002.198-.096.006-.003.005-.003.197-.099.005-.002.005-.003.196-.102.005-.002.005-.003.195-.105.005-.002.005-.003.193-.107.005-.003.005-.003.191-.11.005-.003.005-.003.19-.112.005-.003.005-.003.189-.115.005-.003.005-.003.187-.117.005-.003.004-.004.186-.12.005-.003.004-.003.184-.122.005-.003.005-.004.182-.125.004-.003.005-.003.18-.128.005-.003.005-.003.179-.13.004-.003.005-.004.177-.132.004-.004.005-.003.175-.135.005-.003.004-.004.173-.137.005-.003.004-.004.019-.015.115-.113.092-.132.066-.147.038-.157.008-.16-.022-.16-.052-.153-.079-.14-.103-.124-.125-.102-.142-.078-.153-.05-.16-.02-.16.01zm-19.17.054l-.153.051-.14.079-.124.103-.103.125-.077.141-.05.153-.02.16.009.161.04.156.067.147.093.131.095.094.047.04.005.004.005.004.17.14.005.004.005.004.172.137.004.004.005.003.086.067.003.002.003.002.087.067.003.002.003.002.088.066.002.003.003.002.089.065.002.002.003.002.09.065.002.002.003.002.09.064.002.002.003.002.09.063.003.002.003.002.09.063.003.002.003.002.092.062.002.002.003.002.092.061.003.002.003.002.092.06.003.003.003.001.093.06.003.002.003.002.093.06.003.001.003.002.094.058.003.002.003.002.095.058.003.001.003.002.095.057.003.002.003.002.095.056.003.002.003.002.096.055.004.002.003.001.096.055.003.002.003.002.098.053.003.002.003.002.097.053.004.002.003.001.098.053.003.001.003.002.099.052.003.001.003.002.1.05.003.002.003.002.1.05.003.002.003.001.1.05h.003l.004.003.1.048.004.001.003.002.101.048.003.001.004.002.101.046.004.002.003.001.102.046.004.002.003.001.103.045.003.002.003.001.103.045.004.001.003.002.104.043.003.001.004.002.104.042.003.002.004.001.104.042.004.001.003.002.105.04.004.002.003.001.106.04.003.002h.004l.106.04.004.001.003.002.107.038.003.001.004.001.107.038.003.001.004.001.107.037.004.001.004.001.108.036.003.001.004.001.108.035.004.001.003.001.11.034.003.001.004.001.109.033.004.002h.003l.11.033h.004l.003.002.11.031.004.001.004.001.084.023.081.028.004.001.003.001.109.037.003.001.004.001.109.036.003.001.004.001.109.035h.003l.004.002.11.033.003.001.003.001.11.033.003.001.004.001.109.031.004.002h.003l.11.031.003.001.004.001.11.03h.003l.003.001.11.029h.004l.003.002.11.027.003.001.004.001.11.027h.003l.004.001.004.001.16.022.16-.008.157-.038.147-.067.132-.092.112-.116.09-.134.062-.149.034-.157.004-.161-.025-.16-.055-.151-.082-.139-.107-.12-.127-.1-.143-.074-.124-.04h-.003l-.104-.025-.103-.026h-.002l-.095-.026h-.001l-.101-.027h-.002l-.1-.028h-.002l-.103-.03-.104-.032-.097-.03h-.002l-.103-.033-.102-.033-.101-.034-.106-.036-.027-.01-.027-.007-.107-.03-.104-.029-.104-.03h-.002l-.097-.03-.102-.032-.102-.032-.102-.034-.103-.035-.096-.034-.1-.036-.101-.037h-.002l-.094-.036-.096-.037-.097-.04h-.002l-.099-.04-.098-.042h-.002l-.092-.04-.097-.043-.095-.043-.097-.044h-.002l-.09-.043-.094-.045-.094-.046-.093-.047-.09-.046-.096-.05-.088-.047-.002-.001-.09-.049-.094-.052-.002-.002-.087-.049-.087-.05h-.002l-.088-.053h-.001l-.09-.055-.086-.052-.002-.001-.089-.055-.084-.054h-.002l-.09-.059h-.001l-.085-.056-.001-.001-.084-.056-.082-.056h-.001l-.086-.06-.082-.058H7.79l-.086-.062-.002-.002-.08-.058-.081-.06h-.001l-.085-.064-.002-.002-.076-.058-.002-.002-.082-.064-.161-.128-.162-.133-.04-.034-.132-.092-.147-.066-.157-.038-.16-.008-.16.022z"
 }));
 function _extends$h() {
-  _extends$h = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$h = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$h.apply(this, arguments);
+    return n4;
+  }, _extends$h.apply(null, arguments);
 }
 var StartEventNonInterruptingEscalationIcon = ({
   styles = {},
@@ -51512,18 +54949,13 @@ var StartEventNonInterruptingEscalationIcon = ({
   d: "M16 9.209c-1.674 4.655-2.735 9.504-4.408 14.16 1.534-1.526 2.873-3.235 4.407-4.761l4.408 4.76c-1.497-4.71-2.91-9.448-4.408-14.16zm.031 2.93c.822 2.586 1.598 5.187 2.42 7.774l-2.42-2.614c-.682.598-2.453 2.886-2.34 2.389.873-2.488 1.45-5.068 2.34-7.55zM16.132.364c-1.51.016-3.055.139-4.492.614-.854.442-.266 1.861.651 1.578 2.266-.58 4.656-.596 6.944-.144.935.063 1.21-1.391.318-1.674-1.118-.26-2.274-.361-3.42-.374zm8.865 2.777c-.931-.1-1.262 1.29-.425 1.666 1.863 1.364 3.222 3.298 4.322 5.296.617.737 1.875-.145 1.398-.979-1.184-2.275-2.808-4.384-4.923-5.866a.863.863 0 00-.372-.117zM6.55 3.564c-.734.078-1.196.762-1.735 1.206C3.552 6.02 2.55 7.511 1.681 9.053c-.31.533-.71 1.33-.03 1.767.615.432 1.282-.132 1.446-.742.796-1.475 1.746-2.89 2.934-4.08.43-.548 1.292-.822 1.34-1.595a.874.874 0 00-.822-.839zm24.582 11.078c-.771-.033-1.004.82-.873 1.437.13 2.395-.471 4.797-1.615 6.897-.33.876.984 1.559 1.512.785a14.276 14.276 0 001.761-8.54.865.865 0 00-.785-.579zm-30.195.666c-.774-.06-1.032.785-.905 1.407.117 2.41.732 4.81 1.858 6.945.528.774 1.84.09 1.51-.786A15.932 15.932 0 011.728 16a.876.876 0 00-.79-.692zm24.57 11.817c-.762.099-1.243.835-1.919 1.16-1.514 1.002-3.237 1.632-4.978 2.092-.864.423-.307 1.855.616 1.591 2.528-.578 4.93-1.75 6.913-3.421.469-.522.07-1.42-.631-1.422zm-19.16.042c-.845.001-1.12 1.228-.395 1.628 1.665 1.401 3.667 2.348 5.76 2.912.618.178 1.482.565 1.893-.177.355-.628-.226-1.297-.87-1.326-1.972-.515-3.912-1.285-5.5-2.594-.26-.213-.522-.472-.888-.443z"
 }));
 function _extends$g() {
-  _extends$g = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$g = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$g.apply(this, arguments);
+    return n4;
+  }, _extends$g.apply(null, arguments);
 }
 var StartEventNonInterruptingMessageIcon = ({
   styles = {},
@@ -51536,18 +54968,13 @@ var StartEventNonInterruptingMessageIcon = ({
   d: "M8.746 10.393v11.064h14.506V10.393H8.746zm3.223 1.728h8.06c-1.428.879-2.856 2.807-4.283 3.018l-3.777-3.018zm9.557 1.018v6.59H10.473v-6.59l5.525 4.416 5.528-4.416zM16.132 0c-1.51.016-3.055.139-4.492.614-.854.442-.266 1.861.651 1.578 2.266-.58 4.656-.596 6.944-.144.935.063 1.21-1.391.318-1.674-1.118-.26-2.274-.361-3.42-.374zm8.865 2.777c-.931-.1-1.262 1.29-.425 1.666 1.863 1.364 3.222 3.298 4.322 5.296.617.737 1.875-.145 1.398-.979-1.184-2.275-2.808-4.384-4.923-5.866a.863.863 0 00-.372-.117zM6.55 3.2c-.734.078-1.196.762-1.735 1.206C3.552 5.656 2.55 7.147 1.681 8.69c-.31.533-.71 1.33-.03 1.767.615.432 1.282-.132 1.446-.742.796-1.475 1.746-2.89 2.934-4.08.43-.548 1.292-.822 1.34-1.595a.874.874 0 00-.822-.839zm24.582 11.078c-.771-.033-1.004.82-.873 1.437.13 2.395-.471 4.797-1.615 6.897-.33.876.984 1.559 1.512.785a14.276 14.276 0 001.761-8.54.865.865 0 00-.785-.579zm-30.195.666c-.774-.06-1.032.785-.905 1.407.117 2.41.732 4.81 1.858 6.945.528.774 1.84.09 1.51-.786a15.932 15.932 0 01-1.672-6.874.876.876 0 00-.79-.692zm24.57 11.817c-.762.099-1.243.835-1.919 1.16-1.514 1.002-3.237 1.632-4.978 2.092-.864.423-.307 1.855.616 1.591 2.528-.578 4.93-1.75 6.913-3.421.469-.522.07-1.42-.631-1.422zm-19.16.042c-.845.001-1.12 1.228-.395 1.628 1.665 1.401 3.667 2.348 5.76 2.912.618.178 1.482.565 1.893-.177.355-.628-.226-1.297-.87-1.326-1.972-.515-3.912-1.285-5.5-2.594-.26-.213-.522-.472-.888-.443z"
 }));
 function _extends$f() {
-  _extends$f = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$f = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$f.apply(this, arguments);
+    return n4;
+  }, _extends$f.apply(null, arguments);
 }
 var StartEventNonInterruptingMultipleIcon = ({
   styles = {},
@@ -51560,18 +54987,13 @@ var StartEventNonInterruptingMultipleIcon = ({
   d: "M23.621 13.524L16 7.99l-7.622 5.534 2.911 8.952h9.422l2.911-8.952zm-1.016.33l-2.523 7.759h-8.165l-2.524-7.76L16 9.059l6.606 4.796zM16.132 0c-1.51.016-3.055.139-4.492.614-.854.442-.266 1.861.651 1.578 2.266-.58 4.656-.596 6.944-.144.935.063 1.21-1.391.318-1.674-1.118-.26-2.274-.361-3.42-.374zm8.865 2.777c-.931-.1-1.262 1.29-.425 1.666 1.863 1.364 3.222 3.298 4.322 5.296.617.737 1.875-.145 1.398-.979-1.184-2.275-2.808-4.384-4.923-5.866a.863.863 0 00-.372-.117zM6.55 3.2c-.734.078-1.196.762-1.735 1.206C3.552 5.656 2.55 7.147 1.681 8.69c-.31.533-.71 1.33-.03 1.767.615.432 1.282-.132 1.446-.742.796-1.475 1.746-2.89 2.934-4.08.43-.548 1.292-.822 1.34-1.595a.874.874 0 00-.822-.839zm24.582 11.078c-.771-.033-1.004.82-.873 1.437.13 2.395-.471 4.797-1.615 6.897-.33.876.984 1.559 1.512.785a14.276 14.276 0 001.761-8.54.865.865 0 00-.785-.579zm-30.195.666c-.774-.06-1.032.785-.905 1.407.117 2.41.732 4.81 1.858 6.945.528.774 1.84.09 1.51-.786a15.932 15.932 0 01-1.672-6.874.876.876 0 00-.79-.692zm24.57 11.817c-.762.099-1.243.835-1.919 1.16-1.514 1.002-3.237 1.632-4.978 2.092-.864.423-.307 1.855.616 1.591 2.528-.578 4.93-1.75 6.913-3.421.469-.522.07-1.42-.631-1.422zm-19.16.042c-.845.001-1.12 1.228-.395 1.628 1.665 1.401 3.667 2.348 5.76 2.912.618.178 1.482.565 1.893-.177.355-.628-.226-1.297-.87-1.326-1.972-.515-3.912-1.285-5.5-2.594-.26-.213-.522-.472-.888-.443z"
 }));
 function _extends$e() {
-  _extends$e = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$e = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$e.apply(this, arguments);
+    return n4;
+  }, _extends$e.apply(null, arguments);
 }
 var StartEventNonInterruptingParallelMultipleIcon = ({
   styles = {},
@@ -51585,18 +55007,13 @@ var StartEventNonInterruptingParallelMultipleIcon = ({
   opacity: ".98"
 }));
 function _extends$d() {
-  _extends$d = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$d = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$d.apply(this, arguments);
+    return n4;
+  }, _extends$d.apply(null, arguments);
 }
 var StartEventNonInterruptingSignalIcon = ({
   styles = {},
@@ -51609,18 +55026,13 @@ var StartEventNonInterruptingSignalIcon = ({
   d: "M16.007 8.82L9.21 21.022h13.596L16.007 8.82zm0 1.775l5.328 9.563H10.68l5.327-9.563zM16.14.386c-1.571.236-4.195-.284-4.9 1.381.619 1.703 2.745.069 4.085.365 1.421-.13 2.84.2 4.235.259C21.27.784 18.19.344 17 .413a20.456 20.456 0 00-.86-.027zM25 3.162c-2.19.694.401 2.26 1.181 3.094 1.083 1.152 1.954 2.484 2.715 3.864 1.48 1.005 1.845-1.26.81-2.03-1.158-1.897-2.613-3.704-4.513-4.89l-.192-.038zm-18.438.423c-1.793.712-2.909 2.548-4.01 4.061-.773.814-2.211 3.653.005 3.211 1.123-1.469 1.87-3.306 3.267-4.614.664-.7 2.73-2.013.738-2.658zm24.57 11.072c-1.659.435-.468 2.667-.99 3.895a13.427 13.427 0 01-1.497 4.435c-.23 1.659 1.991 1.165 2.018-.199a14.277 14.277 0 001.254-7.552.865.865 0 00-.785-.579zm-30.18.666c-1.677.386-.633 2.667-.608 3.876.371 1.623.792 3.35 1.79 4.696 2.382.321.571-2.338.292-3.492a15.92 15.92 0 01-.684-4.39.877.877 0 00-.79-.69zm24.558 11.81c-1.755.865-3.303 2.266-5.274 2.765-1.162-.016-3.074 1.271-1.331 2.102 2.66-.447 5.163-1.733 7.236-3.445.472-.506.06-1.432-.631-1.421zm-19.151.043c-2.004.786.416 2.405 1.43 2.913 1.608.904 3.379 1.636 5.208 1.877 1.77-.804-.228-2.094-1.357-2.073-1.75-.537-3.403-1.396-4.798-2.586l-.227-.104-.256-.027z"
 }));
 function _extends$c() {
-  _extends$c = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$c = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$c.apply(this, arguments);
+    return n4;
+  }, _extends$c.apply(null, arguments);
 }
 var StartEventNonInterruptingTimerIcon = ({
   styles = {},
@@ -51633,18 +55045,13 @@ var StartEventNonInterruptingTimerIcon = ({
   d: "M15.991 8.7c-3.018-.042-5.92 1.925-7.03 4.725-1.138 2.695-.509 6.011 1.537 8.102 1.99 2.142 5.267 2.93 8.013 1.927 2.877-.98 4.99-3.826 5.067-6.87.153-2.956-1.624-5.88-4.299-7.135a7.551 7.551 0 00-3.288-.75zm0 1.383c2.758-.052 5.372 1.972 6.014 4.654.704 2.578-.482 5.516-2.79 6.867-2.358 1.48-5.682 1.085-7.617-.919-2.043-1.97-2.407-5.38-.84-7.743 1.11-1.764 3.149-2.88 5.233-2.86zm1.962 1.764l-2.074 3.762c-.64.068-.793 1.04-.202 1.3.39.27.696-.18 1.052-.165h3.17v-.865h-3.182l1.993-3.614-.757-.418zM16.12.358h-.232l-.22.004h-.012l-.221.006h-.012l-.22.01h-.012l-.22.013h-.012l-.22.016h-.012l-.22.019h-.005l-.006.001-.22.021h-.006l-.005.001-.22.025h-.011l-.22.028h-.005l-.006.002-.219.03h-.005l-.006.001-.218.033-.006.001-.006.001-.217.036-.006.001-.006.001-.217.039-.006.001-.006.001-.216.042-.006.001-.006.001-.215.045-.006.001-.006.002-.215.047-.006.002-.006.001-.214.05-.006.002-.006.002-.115.029-.152.053-.14.081-.122.106-.1.126-.075.143-.047.154-.018.16.012.16.042.156.07.145.095.13.118.11.137.086.15.059.158.03h.161l.132-.022.11-.028.202-.047.203-.046.208-.043.202-.039.206-.037.206-.034.205-.03.208-.03.205-.025.209-.023.208-.02.21-.017.209-.015.207-.011.21-.009.21-.006.207-.003h.21l.21.002.207.005.207.008.212.011.207.014.208.017.209.019.208.022.205.025.206.028.207.03.208.035.205.036.202.039.052.01.16.018.16-.012.156-.042.146-.07.13-.096.109-.119.085-.136.06-.15.03-.159v-.16l-.03-.16-.059-.15-.086-.136L19.823.9l-.13-.096-.145-.07-.128-.038-.057-.011-.006-.002h-.006L19.135.64l-.006-.001-.006-.001-.217-.039H18.9l-.006-.002-.217-.035-.006-.001-.006-.001-.218-.032-.006-.001-.006-.001-.218-.03h-.006l-.006-.001-.219-.027h-.011l-.22-.024-.005-.001h-.006l-.22-.021h-.006L17.512.42l-.22-.017-.005-.001h-.006l-.22-.015h-.012l-.22-.012h-.012l-.22-.01h-.012l-.22-.005h-.012l-.221-.003h-.012zm8.715 2.783l-.157.034-.149.063-.134.089-.116.112-.092.132-.067.147-.038.157-.008.16.021.16.051.153.079.141.103.124.102.087.052.038h.001l.087.064v.001l.082.061.002.001.076.059h.001l.084.065.082.066.002.001.079.063.002.002.077.063.081.067.002.002.077.065.076.065.001.002.08.07.078.07h.002l.075.068.077.072.002.001.073.069.077.073.072.07.002.001.077.076.07.07v.001l.075.076.07.073.002.001.074.079.002.002.069.074.069.075.074.082.07.08.002.001.068.079h.001l.067.079.068.082.065.078.001.002.068.083.067.084.063.081.001.002.067.087.002.002.063.084.001.001.064.087.008.01.008.01.095.12.093.121.09.119.087.119.088.122.086.123.084.12.081.122.001.002.084.126.08.126.08.127.077.126.079.131.074.127.075.131.073.131.07.13.07.133.069.133.045.09.086.137.109.119.13.096.144.07.156.042.16.013.16-.017.155-.047.143-.075.126-.1.106-.121.082-.14.054-.151.025-.16-.005-.16-.035-.158-.05-.124-.048-.095-.002-.004-.002-.004-.073-.14-.002-.005-.002-.004-.074-.14-.002-.004-.002-.004-.076-.14-.002-.003-.002-.004-.077-.139-.003-.004-.002-.004-.078-.138-.003-.004-.002-.003-.08-.137-.002-.004-.003-.004-.081-.136-.002-.004-.003-.004-.083-.136-.002-.003-.002-.004-.085-.135-.002-.004-.003-.003-.085-.134-.003-.004-.002-.004-.087-.132-.003-.004-.003-.004-.088-.132-.003-.003-.002-.004-.09-.13-.003-.005-.003-.003-.091-.13-.003-.004-.002-.004-.093-.129-.003-.003-.003-.004-.094-.128-.003-.004-.003-.003-.095-.127-.003-.004-.003-.004-.097-.125-.003-.004-.003-.004-.09-.114-.06-.082-.003-.003-.002-.003-.069-.091-.002-.004-.002-.003-.07-.09-.003-.003-.002-.003-.07-.09-.003-.003-.002-.003-.071-.09-.002-.003-.003-.002-.072-.089-.002-.003-.002-.003-.073-.088-.002-.003-.002-.002-.074-.087-.002-.003-.002-.003-.074-.086-.003-.003-.002-.003-.074-.086-.003-.002-.002-.003-.075-.085-.003-.003-.002-.002-.076-.084-.002-.003-.003-.003-.076-.083-.002-.003-.003-.003-.077-.082-.002-.003-.003-.002-.077-.082-.003-.003-.003-.002-.078-.081-.002-.003-.003-.003-.078-.08-.003-.002-.003-.003-.079-.08-.002-.002-.003-.002-.08-.08-.002-.002-.003-.002-.08-.078-.003-.003-.003-.002-.08-.077-.003-.003-.003-.002-.082-.077-.002-.002-.003-.002-.082-.076-.003-.002-.002-.003-.083-.075-.003-.002-.002-.003-.084-.074-.002-.002-.003-.002-.084-.074-.003-.002-.002-.002-.085-.073-.002-.002-.003-.003-.085-.071-.003-.003-.002-.002-.086-.07-.003-.003-.002-.002-.086-.07-.003-.003-.003-.002-.086-.07-.003-.002-.003-.002-.087-.069-.002-.002-.003-.002-.088-.068-.002-.002-.003-.002-.088-.067-.003-.003-.003-.002-.088-.066-.003-.002-.003-.002-.089-.066-.003-.002-.003-.002-.057-.042-.14-.082-.15-.055-.16-.026-.16.004zm-18.458.426l-.157.037-.148.066-.111.074-.007.006-.003.002-.003.002-.086.069-.003.002-.002.002-.086.07-.003.002-.002.002-.086.07-.002.003-.003.002-.085.071-.002.002-.003.003-.084.071-.003.003-.002.002-.084.072-.003.003-.002.002-.083.073-.003.003-.002.002-.083.074-.002.002-.003.003-.082.074-.003.003-.002.002-.081.076-.003.002-.003.002-.08.077-.003.002-.003.003-.08.076-.002.003-.003.002-.08.078-.002.002-.003.003-.079.078-.002.003-.003.002-.078.08-.003.002-.002.002-.078.08-.002.003-.003.002-.077.08-.003.004-.002.002-.077.081-.002.003-.003.003-.076.082-.002.002-.003.003-.075.082-.002.003-.003.003-.074.083-.003.003-.002.003-.074.084-.003.003-.002.002-.074.085-.002.003-.002.003-.073.085-.003.003-.002.003-.072.086-.002.003-.003.003-.071.087-.003.003-.002.002-.07.088-.003.003-.002.003-.07.088-.003.003-.002.003-.07.09-.002.002-.002.003-.069.09-.002.003-.003.003-.068.09-.002.003-.002.003-.067.092-.003.003-.002.003-.067.092-.002.003-.002.003-.066.092-.002.003-.002.004-.066.093-.002.003-.002.003-.065.094-.002.003-.002.004-.064.094-.002.003-.002.004-.063.095-.002.003-.002.003-.063.097-.002.003-.002.003-.046.073-.05.07-.003.002-.002.003-.067.093-.003.003-.002.003-.066.094-.002.003-.002.003-.066.094-.002.003-.002.003-.064.094-.002.004-.002.003-.064.094-.002.004-.002.003-.062.095-.002.003-.002.003-.062.096-.002.003-.002.003-.06.096-.003.003-.002.003-.06.096-.001.004-.002.003-.059.096-.002.004-.002.003-.058.097-.002.003-.001.003-.057.098-.002.003-.002.003-.056.098-.002.003-.002.003-.055.098-.002.004-.001.003-.055.098-.001.004-.002.003-.054.099-.001.003-.002.003-.052.1-.002.002-.002.004-.051.1-.002.002-.002.004-.05.1-.002.003-.002.003-.05.1v.003l-.002.004-.05.1V9.5l-.002.004-.048.1-.002.004-.001.003-.047.101-.002.003-.001.004-.013.027-.052.152-.024.16.006.16.037.157.064.148.091.133.114.114.134.09.147.065.157.036.162.006.159-.024.152-.053.14-.08.122-.105.1-.126.066-.117.01-.023.044-.095.045-.095.002-.003.042-.087.048-.097.048-.095v-.001l.048-.092.001-.001.047-.09.05-.093.002-.002.049-.09.052-.092.001-.002.051-.089.001-.002.051-.087.053-.088.001-.002.055-.091.057-.091.057-.09.001-.002.057-.089.055-.083.001-.002.06-.09.06-.088.062-.089.001-.001.06-.084.063-.088.065-.089.017-.023.016-.025.06-.094.059-.09v-.002l.058-.086.057-.086.001-.001.062-.09.062-.088.001-.002.06-.085.002-.002.06-.082.063-.087.064-.084.002-.002.061-.08.065-.084.064-.08v-.001l.067-.083.067-.082.07-.083.069-.08.063-.074.074-.083.068-.077.002-.002.07-.076.07-.075.072-.077.001-.001.067-.07.076-.078.002-.002.07-.07.075-.075.002-.002.072-.07.075-.072.002-.002.073-.069.074-.068.001-.001.08-.073.076-.068.002-.002.072-.063v-.001l.078-.067.079-.068.002-.001.08-.068.002-.002.077-.063.082-.066.001-.001.075-.06.002-.002.006-.004.117-.111.094-.131.068-.146.04-.156.01-.161-.019-.16-.049-.154-.076-.141-.102-.125-.123-.105-.14-.079-.153-.052-.16-.023-.16.007zm24.596 11.088l-.156.04-.146.067-.131.094-.112.117-.087.135-.061.15-.033.157-.004.134.007.142.005.152.004.15.002.149v.153l.001.011v.015l.004.11.002.11v.002l.002.106v.321l-.003.102-.002.106-.004.107-.005.105-.006.106-.006.106-.008.106v.002l-.008.103v.002l-.01.1-.01.105-.01.105-.013.105-.012.099v.002l-.014.108-.014.1-.016.105-.016.103v.002l-.017.099-.018.104-.019.103v.002l-.019.097-.02.104-.022.103v.001l-.022.098-.023.103v.002l-.024.096-.025.103v.002l-.024.096-.027.102v.003l-.026.093v.001l-.029.103v.002l-.03.099-.028.097v.002l-.03.095-.03.096v.001l-.033.1-.031.095v.002l-.035.1v.003l-.034.094v.003l-.035.096v.001l-.034.09v.002l-.038.098-.036.093v.002l-.038.095-.079.194-.08.188-.085.189-.087.19-.09.184-.092.183-.095.184-.05.093-.064.148-.034.158-.005.16.026.16.054.151.082.14.106.12.127.1.143.075.154.046.16.017.161-.013.156-.042.144-.071.13-.096.109-.119.072-.112.053-.099.003-.005.003-.006.102-.195.003-.006.003-.006.098-.196.003-.006.003-.006.096-.197.002-.006.003-.006.093-.2.002-.006.003-.006.09-.2.002-.006.003-.007.086-.202.003-.006.002-.006.084-.203.002-.005.001-.005.04-.102.002-.003.001-.003.04-.103.001-.003.001-.003.04-.103v-.004l.001-.003.039-.103v-.003l.002-.003.037-.104.001-.003.001-.003.037-.104v-.004l.002-.003.035-.104.002-.003v-.004l.035-.104.002-.004v-.003l.034-.105.002-.003v-.003l.034-.105v-.004l.002-.003.032-.106.001-.003.001-.003.031-.106.001-.003.001-.004.031-.106.001-.003.001-.004.03-.106v-.003l.002-.004.028-.107.001-.003.001-.003.028-.107.001-.004.001-.003.027-.107.001-.004v-.003l.027-.108.001-.003v-.004l.026-.108.001-.003v-.004l.025-.108.001-.003v-.004l.025-.108v-.004l.001-.003.023-.109v-.003l.001-.004.022-.109v-.003l.002-.004.02-.109.001-.004v-.003l.02-.11.002-.003v-.004l.02-.11v-.007l.019-.11v-.003l.001-.004.017-.11v-.004l.001-.003.017-.11v-.008l.016-.11v-.004l.001-.004.015-.11v-.008l.015-.111v-.008l.013-.111v-.007l.013-.112v-.007l.011-.112v-.004l.001-.004.01-.112v-.007l.01-.112v-.008l.008-.112v-.008l.007-.113v-.007l.007-.113v-.008l.005-.113v-.007l.005-.114v-.007l.003-.114v-.007l.003-.114v-.129l.001-.114v-.13l-.003-.114V16.5l-.003-.115v-.007l-.003-.102v-.155l-.003-.158v-.01l-.004-.158v-.01l-.006-.158v-.01l-.007-.148-.023-.16-.051-.152-.08-.14-.103-.124-.125-.102-.142-.077-.153-.05-.16-.02-.161.01zm-30.213.66l-.157.034-.149.063-.134.09-.115.113-.092.132-.067.147-.037.156-.009.134.001.11V16.308l.006.22v.012l.01.22v.012l.012.22v.006l.001.006.015.22v.005l.001.006.018.22.001.006v.006l.022.219v.006l.001.006.024.219.001.006v.006l.028.218.001.006v.006l.031.218.001.006.001.006.033.218.001.006.001.005.037.218v.006l.002.005.04.217v.006l.001.006.043.216.001.006.001.006.046.216v.005l.002.006.048.215.002.006.001.006.051.214.002.006v.006l.055.214.002.005.001.006.057.213.002.006.001.005.06.213.002.005.001.006.063.212.002.005.001.006.066.21.002.006.002.006.068.21.002.005.002.005.07.21.003.005.002.005.074.208.002.006.002.005.077.207.002.006.002.005.08.206.002.005.002.006.082.204.002.006.002.005.086.204.002.005.002.006.088.202.002.005.003.006.09.2.003.006.002.005.094.2.002.006.003.005.096.199.002.005.003.005.03.062.086.137.11.118.128.097.145.07.156.043.16.013.16-.017.155-.047.143-.074.127-.1.106-.121.081-.14.055-.15.025-.16-.005-.161-.034-.158-.05-.124-.028-.055-.092-.19-.087-.188-.087-.192-.083-.19-.08-.193-.078-.194-.076-.196-.073-.195-.07-.197-.067-.198-.065-.199-.063-.2-.059-.2-.056-.2-.055-.204-.05-.201-.049-.202-.046-.205-.043-.206-.04-.203-.038-.207-.034-.204-.032-.207-.028-.205-.026-.207-.023-.208-.02-.207-.018-.207-.014-.208-.011-.207-.009-.208-.005-.207-.002-.104-.017-.16-.046-.155-.074-.143-.1-.126-.121-.107-.139-.081-.152-.055-.159-.025-.161.004zm24.585 11.83l-.156.039-.146.068-.11.076-.015.012-.163.129-.166.127-.168.125-.17.124-.17.12-.172.118-.173.115-.176.114-.177.111-.18.11-.178.105-.182.104-.182.101-.184.1-.184.095-.189.095-.186.09-.188.089-.19.086-.19.082-.193.081-.195.078-.191.074-.197.073-.195.07-.196.065-.198.064-.198.061-.2.058-.2.055-.2.052-.2.049-.151.035-.153.05-.141.078-.125.103-.103.124-.078.14-.05.154-.022.16.009.16.038.157.067.147.093.132.116.112.134.089.149.062.158.034.16.003.133-.02.158-.035.006-.002.006-.001.213-.052.006-.002.007-.001.212-.056.006-.001.006-.002.212-.058.006-.002.006-.002.211-.061.006-.002.006-.002.21-.064.006-.002.006-.002.21-.067.005-.002.006-.002.208-.07.006-.002.006-.003.207-.073.006-.002.006-.002.206-.077.006-.002.005-.002.206-.08.005-.001.006-.003.204-.082.006-.002.005-.002.203-.085.006-.003.005-.002.202-.088.006-.002.005-.003.2-.09.006-.003.006-.003.2-.093.005-.003.005-.002.198-.096.006-.003.005-.003.197-.099.005-.002.005-.003.196-.102.005-.002.005-.003.195-.105.005-.002.005-.003.193-.107.005-.003.005-.003.191-.11.005-.003.005-.003.19-.112.005-.003.005-.003.189-.115.005-.003.005-.003.187-.117.005-.003.004-.004.186-.12.005-.003.004-.003.184-.122.005-.003.005-.004.182-.125.004-.003.005-.003.18-.128.005-.003.005-.003.179-.13.004-.003.005-.004.177-.132.004-.004.005-.003.175-.135.005-.003.004-.004.173-.137.005-.003.004-.004.019-.015.115-.113.092-.132.066-.147.038-.157.008-.16-.022-.16-.052-.153-.079-.14-.103-.124-.125-.102-.142-.078-.153-.05-.16-.02-.16.01zm-19.17.054l-.153.051-.14.079-.124.103-.103.125-.077.141-.05.153-.02.16.009.161.04.156.067.147.093.131.095.094.047.04.005.004.005.004.17.14.005.004.005.004.172.137.004.004.005.003.086.067.003.002.003.002.087.067.003.002.003.002.088.066.002.003.003.002.089.065.002.002.003.002.09.065.002.002.003.002.09.064.002.002.003.002.09.063.003.002.003.002.09.063.003.002.003.002.092.062.002.002.003.002.092.061.003.002.003.002.092.06.003.003.003.001.093.06.003.002.003.002.093.06.003.001.003.002.094.058.003.002.003.002.095.058.003.001.003.002.095.057.003.002.003.002.095.056.003.002.003.002.096.055.004.002.003.001.096.055.003.002.003.002.098.053.003.002.003.002.097.053.004.002.003.001.098.053.003.001.003.002.099.052.003.001.003.002.1.05.003.002.003.002.1.05.003.002.003.001.1.05h.003l.004.003.1.048.004.001.003.002.101.048.003.001.004.002.101.046.004.002.003.001.102.046.004.002.003.001.103.045.003.002.003.001.103.045.004.001.003.002.104.043.003.001.004.002.104.042.003.002.004.001.104.042.004.001.003.002.105.04.004.002.003.001.106.04.003.002h.004l.106.04.004.001.003.002.107.038.003.001.004.001.107.038.003.001.004.001.107.037.004.001.004.001.108.036.003.001.004.001.108.035.004.001.003.001.11.034.003.001.004.001.109.033.004.002h.003l.11.033h.004l.003.002.11.031.004.001.004.001.084.023.081.028.004.001.003.001.109.037.003.001.004.001.109.036.003.001.004.001.109.035h.003l.004.002.11.033.003.001.003.001.11.033.003.001.004.001.109.031.004.002h.003l.11.031.003.001.004.001.11.03h.003l.003.001.11.029h.004l.003.002.11.027.003.001.004.001.11.027h.003l.004.001.004.001.16.022.16-.008.157-.038.147-.067.132-.092.112-.116.09-.134.062-.149.034-.157.004-.161-.025-.16-.055-.151-.082-.139-.107-.12-.127-.1-.143-.074-.124-.04h-.003l-.104-.025-.103-.026h-.002l-.095-.026h-.001l-.101-.027h-.002l-.1-.028h-.002l-.103-.03-.104-.032-.097-.03h-.002l-.103-.033-.102-.033-.101-.034-.106-.036-.027-.01-.027-.007-.107-.03-.104-.029-.104-.03h-.002l-.097-.03-.102-.032-.102-.032-.102-.034-.103-.035-.096-.034-.1-.036-.101-.037h-.002l-.094-.036-.096-.037-.097-.04h-.002l-.099-.04-.098-.042h-.002l-.092-.04-.097-.043-.095-.043-.097-.044h-.002l-.09-.043-.094-.045-.094-.046-.093-.047-.09-.046-.096-.05-.088-.047-.002-.001-.09-.049-.094-.052-.002-.002-.087-.049-.087-.05h-.002l-.088-.053h-.001l-.09-.055-.086-.052-.002-.001-.089-.055-.084-.054h-.002l-.09-.059h-.001l-.085-.056-.001-.001-.084-.056-.082-.056h-.001l-.086-.06-.082-.058H7.79l-.086-.062-.002-.002-.08-.058-.081-.06h-.001l-.085-.064-.002-.002-.076-.058-.002-.002-.082-.064-.161-.128-.162-.133-.04-.034-.132-.092-.147-.066-.157-.038-.16-.008-.16.022z"
 }));
 function _extends$b() {
-  _extends$b = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$b = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$b.apply(this, arguments);
+    return n4;
+  }, _extends$b.apply(null, arguments);
 }
 var StartEventNoneIcon = ({
   styles = {},
@@ -51657,18 +55064,13 @@ var StartEventNoneIcon = ({
   d: "M15.847.004C9.61-.016 3.624 4.014 1.257 9.78-1.235 15.49.06 22.581 4.42 27.034c4.193 4.513 11.101 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.268.403-6.228-3.26-12.441-8.87-15.154A15.924 15.924 0 0015.846.004zm.439 1.729c6.105.033 11.856 4.45 13.435 10.359 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.625-4.814-3.84-6.538-10.94-4.067-16.57 2.14-5.206 7.515-8.775 13.147-8.71.097-.001.194-.002.29-.001z"
 }));
 function _extends$a() {
-  _extends$a = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$a = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$a.apply(this, arguments);
+    return n4;
+  }, _extends$a.apply(null, arguments);
 }
 var StartEventParallelMultipleIcon = ({
   styles = {},
@@ -51681,18 +55083,13 @@ var StartEventParallelMultipleIcon = ({
   d: "M15.847 0C9.61-.02 3.624 4.01 1.257 9.775-1.235 15.485.06 22.577 4.42 27.03c4.193 4.513 11.101 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.268.403-6.228-3.26-12.441-8.87-15.154A15.924 15.924 0 0015.846 0zm.439 1.729c6.105.033 11.856 4.45 13.435 10.359 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.625C2.101 23.17.377 16.07 2.848 10.44c2.134-5.2 7.522-8.78 13.147-8.71.097-.001.194-.002.29-.001zM13.504 9.08v4.427H9.077v4.98h4.427v4.427h4.98v-4.427h4.428v-4.98h-4.427V9.08h-4.98zm.83.83h3.32v4.427h4.428v3.32h-4.427v4.427h-3.32v-4.453H9.906v-3.294h4.427V9.91z"
 }));
 function _extends$9() {
-  _extends$9 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$9 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$9.apply(this, arguments);
+    return n4;
+  }, _extends$9.apply(null, arguments);
 }
 var StartEventSignalIcon = ({
   styles = {},
@@ -51705,18 +55102,13 @@ var StartEventSignalIcon = ({
   d: "M15.995.005C9.705-.08 3.643 3.968 1.257 9.78-1.235 15.49.06 22.581 4.42 27.034c4.193 4.513 11.102 6.17 16.887 4.058 5.996-2.042 10.423-7.93 10.664-14.269.403-6.227-3.26-12.44-8.87-15.153A15.924 15.924 0 0015.994.005zm0 1.73c6.213-.108 12.122 4.355 13.726 10.357 1.678 5.653-.592 12.198-5.463 15.547-5.06 3.719-12.564 3.45-17.343-.626-4.814-3.838-6.538-10.939-4.067-16.57 2.14-5.205 7.515-8.774 13.147-8.708zm0 6.776L9.19 20.724H22.8L15.995 8.511zm0 1.777l5.332 9.572H10.662l5.333-9.572z"
 }));
 function _extends$8() {
-  _extends$8 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$8 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$8.apply(this, arguments);
+    return n4;
+  }, _extends$8.apply(null, arguments);
 }
 var StartEventTimerIcon = ({
   styles = {},
@@ -51729,18 +55121,13 @@ var StartEventTimerIcon = ({
   d: "M16 0C7.174 0 0 7.174 0 16s7.174 16 16 16 16-7.174 16-16S24.826 0 16 0zm0 1.73c7.892 0 14.27 6.378 14.27 14.27 0 7.891-6.379 14.27-14.27 14.27S1.73 23.891 1.73 16C1.73 8.108 8.108 1.73 16 1.73zm-.143 6.676c-2.967.02-5.797 1.97-6.89 4.727-1.138 2.695-.51 6.012 1.537 8.102 1.99 2.142 5.268 2.932 8.014 1.928 2.878-.98 4.992-3.827 5.068-6.87.153-2.957-1.624-5.881-4.3-7.137a7.552 7.552 0 00-3.43-.75zm.27 1.383c2.71.012 5.254 2.015 5.886 4.656.704 2.577-.482 5.517-2.791 6.867-2.358 1.48-5.682 1.085-7.618-.918-2.043-1.971-2.407-5.381-.84-7.745 1.11-1.763 3.15-2.88 5.234-2.86h.13zm1.833 1.765l-2.074 3.763c-.64.068-.793 1.04-.202 1.3.39.27.696-.18 1.052-.165h3.17v-.865h-3.181l1.992-3.615-.757-.418z"
 }));
 function _extends$7() {
-  _extends$7 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$7 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$7.apply(this, arguments);
+    return n4;
+  }, _extends$7.apply(null, arguments);
 }
 var SubprocessCollapsedIcon = ({
   styles = {},
@@ -51753,18 +55140,13 @@ var SubprocessCollapsedIcon = ({
   d: "M5.637 3A5.644 5.644 0 000 8.637v15.417a5.644 5.644 0 005.637 5.637h20.726A5.644 5.644 0 0032 24.054V8.637A5.644 5.644 0 0026.363 3H5.637zm0 1.778h20.726a3.83 3.83 0 013.859 3.859v15.417a3.83 3.83 0 01-3.859 3.858h-4.201V16.695H9.838v11.217H5.637a3.83 3.83 0 01-3.859-3.858V8.637a3.83 3.83 0 013.859-3.859zm5.33 13.046h10.066v10.065H10.967V17.824zm4.189 1.431V22.06H12.35v1.689h2.804V26.554h1.69V23.749h2.804V22.06h-2.804V19.255h-1.69z"
 }));
 function _extends$6() {
-  _extends$6 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$6 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$6.apply(this, arguments);
+    return n4;
+  }, _extends$6.apply(null, arguments);
 }
 var SubprocessExpandedIcon = ({
   styles = {},
@@ -51777,18 +55159,13 @@ var SubprocessExpandedIcon = ({
   d: "M5.636 3A5.642 5.642 0 000 8.636v15.418a5.643 5.643 0 005.636 5.636h20.728A5.643 5.643 0 0032 24.054V8.636A5.642 5.642 0 0026.364 3H5.636zm0 1.778h20.728a3.83 3.83 0 013.858 3.858v15.418a3.83 3.83 0 01-3.858 3.858h-4.203V16.723H9.84v11.189H5.636a3.83 3.83 0 01-3.858-3.858V8.636a3.83 3.83 0 013.858-3.858zm5.331 13.074h10.066v10.06H10.967v-10.06zm1.336 3.996v1.711h7.394v-1.71h-7.394z"
 }));
 function _extends$5() {
-  _extends$5 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$5 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$5.apply(this, arguments);
+    return n4;
+  }, _extends$5.apply(null, arguments);
 }
 var TaskNoneIcon = ({
   styles = {},
@@ -51801,18 +55178,13 @@ var TaskNoneIcon = ({
   d: "M6.494 2.667C2.916 2.667 0 5.57 0 9.142v13.383C0 26.097 2.916 29 6.494 29h19.012C29.084 29 32 26.097 32 22.525V9.142c0-3.572-2.916-6.475-6.494-6.475H6.494zm0 2h19.012c2.509 0 4.494 1.98 4.494 4.475v13.383C30 25.02 28.015 27 25.506 27H6.494C3.985 27 2 25.02 2 22.525V9.142c0-2.495 1.985-4.475 4.494-4.475z"
 }));
 function _extends$4() {
-  _extends$4 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$4 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$4.apply(this, arguments);
+    return n4;
+  }, _extends$4.apply(null, arguments);
 }
 var TextAnnotationicon = ({
   styles = {},
@@ -51825,18 +55197,13 @@ var TextAnnotationicon = ({
   d: "M22.087 0v31.647H32v-1.788h-8.125V1.788H32V0h-9.913zm-2.924 13.999l-2.737 2.167 2.167 2.738 2.738-2.167-2.168-2.738zm-5.475 4.335L10.95 20.5l2.168 2.738 2.737-2.168-2.167-2.737zm-5.475 4.335l-2.738 2.167 2.168 2.738 2.737-2.168-2.167-2.737zm-5.476 4.335L0 29.17l2.167 2.738 2.738-2.168-2.168-2.737z"
 }));
 function _extends$3() {
-  _extends$3 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$3 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$3.apply(this, arguments);
+    return n4;
+  }, _extends$3.apply(null, arguments);
 }
 var TransactionIcon = ({
   styles = {},
@@ -51849,18 +55216,13 @@ var TransactionIcon = ({
   d: "M5.422 3A5.424 5.424 0 000 8.422v15.822a5.424 5.424 0 005.422 5.423h21.156A5.424 5.424 0 0032 24.244V8.422A5.424 5.424 0 0026.578 3H5.422zm0 1.244h21.156a4.155 4.155 0 014.178 4.178v15.822a4.155 4.155 0 01-4.178 4.178H5.422a4.155 4.155 0 01-4.178-4.178V8.422a4.155 4.155 0 014.178-4.178zm1.056 1.778a3.373 3.373 0 00-3.367 3.366v13.89a3.373 3.373 0 003.367 3.366h19.044a3.373 3.373 0 003.367-3.366V9.388a3.373 3.373 0 00-3.367-3.366H6.478zm0 1.245h19.044c1.187 0 2.122.935 2.122 2.121v13.89a2.104 2.104 0 01-2.122 2.122H6.478a2.104 2.104 0 01-2.122-2.122V9.388c0-1.186.935-2.121 2.122-2.121z"
 }));
 function _extends$2() {
-  _extends$2 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$2 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$2.apply(this, arguments);
+    return n4;
+  }, _extends$2.apply(null, arguments);
 }
 var UserTaskIcon = ({
   styles = {},
@@ -52013,9 +55375,8 @@ function getConcreteType(element) {
   }
   return type;
 }
-var PanelHeaderProvider = (translate3) => {
-  if (!translate3)
-    translate3 = (text) => text;
+var PanelHeaderProvider = (translate4) => {
+  if (!translate4) translate4 = (text) => text;
   return {
     getDocumentationRef: (element) => {
       const elementTemplates = getTemplatesService();
@@ -52051,11 +55412,11 @@ var PanelHeaderProvider = (translate3) => {
       if (elementTemplates) {
         const template = getTemplate(element, elementTemplates);
         if (template && template.name) {
-          return translate3(template.name);
+          return translate4(template.name);
         }
       }
       const concreteType = getConcreteType(element);
-      return translate3(concreteType.replace(/(\B[A-Z])/g, " $1").replace(/(\bNon Interrupting)/g, "($1)"));
+      return translate4(concreteType.replace(/(\B[A-Z])/g, " $1").replace(/(\bNon Interrupting)/g, "($1)"));
     }
   };
 };
@@ -52105,18 +55466,13 @@ function getTemplateDocumentation(element, elementTemplates) {
   return template && template.documentationRef;
 }
 function _extends$1() {
-  _extends$1 = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends$1 = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends$1.apply(this, arguments);
+    return n4;
+  }, _extends$1.apply(null, arguments);
 }
 var EmptyIcon = ({
   styles = {},
@@ -52161,18 +55517,13 @@ var EmptyIcon = ({
   xlinkHref: "#a"
 })));
 function _extends() {
-  _extends = Object.assign ? Object.assign.bind() : function(target) {
-    for (var i7 = 1; i7 < arguments.length; i7++) {
-      var source = arguments[i7];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
+  return _extends = Object.assign ? Object.assign.bind() : function(n4) {
+    for (var e8 = 1; e8 < arguments.length; e8++) {
+      var t7 = arguments[e8];
+      for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
-    return target;
-  };
-  return _extends.apply(this, arguments);
+    return n4;
+  }, _extends.apply(null, arguments);
 }
 var MultipleIcon = ({
   styles = {},
@@ -52227,19 +55578,18 @@ var MultipleIcon = ({
   mask: "url(#b)",
   xlinkHref: "#a"
 })));
-var PanelPlaceholderProvider = (translate3) => {
-  if (!translate3)
-    translate3 = (text) => text;
+var PanelPlaceholderProvider = (translate4) => {
+  if (!translate4) translate4 = (text) => text;
   return {
     getEmpty: () => {
       return {
-        text: translate3("Select an element to edit its properties."),
+        text: translate4("Select an element to edit its properties."),
         icon: EmptyIcon
       };
     },
     getMultiple: () => {
       return {
-        text: translate3("Multiple elements are selected. Select a single element to edit its properties."),
+        text: translate4("Multiple elements are selected. Select a single element to edit its properties."),
         icon: MultipleIcon
       };
     }
@@ -52258,7 +55608,7 @@ function BpmnPropertiesPanel(props) {
   const canvas = injector.get("canvas");
   const elementRegistry = injector.get("elementRegistry");
   const eventBus = injector.get("eventBus");
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const [state, setState] = h4({
     selectedElement: element
   });
@@ -52280,10 +55630,10 @@ function BpmnPropertiesPanel(props) {
     });
   };
   p4(() => {
-    const onSelectionChanged = (e7) => {
+    const onSelectionChanged = (e8) => {
       const {
         newSelection = []
-      } = e7;
+      } = e8;
       if (newSelection.length > 1) {
         return _update(newSelection);
       }
@@ -52300,8 +55650,8 @@ function BpmnPropertiesPanel(props) {
     };
   }, []);
   p4(() => {
-    const onElementsChanged = (e7) => {
-      const elements = e7.elements;
+    const onElementsChanged = (e8) => {
+      const elements = e8.elements;
       const updatedElement = findElement(elements, selectedElement);
       if (updatedElement && elementExists(updatedElement, elementRegistry)) {
         _update(updatedElement);
@@ -52313,8 +55663,8 @@ function BpmnPropertiesPanel(props) {
     };
   }, [selectedElement]);
   p4(() => {
-    const onRootAdded = (e7) => {
-      const element2 = e7.element;
+    const onRootAdded = (e8) => {
+      const element2 = e8.element;
       _update(element2);
     };
     eventBus.on("root.added", onRootAdded);
@@ -52364,10 +55714,10 @@ function BpmnPropertiesPanel(props) {
     });
   }, [eventBus]);
   p4(() => {
-    const cb = (e7) => {
+    const cb = (e8) => {
       const {
         layout
-      } = e7;
+      } = e8;
       setLayoutConfig(layout);
     };
     eventBus.on("propertiesPanel.setLayout", cb);
@@ -52387,8 +55737,8 @@ function BpmnPropertiesPanel(props) {
     value: bpmnPropertiesPanelContext,
     children: u5(PropertiesPanel, {
       element: selectedElement,
-      headerProvider: PanelHeaderProvider(translate3),
-      placeholderProvider: PanelPlaceholderProvider(translate3),
+      headerProvider: PanelHeaderProvider(translate4),
+      placeholderProvider: PanelPlaceholderProvider(translate4),
       groups,
       layoutConfig,
       layoutChanged: onLayoutChanged,
@@ -52405,7 +55755,7 @@ function isImplicitRoot$1(element) {
   return element && (element.isImplicit || element.id === "__implicitroot");
 }
 function findElement(elements, element) {
-  return find(elements, (e7) => e7 === element);
+  return find(elements, (e8) => e8 === element);
 }
 function elementExists(element, elementRegistry) {
   return element && elementRegistry.get(element.id);
@@ -52589,7 +55939,7 @@ var Commands = {
   __init__: [CommandInitializer]
 };
 var index$3 = {
-  __depends__: [Commands, index$1, index],
+  __depends__: [Commands, index$1, index2],
   __init__: ["propertiesPanel"],
   propertiesPanel: ["type", BpmnPropertiesPanelRenderer]
 };
@@ -52705,7 +56055,7 @@ function WaitForCompletion(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const compensateEventDefinition = getCompensateEventDefinition(element);
   const getValue = () => {
     return compensateEventDefinition.get("waitForCompletion");
@@ -52722,7 +56072,7 @@ function WaitForCompletion(props) {
   return CheckboxEntry({
     element,
     id: "waitForCompletion",
-    label: translate3("Wait for completion"),
+    label: translate4("Wait for completion"),
     getValue,
     setValue
   });
@@ -52733,7 +56083,7 @@ function ActivityRef(props) {
   } = props;
   const commandStack = useService("commandStack");
   const elementRegistry = useService("elementRegistry");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const compensateEventDefinition = getCompensateEventDefinition(element);
   const getValue = () => {
     const activityRef = getCompensateActivity(element);
@@ -52752,7 +56102,7 @@ function ActivityRef(props) {
   const getOptions = () => {
     let options2 = [{
       value: "",
-      label: translate3("<none>")
+      label: translate4("<none>")
     }];
     const activities = findActivityRefs(element);
     sortByName$6(activities).forEach(function(activity) {
@@ -52766,7 +56116,7 @@ function ActivityRef(props) {
   return ReferenceSelectEntry({
     element,
     id: "activityRef",
-    label: translate3("Activity reference"),
+    label: translate4("Activity reference"),
     getValue,
     setValue,
     getOptions
@@ -52828,7 +56178,7 @@ function createOptionLabel(activity) {
   return `${name2 ? name2 + " " : ""}(id=${id})`;
 }
 function sortByName$6(elements) {
-  return sortBy(elements, (e7) => (e7.name || "").toLowerCase());
+  return sortBy(elements, (e8) => (e8.name || "").toLowerCase());
 }
 var DOCUMENTATION_TEXT_FORMAT = "text/plain";
 function DocumentationProps(props) {
@@ -52840,7 +56190,7 @@ function DocumentationProps(props) {
     component: ElementDocumentationProperty,
     isEdited: isEdited$1
   }];
-  if (hasProcessRef$2(element)) {
+  if (hasProcessRef$3(element)) {
     entries.push({
       id: "processDocumentation",
       component: ProcessDocumentationProperty,
@@ -52855,14 +56205,14 @@ function ElementDocumentationProperty(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = getDocumentation(getBusinessObject(element));
   const setValue = setDocumentation(element, getBusinessObject(element), bpmnFactory, commandStack);
   return TextAreaEntry({
     element,
     id: "documentation",
-    label: translate3("Element documentation"),
+    label: translate4("Element documentation"),
     getValue,
     setValue,
     debounce: debounce2
@@ -52874,7 +56224,7 @@ function ProcessDocumentationProperty(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const processRef = getBusinessObject(element).processRef;
   const getValue = getDocumentation(processRef);
@@ -52882,13 +56232,13 @@ function ProcessDocumentationProperty(props) {
   return TextAreaEntry({
     element,
     id: "processDocumentation",
-    label: translate3("Process documentation"),
+    label: translate4("Process documentation"),
     getValue,
     setValue,
     debounce: debounce2
   });
 }
-function hasProcessRef$2(element) {
+function hasProcessRef$3(element) {
   return is(element, "bpmn:Participant") && element.businessObject.get("processRef");
 }
 function findDocumentation(docs) {
@@ -53002,7 +56352,7 @@ function ErrorRef$1(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const errorEventDefinition = getErrorEventDefinition(element);
   const getValue = () => {
     const error4 = getError(element);
@@ -53047,10 +56397,10 @@ function ErrorRef$1(props) {
   const getOptions = () => {
     let options2 = [{
       value: EMPTY_OPTION$4,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: CREATE_NEW_OPTION$4,
-      label: translate3("Create new ...")
+      label: translate4("Create new ...")
     }];
     const errors = findRootElementsByType(getBusinessObject(element), "bpmn:Error");
     sortByName$5(errors).forEach((error4) => {
@@ -53064,7 +56414,7 @@ function ErrorRef$1(props) {
   return ReferenceSelectEntry({
     element,
     id: "errorRef",
-    label: translate3("Global error reference"),
+    label: translate4("Global error reference"),
     autoFocusEntry: "errorName",
     getValue,
     setValue,
@@ -53076,7 +56426,7 @@ function ErrorName$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const error4 = getError(element);
   const getValue = () => {
@@ -53094,7 +56444,7 @@ function ErrorName$1(props) {
   return TextfieldEntry({
     element,
     id: "errorName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -53105,7 +56455,7 @@ function ErrorCode$2(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const error4 = getError(element);
   const getValue = () => {
@@ -53123,14 +56473,14 @@ function ErrorCode$2(props) {
   return TextfieldEntry({
     element,
     id: "errorCode",
-    label: translate3("Code"),
+    label: translate4("Code"),
     getValue,
     setValue,
     debounce: debounce2
   });
 }
 function sortByName$5(elements) {
-  return sortBy(elements, (e7) => (e7.name || "").toLowerCase());
+  return sortBy(elements, (e8) => (e8.name || "").toLowerCase());
 }
 var CREATE_NEW_OPTION$3 = "create-new";
 function EscalationProps$2(props) {
@@ -53165,7 +56515,7 @@ function EscalationRef(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const escalationEventDefinition = getEscalationEventDefinition(element);
   const getValue = () => {
     const escalation = getEscalation(element);
@@ -53209,10 +56559,10 @@ function EscalationRef(props) {
   const getOptions = () => {
     let options2 = [{
       value: "",
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: CREATE_NEW_OPTION$3,
-      label: translate3("Create new ...")
+      label: translate4("Create new ...")
     }];
     const escalations = findRootElementsByType(getBusinessObject(element), "bpmn:Escalation");
     sortByName$4(escalations).forEach((escalation) => {
@@ -53226,7 +56576,7 @@ function EscalationRef(props) {
   return ReferenceSelectEntry({
     element,
     id: "escalationRef",
-    label: translate3("Global escalation reference"),
+    label: translate4("Global escalation reference"),
     autoFocusEntry: "escalationName",
     getValue,
     setValue,
@@ -53238,7 +56588,7 @@ function EscalationName(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const escalation = getEscalation(element);
   const getValue = () => {
@@ -53256,7 +56606,7 @@ function EscalationName(props) {
   return TextfieldEntry({
     element,
     id: "escalationName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -53267,7 +56617,7 @@ function EscalationCode$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const escalation = getEscalation(element);
   const getValue = () => {
@@ -53285,20 +56635,20 @@ function EscalationCode$1(props) {
   return TextfieldEntry({
     element,
     id: "escalationCode",
-    label: translate3("Code"),
+    label: translate4("Code"),
     getValue,
     setValue,
     debounce: debounce2
   });
 }
 function sortByName$4(elements) {
-  return sortBy(elements, (e7) => (e7.name || "").toLowerCase());
+  return sortBy(elements, (e8) => (e8.name || "").toLowerCase());
 }
 function ExecutableProps(props) {
   const {
     element
   } = props;
-  if (!is(element, "bpmn:Process") && !hasProcessRef$1(element)) {
+  if (!is(element, "bpmn:Process") && !hasProcessRef$2(element)) {
     return [];
   }
   return [{
@@ -53313,7 +56663,7 @@ function Executable(props) {
   } = props;
   const modeling = useService("modeling");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   let getValue, setValue;
   setValue = (value) => {
     modeling.updateProperties(element, {
@@ -53341,56 +56691,56 @@ function Executable(props) {
   return CheckboxEntry({
     element,
     id: "isExecutable",
-    label: translate3("Executable"),
+    label: translate4("Executable"),
     getValue,
     setValue
   });
 }
-function hasProcessRef$1(element) {
+function hasProcessRef$2(element) {
   return is(element, "bpmn:Participant") && element.businessObject.get("processRef");
 }
 var SPACE_REGEX = /\s/;
 var QNAME_REGEX = /^([a-z][\w-.]*:)?[a-z_][\w-.]*$/i;
 var ID_REGEX = /^[a-z_][\w-.]*$/i;
-function isIdValid(element, idValue, translate3) {
+function isIdValid(element, idValue, translate4) {
   const assigned = element.$model.ids.assigned(idValue);
   const idAlreadyExists = assigned && assigned !== element;
   if (!idValue) {
-    return translate3("ID must not be empty.");
+    return translate4("ID must not be empty.");
   }
   if (idAlreadyExists) {
-    return translate3("ID must be unique.");
+    return translate4("ID must be unique.");
   }
-  return validateId(idValue, translate3);
+  return validateId(idValue, translate4);
 }
-function validateId(idValue, translate3) {
+function validateId(idValue, translate4) {
   if (containsSpace(idValue)) {
-    return translate3("ID must not contain spaces.");
+    return translate4("ID must not contain spaces.");
   }
   if (!ID_REGEX.test(idValue)) {
     if (QNAME_REGEX.test(idValue)) {
-      return translate3("ID must not contain prefix.");
+      return translate4("ID must not contain prefix.");
     }
-    return translate3("ID must be a valid QName.");
+    return translate4("ID must be a valid QName.");
   }
 }
 function containsSpace(value) {
   return SPACE_REGEX.test(value);
 }
-function IdProps() {
+function IdProps$1() {
   return [{
     id: "id",
-    component: Id$3,
+    component: Id$4,
     isEdited
   }];
 }
-function Id$3(props) {
+function Id$4(props) {
   const {
     element
   } = props;
   const modeling = useService("modeling");
   const debounce2 = useService("debounceInput");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const setValue = (value, error4) => {
     if (error4) {
       return;
@@ -53404,12 +56754,12 @@ function Id$3(props) {
   }, [element]);
   const validate = T3((value) => {
     const businessObject = getBusinessObject(element);
-    return isIdValid(businessObject, value, translate3);
-  }, [element, translate3]);
+    return isIdValid(businessObject, value, translate4);
+  }, [element, translate4]);
   return TextfieldEntry({
     element,
     id: "id",
-    label: translate3(is(element, "bpmn:Participant") ? "Participant ID" : "ID"),
+    label: translate4(is(element, "bpmn:Participant") ? "Participant ID" : "ID"),
     getValue,
     setValue,
     debounce: debounce2,
@@ -53434,7 +56784,7 @@ function LinkName(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const linkEventDefinition = getLinkEventDefinition(element);
   const getValue = () => {
@@ -53452,7 +56802,7 @@ function LinkName(props) {
   return TextfieldEntry({
     element,
     id: "linkName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -53488,7 +56838,7 @@ function MessageRef(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const messageEventDefinition = getMessageEventDefinition(element);
   const getValue = () => {
     const message = getMessage(element);
@@ -53535,10 +56885,10 @@ function MessageRef(props) {
   const getOptions = () => {
     let options2 = [{
       value: EMPTY_OPTION$3,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: CREATE_NEW_OPTION$2,
-      label: translate3("Create new ...")
+      label: translate4("Create new ...")
     }];
     const messages = findRootElementsByType(getBusinessObject(element), "bpmn:Message");
     sortByName$3(messages).forEach((message) => {
@@ -53552,7 +56902,7 @@ function MessageRef(props) {
   return ReferenceSelectEntry({
     element,
     id: "messageRef",
-    label: translate3("Global message reference"),
+    label: translate4("Global message reference"),
     autoFocusEntry: "messageName",
     getValue,
     setValue,
@@ -53564,7 +56914,7 @@ function MessageName$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const message = getMessage(element);
   const getValue = () => {
@@ -53582,14 +56932,14 @@ function MessageName$1(props) {
   return TextfieldEntry({
     element,
     id: "messageName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
   });
 }
 function sortByName$3(elements) {
-  return sortBy(elements, (e7) => (e7.name || "").toLowerCase());
+  return sortBy(elements, (e8) => (e8.name || "").toLowerCase());
 }
 function MultiInstanceProps$2(props) {
   const {
@@ -53616,7 +56966,7 @@ function LoopCardinality(props) {
   const bpmnFactory = useService("bpmnFactory");
   const debounce2 = useService("debounceInput");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getLoopCardinalityValue(element);
   };
@@ -53626,7 +56976,7 @@ function LoopCardinality(props) {
   return TextfieldEntry({
     element,
     id: "loopCardinality",
-    label: translate3("Loop cardinality"),
+    label: translate4("Loop cardinality"),
     getValue,
     setValue,
     debounce: debounce2
@@ -53639,7 +56989,7 @@ function CompletionCondition$1(props) {
   const bpmnFactory = useService("bpmnFactory");
   const debounce2 = useService("debounceInput");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getCompletionConditionValue(element);
   };
@@ -53649,7 +56999,7 @@ function CompletionCondition$1(props) {
   return TextfieldEntry({
     element,
     id: "completionCondition",
-    label: translate3("Completion condition"),
+    label: translate4("Completion condition"),
     getValue,
     setValue,
     debounce: debounce2
@@ -53738,11 +57088,11 @@ function Name$3(props) {
   const debounce2 = useService("debounceInput");
   const canvas = useService("canvas");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   let options2 = {
     element,
     id: "name",
-    label: translate3("Name"),
+    label: translate4("Name"),
     debounce: debounce2,
     setValue: (value) => {
       modeling.updateProperties(element, {
@@ -53782,7 +57132,7 @@ function Name$3(props) {
       }
     };
   } else if (is(element, "bpmn:Participant")) {
-    options2.label = translate3("Participant Name");
+    options2.label = translate4("Participant Name");
   }
   return TextAreaEntry(options2);
 }
@@ -53801,16 +57151,16 @@ function createCategoryValue2(definitions, bpmnFactory) {
   getBusinessObject(categoryValue).$parent = category;
   return categoryValue;
 }
-function ProcessProps(props) {
+function ProcessProps$1(props) {
   const {
     element
   } = props;
-  if (!hasProcessRef(element)) {
+  if (!hasProcessRef$1(element)) {
     return [];
   }
   return [{
     id: "processId",
-    component: ProcessId,
+    component: ProcessId$1,
     isEdited
   }, {
     id: "processName",
@@ -53823,7 +57173,7 @@ function ProcessName(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const process2 = element.businessObject.get("processRef");
   const getValue = () => {
@@ -53841,18 +57191,18 @@ function ProcessName(props) {
   return TextfieldEntry({
     element,
     id: "processName",
-    label: translate3("Process name"),
+    label: translate4("Process name"),
     getValue,
     setValue,
     debounce: debounce2
   });
 }
-function ProcessId(props) {
+function ProcessId$1(props) {
   const {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const process2 = element.businessObject.get("processRef");
   const getValue = () => {
@@ -53871,19 +57221,19 @@ function ProcessId(props) {
     });
   };
   const validate = T3((value) => {
-    return isIdValid(process2, value, translate3);
-  }, [process2, translate3]);
+    return isIdValid(process2, value, translate4);
+  }, [process2, translate4]);
   return TextfieldEntry({
     element,
     id: "processId",
-    label: translate3("Process ID"),
+    label: translate4("Process ID"),
     getValue,
     setValue,
     debounce: debounce2,
     validate
   });
 }
-function hasProcessRef(element) {
+function hasProcessRef$1(element) {
   return is(element, "bpmn:Participant") && element.businessObject.get("processRef");
 }
 var EMPTY_OPTION$2 = "";
@@ -53916,7 +57266,7 @@ function SignalRef(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const signalEventDefinition = getSignalEventDefinition$1(element);
   const getValue = () => {
     const signal = getSignal$1(element);
@@ -53963,10 +57313,10 @@ function SignalRef(props) {
   const getOptions = () => {
     let options2 = [{
       value: EMPTY_OPTION$2,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: CREATE_NEW_OPTION$1,
-      label: translate3("Create new ...")
+      label: translate4("Create new ...")
     }];
     const signals = findRootElementsByType(getBusinessObject(element), "bpmn:Signal");
     sortByName$2(signals).forEach((signal) => {
@@ -53980,7 +57330,7 @@ function SignalRef(props) {
   return ReferenceSelectEntry({
     element,
     id: "signalRef",
-    label: translate3("Global signal reference"),
+    label: translate4("Global signal reference"),
     autoFocusEntry: "signalName",
     getValue,
     setValue,
@@ -53992,7 +57342,7 @@ function SignalName$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const signal = getSignal$1(element);
   const getValue = () => {
@@ -54010,14 +57360,14 @@ function SignalName$1(props) {
   return TextfieldEntry({
     element,
     id: "signalName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
   });
 }
 function sortByName$2(elements) {
-  return sortBy(elements, (e7) => (e7.name || "").toLowerCase());
+  return sortBy(elements, (e8) => (e8.name || "").toLowerCase());
 }
 function isTimerSupported(element) {
   return isAny(element, ["bpmn:StartEvent", "bpmn:IntermediateCatchEvent", "bpmn:BoundaryEvent"]) && !!getTimerEventDefinition(element);
@@ -54100,7 +57450,7 @@ function TimerEventDefinitionType$2(props) {
     timerEventDefinition,
     timerEventDefinitionType
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate");
   const getValue = () => {
     return timerEventDefinitionType || "";
   };
@@ -54129,22 +57479,22 @@ function TimerEventDefinitionType$2(props) {
   const getOptions = (element2) => {
     return [{
       value: "",
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: "timeDate",
-      label: translate3("Date")
+      label: translate4("Date")
     }, {
       value: "timeDuration",
-      label: translate3("Duration")
+      label: translate4("Duration")
     }, {
       value: "timeCycle",
-      label: translate3("Cycle")
+      label: translate4("Cycle")
     }];
   };
   return SelectEntry({
     element,
     id: "timerEventDefinitionType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -54156,7 +57506,7 @@ function TimerEventDefinitionValue$2(props) {
     timerEventDefinition,
     timerEventDefinitionType
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const timerEventFormalExpression = timerEventDefinition.get(timerEventDefinitionType);
   const getValue = () => {
     return timerEventFormalExpression && timerEventFormalExpression.get("body");
@@ -54173,80 +57523,80 @@ function TimerEventDefinitionValue$2(props) {
   return TextfieldEntry({
     element,
     id: "timerEventDefinitionValue",
-    label: translate3("Value"),
+    label: translate4("Value"),
     getValue,
     setValue,
     debounce: debounce2,
-    tooltip: getTimerEventDefinitionValueDescription$2(timerEventDefinitionType, translate3)
+    tooltip: getTimerEventDefinitionValueDescription$2(timerEventDefinitionType, translate4)
   });
 }
-function getTimerEventDefinitionValueDescription$2(timerDefinitionType, translate3) {
+function getTimerEventDefinitionValueDescription$2(timerDefinitionType, translate4) {
   switch (timerDefinitionType) {
     case "timeDate":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A specific point in time defined as ISO 8601 combined date and time representation.")
+          children: translate4("A specific point in time defined as ISO 8601 combined date and time representation.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "2019-10-01T12:00:00Z"
-            }), " - ", translate3("UTC time")]
+            }), " - ", translate4("UTC time")]
           }), u5("li", {
             children: [u5("code", {
               children: "2019-10-02T08:09:40+02:00"
-            }), " - ", translate3("UTC plus 2 hours zone offset")]
+            }), " - ", translate4("UTC plus 2 hours zone offset")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-date",
           target: "_blank",
           rel: "noopener",
-          children: translate3("Documentation: Timer events")
+          children: translate4("Documentation: Timer events")
         })]
       });
     case "timeCycle":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A cycle defined as ISO 8601 repeating intervals format.")
+          children: translate4("A cycle defined as ISO 8601 repeating intervals format.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "R5/PT10S"
-            }), " - ", translate3("every 10 seconds, up to 5 times")]
+            }), " - ", translate4("every 10 seconds, up to 5 times")]
           }), u5("li", {
             children: [u5("code", {
               children: "R/P1D"
-            }), " - ", translate3("every day, infinitely")]
+            }), " - ", translate4("every day, infinitely")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-cycle",
           target: "_blank",
           rel: "noopener",
-          children: translate3("Documentation: Timer events")
+          children: translate4("Documentation: Timer events")
         })]
       });
     case "timeDuration":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A time duration defined as ISO 8601 durations format.")
+          children: translate4("A time duration defined as ISO 8601 durations format.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "PT15S"
-            }), " - ", translate3("15 seconds")]
+            }), " - ", translate4("15 seconds")]
           }), u5("li", {
             children: [u5("code", {
               children: "PT1H30M"
-            }), " - ", translate3("1 hour and 30 minutes")]
+            }), " - ", translate4("1 hour and 30 minutes")]
           }), u5("li", {
             children: [u5("code", {
               children: "P14D"
-            }), " - ", translate3("14 days")]
+            }), " - ", translate4("14 days")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-duration",
           target: "_blank",
           rel: "noopener",
-          children: translate3("Documentation: Timer events")
+          children: translate4("Documentation: Timer events")
         })]
       });
   }
@@ -54255,25 +57605,25 @@ function getId$1(idPrefix, id) {
   return idPrefix ? idPrefix + id : id;
 }
 function GeneralGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const entries = [...NameProps({
     element
-  }), ...IdProps(), ...ProcessProps({
+  }), ...IdProps$1(), ...ProcessProps$1({
     element
   }), ...ExecutableProps({
     element
   })];
   return {
     id: "general",
-    label: translate3("General"),
+    label: translate4("General"),
     entries,
     component: Group
   };
 }
 function CompensationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Compensation"),
+    label: translate4("Compensation"),
     id: "compensation",
     component: Group,
     entries: [...CompensationProps({
@@ -54286,22 +57636,22 @@ function CompensationGroup(element, injector) {
   return null;
 }
 function DocumentationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const entries = [...DocumentationProps({
     element
   })];
   return {
     id: "documentation",
-    label: translate3("Documentation"),
+    label: translate4("Documentation"),
     entries,
     component: Group
   };
 }
 function ErrorGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "error",
-    label: translate3("Error"),
+    label: translate4("Error"),
     component: Group,
     entries: [...ErrorProps$2({
       element
@@ -54313,10 +57663,10 @@ function ErrorGroup(element, injector) {
   return null;
 }
 function MessageGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "message",
-    label: translate3("Message"),
+    label: translate4("Message"),
     component: Group,
     entries: [...MessageProps$1({
       element
@@ -54328,10 +57678,10 @@ function MessageGroup(element, injector) {
   return null;
 }
 function SignalGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "signal",
-    label: translate3("Signal"),
+    label: translate4("Signal"),
     component: Group,
     entries: [...SignalProps$1({
       element
@@ -54343,9 +57693,9 @@ function SignalGroup(element, injector) {
   return null;
 }
 function LinkGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Link"),
+    label: translate4("Link"),
     id: "link",
     component: Group,
     entries: [...LinkProps({
@@ -54358,10 +57708,10 @@ function LinkGroup(element, injector) {
   return null;
 }
 function EscalationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "escalation",
-    label: translate3("Escalation"),
+    label: translate4("Escalation"),
     component: Group,
     entries: [...EscalationProps$2({
       element
@@ -54373,9 +57723,9 @@ function EscalationGroup(element, injector) {
   return null;
 }
 function TimerGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Timer"),
+    label: translate4("Timer"),
     id: "timer",
     component: Group,
     entries: [...TimerProps$2({
@@ -54388,9 +57738,9 @@ function TimerGroup(element, injector) {
   return null;
 }
 function MultiInstanceGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Multi-instance"),
+    label: translate4("Multi-instance"),
     id: "multiInstance",
     component: Group,
     entries: [...MultiInstanceProps$2({
@@ -54567,7 +57917,7 @@ function Assignee$1(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getAssignmentDefinition(element) || {}).assignee;
@@ -54620,7 +57970,7 @@ function Assignee$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "assignmentDefinitionAssignee",
-    label: translate3("Assignee"),
+    label: translate4("Assignee"),
     feel: "optional",
     getValue,
     setValue,
@@ -54633,7 +57983,7 @@ function CandidateGroups$1(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getAssignmentDefinition(element) || {}).candidateGroups;
@@ -54686,7 +58036,7 @@ function CandidateGroups$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "assignmentDefinitionCandidateGroups",
-    label: translate3("Candidate groups"),
+    label: translate4("Candidate groups"),
     feel: "optional",
     getValue,
     setValue,
@@ -54699,7 +58049,7 @@ function CandidateUsers$1(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getAssignmentDefinition(element) || {}).candidateUsers;
@@ -54752,7 +58102,7 @@ function CandidateUsers$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "assignmentDefinitionCandidateUsers",
-    label: translate3("Candidate users"),
+    label: translate4("Candidate users"),
     feel: "optional",
     getValue,
     setValue,
@@ -54764,8 +58114,7 @@ function getAssignmentDefinition(element) {
   return getExtensionElementsList(businessObject, "zeebe:AssignmentDefinition")[0];
 }
 function isZeebeServiceTask(element) {
-  if (!is(element, "zeebe:ZeebeServiceTask"))
-    return false;
+  if (!is(element, "zeebe:ZeebeServiceTask")) return false;
   if (is(element, "bpmn:EndEvent") || is(element, "bpmn:IntermediateThrowEvent")) {
     return !!getMessageEventDefinition(element);
   }
@@ -54818,7 +58167,7 @@ function BusinessRuleImplementation(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     if (getCalledDecision$1(element)) {
       return DMN_IMPLEMENTATION_OPTION;
@@ -54847,20 +58196,20 @@ function BusinessRuleImplementation(props) {
   const getOptions = () => {
     const options2 = [{
       value: DEFAULT_IMPLEMENTATION_OPTION$1,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: DMN_IMPLEMENTATION_OPTION,
-      label: translate3("DMN decision")
+      label: translate4("DMN decision")
     }, {
       value: JOB_WORKER_IMPLEMENTATION_OPTION$2,
-      label: translate3("Job worker")
+      label: translate4("Job worker")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id,
-    label: translate3("Implementation"),
+    label: translate4("Implementation"),
     getValue,
     setValue,
     getOptions
@@ -54875,7 +58224,7 @@ function getCalledDecision$1(element) {
   return getExtensionElementsList(businessObject, "zeebe:CalledDecision")[0];
 }
 function isBusinessRuleImplementationEdited(element) {
-  return getTaskDefinition$2(element);
+  return getTaskDefinition$2(element) || getCalledDecision$1(element);
 }
 function resetElement$1(element, commandStack) {
   const businessObject = getBusinessObject(element);
@@ -54944,7 +58293,7 @@ function DecisionID(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getCalledDecision(element) || {}).decisionId;
@@ -54997,7 +58346,7 @@ function DecisionID(props) {
   return FeelEntryWithVariableContext({
     element,
     id,
-    label: translate3("Decision ID"),
+    label: translate4("Decision ID"),
     feel: "optional",
     getValue,
     setValue,
@@ -55011,7 +58360,7 @@ function ResultVariable$4(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getCalledDecision(element) || {}).resultVariable;
@@ -55064,7 +58413,7 @@ function ResultVariable$4(props) {
   return TextfieldEntry({
     element,
     id,
-    label: translate3("Result variable"),
+    label: translate4("Result variable"),
     getValue,
     setValue,
     debounce: debounce2
@@ -55095,7 +58444,7 @@ function ConditionExpression$1(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const getValue = () => {
     return getConditionExpression$1(element);
   };
@@ -55131,7 +58480,7 @@ function ConditionExpression$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "conditionExpression",
-    label: translate3("Condition expression"),
+    label: translate4("Condition expression"),
     feel: "required",
     getValue,
     setValue,
@@ -55169,7 +58518,7 @@ function ErrorCode$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const error4 = getError(element);
   const getValue = () => {
@@ -55187,7 +58536,7 @@ function ErrorCode$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "errorCode",
-    label: translate3("Code"),
+    label: translate4("Code"),
     feel: "optional",
     getValue,
     setValue,
@@ -55217,7 +58566,7 @@ function EscalationCode(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const escalation = getEscalation(element);
   const getValue = () => {
@@ -55235,7 +58584,7 @@ function EscalationCode(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "escalationCode",
-    label: translate3("Code"),
+    label: translate4("Code"),
     feel: "optional",
     getValue,
     setValue,
@@ -55349,7 +58698,7 @@ function FormType$1(props) {
   const {
     element
   } = props;
-  const injector = useService("injector"), translate3 = useService("translate");
+  const injector = useService("injector"), translate4 = useService("translate");
   const getValue = () => {
     return getFormType$1(element) || NONE_VALUE;
   };
@@ -55357,12 +58706,12 @@ function FormType$1(props) {
     setFormType(injector, element, value);
   };
   const getOptions = () => {
-    return getFormTypeOptions(translate3, element);
+    return getFormTypeOptions(translate4, element);
   };
   return SelectEntry({
     element,
     id: "formType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -55381,38 +58730,38 @@ function setFormType(injector, element, value) {
     removeFormDefinition(injector, element);
   }
 }
-function getFormTypeOptions(translate3, element) {
+function getFormTypeOptions(translate4, element) {
   if (isZeebeUserTask(element)) {
     return [{
       value: NONE_VALUE,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: FORM_TYPES.CAMUNDA_FORM_LINKED,
-      label: translate3("Camunda Form")
+      label: translate4("Camunda Form")
     }, {
       value: FORM_TYPES.EXTERNAL_REFERENCE,
-      label: translate3("External form reference")
+      label: translate4("External form reference")
     }];
   }
   return [{
     value: NONE_VALUE,
-    label: translate3("<none>")
+    label: translate4("<none>")
   }, {
     value: FORM_TYPES.CAMUNDA_FORM_LINKED,
-    label: translate3("Camunda Form (linked)")
+    label: translate4("Camunda Form (linked)")
   }, {
     value: FORM_TYPES.CAMUNDA_FORM_EMBEDDED,
-    label: translate3("Camunda Form (embedded)")
+    label: translate4("Camunda Form (embedded)")
   }, {
     value: FORM_TYPES.CUSTOM_FORM,
-    label: translate3("Custom form key")
+    label: translate4("Custom form key")
   }];
 }
 function FormConfiguration(props) {
   const {
     element
   } = props;
-  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate3 = useService("translate");
+  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate4 = useService("translate");
   const getValue = () => {
     return getUserTaskForm(element).get("body");
   };
@@ -55422,7 +58771,7 @@ function FormConfiguration(props) {
   return TextAreaEntry({
     element,
     id: "formConfiguration",
-    label: translate3("Form JSON configuration"),
+    label: translate4("Form JSON configuration"),
     rows: 4,
     getValue,
     setValue,
@@ -55433,7 +58782,7 @@ function FormId(props) {
   const {
     element
   } = props;
-  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate3 = useService("translate");
+  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate4 = useService("translate");
   const getValue = () => {
     return getFormDefinition(element).get("formId");
   };
@@ -55443,7 +58792,7 @@ function FormId(props) {
   return TextfieldEntry({
     element,
     id: "formId",
-    label: translate3("Form ID"),
+    label: translate4("Form ID"),
     getValue,
     setValue,
     debounce: debounce2
@@ -55453,7 +58802,7 @@ function CustomForm(props) {
   const {
     element
   } = props;
-  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate3 = useService("translate");
+  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate4 = useService("translate");
   const getValue = () => {
     const formDefinition = getFormDefinition(element);
     return formDefinition.get("formKey");
@@ -55464,7 +58813,7 @@ function CustomForm(props) {
   return TextfieldEntry({
     element,
     id: "customFormKey",
-    label: translate3("Custom form key"),
+    label: translate4("Custom form key"),
     getValue,
     setValue,
     debounce: debounce2
@@ -55474,7 +58823,7 @@ function ExternalReference(props) {
   const {
     element
   } = props;
-  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate3 = useService("translate");
+  const debounce2 = useService("debounceInput"), injector = useService("injector"), translate4 = useService("translate");
   const getValue = () => {
     const formDefinition = getFormDefinition(element);
     return formDefinition.get("externalReference");
@@ -55485,7 +58834,7 @@ function ExternalReference(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "externalReference",
-    label: translate3("External form reference"),
+    label: translate4("External form reference"),
     feel: "optional",
     getValue,
     setValue,
@@ -55657,7 +59006,7 @@ function KeyProperty(props) {
     header
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -55674,7 +59023,7 @@ function KeyProperty(props) {
   return TextfieldEntry({
     element: header,
     id: idPrefix + "-key",
-    label: translate3("Key"),
+    label: translate4("Key"),
     getValue,
     setValue,
     debounce: debounce2
@@ -55687,7 +59036,7 @@ function ValueProperty$2(props) {
     header
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -55704,7 +59053,7 @@ function ValueProperty$2(props) {
   return TextfieldEntry({
     element: header,
     id: idPrefix + "-value",
-    label: translate3("Value"),
+    label: translate4("Value"),
     getValue,
     setValue,
     debounce: debounce2
@@ -55719,8 +59068,8 @@ function HeaderProps({
   }
   const headers = getHeaders(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = headers.map((header, index4) => {
-    const id = element.id + "-header-" + index4;
+  const items = headers.map((header, index5) => {
+    const id = element.id + "-header-" + index5;
     return {
       id,
       label: header.get("key") || "",
@@ -55743,8 +59092,7 @@ function HeaderProps({
       bpmnFactory,
       commandStack,
       element
-    }),
-    shouldSort: false
+    })
   };
 }
 function removeFactory$c({
@@ -55872,7 +59220,7 @@ function PropagateAllParentVariables(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate");
   const propagateAllParentVariables = isPropagateAllParentVariables(element);
   const getValue = () => {
     return propagateAllParentVariables;
@@ -55924,13 +59272,13 @@ function PropagateAllParentVariables(props) {
   };
   return ToggleSwitchEntry({
     id: "propagateAllParentVariables",
-    label: translate3("Propagate all parent process variables"),
-    switcherLabel: propagateAllParentVariables ? translate3("On") : translate3("Off"),
+    label: translate4("Propagate all parent process variables"),
+    switcherLabel: propagateAllParentVariables ? translate4("On") : translate4("Off"),
     tooltip: u5("div", {
       children: [u5("p", {
-        children: translate3("If turned on, all variables from the parent process instance will be propagated to the child process instance.")
+        children: translate4("If turned on, all variables from the parent process instance will be propagated to the child process instance.")
       }), u5("p", {
-        children: translate3("Otherwise, only variables defined via input mappings will be propagated.")
+        children: translate4("Otherwise, only variables defined via input mappings will be propagated.")
       })]
     }),
     getValue,
@@ -55972,7 +59320,7 @@ function TargetProperty(props) {
     parameter
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -55989,7 +59337,7 @@ function TargetProperty(props) {
   return TextfieldEntry({
     element: parameter,
     id: idPrefix + "-target",
-    label: translate3(is(parameter, "zeebe:Input") ? "Local variable name" : "Process variable name"),
+    label: translate4(is(parameter, "zeebe:Input") ? "Local variable name" : "Process variable name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -56002,7 +59350,7 @@ function SourceProperty(props) {
     parameter
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -56020,7 +59368,7 @@ function SourceProperty(props) {
     bpmnElement: element,
     element: parameter,
     id: idPrefix + "-source",
-    label: translate3("Variable assignment value"),
+    label: translate4("Variable assignment value"),
     feel: "required",
     getValue,
     setValue,
@@ -56075,8 +59423,8 @@ function InputProps$1({
   }
   const inputParameters = getInputParameters$1(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = inputParameters.map((parameter, index4) => {
-    const id = element.id + "-input-" + index4;
+  const items = inputParameters.map((parameter, index5) => {
+    const id = element.id + "-input-" + index5;
     return {
       id,
       label: parameter.get("target") || "",
@@ -56099,8 +59447,7 @@ function InputProps$1({
       element,
       bpmnFactory,
       commandStack
-    }),
-    shouldSort: false
+    })
   };
 }
 function removeFactory$b({
@@ -56227,7 +59574,7 @@ function MessageName(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const message = getMessage(element);
   const getValue = () => {
@@ -56245,7 +59592,7 @@ function MessageName(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "messageName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     feel: "optional",
     getValue,
     setValue,
@@ -56258,7 +59605,7 @@ function SubscriptionCorrelationKey(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getCorrelationKey(element);
@@ -56313,7 +59660,7 @@ function SubscriptionCorrelationKey(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "messageSubscriptionCorrelationKey",
-    label: translate3("Subscription correlation key"),
+    label: translate4("Subscription correlation key"),
     feel: "required",
     getValue,
     setValue,
@@ -56380,7 +59727,7 @@ function InputCollection(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getProperty$1(element, "inputCollection");
@@ -56391,7 +59738,7 @@ function InputCollection(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "multiInstance-inputCollection",
-    label: translate3("Input collection"),
+    label: translate4("Input collection"),
     feel: "required",
     getValue,
     setValue,
@@ -56404,7 +59751,7 @@ function InputElement(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getProperty$1(element, "inputElement");
@@ -56415,7 +59762,7 @@ function InputElement(props) {
   return TextfieldEntry({
     element,
     id: "multiInstance-inputElement",
-    label: translate3("Input element"),
+    label: translate4("Input element"),
     getValue,
     setValue,
     debounce: debounce2
@@ -56427,7 +59774,7 @@ function OutputCollection(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getProperty$1(element, "outputCollection");
@@ -56438,7 +59785,7 @@ function OutputCollection(props) {
   return TextfieldEntry({
     element,
     id: "multiInstance-outputCollection",
-    label: translate3("Output collection"),
+    label: translate4("Output collection"),
     getValue,
     setValue,
     debounce: debounce2
@@ -56450,7 +59797,7 @@ function OutputElement(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getProperty$1(element, "outputElement");
@@ -56461,7 +59808,7 @@ function OutputElement(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "multiInstance-outputElement",
-    label: translate3("Output element"),
+    label: translate4("Output element"),
     feel: "required",
     getValue,
     setValue,
@@ -56474,7 +59821,7 @@ function CompletionCondition(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     const completionCondition = getCompletionCondition(element);
@@ -56494,7 +59841,7 @@ function CompletionCondition(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "multiInstance-completionCondition",
-    label: translate3("Completion condition"),
+    label: translate4("Completion condition"),
     feel: "required",
     getValue,
     setValue,
@@ -56590,7 +59937,7 @@ function PropagateAllChildVariables(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate");
   const propagateAllChildVariables = isPropagateAllChildVariables(element);
   const getValue = () => {
     return propagateAllChildVariables;
@@ -56642,13 +59989,13 @@ function PropagateAllChildVariables(props) {
   };
   return ToggleSwitchEntry({
     id: "propagateAllChildVariables",
-    label: translate3("Propagate all child process variables"),
-    switcherLabel: propagateAllChildVariables ? translate3("On") : translate3("Off"),
+    label: translate4("Propagate all child process variables"),
+    switcherLabel: propagateAllChildVariables ? translate4("On") : translate4("Off"),
     tooltip: u5("div", {
       children: [u5("p", {
-        children: translate3("If turned on, all variables from the child process instance will be propagated to the parent process instance.")
+        children: translate4("If turned on, all variables from the child process instance will be propagated to the parent process instance.")
       }), u5("p", {
-        children: translate3("Otherwise, only variables defined via output mappings will be propagated.")
+        children: translate4("Otherwise, only variables defined via output mappings will be propagated.")
       })]
     }),
     getValue,
@@ -56677,8 +60024,8 @@ function OutputProps$1({
   }
   const outputParameters = getOutputParameters$1(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = outputParameters.map((parameter, index4) => {
-    const id = element.id + "-output-" + index4;
+  const items = outputParameters.map((parameter, index5) => {
+    const id = element.id + "-output-" + index5;
     return {
       id,
       label: parameter.get("target") || "",
@@ -56701,8 +60048,7 @@ function OutputProps$1({
       element,
       bpmnFactory,
       commandStack
-    }),
-    shouldSort: false
+    })
   };
 }
 function removeFactory$a({
@@ -56826,7 +60172,7 @@ function ScriptImplementation(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     if (getScript$1(element)) {
       return SCRIPT_IMPLEMENTATION_OPTION;
@@ -56855,20 +60201,20 @@ function ScriptImplementation(props) {
   const getOptions = () => {
     const options2 = [{
       value: DEFAULT_IMPLEMENTATION_OPTION,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: SCRIPT_IMPLEMENTATION_OPTION,
-      label: translate3("FEEL expression")
+      label: translate4("FEEL expression")
     }, {
       value: JOB_WORKER_IMPLEMENTATION_OPTION$1,
-      label: translate3("Job worker")
+      label: translate4("Job worker")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id,
-    label: translate3("Implementation"),
+    label: translate4("Implementation"),
     getValue,
     setValue,
     getOptions
@@ -56966,7 +60312,7 @@ function Expression$2(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getScript(element) || {}).get("expression");
@@ -57019,7 +60365,7 @@ function Expression$2(props) {
   return FeelEntryWithVariableContext({
     element,
     id,
-    label: translate3("FEEL expression"),
+    label: translate4("FEEL expression"),
     feel: "required",
     getValue,
     setValue,
@@ -57033,7 +60379,7 @@ function ResultVariable$3(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getScript(element) || {}).resultVariable;
@@ -57086,7 +60432,7 @@ function ResultVariable$3(props) {
   return TextfieldEntry({
     element,
     id,
-    label: translate3("Result variable"),
+    label: translate4("Result variable"),
     getValue,
     setValue,
     debounce: debounce2
@@ -57119,7 +60465,7 @@ function SignalName(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const signal = getSignal(element);
   const getValue = () => {
@@ -57137,7 +60483,7 @@ function SignalName(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "signalName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     feel: "optional",
     getValue,
     setValue,
@@ -57162,7 +60508,7 @@ function TargetProcessId(props) {
     element,
     id
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const getValue = () => {
     return getProcessId(element);
   };
@@ -57214,7 +60560,7 @@ function TargetProcessId(props) {
   return FeelEntryWithVariableContext({
     element,
     id,
-    label: translate3("Process ID"),
+    label: translate4("Process ID"),
     feel: "optional",
     getValue,
     setValue,
@@ -57245,7 +60591,7 @@ function TaskDefinitionType(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getTaskDefinition(element) || {}).type;
@@ -57298,7 +60644,7 @@ function TaskDefinitionType(props) {
   return FeelEntryWithVariableContext({
     element,
     id,
-    label: translate3("Type"),
+    label: translate4("Type"),
     feel: "optional",
     getValue,
     setValue,
@@ -57312,7 +60658,7 @@ function TaskDefinitionRetries(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return (getTaskDefinition(element) || {}).retries;
@@ -57365,7 +60711,7 @@ function TaskDefinitionRetries(props) {
   return FeelEntryWithVariableContext({
     element,
     id,
-    label: translate3("Retries"),
+    label: translate4("Retries"),
     feel: "optional",
     getValue,
     setValue,
@@ -57399,7 +60745,7 @@ function DueDate$1(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     const taskSchedule = getTaskSchedule(element);
@@ -57456,7 +60802,7 @@ function DueDate$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "taskScheduleDueDate",
-    label: translate3("Due date"),
+    label: translate4("Due date"),
     feel: "optional",
     getValue,
     setValue,
@@ -57469,7 +60815,7 @@ function FollowUpDate$1(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     const taskSchedule = getTaskSchedule(element);
@@ -57526,7 +60872,7 @@ function FollowUpDate$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "taskScheduleFollowUpDate",
-    label: translate3("Follow up date"),
+    label: translate4("Follow up date"),
     feel: "optional",
     getValue,
     setValue,
@@ -57577,12 +60923,12 @@ function TimerProps$1(props) {
     element,
     injector
   } = props;
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const businessObject = getBusinessObject(element), timerEventDefinition = getTimerEventDefinition(businessObject), timerEventDefinitionType = getTimerDefinitionType(timerEventDefinition);
   if (!isTimerSupported(element)) {
     return [];
   }
-  const timerOptions = getTimerOptions(element, translate3);
+  const timerOptions = getTimerOptions(element, translate4);
   const entries = [];
   entries.push({
     id: "timerEventDefinitionType",
@@ -57600,24 +60946,24 @@ function TimerProps$1(props) {
   }
   return entries;
 }
-function getTimerOptions(element, translate3) {
+function getTimerOptions(element, translate4) {
   const options2 = [];
   if (isTimerExpressionTypeSupported("timeDate", element)) {
     options2.push({
       value: "timeDate",
-      label: translate3("Date")
+      label: translate4("Date")
     });
   }
   if (isTimerExpressionTypeSupported("timeDuration", element)) {
     options2.push({
       value: "timeDuration",
-      label: translate3("Duration")
+      label: translate4("Duration")
     });
   }
   if (isTimerExpressionTypeSupported("timeCycle", element)) {
     options2.push({
       value: "timeCycle",
-      label: translate3("Cycle")
+      label: translate4("Cycle")
     });
   }
   return options2;
@@ -57627,7 +60973,7 @@ function TimerEventDefinitionType$1(props) {
     element,
     options: options2
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate");
   const businessObject = getBusinessObject(element), timerEventDefinition = getTimerEventDefinition(businessObject), timerEventDefinitionType = getTimerDefinitionType(timerEventDefinition);
   const getValue = () => {
     return timerEventDefinitionType || "";
@@ -57654,13 +61000,13 @@ function TimerEventDefinitionType$1(props) {
   const getOptions = (element2) => {
     return [{
       value: "",
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, ...options2];
   };
   return SelectEntry({
     element,
     id: "timerEventDefinitionType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -57672,7 +61018,7 @@ function TimerEventDefinitionValue$1(props) {
     label,
     timerEventDefinitionType
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput"), bpmnFactory = useService("bpmnFactory");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput"), bpmnFactory = useService("bpmnFactory");
   const businessObject = getBusinessObject(element), timerEventDefinition = getTimerEventDefinition(businessObject), timerEventFormalExpression = timerEventDefinition.get(timerEventDefinitionType);
   const getValue = () => {
     return timerEventFormalExpression && timerEventFormalExpression.get("body");
@@ -57701,12 +61047,12 @@ function TimerEventDefinitionValue$1(props) {
   return FeelEntryWithVariableContext({
     element,
     id: "timerEventDefinitionValue",
-    label: label || translate3("Value"),
+    label: label || translate4("Value"),
     feel: "optional",
     getValue,
     setValue,
     debounce: debounce2,
-    tooltip: getTimerEventDefinitionValueDescription$1(timerEventDefinitionType, translate3)
+    tooltip: getTimerEventDefinitionValueDescription$1(timerEventDefinitionType, translate4)
   });
 }
 function createTimerFormalExpression(bpmnFactory, eventDefinition) {
@@ -57716,80 +61062,80 @@ function createTimerFormalExpression(bpmnFactory, eventDefinition) {
   formalExpression.$parent = eventDefinition;
   return formalExpression;
 }
-function getTimerEventDefinitionValueDescription$1(timerDefinitionType, translate3) {
+function getTimerEventDefinitionValueDescription$1(timerDefinitionType, translate4) {
   switch (timerDefinitionType) {
     case "timeDate":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A specific point in time defined as ISO 8601 combined date and time representation.")
+          children: translate4("A specific point in time defined as ISO 8601 combined date and time representation.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "2019-10-01T12:00:00Z"
-            }), " - ", translate3("UTC time")]
+            }), " - ", translate4("UTC time")]
           }), u5("li", {
             children: [u5("code", {
               children: "2019-10-02T08:09:40+02:00"
-            }), " - ", translate3("UTC plus 2 hours zone offset")]
+            }), " - ", translate4("UTC plus 2 hours zone offset")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.io/docs/reference/bpmn-processes/timer-events/timer-events#time-date",
           target: "_blank",
           rel: "noopener",
-          title: translate3("Timer documentation"),
-          children: translate3("How to configure a timer")
+          title: translate4("Timer documentation"),
+          children: translate4("How to configure a timer")
         })]
       });
     case "timeCycle":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A cycle defined as ISO 8601 repeating intervals format, or a cron expression.")
+          children: translate4("A cycle defined as ISO 8601 repeating intervals format, or a cron expression.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "R5/PT10S"
-            }), " - ", translate3("every 10 seconds, up to 5 times")]
+            }), " - ", translate4("every 10 seconds, up to 5 times")]
           }), u5("li", {
             children: [u5("code", {
               children: "R/P1D"
-            }), " - ", translate3("every day, infinitely")]
+            }), " - ", translate4("every day, infinitely")]
           }), u5("li", {
             children: [u5("code", {
               children: "0 0 9-17 * * MON-FRI"
-            }), " - ", translate3("every hour on the hour from 9-5 p.m. UTC Monday-Friday")]
+            }), " - ", translate4("every hour on the hour from 9-5 p.m. UTC Monday-Friday")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.io/docs/reference/bpmn-processes/timer-events/timer-events#time-cycle",
           target: "_blank",
           rel: "noopener",
-          title: translate3("Timer documentation"),
-          children: translate3("How to configure a timer")
+          title: translate4("Timer documentation"),
+          children: translate4("How to configure a timer")
         })]
       });
     case "timeDuration":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A time duration defined as ISO 8601 durations format.")
+          children: translate4("A time duration defined as ISO 8601 durations format.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "PT15S"
-            }), " - ", translate3("15 seconds")]
+            }), " - ", translate4("15 seconds")]
           }), u5("li", {
             children: [u5("code", {
               children: "PT1H30M"
-            }), " - ", translate3("1 hour and 30 minutes")]
+            }), " - ", translate4("1 hour and 30 minutes")]
           }), u5("li", {
             children: [u5("code", {
               children: "P14D"
-            }), " - ", translate3("14 days")]
+            }), " - ", translate4("14 days")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.io/docs/reference/bpmn-processes/timer-events/timer-events#time-duration",
           target: "_blank",
           rel: "noopener",
-          title: translate3("Timer documentation"),
-          children: translate3("How to configure a timer")
+          title: translate4("Timer documentation"),
+          children: translate4("How to configure a timer")
         })]
       });
   }
@@ -57816,7 +61162,7 @@ function UserTaskImplementation(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     if (getZeebeUserTask(element)) {
       return ZEEBE_USER_TASK_IMPLEMENTATION_OPTION;
@@ -57833,17 +61179,17 @@ function UserTaskImplementation(props) {
   const getOptions = () => {
     const options2 = [{
       value: ZEEBE_USER_TASK_IMPLEMENTATION_OPTION,
-      label: translate3("Zeebe user task")
+      label: translate4("Zeebe user task")
     }, {
       value: JOB_WORKER_IMPLEMENTATION_OPTION,
-      label: translate3("Job worker")
+      label: translate4("Job worker")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id,
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -57890,7 +61236,7 @@ function NameProperty$1(props) {
     property
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -57907,7 +61253,7 @@ function NameProperty$1(props) {
   return TextfieldEntry({
     element: property,
     id: idPrefix + "-name",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -57920,7 +61266,7 @@ function ValueProperty$1(props) {
     property
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -57937,7 +61283,7 @@ function ValueProperty$1(props) {
   return TextfieldEntry({
     element: property,
     id: idPrefix + "-value",
-    label: translate3("Value"),
+    label: translate4("Value"),
     getValue,
     setValue,
     debounce: debounce2
@@ -57954,8 +61300,8 @@ function ExtensionPropertiesProps({
   }
   const properties = getPropertiesList(businessObject, namespace) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = properties.map((property, index4) => {
-    const id = element.id + "-extensionProperty-" + index4;
+  const items = properties.map((property, index5) => {
+    const id = element.id + "-extensionProperty-" + index5;
     return {
       id,
       label: property.get("name") || "",
@@ -57980,8 +61326,7 @@ function ExtensionPropertiesProps({
       commandStack,
       element,
       namespace
-    }),
-    shouldSort: false
+    })
   };
 }
 function removeFactory$9({
@@ -58133,10 +61478,10 @@ var ZeebePropertiesProvider = class {
 };
 ZeebePropertiesProvider.$inject = ["propertiesPanel", "injector"];
 function CalledDecisionGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "calledDecision",
-    label: translate3("Called decision"),
+    label: translate4("Called decision"),
     entries: [...CalledDecisionProps({
       element
     })],
@@ -58145,10 +61490,10 @@ function CalledDecisionGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function ScriptGroup$1(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "script",
-    label: translate3("Script"),
+    label: translate4("Script"),
     entries: [...ScriptProps$1({
       element
     })],
@@ -58157,10 +61502,10 @@ function ScriptGroup$1(element, injector) {
   return group.entries.length ? group : null;
 }
 function TaskDefinitionGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "taskDefinition",
-    label: translate3("Task definition"),
+    label: translate4("Task definition"),
     entries: [...TaskDefinitionProps({
       element
     })],
@@ -58169,10 +61514,10 @@ function TaskDefinitionGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function InputGroup$1(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "inputs",
-    label: translate3("Inputs"),
+    label: translate4("Inputs"),
     component: ListGroup,
     ...InputProps$1({
       element,
@@ -58182,10 +61527,10 @@ function InputGroup$1(element, injector) {
   return group.items ? group : null;
 }
 function OutputGroup$1(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "outputs",
-    label: translate3("Outputs"),
+    label: translate4("Outputs"),
     component: ListGroup,
     ...OutputProps$1({
       element,
@@ -58195,10 +61540,10 @@ function OutputGroup$1(element, injector) {
   return group.items ? group : null;
 }
 function ConditionGroup$1(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "condition",
-    label: translate3("Condition"),
+    label: translate4("Condition"),
     entries: [...ConditionProps$1({
       element
     })],
@@ -58207,10 +61552,10 @@ function ConditionGroup$1(element, injector) {
   return group.entries.length ? group : null;
 }
 function FormGroup$1(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "form",
-    label: translate3("Form"),
+    label: translate4("Form"),
     entries: [...FormProps$1({
       element,
       injector
@@ -58220,10 +61565,10 @@ function FormGroup$1(element, injector) {
   return group.entries.length ? group : null;
 }
 function TargetGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "calledElement",
-    label: translate3("Called element"),
+    label: translate4("Called element"),
     entries: [...TargetProps({
       element
     })],
@@ -58232,10 +61577,10 @@ function TargetGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function HeaderGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "headers",
-    label: translate3("Headers"),
+    label: translate4("Headers"),
     component: ListGroup,
     ...HeaderProps({
       element,
@@ -58245,10 +61590,10 @@ function HeaderGroup(element, injector) {
   return group.items ? group : null;
 }
 function OutputPropagationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "outputPropagation",
-    label: translate3("Output propagation"),
+    label: translate4("Output propagation"),
     entries: [...OutputPropagationProps({
       element
     })],
@@ -58257,10 +61602,10 @@ function OutputPropagationGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function InputPropagationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "inputPropagation",
-    label: translate3("Input propagation"),
+    label: translate4("Input propagation"),
     entries: [...InputPropagationProps({
       element
     })],
@@ -58269,10 +61614,10 @@ function InputPropagationGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function BusinessRuleImplementationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "businessRuleImplementation",
-    label: translate3("Implementation"),
+    label: translate4("Implementation"),
     entries: [...BusinessRuleImplementationProps({
       element
     })],
@@ -58281,10 +61626,10 @@ function BusinessRuleImplementationGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function ScriptImplementationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "scriptImplementation",
-    label: translate3("Implementation"),
+    label: translate4("Implementation"),
     entries: [...ScriptImplementationProps({
       element
     })],
@@ -58293,10 +61638,10 @@ function ScriptImplementationGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function UserTaskImplementationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "userTaskImplementation",
-    label: translate3("Implementation"),
+    label: translate4("Implementation"),
     entries: [...UserTaskImplementationProps({
       element
     })],
@@ -58305,10 +61650,10 @@ function UserTaskImplementationGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function AssignmentDefinitionGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
     id: "assignmentDefinition",
-    label: translate3("Assignment"),
+    label: translate4("Assignment"),
     entries: [...AssignmentDefinitionProps({
       element
     }), ...TaskScheduleProps({
@@ -58319,9 +61664,9 @@ function AssignmentDefinitionGroup(element, injector) {
   return group.entries.length ? group : null;
 }
 function ExtensionPropertiesGroup$1(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Extension properties"),
+    label: translate4("Extension properties"),
     id: "Zeebe__ExtensionProperties",
     component: ListGroup,
     ...ExtensionPropertiesProps({
@@ -58441,7 +61786,7 @@ function AsynchronousContinuationBefore(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     return isAsyncBefore$2(businessObject);
@@ -58460,7 +61805,7 @@ function AsynchronousContinuationBefore(props) {
   return CheckboxEntry({
     element,
     id: "asynchronousContinuationBefore",
-    label: translate3("Before"),
+    label: translate4("Before"),
     getValue,
     setValue
   });
@@ -58469,7 +61814,7 @@ function AsynchronousContinuationAfter(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     return isAsyncAfter$2(businessObject);
@@ -58486,7 +61831,7 @@ function AsynchronousContinuationAfter(props) {
   return CheckboxEntry({
     element,
     id: "asynchronousContinuationAfter",
-    label: translate3("After"),
+    label: translate4("After"),
     getValue,
     setValue
   });
@@ -58495,7 +61840,7 @@ function Exclusive(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     return isExclusive$1(businessObject);
@@ -58512,7 +61857,7 @@ function Exclusive(props) {
   return CheckboxEntry({
     element,
     id: "exclusive",
-    label: translate3("Exclusive"),
+    label: translate4("Exclusive"),
     getValue,
     setValue
   });
@@ -58545,7 +61890,7 @@ function BusinessKey$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const formData = getFormData$2(element);
   const getValue = () => {
     return formData.get("camunda:businessKey") || "";
@@ -58562,7 +61907,7 @@ function BusinessKey$1(props) {
   const getOptions = () => {
     const options2 = [{
       value: EMPTY_OPTION$1,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }];
     const fields = formData.get("fields");
     fields.forEach((field) => {
@@ -58579,7 +61924,7 @@ function BusinessKey$1(props) {
   return SelectEntry({
     element,
     id: "businessKey",
-    label: translate3("Key"),
+    label: translate4("Key"),
     getValue,
     setValue,
     getOptions
@@ -58632,7 +61977,7 @@ function CalledElement(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("calledElement");
@@ -58645,7 +61990,7 @@ function CalledElement(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElement",
-    label: translate3("Called element"),
+    label: translate4("Called element"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58656,7 +62001,7 @@ function CalledElementBinding(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:calledElementBinding") || "latest";
   };
@@ -58669,21 +62014,21 @@ function CalledElementBinding(props) {
   };
   const getOptions = () => [{
     value: "latest",
-    label: translate3("latest")
+    label: translate4("latest")
   }, {
     value: "deployment",
-    label: translate3("deployment")
+    label: translate4("deployment")
   }, {
     value: "version",
-    label: translate3("version")
+    label: translate4("version")
   }, {
     value: "versionTag",
-    label: translate3("version tag")
+    label: translate4("version tag")
   }];
   return u5(SelectEntry, {
     element,
     id: "calledElementBinding",
-    label: translate3("Binding"),
+    label: translate4("Binding"),
     getValue,
     setValue,
     getOptions
@@ -58694,7 +62039,7 @@ function CalledElementVersion(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:calledElementVersion");
@@ -58707,7 +62052,7 @@ function CalledElementVersion(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementVersion",
-    label: translate3("Version"),
+    label: translate4("Version"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58718,7 +62063,7 @@ function CalledElementVersionTag(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:calledElementVersionTag");
@@ -58731,7 +62076,7 @@ function CalledElementVersionTag(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementVersionTag",
-    label: translate3("Version tag"),
+    label: translate4("Version tag"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58742,7 +62087,7 @@ function CalledElementTenantId(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:calledElementTenantId");
@@ -58755,7 +62100,7 @@ function CalledElementTenantId(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementTenantId",
-    label: translate3("Tenant ID"),
+    label: translate4("Tenant ID"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58792,7 +62137,7 @@ function CaseRef(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:caseRef");
@@ -58805,7 +62150,7 @@ function CaseRef(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementCaseRef",
-    label: translate3("Case ref"),
+    label: translate4("Case ref"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58816,7 +62161,7 @@ function CaseBinding(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:caseBinding") || "latest";
   };
@@ -58828,18 +62173,18 @@ function CaseBinding(props) {
   };
   const getOptions = () => [{
     value: "latest",
-    label: translate3("latest")
+    label: translate4("latest")
   }, {
     value: "deployment",
-    label: translate3("deployment")
+    label: translate4("deployment")
   }, {
     value: "version",
-    label: translate3("version")
+    label: translate4("version")
   }];
   return u5(SelectEntry, {
     element,
     id: "calledElementCaseBinding",
-    label: translate3("Binding"),
+    label: translate4("Binding"),
     getValue,
     setValue,
     getOptions
@@ -58850,7 +62195,7 @@ function CaseVersion(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:caseVersion");
@@ -58863,7 +62208,7 @@ function CaseVersion(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementCaseVersion",
-    label: translate3("Version"),
+    label: translate4("Version"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58874,7 +62219,7 @@ function CaseTenantId(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:caseTenantId");
@@ -58887,7 +62232,7 @@ function CaseTenantId(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementCaseTenantId",
-    label: translate3("Tenant ID"),
+    label: translate4("Tenant ID"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58927,7 +62272,7 @@ function DelegateVariableMappingType(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getDelegateVariableMappingType(element);
   };
@@ -58947,18 +62292,18 @@ function DelegateVariableMappingType(props) {
   };
   const getOptions = () => [{
     value: "none",
-    label: translate3("<none>")
+    label: translate4("<none>")
   }, {
     value: "class",
-    label: translate3("Class")
+    label: translate4("Class")
   }, {
     value: "delegateExpression",
-    label: translate3("Delegate expression")
+    label: translate4("Delegate expression")
   }];
   return u5(SelectEntry, {
     element,
     id: "calledElementDelegateVariableMappingType",
-    label: translate3("Delegate Variable Mapping"),
+    label: translate4("Delegate Variable Mapping"),
     getValue,
     setValue,
     getOptions
@@ -58969,7 +62314,7 @@ function VariableMappingDelegateExpression(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:variableMappingDelegateExpression");
@@ -58983,7 +62328,7 @@ function VariableMappingDelegateExpression(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementVariableMappingDelegateExpression",
-    label: translate3("Delegate Expression"),
+    label: translate4("Delegate Expression"),
     getValue,
     setValue,
     debounce: debounce2
@@ -58994,7 +62339,7 @@ function VariableMappingClass(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getBusinessObject(element).get("camunda:variableMappingClass");
@@ -59008,7 +62353,7 @@ function VariableMappingClass(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementVariableMappingClass",
-    label: translate3("Delegate Class"),
+    label: translate4("Delegate Class"),
     getValue,
     setValue,
     debounce: debounce2
@@ -59076,7 +62421,7 @@ function CalledElementType(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getCalledElementType(element);
   };
@@ -59096,18 +62441,18 @@ function CalledElementType(props) {
   };
   const getOptions = () => [{
     value: "",
-    label: translate3("<none>")
+    label: translate4("<none>")
   }, {
     value: "bpmn",
-    label: translate3("BPMN")
+    label: translate4("BPMN")
   }, {
     value: "cmmn",
-    label: translate3("CMMN")
+    label: translate4("CMMN")
   }];
   return u5(SelectEntry, {
     element,
     id: "calledElementType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -59138,7 +62483,7 @@ function BusinessKey(props) {
   const commandStack = useService("commandStack");
   const modeling = useService("modeling");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return hasBusinessKey(element);
   };
@@ -59178,7 +62523,7 @@ function BusinessKey(props) {
   return u5(CheckboxEntry, {
     element,
     id: "calledElementBusinessKey",
-    label: translate3("Business key"),
+    label: translate4("Business key"),
     getValue,
     setValue
   });
@@ -59188,7 +62533,7 @@ function BusinessKeyExpression(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => getBusinessKey(element);
   const setValue = (value) => {
@@ -59204,7 +62549,7 @@ function BusinessKeyExpression(props) {
   return u5(TextfieldEntry, {
     element,
     id: "calledElementBusinessKeyExpression",
-    label: translate3("Business key expression"),
+    label: translate4("Business key expression"),
     getValue,
     setValue,
     debounce: debounce2
@@ -59260,7 +62605,7 @@ function CandidateStarterGroups(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const process2 = getProcess$3(element);
   const getValue = () => {
     return process2.get("camunda:candidateStarterGroups") || "";
@@ -59277,8 +62622,8 @@ function CandidateStarterGroups(props) {
   return TextfieldEntry({
     element,
     id: "candidateStarterGroups",
-    label: translate3("Candidate starter groups"),
-    description: translate3("Specify more than one group as a comma separated list."),
+    label: translate4("Candidate starter groups"),
+    description: translate4("Specify more than one group as a comma separated list."),
     getValue,
     setValue,
     debounce: debounce2
@@ -59288,7 +62633,7 @@ function CandidateStarterUsers(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const process2 = getProcess$3(element);
   const getValue = () => {
     return process2.get("camunda:candidateStarterUsers") || "";
@@ -59305,8 +62650,8 @@ function CandidateStarterUsers(props) {
   return TextfieldEntry({
     element,
     id: "candidateStarterUsers",
-    label: translate3("Candidate starter users"),
-    description: translate3("Specify more than one user as a comma separated list."),
+    label: translate4("Candidate starter users"),
+    description: translate4("Specify more than one user as a comma separated list."),
     getValue,
     setValue,
     debounce: debounce2
@@ -59353,7 +62698,7 @@ function ConditionType(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getConditionType(element);
   };
@@ -59371,18 +62716,18 @@ function ConditionType(props) {
   };
   const getOptions = () => [{
     value: "",
-    label: translate3("<none>")
+    label: translate4("<none>")
   }, {
     value: "script",
-    label: translate3("Script")
+    label: translate4("Script")
   }, {
     value: "expression",
-    label: translate3("Expression")
+    label: translate4("Expression")
   }];
   return u5(SelectEntry, {
     element,
     id: "conditionType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -59392,7 +62737,7 @@ function ConditionExpression(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const getValue = () => {
     return getConditionExpression(element).get("body");
   };
@@ -59405,7 +62750,7 @@ function ConditionExpression(props) {
   return u5(TextfieldEntry, {
     element,
     id: "conditionExpression",
-    label: translate3("Condition Expression"),
+    label: translate4("Condition Expression"),
     getValue,
     setValue,
     debounce: debounce2
@@ -59447,7 +62792,7 @@ function Language(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getConditionExpression(element).get("language");
@@ -59464,7 +62809,7 @@ function Language(props) {
   return u5(TextfieldEntry, {
     element,
     id: "conditionScriptLanguage",
-    label: translate3("Format"),
+    label: translate4("Format"),
     getValue,
     setValue,
     debounce: debounce2
@@ -59475,7 +62820,7 @@ function ScriptType(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getScriptType$1(element);
   };
@@ -59493,17 +62838,17 @@ function ScriptType(props) {
   const getOptions = () => {
     const options2 = [{
       value: "resource",
-      label: translate3("External resource")
+      label: translate4("External resource")
     }, {
       value: "script",
-      label: translate3("Inline script")
+      label: translate4("Inline script")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id: "conditionScriptType",
-    label: translate3("Script type"),
+    label: translate4("Script type"),
     getValue,
     setValue,
     getOptions
@@ -59514,7 +62859,7 @@ function Script$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getConditionExpression(element).get("body");
@@ -59531,7 +62876,7 @@ function Script$1(props) {
   return u5(TextAreaEntry, {
     element,
     id: "conditionScriptValue",
-    label: translate3("Script"),
+    label: translate4("Script"),
     getValue,
     setValue,
     debounce: debounce2,
@@ -59543,7 +62888,7 @@ function Resource$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getConditionExpression(element).get("camunda:resource");
@@ -59560,7 +62905,7 @@ function Resource$1(props) {
   return u5(TextfieldEntry, {
     element: true,
     id: "conditionScriptResource",
-    label: translate3("Resource"),
+    label: translate4("Resource"),
     getValue,
     setValue,
     debounce: debounce2
@@ -59590,7 +62935,7 @@ function VariableName2(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getConditionalEventDefinition(element).get("variableName");
@@ -59607,7 +62952,7 @@ function VariableName2(props) {
   return u5(TextfieldEntry, {
     element,
     id: "conditionVariableName",
-    label: translate3("Variable name"),
+    label: translate4("Variable name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -59618,7 +62963,7 @@ function VariableEvents(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return getConditionalEventDefinition(element).get("variableEvents");
@@ -59634,7 +62979,7 @@ function VariableEvents(props) {
   };
   const tooltip = u5("div", {
     children: [u5("p", {
-      children: translate3("Specify more than one variable change event as a comma separated list. Variable change events are:")
+      children: translate4("Specify more than one variable change event as a comma separated list. Variable change events are:")
     }), u5("ul", {
       children: [u5("li", {
         children: u5("code", {
@@ -59653,13 +62998,13 @@ function VariableEvents(props) {
       href: "https://docs.camunda.org/manual/latest/reference/bpmn20/custom-extensions/extension-attributes/#variableevents",
       target: "_blank",
       rel: "noopener",
-      children: translate3("Documentation: Variable events")
+      children: translate4("Documentation: Variable events")
     })]
   });
   return u5(TextfieldEntry, {
     element,
     id: "conditionVariableEvents",
-    label: translate3("Variable events"),
+    label: translate4("Variable events"),
     getValue,
     setValue,
     debounce: debounce2,
@@ -59776,7 +63121,7 @@ function Format(props) {
     script
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = script || getBusinessObject(element);
   const getValue = () => {
@@ -59794,7 +63139,7 @@ function Format(props) {
   return TextfieldEntry({
     element,
     id: idPrefix + "scriptFormat",
-    label: translate3("Format"),
+    label: translate4("Format"),
     getValue,
     setValue,
     debounce: debounce2
@@ -59807,7 +63152,7 @@ function Type$3(props) {
     script
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = script || getBusinessObject(element);
   const scriptProperty = getScriptProperty(businessObject);
   const getValue = () => {
@@ -59827,20 +63172,20 @@ function Type$3(props) {
   const getOptions = () => {
     const options2 = [{
       value: "",
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: "resource",
-      label: translate3("External resource")
+      label: translate4("External resource")
     }, {
       value: "script",
-      label: translate3("Inline script")
+      label: translate4("Inline script")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id: idPrefix + "scriptType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -59853,7 +63198,7 @@ function Script(props) {
     script
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = script || getBusinessObject(element);
   const scriptProperty = getScriptProperty(businessObject);
@@ -59872,7 +63217,7 @@ function Script(props) {
   return TextAreaEntry({
     element,
     id: idPrefix + "scriptValue",
-    label: translate3("Script"),
+    label: translate4("Script"),
     getValue,
     setValue,
     debounce: debounce2,
@@ -59886,7 +63231,7 @@ function Resource(props) {
     script
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = script || getBusinessObject(element);
   const getValue = () => {
@@ -59904,7 +63249,7 @@ function Resource(props) {
   return TextfieldEntry({
     element,
     id: idPrefix + "scriptResource",
-    label: translate3("Resource"),
+    label: translate4("Resource"),
     getValue,
     setValue,
     debounce: debounce2
@@ -60036,10 +63381,10 @@ function ListProp(props) {
   const {
     element,
     id: idPrefix,
-    index: index4,
+    index: index5,
     item
   } = props;
-  const id = `${idPrefix}-listItem-${index4}`;
+  const id = `${idPrefix}-listItem-${index5}`;
   return u5(ListItem2, {
     idPrefix: id,
     element,
@@ -60054,7 +63399,7 @@ function ListProps(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const list = parameter.get("definition");
   const items = list.get("items");
   function addItem() {
@@ -60076,17 +63421,12 @@ function ListProps(props) {
       }
     });
   }
-  function compareFn(item, anotherItem) {
-    const [value = "", anotherValue = ""] = [item.value, anotherItem.value];
-    return value === anotherValue ? 0 : value > anotherValue ? 1 : -1;
-  }
   return List2({
     element,
     autoFocusEntry: true,
-    compareFn,
     id: idPrefix + "-list",
     items,
-    label: translate3("List values"),
+    label: translate4("List values"),
     onAdd: addItem,
     onRemove: removeItem,
     component: ListProp
@@ -60099,11 +63439,11 @@ function ListItem2(props) {
     item
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const definitionLabels = {
-    "camunda:Map": translate3("Map"),
-    "camunda:List": translate3("List"),
-    "camunda:Script": translate3("Script")
+    "camunda:Map": translate4("Map"),
+    "camunda:List": translate4("List"),
+    "camunda:Script": translate4("Script")
   };
   const getValue = () => {
     if (isDefinitionType$1(item)) {
@@ -60159,12 +63499,12 @@ function MapProp(props) {
   const {
     element,
     id: idPrefix,
-    index: index4,
+    index: index5,
     item: entry,
     open: open3
   } = props;
-  const id = `${idPrefix}-mapEntry-${index4}`;
-  const translate3 = useService("translate");
+  const id = `${idPrefix}-mapEntry-${index5}`;
+  const translate4 = useService("translate");
   return u5(CollapsibleEntry, {
     id,
     element,
@@ -60173,7 +63513,7 @@ function MapProp(props) {
       entry,
       idPrefix: id
     }),
-    label: entry.get("key") || translate3("<empty>"),
+    label: entry.get("key") || translate4("<empty>"),
     open: open3
   });
 }
@@ -60185,7 +63525,8 @@ function MapProps(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
+  const id = idPrefix + "-map";
   const map4 = parameter.get("definition");
   const entries = map4.get("entries");
   function addEntry() {
@@ -60207,17 +63548,12 @@ function MapProps(props) {
       }
     });
   }
-  function compareFn(entry, anotherEntry) {
-    const [key = "", anotherKey = ""] = [entry.key, anotherEntry.key];
-    return key === anotherKey ? 0 : key > anotherKey ? 1 : -1;
-  }
   return List2({
     element,
-    autoFocusEntry: true,
-    compareFn,
+    autoFocusEntry: `[data-entry-id="${id}-mapEntry-${entries.length - 1}"] input`,
     id: idPrefix + "-map",
     items: entries,
-    label: translate3("Map entries"),
+    label: translate4("Map entries"),
     onAdd: addEntry,
     onRemove: removeEntry,
     component: MapProp
@@ -60251,7 +63587,7 @@ function MapKey(props) {
     idPrefix
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -60268,7 +63604,7 @@ function MapKey(props) {
   return TextfieldEntry({
     element: entry,
     id: idPrefix + "-key",
-    label: translate3("Key"),
+    label: translate4("Key"),
     getValue,
     setValue,
     debounce: debounce2
@@ -60281,13 +63617,13 @@ function MapValue(props) {
     idPrefix
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const definition = entry.get("definition");
   const definitionLabels = {
-    "camunda:Map": translate3("Map"),
-    "camunda:List": translate3("List"),
-    "camunda:Script": translate3("Script")
+    "camunda:Map": translate4("Map"),
+    "camunda:List": translate4("List"),
+    "camunda:Script": translate4("Script")
   };
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -60307,7 +63643,7 @@ function MapValue(props) {
   return TextfieldEntry({
     element: entry,
     id: idPrefix + "-value",
-    label: translate3("Value"),
+    label: translate4("Value"),
     getValue,
     setValue,
     disabled: isDefinitionType(definition),
@@ -60389,7 +63725,7 @@ function Name$2(props) {
     parameter
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -60406,7 +63742,7 @@ function Name$2(props) {
   return TextfieldEntry({
     element: parameter,
     id: idPrefix + "-name",
-    label: translate3(isInput4(parameter) ? "Local variable name" : "Process variable name"),
+    label: translate4(isInput4(parameter) ? "Local variable name" : "Process variable name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -60420,7 +63756,7 @@ function Type$2(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const createDefinitionElement = (type) => {
     return createElement(type, {}, parameter, bpmnFactory);
   };
@@ -60446,16 +63782,16 @@ function Type$2(props) {
   };
   const getOptions = () => {
     const options2 = [{
-      label: translate3("List"),
+      label: translate4("List"),
       value: "list"
     }, {
-      label: translate3("Map"),
+      label: translate4("Map"),
       value: "map"
     }, {
-      label: translate3("Script"),
+      label: translate4("Script"),
       value: "script"
     }, {
-      label: translate3("String or expression"),
+      label: translate4("String or expression"),
       value: "stringOrExpression"
     }];
     return options2;
@@ -60463,7 +63799,7 @@ function Type$2(props) {
   return SelectEntry({
     element: parameter,
     id: idPrefix + "-type",
-    label: translate3("Assignment type"),
+    label: translate4("Assignment type"),
     getValue,
     setValue,
     getOptions
@@ -60476,7 +63812,7 @@ function StringOrExpression(props) {
     parameter
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -60493,8 +63829,8 @@ function StringOrExpression(props) {
   return TextAreaEntry({
     element: parameter,
     id: idPrefix + "-stringOrExpression",
-    label: translate3("Value"),
-    description: translate3('Start typing "${}" to create an expression.'),
+    label: translate4("Value"),
+    description: translate4('Start typing "${}" to create an expression.'),
     getValue,
     setValue,
     rows: 1,
@@ -60590,8 +63926,8 @@ function ConnectorInputProps(props) {
   const connector = getConnector$1(element);
   const commandStack = injector.get("commandStack"), bpmnFactory = injector.get("bpmnFactory");
   const inputParameters = getInputParameters(connector) || [];
-  const items = inputParameters.map((parameter, index4) => {
-    const id = element.id + "-connector-inputParameter-" + index4;
+  const items = inputParameters.map((parameter, index5) => {
+    const id = element.id + "-connector-inputParameter-" + index5;
     return {
       id,
       label: parameter.get("name") || "",
@@ -60670,8 +64006,8 @@ function ConnectorOutputProps(props) {
   const connector = getConnector$1(element);
   const commandStack = injector.get("commandStack"), bpmnFactory = injector.get("bpmnFactory");
   const outputParameters = getOutputParameters(connector) || [];
-  const items = outputParameters.map((parameter, index4) => {
-    const id = element.id + "-connector-outputParameter-" + index4;
+  const items = outputParameters.map((parameter, index5) => {
+    const id = element.id + "-connector-outputParameter-" + index5;
     return {
       id,
       label: parameter.get("name") || "",
@@ -60775,7 +64111,7 @@ function ErrorMessage$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const error4 = getError(element);
   const getValue = () => {
@@ -60793,7 +64129,7 @@ function ErrorMessage$1(props) {
   return TextfieldEntry({
     element,
     id: "errorMessage",
-    label: translate3("Message"),
+    label: translate4("Message"),
     getValue,
     setValue,
     debounce: debounce2
@@ -60804,7 +64140,7 @@ function ErrorCodeVariable(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const errorEventDefinition = getErrorEventDefinition(element);
   const getValue = () => {
@@ -60822,8 +64158,8 @@ function ErrorCodeVariable(props) {
   return TextfieldEntry({
     element,
     id: "errorCodeVariable",
-    label: translate3("Code variable"),
-    description: translate3("Define the name of the variable that will contain the error code."),
+    label: translate4("Code variable"),
+    description: translate4("Define the name of the variable that will contain the error code."),
     getValue,
     setValue,
     debounce: debounce2
@@ -60834,7 +64170,7 @@ function ErrorMessageVariable(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const errorEventDefinition = getErrorEventDefinition(element);
   const getValue = () => {
@@ -60852,8 +64188,8 @@ function ErrorMessageVariable(props) {
   return TextfieldEntry({
     element,
     id: "errorMessageVariable",
-    label: translate3("Message variable"),
-    description: translate3("Define the name of the variable that will contain the error message."),
+    label: translate4("Message variable"),
+    description: translate4("Define the name of the variable that will contain the error message."),
     getValue,
     setValue,
     debounce: debounce2
@@ -60921,7 +64257,7 @@ function ErrorRef(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     const error4 = errorEventDefinition.get("errorRef");
@@ -60966,10 +64302,10 @@ function ErrorRef(props) {
   const getOptions = () => {
     let options2 = [{
       value: EMPTY_OPTION,
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: CREATE_NEW_OPTION,
-      label: translate3("Create new ...")
+      label: translate4("Create new ...")
     }];
     const errors = findRootElementsByType(getBusinessObject(element), "bpmn:Error");
     sortByName$1(errors).forEach((error4) => {
@@ -60983,7 +64319,7 @@ function ErrorRef(props) {
   return ReferenceSelectEntry({
     element,
     id: idPrefix + "-errorRef",
-    label: translate3("Global error reference"),
+    label: translate4("Global error reference"),
     autoFocusEntry: idPrefix + "-errorName",
     getValue,
     setValue,
@@ -60997,7 +64333,7 @@ function ErrorName(props) {
     idPrefix
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return error4.get("name");
@@ -61014,7 +64350,7 @@ function ErrorName(props) {
   return TextfieldEntry({
     element,
     id: idPrefix + "-errorName",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61027,7 +64363,7 @@ function ErrorCode(props) {
     idPrefix
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return error4.get("errorCode");
@@ -61044,7 +64380,7 @@ function ErrorCode(props) {
   return TextfieldEntry({
     element,
     id: idPrefix + "-errorCode",
-    label: translate3("Code"),
+    label: translate4("Code"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61057,7 +64393,7 @@ function ErrorMessage(props) {
     idPrefix
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return error4.get("errorMessage");
@@ -61074,7 +64410,7 @@ function ErrorMessage(props) {
   return TextfieldEntry({
     element,
     id: idPrefix + "-errorMessage",
-    label: translate3("Message"),
+    label: translate4("Message"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61087,7 +64423,7 @@ function Expression$1(props) {
     idPrefix
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -61104,14 +64440,14 @@ function Expression$1(props) {
   return TextfieldEntry({
     element: errorEventDefinition,
     id: idPrefix + "-expression",
-    label: translate3("Throw expression"),
+    label: translate4("Throw expression"),
     getValue,
     setValue,
     debounce: debounce2
   });
 }
 function sortByName$1(elements) {
-  return sortBy(elements, (e7) => (e7.name || "").toLowerCase());
+  return sortBy(elements, (e8) => (e8.name || "").toLowerCase());
 }
 function ErrorsProps({
   element,
@@ -61123,8 +64459,8 @@ function ErrorsProps({
   }
   const errorEventDefinitions = getExtensionElementsList(businessObject, "camunda:ErrorEventDefinition");
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = errorEventDefinitions.map((errorEventDefinition, index4) => {
-    const id = element.id + "-error-" + index4;
+  const items = errorEventDefinitions.map((errorEventDefinition, index5) => {
+    const id = element.id + "-error-" + index5;
     return {
       id,
       label: getErrorLabel(errorEventDefinition),
@@ -61147,8 +64483,7 @@ function ErrorsProps({
       bpmnFactory,
       commandStack,
       element
-    }),
-    shouldSort: false
+    })
   };
 }
 function removeFactory$6({
@@ -61205,7 +64540,7 @@ function EscalationCodeVariable(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const escalationEventDefinition = getEscalationEventDefinition(element);
   const getValue = () => {
@@ -61223,8 +64558,8 @@ function EscalationCodeVariable(props) {
   return TextfieldEntry({
     element,
     id: "escalationCodeVariable",
-    label: translate3("Code variable"),
-    description: translate3("Define the name of the variable that will contain the escalation code."),
+    label: translate4("Code variable"),
+    description: translate4("Define the name of the variable that will contain the escalation code."),
     getValue,
     setValue,
     debounce: debounce2
@@ -61251,7 +64586,7 @@ function ExternalTaskPriority(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   let businessObject;
   if (is(element, "bpmn:Participant")) {
     businessObject = getBusinessObject(element).get("processRef");
@@ -61275,7 +64610,7 @@ function ExternalTaskPriority(props) {
   return TextfieldEntry({
     element,
     id: "externalTaskPriority",
-    label: translate3("Priority"),
+    label: translate4("Priority"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61323,7 +64658,7 @@ function NameProperty(props) {
     element,
     field
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61339,7 +64674,7 @@ function NameProperty(props) {
   return TextfieldEntry({
     element: field,
     id: idPrefix + "-name",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61351,7 +64686,7 @@ function TypeProperty(props) {
     element,
     field
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), translate4 = useService("translate");
   const getValue = (field2) => {
     return determineType(field2);
   };
@@ -61367,17 +64702,17 @@ function TypeProperty(props) {
   const getOptions = (element2) => {
     const options2 = [{
       value: "string",
-      label: translate3("String")
+      label: translate4("String")
     }, {
       value: "expression",
-      label: translate3("Expression")
+      label: translate4("Expression")
     }];
     return options2;
   };
   return SelectEntry({
     element: field,
     id: idPrefix + "-type",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -61390,7 +64725,7 @@ function ValueProperty(props) {
     field
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     const type = determineType(field);
@@ -61408,7 +64743,7 @@ function ValueProperty(props) {
   return TextfieldEntry({
     element: field,
     id: idPrefix + "-value",
-    label: translate3("Value"),
+    label: translate4("Value"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61427,8 +64762,8 @@ function FieldInjectionProps({
   }
   const fieldInjections = getExtensionElementsList(businessObject, "camunda:Field");
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = fieldInjections.map((field, index4) => {
-    const id = element.id + "-fieldInjection-" + index4;
+  const items = fieldInjections.map((field, index5) => {
+    const id = element.id + "-fieldInjection-" + index5;
     return {
       id,
       label: getFieldLabel(field),
@@ -61512,7 +64847,7 @@ function Name$1(props) {
     element,
     constraint
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61528,7 +64863,7 @@ function Name$1(props) {
   return TextfieldEntry({
     element: constraint,
     id: idPrefix + "-name",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61540,7 +64875,7 @@ function Config(props) {
     element,
     constraint
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61556,7 +64891,7 @@ function Config(props) {
   return TextfieldEntry({
     element: constraint,
     id: idPrefix + "-config",
-    label: translate3("Config"),
+    label: translate4("Config"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61570,7 +64905,7 @@ function FormFieldProperty(props) {
   } = props;
   const entries = [{
     id: idPrefix + "-id",
-    component: Id$2,
+    component: Id$3,
     idPrefix,
     property,
     element
@@ -61583,13 +64918,13 @@ function FormFieldProperty(props) {
   }];
   return entries;
 }
-function Id$2(props) {
+function Id$3(props) {
   const {
     idPrefix,
     element,
     property
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61605,7 +64940,7 @@ function Id$2(props) {
   return TextfieldEntry({
     element: property,
     id: idPrefix + "-id",
-    label: translate3("ID"),
+    label: translate4("ID"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61617,7 +64952,7 @@ function Value$1(props) {
     element,
     property
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61633,7 +64968,7 @@ function Value$1(props) {
   return TextfieldEntry({
     element: property,
     id: idPrefix + "-value",
-    label: translate3("Value"),
+    label: translate4("Value"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61647,7 +64982,7 @@ function FormFieldValue(props) {
   } = props;
   const entries = [{
     id: idPrefix + "-id",
-    component: Id$1,
+    component: Id$2,
     idPrefix,
     value,
     element
@@ -61660,13 +64995,13 @@ function FormFieldValue(props) {
   }];
   return entries;
 }
-function Id$1(props) {
+function Id$2(props) {
   const {
     idPrefix,
     element,
     value
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const setValue = (val) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61682,7 +65017,7 @@ function Id$1(props) {
   return TextfieldEntry({
     element: value,
     id: idPrefix + "-id",
-    label: translate3("ID"),
+    label: translate4("ID"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61694,7 +65029,7 @@ function Name2(props) {
     element,
     value
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const setValue = (val) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61710,7 +65045,7 @@ function Name2(props) {
   return TextfieldEntry({
     element: value,
     id: idPrefix + "-name",
-    label: translate3("Name"),
+    label: translate4("Name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61725,7 +65060,7 @@ function FormField(props) {
   } = props;
   const entries = [{
     id: idPrefix + "-formFieldID",
-    component: Id,
+    component: Id$1,
     idPrefix,
     formField
   }, {
@@ -61774,14 +65109,14 @@ function FormField(props) {
   });
   return entries;
 }
-function Id(props) {
+function Id$1(props) {
   const {
     idPrefix,
     element,
     formField
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -61798,8 +65133,8 @@ function Id(props) {
   return TextfieldEntry({
     element: formField,
     id: idPrefix + "-formFieldID",
-    label: translate3("ID"),
-    description: translate3("Refers to the process variable name"),
+    label: translate4("ID"),
+    description: translate4("Refers to the process variable name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61812,7 +65147,7 @@ function Label(props) {
     formField
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -61829,7 +65164,7 @@ function Label(props) {
   return TextfieldEntry({
     element: formField,
     id: idPrefix + "-formFieldLabel",
-    label: translate3("Label"),
+    label: translate4("Label"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61842,7 +65177,7 @@ function Type$1(props) {
     formField
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
       element,
@@ -61858,27 +65193,27 @@ function Type$1(props) {
   };
   const getOptions = () => {
     const options2 = [{
-      label: translate3("boolean"),
+      label: translate4("boolean"),
       value: "boolean"
     }, {
-      label: translate3("date"),
+      label: translate4("date"),
       value: "date"
     }, {
-      label: translate3("enum"),
+      label: translate4("enum"),
       value: "enum"
     }, {
-      label: translate3("long"),
+      label: translate4("long"),
       value: "long"
     }, {
-      label: translate3("string"),
+      label: translate4("string"),
       value: "string"
     }, {
-      label: translate3("<custom type>"),
+      label: translate4("<custom type>"),
       value: CUSTOM_TYPE_VALUE
     }];
     if (formField.get("type") === void 0) {
       options2.unshift({
-        label: translate3("<none>"),
+        label: translate4("<none>"),
         value: ""
       });
     }
@@ -61887,7 +65222,7 @@ function Type$1(props) {
   return SelectEntry({
     element: formField,
     id: idPrefix + "-formFieldType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -61900,7 +65235,7 @@ function CustomType(props) {
     formField
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     const type = value || "";
@@ -61918,7 +65253,7 @@ function CustomType(props) {
   return TextfieldEntry({
     element: formField,
     id: idPrefix + "-formFieldCustomType",
-    label: translate3("Custom type"),
+    label: translate4("Custom type"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61931,7 +65266,7 @@ function DefaultValue(props) {
     formField
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -61948,7 +65283,7 @@ function DefaultValue(props) {
   return TextfieldEntry({
     element: formField,
     id: idPrefix + "-formFieldDefaultValue",
-    label: translate3("Default value"),
+    label: translate4("Default value"),
     getValue,
     setValue,
     debounce: debounce2
@@ -61958,12 +65293,12 @@ function Value(props) {
   const {
     element,
     id: idPrefix,
-    index: index4,
+    index: index5,
     item: value,
     open: open3
   } = props;
-  const translate3 = useService("translate");
-  const id = `${idPrefix}-value-${index4}`;
+  const translate4 = useService("translate");
+  const id = `${idPrefix}-value-${index5}`;
   return u5(CollapsibleEntry, {
     id,
     element,
@@ -61972,7 +65307,7 @@ function Value(props) {
       element,
       value
     }),
-    label: value.get("id") || translate3("<empty>"),
+    label: value.get("id") || translate4("<empty>"),
     open: open3
   });
 }
@@ -61985,7 +65320,7 @@ function ValueList(props) {
   const id = `${idPrefix}-formFieldValues`;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const values2 = formField.get("values") || [];
   function addValue() {
     const value = createElement("camunda:Value", {
@@ -62013,7 +65348,7 @@ function ValueList(props) {
     element,
     autoFocusEntry: `[data-entry-id="${id}-value-${values2.length - 1}"] input`,
     id,
-    label: translate3("Values"),
+    label: translate4("Values"),
     items: values2,
     component: Value,
     onAdd: addValue,
@@ -62024,12 +65359,12 @@ function Constraint(props) {
   const {
     element,
     id: idPrefix,
-    index: index4,
+    index: index5,
     item: constraint,
     open: open3
   } = props;
-  const translate3 = useService("translate");
-  const id = `${idPrefix}-constraint-${index4}`;
+  const translate4 = useService("translate");
+  const id = `${idPrefix}-constraint-${index5}`;
   return u5(CollapsibleEntry, {
     id,
     element,
@@ -62038,7 +65373,7 @@ function Constraint(props) {
       element,
       idPrefix: id
     }),
-    label: constraint.get("name") || translate3("<empty>"),
+    label: constraint.get("name") || translate4("<empty>"),
     open: open3
   });
 }
@@ -62051,7 +65386,7 @@ function ConstraintList(props) {
   const id = `${idPrefix}-formFieldConstraints`;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   let validation = formField.get("validation");
   const constraints = validation && validation.get("constraints") || [];
@@ -62099,7 +65434,7 @@ function ConstraintList(props) {
     element,
     autoFocusEntry: `[data-entry-id="${id}-constraint-${constraints.length - 1}"] input`,
     id,
-    label: translate3("Constraints"),
+    label: translate4("Constraints"),
     items: constraints,
     component: Constraint,
     onAdd: addConstraint,
@@ -62110,12 +65445,12 @@ function Property(props) {
   const {
     element,
     id: idPrefix,
-    index: index4,
+    index: index5,
     item: property,
     open: open3
   } = props;
-  const translate3 = useService("translate");
-  const id = `${idPrefix}-property-${index4}`;
+  const translate4 = useService("translate");
+  const id = `${idPrefix}-property-${index5}`;
   return u5(CollapsibleEntry, {
     id,
     element,
@@ -62124,7 +65459,7 @@ function Property(props) {
       idPrefix: id,
       property
     }),
-    label: property.get("id") || translate3("<empty>"),
+    label: property.get("id") || translate4("<empty>"),
     open: open3
   });
 }
@@ -62137,7 +65472,7 @@ function PropertiesList(props) {
   const id = `${idPrefix}-formFieldProperties`;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   let properties = formField.get("properties");
   const propertyEntries = properties && properties.get("values") || [];
@@ -62183,21 +65518,14 @@ function PropertiesList(props) {
   }
   return u5(List2, {
     element,
-    autoFocusEntry: true,
+    autoFocusEntry: `[data-entry-id="${id}-property-${propertyEntries.length - 1}"] input`,
     id,
-    compareFn: createAlphanumericCompare("id"),
-    label: translate3("Properties"),
+    label: translate4("Properties"),
     items: propertyEntries,
     component: Property,
     onAdd: addProperty,
     onRemove: removeProperty
   });
-}
-function createAlphanumericCompare(field) {
-  return function(entry, anotherEntry) {
-    const [key = "", anotherKey = ""] = [entry[field], anotherEntry[field]];
-    return key === anotherKey ? 0 : key > anotherKey ? 1 : -1;
-  };
 }
 function FormDataProps({
   element,
@@ -62208,8 +65536,8 @@ function FormDataProps({
   }
   const formFields = getFormFieldsList(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = formFields.map((formField, index4) => {
-    const id = element.id + "-formField-" + index4;
+  const items = formFields.map((formField, index5) => {
+    const id = element.id + "-formField-" + index5;
     return {
       id,
       label: formField.get("id") || "",
@@ -62232,8 +65560,7 @@ function FormDataProps({
       bpmnFactory,
       commandStack,
       element
-    }),
-    shouldSort: false
+    })
   };
 }
 function addFactory$3({
@@ -62312,7 +65639,7 @@ function FormType(props) {
   const {
     element
   } = props;
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const bpmnFactory = useService("bpmnFactory");
   const businessObject = getBusinessObject(element);
   const commandStack = useService("commandStack");
@@ -62387,22 +65714,22 @@ function FormType(props) {
   const getOptions = () => {
     return [{
       value: "",
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: "formRef",
-      label: translate3("Camunda Forms")
+      label: translate4("Camunda Forms")
     }, {
       value: "formKey",
-      label: translate3("Embedded or External Task Forms")
+      label: translate4("Embedded or External Task Forms")
     }, {
       value: "formData",
-      label: translate3("Generated Task Forms")
+      label: translate4("Generated Task Forms")
     }];
   };
   return SelectEntry({
     element,
     id: "formType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -62497,7 +65824,7 @@ function FormKey(props) {
   } = props;
   const debounce2 = useService("debounceInput");
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     return businessObject.get("camunda:formKey");
@@ -62510,7 +65837,7 @@ function FormKey(props) {
   return TextfieldEntry({
     element,
     id: "formKey",
-    label: translate3("Form key"),
+    label: translate4("Form key"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62522,7 +65849,7 @@ function FormRef(props) {
   } = props;
   const debounce2 = useService("debounceInput");
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     return businessObject.get("camunda:formRef");
@@ -62535,7 +65862,7 @@ function FormRef(props) {
   return TextfieldEntry({
     element,
     id: "formRef",
-    label: translate3("Form reference"),
+    label: translate4("Form reference"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62546,7 +65873,7 @@ function Binding$1(props) {
     element
   } = props;
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getFormRefBinding(element);
   };
@@ -62558,20 +65885,20 @@ function Binding$1(props) {
   const getOptions = () => {
     const options2 = [{
       value: "deployment",
-      label: translate3("deployment")
+      label: translate4("deployment")
     }, {
       value: "latest",
-      label: translate3("latest")
+      label: translate4("latest")
     }, {
       value: "version",
-      label: translate3("version")
+      label: translate4("version")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id: "formRefBinding",
-    label: translate3("Binding"),
+    label: translate4("Binding"),
     getValue,
     setValue,
     getOptions
@@ -62583,7 +65910,7 @@ function Version$1(props) {
   } = props;
   const debounce2 = useService("debounceInput");
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     return businessObject.get("camunda:formRefVersion");
@@ -62596,7 +65923,7 @@ function Version$1(props) {
   return TextfieldEntry({
     element,
     id: "formRefVersion",
-    label: translate3("Version"),
+    label: translate4("Version"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62621,7 +65948,7 @@ function HistoryTimeToLive(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const process2 = getProcess$2(element);
   const getValue = () => {
@@ -62639,7 +65966,7 @@ function HistoryTimeToLive(props) {
   return TextfieldEntry({
     element,
     id: "historyTimeToLive",
-    label: translate3("Time to live"),
+    label: translate4("Time to live"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62706,7 +66033,7 @@ function DecisionRef(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -62724,7 +66051,7 @@ function DecisionRef(props) {
   return TextfieldEntry({
     element,
     id: "decisionRef",
-    label: translate3("Decision reference"),
+    label: translate4("Decision reference"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62735,7 +66062,7 @@ function Binding(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getDecisionRefBinding(element);
   };
@@ -62755,23 +66082,23 @@ function Binding(props) {
   const getOptions = () => {
     const options2 = [{
       value: "deployment",
-      label: translate3("deployment")
+      label: translate4("deployment")
     }, {
       value: "latest",
-      label: translate3("latest")
+      label: translate4("latest")
     }, {
       value: "version",
-      label: translate3("version")
+      label: translate4("version")
     }, {
       value: "versionTag",
-      label: translate3("versionTag")
+      label: translate4("versionTag")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id: "decisionRefBinding",
-    label: translate3("Binding"),
+    label: translate4("Binding"),
     getValue,
     setValue,
     getOptions
@@ -62782,7 +66109,7 @@ function Version(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -62800,7 +66127,7 @@ function Version(props) {
   return TextfieldEntry({
     element,
     id: "decisionRefVersion",
-    label: translate3("Version"),
+    label: translate4("Version"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62811,7 +66138,7 @@ function VersionTag$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -62829,7 +66156,7 @@ function VersionTag$1(props) {
   return TextfieldEntry({
     element,
     id: "decisionRefVersionTag",
-    label: translate3("Version tag"),
+    label: translate4("Version tag"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62840,7 +66167,7 @@ function TenantId(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -62858,7 +66185,7 @@ function TenantId(props) {
   return TextfieldEntry({
     element,
     id: "decisionRefTenantId",
-    label: translate3("Tenant ID"),
+    label: translate4("Tenant ID"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62869,7 +66196,7 @@ function ResultVariable$2(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -62887,7 +66214,7 @@ function ResultVariable$2(props) {
   return TextfieldEntry({
     element,
     id: "decisionRefResultVariable",
-    label: translate3("Result variable"),
+    label: translate4("Result variable"),
     getValue,
     setValue,
     debounce: debounce2
@@ -62898,7 +66225,7 @@ function MapDecisionResult(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     return businessObject.get("camunda:mapDecisionResult") || "resultList";
@@ -62915,23 +66242,23 @@ function MapDecisionResult(props) {
   const getOptions = () => {
     const options2 = [{
       value: "collectEntries",
-      label: translate3("collectEntries (List<Object>)")
+      label: translate4("collectEntries (List<Object>)")
     }, {
       value: "resultList",
-      label: translate3("resultList (List<Map<String, Object>>)")
+      label: translate4("resultList (List<Map<String, Object>>)")
     }, {
       value: "singleEntry",
-      label: translate3("singleEntry (TypedValue)")
+      label: translate4("singleEntry (TypedValue)")
     }, {
       value: "singleResult",
-      label: translate3("singleResult (Map<String, Object>)")
+      label: translate4("singleResult (Map<String, Object>)")
     }];
     return options2;
   };
   return SelectEntry({
     element,
     id: "mapDecisionResult",
-    label: translate3("Map decision result"),
+    label: translate4("Map decision result"),
     getValue,
     setValue,
     getOptions
@@ -62982,7 +66309,7 @@ function ImplementationType(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return getImplementationType(element) || "";
   };
@@ -63066,33 +66393,33 @@ function ImplementationType(props) {
     const businessObject = getServiceTaskLikeBusinessObject(element);
     const options2 = [{
       value: "",
-      label: translate3(IMPLEMENTATION_TYPE_NONE_LABEL)
+      label: translate4(IMPLEMENTATION_TYPE_NONE_LABEL)
     }, {
       value: "class",
-      label: translate3(IMPLEMENTATION_TYPE_JAVA_LABEL)
+      label: translate4(IMPLEMENTATION_TYPE_JAVA_LABEL)
     }, {
       value: "expression",
-      label: translate3(IMPLEMENTATION_TYPE_EXPRESSION_LABEL)
+      label: translate4(IMPLEMENTATION_TYPE_EXPRESSION_LABEL)
     }, {
       value: "delegateExpression",
-      label: translate3(IMPLEMENTATION_TYPE_DELEGATE_LABEL)
+      label: translate4(IMPLEMENTATION_TYPE_DELEGATE_LABEL)
     }];
     if (isDmnCapable(businessObject)) {
       options2.push({
         value: "dmn",
-        label: translate3(IMPLEMENTATION_TYPE_DMN_LABEL)
+        label: translate4(IMPLEMENTATION_TYPE_DMN_LABEL)
       });
     }
     if (isExternalCapable(businessObject)) {
       options2.push({
         value: "external",
-        label: translate3(IMPLEMENTATION_TYPE_EXTERNAL_LABEL)
+        label: translate4(IMPLEMENTATION_TYPE_EXTERNAL_LABEL)
       });
     }
     if (isServiceTaskLike(businessObject)) {
       options2.push({
         value: "connector",
-        label: translate3(IMPLEMENTATION_TYPE_CONNECTOR_LABEL)
+        label: translate4(IMPLEMENTATION_TYPE_CONNECTOR_LABEL)
       });
     }
     return sortByPriority(options2);
@@ -63100,7 +66427,7 @@ function ImplementationType(props) {
   return SelectEntry({
     element,
     id: "implementationType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -63191,7 +66518,7 @@ function JavaClass(props) {
     id = "javaClass"
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return businessObject.get("camunda:class");
@@ -63208,7 +66535,7 @@ function JavaClass(props) {
   return TextfieldEntry({
     element,
     id,
-    label: translate3("Java class"),
+    label: translate4("Java class"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63221,7 +66548,7 @@ function Expression(props) {
     id = "expression"
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return businessObject.get("camunda:expression");
@@ -63238,7 +66565,7 @@ function Expression(props) {
   return TextfieldEntry({
     element,
     id,
-    label: translate3("Expression"),
+    label: translate4("Expression"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63249,7 +66576,7 @@ function ResultVariable$1(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getServiceTaskLikeBusinessObject(element);
   const getValue = () => {
@@ -63267,7 +66594,7 @@ function ResultVariable$1(props) {
   return TextfieldEntry({
     element,
     id: "expressionResultVariable",
-    label: translate3("Result variable"),
+    label: translate4("Result variable"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63280,7 +66607,7 @@ function DelegateExpression(props) {
     id = "delegateExpression"
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
     return businessObject.get("camunda:delegateExpression");
@@ -63297,7 +66624,7 @@ function DelegateExpression(props) {
   return TextfieldEntry({
     element,
     id,
-    label: translate3("Delegate expression"),
+    label: translate4("Delegate expression"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63308,7 +66635,7 @@ function Topic(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getServiceTaskLikeBusinessObject(element);
   const getValue = () => {
@@ -63326,7 +66653,7 @@ function Topic(props) {
   return TextfieldEntry({
     element,
     id: "externalTopic",
-    label: translate3("Topic"),
+    label: translate4("Topic"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63337,7 +66664,7 @@ function ConnectorId(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const connector = getConnector(element);
   const getValue = () => {
@@ -63355,7 +66682,7 @@ function ConnectorId(props) {
   return TextfieldEntry({
     element,
     id: "connectorId",
-    label: translate3("Connector ID"),
+    label: translate4("Connector ID"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63387,7 +66714,7 @@ function Initiator(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -63405,7 +66732,7 @@ function Initiator(props) {
   return TextfieldEntry({
     element,
     id: "initiator",
-    label: translate3("Initiator"),
+    label: translate4("Initiator"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63441,7 +66768,7 @@ function PropagateAll$1(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return isPropagateAll$1(element);
   };
@@ -63466,7 +66793,7 @@ function PropagateAll$1(props) {
   }
   return CheckboxEntry({
     id: "inMapping-propagation",
-    label: translate3("Propagate all variables"),
+    label: translate4("Propagate all variables"),
     getValue,
     setValue
   });
@@ -63476,7 +66803,7 @@ function Local$2(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const mapping = findRelevantInMappings(element)[0];
   const getValue = () => {
     return mapping.get("camunda:local");
@@ -63493,7 +66820,7 @@ function Local$2(props) {
   return CheckboxEntry({
     element,
     id: "inMapping-propagation-local",
-    label: translate3("Local"),
+    label: translate4("Local"),
     getValue,
     setValue
   });
@@ -63575,7 +66902,7 @@ function Type2(props) {
     mapping
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = (mapping2) => {
     return getInOutType(mapping2);
   };
@@ -63592,10 +66919,10 @@ function Type2(props) {
   };
   const getOptions = () => {
     const options2 = [{
-      label: translate3("Source"),
+      label: translate4("Source"),
       value: "source"
     }, {
-      label: translate3("Source expression"),
+      label: translate4("Source expression"),
       value: "sourceExpression"
     }];
     return options2;
@@ -63603,7 +66930,7 @@ function Type2(props) {
   return SelectEntry({
     element: mapping,
     id: idPrefix + "-type",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -63616,7 +66943,7 @@ function Source(props) {
     mapping
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -63633,7 +66960,7 @@ function Source(props) {
   return TextfieldEntry({
     element: mapping,
     id: idPrefix + "-source",
-    label: translate3("Source"),
+    label: translate4("Source"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63646,7 +66973,7 @@ function SourceExpression(props) {
     mapping
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -63663,7 +66990,7 @@ function SourceExpression(props) {
   return TextfieldEntry({
     element: mapping,
     id: idPrefix + "-sourceExpression",
-    label: translate3("Source expression"),
+    label: translate4("Source expression"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63676,7 +67003,7 @@ function Target(props) {
     mapping
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -63693,7 +67020,7 @@ function Target(props) {
   return TextfieldEntry({
     element: mapping,
     id: idPrefix + "-target",
-    label: translate3("Target"),
+    label: translate4("Target"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63706,7 +67033,7 @@ function Local$1(props) {
     mapping
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return mapping.get("camunda:local");
   };
@@ -63722,7 +67049,7 @@ function Local$1(props) {
   return CheckboxEntry({
     element,
     id: idPrefix + "-local",
-    label: translate3("Local"),
+    label: translate4("Local"),
     getValue,
     setValue
   });
@@ -63745,8 +67072,8 @@ function InMappingProps({
   }
   const variableMappings = getInMappings(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = variableMappings.map((mapping, index4) => {
-    const id = element.id + "-inMapping-" + index4;
+  const items = variableMappings.map((mapping, index5) => {
+    const id = element.id + "-inMapping-" + index5;
     return {
       id,
       label: mapping.get("target") || "",
@@ -63823,8 +67150,8 @@ function InputProps(props) {
   }
   const inputParameters = getInputParameters(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = inputParameters.map((parameter, index4) => {
-    const id = element.id + "-inputParameter-" + index4;
+  const items = inputParameters.map((parameter, index5) => {
+    const id = element.id + "-inputParameter-" + index5;
     return {
       id,
       label: parameter.get("name") || "",
@@ -63847,8 +67174,7 @@ function InputProps(props) {
   }
   return {
     items,
-    add: add3,
-    shouldSort: false
+    add: add3
   };
 }
 function removeFactory$2(props) {
@@ -63898,7 +67224,7 @@ function JobPriority(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const businessObject = is(element, "bpmn:Participant") ? getBusinessObject(element).get("processRef") : getBusinessObject(element);
   const getValue = () => {
     return businessObject.get("camunda:jobPriority");
@@ -63915,7 +67241,7 @@ function JobPriority(props) {
   return TextfieldEntry({
     element,
     id: "jobPriority",
-    label: translate3("Priority"),
+    label: translate4("Priority"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63925,7 +67251,7 @@ function RetryTimeCycle(props) {
   const {
     element
   } = props;
-  const bpmnFactory = useService("bpmnFactory"), commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const bpmnFactory = useService("bpmnFactory"), commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
     const failedJobRetryTimeCycle = getExtensionElementsList(businessObject, "camunda:FailedJobRetryTimeCycle")[0];
@@ -63978,7 +67304,7 @@ function RetryTimeCycle(props) {
   return TextfieldEntry({
     element,
     id: "retryTimeCycle",
-    label: translate3("Retry time cycle"),
+    label: translate4("Retry time cycle"),
     getValue,
     setValue,
     debounce: debounce2
@@ -64041,7 +67367,7 @@ function Collection(props) {
   } = props;
   const debounce2 = useService("debounceInput");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const loopCharacteristics = getLoopCharacteristics(element);
   const getValue = () => {
     return getCollection(element);
@@ -64058,7 +67384,7 @@ function Collection(props) {
   return TextfieldEntry({
     element,
     id: "collection",
-    label: translate3("Collection"),
+    label: translate4("Collection"),
     getValue,
     setValue,
     debounce: debounce2
@@ -64070,7 +67396,7 @@ function ElementVariable(props) {
   } = props;
   const debounce2 = useService("debounceInput");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const loopCharacteristics = getLoopCharacteristics(element);
   const getValue = () => {
     return getElementVariable(element);
@@ -64087,7 +67413,7 @@ function ElementVariable(props) {
   return TextfieldEntry({
     element,
     id: "elementVariable",
-    label: translate3("Element variable"),
+    label: translate4("Element variable"),
     getValue,
     setValue,
     debounce: debounce2
@@ -64098,7 +67424,7 @@ function MultiInstanceAsynchronousBefore(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const loopCharacteristics = getLoopCharacteristics(element);
   const getValue = () => {
     return isAsyncBefore(loopCharacteristics);
@@ -64117,7 +67443,7 @@ function MultiInstanceAsynchronousBefore(props) {
   return CheckboxEntry({
     element,
     id: "multiInstanceAsynchronousBefore",
-    label: translate3("Asynchronous before"),
+    label: translate4("Asynchronous before"),
     getValue,
     setValue
   });
@@ -64127,7 +67453,7 @@ function MultiInstanceAsynchronousAfter(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const loopCharacteristics = getLoopCharacteristics(element);
   const getValue = () => {
     return isAsyncAfter(loopCharacteristics);
@@ -64144,7 +67470,7 @@ function MultiInstanceAsynchronousAfter(props) {
   return CheckboxEntry({
     element,
     id: "multiInstanceAsynchronousAfter",
-    label: translate3("Asynchronous after"),
+    label: translate4("Asynchronous after"),
     getValue,
     setValue
   });
@@ -64153,7 +67479,7 @@ function MultiInstanceExclusive(props) {
   const {
     element
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), translate4 = useService("translate");
   const loopCharacteristics = getLoopCharacteristics(element);
   const getValue = () => {
     return isExclusive(loopCharacteristics);
@@ -64170,7 +67496,7 @@ function MultiInstanceExclusive(props) {
   return CheckboxEntry({
     element,
     id: "multiInstanceExclusive",
-    label: translate3("Exclusive"),
+    label: translate4("Exclusive"),
     getValue,
     setValue
   });
@@ -64179,7 +67505,7 @@ function MultiInstanceRetryTimeCycle(props) {
   const {
     element
   } = props;
-  const bpmnFactory = useService("bpmnFactory"), commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const bpmnFactory = useService("bpmnFactory"), commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const loopCharacteristics = getLoopCharacteristics(element);
   const getValue = () => {
     const failedJobRetryTimeCycle = getExtensionElementsList(loopCharacteristics, "camunda:FailedJobRetryTimeCycle")[0];
@@ -64232,7 +67558,7 @@ function MultiInstanceRetryTimeCycle(props) {
   return TextfieldEntry({
     element,
     id: "multiInstanceRetryTimeCycle",
-    label: translate3("Retry time cycle"),
+    label: translate4("Retry time cycle"),
     getValue,
     setValue,
     debounce: debounce2
@@ -64298,7 +67624,7 @@ function PropagateAll(props) {
   } = props;
   const commandStack = useService("commandStack");
   const bpmnFactory = useService("bpmnFactory");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const getValue = () => {
     return isPropagateAll(element);
   };
@@ -64323,7 +67649,7 @@ function PropagateAll(props) {
   }
   return CheckboxEntry({
     id: "outMapping-propagation",
-    label: translate3("Propagate all variables"),
+    label: translate4("Propagate all variables"),
     getValue,
     setValue
   });
@@ -64333,7 +67659,7 @@ function Local(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const mapping = findRelevantOutMappings(element)[0];
   const getValue = () => {
     return mapping.get("camunda:local");
@@ -64350,7 +67676,7 @@ function Local(props) {
   return CheckboxEntry({
     element,
     id: "outMapping-propagation-local",
-    label: translate3("Local"),
+    label: translate4("Local"),
     getValue,
     setValue
   });
@@ -64382,8 +67708,8 @@ function OutMappingProps({
   }
   const variableMappings = getOutMappings(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = variableMappings.map((mapping, index4) => {
-    const id = element.id + "-outMapping-" + index4;
+  const items = variableMappings.map((mapping, index5) => {
+    const id = element.id + "-outMapping-" + index5;
     return {
       id,
       label: mapping.get("target") || "",
@@ -64454,8 +67780,8 @@ function OutputProps({
   }
   const outputParameters = getOutputParameters(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
-  const items = outputParameters.map((parameter, index4) => {
-    const id = element.id + "-outputParameter-" + index4;
+  const items = outputParameters.map((parameter, index5) => {
+    const id = element.id + "-outputParameter-" + index5;
     return {
       id,
       label: parameter.get("name") || "",
@@ -64478,8 +67804,7 @@ function OutputProps({
       bpmnFactory,
       commandStack,
       element
-    }),
-    shouldSort: false
+    })
   };
 }
 function removeFactory({
@@ -64554,7 +67879,7 @@ function TimerEventDefinitionType(props) {
     timerEventDefinition,
     timerEventDefinitionType
   } = props;
-  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate3 = useService("translate");
+  const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate");
   const getValue = () => {
     return timerEventDefinitionType || "";
   };
@@ -64583,22 +67908,22 @@ function TimerEventDefinitionType(props) {
   const getOptions = (element2) => {
     return [{
       value: "",
-      label: translate3("<none>")
+      label: translate4("<none>")
     }, {
       value: "timeDate",
-      label: translate3("Date")
+      label: translate4("Date")
     }, {
       value: "timeDuration",
-      label: translate3("Duration")
+      label: translate4("Duration")
     }, {
       value: "timeCycle",
-      label: translate3("Cycle")
+      label: translate4("Cycle")
     }];
   };
   return SelectEntry({
     element,
     id: "timerEventDefinitionType",
-    label: translate3("Type"),
+    label: translate4("Type"),
     getValue,
     setValue,
     getOptions
@@ -64610,7 +67935,7 @@ function TimerEventDefinitionValue(props) {
     timerEventDefinition,
     timerEventDefinitionType
   } = props;
-  const commandStack = useService("commandStack"), translate3 = useService("translate"), debounce2 = useService("debounceInput");
+  const commandStack = useService("commandStack"), translate4 = useService("translate"), debounce2 = useService("debounceInput");
   const timerEventFormalExpression = timerEventDefinition.get(timerEventDefinitionType);
   const getValue = () => {
     return timerEventFormalExpression && timerEventFormalExpression.get("body");
@@ -64627,84 +67952,84 @@ function TimerEventDefinitionValue(props) {
   return TextfieldEntry({
     element,
     id: "timerEventDefinitionValue",
-    label: translate3("Value"),
+    label: translate4("Value"),
     getValue,
     setValue,
     debounce: debounce2,
-    tooltip: getTimerEventDefinitionValueDescription(timerEventDefinitionType, translate3)
+    tooltip: getTimerEventDefinitionValueDescription(timerEventDefinitionType, translate4)
   });
 }
-function getTimerEventDefinitionValueDescription(timerDefinitionType, translate3) {
+function getTimerEventDefinitionValueDescription(timerDefinitionType, translate4) {
   switch (timerDefinitionType) {
     case "timeDate":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A specific point in time defined as ISO 8601 combined date and time representation.")
+          children: translate4("A specific point in time defined as ISO 8601 combined date and time representation.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "2019-10-01T12:00:00Z"
-            }), " - ", translate3("UTC time")]
+            }), " - ", translate4("UTC time")]
           }), u5("li", {
             children: [u5("code", {
               children: "2019-10-02T08:09:40+02:00"
-            }), " - ", translate3("UTC plus 2 hours zone offset")]
+            }), " - ", translate4("UTC plus 2 hours zone offset")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-date",
           target: "_blank",
           rel: "noopener",
-          children: translate3("Documentation: Timer events")
+          children: translate4("Documentation: Timer events")
         })]
       });
     case "timeCycle":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A cycle defined as ISO 8601 repeating intervals format, or a cron expression.")
+          children: translate4("A cycle defined as ISO 8601 repeating intervals format, or a cron expression.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "R5/PT10S"
-            }), " - ", translate3("every 10 seconds, up to 5 times")]
+            }), " - ", translate4("every 10 seconds, up to 5 times")]
           }), u5("li", {
             children: [u5("code", {
               children: "R/P1D"
-            }), " - ", translate3("every day, infinitely")]
+            }), " - ", translate4("every day, infinitely")]
           }), u5("li", {
             children: [u5("code", {
               children: "0 0 9-17 * * MON-FRI"
-            }), " - ", translate3("every hour on the hour from 9-5 p.m. UTC Monday-Friday")]
+            }), " - ", translate4("every hour on the hour from 9-5 p.m. UTC Monday-Friday")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-cycle",
           target: "_blank",
           rel: "noopener",
-          children: translate3("Documentation: Timer events")
+          children: translate4("Documentation: Timer events")
         })]
       });
     case "timeDuration":
       return u5("div", {
         children: [u5("p", {
-          children: translate3("A time duration defined as ISO 8601 durations format.")
+          children: translate4("A time duration defined as ISO 8601 durations format.")
         }), u5("ul", {
           children: [u5("li", {
             children: [u5("code", {
               children: "PT15S"
-            }), " - ", translate3("15 seconds")]
+            }), " - ", translate4("15 seconds")]
           }), u5("li", {
             children: [u5("code", {
               children: "PT1H30M"
-            }), " - ", translate3("1 hour and 30 minutes")]
+            }), " - ", translate4("1 hour and 30 minutes")]
           }), u5("li", {
             children: [u5("code", {
               children: "P14D"
-            }), " - ", translate3("14 days")]
+            }), " - ", translate4("14 days")]
           })]
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-duration",
           target: "_blank",
           rel: "noopener",
-          children: translate3("Documentation: Timer events")
+          children: translate4("Documentation: Timer events")
         })]
       });
   }
@@ -64771,8 +68096,8 @@ function ExecutionListenerProps({
   const businessObject = getListenersContainer(element);
   const listeners = getExtensionElementsList(businessObject, "camunda:ExecutionListener");
   return {
-    items: listeners.map((listener, index4) => {
-      const id = `${element.id}-executionListener-${index4}`;
+    items: listeners.map((listener, index5) => {
+      const id = `${element.id}-executionListener-${index5}`;
       return {
         id,
         label: getListenerLabel(listener),
@@ -64781,6 +68106,7 @@ function ExecutionListenerProps({
           element,
           listener
         }),
+        autoFocusEntry: id + "-javaClass",
         remove: removeListenerFactory({
           element,
           listener,
@@ -64830,8 +68156,8 @@ function TaskListenerProps({
   const businessObject = getListenersContainer(element);
   const listeners = getExtensionElementsList(businessObject, "camunda:TaskListener");
   return {
-    items: listeners.map((listener, index4) => {
-      const id = `${element.id}-taskListener-${index4}`;
+    items: listeners.map((listener, index5) => {
+      const id = `${element.id}-taskListener-${index5}`;
       return {
         id,
         label: getListenerLabel(listener),
@@ -64840,6 +68166,7 @@ function TaskListenerProps({
           element,
           listener
         }),
+        autoFocusEntry: id + "-listenerId",
         remove: removeListenerFactory({
           element,
           listener,
@@ -64901,7 +68228,7 @@ function EventType({
   element,
   listener
 }) {
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
   function getValue() {
@@ -64919,41 +68246,41 @@ function EventType({
     if (is(listener, "camunda:TaskListener")) {
       return [{
         value: "create",
-        label: translate3("create")
+        label: translate4("create")
       }, {
         value: "assignment",
-        label: translate3("assignment")
+        label: translate4("assignment")
       }, {
         value: "complete",
-        label: translate3("complete")
+        label: translate4("complete")
       }, {
         value: "delete",
-        label: translate3("delete")
+        label: translate4("delete")
       }, {
         value: "update",
-        label: translate3("update")
+        label: translate4("update")
       }, {
         value: "timeout",
-        label: translate3("timeout")
+        label: translate4("timeout")
       }];
     }
     if (is(element, "bpmn:SequenceFlow")) {
       return [{
         value: "take",
-        label: translate3("take")
+        label: translate4("take")
       }];
     }
     return [{
       value: "start",
-      label: translate3("start")
+      label: translate4("start")
     }, {
       value: "end",
-      label: translate3("end")
+      label: translate4("end")
     }];
   }
   return u5(SelectEntry, {
     id,
-    label: translate3("Event type"),
+    label: translate4("Event type"),
     getValue,
     setValue,
     getOptions
@@ -64964,13 +68291,13 @@ function ListenerId({
   element,
   listener
 }) {
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const commandStack = useService("commandStack");
   let options2 = {
     element,
     id,
-    label: translate3("Listener ID"),
+    label: translate4("Listener ID"),
     debounce: debounce2,
     isEdited,
     setValue: (value) => {
@@ -64994,7 +68321,7 @@ function ListenerType({
   listener
 }) {
   const modeling = useService("modeling");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const bpmnFactory = useService("bpmnFactory");
   function getValue() {
     return getListenerType(listener);
@@ -65004,11 +68331,11 @@ function ListenerType({
     modeling.updateModdleProperties(element, listener, properties);
   }
   function getOptions() {
-    return getListenerTypeOptions(translate3);
+    return getListenerTypeOptions(translate4);
   }
   return u5(SelectEntry, {
     id,
-    label: translate3("Listener type"),
+    label: translate4("Listener type"),
     getValue,
     setValue,
     getOptions
@@ -65069,11 +68396,11 @@ function Field(props) {
   const {
     element,
     id: idPrefix,
-    index: index4,
+    index: index5,
     item: field,
     open: open3
   } = props;
-  const fieldId = `${idPrefix}-field-${index4}`;
+  const fieldId = `${idPrefix}-field-${index5}`;
   return u5(CollapsibleEntry, {
     id: fieldId,
     element,
@@ -65094,7 +68421,7 @@ function Fields(props) {
   } = props;
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const fields = listener.get("fields");
   function addField() {
     const field = createElement("camunda:Field", {}, listener, bpmnFactory);
@@ -65118,13 +68445,12 @@ function Fields(props) {
   return u5(List2, {
     id,
     element,
-    label: translate3("Field injection"),
+    label: translate4("Field injection"),
     items: fields,
     component: Field,
     onAdd: addField,
     onRemove: removeField,
-    compareFn: compareName,
-    autoFocusEntry: true
+    autoFocusEntry: `[data-entry-id="${id}-field-${fields.length - 1}"] input`
   });
 }
 function addListenerFactory({
@@ -65155,23 +68481,22 @@ function addExecutionListenerFactory(props) {
     listenerGroup: "camunda:ExecutionListener"
   });
 }
-function getListenerLabel(listener, translate3 = (value) => value) {
+function getListenerLabel(listener, translate4 = (value) => value) {
   const event3 = listener.get("event");
   const implementationType = getListenerType(listener);
-  return `${translate3(EVENT_TO_LABEL[event3])}: ${translate3(IMPLEMENTATION_TYPE_TO_LABEL[implementationType])}`;
+  return `${translate4(EVENT_TO_LABEL[event3])}: ${translate4(IMPLEMENTATION_TYPE_TO_LABEL[implementationType])}`;
 }
-function getListenerTypeOptions(translate3) {
+function getListenerTypeOptions(translate4) {
   return Object.entries(IMPLEMENTATION_TYPE_TO_LABEL).map(([value, label]) => ({
     value,
-    label: translate3(label)
+    label: translate4(label)
   }));
 }
 function getListenerType(listener) {
   return getImplementationType(listener);
 }
 function getDefaultEvent(element, listenerGroup) {
-  if (listenerGroup === "camunda:TaskListener")
-    return "create";
+  if (listenerGroup === "camunda:TaskListener") return "create";
   return is(element, "bpmn:SequenceFlow") ? "take" : "start";
 }
 function getDefaultImplementationProperties(type, bpmnFactory) {
@@ -65216,10 +68541,6 @@ function getDefaultEventTypeProperties(type, bpmnFactory) {
 function getPrefixedId(prefix4, id) {
   return `${prefix4}-${id}`;
 }
-function compareName(field, anotherField) {
-  const [name2 = "", anotherName = ""] = [field.name, anotherField.name];
-  return name2 === anotherName ? 0 : name2 > anotherName ? 1 : -1;
-}
 function getListenersContainer(element) {
   const businessObject = getBusinessObject(element);
   return businessObject.get("processRef") || businessObject;
@@ -65249,8 +68570,8 @@ function ProcessVariablesEntry(props) {
   } else {
     variableItems = variables2;
   }
-  const items = variableItems.map((variable, index4) => {
-    const id = element.id + "-variable-" + index4;
+  const items = variableItems.map((variable, index5) => {
+    const id = element.id + "-variable-" + index5;
     return {
       id,
       label: variable.name,
@@ -65263,8 +68584,7 @@ function ProcessVariablesEntry(props) {
   });
   return u5(ListGroup, {
     ...props,
-    items,
-    shouldSort: false
+    items
   });
 }
 function ProcessVariablesProps(props) {
@@ -65275,8 +68595,7 @@ function ProcessVariablesProps(props) {
     return null;
   }
   return {
-    component: ProcessVariablesEntry,
-    shouldSort: false
+    component: ProcessVariablesEntry
   };
 }
 function ProcessVariableItem(props) {
@@ -65307,7 +68626,7 @@ function Scope(props) {
     idPrefix,
     variable
   } = props;
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const id = idPrefix + "-scope";
   return u5("div", {
     "data-entry-id": id,
@@ -65315,7 +68634,7 @@ function Scope(props) {
     children: [u5("b", {
       style: "font-weight: bold",
       class: "bio-properties-panel-label",
-      children: translate3("Scope")
+      children: translate4("Scope")
     }), u5("label", {
       id: prefixId2(id),
       class: "bio-properties-panel-label",
@@ -65328,7 +68647,7 @@ function CreatedIn(props) {
     idPrefix,
     variable
   } = props;
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const id = idPrefix + "-createdIn";
   const origin = variable.origin.join(", ");
   return u5("div", {
@@ -65337,7 +68656,7 @@ function CreatedIn(props) {
     children: [u5("b", {
       style: "font-weight: bold",
       class: "bio-properties-panel-label",
-      children: translate3("Created in")
+      children: translate4("Created in")
     }), u5("label", {
       id: prefixId2(id),
       class: "bio-properties-panel-label",
@@ -65421,7 +68740,7 @@ function ResultVariable(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -65439,7 +68758,7 @@ function ResultVariable(props) {
   return TextfieldEntry({
     element,
     id: "scriptResultVariable",
-    label: translate3("Result variable"),
+    label: translate4("Result variable"),
     getValue,
     setValue,
     debounce: debounce2
@@ -65467,7 +68786,7 @@ function Startable(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const process2 = getProcess$1(element);
   const getValue = () => {
     return process2.get("camunda:isStartableInTasklist");
@@ -65484,7 +68803,7 @@ function Startable(props) {
   return CheckboxEntry({
     element,
     id: "isStartableInTasklist",
-    label: translate3("Startable"),
+    label: translate4("Startable"),
     getValue,
     setValue
   });
@@ -65530,7 +68849,7 @@ function Assignee(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -65548,7 +68867,7 @@ function Assignee(props) {
   return TextfieldEntry({
     element,
     id: "assignee",
-    label: translate3("Assignee"),
+    label: translate4("Assignee"),
     getValue,
     setValue,
     debounce: debounce2
@@ -65559,7 +68878,7 @@ function CandidateUsers(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -65577,7 +68896,7 @@ function CandidateUsers(props) {
   return TextfieldEntry({
     element,
     id: "candidateUsers",
-    label: translate3("Candidate users"),
+    label: translate4("Candidate users"),
     getValue,
     setValue,
     debounce: debounce2
@@ -65588,7 +68907,7 @@ function CandidateGroups(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -65606,7 +68925,7 @@ function CandidateGroups(props) {
   return TextfieldEntry({
     element,
     id: "candidateGroups",
-    label: translate3("Candidate groups"),
+    label: translate4("Candidate groups"),
     getValue,
     setValue,
     debounce: debounce2
@@ -65617,7 +68936,7 @@ function DueDate(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -65635,8 +68954,8 @@ function DueDate(props) {
   return TextfieldEntry({
     element,
     id: "dueDate",
-    label: translate3("Due date"),
-    description: translate3("The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00)."),
+    label: translate4("Due date"),
+    description: translate4("The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00)."),
     getValue,
     setValue,
     debounce: debounce2
@@ -65647,7 +68966,7 @@ function FollowUpDate(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -65665,8 +68984,8 @@ function FollowUpDate(props) {
   return TextfieldEntry({
     element,
     id: "followUpDate",
-    label: translate3("Follow up date"),
-    description: translate3("The follow up date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00)."),
+    label: translate4("Follow up date"),
+    description: translate4("The follow up date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00)."),
     getValue,
     setValue,
     debounce: debounce2
@@ -65677,7 +68996,7 @@ function Priority(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
@@ -65695,7 +69014,7 @@ function Priority(props) {
   return TextfieldEntry({
     element,
     id: "priority",
-    label: translate3("Priority"),
+    label: translate4("Priority"),
     getValue,
     setValue,
     debounce: debounce2
@@ -65720,7 +69039,7 @@ function VersionTag(props) {
     element
   } = props;
   const commandStack = useService("commandStack");
-  const translate3 = useService("translate");
+  const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const process2 = getProcess(element);
   const getValue = () => {
@@ -65738,7 +69057,7 @@ function VersionTag(props) {
   return TextfieldEntry({
     element,
     id: "versionTag",
-    label: translate3("Version tag"),
+    label: translate4("Version tag"),
     getValue,
     setValue,
     debounce: debounce2
@@ -65746,6 +69065,101 @@ function VersionTag(props) {
 }
 function getProcess(element) {
   return is(element, "bpmn:Process") ? getBusinessObject(element) : getBusinessObject(element).get("processRef");
+}
+function IdProps() {
+  return [{
+    id: "id",
+    component: Id,
+    isEdited
+  }];
+}
+function Id(props) {
+  const {
+    element
+  } = props;
+  const modeling = useService("modeling");
+  const debounce2 = useService("debounceInput");
+  const translate4 = useService("translate");
+  const setValue = (value, error4) => {
+    if (error4) {
+      return;
+    }
+    modeling.updateProperties(element, {
+      id: value
+    });
+  };
+  const getValue = T3((element2) => {
+    return getBusinessObject(element2).id;
+  }, [element]);
+  const validate = T3((value) => {
+    const businessObject = getBusinessObject(element);
+    return isIdValid(businessObject, value, translate4);
+  }, [element, translate4]);
+  const description = is(element, "bpmn:Process") ? translate4("This maps to the process definition key.") : null;
+  return TextfieldEntry({
+    element,
+    id: "id",
+    label: translate4(is(element, "bpmn:Participant") ? "Participant ID" : "ID"),
+    getValue,
+    setValue,
+    debounce: debounce2,
+    validate,
+    description
+  });
+}
+function ProcessProps(props) {
+  const {
+    element
+  } = props;
+  if (!hasProcessRef(element)) {
+    return [];
+  }
+  return [{
+    id: "processId",
+    component: ProcessId,
+    isEdited
+  }];
+}
+function ProcessId(props) {
+  const {
+    element
+  } = props;
+  const commandStack = useService("commandStack");
+  const translate4 = useService("translate");
+  const debounce2 = useService("debounceInput");
+  const process2 = element.businessObject.get("processRef");
+  const getValue = () => {
+    return process2.get("id");
+  };
+  const setValue = (value, error4) => {
+    if (error4) {
+      return;
+    }
+    commandStack.execute("element.updateModdleProperties", {
+      element,
+      moddleElement: process2,
+      properties: {
+        id: value
+      }
+    });
+  };
+  const validate = T3((value) => {
+    return isIdValid(process2, value, translate4);
+  }, [process2, translate4]);
+  const description = is(element, "bpmn:Participant") ? translate4("This maps to the process definition key.") : null;
+  return TextfieldEntry({
+    element,
+    id: "processId",
+    label: translate4("Process ID"),
+    getValue,
+    setValue,
+    debounce: debounce2,
+    validate,
+    description
+  });
+}
+function hasProcessRef(element) {
+  return is(element, "bpmn:Participant") && element.businessObject.get("processRef");
 }
 var LOW_PRIORITY28 = 500;
 var CAMUNDA_PLATFORM_GROUPS = [HistoryCleanupGroup, TasklistGroup, CandidateStarterGroup, ImplementationGroup, ExternalTaskGroup, ProcessVariablesGroup, ErrorsGroup, UserAssignmentGroup, FormGroup, FormDataGroup, TaskListenerGroup, StartInitiatorGroup, ScriptGroup, ConditionGroup, CallActivityGroup, AsynchronousContinuationsGroup, JobExecutionGroup, InMappingPropagationGroup, InMappingGroup, InputGroup, ConnectorInputGroup, OutMappingPropagationGroup, OutMappingGroup, OutputGroup, ConnectorOutputGroup, ExecutionListenerGroup, ExtensionPropertiesGroup, FieldInjectionGroup, BusinessKeyGroup];
@@ -65787,6 +69201,14 @@ function updateGeneralGroup(groups, element) {
   const {
     entries
   } = generalGroup;
+  const idIndex = findIndex(entries, (entry) => entry.id === "id");
+  entries.splice(idIndex, 1, ...IdProps());
+  const processIdIndex = findIndex(entries, (entry) => entry.id === "processId");
+  if (processIdIndex && processIdIndex >= 0) {
+    entries.splice(processIdIndex, 1, ...ProcessProps({
+      element
+    }));
+  }
   const executableEntry = findIndex(entries, (entry) => entry.id === "isExecutable");
   const insertIndex = executableEntry >= 0 ? executableEntry : entries.length;
   entries.splice(insertIndex, 0, ...VersionTagProps({
@@ -65842,9 +69264,9 @@ function updateTimerGroup(groups, element) {
   })];
 }
 function ImplementationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Implementation"),
+    label: translate4("Implementation"),
     id: "CamundaPlatform__Implementation",
     component: Group,
     entries: [...ImplementationProps({
@@ -65857,9 +69279,9 @@ function ImplementationGroup(element, injector) {
   return null;
 }
 function ErrorsGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Errors"),
+    label: translate4("Errors"),
     id: "CamundaPlatform__Errors",
     component: ListGroup,
     ...ErrorsProps({
@@ -65873,9 +69295,9 @@ function ErrorsGroup(element, injector) {
   return null;
 }
 function UserAssignmentGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("User assignment"),
+    label: translate4("User assignment"),
     id: "CamundaPlatform__UserAssignment",
     component: Group,
     entries: [...UserAssignmentProps({
@@ -65888,9 +69310,9 @@ function UserAssignmentGroup(element, injector) {
   return null;
 }
 function ScriptGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Script"),
+    label: translate4("Script"),
     id: "CamundaPlatform__Script",
     component: Group,
     entries: [...ScriptTaskProps({
@@ -65903,9 +69325,9 @@ function ScriptGroup(element, injector) {
   return null;
 }
 function CallActivityGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Called element"),
+    label: translate4("Called element"),
     id: "CamundaPlatform__CallActivity",
     component: Group,
     entries: [...CallActivityProps({
@@ -65918,9 +69340,9 @@ function CallActivityGroup(element, injector) {
   return null;
 }
 function ConditionGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Condition"),
+    label: translate4("Condition"),
     id: "CamundaPlatform__Condition",
     component: Group,
     entries: [...ConditionProps({
@@ -65933,9 +69355,9 @@ function ConditionGroup(element, injector) {
   return null;
 }
 function StartInitiatorGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Start initiator"),
+    label: translate4("Start initiator"),
     id: "CamundaPlatform__StartInitiator",
     component: Group,
     entries: [...InitiatorProps({
@@ -65948,9 +69370,9 @@ function StartInitiatorGroup(element, injector) {
   return null;
 }
 function ExternalTaskGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("External task"),
+    label: translate4("External task"),
     id: "CamundaPlatform__ExternalTask",
     component: Group,
     entries: [...ExternalTaskPriorityProps({
@@ -65963,9 +69385,9 @@ function ExternalTaskGroup(element, injector) {
   return null;
 }
 function AsynchronousContinuationsGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Asynchronous continuations"),
+    label: translate4("Asynchronous continuations"),
     id: "CamundaPlatform__AsynchronousContinuations",
     component: Group,
     entries: [...AsynchronousContinuationsProps({
@@ -65978,9 +69400,9 @@ function AsynchronousContinuationsGroup(element, injector) {
   return null;
 }
 function JobExecutionGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Job execution"),
+    label: translate4("Job execution"),
     id: "CamundaPlatform__JobExecution",
     component: Group,
     entries: [...JobExecutionProps({
@@ -65993,9 +69415,9 @@ function JobExecutionGroup(element, injector) {
   return null;
 }
 function CandidateStarterGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Candidate starter"),
+    label: translate4("Candidate starter"),
     id: "CamundaPlatform__CandidateStarter",
     component: Group,
     entries: [...CandidateStarterProps({
@@ -66008,9 +69430,9 @@ function CandidateStarterGroup(element, injector) {
   return null;
 }
 function FieldInjectionGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Field injections"),
+    label: translate4("Field injections"),
     id: "CamundaPlatform__FieldInjection",
     component: ListGroup,
     ...FieldInjectionProps({
@@ -66024,9 +69446,9 @@ function FieldInjectionGroup(element, injector) {
   return null;
 }
 function HistoryCleanupGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("History cleanup"),
+    label: translate4("History cleanup"),
     id: "CamundaPlatform__HistoryCleanup",
     component: Group,
     entries: [...HistoryCleanupProps({
@@ -66039,9 +69461,9 @@ function HistoryCleanupGroup(element, injector) {
   return null;
 }
 function TasklistGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Tasklist"),
+    label: translate4("Tasklist"),
     id: "CamundaPlatform__Tasklist",
     component: Group,
     entries: [...TasklistProps({
@@ -66054,9 +69476,9 @@ function TasklistGroup(element, injector) {
   return null;
 }
 function InMappingGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("In mappings"),
+    label: translate4("In mappings"),
     id: "CamundaPlatform__InMapping",
     component: ListGroup,
     ...InMappingProps({
@@ -66070,9 +69492,9 @@ function InMappingGroup(element, injector) {
   return null;
 }
 function InMappingPropagationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("In mapping propagation"),
+    label: translate4("In mapping propagation"),
     id: "CamundaPlatform__InMappingPropagation",
     component: Group,
     entries: [...InMappingPropagationProps({
@@ -66085,9 +69507,9 @@ function InMappingPropagationGroup(element, injector) {
   return null;
 }
 function OutMappingGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Out mappings"),
+    label: translate4("Out mappings"),
     id: "CamundaPlatform__OutMapping",
     component: ListGroup,
     ...OutMappingProps({
@@ -66101,9 +69523,9 @@ function OutMappingGroup(element, injector) {
   return null;
 }
 function OutMappingPropagationGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Out mapping propagation"),
+    label: translate4("Out mapping propagation"),
     id: "CamundaPlatform__OutMappingPropagation",
     component: Group,
     entries: [...OutMappingPropagationProps({
@@ -66116,7 +69538,7 @@ function OutMappingPropagationGroup(element, injector) {
   return null;
 }
 function ProcessVariablesGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const variableProps = ProcessVariablesProps({
     element,
     injector
@@ -66125,16 +69547,16 @@ function ProcessVariablesGroup(element, injector) {
     return null;
   }
   const group = {
-    label: translate3("Process variables"),
+    label: translate4("Process variables"),
     id: "CamundaPlatform__ProcessVariables",
     ...variableProps
   };
   return group;
 }
 function FormDataGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Form fields"),
+    label: translate4("Form fields"),
     id: "CamundaPlatform__FormData",
     component: ListGroup,
     ...FormDataProps({
@@ -66148,9 +69570,9 @@ function FormDataGroup(element, injector) {
   return null;
 }
 function BusinessKeyGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Business key"),
+    label: translate4("Business key"),
     id: "CamundaPlatform__BusinessKey",
     component: Group,
     entries: [...BusinessKeyProps$1({
@@ -66163,9 +69585,9 @@ function BusinessKeyGroup(element, injector) {
   return null;
 }
 function FormGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Forms"),
+    label: translate4("Forms"),
     id: "CamundaPlatform__Form",
     component: Group,
     entries: [...FormProps({
@@ -66178,9 +69600,9 @@ function FormGroup(element, injector) {
   return null;
 }
 function ExecutionListenerGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Execution listeners"),
+    label: translate4("Execution listeners"),
     id: "CamundaPlatform__ExecutionListener",
     component: ListGroup,
     ...ExecutionListenerProps({
@@ -66194,9 +69616,9 @@ function ExecutionListenerGroup(element, injector) {
   return null;
 }
 function TaskListenerGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Task listeners"),
+    label: translate4("Task listeners"),
     id: "CamundaPlatform__TaskListener",
     component: ListGroup,
     ...TaskListenerProps({
@@ -66210,9 +69632,9 @@ function TaskListenerGroup(element, injector) {
   return null;
 }
 function InputGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Inputs"),
+    label: translate4("Inputs"),
     id: "CamundaPlatform__Input",
     component: ListGroup,
     ...InputProps({
@@ -66226,9 +69648,9 @@ function InputGroup(element, injector) {
   return null;
 }
 function OutputGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Outputs"),
+    label: translate4("Outputs"),
     id: "CamundaPlatform__Output",
     component: ListGroup,
     ...OutputProps({
@@ -66242,9 +69664,9 @@ function OutputGroup(element, injector) {
   return null;
 }
 function ConnectorInputGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Connector inputs"),
+    label: translate4("Connector inputs"),
     id: "CamundaPlatform__ConnectorInput",
     component: ListGroup,
     ...ConnectorInputProps({
@@ -66258,9 +69680,9 @@ function ConnectorInputGroup(element, injector) {
   return null;
 }
 function ConnectorOutputGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Connector outputs"),
+    label: translate4("Connector outputs"),
     id: "CamundaPlatform__ConnectorOutput",
     component: ListGroup,
     ...ConnectorOutputProps({
@@ -66274,9 +69696,9 @@ function ConnectorOutputGroup(element, injector) {
   return null;
 }
 function ExtensionPropertiesGroup(element, injector) {
-  const translate3 = injector.get("translate");
+  const translate4 = injector.get("translate");
   const group = {
-    label: translate3("Extension properties"),
+    label: translate4("Extension properties"),
     id: "CamundaPlatform__ExtensionProperties",
     component: ListGroup,
     ...ExtensionPropertiesProps({
@@ -66670,10 +70092,10 @@ function isSequenceFlow2(element) {
   return is(element, "bpmn:SequenceFlow");
 }
 function isLinkCatch(element) {
-  return isCatchEvent(element) && isTypedEvent2(element, "bpmn:LinkEventDefinition");
+  return isCatchEvent(element) && isTypedEvent3(element, "bpmn:LinkEventDefinition");
 }
 function isCompensationEvent(element) {
-  return isCatchEvent(element) && isTypedEvent2(element, "bpmn:CompensateEventDefinition");
+  return isCatchEvent(element) && isTypedEvent3(element, "bpmn:CompensateEventDefinition");
 }
 function isCompensationActivity(element) {
   return is(element, "bpmn:Activity") && element.businessObject.isForCompensation;
@@ -66685,7 +70107,7 @@ function isBoundaryEvent2(element) {
   return is(element, "bpmn:BoundaryEvent") && !isLabel2(element);
 }
 function isNoneStartEvent(element) {
-  return isStartEvent(element) && !isTypedEvent2(element);
+  return isStartEvent(element) && !isTypedEvent3(element);
 }
 function isImplicitStartEvent(element) {
   if (isLabel2(element)) {
@@ -66710,7 +70132,7 @@ function isImplicitStartEvent(element) {
   if (isCompensationActivity(element)) {
     return false;
   }
-  if (isEventSubProcess2(element)) {
+  if (isEventSubProcess3(element)) {
     return false;
   }
   return true;
@@ -66721,7 +70143,7 @@ function isStartEvent(element) {
 function isLabel2(element) {
   return !!element.labelTarget;
 }
-function isEventSubProcess2(element) {
+function isEventSubProcess3(element) {
   return getBusinessObject(element).triggeredByEvent;
 }
 function isInterrupting3(element) {
@@ -66730,7 +70152,7 @@ function isInterrupting3(element) {
 function isAny2(element, types3) {
   return types3.some((type) => is(element, type));
 }
-function isTypedEvent2(event3, eventDefinitionType) {
+function isTypedEvent3(event3, eventDefinitionType) {
   return some(getBusinessObject(event3).eventDefinitions, (definition) => {
     return eventDefinitionType ? is(definition, eventDefinitionType) : true;
   });
@@ -67003,7 +70425,7 @@ function Simulator(injector, eventBus, elementRegistry) {
     if (is(eventDefinition, "bpmn:CompensateEventDefinition")) {
       let ref = eventDefinition.activityRef && elementRegistry.get(eventDefinition.activityRef.id);
       if (!ref) {
-        if (isStartEvent(element) && isEventSubProcess2(element.parent)) {
+        if (isStartEvent(element) && isEventSubProcess3(element.parent)) {
           ref = element.parent.parent;
         } else if (isBoundaryEvent2(element)) {
           ref = element.host;
@@ -67197,7 +70619,7 @@ function Simulator(injector, eventBus, elementRegistry) {
       attachers = []
     } = element;
     for (const childElement of children) {
-      if (isEventSubProcess2(childElement)) {
+      if (isEventSubProcess3(childElement)) {
         const startEvents = childElement.children.filter(
           (element2) => isStartEvent(element2) && !isCompensationEvent(element2)
         );
@@ -67665,7 +71087,7 @@ InclusiveGatewayBehavior.prototype._canReachAnyElement = function(elements, curr
     return false;
   }
   traversed.add(currentElement);
-  if (elements.some((e7) => e7 === currentElement)) {
+  if (elements.some((e8) => e8 === currentElement)) {
     return true;
   }
   if (isSequenceFlow2(currentElement)) {
@@ -67735,7 +71157,7 @@ ActivityBehavior.prototype.exit = function(context) {
   } = context;
   const parentScope = scope.parent;
   const complete = !scope.failed;
-  if (complete && !isEventSubProcess2(element)) {
+  if (complete && !isEventSubProcess3(element)) {
     this._transactionBehavior.registerCompensation(scope);
   }
   const activatedFlows = complete ? element.outgoing.filter(isSequenceFlow2) : [];
@@ -67881,7 +71303,7 @@ SubProcessBehavior.prototype._start = function(context) {
     scope
   } = context;
   const targetScope = scope.parent;
-  if (isEventSubProcess2(element)) {
+  if (isEventSubProcess3(element)) {
     if (!startEvent) {
       throw new Error("missing <startEvent>: required for event sub-process");
     }
@@ -68002,7 +71424,7 @@ TransactionBehavior.prototype.registerCompensation = function(scope) {
     element
   } = scope;
   const compensateStartEvents = element.children.filter(
-    isEventSubProcess2
+    isEventSubProcess3
   ).map(
     (element2) => element2.children.find(
       (element3) => isStartEvent(element3) && isCompensationEvent(element3)
@@ -68103,7 +71525,7 @@ TransactionBehavior.prototype.findTransactionScope = function(scope) {
   let parentScope = scope;
   while (parentScope) {
     const element = parentScope.element;
-    if (is(element, "bpmn:SubProcess") && !isEventSubProcess2(element)) {
+    if (is(element, "bpmn:SubProcess") && !isEventSubProcess3(element)) {
       return parentScope;
     }
     if (isAny2(element, [
@@ -68201,7 +71623,7 @@ MessageFlowBehavior2.prototype.exit = function(context) {
 };
 
 // node_modules/bpmn-js-token-simulation/lib/util/ElementHelper.js
-function is4(element, types3) {
+function is5(element, types3) {
   if (element.type === "label") {
     return false;
   }
@@ -68214,12 +71636,12 @@ function is4(element, types3) {
 }
 function getEventDefinition4(event3, eventDefinitionType) {
   return find(getBusinessObject(event3).eventDefinitions, (definition) => {
-    return is4(definition, eventDefinitionType);
+    return is5(definition, eventDefinitionType);
   });
 }
-function isTypedEvent3(event3, eventDefinitionType) {
+function isTypedEvent4(event3, eventDefinitionType) {
   return some(getBusinessObject(event3).eventDefinitions, (definition) => {
-    return is4(definition, eventDefinitionType);
+    return is5(definition, eventDefinitionType);
   });
 }
 
@@ -68343,7 +71765,7 @@ EventBehaviors.prototype.get = function(element) {
     }
   };
   const entry = Object.entries(behaviors).find(
-    (entry2) => isTypedEvent3(element, entry2[0])
+    (entry2) => isTypedEvent4(element, entry2[0])
   );
   return entry && entry[1];
 };
@@ -68351,7 +71773,7 @@ function getLinkDefinition(element) {
   return getEventDefinition4(element, "bpmn:LinkEventDefinition");
 }
 function findSubscriptionScope(scope) {
-  while (isEventSubProcess2(scope.parent.element)) {
+  while (isEventSubProcess3(scope.parent.element)) {
     scope = scope.parent;
   }
   return scope.parent;
@@ -68708,14 +72130,14 @@ var scope_filter_default = {
 // node_modules/bpmn-js-token-simulation/node_modules/min-dom/dist/index.js
 var import_domify = __toESM(require_domify(), 1);
 function _mergeNamespaces2(n4, m5) {
-  m5.forEach(function(e7) {
-    e7 && typeof e7 !== "string" && !Array.isArray(e7) && Object.keys(e7).forEach(function(k6) {
+  m5.forEach(function(e8) {
+    e8 && typeof e8 !== "string" && !Array.isArray(e8) && Object.keys(e8).forEach(function(k6) {
       if (k6 !== "default" && !(k6 in n4)) {
-        var d5 = Object.getOwnPropertyDescriptor(e7, k6);
+        var d5 = Object.getOwnPropertyDescriptor(e8, k6);
         Object.defineProperty(n4, k6, d5.get ? d5 : {
           enumerable: true,
           get: function() {
-            return e7[k6];
+            return e8[k6];
           }
         });
       }
@@ -68801,14 +72223,12 @@ function detect2() {
   prefix3 = bind$12 !== "addEventListener" ? "on" : "";
 }
 var bind_12 = componentEvent2.bind = function(el, type, fn2, capture) {
-  if (!bind$12)
-    detect2();
+  if (!bind$12) detect2();
   el[bind$12](prefix3 + type, fn2, capture || false);
   return fn2;
 };
 var unbind_12 = componentEvent2.unbind = function(el, type, fn2, capture) {
-  if (!unbind$12)
-    detect2();
+  if (!unbind$12) detect2();
   el[unbind$12](prefix3 + type, fn2, capture || false);
   return fn2;
 };
@@ -68823,11 +72243,11 @@ function bind3(el, selector, type, fn2, capture) {
   if (forceCaptureEvents2.indexOf(type) !== -1) {
     capture = true;
   }
-  return event2.bind(el, type, function(e7) {
-    var target = e7.target || e7.srcElement;
-    e7.delegateTarget = closest2(target, selector, true);
-    if (e7.delegateTarget) {
-      fn2.call(el, e7);
+  return event2.bind(el, type, function(e8) {
+    var target = e8.target || e8.srcElement;
+    e8.delegateTarget = closest2(target, selector, true);
+    if (e8.delegateTarget) {
+      fn2.call(el, e8);
     }
   }, capture);
 }
@@ -68856,14 +72276,14 @@ var DEFAULT_PRIMARY_COLOR = STYLE.getPropertyValue("--token-simulation-green-bas
 var DEFAULT_AUXILIARY_COLOR = STYLE.getPropertyValue("--token-simulation-white");
 function noop() {
 }
-function getSegmentEasing(index4, waypoints) {
+function getSegmentEasing(index5, waypoints) {
   if (waypoints.length === 2) {
     return EASE_IN_OUT;
   }
-  if (index4 === 1) {
+  if (index5 === 1) {
     return EASE_IN;
   }
-  if (index4 === waypoints.length - 1) {
+  if (index5 === waypoints.length - 1) {
     return EASE_OUT;
   }
   return EASE_LINEAR;
@@ -69074,17 +72494,17 @@ TokenAnimation.prototype.move = function(x6, y5) {
 };
 TokenAnimation.prototype.create = function() {
   const waypoints = this.waypoints;
-  const parts = waypoints.reduce((parts2, point, index4) => {
-    const lastPoint = waypoints[index4 - 1];
+  const parts = waypoints.reduce((parts2, point, index5) => {
+    const lastPoint = waypoints[index5 - 1];
     if (lastPoint) {
       const lastPart = parts2[parts2.length - 1];
       const startLength = lastPart && lastPart.endLength || 0;
-      const length2 = distance2(lastPoint, point);
+      const length2 = distance3(lastPoint, point);
       parts2.push({
         startLength,
         endLength: startLength + length2,
         length: length2,
-        easing: getSegmentEasing(index4, waypoints)
+        easing: getSegmentEasing(index5, waypoints)
       });
     }
     return parts2;
@@ -69092,15 +72512,15 @@ TokenAnimation.prototype.create = function() {
   const totalLength = parts.reduce(function(length2, part) {
     return length2 + part.length;
   }, 0);
-  const d5 = waypoints.reduce((d6, waypoint, index4) => {
+  const d5 = waypoints.reduce((d6, waypoint, index5) => {
     const x6 = waypoint.x - TOKEN_SIZE / 2, y5 = waypoint.y - TOKEN_SIZE / 2;
-    d6.push([index4 > 0 ? "L" : "M", x6, y5]);
+    d6.push([index5 > 0 ? "L" : "M", x6, y5]);
     return d6;
   }, []).flat().join(" ");
   const totalDuration = getAnimationDuration(totalLength, this._randomize);
-  this._parts = parts.reduce((parts2, part, index4) => {
+  this._parts = parts.reduce((parts2, part, index5) => {
     const duration = totalDuration / totalLength * part.length;
-    const startTime = index4 > 0 ? parts2[index4 - 1].endTime : 0;
+    const startTime = index5 > 0 ? parts2[index5 - 1].endTime : 0;
     const endTime = startTime + duration;
     return [
       ...parts2,
@@ -69135,7 +72555,7 @@ function getAnimationDuration(length2, randomize = false) {
 function randomBetween(min5, max8) {
   return min5 + Math.floor(Math.random() * (max8 - min5));
 }
-function distance2(a6, b5) {
+function distance3(a6, b5) {
   return Math.sqrt(Math.pow(a6.x - b5.x, 2) + Math.pow(a6.y - b5.y, 2));
 }
 
@@ -69245,7 +72665,7 @@ function ExclusiveGatewayHandler(exclusiveGatewaySettings) {
 }
 ExclusiveGatewayHandler.prototype.createContextPads = function(element) {
   const outgoingFlows = element.outgoing.filter(function(outgoing) {
-    return is4(outgoing, "bpmn:SequenceFlow");
+    return is5(outgoing, "bpmn:SequenceFlow");
   });
   if (outgoingFlows.length < 2) {
     return;
@@ -69308,7 +72728,7 @@ function PauseHandler(simulator) {
   this._simulator = simulator;
 }
 PauseHandler.prototype.createContextPads = function(element) {
-  if (is4(element, "bpmn:ReceiveTask") || is4(element, "bpmn:SubProcess") && getBusinessObject(element).triggeredByEvent) {
+  if (is5(element, "bpmn:ReceiveTask") || is5(element, "bpmn:SubProcess") && getBusinessObject(element).triggeredByEvent) {
     return [];
   }
   return [
@@ -69466,7 +72886,7 @@ ContextPads.prototype.registerHandler = function(type, handlerCls) {
 };
 ContextPads.prototype.getHandlers = function(element) {
   return this._handlers.filter(
-    ({ type }) => is4(element, type)
+    ({ type }) => is5(element, type)
   ).map(
     ({ handler }) => handler
   );
@@ -69979,38 +73399,38 @@ function getIconForIntermediateEvent(element, throwOrCatch) {
 }
 function getEventTypeString(element) {
   const bo = getBusinessObject(element);
-  if (bo.eventDefinitions.length === 0) {
+  if (bo.get("eventDefinitions").length === 0) {
     return "none";
   }
   const eventDefinition = bo.eventDefinitions[0];
-  if (is4(eventDefinition, "bpmn:MessageEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:MessageEventDefinition")) {
     return "message";
   }
-  if (is4(eventDefinition, "bpmn:TimerEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:TimerEventDefinition")) {
     return "timer";
   }
-  if (is4(eventDefinition, "bpmn:SignalEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:SignalEventDefinition")) {
     return "signal";
   }
-  if (is4(eventDefinition, "bpmn:ErrorEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:ErrorEventDefinition")) {
     return "error";
   }
-  if (is4(eventDefinition, "bpmn:EscalationEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:EscalationEventDefinition")) {
     return "escalation";
   }
-  if (is4(eventDefinition, "bpmn:CompensateEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:CompensateEventDefinition")) {
     return "compensation";
   }
-  if (is4(eventDefinition, "bpmn:ConditionalEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:ConditionalEventDefinition")) {
     return "condition";
   }
-  if (is4(eventDefinition, "bpmn:LinkEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:LinkEventDefinition")) {
     return "link";
   }
-  if (is4(eventDefinition, "bpmn:CancelEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:CancelEventDefinition")) {
     return "cancel";
   }
-  if (is4(eventDefinition, "bpmn:TerminateEventDefinition")) {
+  if (is5(eventDefinition, "bpmn:TerminateEventDefinition")) {
     return "terminate";
   }
   return "none";
@@ -70044,7 +73464,7 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
     if (!processScopes.includes(scopeElement.type)) {
       return;
     }
-    const isSubProcess2 = is4(scopeElement, "bpmn:SubProcess");
+    const isSubProcess2 = is5(scopeElement, "bpmn:SubProcess");
     const text = `${isSubProcess2 ? getElementName(scopeElement) || "SubProcess" : "Process"} ${completed ? "finished" : "canceled"}`;
     this.log({
       text,
@@ -70067,7 +73487,7 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
     if (!processScopes.includes(scopeElement.type)) {
       return;
     }
-    const isSubProcess2 = is4(scopeElement, "bpmn:SubProcess");
+    const isSubProcess2 = is5(scopeElement, "bpmn:SubProcess");
     const text = `${isSubProcess2 ? getElementName(scopeElement) || "SubProcess" : "Process"} started`;
     this.log({
       text,
@@ -70086,119 +73506,119 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
     }
     const scope = elementScope.parent;
     const elementName = getElementName(element);
-    if (is4(element, "bpmn:ServiceTask")) {
+    if (is5(element, "bpmn:ServiceTask")) {
       return this.log({
         text: elementName || "Service Task",
         icon: "bpmn-icon-service",
         scope
       });
     }
-    if (is4(element, "bpmn:UserTask")) {
+    if (is5(element, "bpmn:UserTask")) {
       return this.log({
         text: elementName || "User Task",
         icon: "bpmn-icon-user",
         scope
       });
     }
-    if (is4(element, "bpmn:CallActivity")) {
+    if (is5(element, "bpmn:CallActivity")) {
       return this.log({
         text: elementName || "Call Activity",
         icon: "bpmn-icon-call-activity",
         scope
       });
     }
-    if (is4(element, "bpmn:ScriptTask")) {
+    if (is5(element, "bpmn:ScriptTask")) {
       return this.log({
         text: elementName || "Script Task",
         icon: "bpmn-icon-script",
         scope
       });
     }
-    if (is4(element, "bpmn:BusinessRuleTask")) {
+    if (is5(element, "bpmn:BusinessRuleTask")) {
       return this.log({
         text: elementName || "Business Rule Task",
         icon: "bpmn-icon-business-rule",
         scope
       });
     }
-    if (is4(element, "bpmn:ManualTask")) {
+    if (is5(element, "bpmn:ManualTask")) {
       return this.log({
         text: elementName || "Manual Task",
         icon: "bpmn-icon-manual-task",
         scope
       });
     }
-    if (is4(element, "bpmn:ReceiveTask")) {
+    if (is5(element, "bpmn:ReceiveTask")) {
       return this.log({
         text: elementName || "Receive Task",
         icon: "bpmn-icon-receive",
         scope
       });
     }
-    if (is4(element, "bpmn:SendTask")) {
+    if (is5(element, "bpmn:SendTask")) {
       return this.log({
         text: elementName || "Send Task",
         icon: "bpmn-icon-send",
         scope
       });
     }
-    if (is4(element, "bpmn:Task")) {
+    if (is5(element, "bpmn:Task")) {
       return this.log({
         text: elementName || "Task",
         icon: "bpmn-icon-task",
         scope
       });
     }
-    if (is4(element, "bpmn:ExclusiveGateway")) {
+    if (is5(element, "bpmn:ExclusiveGateway")) {
       return this.log({
         text: elementName || "Exclusive Gateway",
         icon: "bpmn-icon-gateway-xor",
         scope
       });
     }
-    if (is4(element, "bpmn:ParallelGateway")) {
+    if (is5(element, "bpmn:ParallelGateway")) {
       return this.log({
         text: elementName || "Parallel Gateway",
         icon: "bpmn-icon-gateway-parallel",
         scope
       });
     }
-    if (is4(element, "bpmn:InclusiveGateway")) {
+    if (is5(element, "bpmn:InclusiveGateway")) {
       return this.log({
         text: elementName || "Inclusive Gateway",
         icon: "bpmn-icon-gateway-or",
         scope
       });
     }
-    if (is4(element, "bpmn:StartEvent")) {
+    if (is5(element, "bpmn:StartEvent")) {
       return this.log({
         text: elementName || "Start Event",
         icon: `bpmn-icon-start-event-${getEventTypeString(element)}`,
         scope
       });
     }
-    if (is4(element, "bpmn:IntermediateCatchEvent")) {
+    if (is5(element, "bpmn:IntermediateCatchEvent")) {
       return this.log({
         text: elementName || "Intermediate Event",
         icon: getIconForIntermediateEvent(element, "catch"),
         scope
       });
     }
-    if (is4(element, "bpmn:IntermediateThrowEvent")) {
+    if (is5(element, "bpmn:IntermediateThrowEvent")) {
       return this.log({
         text: elementName || "Intermediate Event",
         icon: getIconForIntermediateEvent(element, "throw"),
         scope
       });
     }
-    if (is4(element, "bpmn:BoundaryEvent")) {
+    if (is5(element, "bpmn:BoundaryEvent")) {
       return this.log({
         text: elementName || "Boundary Event",
         icon: getIconForIntermediateEvent(element, "catch"),
         scope
       });
     }
-    if (is4(element, "bpmn:EndEvent")) {
+    if (is5(element, "bpmn:EndEvent")) {
       return this.log({
         text: elementName || "End Event",
         icon: `bpmn-icon-end-event-${getEventTypeString(element)}`,
@@ -70220,7 +73640,7 @@ Log.prototype._init = function() {
       <div class="bts-header">
         ${LogIcon("bts-log-icon")}
         Simulation Log
-        <button class="bts-close">
+        <button class="bts-close" aria-label="Close">
           ${TimesIcon()}
         </button>
       </div>
@@ -70354,7 +73774,7 @@ ElementSupport.prototype.enable = function() {
     if (isLabel3(element)) {
       return;
     }
-    if (!is4(element, UNSUPPORTED_ELEMENTS)) {
+    if (!is5(element, UNSUPPORTED_ELEMENTS)) {
       return;
     }
     this.showWarning(element);
@@ -70574,7 +73994,7 @@ function TokenCount(eventBus, overlays, simulator, scopeFilter, simulationStyles
   });
 }
 TokenCount.prototype.addTokenCounts = function(element) {
-  if (is4(element, "bpmn:MessageFlow") || is4(element, "bpmn:SequenceFlow")) {
+  if (is5(element, "bpmn:MessageFlow") || is5(element, "bpmn:SequenceFlow")) {
     return;
   }
   const scopes = this._simulator.findScopes((scope) => {
@@ -70723,15 +74143,15 @@ var SELECTED_COLOR = "--token-simulation-grey-darken-30";
 var NOT_SELECTED_COLOR = "--token-simulation-grey-lighten-56";
 function getNext(gateway, sequenceFlow) {
   var outgoing = gateway.outgoing.filter(isSequenceFlow3);
-  var index4 = outgoing.indexOf(sequenceFlow || gateway.sequenceFlow);
-  if (outgoing[index4 + 1]) {
-    return outgoing[index4 + 1];
+  var index5 = outgoing.indexOf(sequenceFlow || gateway.sequenceFlow);
+  if (outgoing[index5 + 1]) {
+    return outgoing[index5 + 1];
   } else {
     return outgoing[0];
   }
 }
 function isSequenceFlow3(connection) {
-  return is4(connection, "bpmn:SequenceFlow");
+  return is5(connection, "bpmn:SequenceFlow");
 }
 var ID3 = "exclusive-gateway-settings";
 var HIGH_PRIORITY24 = 2e3;
@@ -70750,7 +74170,7 @@ function ExclusiveGatewaySettings(eventBus, elementRegistry, elementColors, simu
 }
 ExclusiveGatewaySettings.prototype.setSequenceFlowsDefault = function() {
   const exclusiveGateways = this._elementRegistry.filter((element) => {
-    return is4(element, "bpmn:ExclusiveGateway");
+    return is5(element, "bpmn:ExclusiveGateway");
   });
   for (const gateway of exclusiveGateways) {
     this.setSequenceFlow(gateway);
@@ -70758,7 +74178,7 @@ ExclusiveGatewaySettings.prototype.setSequenceFlowsDefault = function() {
 };
 ExclusiveGatewaySettings.prototype.resetSequenceFlows = function() {
   const exclusiveGateways = this._elementRegistry.filter((element) => {
-    return is4(element, "bpmn:ExclusiveGateway");
+    return is5(element, "bpmn:ExclusiveGateway");
   });
   exclusiveGateways.forEach((exclusiveGateway) => {
     if (exclusiveGateway.outgoing.filter(isSequenceFlow3).length) {
@@ -71119,17 +74539,17 @@ Palette2.prototype._init = function() {
   this.container = (0, import_domify.default)('<div class="bts-palette hidden"></div>');
   this._canvas.getContainer().appendChild(this.container);
 };
-Palette2.prototype.addEntry = function(entry, index4) {
+Palette2.prototype.addEntry = function(entry, index5) {
   var childIndex = 0;
   this.entries.forEach(function(entry2) {
-    if (index4 >= entry2.index) {
+    if (index5 >= entry2.index) {
       childIndex++;
     }
   });
   this.container.insertBefore(entry, this.container.childNodes[childIndex]);
   this.entries.push({
     entry,
-    index: index4
+    index: index5
   });
 };
 Palette2.$inject = ["eventBus", "canvas"];
@@ -71525,7 +74945,7 @@ SimulationSupport.prototype.scopeDestroyed = function(scope = null) {
           "bpmn:Process",
           "bpmn:SubProcess"
         ];
-        if (scopeElements.every((t7) => !is4(event3.scope.element, t7))) {
+        if (scopeElements.every((t7) => !is5(event3.scope.element, t7))) {
           return;
         }
         eventBus.off(SCOPE_DESTROYED_EVENT, listener);
@@ -71562,7 +74982,7 @@ SimulationSupport.prototype.elementExit = function(id = null) {
 SimulationSupport.prototype.getHistory = function(history) {
   return this._bpmnjs.invoke(["simulationTrace", function(simulationTrace) {
     return simulationTrace.getAll().filter(function(event3) {
-      return event3.action === "exit" && (is4(event3.element, "bpmn:StartEvent") || is4(event3.element, "bpmn:BoundaryEvent")) || event3.action === "enter";
+      return event3.action === "exit" && (is5(event3.element, "bpmn:StartEvent") || is5(event3.element, "bpmn:BoundaryEvent")) || event3.action === "enter";
     }).map(function(event3) {
       return event3.element.id;
     });
@@ -71630,11 +75050,11 @@ var simulation_support_default = {
 var colorImageSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor">
   <path d="m12.5 5.5.3-.4 3.6-3.6c.5-.5 1.3-.5 1.7 0l1 1c.5.4.5 1.2 0 1.7l-3.6 3.6-.4.2v.2c0 1.4.6 2 1 2.7v.6l-1.7 1.6c-.2.2-.4.2-.6 0L7.3 6.6a.4.4 0 0 1 0-.6l.3-.3.5-.5.8-.8c.2-.2.4-.1.6 0 .9.5 1.5 1.1 3 1.1zm-9.9 6 4.2-4.2 6.3 6.3-4.2 4.2c-.3.3-.9.3-1.2 0l-.8-.8-.9-.8-2.3-2.9" />
 </svg>`;
-function ColorContextPadProvider(contextPad, popupMenu, canvas, translate3) {
+function ColorContextPadProvider(contextPad, popupMenu, canvas, translate4) {
   this._contextPad = contextPad;
   this._popupMenu = popupMenu;
   this._canvas = canvas;
-  this._translate = translate3;
+  this._translate = translate4;
   contextPad.registerProvider(this);
 }
 ColorContextPadProvider.$inject = [
@@ -71650,20 +75070,19 @@ ColorContextPadProvider.prototype.getMultiElementContextPadEntries = function(el
   return this._createPopupAction(elements);
 };
 ColorContextPadProvider.prototype._createPopupAction = function(elements) {
-  const canvas = this._canvas;
-  const translate3 = this._translate;
+  const translate4 = this._translate;
   const contextPad = this._contextPad;
   const popupMenu = this._popupMenu;
   return {
     "set-color": {
       group: "edit",
       className: "bpmn-icon-color",
-      title: translate3("Set color"),
+      title: translate4("Set color"),
       html: `<div class="entry">${colorImageSvg}</div>`,
       action: {
         click: (event3, element) => {
           var position = {
-            ...getStartPosition(canvas, contextPad, elements),
+            ...getStartPosition(contextPad, elements),
             cursor: {
               x: event3.x,
               y: event3.y
@@ -71675,15 +75094,13 @@ ColorContextPadProvider.prototype._createPopupAction = function(elements) {
     }
   };
 };
-function getStartPosition(canvas, contextPad, elements) {
+function getStartPosition(contextPad, elements) {
   var Y_OFFSET = 5;
-  var diagramContainer = canvas.getContainer(), pad = contextPad.getPad(elements).html;
-  var diagramRect = diagramContainer.getBoundingClientRect(), padRect = pad.getBoundingClientRect();
-  var top = padRect.top - diagramRect.top;
-  var left = padRect.left - diagramRect.left;
+  var pad = contextPad.getPad(elements).html;
+  var padRect = pad.getBoundingClientRect();
   var pos = {
-    x: left,
-    y: top + padRect.height + Y_OFFSET
+    x: padRect.left,
+    y: padRect.bottom + Y_OFFSET
   };
   return pos;
 }
@@ -71714,10 +75131,10 @@ var COLORS = [{
   fill: "#E1BEE7",
   stroke: "#5B176D"
 }];
-function ColorPopupProvider(config, bpmnRendererConfig, popupMenu, modeling, translate3) {
+function ColorPopupProvider(config, bpmnRendererConfig, popupMenu, modeling, translate4) {
   this._popupMenu = popupMenu;
   this._modeling = modeling;
-  this._translate = translate3;
+  this._translate = translate4;
   this._colors = config && config.colors || COLORS;
   this._defaultFillColor = bpmnRendererConfig && bpmnRendererConfig.defaultFillColor || "white";
   this._defaultStrokeColor = bpmnRendererConfig && bpmnRendererConfig.defaultStrokeColor || "rgb(34, 36, 42)";
@@ -71858,7 +75275,7 @@ Grid.$inject = [
 function randomNumber() {
   return Math.trunc(Math.random() * 1e6);
 }
-var index2 = {
+var index3 = {
   __init__: ["grid"],
   grid: ["type", Grid]
 };
@@ -72188,20 +75605,20 @@ Minimap.prototype._update = function() {
 Minimap.prototype.open = function() {
   assign(this._state, { isOpen: true });
   classes2(this._parent).add("open");
-  var translate3 = this._injector.get("translate", false) || function(s5) {
+  var translate4 = this._injector.get("translate", false) || function(s5) {
     return s5;
   };
-  attr2(this._toggle, "title", translate3("Close minimap"));
+  attr2(this._toggle, "title", translate4("Close minimap"));
   this._update();
   this._eventBus.fire("minimap.toggle", { open: true });
 };
 Minimap.prototype.close = function() {
   assign(this._state, { isOpen: false });
   classes2(this._parent).remove("open");
-  var translate3 = this._injector.get("translate", false) || function(s5) {
+  var translate4 = this._injector.get("translate", false) || function(s5) {
     return s5;
   };
-  attr2(this._toggle, "title", translate3("Open minimap"));
+  attr2(this._toggle, "title", translate4("Open minimap"));
   this._eventBus.fire("minimap.toggle", { open: false });
 };
 Minimap.prototype.toggle = function(open3) {
@@ -72263,11 +75680,11 @@ Minimap.prototype._addElement = function(element) {
   if (newElementGfx) {
     var elementGfx = this._elementRegistry.getGraphics(element);
     var parentGfx = this._elementRegistry.getGraphics(element.parent);
-    var index4 = getIndexOfChildInParentChildren(elementGfx, parentGfx);
-    if (index4 !== "undefined") {
+    var index5 = getIndexOfChildInParentChildren(elementGfx, parentGfx);
+    if (index5 !== "undefined") {
       if (newElementParentGfx) {
-        if (newElementParentGfx.childNodes.length > index4) {
-          insertChildAtIndex(newElementGfx, newElementParentGfx, index4);
+        if (newElementParentGfx.childNodes.length > index5) {
+          insertChildAtIndex(newElementGfx, newElementParentGfx, index5);
         } else {
           insertChildAtIndex(newElementGfx, newElementParentGfx, newElementParentGfx.childNodes.length - 1);
         }
@@ -72389,17 +75806,17 @@ function getIndexOfChildInParentChildren(childGfx, parentGfx) {
   }
   var childrenArray = [].slice.call(childrenGroup.childNodes);
   var indexOfChild = -1;
-  childrenArray.forEach(function(childGroup, index4) {
+  childrenArray.forEach(function(childGroup, index5) {
     if (query(".djs-element", childGroup) === childGfx) {
-      indexOfChild = index4;
+      indexOfChild = index5;
     }
   });
   return indexOfChild;
 }
-function insertChildAtIndex(childGfx, parentGfx, index4) {
+function insertChildAtIndex(childGfx, parentGfx, index5) {
   var childContainer = getChildContainer(parentGfx);
   var childrenArray = [].slice.call(childContainer.childNodes);
-  var childAtIndex = childrenArray[index4];
+  var childAtIndex = childrenArray[index5];
   if (childAtIndex) {
     parentGfx.insertBefore(childGfx, childAtIndex.nextSibling);
   } else {
@@ -72466,7 +75883,7 @@ function getPoint(event3) {
     y: event3.clientY
   };
 }
-var index3 = {
+var index4 = {
   __init__: ["minimap"],
   minimap: ["type", Minimap]
 };
@@ -72492,14 +75909,12 @@ var a5 = function() {
     this.coordinator = new i6(), this.data = [], this.radi = [], this.min = 10, this.max = 1, this.xField = a7.xField || t6.defaultXField, this.yField = a7.yField || t6.defaultYField, this.valueField = a7.valueField || t6.defaultValueField, this.radius = a7.radius || t6.defaultRadius;
   }
   return a6.prototype._organiseData = function(t7, i7) {
-    var a7 = t7[this.xField], e7 = t7[this.yField], r7 = this.radi, n4 = this.data, s5 = this.max, h5 = this.min, o5 = t7[this.valueField] || 1, d5 = t7.radius || this.radius;
-    r7[a7] || (n4[a7] = [], r7[a7] = []), r7[a7][e7] ? n4[a7][e7] += o5 : (n4[a7][e7] = o5, r7[a7][e7] = d5);
-    var u6 = n4[a7][e7];
-    return u6 ? u6 > s5 ? (i7 ? this.setDataMax(u6) : this.max = u6, false) : u6 < h5 ? (i7 ? this.setDataMin(u6) : this.min = u6, false) : void 0 : { x: a7, y: e7, value: o5, radius: d5, min: h5, max: s5 };
+    var a7 = t7[this.xField], e8 = t7[this.yField], r7 = this.radi, n4 = this.data, s5 = this.max, h5 = this.min, o5 = t7[this.valueField] || 1, d5 = t7.radius || this.radius;
+    r7[a7] || (n4[a7] = [], r7[a7] = []), r7[a7][e8] ? n4[a7][e8] += o5 : (n4[a7][e8] = o5, r7[a7][e8] = d5);
+    var u6 = n4[a7][e8];
+    return u6 ? u6 > s5 ? (i7 ? this.setDataMax(u6) : this.max = u6, false) : u6 < h5 ? (i7 ? this.setDataMin(u6) : this.min = u6, false) : void 0 : { x: a7, y: e8, value: o5, radius: d5, min: h5, max: s5 };
   }, a6.prototype._unOrganizeData = function() {
-    for (var t7 = [], i7 = 0; i7 < this.radi.length; i7++)
-      for (var a7 = 0; a7 < this.radi[i7].length; a7++)
-        t7.push({ x: i7, y: a7, radius: this.radi[i7][a7], value: this.radi[i7][a7] });
+    for (var t7 = [], i7 = 0; i7 < this.radi.length; i7++) for (var a7 = 0; a7 < this.radi[i7].length; a7++) t7.push({ x: i7, y: a7, radius: this.radi[i7][a7], value: this.radi[i7][a7] });
     return { min: this.min, max: this.max, data: t7 };
   }, a6.prototype._onExtremaChange = function() {
     this.coordinator.emit("extremachange", { min: this.min, max: this.max });
@@ -72509,8 +75924,7 @@ var a5 = function() {
   }, a6.prototype.setData = function(t7) {
     var i7 = t7.data;
     this.data = [], this.radi = [];
-    for (var a7 = 0; a7 < i7.length; a7++)
-      this._organiseData(i7[a7], false);
+    for (var a7 = 0; a7 < i7.length; a7++) this._organiseData(i7[a7], false);
     return this.min = t7.min || 0, this.max = t7.max || 100, this._onExtremaChange(), this.coordinator.emit("renderall", this._getInternalData()), this;
   }, a6.prototype.setDataMax = function(t7) {
     return this.max = t7, this._onExtremaChange(), this.coordinator.emit("renderall", this._getInternalData()), this;
@@ -72522,7 +75936,7 @@ var a5 = function() {
     return this._unOrganizeData();
   }, a6;
 }();
-var e6 = function() {
+var e7 = function() {
   function i7(t7) {
     this.canvas = t7.canvas || document.createElement("canvas"), this.ctx = this.canvas.getContext("2d"), this.shadowCanvas = t7.shadowCanvas || document.createElement("canvas"), this.shadowCtx = this.shadowCanvas.getContext("2d"), this.width = t7.width || 512, this.height = t7.height || 512, this.max = 100, this.min = 1, this.radius = t7.radius || 50, this.blur = 1, this.opacity = 1, this.maxOpacity = 1, this.minOpacity = 0, this.useGradientOpacity = false, this.canvas.style.cssText = this.shadowCanvas.style.cssText = "position:absolute;left:0;top:0;", t7.container && (t7.container.style.position = "relative", t7.container.appendChild(this.canvas)), this.renderBoundaries = [1e4, 1e4, 0, 0], this.palette = this._getColorPalette(t7), this.templates = [], this._setStyles(t7);
   }
@@ -72535,60 +75949,52 @@ var e6 = function() {
   }, i7.prototype.setDimensions = function(t7, i8) {
     this.width = this.canvas.width = this.shadowCanvas.width = t7, this.height = this.canvas.height = this.shadowCanvas.height = i8;
   }, i7.prototype.getValueAt = function(t7) {
-    if (!this.shadowCtx)
-      return 0;
+    if (!this.shadowCtx) return 0;
     var i8 = this.shadowCtx.getImageData(t7.x, t7.y, 1, 1);
     return Math.abs(this.max - this.min) * (i8.data[3] / 255) >> 0;
   }, i7.prototype.getDataURL = function() {
     return this.canvas.toDataURL();
   }, i7.prototype._getColorPalette = function(i8) {
-    var a6 = i8.gradient || t6.defaultGradient, e7 = document.createElement("canvas"), r7 = e7.getContext("2d");
-    if (e7.width = 256, e7.height = 1, !r7)
-      return new Uint8ClampedArray(1024);
+    var a6 = i8.gradient || t6.defaultGradient, e8 = document.createElement("canvas"), r7 = e8.getContext("2d");
+    if (e8.width = 256, e8.height = 1, !r7) return new Uint8ClampedArray(1024);
     var n4 = r7.createLinearGradient(0, 0, 256, 1);
-    for (var s5 in a6)
-      n4.addColorStop(Number(s5), a6[s5]);
+    for (var s5 in a6) n4.addColorStop(Number(s5), a6[s5]);
     return r7.fillStyle = n4, r7.fillRect(0, 0, 256, 1), r7.getImageData(0, 0, 256, 1).data;
   }, i7.prototype._getPointTemplate = function(t7, i8) {
-    var a6 = document.createElement("canvas"), e7 = a6.getContext("2d");
-    if (!e7)
-      return a6;
+    var a6 = document.createElement("canvas"), e8 = a6.getContext("2d");
+    if (!e8) return a6;
     var r7 = t7, n4 = t7;
-    if (a6.width = a6.height = 2 * t7, 1 === i8)
-      e7.beginPath(), e7.arc(r7, n4, t7, 0, 2 * Math.PI, false), e7.fillStyle = "rgba(0,0,0,1)", e7.fill();
+    if (a6.width = a6.height = 2 * t7, 1 === i8) e8.beginPath(), e8.arc(r7, n4, t7, 0, 2 * Math.PI, false), e8.fillStyle = "rgba(0,0,0,1)", e8.fill();
     else {
-      var s5 = e7.createRadialGradient(r7, n4, t7 * i8, r7, n4, t7);
-      s5.addColorStop(0, "rgba(0,0,0,1)"), s5.addColorStop(1, "rgba(0,0,0,0)"), e7.fillStyle = s5, e7.fillRect(0, 0, 2 * t7, 2 * t7);
+      var s5 = e8.createRadialGradient(r7, n4, t7 * i8, r7, n4, t7);
+      s5.addColorStop(0, "rgba(0,0,0,1)"), s5.addColorStop(1, "rgba(0,0,0,0)"), e8.fillStyle = s5, e8.fillRect(0, 0, 2 * t7, 2 * t7);
     }
     return a6;
   }, i7.prototype._prepareData = function(t7) {
-    for (var i8 = [], a6 = t7.min, e7 = t7.max, r7 = t7.radi, n4 = t7.data, s5 = Object.keys(n4), h5 = s5.length; h5--; )
-      for (var o5 = s5[h5], d5 = Object.keys(n4[o5]), u6 = d5.length; u6--; ) {
-        var l5 = d5[u6], c5 = n4[o5][l5], p5 = r7[o5][l5];
-        i8.push({ x: Number(o5), y: Number(l5), value: c5, radius: p5 });
-      }
-    return { min: a6, max: e7, data: i8 };
+    for (var i8 = [], a6 = t7.min, e8 = t7.max, r7 = t7.radi, n4 = t7.data, s5 = Object.keys(n4), h5 = s5.length; h5--; ) for (var o5 = s5[h5], d5 = Object.keys(n4[o5]), u6 = d5.length; u6--; ) {
+      var l5 = d5[u6], c5 = n4[o5][l5], p5 = r7[o5][l5];
+      i8.push({ x: Number(o5), y: Number(l5), value: c5, radius: p5 });
+    }
+    return { min: a6, max: e8, data: i8 };
   }, i7.prototype._setStyles = function(i8) {
     this.blur = 0 === i8.blur ? 0 : i8.blur || t6.defaultBlur, i8.backgroundColor && (this.canvas.style.backgroundColor = i8.backgroundColor), this.width = this.canvas.width = this.shadowCanvas.width = i8.width || this.width, this.height = this.canvas.height = this.shadowCanvas.height = i8.height || this.height, this.opacity = 255 * (i8.opacity || 0), this.maxOpacity = 255 * (i8.maxOpacity || t6.defaultMaxOpacity), this.minOpacity = 255 * (i8.minOpacity || t6.defaultMinOpacity), this.useGradientOpacity = !!i8.useGradientOpacity;
   }, i7.prototype._updateGradient = function(t7) {
     this.palette = this._getColorPalette(t7);
   }, i7.prototype._drawAlpha = function(t7) {
-    for (var i8 = this.min = t7.min || 0, a6 = this.max = t7.max || 100, e7 = t7.data || [], r7 = e7.length, n4 = 1 - this.blur; r7--; ) {
-      var s5 = e7[r7], h5 = s5.x, o5 = s5.y, d5 = s5.radius || this.radius, u6 = Math.min(s5.value, a6), l5 = h5 - d5, c5 = o5 - d5;
-      if (!this.shadowCtx)
-        return;
+    for (var i8 = this.min = t7.min || 0, a6 = this.max = t7.max || 100, e8 = t7.data || [], r7 = e8.length, n4 = 1 - this.blur; r7--; ) {
+      var s5 = e8[r7], h5 = s5.x, o5 = s5.y, d5 = s5.radius || this.radius, u6 = Math.min(s5.value, a6), l5 = h5 - d5, c5 = o5 - d5;
+      if (!this.shadowCtx) return;
       var p5 = void 0;
       this.templates[d5] ? p5 = this.templates[d5] : this.templates[d5] = p5 = this._getPointTemplate(d5, n4);
       var m5 = (u6 - i8) / (a6 - i8);
       this.shadowCtx.globalAlpha = m5 < 0.01 ? 0.01 : m5, this.shadowCtx.drawImage(p5, l5, c5), l5 < this.renderBoundaries[0] && (this.renderBoundaries[0] = l5), c5 < this.renderBoundaries[1] && (this.renderBoundaries[1] = c5), l5 + 2 * d5 > this.renderBoundaries[2] && (this.renderBoundaries[2] = l5 + 2 * d5), c5 + 2 * d5 > this.renderBoundaries[3] && (this.renderBoundaries[3] = c5 + 2 * d5);
     }
   }, i7.prototype._colorize = function() {
-    var t7 = this.renderBoundaries[0], i8 = this.renderBoundaries[1], a6 = this.renderBoundaries[2] - t7, e7 = this.renderBoundaries[3] - i8, r7 = this.width, n4 = this.height;
-    if (t7 < 0 && (t7 = 0), i8 < 0 && (i8 = 0), t7 + a6 > r7 && (a6 = r7 - t7), i8 + e7 > n4 && (e7 = n4 - i8), this.ctx && this.shadowCtx) {
-      for (var s5 = this.shadowCtx.getImageData(t7, i8, a6, e7), h5 = 3; h5 < s5.data.length; h5 += 4) {
+    var t7 = this.renderBoundaries[0], i8 = this.renderBoundaries[1], a6 = this.renderBoundaries[2] - t7, e8 = this.renderBoundaries[3] - i8, r7 = this.width, n4 = this.height;
+    if (t7 < 0 && (t7 = 0), i8 < 0 && (i8 = 0), t7 + a6 > r7 && (a6 = r7 - t7), i8 + e8 > n4 && (e8 = n4 - i8), this.ctx && this.shadowCtx) {
+      for (var s5 = this.shadowCtx.getImageData(t7, i8, a6, e8), h5 = 3; h5 < s5.data.length; h5 += 4) {
         var o5, d5 = s5.data[h5], u6 = 4 * d5;
-        if (u6)
-          o5 = this.opacity > 0 ? this.opacity : d5 < this.maxOpacity ? d5 < this.minOpacity ? this.minOpacity : d5 : this.maxOpacity, s5.data[h5 - 3] = this.palette[u6], s5.data[h5 - 2] = this.palette[u6 + 1], s5.data[h5 - 1] = this.palette[u6 + 2], s5.data[h5] = this.useGradientOpacity ? this.palette[u6 + 3] : o5;
+        if (u6) o5 = this.opacity > 0 ? this.opacity : d5 < this.maxOpacity ? d5 < this.minOpacity ? this.minOpacity : d5 : this.maxOpacity, s5.data[h5 - 3] = this.palette[u6], s5.data[h5 - 2] = this.palette[u6 + 1], s5.data[h5 - 1] = this.palette[u6 + 2], s5.data[h5] = this.useGradientOpacity ? this.palette[u6 + 3] : o5;
       }
       this.ctx.putImageData(s5, t7, i8), this.renderBoundaries = [1e3, 1e3, 0, 0];
     }
@@ -72598,7 +76004,7 @@ var e6 = function() {
 }();
 var r6 = function() {
   function i7(t7) {
-    this.config = t7, this.renderer = new e6(this.config), this.store = new a5(this.config), this._init();
+    this.config = t7, this.renderer = new e7(this.config), this.store = new a5(this.config), this._init();
   }
   return i7.prototype._init = function() {
     var i8 = this;
@@ -72660,7 +76066,8 @@ var BpmnModelerView = class extends import_obsidian2.TextFileView {
       text: "Export PNG",
       attr: { "aria-label": "Export as PNG" }
     });
-    this.bpmnDiv = contentEl.createEl("div", { cls: "bpmn-view bpmn-view-modeler" });
+    let bpmn_view_classes = "bpmn-view bpmn-view-modeler";
+    this.bpmnDiv = contentEl.createEl("div", { cls: bpmn_view_classes });
     let propertyPanel = contentEl.createEl("div", { cls: "bpmn-properties-panel hide" });
     let modules = [
       index$3,
@@ -72675,10 +76082,26 @@ var BpmnModelerView = class extends import_obsidian2.TextFileView {
       modules.push(simulation_support_default);
     }
     if (this.settings.enable_minimap) {
-      modules.push(index3);
+      modules.push(index4);
     }
     if (this.settings.enable_grid) {
-      modules.push(index2);
+      modules.push(index3);
+    }
+    let textRenderer = void 0;
+    if (this.settings.enable_sketchy) {
+      modules.push(index);
+      textRenderer = {
+        defaultStyle: {
+          fontFamily: '"Comic Sans MS"',
+          fontWeight: "normal",
+          fontSize: 14,
+          lineHeight: 1.1
+        },
+        externalStyle: {
+          fontSize: 14,
+          lineHeight: 1.1
+        }
+      };
     }
     this.bpmnModeler = new Modeler({
       container: this.bpmnDiv,
@@ -72688,7 +76111,8 @@ var BpmnModelerView = class extends import_obsidian2.TextFileView {
       propertiesPanel: {
         parent: propertyPanel
       },
-      additionalModules: modules
+      additionalModules: modules,
+      textRenderer
     });
     if (this.settings.force_white_background_by_default) {
       this.bpmnDiv.addClass("bpmn-view-white-background");
@@ -72758,28 +76182,28 @@ var BpmnModelerView = class extends import_obsidian2.TextFileView {
       });
       (0, import_obsidian2.setIcon)(bpmnSave, "save");
     }
-    bpmnSave.addEventListener("click", function(e7) {
+    bpmnSave.addEventListener("click", function(e8) {
       thisRef.requestSave();
     });
     (0, import_obsidian2.setIcon)(bpmnSave, "save");
-    bpmnUndo.addEventListener("click", function(e7) {
+    bpmnUndo.addEventListener("click", function(e8) {
       bpmnModeler.get("commandStack").undo();
     });
     (0, import_obsidian2.setIcon)(bpmnUndo, "undo");
-    bpmnRedo.addEventListener("click", function(e7) {
+    bpmnRedo.addEventListener("click", function(e8) {
       bpmnModeler.get("commandStack").redo();
     });
     (0, import_obsidian2.setIcon)(bpmnRedo, "redo");
-    bpmnProperties.addEventListener("click", function(e7) {
+    bpmnProperties.addEventListener("click", function(e8) {
       propertyPanel.classList.toggle("hide");
     });
     (0, import_obsidian2.setIcon)(bpmnProperties, "settings");
-    bpmnSaveSvg.addEventListener("click", async function(e7) {
+    bpmnSaveSvg.addEventListener("click", async function(e8) {
       let result = await bpmnModeler.saveSVG();
       await thisRef.saveImageFile(result.svg, "svg");
     });
     (0, import_obsidian2.setIcon)(bpmnSaveSvg, "image");
-    bpmnSavePng.addEventListener("click", async function(e7) {
+    bpmnSavePng.addEventListener("click", async function(e8) {
       const svg = (await bpmnModeler.saveSVG()).svg;
       const pngString = void 0;
       if (pngString !== void 0) {
@@ -72832,8 +76256,8 @@ var ObsidianBPMNPlugin = class extends import_obsidian3.Plugin {
       let parameters = null;
       try {
         parameters = this.readParameters(src);
-      } catch (e7) {
-        el.createEl("h3", { text: "BPMN parameters invalid: \n" + e7.message });
+      } catch (e8) {
+        el.createEl("h3", { text: "BPMN parameters invalid: \n" + e8.message });
         return;
       }
       console.log("Try to render a BPMN");
@@ -72850,7 +76274,8 @@ var ObsidianBPMNPlugin = class extends import_obsidian3.Plugin {
           href.className = "internal-link";
           (0, import_obsidian3.setIcon)(href, "file-edit");
         }
-        const bpmnDiv = rootDiv.createEl("div", { cls: "bpmn-view" });
+        let bpmn_view_classes = "bpmn-view";
+        const bpmnDiv = rootDiv.createEl("div", { cls: bpmn_view_classes });
         if (parameters.forcewhitebackground) {
           bpmnDiv.addClass("bpmn-view-white-background");
         } else {
@@ -72863,13 +76288,37 @@ var ObsidianBPMNPlugin = class extends import_obsidian3.Plugin {
         }
         const xml2 = await this.app.vault.adapter.read(parameters.url);
         bpmnDiv.setAttribute("style", "height: " + parameters.height + "px;");
+        let modules = [];
+        if (this.settings.enable_sketchy) {
+          modules.push(index);
+        }
+        let textRenderer = void 0;
+        if (this.settings.enable_sketchy) {
+          modules.push(index);
+          textRenderer = {
+            defaultStyle: {
+              fontFamily: '"Comic Sans MS"',
+              fontWeight: "normal",
+              fontSize: 14,
+              lineHeight: 1.1
+            },
+            externalStyle: {
+              fontSize: 14,
+              lineHeight: 1.1
+            }
+          };
+        }
         const bpmn = parameters.enablepanzoom ? new NavigatedViewer({
           container: bpmnDiv,
           keyboard: {
             bindTo: bpmnDiv.win
-          }
+          },
+          additionalModules: modules,
+          textRenderer
         }) : new Viewer({
-          container: bpmnDiv
+          container: bpmnDiv,
+          additionalModules: modules,
+          textRenderer
         });
         const p_zoom = parameters.zoom;
         const p_x = parameters.x;
@@ -72890,9 +76339,9 @@ var ObsidianBPMNPlugin = class extends import_obsidian3.Plugin {
         if (parameters.showzoom && parameters.enablepanzoom) {
           const zoomDiv = rootDiv.createEl("div");
           const zoomInBtn = zoomDiv.createEl("button", { "text": "+" });
-          zoomInBtn.addEventListener("click", (e7) => bpmn.get("zoomScroll").stepZoom(0.5));
+          zoomInBtn.addEventListener("click", (e8) => bpmn.get("zoomScroll").stepZoom(0.5));
           const zoomOutBtn = zoomDiv.createEl("button", { "text": "-" });
-          zoomOutBtn.addEventListener("click", (e7) => bpmn.get("zoomScroll").stepZoom(-0.5));
+          zoomOutBtn.addEventListener("click", (e8) => bpmn.get("zoomScroll").stepZoom(-0.5));
           (0, import_obsidian3.setIcon)(zoomInBtn, "zoom-in");
           (0, import_obsidian3.setIcon)(zoomOutBtn, "zoom-out");
         }

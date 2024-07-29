@@ -5,6 +5,14 @@
       "path": "Lógica y Estructuras Discretas/Relación de recurrencia lineal.md"
     },
     {
+      "basename": "Relación de recurrencia",
+      "path": "Lógica y Estructuras Discretas/Relación de recurrencia.md"
+    },
+    {
+      "basename": "Definición recursiva",
+      "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
+    },
+    {
       "basename": "Conjunto vacío",
       "path": "Lógica y Estructuras Discretas/Conjunto vacío.md"
     },
@@ -33,16 +41,8 @@
       "path": "Álgebra y Geometría Analítica/Autoecuación.md"
     },
     {
-      "basename": "Relación de recurrencia",
-      "path": "Lógica y Estructuras Discretas/Relación de recurrencia.md"
-    },
-    {
       "basename": "Sucesión",
       "path": "Análisis Matemático I/Sucesión.md"
-    },
-    {
-      "basename": "Definición recursiva",
-      "path": "Lógica y Estructuras Discretas/Definición recursiva.md"
     },
     {
       "basename": "Recursividad",

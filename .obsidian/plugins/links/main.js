@@ -314,6 +314,11 @@ var ImageDimensions = class extends TextPart {
     this.height = height;
   }
 };
+var DestinationType = /* @__PURE__ */ ((DestinationType2) => {
+  DestinationType2["Unknown"] = "unknown";
+  DestinationType2["Image"] = "image";
+  return DestinationType2;
+})(DestinationType || {});
 var LinkData = class extends TextPart {
   constructor(type, content, position, destination, text, embedded = false) {
     super(content, position);
@@ -815,6 +820,19 @@ function getFileExtension(path) {
     return path.substring(dotIdx);
   }
   return null;
+}
+var DestinationType = /* @__PURE__ */ ((DestinationType2) => {
+  DestinationType2["None"] = "none";
+  DestinationType2["Absolute"] = "absolute";
+  DestinationType2["Relative"] = "relative";
+  DestinationType2["Shortest"] = "shortest";
+  return DestinationType2;
+})(DestinationType || {});
+function createWikiLink(sourcePath, destination, destinationSubPath, text, dimensions, destinationType = "none" /* None */) {
+  return `[[${destination}${destinationSubPath ? "#" + destinationSubPath : ""} ${text ? "|" + text : ""}${dimensions ? "|" + dimensions : ""}]]`;
+}
+function createMarkdownLink(sourcePath, destination, destinationSubPath, text, dimensions, destinationType = "none" /* None */) {
+  return `[${text}${dimensions ? "|" + dimensions : ""}](${destination}${destinationSubPath ? "#" + destinationSubPath : ""})`;
 }
 
 // suggesters/LinkTextSuggest.ts
@@ -2599,11 +2617,25 @@ var ReplaceLinkModal = class extends import_obsidian3.Modal {
   }
 };
 
+// IVault.ts
+var VaultConfiguration = class {
+  constructor(vault) {
+    this.vault = vault;
+  }
+  get useMarkdownLinks() {
+    return this.vault.getConfig("useMarkdownLinks");
+  }
+  get newLinkFormat() {
+    return this.vault.getConfig("newLinkFormat");
+  }
+};
+
 // Vault.ts
 var import_obsidian4 = require("obsidian");
 var VaultImp = class {
   constructor(app2) {
     this.app = app2;
+    this.configuration = new VaultConfiguration(this);
   }
   getFilesInFolder(folder) {
     let folders = [];
@@ -2684,6 +2716,9 @@ var VaultImp = class {
   getAbstractFileByPath(path) {
     return this.app.vault.getAbstractFileByPath(path);
   }
+  getConfig(setting) {
+    return this.app.vault.getConfig(setting);
+  }
 };
 
 // commands/ObsidianProxy.ts
@@ -2716,6 +2751,10 @@ var ObsidianProxy = class {
   }
   showPromptModal(title, text, buttons, onSubmit) {
     this.uiFactory.createPromptModal(title, text, buttons, onSubmit).open();
+  }
+  createLink(sourcePath, destination, destinationSubPath, text, dimensions) {
+    const useMarkdownLinks = this.Vault.configuration.useMarkdownLinks;
+    return useMarkdownLinks ? createMarkdownLink(sourcePath, destination, destinationSubPath, text, dimensions, "none" /* None */) : createWikiLink(sourcePath, destination, destinationSubPath, text, dimensions, "none" /* None */);
   }
 };
 
@@ -3890,6 +3929,7 @@ var CreateLinkFromClipboardCommand = class extends CommandBase {
       const httpUrlRegEx = /^(http|https):\/\/[^ "]+$/i;
       const clipboardText = await this.obsidianProxy.clipboardReadText();
       const links = findLinks(clipboardText, 65535 /* All */);
+      let linkText = "";
       let linkDestination = "";
       if (links.length) {
         const link = links[0];
@@ -3900,6 +3940,7 @@ var CreateLinkFromClipboardCommand = class extends CommandBase {
               const filePath = url.searchParams.get("file");
               if (filePath) {
                 linkDestination = decodeURI(filePath);
+                linkText = getFileName(linkDestination);
               }
             }
           }
@@ -3909,7 +3950,9 @@ var CreateLinkFromClipboardCommand = class extends CommandBase {
       } else {
         linkDestination = clipboardText;
       }
-      let linkText = linkDestination;
+      if (!linkText) {
+        linkText = linkDestination;
+      }
       let selection = editor.getSelection();
       if (!selection && this.obsidianProxy.settings.autoselectWordOnCreateLink) {
         selection = selectWordUnderCursor(editor);
@@ -4762,23 +4805,21 @@ var CopyLinkToHeadingToObjectCommand = class extends CommandBase {
     }
   }
   copyLinkToHeadingUnderCursorToClipboard(heading, noteFile) {
-    const rawLink = this.obsidianProxy.app.fileManager.generateMarkdownLink(
-      noteFile,
-      "",
-      "#" + heading,
-      heading
-    );
+    const rawLink = this.obsidianProxy.createLink("", noteFile.path, heading, heading);
     this.obsidianProxy.clipboardWriteText(rawLink);
     this.obsidianProxy.createNotice("Link copied to your clipboard");
   }
   copyLinkToBlockUnderCursorToClipboard(file, editor, block) {
+    var _a;
+    let linkText = void 0;
+    const blockFirstLine = editor.getLine(block.position.start.line);
+    const links = findLinks(blockFirstLine, 2 /* Wiki */ | 1 /* Markdown */);
+    if (links && links.length && links[0].destinationType == DestinationType.Image) {
+      linkText = (_a = links[0].text) == null ? void 0 : _a.content;
+    }
     if (block.id) {
       return this.obsidianProxy.clipboardWriteText(
-        `${this.obsidianProxy.app.fileManager.generateMarkdownLink(
-          file,
-          "",
-          "#^" + block.id
-        )}`
+        this.obsidianProxy.createLink("", file.path, "^" + block.id, linkText)
       );
     }
     const sectionEnd = block.position.end;
@@ -4789,11 +4830,7 @@ var CopyLinkToHeadingToObjectCommand = class extends CommandBase {
     const id = this.generateId();
     editor.replaceRange(`${this.isEolRequired(block) ? "\n\n" : " "}^${id}`, end2);
     navigator.clipboard.writeText(
-      `${this.obsidianProxy.app.fileManager.generateMarkdownLink(
-        file,
-        "",
-        "#^" + id
-      )}`
+      this.obsidianProxy.createLink("", file.path, "^" + id, linkText)
     );
   }
   getBlock(editor, file) {
