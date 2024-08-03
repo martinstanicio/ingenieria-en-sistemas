@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
       "basename": "Relación de recurrencia lineal",
       "path": "Lógica y Estructuras Discretas/Relación de recurrencia lineal.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Monoide conmutativo",
       "path": "Lógica y Estructuras Discretas/Monoide conmutativo.md"
-    },
-    {
-      "basename": "Movimiento",
-      "path": "Física I/Movimiento.md"
     }
   ],
   "omittedPaths": [],
