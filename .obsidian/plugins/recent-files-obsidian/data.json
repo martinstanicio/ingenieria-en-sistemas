@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Flags",
+      "path": "Arquitectura de Computadoras/Flags.md"
+    },
+    {
+      "basename": "Complemento a 2",
+      "path": "Arquitectura de Computadoras/Complemento a 2.md"
+    },
+    {
+      "basename": "Binario Sin Signo",
+      "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
+    },
+    {
+      "basename": "Bit de paridad",
+      "path": "Arquitectura de Computadoras/Bit de paridad.md"
+    },
+    {
+      "basename": "BINIT",
+      "path": "Sistemas y Procesos de Negocios/BINIT.md"
+    },
+    {
       "basename": "ALU",
       "path": "Arquitectura de Computadoras/ALU.md"
     },
     {
       "basename": "Operación",
       "path": "Lógica y Estructuras Discretas/Operación.md"
-    },
-    {
-      "basename": "Flags",
-      "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
       "basename": "Registro",
@@ -79,10 +95,6 @@
     {
       "basename": "Bit",
       "path": "Arquitectura de Computadoras/Bit.md"
-    },
-    {
-      "basename": "BINIT",
-      "path": "Sistemas y Procesos de Negocios/BINIT.md"
     },
     {
       "basename": "Diagrama de Veitch-Karnaugh",
@@ -187,18 +199,6 @@
     {
       "basename": "Multiplicidad geométrica",
       "path": "Álgebra y Geometría Analítica/Multiplicidad geométrica.md"
-    },
-    {
-      "basename": "Autovector",
-      "path": "Álgebra y Geometría Analítica/Autovector.md"
-    },
-    {
-      "basename": "Multiplicidad algebraica",
-      "path": "Álgebra y Geometría Analítica/Multiplicidad algebraica.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
     }
   ],
   "omittedPaths": [],

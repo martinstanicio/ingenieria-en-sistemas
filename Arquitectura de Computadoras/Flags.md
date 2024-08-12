@@ -1,6 +1,6 @@
 ---
 created: 2024-05-15 19:30:13
-modified: 2024-08-12 20:17:24
+modified: 2024-08-12 20:48:44
 title: Flags
 ---
 
@@ -8,26 +8,44 @@ title: Flags
 
 Contienen los valores de **resultados intermedios** que provienen de operaciones realizadas por la [[ALU]].
 
-## Sign Flag (S)
-Representa el **signo** de la [[Operación]]
+## Sign Flag (s)
+
+Representa el **signo** de la [[Operación]].
+
+- $s = 0$: resultado positivo ($+$)
+- $s = 1$: resultado negativo ($-$)
+
+## Zero Flag (z)
+
+Indica si el resultado de la [[Operación]] **es cero o no**.
+
+- $z = 0$: resultado es diferente de cero ($\neq 0$)
+- $z = 1$: resultado es cero ($= 0$)
+
+## Carry Flag (c)
+
+Indica si el resultado de la [[Operación]] se puede representar en [[Binario Sin Signo|BSS]].
+
+- $c = 0$: se puede representar en [[Binario Sin Signo|BSS]]
+- $c = 1$: no se puede representar en [[Binario Sin Signo|BSS]]
+
+> [!tip]
+> Si el resultado de una [[Operación]] puede ser representado en [[Binario Sin Signo]], significa que podemos representarlo con la **misma cantidad de [[Bit|Bits]]** que estabamos utilizando.
+
+## Overflow Flag (v)
+
+Indica si el resultado de la [[Operación]] se puede representar en [[Complemento a 2|CA2]].
+
+- $v = 0$: se puede representar en [[Complemento a 2|CA2]]
+- $v = 1$: no se puede representar en [[Complemento a 2|CA2]]
+
+> [!tip]
+> Si el resultado de una [[Operación]] puede ser representado en [[Complemento a 2]], significa que podemos representarlo con la **misma cantidad de [[Bit|Bits]]** que estabamos utilizando.
+
+Si estamos trabajando con [[Complemento a 2]], podemos saber **cuándo tenemos overflow** de la siguiente forma.
+
+- Si sumamos dos números positivos y el resultado es negativo: $(+) + (+) = (-)$.
+- SI sumamos dos números negativos y el resultado es positivo: $(-) + (-) = (+)$.
 
 - PC: Program Counter
 - PSW: Processor Status Word (también llamado Flag Register Process Status Word)
-
-Son [[Arquitectura de Computadoras/Bit|bits]] individuales en un registro de estado de la [[CPU]] que se utilizan para indicar el resultado de operaciones aritméticas lógicas y de comparación.
-
-Estas banderas sirven como indicadores para que la CPU tome decisiones sobre el flujo de control del programa y para optimizar el rendimiento.
-
-Las banderas más comunes incluyen:
-
- * **Bandera de acarreo (CF):** Indica si se produjo un acarreo durante una operación de suma o resta.
- * **Bandera de cero (ZF):** Indica si el resultado de una operación es cero.
- * **Bandera de signo (SF):** Indica el signo del resultado de una operación.
- * **Bandera de paridad (PF):** Indica si el resultado de una operación tiene un número par de bits 1.
- * **Bandera de desbordamiento (OF):** Indica si se produjo un desbordamiento durante una operación aritmética.
-
-Las banderas son utilizadas por la CPU para tomar decisiones sobre el flujo de control del programa. Por ejemplo, la bandera de cero se puede usar para determinar si una condición es verdadera o falsa, y la bandera de acarreo se puede usar para ajustar el resultado de una operación.
-
-Además, las banderas también se pueden usar para optimizar el rendimiento de la CPU. Por ejemplo, la bandera de paridad se puede usar para detectar errores de transmisión de datos, y la bandera de desbordamiento se puede usar para evitar que se produzcan errores aritméticos.
-
-En resumen, las flags o banderas son bits individuales en un registro de estado de la CPU que se utilizan para indicar el resultado de operaciones aritméticas lógicas y de comparación. Las banderas sirven como indicadores para que la CPU tome decisiones sobre el flujo de control del programa y para optimizar el rendimiento.
