@@ -1,8 +1,8 @@
 {
   "accentColor": "",
-  "cssTheme": "Atom",
+  "cssTheme": "Primary",
   "enabledCssSnippets": [
     "math"
   ],
-  "theme": "system"
+  "theme": "obsidian"
 }

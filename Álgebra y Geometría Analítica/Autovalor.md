@@ -4,7 +4,7 @@ aliases:
   - Valor característico
   - Eigenvalor
 created: 2024-07-01 19:22:44
-modified: 2024-07-10 13:51:57
+modified: 2024-08-07 13:36:02
 title: Autovalor
 ---
 
@@ -15,6 +15,9 @@ Dada la [[Matriz]] $A$ asociada a una [[Transformación lineal]] $T: V \rightarr
 $$
 Aw = \lambda w
 $$
+
+> [!tip]
+> Un valor es [[Autovalor]] cuando es raíz del [[Autopolinomio|Polinomio característico]].
 
 Suponiendo que $\dim(V) = n$, siempre existen $n$ [[Autovalor|Autovalores]], que pueden o no repetirse.
 

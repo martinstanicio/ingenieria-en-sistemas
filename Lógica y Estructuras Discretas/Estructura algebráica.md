@@ -1,6 +1,9 @@
 ---
+aliases:
+  - Sistema algebraico
+  - Sistema matemático
 created: 2024-06-14 14:57:25
-modified: 2024-07-12 13:57:14
+modified: 2024-08-09 13:14:22
 title: Estructura algebráica
 ---
 
@@ -21,3 +24,6 @@ Por ejemplo, la suma en los enteros: $(\mathbb{Z}, +)$.
 | [[Semigrupo conmutativo]] | Sí                | Sí                 | No                  | No                     | Sí                  |
 | [[Monoide conmutativo]]   | Sí                | Sí                 | Sí                  | No                     | Sí                  |
 | [[Grupo abeliano]]        | Sí                | Sí                 | Sí                  | Sí                     | Sí                  |
+
+> [!tip]
+> En una [[Operación]] con dos [[Conjunto|Conjuntos]], el primero debe ser obligatoriamente un [[Grupo abeliano]].
