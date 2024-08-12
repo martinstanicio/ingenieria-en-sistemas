@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Operaciones
 created: 2024-06-14 14:59:20
-modified: 2024-07-12 14:09:41
+modified: 2024-08-12 20:20:55
 title: Operación
 ---
 

@@ -6,7 +6,7 @@
 		{"id":"405b3d9218cf123d","type":"text","text":"Sistema E/S","x":-360,"y":180,"width":298,"height":60},
 		{"id":"ccb234fadf992aad","type":"text","text":"Líneas de control","x":88,"y":-200,"width":206,"height":60,"color":"5"},
 		{"id":"39c5cd05c2ee8091","type":"text","text":"Instrucciones","x":-140,"y":-200,"width":206,"height":60,"color":"1"},
-		{"id":"0c247193b40adf84","type":"text","text":"Datos","x":316,"y":-200,"width":206,"height":60}
+		{"id":"0c247193b40adf84","type":"text","text":"Datos","x":316,"y":-200,"width":206,"height":60,"color":"4"}
 	],
 	"edges":[
 		{"id":"29fdaac533be3e57","fromNode":"8ceb1da100278211","fromSide":"bottom","toNode":"a9c75dc0f089bccc","toSide":"top","color":"5"},
@@ -15,7 +15,7 @@
 		{"id":"57d995f402c91f8d","fromNode":"a9c75dc0f089bccc","fromSide":"right","toNode":"86e72ffdc9e52cb1","toSide":"left","fromEnd":"arrow"},
 		{"id":"dbfc332670d7dec5","fromNode":"8ceb1da100278211","fromSide":"bottom","toNode":"a9c75dc0f089bccc","toSide":"left","color":"1"},
 		{"id":"131d834be8da2424","fromNode":"405b3d9218cf123d","fromSide":"right","toNode":"a9c75dc0f089bccc","toSide":"left","color":"1"},
-		{"id":"e799a8bf5bffc0a3","fromNode":"405b3d9218cf123d","fromSide":"bottom","toNode":"a9c75dc0f089bccc","toSide":"bottom"},
-		{"id":"95e7415623e7b22a","fromNode":"a9c75dc0f089bccc","fromSide":"top","toNode":"405b3d9218cf123d","toSide":"top"}
+		{"id":"e799a8bf5bffc0a3","fromNode":"405b3d9218cf123d","fromSide":"bottom","toNode":"a9c75dc0f089bccc","toSide":"bottom","color":"4"},
+		{"id":"95e7415623e7b22a","fromNode":"a9c75dc0f089bccc","fromSide":"top","toNode":"405b3d9218cf123d","toSide":"top","color":"4"}
 	]
 }
