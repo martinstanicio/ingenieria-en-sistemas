@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Diagrama de Veitch-Karnaugh",
+      "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
+    },
+    {
+      "basename": "veitch-karnaugh-1",
+      "path": "Arquitectura de Computadoras/attachments/veitch-karnaugh-1.jpg"
+    },
+    {
       "basename": "20240430 - Tipo de triángulo",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Función CHR",
       "path": "Algoritmos y Estructuras de Datos/Función CHR.md"
-    },
-    {
-      "basename": "Regla de la cadena",
-      "path": "Análisis Matemático I/Regla de la cadena.md"
-    },
-    {
-      "basename": "Función compuesta",
-      "path": "Análisis Matemático I/Función compuesta.md"
     }
   ],
   "omittedPaths": [],
