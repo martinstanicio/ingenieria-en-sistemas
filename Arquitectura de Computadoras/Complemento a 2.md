@@ -2,7 +2,7 @@
 aliases:
   - CA2
 created: 2024-08-12 20:34:16
-modified: 2024-08-13 14:02:55
+modified: 2024-08-13 19:19:10
 title: Complemento a 2
 ---
 
@@ -13,13 +13,18 @@ Una **representación** del [[Sistema binario]], que con $n$ [[Bit|Bits]], nos p
 $$
 \left[
 - 2^{(n - 1)},
-2^{(n - 1)} - 1
++ 2^{(n - 1)} - 1
 \right]
 $$
 
-Para obtener el [[Complemento a 2]] de un número, debemos invertir los valores de sus [[Bit|Bits]], también llamado *bit flip*, y luego sumar 1.
+Al igual que con [[Módulo y signo]], el **MSB** nos indica si el número es negativo, por lo que los números ==positivos se escriben de igual forma==.
 
 $$
-0101_2 \Rightarrow
-1010_2 + 1_2 = 1011_2
+22_{10} \Rightarrow {0001\space0110}_2
+$$
+
+Para los negativos, debemos obtener su [[Complemento a 1]] y **sumarle $1$**.
+
+$$
+{-22}_{10} \Rightarrow {1110\space1010}_2
 $$

@@ -2,7 +2,7 @@
 aliases:
   - CA1
 created: 2024-08-12 20:34:16
-modified: 2024-08-13 19:02:11
+modified: 2024-08-13 19:14:39
 title: Complemento a 1
 ---
 
@@ -17,11 +17,17 @@ $$
 \right]
 $$
 
-Los números ==positivos se escriben de igual forma== que con [[Módulo y signo]]. Para los negativos, tomaremos el número representado con [[Módulo y signo]], pero con su **MSB**
-
-Para obtener el [[Complemento a 2]] de un número, debemos invertir los valores de sus [[Bit|Bits]], también llamado *bit flip*, y luego sumar 1.
+Al igual que con [[Módulo y signo]], el **MSB** nos indica si el número es negativo, por lo que los números ==positivos se escriben de igual forma==.
 
 $$
-0101_2 \Rightarrow
-1010_2 + 1_2 = 1011_2
+22_{10} \Rightarrow {0001\space0110}_2
 $$
+
+Para los negativos, tomaremos el número como ==positivo== representado con [[Módulo y signo]] (es decir, su **MSB** será $0$), y debemos invertir los valores de sus [[Bit|Bits]], también llamado *bit flip*.
+
+$$
+{-22}_{10} \Rightarrow {1110\space1001}_2
+$$
+
+> [!tip]
+> El opuesto de un número positivo, es el mismo número pero con sus [[Bit|Bits]] invertidos.
