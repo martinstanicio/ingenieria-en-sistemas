@@ -46,6 +46,3 @@ Si estamos trabajando con [[Complemento a 2]], podemos saber **cuándo tenemos o
 
 - Si sumamos dos números positivos y el resultado es negativo: $(+) + (+) = (-)$.
 - SI sumamos dos números negativos y el resultado es positivo: $(-) + (-) = (+)$.
-
-- PC: Program Counter
-- PSW: Processor Status Word (también llamado Flag Register Process Status Word)
