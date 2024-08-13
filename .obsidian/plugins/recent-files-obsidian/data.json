@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Módulo y signo",
-      "path": "Arquitectura de Computadoras/Módulo y signo.md"
+      "basename": "Complemento a 1",
+      "path": "Arquitectura de Computadoras/Complemento a 1.md"
     },
     {
       "basename": "Números signados en formato de punto fijo",
       "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
+      "basename": "Módulo y signo",
+      "path": "Arquitectura de Computadoras/Módulo y signo.md"
+    },
+    {
+      "basename": "Bit de paridad",
+      "path": "Arquitectura de Computadoras/Bit de paridad.md"
+    },
+    {
+      "basename": "Binario Sin Signo",
+      "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
     },
     {
       "basename": "Exceso K",
@@ -65,10 +77,6 @@
       "path": "Arquitectura de Computadoras/Binary Code Digit.md"
     },
     {
-      "basename": "Binario Sin Signo",
-      "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
-    },
-    {
       "basename": "Componentes básicos de una computadora",
       "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
     },
@@ -87,10 +95,6 @@
     {
       "basename": "Pasaje directo",
       "path": "Arquitectura de Computadoras/Pasaje directo.md"
-    },
-    {
-      "basename": "Bit de paridad",
-      "path": "Arquitectura de Computadoras/Bit de paridad.md"
     },
     {
       "basename": "BINIT",
@@ -195,10 +199,6 @@
     {
       "basename": "Disyunción (∨)",
       "path": "Lógica y Estructuras Discretas/Disyunción (∨).md"
-    },
-    {
-      "basename": "Anillo conmutativo",
-      "path": "Lógica y Estructuras Discretas/Anillo conmutativo.md"
     }
   ],
   "omittedPaths": [],

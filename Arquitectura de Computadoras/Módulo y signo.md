@@ -1,8 +1,6 @@
 ---
-aliases:
-  - CA2
 created: 2024-08-12 20:34:16
-modified: 2024-08-13 17:57:09
+modified: 2024-08-13 19:01:32
 title: Módulo y signo
 ---
 
@@ -17,9 +15,8 @@ $$
 \right]
 $$
 
-Para obtener el [[Complemento a 2]] de un número, debemos invertir los valores de sus [[Bit|Bits]], también llamado *bit flip*, y luego sumar 1.
+El **MSB** nos indica si el número es negativo o no, similar a la [[Flags#Sign Flag (s)]]: si es $0$, el número es positivo, si es $1$, es negativo. El resto de [[Bit|Bits]] nos indica la magnitud del número.
 
 $$
-0101_2 \Rightarrow
-1010_2 + 1_2 = 1011_2
+{-22}_{10} = {1001\space0110}_2
 $$
