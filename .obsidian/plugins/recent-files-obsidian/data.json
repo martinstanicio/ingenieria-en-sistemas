@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Complemento a 2",
+      "path": "Arquitectura de Computadoras/Complemento a 2.md"
+    },
+    {
+      "basename": "Bit",
+      "path": "Arquitectura de Computadoras/Bit.md"
+    },
+    {
       "basename": "Flags",
       "path": "Arquitectura de Computadoras/Flags.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "Pasaje directo",
       "path": "Arquitectura de Computadoras/Pasaje directo.md"
-    },
-    {
-      "basename": "Complemento a 2",
-      "path": "Arquitectura de Computadoras/Complemento a 2.md"
     },
     {
       "basename": "Binario Sin Signo",
@@ -99,10 +103,6 @@
     {
       "basename": "Byte",
       "path": "Arquitectura de Computadoras/Byte.md"
-    },
-    {
-      "basename": "Bit",
-      "path": "Arquitectura de Computadoras/Bit.md"
     },
     {
       "basename": "Diagrama de Veitch-Karnaugh",

@@ -1,6 +1,6 @@
 ---
 created: 2024-05-15 19:30:13
-modified: 2024-08-12 20:48:44
+modified: 2024-08-13 12:33:36
 title: Flags
 ---
 
@@ -14,6 +14,9 @@ Representa el **signo** de la [[Operación]].
 
 - $s = 0$: resultado positivo ($+$)
 - $s = 1$: resultado negativo ($-$)
+
+> [!warning]
+> También puede encontrarse como **Negative Flag (n)**.
 
 ## Zero Flag (z)
 
