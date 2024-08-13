@@ -1,8 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "Forma canónica",
+      "path": "Arquitectura de Computadoras/Forma canónica.md"
+    },
+    {
+      "basename": "Generaciones de hardware",
+      "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
+    },
+    {
+      "basename": "Flags",
+      "path": "Arquitectura de Computadoras/Flags.md"
+    },
+    {
+      "basename": "IEEE754",
+      "path": "Arquitectura de Computadoras/IEEE754.md"
+    },
+    {
+      "basename": "Minitérmino (m)",
+      "path": "Arquitectura de Computadoras/Minitérmino (m).md"
+    },
+    {
+      "basename": "Maxitérmino (M)",
+      "path": "Arquitectura de Computadoras/Maxitérmino (M).md"
+    },
+    {
+      "basename": "Complemento",
+      "path": "Lógica y Estructuras Discretas/Complemento.md"
+    },
+    {
+      "basename": "Código de Hamming",
+      "path": "Arquitectura de Computadoras/Código de Hamming.md"
+    },
+    {
       "basename": "Números signados en formato de punto fijo",
       "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
+      "basename": "Código ponderado",
+      "path": "Arquitectura de Computadoras/Código ponderado.md"
+    },
+    {
+      "basename": "Binary Code Digit",
+      "path": "Arquitectura de Computadoras/Binary Code Digit.md"
     },
     {
       "basename": "Binario Sin Signo",
@@ -23,10 +63,6 @@
     {
       "basename": "Bit",
       "path": "Arquitectura de Computadoras/Bit.md"
-    },
-    {
-      "basename": "Flags",
-      "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
       "basename": "Ley de Coulomb",
@@ -65,10 +101,6 @@
       "path": "Arquitectura de Computadoras/ROM.md"
     },
     {
-      "basename": "IEEE754",
-      "path": "Arquitectura de Computadoras/IEEE754.md"
-    },
-    {
       "basename": "Sistema octal",
       "path": "Arquitectura de Computadoras/Sistema octal.md"
     },
@@ -91,10 +123,6 @@
     {
       "basename": "Diagrama en bloques de una computadora de propósito general",
       "path": "Arquitectura de Computadoras/Diagrama en bloques de una computadora de propósito general.canvas"
-    },
-    {
-      "basename": "Binary Code Digit",
-      "path": "Arquitectura de Computadoras/Binary Code Digit.md"
     },
     {
       "basename": "Arquitectura Harvard",
@@ -171,34 +199,6 @@
     {
       "basename": "Estructura algebráica",
       "path": "Lógica y Estructuras Discretas/Estructura algebráica.md"
-    },
-    {
-      "basename": "Colisión",
-      "path": "Física I/Colisión.md"
-    },
-    {
-      "basename": "Cantidad de movimiento",
-      "path": "Física I/Cantidad de movimiento.md"
-    },
-    {
-      "basename": "Impulso",
-      "path": "Física I/Impulso.md"
-    },
-    {
-      "basename": "Física II",
-      "path": "Física II/Física II.md"
-    },
-    {
-      "basename": "Autopolinomio",
-      "path": "Álgebra y Geometría Analítica/Autopolinomio.md"
-    },
-    {
-      "basename": "Autovalor",
-      "path": "Álgebra y Geometría Analítica/Autovalor.md"
-    },
-    {
-      "basename": "Teorema Cayley - Hamilton",
-      "path": "Álgebra y Geometría Analítica/Teorema Cayley - Hamilton.md"
     }
   ],
   "omittedPaths": [],
