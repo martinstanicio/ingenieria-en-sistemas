@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Exceso K",
+      "path": "Arquitectura de Computadoras/Exceso K.md"
+    },
+    {
       "basename": "Complemento a 2",
       "path": "Arquitectura de Computadoras/Complemento a 2.md"
+    },
+    {
+      "basename": "Binario Sin Signo",
+      "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
+    },
+    {
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
     },
     {
       "basename": "Bit",
@@ -23,10 +35,6 @@
     {
       "basename": "Pasaje directo",
       "path": "Arquitectura de Computadoras/Pasaje directo.md"
-    },
-    {
-      "basename": "Binario Sin Signo",
-      "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
     },
     {
       "basename": "Bit de paridad",
@@ -51,10 +59,6 @@
     {
       "basename": "ROM",
       "path": "Arquitectura de Computadoras/ROM.md"
-    },
-    {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
     },
     {
       "basename": "IEEE754",
@@ -195,10 +199,6 @@
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Array",
-      "path": "Algoritmos y Estructuras de Datos/Array.md"
     }
   ],
   "omittedPaths": [],

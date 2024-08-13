@@ -1,6 +1,6 @@
 ---
 created: 2024-05-08 20:04:34
-modified: 2024-05-15 19:12:01
+modified: 2024-08-13 13:38:54
 title: Números signados en formato de punto fijo
 ---
 
@@ -39,5 +39,3 @@ El rango de representación en $2^n$, ya que existe una única representación d
 Tengo el mismo rango de representación, pero como está desplazado hacia la izquierda $127$ lugares, puedo representar números desde el $-127$ hasta el $128$.
 
 Por ejemplo, el número $-12$ en esta notación, se escribe como el $115$ en el sistema binario sin signo.
-
- el sistema binario sin signo.
