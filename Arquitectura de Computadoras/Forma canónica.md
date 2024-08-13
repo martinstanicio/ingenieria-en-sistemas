@@ -1,8 +1,6 @@
 ---
-aliases:
-  - Forma normal
 created: 2024-08-13 17:07:52
-modified: 2024-08-13 17:51:25
+modified: 2024-08-13 19:42:45
 title: Forma canónica
 ---
 

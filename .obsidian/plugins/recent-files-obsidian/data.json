@@ -1,20 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+      "basename": "Números signados con punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados con punto fijo.md"
     },
     {
-      "basename": "Complemento a 2",
-      "path": "Arquitectura de Computadoras/Complemento a 2.md"
+      "basename": "Módulo y signo",
+      "path": "Arquitectura de Computadoras/Módulo y signo.md"
     },
     {
       "basename": "Complemento a 1",
       "path": "Arquitectura de Computadoras/Complemento a 1.md"
     },
     {
-      "basename": "Módulo y signo",
-      "path": "Arquitectura de Computadoras/Módulo y signo.md"
+      "basename": "Complemento a 2",
+      "path": "Arquitectura de Computadoras/Complemento a 2.md"
+    },
+    {
+      "basename": "Forma normalizada",
+      "path": "Arquitectura de Computadoras/Forma normalizada.md"
+    },
+    {
+      "basename": "Forma canónica",
+      "path": "Arquitectura de Computadoras/Forma canónica.md"
+    },
+    {
+      "basename": "Base estandar",
+      "path": "Álgebra y Geometría Analítica/Base estandar.md"
     },
     {
       "basename": "Bit de paridad",
@@ -35,10 +47,6 @@
     {
       "basename": "202403410 - Unión e intersección",
       "path": "Arquitectura de Computadoras/Actividades/202403410 - Unión e intersección.md"
-    },
-    {
-      "basename": "Forma canónica",
-      "path": "Arquitectura de Computadoras/Forma canónica.md"
     },
     {
       "basename": "Transistor",
@@ -191,14 +199,6 @@
     {
       "basename": "Función",
       "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Proposiciones",
-      "path": "Lógica y Estructuras Discretas/Proposiciones.md"
-    },
-    {
-      "basename": "Disyunción (∨)",
-      "path": "Lógica y Estructuras Discretas/Disyunción (∨).md"
     }
   ],
   "omittedPaths": [],
