@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Exceso K",
-      "path": "Arquitectura de Computadoras/Exceso K.md"
-    },
-    {
-      "basename": "Complemento a 2",
-      "path": "Arquitectura de Computadoras/Complemento a 2.md"
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
     },
     {
       "basename": "Binario Sin Signo",
       "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
     },
     {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+      "basename": "Exceso K",
+      "path": "Arquitectura de Computadoras/Exceso K.md"
+    },
+    {
+      "basename": "Componentes básicos de una computadora",
+      "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
+    },
+    {
+      "basename": "Complemento a 2",
+      "path": "Arquitectura de Computadoras/Complemento a 2.md"
     },
     {
       "basename": "Bit",
@@ -195,10 +199,6 @@
     {
       "basename": "Teorema Cayley - Hamilton",
       "path": "Álgebra y Geometría Analítica/Teorema Cayley - Hamilton.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     }
   ],
   "omittedPaths": [],

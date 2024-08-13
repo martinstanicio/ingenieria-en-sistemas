@@ -10,7 +10,7 @@ title: Binario Sin Signo
 
 Una representación del [[Sistema binario]] **sin signo** o [[Bit de paridad]], es decir, ==todos los números son positivos==.
 
-Con $n$ [[Bit|Bits]], nos permite representar $2^n$ números en el siguiente rango.
+Con $n$ [[Bit|Bits]], nos permite representar $2^n$ números en el siguiente intervalo.
 
 $$
 \left[

@@ -8,7 +8,7 @@ title: Complemento a 2
 
 # Complemento a 2
 
-Una **representación** del [[Sistema binario]], que con $n$ [[Bit|Bits]], nos permite representar $2^n$ números el siguiente rango.
+Una **representación** del [[Sistema binario]], que con $n$ [[Bit|Bits]], nos permite representar $2^n$ números el siguiente intervalo.
 
 $$
 \left[
