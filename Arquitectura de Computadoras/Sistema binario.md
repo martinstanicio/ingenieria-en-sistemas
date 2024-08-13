@@ -1,6 +1,6 @@
 ---
 created: 2024-04-24 18:04:59
-modified: 2024-08-12 20:08:34
+modified: 2024-08-12 21:22:42
 title: Sistema binario
 ---
 
@@ -12,7 +12,7 @@ $$
 0011_2 = 0 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 3
 $$
 
-Cada cifra de un número binario es un [[Arquitectura de Computadoras/Bit]]. El primero se denomina **MSB** (Most Significant Bit), y el último **LSB** (Least Significant Bit).
+Cada cifra de un número binario es un [[Bit]]. El primero se denomina **MSB** (*Most Significant Bit*), y el último **LSB** (*Least Significant Bit*).
 
 > [!tip]
 > Con $n$ [[Bit|Bits]] se pueden representar valores entre $0$ y $2^n - 1$.

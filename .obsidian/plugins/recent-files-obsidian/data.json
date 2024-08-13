@@ -5,6 +5,18 @@
       "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
+      "basename": "Ley de Coulomb",
+      "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
+    },
+    {
+      "basename": "Sistema binario",
+      "path": "Arquitectura de Computadoras/Sistema binario.md"
+    },
+    {
+      "basename": "Pasaje directo",
+      "path": "Arquitectura de Computadoras/Pasaje directo.md"
+    },
+    {
       "basename": "Complemento a 2",
       "path": "Arquitectura de Computadoras/Complemento a 2.md"
     },
@@ -31,10 +43,6 @@
     {
       "basename": "Registro",
       "path": "Arquitectura de Computadoras/Registro.md"
-    },
-    {
-      "basename": "Sistema binario",
-      "path": "Arquitectura de Computadoras/Sistema binario.md"
     },
     {
       "basename": "ROM",
@@ -191,14 +199,6 @@
     {
       "basename": "Array",
       "path": "Algoritmos y Estructuras de Datos/Array.md"
-    },
-    {
-      "basename": "Parámetros",
-      "path": "Algoritmos y Estructuras de Datos/Parámetros.md"
-    },
-    {
-      "basename": "Multiplicidad geométrica",
-      "path": "Álgebra y Geometría Analítica/Multiplicidad geométrica.md"
     }
   ],
   "omittedPaths": [],

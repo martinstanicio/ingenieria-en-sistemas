@@ -18,6 +18,7 @@ Donde:
  * $k$: constante de proporcionalidad dieléctrica
  * $q_1$ y $q_2$: magnitudes de las cargas (C)
  * $r$: distancia entre las cargas (m)
+ * 
 Efectos:
  * Si las cargas son del mismo signo, la fuerza es repulsiva.
  * Si las cargas son de distinto signo, la fuerza es atractiva.
