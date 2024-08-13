@@ -2,11 +2,11 @@
 aliases:
   - BSS
 created: 2024-08-12 20:28:47
-modified: 2024-08-13 19:01:39
-title: Binario Sin Signo
+modified: 2024-08-13 20:24:15
+title: Binario sin signo
 ---
 
-# Binario Sin Signo
+# Binario sin signo
 
 Una representación del [[Sistema binario]] **sin signo**, es decir, ==todos los números son positivos==.
 

@@ -27,13 +27,13 @@ Indica si el resultado de la [[Operación]] **es cero o no**.
 
 ## Carry Flag (c)
 
-Indica si el resultado de la [[Operación]] se puede representar en [[Binario Sin Signo|BSS]].
+Indica si el resultado de la [[Operación]] se puede representar en [[Binario sin signo|BSS]].
 
-- $c = 0$: se puede representar en [[Binario Sin Signo|BSS]]
-- $c = 1$: no se puede representar en [[Binario Sin Signo|BSS]]
+- $c = 0$: se puede representar en [[Binario sin signo|BSS]]
+- $c = 1$: no se puede representar en [[Binario sin signo|BSS]]
 
 > [!tip]
-> Si el resultado de una [[Operación]] puede ser representado en [[Binario Sin Signo]], significa que podemos representarlo con la **misma cantidad de [[Bit|Bits]]** que estabamos utilizando.
+> Si el resultado de una [[Operación]] puede ser representado en [[Binario sin signo]], significa que podemos representarlo con la **misma cantidad de [[Bit|Bits]]** que estabamos utilizando.
 
 ## Overflow Flag (v)
 

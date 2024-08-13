@@ -1,24 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Números signados con punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados con punto fijo.md"
+      "basename": "Flags",
+      "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
-      "basename": "Módulo y signo",
-      "path": "Arquitectura de Computadoras/Módulo y signo.md"
+      "basename": "Binario signado con punto fijo",
+      "path": "Arquitectura de Computadoras/Binario signado con punto fijo.md"
     },
     {
-      "basename": "Complemento a 1",
-      "path": "Arquitectura de Computadoras/Complemento a 1.md"
+      "basename": "Binario sin signo",
+      "path": "Arquitectura de Computadoras/Binario sin signo.md"
+    },
+    {
+      "basename": "Forma normalizada",
+      "path": "Arquitectura de Computadoras/Forma normalizada.md"
     },
     {
       "basename": "Complemento a 2",
       "path": "Arquitectura de Computadoras/Complemento a 2.md"
     },
     {
-      "basename": "Forma normalizada",
-      "path": "Arquitectura de Computadoras/Forma normalizada.md"
+      "basename": "Complemento a 1",
+      "path": "Arquitectura de Computadoras/Complemento a 1.md"
+    },
+    {
+      "basename": "Módulo y signo",
+      "path": "Arquitectura de Computadoras/Módulo y signo.md"
     },
     {
       "basename": "Forma canónica",
@@ -31,10 +39,6 @@
     {
       "basename": "Bit de paridad",
       "path": "Arquitectura de Computadoras/Bit de paridad.md"
-    },
-    {
-      "basename": "Binario Sin Signo",
-      "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
     },
     {
       "basename": "Exceso K",
@@ -55,10 +59,6 @@
     {
       "basename": "Generaciones de hardware",
       "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
-    },
-    {
-      "basename": "Flags",
-      "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
       "basename": "IEEE754",
