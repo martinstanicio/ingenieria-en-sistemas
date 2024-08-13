@@ -1,8 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "Módulo y signo",
+      "path": "Arquitectura de Computadoras/Módulo y signo.md"
+    },
+    {
+      "basename": "Números signados en formato de punto fijo",
+      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
+    },
+    {
+      "basename": "Exceso K",
+      "path": "Arquitectura de Computadoras/Exceso K.md"
+    },
+    {
+      "basename": "Complemento a 2",
+      "path": "Arquitectura de Computadoras/Complemento a 2.md"
+    },
+    {
+      "basename": "Código de Hamming",
+      "path": "Arquitectura de Computadoras/Código de Hamming.md"
+    },
+    {
+      "basename": "202403410 - Unión e intersección",
+      "path": "Arquitectura de Computadoras/Actividades/202403410 - Unión e intersección.md"
+    },
+    {
       "basename": "Forma canónica",
       "path": "Arquitectura de Computadoras/Forma canónica.md"
+    },
+    {
+      "basename": "Transistor",
+      "path": "Arquitectura de Computadoras/Transistor.md"
     },
     {
       "basename": "Generaciones de hardware",
@@ -29,14 +57,6 @@
       "path": "Lógica y Estructuras Discretas/Complemento.md"
     },
     {
-      "basename": "Código de Hamming",
-      "path": "Arquitectura de Computadoras/Código de Hamming.md"
-    },
-    {
-      "basename": "Números signados en formato de punto fijo",
-      "path": "Arquitectura de Computadoras/Números signados en formato de punto fijo.md"
-    },
-    {
       "basename": "Código ponderado",
       "path": "Arquitectura de Computadoras/Código ponderado.md"
     },
@@ -49,16 +69,8 @@
       "path": "Arquitectura de Computadoras/Binario Sin Signo.md"
     },
     {
-      "basename": "Exceso K",
-      "path": "Arquitectura de Computadoras/Exceso K.md"
-    },
-    {
       "basename": "Componentes básicos de una computadora",
       "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
-    },
-    {
-      "basename": "Complemento a 2",
-      "path": "Arquitectura de Computadoras/Complemento a 2.md"
     },
     {
       "basename": "Bit",
@@ -103,10 +115,6 @@
     {
       "basename": "Sistema octal",
       "path": "Arquitectura de Computadoras/Sistema octal.md"
-    },
-    {
-      "basename": "Transistor",
-      "path": "Arquitectura de Computadoras/Transistor.md"
     },
     {
       "basename": "Sistema numérico",
@@ -191,14 +199,6 @@
     {
       "basename": "Anillo conmutativo",
       "path": "Lógica y Estructuras Discretas/Anillo conmutativo.md"
-    },
-    {
-      "basename": "Anillo",
-      "path": "Lógica y Estructuras Discretas/Anillo.md"
-    },
-    {
-      "basename": "Estructura algebráica",
-      "path": "Lógica y Estructuras Discretas/Estructura algebráica.md"
     }
   ],
   "omittedPaths": [],
