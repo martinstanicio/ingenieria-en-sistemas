@@ -1,6 +1,62 @@
 {
   "recentFiles": [
     {
+      "basename": "Infinitésimos",
+      "path": "Análisis Matemático I/Infinitésimos.md"
+    },
+    {
+      "basename": "Continuidad",
+      "path": "Análisis Matemático I/Continuidad.md"
+    },
+    {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
+    },
+    {
+      "basename": "Función compuesta",
+      "path": "Análisis Matemático I/Función compuesta.md"
+    },
+    {
+      "basename": "Imagen",
+      "path": "Análisis Matemático I/Imagen.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Dominio",
+      "path": "Análisis Matemático I/Dominio.md"
+    },
+    {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
+      "basename": "Cota",
+      "path": "Análisis Matemático I/Cota.md"
+    },
+    {
+      "basename": "Asíntota no vertical",
+      "path": "Análisis Matemático I/Asíntota no vertical.md"
+    },
+    {
+      "basename": "Pendiente",
+      "path": "Análisis Matemático I/Pendiente.md"
+    },
+    {
+      "basename": "Comportamiento final",
+      "path": "Análisis Matemático I/Comportamiento final.md"
+    },
+    {
+      "basename": "Asíntota vertical",
+      "path": "Análisis Matemático I/Asíntota vertical.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
       "basename": "Algoritmos y Estructuras de Datos",
       "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
     },
@@ -23,10 +79,6 @@
     {
       "basename": "Función",
       "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
     },
     {
       "basename": "Flags",
@@ -147,58 +199,6 @@
     {
       "basename": "Registro",
       "path": "Arquitectura de Computadoras/Registro.md"
-    },
-    {
-      "basename": "ROM",
-      "path": "Arquitectura de Computadoras/ROM.md"
-    },
-    {
-      "basename": "Sistema octal",
-      "path": "Arquitectura de Computadoras/Sistema octal.md"
-    },
-    {
-      "basename": "Sistema numérico",
-      "path": "Arquitectura de Computadoras/Sistema numérico.md"
-    },
-    {
-      "basename": "Sistema hexadecimal",
-      "path": "Arquitectura de Computadoras/Sistema hexadecimal.md"
-    },
-    {
-      "basename": "Sistema decimal",
-      "path": "Arquitectura de Computadoras/Sistema decimal.md"
-    },
-    {
-      "basename": "Diagrama en bloques de una computadora de propósito general",
-      "path": "Arquitectura de Computadoras/Diagrama en bloques de una computadora de propósito general.canvas"
-    },
-    {
-      "basename": "Arquitectura Harvard",
-      "path": "Arquitectura de Computadoras/Arquitectura Harvard.canvas"
-    },
-    {
-      "basename": "Arquitectura Harvard",
-      "path": "Arquitectura de Computadoras/Arquitectura Harvard.md"
-    },
-    {
-      "basename": "Nibble",
-      "path": "Arquitectura de Computadoras/Nibble.md"
-    },
-    {
-      "basename": "Byte",
-      "path": "Arquitectura de Computadoras/Byte.md"
-    },
-    {
-      "basename": "Diagrama de Veitch-Karnaugh",
-      "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
-    },
-    {
-      "basename": "veitch-karnaugh-1",
-      "path": "Arquitectura de Computadoras/attachments/veitch-karnaugh-1.jpg"
-    },
-    {
-      "basename": "20240430 - Tipo de triángulo",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240430 - Tipo de triángulo.md"
     }
   ],
   "omittedPaths": [],
