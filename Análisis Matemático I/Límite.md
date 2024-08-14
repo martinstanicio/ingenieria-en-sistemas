@@ -1,14 +1,14 @@
 ---
 created: 2024-04-23 14:09:56
-modified: 2024-08-14 00:15:27
+modified: 2024-08-14 00:36:03
 title: Límite
 ---
 
 # Límite
 
-El límite de una [[Análisis Matemático I/Función|Función]] en un punto es el ==valor al cual se aproximan las imágenes== de sus puntos cercanos y adyacentes.
+El [[Límite]] de una [[Análisis Matemático I/Función|Función]] en un punto es el **valor al cual se aproximan las [[Imagen|Imágenes]]** de sus puntos cercanos y adyacentes.
 
-Si nos aproximamos por derecha y por izquierda del punto, y la imagen se acerca cada vez más a aquella del punto que estamos analizando, decimos que **el límite existe**.
+Si nos aproximamos ==por derecha== y ==por izquierda== del punto, y la [[Imagen]] se acerca cada vez más a aquella del punto que estamos analizando, decimos que **el límite existe**.
 
 $$
 \left.
@@ -26,7 +26,7 @@ En este caso, el punto $A$ es límite, pero el punto $B$ no lo es.
 
 ## Clasificación de límites
 
-Dependiendo del valor al que se aproxime un límite, podemos clasificarlo de diferentes formas.
+Dependiendo del valor al que se aproxime un [[Límite]], podemos clasificarlo de diferentes formas.
 
 ### Límites determinados
 
@@ -34,7 +34,7 @@ Son aquellos que se aproximan a un **número real** $\mathbb{R}$.
 
 ### Límites infinitos
 
-Son aquellos que se aproximan a $\infty$ o $-\infty$.
+Son aquellos que se aproximan a $+\infty$ o $-\infty$.
 
 ### Límites indeterminados
 

@@ -1,16 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
+      "basename": "Asíntota no vertical",
+      "path": "Análisis Matemático I/Asíntota no vertical.md"
+    },
+    {
+      "basename": "Asíntota vertical",
+      "path": "Análisis Matemático I/Asíntota vertical.md"
+    },
+    {
+      "basename": "Análisis Matemático I",
+      "path": "Análisis Matemático I/Análisis Matemático I.md"
+    },
+    {
+      "basename": "Indeterminación",
+      "path": "Análisis Matemático I/Indeterminación.md"
     },
     {
       "basename": "Continuidad",
       "path": "Análisis Matemático I/Continuidad.md"
     },
     {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
+      "basename": "Pendiente",
+      "path": "Análisis Matemático I/Pendiente.md"
+    },
+    {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
+      "basename": "Recta normal",
+      "path": "Análisis Matemático I/Recta normal.md"
+    },
+    {
+      "basename": "Recta tangente",
+      "path": "Análisis Matemático I/Recta tangente.md"
+    },
+    {
+      "basename": "Infinitésimos",
+      "path": "Análisis Matemático I/Infinitésimos.md"
     },
     {
       "basename": "Función compuesta",
@@ -37,24 +65,8 @@
       "path": "Análisis Matemático I/Cota.md"
     },
     {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Pendiente",
-      "path": "Análisis Matemático I/Pendiente.md"
-    },
-    {
       "basename": "Comportamiento final",
       "path": "Análisis Matemático I/Comportamiento final.md"
-    },
-    {
-      "basename": "Asíntota vertical",
-      "path": "Análisis Matemático I/Asíntota vertical.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
     },
     {
       "basename": "Algoritmos y Estructuras de Datos",
@@ -187,18 +199,6 @@
     {
       "basename": "BINIT",
       "path": "Sistemas y Procesos de Negocios/BINIT.md"
-    },
-    {
-      "basename": "ALU",
-      "path": "Arquitectura de Computadoras/ALU.md"
-    },
-    {
-      "basename": "Operación",
-      "path": "Lógica y Estructuras Discretas/Operación.md"
-    },
-    {
-      "basename": "Registro",
-      "path": "Arquitectura de Computadoras/Registro.md"
     }
   ],
   "omittedPaths": [],
