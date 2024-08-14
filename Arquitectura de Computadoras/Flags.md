@@ -1,6 +1,6 @@
 ---
 created: 2024-05-15 19:30:13
-modified: 2024-08-13 12:33:36
+modified: 2024-08-13 20:43:47
 title: Flags
 ---
 
@@ -27,20 +27,17 @@ Indica si el resultado de la [[Operación]] **es cero o no**.
 
 ## Carry Flag (c)
 
-Indica si el resultado de la [[Operación]] se puede representar en [[Binario sin signo|BSS]].
+Indica el valor del *Carry [[Bit]]* proveniente de la suma de los **MSB** de ambos números.
 
-- $c = 0$: se puede representar en [[Binario sin signo|BSS]]
-- $c = 1$: no se puede representar en [[Binario sin signo|BSS]]
-
-> [!tip]
-> Si el resultado de una [[Operación]] puede ser representado en [[Binario sin signo]], significa que podemos representarlo con la **misma cantidad de [[Bit|Bits]]** que estabamos utilizando.
+- $c = 0$
+- $c = 1$: fue necesario un *Carry [[Bit]]*.
 
 ## Overflow Flag (v)
 
-Indica si el resultado de la [[Operación]] se puede representar en [[Complemento a 2|CA2]].
+Indica si el resultado de la [[Operación]] se puede representar en [[Complemento a 2|CA2]], o, caso contrario, si quedó fuera del rango de representación posible.
 
-- $v = 0$: se puede representar en [[Complemento a 2|CA2]]
-- $v = 1$: no se puede representar en [[Complemento a 2|CA2]]
+- $v = 0$: dentro del rango
+- $v = 1$: fuera del rango
 
 > [!tip]
 > Si el resultado de una [[Operación]] puede ser representado en [[Complemento a 2]], significa que podemos representarlo con la **misma cantidad de [[Bit|Bits]]** que estabamos utilizando.
