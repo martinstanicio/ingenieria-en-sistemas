@@ -5,6 +5,10 @@
       "path": "Análisis Matemático I/Derivada.md"
     },
     {
+      "basename": "Función compuesta",
+      "path": "Análisis Matemático I/Función compuesta.md"
+    },
+    {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
     },
@@ -47,10 +51,6 @@
     {
       "basename": "Infinitésimos",
       "path": "Análisis Matemático I/Infinitésimos.md"
-    },
-    {
-      "basename": "Función compuesta",
-      "path": "Análisis Matemático I/Función compuesta.md"
     },
     {
       "basename": "Imagen",

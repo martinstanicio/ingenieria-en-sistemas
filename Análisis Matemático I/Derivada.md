@@ -1,6 +1,6 @@
 ---
 created: 2024-06-14 20:56:27
-modified: 2024-08-15 00:16:27
+modified: 2024-08-15 00:18:15
 title: Derivada
 ---
 
@@ -29,6 +29,9 @@ $$
 f'(c) =
 \lim_{h \to 0} \frac{f(c + h) - f(c)}{h}
 $$
+
+> [!warning]
+> Es importante que este sea un [[Límite#Límites determinados|Límite determinado]], pues si es un [[Límite#Límites infinitos|Límite infinito]], **no existe** la [[Derivada]] en el punto.
 
 ![[derivada.png]]
 
