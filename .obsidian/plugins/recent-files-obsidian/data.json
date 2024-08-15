@@ -5,8 +5,8 @@
       "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
+      "basename": "Derivación logarítmica",
+      "path": "Análisis Matemático I/Derivación logarítmica.md"
     },
     {
       "basename": "Reglas de derivación",
@@ -15,6 +15,10 @@
     {
       "basename": "Regla de la cadena",
       "path": "Análisis Matemático I/Regla de la cadena.md"
+    },
+    {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
     },
     {
       "basename": "Cadena",
@@ -195,10 +199,6 @@
     {
       "basename": "Binary Code Digit",
       "path": "Arquitectura de Computadoras/Binary Code Digit.md"
-    },
-    {
-      "basename": "Componentes básicos de una computadora",
-      "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
     }
   ],
   "omittedPaths": [],

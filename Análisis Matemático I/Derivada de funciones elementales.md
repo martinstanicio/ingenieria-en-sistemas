@@ -1,6 +1,6 @@
 ---
 created: 2024-08-15 00:55:43
-modified: 2024-08-15 14:27:45
+modified: 2024-08-15 18:17:36
 title: Derivada de funciones elementales
 ---
 
@@ -19,6 +19,7 @@ Calculo de la [[Derivada]] de [[Análisis Matemático I/Función|Funciones]] **e
 | $\frac{1}{x}$           | $- \frac{1}{x^2}$         |
 | $\sqrt{x}$              | $\frac{1}{2 \sqrt{x}}$    |
 | $\log_a x$              | $\frac{1}{x \cdot \ln a}$ |
+| $a^x$                   | $a^x \cdot \ln a$         |
 
 ## Función constante
 
