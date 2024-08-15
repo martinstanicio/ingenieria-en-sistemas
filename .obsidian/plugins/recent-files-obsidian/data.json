@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Reglas de derivación",
-      "path": "Análisis Matemático I/Reglas de derivación.md"
-    },
-    {
       "basename": "Derivada de funciones elementales",
       "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
       "basename": "Derivada",
       "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
+      "basename": "Reglas de derivación",
+      "path": "Análisis Matemático I/Reglas de derivación.md"
+    },
+    {
+      "basename": "Regla de la cadena",
+      "path": "Análisis Matemático I/Regla de la cadena.md"
+    },
+    {
+      "basename": "Cadena",
+      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
     },
     {
       "basename": "Función",
@@ -191,14 +199,6 @@
     {
       "basename": "Componentes básicos de una computadora",
       "path": "Arquitectura de Computadoras/Componentes básicos de una computadora.md"
-    },
-    {
-      "basename": "Bit",
-      "path": "Arquitectura de Computadoras/Bit.md"
-    },
-    {
-      "basename": "Ley de Coulomb",
-      "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
     }
   ],
   "omittedPaths": [],
