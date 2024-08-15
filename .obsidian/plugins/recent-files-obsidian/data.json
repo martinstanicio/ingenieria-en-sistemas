@@ -5,6 +5,10 @@
       "path": "Análisis Matemático I/Asíntota no vertical.md"
     },
     {
+      "basename": "20240809 - Frases",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
+    },
+    {
       "basename": "Asíntota vertical",
       "path": "Análisis Matemático I/Asíntota vertical.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Pasaje directo",
       "path": "Arquitectura de Computadoras/Pasaje directo.md"
-    },
-    {
-      "basename": "BINIT",
-      "path": "Sistemas y Procesos de Negocios/BINIT.md"
     }
   ],
   "omittedPaths": [],
