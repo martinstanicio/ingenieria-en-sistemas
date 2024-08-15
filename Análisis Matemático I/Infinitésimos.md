@@ -1,6 +1,6 @@
 ---
 created: 2024-05-25 16:25:55
-modified: 2024-06-23 18:34:58
+modified: 2024-08-15 01:30:58
 title: Infinitésimos
 ---
 
@@ -57,11 +57,11 @@ $$
 > [!note]
 > Todo factor de una expresión se puede **sustituir** por un infinitésimo **equivalente** sin que esto altere el límite de la expresión.
 
-## Infinitésimos equivalentes conocidos
+## Infinitésimos equivalentes notables
 
 Existen una serie de [[Infinitésimos#Infinitésimos equivalentes $f(x) approx g(x)$|infinitésimos equivalentes]] notables.
 
-Con $x \rightarrow 0$:
+Con $x \to 0$:
 
 - $e^x - 1 \approx x$
 - $a^x - 1 \approx x \cdot \ln a, a > 0$
@@ -72,7 +72,7 @@ Con $x \rightarrow 0$:
 - $\arctan x \approx x$
 - $\ln(x + 1) \approx x$
 
-Con $x \rightarrow 1$:
+Con $x \to 1$:
 
 - $\ln(x) \approx x - 1$
 - $x^a - 1 \approx a(x - 1), a \neq 0$

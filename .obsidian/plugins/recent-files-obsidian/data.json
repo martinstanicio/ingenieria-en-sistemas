@@ -5,6 +5,10 @@
       "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
+      "basename": "Infinitésimos",
+      "path": "Análisis Matemático I/Infinitésimos.md"
+    },
+    {
       "basename": "Derivada",
       "path": "Análisis Matemático I/Derivada.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "Recta tangente",
       "path": "Análisis Matemático I/Recta tangente.md"
-    },
-    {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
     },
     {
       "basename": "Imagen",
