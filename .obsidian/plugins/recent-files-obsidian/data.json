@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Reglas de derivación",
+      "path": "Análisis Matemático I/Reglas de derivación.md"
+    },
+    {
       "basename": "Derivada",
       "path": "Análisis Matemático I/Derivada.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Ley de Coulomb",
       "path": "Arquitectura de Computadoras/Ley de Coulomb.md"
-    },
-    {
-      "basename": "Sistema binario",
-      "path": "Arquitectura de Computadoras/Sistema binario.md"
     }
   ],
   "omittedPaths": [],
