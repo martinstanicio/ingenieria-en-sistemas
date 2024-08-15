@@ -1,6 +1,6 @@
 ---
 created: 2024-08-15 13:57:36
-modified: 2024-08-15 15:32:25
+modified: 2024-08-15 15:42:14
 title: Reglas de derivación
 ---
 
@@ -201,34 +201,13 @@ Utilizamos la regla del [[Reglas de derivación#Inverso multiplicativo|Inverso m
 
 $$
 c'(x) =
-\frac{f'(x)}{g(x)} + f(x) \cdot \left( - \frac{1}{g(x)} \right)
+\frac{f'(x)}{g(x)} + f(x) \cdot \left( - \frac{g'(x)}{g^2(x)} \right) =
+\frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{g^2(x)}
 $$
 
-Para continuar resolviendo, **sumamos y restamos** $f(x) \cdot g(x + h)$ dentro del numerador.
-
-$$
-p'(x) =
-\lim_{h \to 0} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x + h) + f(x) \cdot g(x + h) - f(x) \cdot g(x)}{h} =
-\lim_{h \to 0} \left[ \frac{f(x + h) - f(x)}{h} \cdot g(x + h) + f(x) \cdot \frac{g(x + h) - g(x)}{h} \right] =
-f'(x) \cdot g(x) + f(x) \cdot g'(x)
-$$
-
-> [!important]
-> Si fuera necesario calcular la [[Derivada]] de un producto de 3 o más [[Análisis Matemático I/Función|Funciones]].
->
-> $$
-> \left( f(x) \cdot g(x) \cdot h(x) \right)'
-> $$
->
-> Podriamos agrupar $p(x) = f(x) \cdot g(x)$ para poder aplicar esta regla.
->
-> $$
-> \left( p(x) \cdot h(x) \right)'
-> $$
-
-Por ejemplo, con $p(x) = e^x \cdot \sin x$, la [[Derivada]] es $p'(x) = e^x \cdot \sin x + e^x \cdot \cos x = e^x \cdot (\sin x + \cos x)$.
+Por ejemplo, con $c(x) = \frac{x}{\ln x}$, la [[Derivada]] es $c'(x) = \frac{\ln x - 1}{\ln^2 x}$.
 
 ```desmos-graph
-p(x) = e^x \cdot \sin x
-p'(x)|dashed
+c(x) = \frac{x}{\ln x}
+c'(x)|dashed
 ```
