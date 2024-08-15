@@ -1,6 +1,6 @@
 ---
 created: 2024-06-14 20:56:27
-modified: 2024-08-15 00:18:15
+modified: 2024-08-15 00:54:58
 title: Derivada
 ---
 

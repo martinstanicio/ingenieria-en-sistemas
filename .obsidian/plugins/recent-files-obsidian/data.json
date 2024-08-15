@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Derivada de funciones elementales",
+      "path": "Análisis Matemático I/Derivada de funciones elementales.md"
+    },
+    {
       "basename": "Derivada",
       "path": "Análisis Matemático I/Derivada.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Sistema binario",
       "path": "Arquitectura de Computadoras/Sistema binario.md"
-    },
-    {
-      "basename": "Pasaje directo",
-      "path": "Arquitectura de Computadoras/Pasaje directo.md"
     }
   ],
   "omittedPaths": [],
