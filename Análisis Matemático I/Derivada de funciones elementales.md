@@ -1,6 +1,6 @@
 ---
 created: 2024-08-15 00:55:43
-modified: 2024-08-15 02:31:20
+modified: 2024-08-15 14:27:45
 title: Derivada de funciones elementales
 ---
 
@@ -8,16 +8,17 @@ title: Derivada de funciones elementales
 
 Calculo de la [[Derivada]] de [[Análisis Matemático I/Función|Funciones]] **elementales**.
 
-| $f$                     | $f'$                   |
-| ----------------------- | ---------------------- |
-| $k$                     | $0$                    |
-| $x^n, n \in \mathbb{N}$ | $n \cdot x^{n - 1}$    |
-| $e^x$                   | $e^x$                  |
-| $\ln x$                 | $\frac{1}{x}$          |
-| $\sin x$                | $\cos x$               |
-| $\cos x$                | $- \sin x$             |
-| $\frac{1}{x}$           | $- \frac{1}{x^2}$      |
-| $\sqrt{x}$              | $\frac{1}{2 \sqrt{x}}$ |
+| $f$                     | $f'$                      |
+| ----------------------- | ------------------------- |
+| $k$                     | $0$                       |
+| $x^n, n \in \mathbb{N}$ | $n \cdot x^{n - 1}$       |
+| $e^x$                   | $e^x$                     |
+| $\ln x$                 | $\frac{1}{x}$             |
+| $\sin x$                | $\cos x$                  |
+| $\cos x$                | $- \sin x$                |
+| $\frac{1}{x}$           | $- \frac{1}{x^2}$         |
+| $\sqrt{x}$              | $\frac{1}{2 \sqrt{x}}$    |
+| $\log_a x$              | $\frac{1}{x \cdot \ln a}$ |
 
 ## Función constante
 
