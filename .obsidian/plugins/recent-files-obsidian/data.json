@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
     },
     {
       "basename": "Derivada de funciones elementales",
       "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Infinitésimos",
+      "path": "Análisis Matemático I/Infinitésimos.md"
     },
     {
       "basename": "Función compuesta",
@@ -59,10 +63,6 @@
     {
       "basename": "Imagen",
       "path": "Análisis Matemático I/Imagen.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
     },
     {
       "basename": "Dominio",

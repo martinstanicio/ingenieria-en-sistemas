@@ -1,12 +1,23 @@
 ---
 created: 2024-08-15 00:55:43
-modified: 2024-08-15 02:11:54
+modified: 2024-08-15 02:31:20
 title: Derivada de funciones elementales
 ---
 
 # Derivada de funciones elementales
 
 Calculo de la [[Derivada]] de [[Análisis Matemático I/Función|Funciones]] **elementales**.
+
+| $f$                     | $f'$                   |
+| ----------------------- | ---------------------- |
+| $k$                     | $0$                    |
+| $x^n, n \in \mathbb{N}$ | $n \cdot x^{n - 1}$    |
+| $e^x$                   | $e^x$                  |
+| $\ln x$                 | $\frac{1}{x}$          |
+| $\sin x$                | $\cos x$               |
+| $\cos x$                | $- \sin x$             |
+| $\frac{1}{x}$           | $- \frac{1}{x^2}$      |
+| $\sqrt{x}$              | $\frac{1}{2 \sqrt{x}}$ |
 
 ## Función constante
 
@@ -233,15 +244,16 @@ Aplicamos la propiedad que nos da el resultado del **coseno de una suma**: $\cos
 $$
 f'(x) =
 \lim_{h \to 0} \frac{\cos x \cdot \cos h - \sin x \cdot \sin h - \cos x}{h} =
-\lim_{h \to 0} \frac{\cos x (\cos h - 1) - \sin x \cdot \sin h}{h}
+\lim_{h \to 0} \frac{\cos x (\cos h - 1) - \sin x \cdot \sin h}{h} =
+\lim_{h \to 0} \left( \cos x \cdot \frac{\cos h - 1}{h} - \frac{\sin x \cdot \sin h}{h} \right)
 $$
 
 Utilizamos uno de los [[Infinitésimos#Infinitésimos equivalentes notables]], con $h \to 0$, es $\sin h \approx h$.
 
 $$
 f'(x) =
-\lim_{h \to 0} \left( \frac{\sin x \left(\cos h - 1 \right)}{h} + \frac{\cos x \cdot h}{h} \right) =
-\lim_{h \to 0} \left( \sin x \cdot \frac{\cos h - 1}{h} + \cos x \right)
+\lim_{h \to 0} \left( \cos x \cdot \frac{\cos h - 1}{h} - \frac{\sin x \cdot h}{h} \right) =
+\lim_{h \to 0} \left( \cos x \cdot \frac{\cos h - 1}{h} - \sin x \right)
 $$
 
 Analizamos el factor $\frac{\cos h - 1}{h}$ por separado.
@@ -258,15 +270,15 @@ Continuamos calculando el [[Límite]].
 
 $$
 f'(x) =
-\lim_{h \to 0} \left( \sin x \cdot \frac{- \sin h \cdot \sin h}{h(\cos h + 1)} + \cos x \right)
+\lim_{h \to 0} \left( \cos x \cdot \frac{- \sin h \cdot \sin h}{h(\cos h + 1)} - \sin x \right)
 $$
 
 Utilizamos el mismo [[Infinitésimos#Infinitésimos equivalentes $f(x) approx g(x)$|Infinitésimo equivalente]] mencionado previamente: $\sin h \approx h$.
 
 $$
 f'(x) =
-\lim_{h \to 0} \left( \sin x \cdot \frac{- h \cdot \sin h}{h(\cos h + 1)} + \cos x \right) =
-\lim_{h \to 0} \left( \sin x \cdot \frac{- \sin h}{\cos h + 1} + \cos x \right) =
-\sin x \cdot \frac{0}{2} + \cos x =
-\cos x
+\lim_{h \to 0} \left( \cos x \cdot \frac{- h \cdot \sin h}{h(\cos h + 1)} - \sin x \right) =
+\lim_{h \to 0} \left( \cos x \cdot \frac{- \sin h}{\cos h + 1} - \sin x \right) =
+\cos x \cdot \frac{0}{2} - \sin x =
+- \sin x
 $$
