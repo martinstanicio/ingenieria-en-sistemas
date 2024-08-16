@@ -1,6 +1,6 @@
 ---
 created: 2024-08-15 00:55:43
-modified: 2024-08-15 19:15:20
+modified: 2024-08-16 00:25:34
 title: Derivada de funciones elementales
 ---
 
@@ -283,13 +283,4 @@ f'(x) =
 \lim_{h \to 0} \left( \cos x \cdot \frac{- \sin h}{\cos h + 1} - \sin x \right) =
 \cos x \cdot \frac{0}{2} - \sin x =
 - \sin x
-$$
-
-## Función inversa
-
-La [[Derivada]] de la [[Análisis Matemático I/Función|Función]] inversa $f^{-1} (x)$ correspondiente a una [[Análisis Matemático I/Función|Función]] $f(x)$ siempre será $\frac{1}{f'(x)}$.
-
-$$
-\left( f^{-1} \right)_{\left( f(x) \right)}' =
-\frac{1}{f'(x)}
 $$

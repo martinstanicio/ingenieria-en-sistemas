@@ -5,6 +5,10 @@
       "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
+      "basename": "Derivada de la función inversa",
+      "path": "Análisis Matemático I/Derivada de la función inversa.md"
+    },
+    {
       "basename": "Derivación logarítmica",
       "path": "Análisis Matemático I/Derivación logarítmica.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Código ponderado",
       "path": "Arquitectura de Computadoras/Código ponderado.md"
-    },
-    {
-      "basename": "Binary Code Digit",
-      "path": "Arquitectura de Computadoras/Binary Code Digit.md"
     }
   ],
   "omittedPaths": [],
