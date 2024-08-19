@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Diferencial",
+      "path": "Análisis Matemático I/Diferencial.md"
+    },
+    {
+      "basename": "Diferencia",
+      "path": "Lógica y Estructuras Discretas/Diferencia.md"
+    },
+    {
       "basename": "20240809 - Frases",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Maxitérmino (M)",
       "path": "Arquitectura de Computadoras/Maxitérmino (M).md"
-    },
-    {
-      "basename": "Complemento",
-      "path": "Lógica y Estructuras Discretas/Complemento.md"
-    },
-    {
-      "basename": "Código ponderado",
-      "path": "Arquitectura de Computadoras/Código ponderado.md"
     }
   ],
   "omittedPaths": [],
