@@ -1,6 +1,6 @@
 ---
 created: 2024-06-14 20:56:27
-modified: 2024-08-15 00:54:58
+modified: 2024-08-19 20:36:49
 title: Derivada
 ---
 
@@ -17,10 +17,10 @@ $$
 > Existen múltiples nomenclaturas para trabajar con [[Derivada|Derivadas]].
 >
 > $$
-> f'(c) =
-> \frac{df}{dx}(c) =
-> D_x f(c) =
-> D \space f(c)
+> f' =
+> \frac{df}{dx} =
+> D_x f =
+> D \space f
 > $$
 
 Si consideramos $h = x - c$ y $x = c + h$, podemos llegar a la siguiente conclusión.

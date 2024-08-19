@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Derivación paramétrica",
+      "path": "Análisis Matemático I/Derivación paramétrica.md"
+    },
+    {
       "basename": "Derivación implícita",
       "path": "Análisis Matemático I/Derivación implícita.md"
     },
     {
-      "basename": "Forma implícita",
-      "path": "Análisis Matemático I/Forma implícita.md"
-    },
-    {
       "basename": "Forma paramétrica",
       "path": "Análisis Matemático I/Forma paramétrica.md"
+    },
+    {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
+      "basename": "Forma implícita",
+      "path": "Análisis Matemático I/Forma implícita.md"
     },
     {
       "basename": "Matriz",
@@ -79,10 +87,6 @@
     {
       "basename": "Regla de la cadena",
       "path": "Análisis Matemático I/Regla de la cadena.md"
-    },
-    {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
     },
     {
       "basename": "Cadena",
@@ -195,10 +199,6 @@
     {
       "basename": "Complemento a 2",
       "path": "Arquitectura de Computadoras/Complemento a 2.md"
-    },
-    {
-      "basename": "Complemento a 1",
-      "path": "Arquitectura de Computadoras/Complemento a 1.md"
     }
   ],
   "omittedPaths": [],
