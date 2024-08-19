@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Derivación implícita",
+      "path": "Análisis Matemático I/Derivación implícita.md"
+    },
+    {
+      "basename": "Forma implícita",
+      "path": "Análisis Matemático I/Forma implícita.md"
+    },
+    {
       "basename": "Forma paramétrica",
       "path": "Análisis Matemático I/Forma paramétrica.md"
     },
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Forma implícita",
-      "path": "Análisis Matemático I/Forma implícita.md"
     },
     {
       "basename": "Derivación logarítmica",
@@ -195,10 +199,6 @@
     {
       "basename": "Complemento a 1",
       "path": "Arquitectura de Computadoras/Complemento a 1.md"
-    },
-    {
-      "basename": "Módulo y signo",
-      "path": "Arquitectura de Computadoras/Módulo y signo.md"
     }
   ],
   "omittedPaths": [],
