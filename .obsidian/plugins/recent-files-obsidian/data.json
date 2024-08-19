@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Derivación logarítmica",
+      "path": "Análisis Matemático I/Derivación logarítmica.md"
+    },
+    {
+      "basename": "Aproximación de errores",
+      "path": "Física I/Aproximación de errores.md"
+    },
+    {
+      "basename": "Error relativo",
+      "path": "Física I/Error relativo.md"
+    },
+    {
+      "basename": "Error absoluto",
+      "path": "Física I/Error absoluto.md"
+    },
+    {
+      "basename": "Mediciones indirectas",
+      "path": "Física I/Mediciones indirectas.md"
+    },
+    {
+      "basename": "Mediciones directas",
+      "path": "Física I/Mediciones directas.md"
+    },
+    {
+      "basename": "Física I",
+      "path": "Física I/Física I.md"
+    },
+    {
       "basename": "Reglas de diferenciación",
       "path": "Análisis Matemático I/Reglas de diferenciación.md"
     },
@@ -27,10 +55,6 @@
     {
       "basename": "Derivada de la función inversa",
       "path": "Análisis Matemático I/Derivada de la función inversa.md"
-    },
-    {
-      "basename": "Derivación logarítmica",
-      "path": "Análisis Matemático I/Derivación logarítmica.md"
     },
     {
       "basename": "Reglas de derivación",
@@ -175,30 +199,6 @@
     {
       "basename": "Bit de paridad",
       "path": "Arquitectura de Computadoras/Bit de paridad.md"
-    },
-    {
-      "basename": "Exceso K",
-      "path": "Arquitectura de Computadoras/Exceso K.md"
-    },
-    {
-      "basename": "Código de Hamming",
-      "path": "Arquitectura de Computadoras/Código de Hamming.md"
-    },
-    {
-      "basename": "202403410 - Unión e intersección",
-      "path": "Arquitectura de Computadoras/Actividades/202403410 - Unión e intersección.md"
-    },
-    {
-      "basename": "Transistor",
-      "path": "Arquitectura de Computadoras/Transistor.md"
-    },
-    {
-      "basename": "Generaciones de hardware",
-      "path": "Arquitectura de Computadoras/Generaciones de hardware.md"
-    },
-    {
-      "basename": "IEEE754",
-      "path": "Arquitectura de Computadoras/IEEE754.md"
     }
   ],
   "omittedPaths": [],

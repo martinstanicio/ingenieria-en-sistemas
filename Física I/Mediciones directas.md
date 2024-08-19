@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Medición directa
 created: 2024-03-21 19:26:22
-modified: 2024-05-08 01:33:31
+modified: 2024-08-19 16:30:10
 title: Mediciones directas
 ---
 
