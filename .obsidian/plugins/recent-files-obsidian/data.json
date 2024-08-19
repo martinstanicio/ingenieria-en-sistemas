@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Reglas de diferenciación",
+      "path": "Análisis Matemático I/Reglas de diferenciación.md"
+    },
+    {
+      "basename": "Sucesión",
+      "path": "Análisis Matemático I/Sucesión.md"
+    },
+    {
       "basename": "Diferencial",
       "path": "Análisis Matemático I/Diferencial.md"
+    },
+    {
+      "basename": "Derivada de funciones elementales",
+      "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
       "basename": "Diferencia",
@@ -11,10 +23,6 @@
     {
       "basename": "20240809 - Frases",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
-    },
-    {
-      "basename": "Derivada de funciones elementales",
-      "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
       "basename": "Derivada de la función inversa",
@@ -191,14 +199,6 @@
     {
       "basename": "IEEE754",
       "path": "Arquitectura de Computadoras/IEEE754.md"
-    },
-    {
-      "basename": "Minitérmino (m)",
-      "path": "Arquitectura de Computadoras/Minitérmino (m).md"
-    },
-    {
-      "basename": "Maxitérmino (M)",
-      "path": "Arquitectura de Computadoras/Maxitérmino (M).md"
     }
   ],
   "omittedPaths": [],

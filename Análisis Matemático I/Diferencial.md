@@ -1,6 +1,6 @@
 ---
 created: 2024-08-19 15:06:55
-modified: 2024-08-19 15:51:11
+modified: 2024-08-19 16:07:09
 title: Diferencial
 ---
 
@@ -29,6 +29,13 @@ Como podemos ver, lo que hacemos es calcular la [[Imagen]] de la [[Recta tangent
 >
 > $$df \cong \Delta f$$
 >
-> Para obtener el valor real de la [[Análisis Matemático I/Función|Función]] $f(x)$ debemos tener en cuenta el **error** $\epsilon$.
+> Para obtener este valor aproximado de la [[Análisis Matemático I/Función|Función]] $f(x)$ en $x_0 + \Delta x$, realizamos lo siguiente.
 >
-> $$f(x_0 + \Delta x) = f'(x_0) \cdot dx - \epsilon$$
+> $$f(x_0 + \Delta x) \cong f(x_0) + f'(x_0) \cdot \Delta x$$
+
+Por ejemplo, con $f(x) = \sqrt{x}$, sabemos que $f'(x) = \frac{1}{2 \sqrt{x}}$, buscamos aproximar $f(50) = \sqrt{50}$. Tomamos el ==valor más cercano conocido== $f(49) = \sqrt{49} = 7$, por lo que $\Delta x = 1$.
+
+$$
+\sqrt{50} \cong \sqrt{49} + \frac{1}{2 \sqrt{49}} \cdot 1 \Rightarrow
+\sqrt{50} \cong 7 + \frac{1}{14}
+$$
