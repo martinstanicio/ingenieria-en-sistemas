@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Forma paramétrica",
+      "path": "Análisis Matemático I/Forma paramétrica.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Forma implícita",
+      "path": "Análisis Matemático I/Forma implícita.md"
+    },
+    {
       "basename": "Derivación logarítmica",
       "path": "Análisis Matemático I/Derivación logarítmica.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Módulo y signo",
       "path": "Arquitectura de Computadoras/Módulo y signo.md"
-    },
-    {
-      "basename": "Forma canónica",
-      "path": "Arquitectura de Computadoras/Forma canónica.md"
-    },
-    {
-      "basename": "Base estandar",
-      "path": "Álgebra y Geometría Analítica/Base estandar.md"
-    },
-    {
-      "basename": "Bit de paridad",
-      "path": "Arquitectura de Computadoras/Bit de paridad.md"
     }
   ],
   "omittedPaths": [],
