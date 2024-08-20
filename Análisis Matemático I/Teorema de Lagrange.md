@@ -2,19 +2,20 @@
 aliases:
   - Teorema del valor medio
 created: 2024-08-20 16:51:33
-modified: 2024-08-20 18:14:13
+modified: 2024-08-20 18:38:22
 title: Teorema de Lagrange
 ---
 
 # Teorema de Lagrange
 
-Dada una [[Análisis Matemático I/Función|Función]] $y = f(x)$, [[Continuidad|Continua]] en el **intervalo cerrado** $[a, b]$, [[Derivada|Derivable]] en el **intervalo abierto** $(a, b)$, y sabemos que $f(a) = f(b)$.
+Dada una [[Análisis Matemático I/Función|Función]] $y = f(x)$, [[Continuidad|Continua]] en el **intervalo cerrado** $[a, b]$, y [[Derivada|Derivable]] en el **intervalo abierto** $(a, b)$.
 
-Sabiendo esto, podemos afirmar que existe al menos un punto $c \in (a, b)$ tal que $f'(c) = 0$.
+Sabiendo esto, podemos afirmar que **existe al menos un punto** $c \in (a, b)$ tal que su [[Recta tangente]] es **paralela** a la [[Recta secante]] que une a los puntos $(a, f(a))$ y $(b, f(b))$.
+
+![[lagrange.jpg]]
+
+Por lo tanto, la [[Pendiente]] $m = f'(c)$ de la [[Recta tangente]] es igual a la [[Pendiente]] de la [[Recta secante]].
 
 $$
-\left( y = f(x) \space \text{es continua en} \space [a, b] \right) \land
-\left( y = f(x) \space \text{es derivable en} \space (a, b) \right) \land
-\left( f(a) = f(b) \right) \Rightarrow
-\exists c \in (a, b): f'(c) = 0
+f'(c) = \frac{f(b) - f(a)}{b - a}
 $$
