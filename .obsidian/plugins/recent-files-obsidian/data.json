@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
+      "basename": "Cociente incremental",
+      "path": "Análisis Matemático I/Cociente incremental.md"
+    },
+    {
       "basename": "Derivación paramétrica",
       "path": "Análisis Matemático I/Derivación paramétrica.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "Forma paramétrica",
       "path": "Análisis Matemático I/Forma paramétrica.md"
-    },
-    {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
     },
     {
       "basename": "Forma implícita",
@@ -195,10 +199,6 @@
     {
       "basename": "Forma normalizada",
       "path": "Arquitectura de Computadoras/Forma normalizada.md"
-    },
-    {
-      "basename": "Complemento a 2",
-      "path": "Arquitectura de Computadoras/Complemento a 2.md"
     }
   ],
   "omittedPaths": [],

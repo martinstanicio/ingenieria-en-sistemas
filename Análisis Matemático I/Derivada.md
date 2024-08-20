@@ -1,12 +1,12 @@
 ---
 created: 2024-06-14 20:56:27
-modified: 2024-08-19 20:36:49
+modified: 2024-08-19 21:08:26
 title: Derivada
 ---
 
 # Derivada
 
-La [[Pendiente]] $m$ de la [[Recta tangente]] de una [[Análisis Matemático I/Función|Función]] en un punto dado $x = c$.
+La [[Pendiente]] $m$ de la [[Recta tangente]] de una [[Análisis Matemático I/Función|Función]] en un punto dado $x = c$. La obtenemos calculando el [[Límite]] del [[Cociente incremental]] cuando $x$ tiende a $c$.
 
 $$
 m = f'(c) =
