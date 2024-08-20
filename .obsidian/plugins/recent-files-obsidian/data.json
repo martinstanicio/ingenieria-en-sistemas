@@ -5,6 +5,10 @@
       "path": "Análisis Matemático I/Derivada.md"
     },
     {
+      "basename": "Derivadas laterales",
+      "path": "Análisis Matemático I/Derivadas laterales.md"
+    },
+    {
       "basename": "Cociente incremental",
       "path": "Análisis Matemático I/Cociente incremental.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Binario sin signo",
       "path": "Arquitectura de Computadoras/Binario sin signo.md"
-    },
-    {
-      "basename": "Forma normalizada",
-      "path": "Arquitectura de Computadoras/Forma normalizada.md"
     }
   ],
   "omittedPaths": [],

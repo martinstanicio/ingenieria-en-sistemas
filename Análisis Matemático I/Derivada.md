@@ -36,11 +36,11 @@ $$
 ![[derivada.png]]
 
 > [!tip]
-> Si una [[Análisis Matemático I/Función|Función]] es **derivable** en $x = c$, podemos afirmar que también es [[Continuidad|Continua]] en $x = c$.
+> Si una [[Análisis Matemático I/Función|Función]] es **derivable** en $x = c$, entonces es [[Continuidad|Continua]] en $x = c$.
 >
 > $$
 > \exists f'(c) \Rightarrow
 > \lim_{x \to c} f(x) = f(c)
 > $$
 >
-> Sin embargo, que una [[Análisis Matemático I/Función|Función]] sea [[Continuidad|Continua]] en un punto, **no significa que sea derivable**.
+> También resulta util su contrarrecíproca, pues, si una [[Análisis Matemático I/Función|Función]] no es [[Continuidad|Continua]] en $x = c$, entonces no es **derivable** en $x = c.
