@@ -1,6 +1,6 @@
 ---
 created: 2024-06-14 20:56:27
-modified: 2024-08-19 21:08:26
+modified: 2024-08-20 15:45:20
 title: Derivada
 ---
 
@@ -43,4 +43,4 @@ $$
 > \lim_{x \to c} f(x) = f(c)
 > $$
 >
-> También resulta util su contrarrecíproca, pues, si una [[Análisis Matemático I/Función|Función]] no es [[Continuidad|Continua]] en $x = c$, entonces no es **derivable** en $x = c.
+> También resulta util su **contrarrecíproca**, pues, si una [[Análisis Matemático I/Función|Función]] no es [[Continuidad|Continua]] en $x = c$, entonces no es **derivable** en $x = c$.

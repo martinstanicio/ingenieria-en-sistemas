@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
+      "basename": "Extremo relativo",
+      "path": "Análisis Matemático I/Extremo relativo.md"
+    },
+    {
+      "basename": "Bicondicional (↔)",
+      "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
+    },
+    {
+      "basename": "Extremo absoluto",
+      "path": "Análisis Matemático I/Extremo absoluto.md"
     },
     {
       "basename": "Derivadas laterales",
       "path": "Análisis Matemático I/Derivadas laterales.md"
     },
     {
-      "basename": "Cociente incremental",
-      "path": "Análisis Matemático I/Cociente incremental.md"
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
     },
     {
       "basename": "Derivación paramétrica",
@@ -19,6 +27,14 @@
     {
       "basename": "Derivación implícita",
       "path": "Análisis Matemático I/Derivación implícita.md"
+    },
+    {
+      "basename": "Regla del pulgar",
+      "path": "Física I/Regla del pulgar.md"
+    },
+    {
+      "basename": "Cociente incremental",
+      "path": "Análisis Matemático I/Cociente incremental.md"
     },
     {
       "basename": "Forma paramétrica",
@@ -183,22 +199,6 @@
     {
       "basename": "Ciclo desde-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Flags",
-      "path": "Arquitectura de Computadoras/Flags.md"
-    },
-    {
-      "basename": "Binario signado con punto fijo",
-      "path": "Arquitectura de Computadoras/Binario signado con punto fijo.md"
-    },
-    {
-      "basename": "Binario sin signo",
-      "path": "Arquitectura de Computadoras/Binario sin signo.md"
     }
   ],
   "omittedPaths": [],
