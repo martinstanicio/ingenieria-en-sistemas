@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Criterio de la primera derivada",
+      "path": "Análisis Matemático I/Criterio de la primera derivada.md"
+    },
+    {
+      "basename": "Reglas de derivación",
+      "path": "Análisis Matemático I/Reglas de derivación.md"
+    },
+    {
+      "basename": "Teorema de Lagrange",
+      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
       "basename": "Teorema de Rolle",
       "path": "Análisis Matemático I/Teorema de Rolle.md"
     },
     {
       "basename": "Teorema de Fermat",
       "path": "Análisis Matemático I/Teorema de Fermat.md"
-    },
-    {
-      "basename": "Teorema de Lagrange",
-      "path": "Análisis Matemático I/Teorema de Lagrange.md"
     },
     {
       "basename": "Recta tangente",
@@ -149,10 +157,6 @@
       "path": "Análisis Matemático I/Derivada de la función inversa.md"
     },
     {
-      "basename": "Reglas de derivación",
-      "path": "Análisis Matemático I/Reglas de derivación.md"
-    },
-    {
       "basename": "Regla de la cadena",
       "path": "Análisis Matemático I/Regla de la cadena.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Pendiente",
       "path": "Análisis Matemático I/Pendiente.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
     }
   ],
   "omittedPaths": [],
