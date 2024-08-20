@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de Lagrange",
+      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
       "basename": "Teorema de Rolle",
       "path": "Análisis Matemático I/Teorema de Rolle.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Imagen",
       "path": "Análisis Matemático I/Imagen.md"
-    },
-    {
-      "basename": "Dominio",
-      "path": "Análisis Matemático I/Dominio.md"
     }
   ],
   "omittedPaths": [],
