@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de Rolle",
+      "path": "Análisis Matemático I/Teorema de Rolle.md"
+    },
+    {
       "basename": "Teorema de Fermat",
       "path": "Análisis Matemático I/Teorema de Fermat.md"
+    },
+    {
+      "basename": "Punto singular",
+      "path": "Análisis Matemático I/Punto singular.md"
+    },
+    {
+      "basename": "Punto crítico",
+      "path": "Análisis Matemático I/Punto crítico.md"
+    },
+    {
+      "basename": "Punto estacionario",
+      "path": "Análisis Matemático I/Punto estacionario.md"
+    },
+    {
+      "basename": "Punto frontera",
+      "path": "Análisis Matemático I/Punto frontera.md"
+    },
+    {
+      "basename": "Complemento",
+      "path": "Lógica y Estructuras Discretas/Complemento.md"
     },
     {
       "basename": "Extremo relativo",
@@ -175,30 +199,6 @@
     {
       "basename": "Dominio",
       "path": "Análisis Matemático I/Dominio.md"
-    },
-    {
-      "basename": "Cota",
-      "path": "Análisis Matemático I/Cota.md"
-    },
-    {
-      "basename": "Comportamiento final",
-      "path": "Análisis Matemático I/Comportamiento final.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
-    },
-    {
-      "basename": "20240809 - Invertir",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Invertir.md"
-    },
-    {
-      "basename": "Mínimo",
-      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
-    },
-    {
-      "basename": "Array",
-      "path": "Algoritmos y Estructuras de Datos/Array.md"
     }
   ],
   "omittedPaths": [],
