@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de Fermat",
+      "path": "Análisis Matemático I/Teorema de Fermat.md"
+    },
+    {
       "basename": "Extremo relativo",
       "path": "Análisis Matemático I/Extremo relativo.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Array",
       "path": "Algoritmos y Estructuras de Datos/Array.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
     }
   ],
   "omittedPaths": [],
