@@ -2,13 +2,13 @@
 aliases:
   - Teorema del valor medio generalizado
 created: 2024-08-20 16:51:33
-modified: 2024-08-21 00:48:23
+modified: 2024-08-21 00:51:06
 title: Teorema de Cauchy
 ---
 
 # Teorema de Cauchy
 
-Dada las [[Análisis Matemático I/Función|Función]] $y = f(x)$ y $y = g(x)$, [[Continuidad|Continuas]] en el **intervalo cerrado** $[a, b]$, y [[Derivada|Derivables]] en el **intervalo abierto** $(a, b)$.
+Dadas las [[Análisis Matemático I/Función|Funciones]] $y = f(x)$ y $y = g(x)$, [[Continuidad|Continuas]] en el **intervalo cerrado** $[a, b]$, y [[Derivada|Derivables]] en el **intervalo abierto** $(a, b)$.
 
 Sabiendo esto, podemos afirmar que **existe al menos un punto** $c \in (a, b)$ tal que se cumple lo siguiente.
 
