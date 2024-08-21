@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "20240820 - Empleados",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Empleados.md"
+    },
+    {
+      "basename": "Teorema de Lagrange",
+      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
       "basename": "20240820 - Apellidos",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Apellidos.md"
     },
@@ -9,8 +17,24 @@
       "path": "Algoritmos y Estructuras de Datos/Vectores paralelos.md"
     },
     {
-      "basename": "Teorema de Lagrange",
-      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+      "basename": "Array",
+      "path": "Algoritmos y Estructuras de Datos/Array.md"
+    },
+    {
+      "basename": "20240712 - Fecha",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240712 - Fecha.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Algoritmos y Estructuras de Datos/Python.md"
+    },
+    {
+      "basename": "Bifurcaciones",
+      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
     },
     {
       "basename": "Ciclo mientras",
@@ -175,30 +199,6 @@
     {
       "basename": "Regla de la cadena",
       "path": "Análisis Matemático I/Regla de la cadena.md"
-    },
-    {
-      "basename": "Cadena",
-      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
-    },
-    {
-      "basename": "Infinitésimos",
-      "path": "Análisis Matemático I/Infinitésimos.md"
-    },
-    {
-      "basename": "Función compuesta",
-      "path": "Análisis Matemático I/Función compuesta.md"
-    },
-    {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Asíntota vertical",
-      "path": "Análisis Matemático I/Asíntota vertical.md"
     }
   ],
   "omittedPaths": [],
