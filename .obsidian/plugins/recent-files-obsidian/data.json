@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "Criterio de la segunda derivada",
+      "path": "Análisis Matemático I/Criterio de la segunda derivada.md"
+    },
+    {
+      "basename": "Punto singular",
+      "path": "Análisis Matemático I/Punto singular.md"
+    },
+    {
       "basename": "Concavidad",
       "path": "Análisis Matemático I/Concavidad.md"
     },
     {
+      "basename": "Estudio de función",
+      "path": "Análisis Matemático I/Estudio de función.md"
+    },
+    {
       "basename": "Punto de inflexión",
       "path": "Análisis Matemático I/Punto de inflexión.md"
+    },
+    {
+      "basename": "derivada",
+      "path": "Análisis Matemático I/attachments/derivada.png"
     },
     {
       "basename": "Regla de L'Hopital",
@@ -101,10 +117,6 @@
       "path": "Análisis Matemático I/Recta normal.md"
     },
     {
-      "basename": "Punto singular",
-      "path": "Análisis Matemático I/Punto singular.md"
-    },
-    {
       "basename": "Punto crítico",
       "path": "Análisis Matemático I/Punto crítico.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Mediciones directas",
       "path": "Física I/Mediciones directas.md"
-    },
-    {
-      "basename": "Física I",
-      "path": "Física I/Física I.md"
-    },
-    {
-      "basename": "Reglas de diferenciación",
-      "path": "Análisis Matemático I/Reglas de diferenciación.md"
-    },
-    {
-      "basename": "Sucesión",
-      "path": "Análisis Matemático I/Sucesión.md"
     }
   ],
   "omittedPaths": [],

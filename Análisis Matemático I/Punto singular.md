@@ -1,6 +1,6 @@
 ---
 created: 2024-08-20 17:21:52
-modified: 2024-08-20 17:22:15
+modified: 2024-08-21 02:17:48
 title: Punto singular
 ---
 
