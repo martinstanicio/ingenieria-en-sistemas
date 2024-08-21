@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Regla de L'Hopital",
+      "path": "Análisis Matemático I/Regla de L'Hopital.md"
+    },
+    {
+      "basename": "Teorema de Cauchy",
+      "path": "Análisis Matemático I/Teorema de Cauchy.md"
+    },
+    {
       "basename": "Teorema de Rolle",
       "path": "Análisis Matemático I/Teorema de Rolle.md"
     },
@@ -191,10 +199,6 @@
     {
       "basename": "Diferencia",
       "path": "Lógica y Estructuras Discretas/Diferencia.md"
-    },
-    {
-      "basename": "20240809 - Frases",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
     }
   ],
   "omittedPaths": [],
