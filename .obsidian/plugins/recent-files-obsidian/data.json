@@ -1,24 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Función split",
-      "path": "Algoritmos y Estructuras de Datos/Función split.md"
+      "basename": "Teorema de Rolle",
+      "path": "Análisis Matemático I/Teorema de Rolle.md"
     },
     {
-      "basename": "Teorema de Lagrange",
-      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+      "basename": "Función split",
+      "path": "Algoritmos y Estructuras de Datos/Función split.md"
     },
     {
       "basename": "20240820 - Empleados",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Empleados.md"
     },
     {
-      "basename": "20240820 - Apellidos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Apellidos.md"
-    },
-    {
       "basename": "Vectores paralelos",
       "path": "Algoritmos y Estructuras de Datos/Vectores paralelos.md"
+    },
+    {
+      "basename": "Teorema de Lagrange",
+      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
+      "basename": "20240820 - Apellidos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Apellidos.md"
     },
     {
       "basename": "Array",
@@ -55,10 +59,6 @@
     {
       "basename": "Reglas de derivación",
       "path": "Análisis Matemático I/Reglas de derivación.md"
-    },
-    {
-      "basename": "Teorema de Rolle",
-      "path": "Análisis Matemático I/Teorema de Rolle.md"
     },
     {
       "basename": "Teorema de Fermat",
@@ -195,10 +195,6 @@
     {
       "basename": "20240809 - Frases",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
-    },
-    {
-      "basename": "Derivada de la función inversa",
-      "path": "Análisis Matemático I/Derivada de la función inversa.md"
     }
   ],
   "omittedPaths": [],

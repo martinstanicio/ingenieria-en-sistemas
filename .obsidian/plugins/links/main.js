@@ -278,18 +278,22 @@ RegExPatterns.Email = /([a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0
 //static readonly AbsoluteUri = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&\/=]*)/;
 RegExPatterns.AbsoluteUri = /^[a-z][a-z+-\.]+:\/\/.+/;
 RegExPatterns.Wikilink = /(!?)\[\[([^\[\]|]*)(\|([^\[\]]*))?\]\]/;
-RegExPatterns.Markdownlink = /(!?)\[([^\]\[]*)\]\(([^)(]*)\)/;
+// static readonly Markdownlink = /(!?)\[([^\]\[]*)\]\(([^)(]*)\)/;
+//TODO: revise
+RegExPatterns.Markdownlink = /(!?)\[([^\]\[]*)\]\(((?:[^()\\]*|\\[\(\)]|(?:\([^()]*\)))*?)\)/;
 RegExPatterns.Htmllink = /<a\s+[^>]*href\s*=\s*['"]([^'"]*)['"][^>]*>(.*?)<\/a>/;
 RegExPatterns.AutolinkUrl = /<([a-zA-Z]{2,32}:[^>]+)>/;
 RegExPatterns.AutolinkMail = /<([a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*)>/;
-RegExPatterns.PlainUrl = /\b((?:[a-z][\w\-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))*\))+(?:\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/;
+// static readonly PlainUrl = /\b((?:[a-z][\w\-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))*\))+(?:\((?:[^\s()<>]+|(?:\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/
+//TODO: revise
+RegExPatterns.PlainUrl = /\b((?:[a-z][\w\-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\([^\s()<>]*\))+(?:\([^\s()<>]*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/;
 RegExPatterns.InvalidNoteNameChars = /[#^\[\]\|*"\/\\<>:?]/;
 RegExPatterns.NoteHeading = /^#+\s+(.*)$/;
 RegExPatterns.AbsoluteUriCheck = /^(?:[a-z+]+:)?\/\//;
 RegExPatterns.AbsoluteFilePathCheck = /^\/|([a-z]:[\/\\])/;
 //TODO: fix
 RegExPatterns.CodeBlock = /(\`{3}([a-z#\s\"]*?)\n+)(.*?)(\n+\`{3})/;
-RegExPatterns.ImageDimentions = /((\d+)|((\d+)x(\d+)))$/;
+RegExPatterns.ImageDimentions = /^((\d+)|((\d+)x(\d+)))$/;
 RegExPatterns.Frontmatter = /(\-{3}\n+)(.*?)(\n*\-{3}\n)/;
 
 // utils.ts
@@ -832,7 +836,7 @@ function createWikiLink(sourcePath, destination, destinationSubPath, text, dimen
   return `[[${destination}${destinationSubPath ? "#" + destinationSubPath : ""} ${text ? "|" + text : ""}${dimensions ? "|" + dimensions : ""}]]`;
 }
 function createMarkdownLink(sourcePath, destination, destinationSubPath, text, dimensions, destinationType = "none" /* None */) {
-  return `[${text}${dimensions ? "|" + dimensions : ""}](${destination}${destinationSubPath ? "#" + destinationSubPath : ""})`;
+  return `[${text != null ? text : ""}${dimensions ? "|" + dimensions : ""}](${destination}${destinationSubPath ? "#" + destinationSubPath : ""})`;
 }
 
 // suggesters/LinkTextSuggest.ts
@@ -2756,6 +2760,26 @@ var ObsidianProxy = class {
     const useMarkdownLinks = this.Vault.configuration.useMarkdownLinks;
     return useMarkdownLinks ? createMarkdownLink(sourcePath, destination, destinationSubPath, text, dimensions, "none" /* None */) : createWikiLink(sourcePath, destination, destinationSubPath, text, dimensions, "none" /* None */);
   }
+  getFileCache(file) {
+    return this.app.metadataCache.getFileCache(file);
+  }
+  getBlock(editor, file) {
+    const cursor = editor.getCursor("from");
+    const fileCache = this.getFileCache(file);
+    let block = ((fileCache == null ? void 0 : fileCache.sections) || []).find((section) => {
+      return section.position.start.line <= cursor.line && section.position.end.line >= cursor.line;
+    });
+    if ((block == null ? void 0 : block.type) === "list") {
+      block = ((fileCache == null ? void 0 : fileCache.listItems) || []).find((item) => {
+        return item.position.start.line <= cursor.line && item.position.end.line >= cursor.line;
+      });
+    } else if ((block == null ? void 0 : block.type) === "heading") {
+      block = ((fileCache == null ? void 0 : fileCache.headings) || []).find((heading) => {
+        return heading.position.start.line === cursor.line;
+      });
+    }
+    return block;
+  }
 };
 
 // settings.ts
@@ -3481,12 +3505,12 @@ var ConvertLinkToWikilinkCommand = class extends CommandBase {
     }
     const text = editor.getValue();
     const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    const linkData = findLink(text, cursorOffset, cursorOffset, 1 /* Markdown */);
+    const links = findLinks(text, 1 /* Markdown */, cursorOffset, cursorOffset);
     if (checking) {
-      return !!linkData && linkData.destination && !linkData.destination.content.trim().includes(":");
+      return links.length > 0 && !!links[0].destination && !links[0].destination.content.trim().includes(":");
     }
-    if (linkData) {
-      this.convertLinkToWikiLink(linkData, editor);
+    if (links.length) {
+      this.convertLinkToWikiLink(links[0], editor);
     }
   }
   convertLinkToWikiLink(linkData, editor) {
@@ -4775,7 +4799,7 @@ var SetLinkDestinationFromClipboardCommand = class extends ConvertToMdlinkComman
 };
 
 // commands/CopyLinkToObjectToClipboardCommand.ts
-var CopyLinkToHeadingToObjectCommand = class extends CommandBase {
+var CopyLinkToObjectToClipboardCommand = class extends CommandBase {
   constructor(obsidianProxy, isPresentInContextMenu = () => true, isEnabled = () => true) {
     super(isPresentInContextMenu, isEnabled);
     this.id = "editor-copy-link-to-object-to-clipboard";
@@ -4793,7 +4817,7 @@ var CopyLinkToHeadingToObjectCommand = class extends CommandBase {
     const text = editor.getLine(editor.getCursor("from").line);
     const headingMatch = text.match(new RegExp(RegExPatterns.NoteHeading.source));
     const currentView = this.obsidianProxy.Vault.getActiveNoteView();
-    const block = headingMatch ? void 0 : (currentView == null ? void 0 : currentView.file) ? this.getBlock(editor, currentView == null ? void 0 : currentView.file) : void 0;
+    const block = headingMatch ? void 0 : (currentView == null ? void 0 : currentView.file) ? this.obsidianProxy.getBlock(editor, currentView == null ? void 0 : currentView.file) : void 0;
     if (checking) {
       return !!headingMatch || !!block;
     }
@@ -4818,9 +4842,11 @@ var CopyLinkToHeadingToObjectCommand = class extends CommandBase {
       linkText = (_a = links[0].text) == null ? void 0 : _a.content;
     }
     if (block.id) {
-      return this.obsidianProxy.clipboardWriteText(
+      this.obsidianProxy.clipboardWriteText(
         this.obsidianProxy.createLink("", file.path, "^" + block.id, linkText)
       );
+      this.obsidianProxy.createNotice("Link copied to your clipboard");
+      return;
     }
     const sectionEnd = block.position.end;
     const end2 = {
@@ -4829,26 +4855,10 @@ var CopyLinkToHeadingToObjectCommand = class extends CommandBase {
     };
     const id = this.generateId();
     editor.replaceRange(`${this.isEolRequired(block) ? "\n\n" : " "}^${id}`, end2);
-    navigator.clipboard.writeText(
+    this.obsidianProxy.clipboardWriteText(
       this.obsidianProxy.createLink("", file.path, "^" + id, linkText)
     );
-  }
-  getBlock(editor, file) {
-    const cursor = editor.getCursor("from");
-    const fileCache = this.obsidianProxy.app.metadataCache.getFileCache(file);
-    let block = ((fileCache == null ? void 0 : fileCache.sections) || []).find((section) => {
-      return section.position.start.line <= cursor.line && section.position.end.line >= cursor.line;
-    });
-    if ((block == null ? void 0 : block.type) === "list") {
-      block = ((fileCache == null ? void 0 : fileCache.listItems) || []).find((item) => {
-        return item.position.start.line <= cursor.line && item.position.end.line >= cursor.line;
-      });
-    } else if ((block == null ? void 0 : block.type) === "heading") {
-      block = ((fileCache == null ? void 0 : fileCache.headings) || []).find((heading) => {
-        return heading.position.start.line === cursor.line;
-      });
-    }
-    return block;
+    this.obsidianProxy.createNotice("Link copied to your clipboard");
   }
   generateId() {
     return Math.random().toString(36).substring(2, 6);
@@ -4985,7 +4995,7 @@ function createCommands(obsidianProxy, settings) {
   commands.set(ConvertLinkToHtmllinkCommand.name, new ConvertLinkToHtmllinkCommand(obsidianProxy));
   commands.set(ConvertLinkToAutolinkCommand.name, new ConvertLinkToAutolinkCommand(() => settings.contexMenu.convertToAutolink));
   commands.set(CopyLinkToClipboardCommand.name, new CopyLinkToClipboardCommand(obsidianProxy));
-  commands.set(CopyLinkToHeadingToObjectCommand.name, new CopyLinkToHeadingToObjectCommand(obsidianProxy));
+  commands.set(CopyLinkToObjectToClipboardCommand.name, new CopyLinkToObjectToClipboardCommand(obsidianProxy));
   commands.set(CutLinkToClipboardCommand.name, new CutLinkToClipboardCommand(obsidianProxy));
   commands.set(
     CopyLinkDestinationToClipboardCommand.name,
@@ -5028,7 +5038,7 @@ function getContextMenuCommands(obsidianProxy, settings) {
     EditLinkDestinationCommand.name,
     SetLinkDestinationFromClipboardCommand.name,
     CopyLinkToClipboardCommand.name,
-    CopyLinkToHeadingToObjectCommand.name,
+    CopyLinkToObjectToClipboardCommand.name,
     CutLinkToClipboardCommand.name,
     CopyLinkDestinationToClipboardCommand.name,
     null,
