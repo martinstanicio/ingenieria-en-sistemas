@@ -1,6 +1,6 @@
 ---
 created: 2024-08-21 00:32:39
-modified: 2024-08-21 01:04:41
+modified: 2024-08-21 01:32:53
 title: "Regla de L'Hopital"
 ---
 
@@ -32,4 +32,26 @@ $$
 $$
 
 > [!tip]
-> En la práctica, cuando encontramos una [[Indeterminación]] de tipo $$ la [[Regla de L'Hopital]]
+> En la práctica, cuando encontramos una [[Indeterminación]] de tipo $\frac{0}{0}$ o $\frac{\infty}{\infty}$ en un [[Límite]], la [[Regla de L'Hopital]] nos permite [[Derivada|Derivar]] numerador y denominador, y continuar resolviendo.
+
+## Caso $0 \cdot \infty$
+
+Si al calcular un [[Límite]] nos encontramos una [[Indeterminación]] de tipo $0 \cdot \infty$, podemos utilizar la siguiente igualdad.
+
+$$
+\lim_{x \to c} f(x) \cdot g(x) =
+\lim_{x \to c} \frac{f(x)}{\frac{1}{g(x)}} =
+\lim_{x \to c} \frac{g(x)}{\frac{1}{f(x)}}
+$$
+
+De esta forma, llegamos a una [[Indeterminación]] de tipo $\frac{0}{0}$ o $\frac{\infty}{\infty}$, por lo que podemos **intentar** aplicar la [[Regla de L'Hopital]].
+
+## Casos $1^\infty$, $0^0$ y $\infty^0$
+
+En estos casos, deberemos recurrir a la [[Derivación logarítmica]] para llegar a una expresión de la siguiente forma.
+
+$$
+\lim_{x \to c} g(x) \cdot \ln(f(x)) = \ln(L)
+$$
+
+Para continuar resolviendo, podemos seguir los pasos del [[Regla de L'Hopital#Caso $0 cdot infty$|Caso anterior]] $0 \cdot \infty$ hasta poder **intentar** aplicar la [[Regla de L'Hopital]].

@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Concavidad",
+      "path": "Análisis Matemático I/Concavidad.md"
+    },
+    {
+      "basename": "Punto de inflexión",
+      "path": "Análisis Matemático I/Punto de inflexión.md"
+    },
+    {
       "basename": "Regla de L'Hopital",
       "path": "Análisis Matemático I/Regla de L'Hopital.md"
+    },
+    {
+      "basename": "Derivación logarítmica",
+      "path": "Análisis Matemático I/Derivación logarítmica.md"
+    },
+    {
+      "basename": "Logaritmo natural de un complejo",
+      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
     },
     {
       "basename": "Teorema de Cauchy",
@@ -153,10 +169,6 @@
       "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
-      "basename": "Derivación logarítmica",
-      "path": "Análisis Matemático I/Derivación logarítmica.md"
-    },
-    {
       "basename": "Aproximación de errores",
       "path": "Física I/Aproximación de errores.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Sucesión",
       "path": "Análisis Matemático I/Sucesión.md"
-    },
-    {
-      "basename": "Diferencial",
-      "path": "Análisis Matemático I/Diferencial.md"
-    },
-    {
-      "basename": "Derivada de funciones elementales",
-      "path": "Análisis Matemático I/Derivada de funciones elementales.md"
-    },
-    {
-      "basename": "Diferencia",
-      "path": "Lógica y Estructuras Discretas/Diferencia.md"
     }
   ],
   "omittedPaths": [],
