@@ -35,5 +35,5 @@ flowchart TB
 ## Código
 
 ```embed-python
-PATH: "vault://Algoritmos y Estructuras de Datos/python/{{date}}-producciones.py"
+PATH: "vault://Algoritmos y Estructuras de Datos/python/{{date}}-actividad.py"
 ```

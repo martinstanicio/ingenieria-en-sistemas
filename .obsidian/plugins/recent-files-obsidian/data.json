@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Criterio de la primera derivada",
-      "path": "Análisis Matemático I/Criterio de la primera derivada.md"
+      "basename": "20240820 - Apellidos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Apellidos.md"
     },
     {
-      "basename": "Reglas de derivación",
-      "path": "Análisis Matemático I/Reglas de derivación.md"
+      "basename": "Vectores paralelos",
+      "path": "Algoritmos y Estructuras de Datos/Vectores paralelos.md"
     },
     {
       "basename": "Teorema de Lagrange",
       "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Criterio de la primera derivada",
+      "path": "Análisis Matemático I/Criterio de la primera derivada.md"
+    },
+    {
+      "basename": "AyED - Actividad",
+      "path": "Templates/AyED - Actividad.md"
+    },
+    {
+      "basename": "Reglas de derivación",
+      "path": "Análisis Matemático I/Reglas de derivación.md"
     },
     {
       "basename": "Teorema de Rolle",
@@ -183,22 +199,6 @@
     {
       "basename": "Asíntota vertical",
       "path": "Análisis Matemático I/Asíntota vertical.md"
-    },
-    {
-      "basename": "Análisis Matemático I",
-      "path": "Análisis Matemático I/Análisis Matemático I.md"
-    },
-    {
-      "basename": "Indeterminación",
-      "path": "Análisis Matemático I/Indeterminación.md"
-    },
-    {
-      "basename": "Continuidad",
-      "path": "Análisis Matemático I/Continuidad.md"
-    },
-    {
-      "basename": "Pendiente",
-      "path": "Análisis Matemático I/Pendiente.md"
     }
   ],
   "omittedPaths": [],
