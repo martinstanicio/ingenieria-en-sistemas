@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de Lagrange",
+      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
+      "basename": "lagrange",
+      "path": "Análisis Matemático I/attachments/lagrange.jpg"
+    },
+    {
       "basename": "Criterio de la primera derivada",
       "path": "Análisis Matemático I/Criterio de la primera derivada.md"
     },
@@ -63,10 +71,6 @@
     {
       "basename": "Vectores paralelos",
       "path": "Algoritmos y Estructuras de Datos/Vectores paralelos.md"
-    },
-    {
-      "basename": "Teorema de Lagrange",
-      "path": "Análisis Matemático I/Teorema de Lagrange.md"
     },
     {
       "basename": "20240820 - Apellidos",
@@ -195,10 +199,6 @@
     {
       "basename": "Error absoluto",
       "path": "Física I/Error absoluto.md"
-    },
-    {
-      "basename": "Mediciones indirectas",
-      "path": "Física I/Mediciones indirectas.md"
     }
   ],
   "omittedPaths": [],
