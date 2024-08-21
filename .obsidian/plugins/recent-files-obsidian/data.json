@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "20240820 - Empleados",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Empleados.md"
+      "basename": "Función split",
+      "path": "Algoritmos y Estructuras de Datos/Función split.md"
     },
     {
       "basename": "Teorema de Lagrange",
       "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
+      "basename": "20240820 - Empleados",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Empleados.md"
     },
     {
       "basename": "20240820 - Apellidos",
@@ -195,10 +199,6 @@
     {
       "basename": "Derivada de la función inversa",
       "path": "Análisis Matemático I/Derivada de la función inversa.md"
-    },
-    {
-      "basename": "Regla de la cadena",
-      "path": "Análisis Matemático I/Regla de la cadena.md"
     }
   ],
   "omittedPaths": [],
