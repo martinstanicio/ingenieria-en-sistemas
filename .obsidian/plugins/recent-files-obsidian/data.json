@@ -5,6 +5,10 @@
       "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
+      "basename": "Límite",
+      "path": "Análisis Matemático I/Límite.md"
+    },
+    {
       "basename": "Derivada de la función inversa",
       "path": "Análisis Matemático I/Derivada de la función inversa.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Forma paramétrica",
       "path": "Análisis Matemático I/Forma paramétrica.md"
-    },
-    {
-      "basename": "Forma implícita",
-      "path": "Análisis Matemático I/Forma implícita.md"
     }
   ],
   "omittedPaths": [],
