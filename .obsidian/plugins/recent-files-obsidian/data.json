@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Derivada de funciones elementales",
+      "path": "Análisis Matemático I/Derivada de funciones elementales.md"
+    },
+    {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
       "basename": "Derivada de la función inversa",
       "path": "Análisis Matemático I/Derivada de la función inversa.md"
     },
@@ -169,10 +177,6 @@
       "path": "Análisis Matemático I/Derivadas laterales.md"
     },
     {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
-    },
-    {
       "basename": "Derivación paramétrica",
       "path": "Análisis Matemático I/Derivación paramétrica.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Forma implícita",
       "path": "Análisis Matemático I/Forma implícita.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
     }
   ],
   "omittedPaths": [],

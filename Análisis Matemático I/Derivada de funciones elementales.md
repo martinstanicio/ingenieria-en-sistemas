@@ -1,6 +1,6 @@
 ---
 created: 2024-08-15 00:55:43
-modified: 2024-08-16 00:25:34
+modified: 2024-08-22 16:26:04
 title: Derivada de funciones elementales
 ---
 
@@ -16,6 +16,7 @@ Calculo de la [[Derivada]] de [[Análisis Matemático I/Función|Funciones]] **e
 | $\ln x$                 | $\frac{1}{x}$             |
 | $\sin x$                | $\cos x$                  |
 | $\cos x$                | $- \sin x$                |
+| $\tan x$                | $1 + \tan^2 x$            |
 | $\frac{1}{x}$           | $- \frac{1}{x^2}$         |
 | $\sqrt{x}$              | $\frac{1}{2 \sqrt{x}}$    |
 | $\log_a x$              | $\frac{1}{x \cdot \ln a}$ |
