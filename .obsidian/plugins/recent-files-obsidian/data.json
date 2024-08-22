@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "Regla de L'Hopital",
-      "path": "Análisis Matemático I/Regla de L'Hopital.md"
+      "basename": "Derivada de la función inversa",
+      "path": "Análisis Matemático I/Derivada de la función inversa.md"
+    },
+    {
+      "basename": "Teorema de Fermat",
+      "path": "Análisis Matemático I/Teorema de Fermat.md"
     },
     {
       "basename": "Teorema de Rolle",
@@ -11,6 +15,14 @@
     {
       "basename": "Teorema de Lagrange",
       "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
+      "basename": "rolle",
+      "path": "Análisis Matemático I/attachments/rolle.png"
+    },
+    {
+      "basename": "Regla de L'Hopital",
+      "path": "Análisis Matemático I/Regla de L'Hopital.md"
     },
     {
       "basename": "lagrange",
@@ -113,10 +125,6 @@
       "path": "Análisis Matemático I/Reglas de derivación.md"
     },
     {
-      "basename": "Teorema de Fermat",
-      "path": "Análisis Matemático I/Teorema de Fermat.md"
-    },
-    {
       "basename": "Recta tangente",
       "path": "Análisis Matemático I/Recta tangente.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Aproximación de errores",
-      "path": "Física I/Aproximación de errores.md"
-    },
-    {
-      "basename": "Error relativo",
-      "path": "Física I/Error relativo.md"
     }
   ],
   "omittedPaths": [],
