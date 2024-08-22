@@ -1,12 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "Punto de inflexión",
-      "path": "Análisis Matemático I/Punto de inflexión.md"
-    },
-    {
-      "basename": "Concavidad",
-      "path": "Análisis Matemático I/Concavidad.md"
+      "basename": "Teorema de Rolle",
+      "path": "Análisis Matemático I/Teorema de Rolle.md"
     },
     {
       "basename": "Teorema de Lagrange",
@@ -15,6 +11,18 @@
     {
       "basename": "lagrange",
       "path": "Análisis Matemático I/attachments/lagrange.jpg"
+    },
+    {
+      "basename": "Punto de inflexión",
+      "path": "Análisis Matemático I/Punto de inflexión.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Concavidad",
+      "path": "Análisis Matemático I/Concavidad.md"
     },
     {
       "basename": "Criterio de la primera derivada",
@@ -59,10 +67,6 @@
     {
       "basename": "Teorema de Cauchy",
       "path": "Análisis Matemático I/Teorema de Cauchy.md"
-    },
-    {
-      "basename": "Teorema de Rolle",
-      "path": "Análisis Matemático I/Teorema de Rolle.md"
     },
     {
       "basename": "Función split",
@@ -195,10 +199,6 @@
     {
       "basename": "Error relativo",
       "path": "Física I/Error relativo.md"
-    },
-    {
-      "basename": "Error absoluto",
-      "path": "Física I/Error absoluto.md"
     }
   ],
   "omittedPaths": [],

@@ -1,6 +1,6 @@
 ---
 created: 2024-08-20 16:51:33
-modified: 2024-08-20 17:35:34
+modified: 2024-08-21 23:51:51
 title: Teorema de Rolle
 ---
 
@@ -16,3 +16,5 @@ $$
 \left( f(a) = f(b) \right) \Rightarrow
 \exists c \in (a, b): f'(c) = 0
 $$
+
+![[rolle.png]]
