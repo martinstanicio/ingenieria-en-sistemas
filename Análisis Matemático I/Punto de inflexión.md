@@ -6,4 +6,4 @@ title: Punto de inflexión
 
 # Punto de inflexión
 
-Dada una [[Análisis Matemático I/Función|Función]] $f: A \to \mathbb{R}$, entonces $p$ es un [[Punto de inflexión]] si la curva cambia su [[Concavidad]] en $p$.
+Dada una [[Análisis Matemático I/Función|Función]] $y = f(x)$, decimos que $p$ es un [[Punto de inflexión]] si la curva cambia su [[Concavidad]] en $p$.
