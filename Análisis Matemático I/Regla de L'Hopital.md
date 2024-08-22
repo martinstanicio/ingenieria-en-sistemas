@@ -1,12 +1,12 @@
 ---
 created: 2024-08-21 00:32:39
-modified: 2024-08-21 01:32:53
+modified: 2024-08-22 00:24:49
 title: "Regla de L'Hopital"
 ---
 
 # Regla de L'Hopital
 
-Dadas dos [[Análisis Matemático I/Función|Funciones]] $y = f(x)$ y $y = g(x)$, [[Derivada|Derivables]] en un **intervalo abierto** $(a, b)$. Si existe un punto $c \in (a, b)$, tal que $\forall x \in (a, b) - \set{c}: g'(x) \neq 0$ y $f(c) = g(c) = 0$, y existe $\lim_{x \to c} \frac{f'(x)}{g'(x)}$.
+Dadas dos [[Análisis Matemático I/Función|Funciones]] $y = f(x)$ y $y = g(x)$, [[Derivada|Derivables]] en un **intervalo abierto** $(a, b)$, para un punto $c \in (a, b)$, tal que $\forall x \in (a, b) - \set{c}: g'(x) \neq 0$ y $f(c) = g(c) = 0$, y existe $\lim_{x \to c} \frac{f'(x)}{g'(x)}$.
 
 $$
 \exists c \in (a, b): \left(
@@ -20,7 +20,14 @@ $$
 \right)
 $$
 
-Entonces, podemos afirmar que existe $\lim_{x \to c} \frac{f(x)}{g(x)}$, y además, $\lim_{x \to c} \frac{f(x)}{g(x)} = \lim_{x \to c} \frac{f'(x)}{g'(x)}$.
+> [!important]
+> La [[Regla de L'Hopital]] también se puede utilizar para una [[Indeterminación]] $\frac{\infty}{\infty}$, si reemplazamos $f(c) = g(c) = 0$ por lo siguiente.
+>
+> $$
+> \lim_{x \to c} f(x) = \lim_{x \to c} g(x) = \infty
+> $$
+
+Entonces, podemos afirmar lo siguiente.
 
 $$
 \left(
