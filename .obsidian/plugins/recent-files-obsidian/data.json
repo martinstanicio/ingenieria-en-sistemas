@@ -5,6 +5,10 @@
       "path": "Análisis Matemático I/Derivada de funciones elementales.md"
     },
     {
+      "basename": "Recta tangente",
+      "path": "Análisis Matemático I/Recta tangente.md"
+    },
+    {
       "basename": "Límite",
       "path": "Análisis Matemático I/Límite.md"
     },
@@ -135,10 +139,6 @@
     {
       "basename": "Reglas de derivación",
       "path": "Análisis Matemático I/Reglas de derivación.md"
-    },
-    {
-      "basename": "Recta tangente",
-      "path": "Análisis Matemático I/Recta tangente.md"
     },
     {
       "basename": "Recta secante",
