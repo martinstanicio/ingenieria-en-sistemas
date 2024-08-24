@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de Fermat",
+      "path": "Análisis Matemático I/Teorema de Fermat.md"
+    },
+    {
+      "basename": "Teorema de Lagrange",
+      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
+      "basename": "Teorema de Rolle",
+      "path": "Análisis Matemático I/Teorema de Rolle.md"
+    },
+    {
+      "basename": "Criterio de la segunda derivada",
+      "path": "Análisis Matemático I/Criterio de la segunda derivada.md"
+    },
+    {
+      "basename": "Derivada de la función inversa",
+      "path": "Análisis Matemático I/Derivada de la función inversa.md"
+    },
+    {
       "basename": "Derivación paramétrica",
       "path": "Análisis Matemático I/Derivación paramétrica.md"
+    },
+    {
+      "basename": "Derivación implícita",
+      "path": "Análisis Matemático I/Derivación implícita.md"
     },
     {
       "basename": "Derivada de funciones elementales",
@@ -17,24 +41,8 @@
       "path": "Análisis Matemático I/Límite.md"
     },
     {
-      "basename": "Derivada de la función inversa",
-      "path": "Análisis Matemático I/Derivada de la función inversa.md"
-    },
-    {
       "basename": "Derivada",
       "path": "Análisis Matemático I/Derivada.md"
-    },
-    {
-      "basename": "Teorema de Fermat",
-      "path": "Análisis Matemático I/Teorema de Fermat.md"
-    },
-    {
-      "basename": "Teorema de Rolle",
-      "path": "Análisis Matemático I/Teorema de Rolle.md"
-    },
-    {
-      "basename": "Teorema de Lagrange",
-      "path": "Análisis Matemático I/Teorema de Lagrange.md"
     },
     {
       "basename": "rolle",
@@ -63,10 +71,6 @@
     {
       "basename": "Criterio de la primera derivada",
       "path": "Análisis Matemático I/Criterio de la primera derivada.md"
-    },
-    {
-      "basename": "Criterio de la segunda derivada",
-      "path": "Análisis Matemático I/Criterio de la segunda derivada.md"
     },
     {
       "basename": "20240820 - Empleados",
@@ -183,10 +187,6 @@
     {
       "basename": "Derivadas laterales",
       "path": "Análisis Matemático I/Derivadas laterales.md"
-    },
-    {
-      "basename": "Derivación implícita",
-      "path": "Análisis Matemático I/Derivación implícita.md"
     },
     {
       "basename": "Regla del pulgar",
