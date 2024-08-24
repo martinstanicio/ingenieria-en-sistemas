@@ -1,6 +1,6 @@
 ---
 created: 2024-08-21 00:32:39
-modified: 2024-08-22 00:24:49
+modified: 2024-08-23 18:53:38
 title: "Regla de L'Hopital"
 ---
 

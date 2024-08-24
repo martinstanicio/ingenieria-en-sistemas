@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Neguentropía",
+      "path": "Sistemas y Procesos de Negocios/Neguentropía.md"
+    },
+    {
+      "basename": "Entropía",
+      "path": "Sistemas y Procesos de Negocios/Entropía.md"
+    },
+    {
+      "basename": "Información directiva",
+      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
+    },
+    {
+      "basename": "Tipos de sistemas",
+      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
+    },
+    {
+      "basename": "Isomorfismo",
+      "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
+    },
+    {
       "basename": "Teorema de Fermat",
       "path": "Análisis Matemático I/Teorema de Fermat.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Bicondicional (↔)",
       "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
-    },
-    {
-      "basename": "Extremo absoluto",
-      "path": "Análisis Matemático I/Extremo absoluto.md"
-    },
-    {
-      "basename": "Derivadas laterales",
-      "path": "Análisis Matemático I/Derivadas laterales.md"
-    },
-    {
-      "basename": "Regla del pulgar",
-      "path": "Física I/Regla del pulgar.md"
-    },
-    {
-      "basename": "Cociente incremental",
-      "path": "Análisis Matemático I/Cociente incremental.md"
-    },
-    {
-      "basename": "Forma paramétrica",
-      "path": "Análisis Matemático I/Forma paramétrica.md"
     }
   ],
   "omittedPaths": [],

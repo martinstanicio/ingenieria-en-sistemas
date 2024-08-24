@@ -1,12 +1,12 @@
 ---
 created: 2024-06-28 18:24:15
-modified: 2024-06-28 18:30:20
+modified: 2024-08-23 17:06:43
 title: Longitud lógica
 ---
 
 # Longitud lógica
 
-El largo del contenido de elemento o [[Variables|Variable]], generalmente una [[Lista]] o cadenza de caracteres.
+El largo del contenido de elemento o [[Variables|Variable]], generalmente una [[Array|Lista]] o cadena de caracteres.
 
 ## Pseudocódigo
 

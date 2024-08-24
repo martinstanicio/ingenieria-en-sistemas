@@ -1,6 +1,6 @@
 ---
 created: 2024-08-19 15:06:55
-modified: 2024-08-19 16:07:09
+modified: 2024-08-23 12:12:09
 title: Diferencial
 ---
 
