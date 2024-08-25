@@ -14,4 +14,4 @@ title: Sintaxis y Semántica de los Lenguajes
 ### Cursadas
 
 5. [Lógica y Estructuras Discretas](Lógica%20y%20Estructuras%20Discretas.md)
-6. [Algoritmos y Estructuras de Datos](Algoritmos%20y%20Estructuras%20de%20Datos.md)
+6. [Algoritmos y Estructuras de Datos](Algoritmos%20y%20Estructuras%20de%20Datos/Algoritmos%20y%20Estructuras%20de%20Datos.md)

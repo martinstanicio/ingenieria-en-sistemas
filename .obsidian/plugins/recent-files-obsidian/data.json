@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Propósito",
+      "path": "Sistemas y Procesos de Negocios/Propósito.md"
+    },
+    {
+      "basename": "Límites",
+      "path": "Sistemas y Procesos de Negocios/Límites.md"
+    },
+    {
+      "basename": "Alcance",
+      "path": "Sistemas y Procesos de Negocios/Alcance.md"
+    },
+    {
       "basename": "Entropía",
       "path": "Sistemas y Procesos de Negocios/Entropía.md"
     },
@@ -79,10 +99,6 @@
     {
       "basename": "Punto de inflexión",
       "path": "Análisis Matemático I/Punto de inflexión.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
     },
     {
       "basename": "Concavidad",
@@ -183,22 +199,6 @@
     {
       "basename": "Punto estacionario",
       "path": "Análisis Matemático I/Punto estacionario.md"
-    },
-    {
-      "basename": "Punto frontera",
-      "path": "Análisis Matemático I/Punto frontera.md"
-    },
-    {
-      "basename": "Complemento",
-      "path": "Lógica y Estructuras Discretas/Complemento.md"
-    },
-    {
-      "basename": "Extremo relativo",
-      "path": "Análisis Matemático I/Extremo relativo.md"
-    },
-    {
-      "basename": "Bicondicional (↔)",
-      "path": "Lógica y Estructuras Discretas/Bicondicional (↔).md"
     }
   ],
   "omittedPaths": [],

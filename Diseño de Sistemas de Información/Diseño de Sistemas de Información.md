@@ -19,5 +19,5 @@ title: Diseño de Sistemas de Información
 ### Aprobadas
 
 4. [Inglés I](Inglés%20I.md)
-6. [Algoritmos y Estructuras de Datos](Algoritmos%20y%20Estructuras%20de%20Datos.md)
+6. [Algoritmos y Estructuras de Datos](Algoritmos%20y%20Estructuras%20de%20Datos/Algoritmos%20y%20Estructuras%20de%20Datos.md)
 8. [Sistemas y Procesos de Negocios](Sistemas%20y%20Procesos%20de%20Negocios.md)
