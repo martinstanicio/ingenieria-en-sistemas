@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "20240823 - Vectores paralelos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "20240823 - Vector contador y acumulador",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vector contador y acumulador.md"
+    },
+    {
+      "basename": "20240820 - Empleados",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Empleados.md"
+    },
+    {
       "basename": "20240705 - Consonantes",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Consonantes.md"
     },
@@ -121,10 +137,6 @@
       "path": "Análisis Matemático I/Criterio de la primera derivada.md"
     },
     {
-      "basename": "20240820 - Empleados",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Empleados.md"
-    },
-    {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
     },
@@ -169,10 +181,6 @@
       "path": "Algoritmos y Estructuras de Datos/Array.md"
     },
     {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
       "basename": "Python",
       "path": "Algoritmos y Estructuras de Datos/Python.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Reglas de derivación",
       "path": "Análisis Matemático I/Reglas de derivación.md"
-    },
-    {
-      "basename": "Recta secante",
-      "path": "Análisis Matemático I/Recta secante.md"
-    },
-    {
-      "basename": "Recta normal",
-      "path": "Análisis Matemático I/Recta normal.md"
     }
   ],
   "omittedPaths": [],

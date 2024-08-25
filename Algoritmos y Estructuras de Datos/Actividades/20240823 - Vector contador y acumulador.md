@@ -46,15 +46,35 @@ flowchart TB
 	
 	for1{{"i, 1, 21"}}
 	if1{"contadores[i] > max_ventas"}
-	if_yes["max = contadores[i]"]
+	max["max_ventas = contadores[i]"]
+	vendedor{{"i"}}
+	ventas{{"contadores[i]"}}
+	total{{"acumuladores[i]"}}
 	
 	for2{{"i, 1, 21"}}
-	if2{{"contadores[i] = max_ventas"}}
+	if2{"contadores[i] = max_ventas"}
 	mostrar{{"i"}}
     
     fin([fin])
     
-	comienzo --> variables --> fin
+    a[" "]
+    b[" "]
+    c[" "]
+    d[" "]
+    
+	comienzo --> variables --> init --> while
+	while -- "Sí" --> input --> contador --> acumulador --> continuar --> while
+	while -- "No" --> for1
+	for1 --> if1
+	for1 --> a
+	if1 -- "Sí" --> max --> b
+	if1 -- "No" --> b
+	b --> vendedor --> ventas --> total --> a --> for2
+	for2 --> if2
+	for2 --> d
+	if2 -- "Sí" --> mostrar --> c
+	if2 -- "No" --> c
+	c --> d --> fin
 ```
 
 ## Código
