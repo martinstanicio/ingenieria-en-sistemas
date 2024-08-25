@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "20240705 - Consonantes",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Consonantes.md"
+    },
+    {
+      "basename": "20240712 - Fecha",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240712 - Fecha.md"
+    },
+    {
+      "basename": "20240809 - Frases",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
+    },
+    {
       "basename": "Algoritmos y Estructuras de Datos",
       "path": "Algoritmos y Estructuras de Datos.md"
     },
@@ -157,10 +169,6 @@
       "path": "Algoritmos y Estructuras de Datos/Array.md"
     },
     {
-      "basename": "20240712 - Fecha",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240712 - Fecha.md"
-    },
-    {
       "basename": "Ciclo desde-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Recta normal",
       "path": "Análisis Matemático I/Recta normal.md"
-    },
-    {
-      "basename": "Punto crítico",
-      "path": "Análisis Matemático I/Punto crítico.md"
-    },
-    {
-      "basename": "Punto estacionario",
-      "path": "Análisis Matemático I/Punto estacionario.md"
     }
   ],
   "omittedPaths": [],
