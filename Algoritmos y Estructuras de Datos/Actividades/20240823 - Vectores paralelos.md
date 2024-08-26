@@ -24,8 +24,21 @@ Mostrar
 flowchart TB
 	comienzo([comienzo])
     
-	variables["`
-	`"]
+	variables["`apellidos[2000] = cadena
+	nombres[2000] = cadena
+	edades[2000] = entero
+	pesos[2000] = real
+	max_edad = entero
+	peso_promedio = real`"]
+	
+	init["max_edad = -1"]
+	
+	for{{"i, 0, 2000"}}
+	input[/"`apellidos[i]
+	nombres[i]
+	edades[i]
+	pesos[i]`"/]
+	max_edad_calc{""}
     
     fin([fin])
     
