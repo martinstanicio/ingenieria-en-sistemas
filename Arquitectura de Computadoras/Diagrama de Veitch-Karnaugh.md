@@ -1,11 +1,11 @@
 ---
 created: 2024-06-26 18:14:01
-modified: 2024-06-26 19:37:18
+modified: 2024-08-27 21:09:20
 title: Diagrama de Veitch-Karnaugh
 ---
 
 # Diagrama de Veitch-Karnaugh
-nudnhujg
+
 Es una herramienta gráfica utilizada para simplificar expresiones [[Álgebra de Boole|booleanas]].
 
 > [!tip]
@@ -23,7 +23,7 @@ Pasamos la información de la [[Tabla de verdades]] al [[Diagrama de Veitch-Karn
 
 ## Agrupamiento
 
-Agrupo $1$ o $0$ dependiendo de si trabajo con [[Minitermino|miniterminos]] o [[Maxitermino|maxiterminos]]. Agrupamos la mayor cantidad de celdas posibles, en potencias de $2$.
+Agrupo $1$ o $0$ dependiendo de si trabajo con [[Minitérmino (m)|Minitérminos]] o [[Maxitérmino (M)|Maxitérminos]]. Agrupamos la mayor cantidad de celdas posibles, en potencias de $2$.
 
 ![[veitch-karnaugh-3.jpg]]
 

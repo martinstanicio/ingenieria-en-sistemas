@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Ordenamiento por inserción",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
+    },
+    {
+      "basename": "Ordenamiento",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
+    },
+    {
       "basename": "Forma canónica",
       "path": "Arquitectura de Computadoras/Forma canónica.md"
+    },
+    {
+      "basename": "Minitérmino (m)",
+      "path": "Arquitectura de Computadoras/Minitérmino (m).md"
+    },
+    {
+      "basename": "Diagrama de Veitch-Karnaugh",
+      "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
     },
     {
       "basename": "Maxitérmino (M)",
@@ -11,10 +27,6 @@
     {
       "basename": "Módulo y signo",
       "path": "Arquitectura de Computadoras/Módulo y signo.md"
-    },
-    {
-      "basename": "Minitérmino (m)",
-      "path": "Arquitectura de Computadoras/Minitérmino (m).md"
     },
     {
       "basename": "Álgebra de Boole",
@@ -187,18 +199,6 @@
     {
       "basename": "Función split",
       "path": "Algoritmos y Estructuras de Datos/Función split.md"
-    },
-    {
-      "basename": "Vectores paralelos",
-      "path": "Algoritmos y Estructuras de Datos/Vectores paralelos.md"
-    },
-    {
-      "basename": "20240820 - Apellidos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Apellidos.md"
-    },
-    {
-      "basename": "Array",
-      "path": "Algoritmos y Estructuras de Datos/Array.md"
     }
   ],
   "omittedPaths": [],
