@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Flags",
+      "path": "Arquitectura de Computadoras/Flags.md"
+    },
+    {
       "basename": "20240827 - Ordenamiento por inserción",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240827 - Ordenamiento por inserción.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Derivación logarítmica",
       "path": "Análisis Matemático I/Derivación logarítmica.md"
-    },
-    {
-      "basename": "Logaritmo natural de un complejo",
-      "path": "Álgebra y Geometría Analítica/Logaritmo natural de un complejo.md"
     }
   ],
   "omittedPaths": [],
