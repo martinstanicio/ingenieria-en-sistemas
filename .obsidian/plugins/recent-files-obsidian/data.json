@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "20240823 - Vectores paralelos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
+      "basename": "Forma canónica",
+      "path": "Arquitectura de Computadoras/Forma canónica.md"
+    },
+    {
+      "basename": "Maxitérmino (M)",
+      "path": "Arquitectura de Computadoras/Maxitérmino (M).md"
+    },
+    {
+      "basename": "Módulo y signo",
+      "path": "Arquitectura de Computadoras/Módulo y signo.md"
+    },
+    {
+      "basename": "Minitérmino (m)",
+      "path": "Arquitectura de Computadoras/Minitérmino (m).md"
+    },
+    {
+      "basename": "Álgebra de Boole",
+      "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
+    },
+    {
+      "basename": "ALU",
+      "path": "Arquitectura de Computadoras/ALU.md"
+    },
+    {
+      "basename": "Regla de L'Hopital",
+      "path": "Análisis Matemático I/Regla de L'Hopital.md"
     },
     {
       "basename": "20240823 - Vector contador y acumulador",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vector contador y acumulador.md"
+    },
+    {
+      "basename": "20240823 - Vectores paralelos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
     },
     {
       "basename": "Ciclo desde-hasta",
@@ -27,10 +55,6 @@
     {
       "basename": "20240809 - Frases",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos.md"
     },
     {
       "basename": "Algoritmos y Estructuras de Datos",
@@ -117,10 +141,6 @@
       "path": "Análisis Matemático I/attachments/rolle.png"
     },
     {
-      "basename": "Regla de L'Hopital",
-      "path": "Análisis Matemático I/Regla de L'Hopital.md"
-    },
-    {
       "basename": "lagrange",
       "path": "Análisis Matemático I/attachments/lagrange.jpg"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Array",
       "path": "Algoritmos y Estructuras de Datos/Array.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Algoritmos y Estructuras de Datos/Python.md"
-    },
-    {
-      "basename": "Bifurcaciones",
-      "path": "Algoritmos y Estructuras de Datos/Bifurcaciones.md"
-    },
-    {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "AyED - Actividad",
-      "path": "Templates/AyED - Actividad.md"
-    },
-    {
-      "basename": "Reglas de derivación",
-      "path": "Análisis Matemático I/Reglas de derivación.md"
     }
   ],
   "omittedPaths": [],

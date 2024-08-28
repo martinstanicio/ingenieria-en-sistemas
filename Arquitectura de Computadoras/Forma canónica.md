@@ -1,6 +1,6 @@
 ---
 created: 2024-08-13 17:07:52
-modified: 2024-08-13 19:42:45
+modified: 2024-08-27 19:11:40
 title: Forma canónica
 ---
 
