@@ -5,6 +5,14 @@
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
     {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "20240823 - Vectores paralelos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
+    },
+    {
       "basename": "Ordenamiento",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
     },
@@ -43,10 +51,6 @@
     {
       "basename": "20240823 - Vector contador y acumulador",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vector contador y acumulador.md"
-    },
-    {
-      "basename": "20240823 - Vectores paralelos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
     },
     {
       "basename": "Ciclo desde-hasta",
@@ -195,10 +199,6 @@
     {
       "basename": "Teorema de Cauchy",
       "path": "Análisis Matemático I/Teorema de Cauchy.md"
-    },
-    {
-      "basename": "Función split",
-      "path": "Algoritmos y Estructuras de Datos/Función split.md"
     }
   ],
   "omittedPaths": [],
