@@ -2,7 +2,7 @@
 aliases:
   - Insertion sort
 created: 2024-08-27 21:14:45
-modified: 2024-08-27 22:01:29
+modified: 2024-08-27 22:29:37
 title: Ordenamiento por inserción
 ---
 
@@ -180,7 +180,10 @@ flowchart TB
 	if{"vector[elemento_fijo] > vector[elemento_variable]"}
 	intercambio["`auxiliar = vector[elemento_fijo]
 	vector[elemento_fijo] = vector[elemento_variable]
-	vecotr[elemento_variable] = auxiliar`"]
+	vector[elemento_variable] = auxiliar`"]
+	
+	for2{{"c, 1, 6"}}
+	mostrar{{"vector[c]"}}
 	
 	fin([fin])
 	
@@ -194,9 +197,39 @@ flowchart TB
 	comienzo --> variables --> for1
 	for1 --> a
 	for1 --> input --> a
-	a --> init --> while1
+	a --> init --> e --> while1
 	while1 -- "Sí" --> while1_content1 --> while1_content2 --> while1_content3 --> b --> while2 -- "Sí" --> while2_content1 --> if
 	if -- "Sí" --> intercambio --> c
 	if -- "No" --> c
 	c --> d --> b
+	while2 -- "No" --> e
+	while1 -- "No" --> for2 --> f
+	for2 --> mostrar --> f
+	f --> fin
+```
+
+## Python
+
+En [[Python]] se realiza de la siguiente forma.
+
+```python
+elementos = 5
+vector = [0] * elementos
+
+for c in range(0, elementos):
+    vector[c] = int(input(f"Elemento {c + 1}: "))
+
+elemento_fijo = 0
+
+for barrido in range(0, elementos - 1):
+    for elemento_variable in range(elemento_fijo + 1, elementos):
+        if vector[elemento_fijo] > vector[elemento_variable]:
+            aux = vector[elemento_fijo]
+            vector[elemento_fijo] = vector[elemento_variable]
+            vector[elemento_variable] = aux
+    
+    elemento_fijo += 1
+
+for c in range(0, elementos):
+    print(vector[c])
 ```
