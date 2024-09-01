@@ -32,7 +32,7 @@ fin_mientras
 flowchart TB
 	comienzo([comienzo])
     
-    condicion{{"Condición"}}
+    condicion{"Condición"}
     
     A[A]
     B[B]

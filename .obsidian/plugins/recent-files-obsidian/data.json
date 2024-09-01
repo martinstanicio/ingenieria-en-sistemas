@@ -1,32 +1,80 @@
 {
   "recentFiles": [
     {
+      "basename": "Error lógico",
+      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
+    },
+    {
       "basename": "Flags",
       "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
-      "basename": "20240827 - Ordenamiento por inserción",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240827 - Ordenamiento por inserción.md"
+      "basename": "Ordenamiento burbuja",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
     },
     {
       "basename": "Ordenamiento por inserción",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
     {
-      "basename": "Ciclo mientras",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
-    },
-    {
-      "basename": "20240823 - Vectores paralelos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
-    },
-    {
       "basename": "Ordenamiento",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
     },
     {
+      "basename": "20240827 - Producciones",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240827 - Producciones.md"
+    },
+    {
+      "basename": "Ciclo mientras",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo mientras.md"
+    },
+    {
+      "basename": "Código libre",
+      "path": "Arquitectura de Computadoras/Código libre.md"
+    },
+    {
+      "basename": "Código ponderado",
+      "path": "Arquitectura de Computadoras/Código ponderado.md"
+    },
+    {
+      "basename": "Binary Code Digit",
+      "path": "Arquitectura de Computadoras/Binary Code Digit.md"
+    },
+    {
+      "basename": "Binario sin signo",
+      "path": "Arquitectura de Computadoras/Binario sin signo.md"
+    },
+    {
+      "basename": "Complemento a 2",
+      "path": "Arquitectura de Computadoras/Complemento a 2.md"
+    },
+    {
+      "basename": "Binario signado con punto fijo",
+      "path": "Arquitectura de Computadoras/Binario signado con punto fijo.md"
+    },
+    {
+      "basename": "Complemento a 1",
+      "path": "Arquitectura de Computadoras/Complemento a 1.md"
+    },
+    {
+      "basename": "Módulo y signo",
+      "path": "Arquitectura de Computadoras/Módulo y signo.md"
+    },
+    {
+      "basename": "Pasaje directo",
+      "path": "Arquitectura de Computadoras/Pasaje directo.md"
+    },
+    {
+      "basename": "Sistema binario",
+      "path": "Arquitectura de Computadoras/Sistema binario.md"
+    },
+    {
       "basename": "Forma canónica",
       "path": "Arquitectura de Computadoras/Forma canónica.md"
+    },
+    {
+      "basename": "20240823 - Vectores paralelos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
     },
     {
       "basename": "Minitérmino (m)",
@@ -39,10 +87,6 @@
     {
       "basename": "Maxitérmino (M)",
       "path": "Arquitectura de Computadoras/Maxitérmino (M).md"
-    },
-    {
-      "basename": "Módulo y signo",
-      "path": "Arquitectura de Computadoras/Módulo y signo.md"
     },
     {
       "basename": "Álgebra de Boole",
@@ -155,50 +199,6 @@
     {
       "basename": "Límite",
       "path": "Análisis Matemático I/Límite.md"
-    },
-    {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
-    },
-    {
-      "basename": "rolle",
-      "path": "Análisis Matemático I/attachments/rolle.png"
-    },
-    {
-      "basename": "lagrange",
-      "path": "Análisis Matemático I/attachments/lagrange.jpg"
-    },
-    {
-      "basename": "Punto de inflexión",
-      "path": "Análisis Matemático I/Punto de inflexión.md"
-    },
-    {
-      "basename": "Concavidad",
-      "path": "Análisis Matemático I/Concavidad.md"
-    },
-    {
-      "basename": "Criterio de la primera derivada",
-      "path": "Análisis Matemático I/Criterio de la primera derivada.md"
-    },
-    {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Punto singular",
-      "path": "Análisis Matemático I/Punto singular.md"
-    },
-    {
-      "basename": "Estudio de función",
-      "path": "Análisis Matemático I/Estudio de función.md"
-    },
-    {
-      "basename": "derivada",
-      "path": "Análisis Matemático I/attachments/derivada.png"
-    },
-    {
-      "basename": "Derivación logarítmica",
-      "path": "Análisis Matemático I/Derivación logarítmica.md"
     }
   ],
   "omittedPaths": [],
