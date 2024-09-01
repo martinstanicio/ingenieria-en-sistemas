@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Error de sintaxis o compilación",
+      "path": "Algoritmos y Estructuras de Datos/Error de sintaxis o compilación.md"
+    },
+    {
+      "basename": "Error de ejecución",
+      "path": "Algoritmos y Estructuras de Datos/Error de ejecución.md"
+    },
+    {
       "basename": "Error lógico",
       "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
+    },
+    {
+      "basename": "Errores",
+      "path": "Algoritmos y Estructuras de Datos/Errores.md"
     },
     {
       "basename": "Flags",
@@ -187,18 +199,6 @@
     {
       "basename": "Derivación implícita",
       "path": "Análisis Matemático I/Derivación implícita.md"
-    },
-    {
-      "basename": "Derivada de funciones elementales",
-      "path": "Análisis Matemático I/Derivada de funciones elementales.md"
-    },
-    {
-      "basename": "Recta tangente",
-      "path": "Análisis Matemático I/Recta tangente.md"
-    },
-    {
-      "basename": "Límite",
-      "path": "Análisis Matemático I/Límite.md"
     }
   ],
   "omittedPaths": [],

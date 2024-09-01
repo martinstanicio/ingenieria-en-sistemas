@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Error
 created: 2024-03-22 18:08:23
-modified: 2024-06-04 00:38:13
+modified: 2024-09-01 14:30:02
 title: Errores
 ---
 
