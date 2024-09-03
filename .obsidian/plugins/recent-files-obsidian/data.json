@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "20240903 - Consonantes",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
+    },
+    {
       "basename": "20240903 - Ventas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Teorema de Fermat",
       "path": "Análisis Matemático I/Teorema de Fermat.md"
-    },
-    {
-      "basename": "Teorema de Lagrange",
-      "path": "Análisis Matemático I/Teorema de Lagrange.md"
     }
   ],
   "omittedPaths": [],
