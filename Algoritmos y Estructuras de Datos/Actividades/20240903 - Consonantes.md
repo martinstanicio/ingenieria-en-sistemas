@@ -1,6 +1,6 @@
 ---
 created: 2024-09-03 20:04:36
-modified: 2024-09-03 20:06:02
+modified: 2024-09-03 20:06:39
 title: 20240903 - Consonantes
 ---
 
@@ -12,16 +12,6 @@ Recordar que los códigos ASCII van:
 
 - 65-90 para la A hasta la Z respectivamente
 - 97-122 para la a hasta la z respectivamente
-
-## Pseudocódigo
-
-```
-comienzo
-
-declarar a = entero, b = real
-
-fin
-```
 
 ## Diagrama de flujo
 
@@ -40,5 +30,5 @@ flowchart TB
 ## Código
 
 ```embed-python
-PATH: "vault://Algoritmos y Estructuras de Datos/python/20240903-actividad.py"
+PATH: "vault://Algoritmos y Estructuras de Datos/python/20240903-consonantes.py"
 ```

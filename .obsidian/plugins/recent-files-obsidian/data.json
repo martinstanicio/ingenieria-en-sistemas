@@ -9,6 +9,14 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
     },
     {
+      "basename": "Función ORD",
+      "path": "Algoritmos y Estructuras de Datos/Función ORD.md"
+    },
+    {
+      "basename": "Función CHR",
+      "path": "Algoritmos y Estructuras de Datos/Función CHR.md"
+    },
+    {
       "basename": "20240903 - Micros",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
     },
@@ -23,10 +31,6 @@
     {
       "basename": "20240809 - Frases",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
-    },
-    {
-      "basename": "Función ORD",
-      "path": "Algoritmos y Estructuras de Datos/Función ORD.md"
     },
     {
       "basename": "Error de sintaxis o compilación",
@@ -195,10 +199,6 @@
     {
       "basename": "Isomorfismo",
       "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
-    },
-    {
-      "basename": "Teorema de Fermat",
-      "path": "Análisis Matemático I/Teorema de Fermat.md"
     }
   ],
   "omittedPaths": [],
