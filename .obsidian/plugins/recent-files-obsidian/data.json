@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Función ORD",
+      "path": "Algoritmos y Estructuras de Datos/Función ORD.md"
+    },
+    {
       "basename": "Error de sintaxis o compilación",
       "path": "Algoritmos y Estructuras de Datos/Error de sintaxis o compilación.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Derivación paramétrica",
       "path": "Análisis Matemático I/Derivación paramétrica.md"
-    },
-    {
-      "basename": "Derivación implícita",
-      "path": "Análisis Matemático I/Derivación implícita.md"
     }
   ],
   "omittedPaths": [],
