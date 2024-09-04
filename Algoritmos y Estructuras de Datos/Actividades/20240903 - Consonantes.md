@@ -1,6 +1,6 @@
 ---
 created: 2024-09-03 20:04:36
-modified: 2024-09-03 20:06:39
+modified: 2024-09-03 22:43:22
 title: 20240903 - Consonantes
 ---
 

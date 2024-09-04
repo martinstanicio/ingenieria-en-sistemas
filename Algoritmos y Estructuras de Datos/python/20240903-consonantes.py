@@ -24,5 +24,11 @@ def consonantes(frase: str) -> int:
                 and caracter != "U"
             ):
                 ans += 1
+            
+            # match caracter:
+            #     case "a" | "A" | "e" | "E" | "i" | "I" | "o" | "O" | "u" | "U":
+            #         pass
+            #     case _:
+            #         ans += 1
 
     return ans

@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Algoritmo
 created: 2024-03-20 15:51:48
-modified: 2024-06-04 00:31:44
+modified: 2024-09-03 22:51:55
 title: Algoritmos
 ---
 

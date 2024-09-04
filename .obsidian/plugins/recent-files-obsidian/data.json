@@ -5,8 +5,40 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
     },
     {
+      "basename": "Búsqueda secuencial",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
+    },
+    {
+      "basename": "Algoritmos",
+      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
+    },
+    {
+      "basename": "Búsqueda",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
+    },
+    {
+      "basename": "Corte de control en vector",
+      "path": "Algoritmos y Estructuras de Datos/Corte de control en vector.md"
+    },
+    {
+      "basename": "Búsqueda binaria",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
+    },
+    {
+      "basename": "Ordenamiento",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
+    },
+    {
+      "basename": "Ordenamiento burbuja",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
+    },
+    {
       "basename": "20240903 - Ventas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
+    },
+    {
+      "basename": "Programación modular",
+      "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
     },
     {
       "basename": "Función ORD",
@@ -53,16 +85,8 @@
       "path": "Arquitectura de Computadoras/Flags.md"
     },
     {
-      "basename": "Ordenamiento burbuja",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
-    },
-    {
       "basename": "Ordenamiento por inserción",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
-    },
-    {
-      "basename": "Ordenamiento",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
     },
     {
       "basename": "20240827 - Producciones",
@@ -175,30 +199,6 @@
     {
       "basename": "Límites",
       "path": "Sistemas y Procesos de Negocios/Límites.md"
-    },
-    {
-      "basename": "Alcance",
-      "path": "Sistemas y Procesos de Negocios/Alcance.md"
-    },
-    {
-      "basename": "Entropía",
-      "path": "Sistemas y Procesos de Negocios/Entropía.md"
-    },
-    {
-      "basename": "Neguentropía",
-      "path": "Sistemas y Procesos de Negocios/Neguentropía.md"
-    },
-    {
-      "basename": "Información directiva",
-      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
-    },
-    {
-      "basename": "Tipos de sistemas",
-      "path": "Sistemas y Procesos de Negocios/Tipos de sistemas.md"
-    },
-    {
-      "basename": "Isomorfismo",
-      "path": "Sistemas y Procesos de Negocios/Isomorfismo.md"
     }
   ],
   "omittedPaths": [],
