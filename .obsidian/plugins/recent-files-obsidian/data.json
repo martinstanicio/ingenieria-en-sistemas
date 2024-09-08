@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Ordenamiento por inserción",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
+    },
+    {
+      "basename": "Ordenamiento",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
+    },
+    {
+      "basename": "20240903 - Cantidad de palabras",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Cantidad de palabras.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
       "basename": "20240903 - Ventas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
     },
@@ -11,10 +27,6 @@
     {
       "basename": "20240903 - Consonantes",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
-    },
-    {
-      "basename": "20240903 - Cantidad de palabras",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Cantidad de palabras.md"
     },
     {
       "basename": "20240903 - Micros",
@@ -77,10 +89,6 @@
       "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
     },
     {
-      "basename": "Ordenamiento",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
-    },
-    {
       "basename": "Ordenamiento burbuja",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
     },
@@ -119,10 +127,6 @@
     {
       "basename": "Flags",
       "path": "Arquitectura de Computadoras/Flags.md"
-    },
-    {
-      "basename": "Ordenamiento por inserción",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
     {
       "basename": "20240827 - Producciones",
@@ -195,10 +199,6 @@
     {
       "basename": "Álgebra de Boole",
       "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
-    },
-    {
-      "basename": "ALU",
-      "path": "Arquitectura de Computadoras/ALU.md"
     }
   ],
   "omittedPaths": [],
