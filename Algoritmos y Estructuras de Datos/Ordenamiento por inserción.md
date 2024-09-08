@@ -2,7 +2,7 @@
 aliases:
   - Insertion sort
 created: 2024-08-27 21:14:45
-modified: 2024-08-27 22:29:37
+modified: 2024-09-08 20:15:22
 title: Ordenamiento por inserción
 ---
 
@@ -213,23 +213,15 @@ flowchart TB
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
-elementos = 5
-vector = [0] * elementos
+def insertion_sort(vector):
+    elementos = len(vector)
 
-for c in range(0, elementos):
-    vector[c] = int(input(f"Elemento {c + 1}: "))
+    for fijo in range(0, elementos - 1):
+        for variable in range(fijo + 1, elementos):
+            if vector[fijo] > vector[variable]:
+                aux = vector[fijo]
+                vector[fijo] = vector[variable]
+                vector[variable] = aux
 
-elemento_fijo = 0
-
-for barrido in range(0, elementos - 1):
-    for elemento_variable in range(elemento_fijo + 1, elementos):
-        if vector[elemento_fijo] > vector[elemento_variable]:
-            aux = vector[elemento_fijo]
-            vector[elemento_fijo] = vector[elemento_variable]
-            vector[elemento_variable] = aux
-    
-    elemento_fijo += 1
-
-for c in range(0, elementos):
-    print(vector[c])
+    return vector
 ```
