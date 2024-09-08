@@ -16,18 +16,19 @@ def insertion_sort(vector):
 
 def bubble_sort(vector):
     elementos = len(vector)
+    ans = [0.0] * elementos
 
-    for i in range(1, elementos):
-        j = i
+    for i in range(0, elementos):
+        ans[i] = vector[i]
 
-        while vector[j - 1] > vector[j] and j > 0:
-            aux = vector[j - 1]
-            vector[j - 1] = vector[j]
-            vector[j] = aux
+    for i in range(0, len(ans) - 1):
+        for j in range(0, len(ans) - 1):
+            if ans[j] < ans[j + 1]:
+                aux = ans[j]
+                ans[j] = ans[j + 1]
+                ans[j + 1] = aux
 
-            j -= 1
-
-    return vector
+    return ans
 
 
 elementos = 5
