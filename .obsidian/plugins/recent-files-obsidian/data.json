@@ -1,12 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "20240903 - Consonantes",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
+      "basename": "Teorema de Fermat",
+      "path": "Análisis Matemático I/Teorema de Fermat.md"
+    },
+    {
+      "basename": "Torque",
+      "path": "Física I/Torque.md"
+    },
+    {
+      "basename": "Momento de inercia",
+      "path": "Física I/Momento de inercia.md"
+    },
+    {
+      "basename": "Inercia",
+      "path": "Física I/Inercia.md"
+    },
+    {
+      "basename": "Rotación",
+      "path": "Física I/Rotación.md"
+    },
+    {
+      "basename": "Posición angular",
+      "path": "Física I/Posición angular.md"
+    },
+    {
+      "basename": "Sólido rígido",
+      "path": "Física I/Sólido rígido.md"
+    },
+    {
+      "basename": "Física I",
+      "path": "Física I/Física I.md"
+    },
+    {
+      "basename": "Código",
+      "path": "Arquitectura de Computadoras/Código.md"
     },
     {
       "basename": "Búsqueda secuencial",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
+    },
+    {
+      "basename": "20240903 - Consonantes",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
+    },
+    {
+      "basename": "20240903 - Ventas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
     },
     {
       "basename": "Algoritmos",
@@ -31,10 +71,6 @@
     {
       "basename": "Ordenamiento burbuja",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
-    },
-    {
-      "basename": "20240903 - Ventas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
     },
     {
       "basename": "Programación modular",
@@ -163,42 +199,6 @@
     {
       "basename": "ALU",
       "path": "Arquitectura de Computadoras/ALU.md"
-    },
-    {
-      "basename": "Regla de L'Hopital",
-      "path": "Análisis Matemático I/Regla de L'Hopital.md"
-    },
-    {
-      "basename": "20240823 - Vector contador y acumulador",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vector contador y acumulador.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
-      "basename": "20240820 - Empleados",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240820 - Empleados.md"
-    },
-    {
-      "basename": "20240705 - Consonantes",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240705 - Consonantes.md"
-    },
-    {
-      "basename": "20240712 - Fecha",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240712 - Fecha.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
-    },
-    {
-      "basename": "Propósito",
-      "path": "Sistemas y Procesos de Negocios/Propósito.md"
-    },
-    {
-      "basename": "Límites",
-      "path": "Sistemas y Procesos de Negocios/Límites.md"
     }
   ],
   "omittedPaths": [],
