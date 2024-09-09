@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "20240909 - Socios",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
+    },
+    {
       "basename": "20240909 - Procedimiento para frases",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Procedimiento para frases.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Sistema binario",
       "path": "Arquitectura de Computadoras/Sistema binario.md"
-    },
-    {
-      "basename": "Forma canónica",
-      "path": "Arquitectura de Computadoras/Forma canónica.md"
     }
   ],
   "omittedPaths": [],
