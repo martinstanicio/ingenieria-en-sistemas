@@ -2,7 +2,7 @@
 aliases:
   - Búsqueda lineal
 created: 2024-09-03 22:47:38
-modified: 2024-09-09 03:03:45
+modified: 2024-09-09 03:09:03
 title: Búsqueda secuencial
 ---
 
@@ -31,12 +31,10 @@ flowchart TB
 	
 	while{"i < largo(vector) y -bandera"}
 	contador["i = i + 1"]
-	if1{"valor >= vector[i]"}
-	if1no["bandera = verdadero"]
-	if2{"valor = vector[i]"}
-	if2si["`ans = i
+	if{"valor = vector[i]"}
+	ifsi["`ans = i
 	bandera = verdadero`"]
-		
+	
 	fin(["retornar ans"])
 	
 	a[" "]
@@ -44,12 +42,10 @@ flowchart TB
 	c[" "]
     
 	comienzo --> variables --> inicializar --> a --> while
-	while -- "Sí" --> contador --> if1
-	if1 -- "Sí" --> if2
-	if2 -- "Sï" --> if2si --> b
-	if2 -- "No" --> b
-	b --> c
-	if1 -- "No" --> if1no --> c --> a
+	while -- "Sí" --> contador --> if
+	if -- "Sí" --> ifsi --> b
+	if -- "No" --> b
+	b --> c --> a
 	while -- "No" --> fin
 ```
 
@@ -66,11 +62,8 @@ def linear_search(vector, valor):
     while i < len(vector) and not bandera:
         i += 1
         
-        if valor >= vector[i]:
-            if valor == vector[i]:
-                ans = i
-                bandera = True
-        else:
+        if valor == vector[i]:
+            ans = i
             bandera = True
     
     return ans

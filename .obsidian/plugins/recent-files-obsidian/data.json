@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Corte de control",
+      "path": "Algoritmos y Estructuras de Datos/Corte de control.md"
+    },
+    {
+      "basename": "Ordenamiento burbuja",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
+    },
+    {
+      "basename": "20240903 - Cantidad de palabras",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Cantidad de palabras.md"
+    },
+    {
+      "basename": "Ordenamiento por inserción",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
+    },
+    {
+      "basename": "Búsqueda",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
+    },
+    {
       "basename": "Búsqueda secuencial",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
     },
@@ -9,28 +29,12 @@
       "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
     },
     {
-      "basename": "Ordenamiento burbuja",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
-    },
-    {
-      "basename": "Ordenamiento por inserción",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
-    },
-    {
-      "basename": "Longitud lógica",
-      "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
-    },
-    {
       "basename": "Búsqueda binaria",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
     },
     {
-      "basename": "Búsqueda",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
-    },
-    {
-      "basename": "20240903 - Cantidad de palabras",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Cantidad de palabras.md"
+      "basename": "Longitud lógica",
+      "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
     },
     {
       "basename": "Ordenamiento",
@@ -95,10 +99,6 @@
     {
       "basename": "Algoritmos",
       "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Corte de control en vector",
-      "path": "Algoritmos y Estructuras de Datos/Corte de control en vector.md"
     },
     {
       "basename": "Programación modular",
