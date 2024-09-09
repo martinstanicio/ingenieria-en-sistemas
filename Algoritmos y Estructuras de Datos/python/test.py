@@ -84,8 +84,7 @@ def corte_control(vector):
     print(f"El número {control} se repite {z} veces")
 
 
-numbers = [randint(0, 10) for _ in range(0, 100)]
+numbers = [randint(0, 10) for _ in range(0, 1000)]
 print(numbers)
 
-print(f"{insertion_sort(numbers)=}")
-# print(f"{bubble_sort(numbers)=}")
+corte_control(insertion_sort(numbers))
