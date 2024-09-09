@@ -4,12 +4,12 @@ from random import randint
 def insertion_sort(vector):
     elementos = len(vector)
 
-    for fijo in range(0, elementos - 1):
-        for variable in range(fijo + 1, elementos):
-            if vector[fijo] > vector[variable]:
-                aux = vector[fijo]
-                vector[fijo] = vector[variable]
-                vector[variable] = aux
+    for i in range(0, elementos - 1):
+        for j in range(i + 1, elementos):
+            if vector[i] > vector[j]:
+                aux = vector[i]
+                vector[i] = vector[j]
+                vector[j] = aux
 
     return vector
 

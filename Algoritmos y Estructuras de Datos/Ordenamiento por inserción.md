@@ -2,13 +2,15 @@
 aliases:
   - Insertion sort
 created: 2024-08-27 21:14:45
-modified: 2024-09-08 20:15:22
+modified: 2024-09-08 23:21:47
 title: Ordenamiento por inserción
 ---
 
 # Ordenamiento por inserción
 
 Dado un [[Array|Vector]] de $n$ elementos, para realizar el [[Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
+
+Tendremos un **elemento fijo** `i`, y un **elemento variable** `j`.
 
 ## Concepto
 
@@ -155,6 +157,42 @@ El [[Diagrama de flujo]] se realiza de la siguiente forma.
 
 ```mermaid
 flowchart TB
+	comienzo(["insertion_sort(vector)"])
+    
+	variables["`elementos = entero
+	i = entero
+	j = entero
+	aux = entero`"]
+	
+	elementos["elementos = largo(vector)"]
+	
+	for1{{"i, 1, elementos + 1"}}
+	for2{{"j, i + 1, elementos + 1"}}
+	if{"vector[i] > vector[j]"}
+	swap["`aux = vector[i]
+	vector[i] = vector[j]
+	vector[j] = aux`"]
+	
+	fin(["retornar vector"])
+	
+	a[" "]
+	b[" "]
+	c[" "]
+    
+	comienzo --> variables --> elementos --> for1 --> for2 --> if
+	if -- "Sí" --> swap --> a
+	if -- "No" --> a
+	a --> b
+	for2 --> b --> c
+	for1 --> c --> fin
+```
+
+%% 
+
+Diagrama realizado en clase
+
+```mermaid
+flowchart TB
 	comienzo([comienzo])
     
 	variables["`vector[5] = entero
@@ -208,6 +246,8 @@ flowchart TB
 	f --> fin
 ```
 
+ %%
+
 ## Python
 
 En [[Python]] se realiza de la siguiente forma.
@@ -216,12 +256,12 @@ En [[Python]] se realiza de la siguiente forma.
 def insertion_sort(vector):
     elementos = len(vector)
 
-    for fijo in range(0, elementos - 1):
-        for variable in range(fijo + 1, elementos):
-            if vector[fijo] > vector[variable]:
-                aux = vector[fijo]
-                vector[fijo] = vector[variable]
-                vector[variable] = aux
+    for i in range(0, elementos - 1):
+        for j in range(i + 1, elementos):
+            if vector[i] > vector[j]:
+                aux = vector[i]
+                vector[i] = vector[j]
+                vector[j] = aux
 
     return vector
 ```
