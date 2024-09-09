@@ -2,7 +2,7 @@
 aliases:
   - Control por ruptura
 created: 2024-09-03 21:06:59
-modified: 2024-09-09 03:18:37
+modified: 2024-09-09 03:57:08
 title: Corte de control
 ---
 
@@ -28,34 +28,36 @@ El [[Diagrama de flujo]] se realiza de la siguiente forma.
 
 ```mermaid
 flowchart TB
-	comienzo(["bubble_sort(vector)"])
+	comienzo(["corte_control(vector)"])
     
 	variables["`elementos = entero
-	_ = entero
+	control = real
 	i = entero
-	aux = real`"]
+	z = entero`"]
 	
-	elementos["elementos = largo(vector)"]
+	inicializar["`elementos = largo(vector)
+	control = vector[1]
+	z = 1`"]
 	
-	for1{{"_, 1, elementos"}}
-	for2{{"i, 1, elementos"}}
-	if{"vector[i] > vector[i + 1]"}
-	swap["`aux = vector[i]
-	vector[i] = vector[i + 1]
-	vector[i + 1] = aux`"]
+	for{{"i, 1, elementos + 1"}}
+	if{"vector[i] = control"}
+	ifsi["z = z + 1"]
+	mostrar1{{"control, z"}}
+	ifno["`control = vector[i]
+	z = 1`"]
 	
-	fin(["retornar vector"])
+	mostrar2{{"control, z"}}
+	
+	fin([fin])
 	
 	a[" "]
 	b[" "]
-	c[" "]
     
-	comienzo --> variables --> elementos --> for1 --> for2 --> if
-	if -- "Sí" --> swap --> a
-	if -- "No" --> a
-	a --> b
-	for2 --> b --> c
-	for1 --> c --> fin
+	comienzo --> variables --> inicializar --> for --> if
+	if -- "Sí" --> ifsi --> a
+	if -- "No" --> mostrar1 --> ifno --> a
+	for --> b
+	a --> b --> mostrar2 --> fin
 ```
 
 ## Python
@@ -63,15 +65,18 @@ flowchart TB
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
-def bubble_sort(vector):
+def corte_control(vector):
     elementos = len(vector)
+    control = vector[0]
+    z = 0
     
-    for _ in range(0, elementos - 1):
-        for i in range(0, elementos - 1):
-            if vector[i] > vector[i + 1]:
-                aux = vector[i]
-                vector[i] = vector[i + 1]
-                vector[i + 1] = aux
-                
-    return vector
+    for i in range(0, elementos):
+        if vector[i] == control:
+            z += 1
+        else:
+            print(f"{control} está {z} veces")
+            control = vector[i]
+            z = 1
+    
+    print(f"{control} está {z} veces")
 ```
