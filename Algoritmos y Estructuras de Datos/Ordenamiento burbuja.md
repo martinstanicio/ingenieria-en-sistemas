@@ -2,7 +2,7 @@
 aliases:
   - Bubble sort
 created: 2024-08-27 21:14:45
-modified: 2024-09-09 02:30:54
+modified: 2024-09-09 02:58:22
 title: Ordenamiento burbuja
 ---
 
@@ -52,14 +52,14 @@ En [[Python]] se realiza de la siguiente forma.
 
 ```python
 def bubble_sort(vector):
-    elementos = len(vector)
-
-    for _ in range(0, elementos - 1):
-        for i in range(0, elementos - 1):
-            if vector[i] > vector[i + 1]:
-                aux = vector[i]
-                vector[i] = vector[i + 1]
-                vector[i + 1] = aux
-
-    return vector
+    elementos = len(vector)
+    
+    for _ in range(0, elementos - 1):
+        for i in range(0, elementos - 1):
+            if vector[i] > vector[i + 1]:
+                aux = vector[i]
+                vector[i] = vector[i + 1]
+                vector[i + 1] = aux
+                
+    return vector
 ```

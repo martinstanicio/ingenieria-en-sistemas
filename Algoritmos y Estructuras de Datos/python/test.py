@@ -27,14 +27,30 @@ def bubble_sort(vector):
     return vector
 
 
+def indexed_search(vector, valor):
+    bandera = False
+    ans = -1.0
+    i = 0
+
+    while i < len(vector) and not bandera:
+        i += 1
+
+        if valor >= vector[i]:
+            if valor == vector[i]:
+                ans = i
+                bandera = True
+        else:
+            bandera = True
+
+    return ans
+
+
 elementos = 5
 vector = [0] * elementos
 
 for c in range(0, elementos):
     # vector[c] = int(input(f"Elemento {c + 1}: "))
-    vector[c] = randint(0, 100)
+    vector[c] = randint(0, 10)
 
-vector = insertion_sort(vector)
-
-for c in range(0, elementos):
-    print(vector[c])
+print(vector)
+print(indexed_search(vector, 5))

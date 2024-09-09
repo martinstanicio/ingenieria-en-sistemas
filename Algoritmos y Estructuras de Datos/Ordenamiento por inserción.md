@@ -2,7 +2,7 @@
 aliases:
   - Insertion sort
 created: 2024-08-27 21:14:45
-modified: 2024-09-08 23:46:28
+modified: 2024-09-09 02:57:53
 title: Ordenamiento por inserción
 ---
 
@@ -229,7 +229,7 @@ flowchart TB
 
  %%
 
-# Diagrama de flujo
+## Diagrama de flujo
 
 El [[Diagrama de flujo]] se realiza de la siguiente forma.
 
@@ -265,20 +265,20 @@ flowchart TB
 	for1 --> c --> fin
 ```
 
-# Python
+## Python
 
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
 def insertion_sort(vector):
-    elementos = len(vector)
-
-    for i in range(0, elementos - 1):
-        for j in range(i + 1, elementos):
-            if vector[i] > vector[j]:
-                aux = vector[i]
-                vector[i] = vector[j]
-                vector[j] = aux
-
-    return vector
+    elementos = len(vector)
+    
+    for i in range(0, elementos - 1):
+        for j in range(i + 1, elementos):
+            if vector[i] > vector[j]:
+                aux = vector[i]
+                vector[i] = vector[j]
+                vector[j] = aux
+    
+    return vector
 ```

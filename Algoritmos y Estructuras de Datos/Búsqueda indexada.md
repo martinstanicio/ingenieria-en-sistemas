@@ -1,17 +1,18 @@
 ---
-aliases:
-  - Búsqueda lineal
-created: 2024-09-03 22:47:38
-modified: 2024-09-09 03:03:45
-title: Búsqueda secuencial
+created: 2024-09-09 02:36:07
+modified: 2024-09-09 03:00:04
+title: Búsqueda indexada
 ---
 
-# Búsqueda secuencial
+# Búsqueda indexada
 
-Este [[Algoritmos|Algoritmo]] compara elemento por elemento hasta encontrar el valor buscado. Si el valor no existe, realizará un barrido de todo el [[Array|Vector]] y retornará $-1$.
+Dado un [[Array|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] compara elemento por elemento hasta encontrar el valor buscado; o hasta que los valores evaluados sean **mayores al valor buscado**, lo que significa que el valor buscado **no existe** y se retornará $-1$.
 
 > [!tip]
-> El beneficio de este tipo de [[Búsqueda]] es que no necesitamos que el [[Array|Vector]] esté [[Ordenamiento|Ordenado]].
+> El beneficio de este tipo de [[Búsqueda]] es que en la mayoría de casos, si el valor buscado no existe, es capaz de finalizar la [[Búsqueda]] sin necesidad de recorrer todo el vector.
+
+> [!important]
+> El [[Array|Vector]] en cuestión debe estar [[Ordenamiento|Ordenado]].
 
 ## Diagrama de flujo
 
@@ -19,7 +20,7 @@ El [[Diagrama de flujo]] se realiza de la siguiente forma.
 
 ```mermaid
 flowchart TB
-	comienzo(["linear_search(vector, valor)"])
+	comienzo(["indexed_search(vector, valor)"])
     
 	variables["`bandera = logica
 	ans = real
@@ -58,7 +59,7 @@ flowchart TB
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
-def linear_search(vector, valor):
+def indexed_search(vector, valor):
     bandera = False
     ans = -1.0
     i = 0

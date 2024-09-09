@@ -5,16 +5,28 @@
       "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
     },
     {
-      "basename": "Búsqueda",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
+      "basename": "Búsqueda indexada",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
+    },
+    {
+      "basename": "Ordenamiento burbuja",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
     },
     {
       "basename": "Ordenamiento por inserción",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
     {
-      "basename": "Ordenamiento burbuja",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
+      "basename": "Longitud lógica",
+      "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
+    },
+    {
+      "basename": "Búsqueda binaria",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
+    },
+    {
+      "basename": "Búsqueda",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
     },
     {
       "basename": "20240903 - Cantidad de palabras",
@@ -87,10 +99,6 @@
     {
       "basename": "Corte de control en vector",
       "path": "Algoritmos y Estructuras de Datos/Corte de control en vector.md"
-    },
-    {
-      "basename": "Búsqueda binaria",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
     },
     {
       "basename": "Programación modular",
@@ -191,14 +199,6 @@
     {
       "basename": "Diagrama de Veitch-Karnaugh",
       "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
-    },
-    {
-      "basename": "Maxitérmino (M)",
-      "path": "Arquitectura de Computadoras/Maxitérmino (M).md"
-    },
-    {
-      "basename": "Álgebra de Boole",
-      "path": "Arquitectura de Computadoras/Álgebra de Boole.md"
     }
   ],
   "omittedPaths": [],
