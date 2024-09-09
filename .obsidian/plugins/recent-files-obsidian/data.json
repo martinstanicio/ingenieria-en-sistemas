@@ -5,6 +5,10 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
     },
     {
+      "basename": "Búsqueda secuencial",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
+    },
+    {
       "basename": "AyED - Actividad",
       "path": "Templates/AyED - Actividad.md"
     },
@@ -55,10 +59,6 @@
     {
       "basename": "Búsqueda",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
-    },
-    {
-      "basename": "Búsqueda secuencial",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
     },
     {
       "basename": "Búsqueda binaria",
