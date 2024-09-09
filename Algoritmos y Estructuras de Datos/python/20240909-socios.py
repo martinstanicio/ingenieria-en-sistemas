@@ -16,3 +16,9 @@ for i in range(0, socios):
 
     if edades[i] < min_edad:
         min_edad = edades[i]
+
+print(f"Menor edad: {min_edad}")
+
+for i in range(0, socios):
+    if edades[i] == min_edad:
+        print(f"{numeros[i]}: {apellidos[i]}")
