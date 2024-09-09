@@ -36,6 +36,7 @@ for i in range(0, elementos):
     numeros[i] = int(input("Ingrese un número: "))
 
 numeros = insertion_sort(numeros)
+# numeros = bubble_sort(numeros)
 
 for i in range(0, 4):
     print(numeros[i])

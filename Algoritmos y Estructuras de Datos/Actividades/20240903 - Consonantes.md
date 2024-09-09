@@ -13,20 +13,6 @@ Recordar que los códigos ASCII van:
 - 65-90 para la A hasta la Z respectivamente
 - 97-122 para la a hasta la z respectivamente
 
-## Diagrama de flujo
-
-```mermaid
-flowchart TB
-	comienzo([comienzo])
-    
-	variables["`
-	`"]
-    
-    fin([fin])
-    
-	comienzo --> variables --> fin
-```
-
 ## Código
 
 ```embed-python

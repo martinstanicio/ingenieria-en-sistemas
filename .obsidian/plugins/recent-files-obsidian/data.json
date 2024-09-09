@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Ordenamiento burbuja",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
+      "basename": "20240909 - Procedimiento para frases",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Procedimiento para frases.md"
+    },
+    {
+      "basename": "20240909 - Frases a minúsculas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Frases a minúsculas.md"
+    },
+    {
+      "basename": "20240903 - Consonantes",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
     },
     {
       "basename": "20240909 - Números más grandes",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Números más grandes.md"
+    },
+    {
+      "basename": "Ordenamiento burbuja",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
     },
     {
       "basename": "20240903 - Cantidad de palabras",
@@ -55,10 +67,6 @@
     {
       "basename": "20240903 - Mayor antiguedad",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Mayor antiguedad.md"
-    },
-    {
-      "basename": "20240903 - Consonantes",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
     },
     {
       "basename": "20240903 - Micros",
@@ -191,14 +199,6 @@
     {
       "basename": "Forma canónica",
       "path": "Arquitectura de Computadoras/Forma canónica.md"
-    },
-    {
-      "basename": "20240823 - Vectores paralelos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240823 - Vectores paralelos.md"
-    },
-    {
-      "basename": "Minitérmino (m)",
-      "path": "Arquitectura de Computadoras/Minitérmino (m).md"
     }
   ],
   "omittedPaths": [],
