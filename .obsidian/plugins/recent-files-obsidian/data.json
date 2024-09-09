@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Ordenamiento burbuja",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
+    },
+    {
+      "basename": "20240909 - Números más grandes",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Números más grandes.md"
+    },
+    {
       "basename": "20240903 - Cantidad de palabras",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Cantidad de palabras.md"
     },
     {
-      "basename": "Corte de control",
-      "path": "Algoritmos y Estructuras de Datos/Corte de control.md"
+      "basename": "Búsqueda indexada",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
     },
     {
-      "basename": "Ordenamiento burbuja",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
+      "basename": "Corte de control",
+      "path": "Algoritmos y Estructuras de Datos/Corte de control.md"
     },
     {
       "basename": "Ordenamiento por inserción",
@@ -23,10 +31,6 @@
     {
       "basename": "Búsqueda secuencial",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
-    },
-    {
-      "basename": "Búsqueda indexada",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
     },
     {
       "basename": "Búsqueda binaria",
@@ -195,10 +199,6 @@
     {
       "basename": "Minitérmino (m)",
       "path": "Arquitectura de Computadoras/Minitérmino (m).md"
-    },
-    {
-      "basename": "Diagrama de Veitch-Karnaugh",
-      "path": "Arquitectura de Computadoras/Diagrama de Veitch-Karnaugh.md"
     }
   ],
   "omittedPaths": [],
