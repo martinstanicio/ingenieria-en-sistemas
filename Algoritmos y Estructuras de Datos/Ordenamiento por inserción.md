@@ -240,11 +240,11 @@ flowchart TB
 	variables["`elementos = entero
 	i = entero
 	j = entero
-	aux = entero`"]
+	aux = real`"]
 	
 	elementos["elementos = largo(vector)"]
 	
-	for1{{"i, 1, elementos + 1"}}
+	for1{{"i, 1, elementos"}}
 	for2{{"j, i + 1, elementos + 1"}}
 	if{"vector[i] > vector[j]"}
 	swap["`aux = vector[i]

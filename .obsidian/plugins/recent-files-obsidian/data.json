@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Búsqueda secuencial",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
+    },
+    {
+      "basename": "Búsqueda",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
+    },
+    {
       "basename": "Ordenamiento por inserción",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
@@ -73,16 +81,8 @@
       "path": "Arquitectura de Computadoras/Código.md"
     },
     {
-      "basename": "Búsqueda secuencial",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
-    },
-    {
       "basename": "Algoritmos",
       "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Búsqueda",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
     },
     {
       "basename": "Corte de control en vector",
