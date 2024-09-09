@@ -34,7 +34,7 @@ for c in range(0, elementos):
     # vector[c] = int(input(f"Elemento {c + 1}: "))
     vector[c] = randint(0, 100)
 
-vector = bubble_sort(vector)
+vector = insertion_sort(vector)
 
 for c in range(0, elementos):
     print(vector[c])

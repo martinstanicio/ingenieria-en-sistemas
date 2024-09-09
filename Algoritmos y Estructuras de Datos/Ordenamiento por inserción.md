@@ -2,7 +2,7 @@
 aliases:
   - Insertion sort
 created: 2024-08-27 21:14:45
-modified: 2024-09-08 23:21:47
+modified: 2024-09-08 23:46:28
 title: Ordenamiento por inserción
 ---
 
@@ -10,7 +10,24 @@ title: Ordenamiento por inserción
 
 Dado un [[Array|Vector]] de $n$ elementos, para realizar el [[Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
 
-Tendremos un **elemento fijo** `i`, y un **elemento variable** `j`.
+Tendremos un **elemento fijo** `i`, y un **elemento variable** `j` que siempre estará a su derecha. Realizamos barridos por el vector, y en el caso de que el elemento fijo sea mayor al elemento variable.
+
+```python
+vector[i] > vector[j]
+```
+
+Realizamos un intercambio de sus valores.
+
+```python
+aux = vector[i]
+vector[i] = vector[j]
+vector[j] = aux
+
+# En Python
+vector[i], vector[j] = vector[j], vector[i]
+```
+
+%% 
 
 ## Concepto
 
@@ -20,7 +37,7 @@ Por ejemplo, con el siguiente [[Array|Vector]].
 vector = [10, 5, 30, 7, 15]
 ```
 
-### Barrido 1
+## Barrido 1
 
 Aquí nuestro elemento fijo será $10$, y nuestro elemento variable será $5$.
 
@@ -70,7 +87,7 @@ Por lo tanto, no modificamos el orden.
 vector = [5, 10, 30, 7, 15]
 ```
 
-### Barrido 2
+## Barrido 2
 
 Aquí nuestro elemento fijo será $10$, y nuestro elemento variable será $30$.
 
@@ -111,7 +128,7 @@ Por lo tanto, no modificamos el orden.
 vector = [5, 7, 30, 10, 15]
 ```
 
-### Barrido 3
+## Barrido 3
 
 Aquí nuestro elemento fijo será $30$, y nuestro elemento variable será $10$.
 
@@ -137,7 +154,7 @@ Por lo tanto, no modificamos el orden.
 vector = [5, 7, 10, 30, 15]
 ```
 
-### Barrido 4
+## Barrido 4
 
 Aquí nuestro elemento fijo será $30$, y nuestro elemento variable será $15$.
 
@@ -151,43 +168,7 @@ Por lo tanto, intercambiamos los elementos, de la siguiente forma.
 vector = [5, 7, 10, 15, 30]
 ```
 
-## Diagrama de flujo
-
-El [[Diagrama de flujo]] se realiza de la siguiente forma.
-
-```mermaid
-flowchart TB
-	comienzo(["insertion_sort(vector)"])
-    
-	variables["`elementos = entero
-	i = entero
-	j = entero
-	aux = entero`"]
-	
-	elementos["elementos = largo(vector)"]
-	
-	for1{{"i, 1, elementos + 1"}}
-	for2{{"j, i + 1, elementos + 1"}}
-	if{"vector[i] > vector[j]"}
-	swap["`aux = vector[i]
-	vector[i] = vector[j]
-	vector[j] = aux`"]
-	
-	fin(["retornar vector"])
-	
-	a[" "]
-	b[" "]
-	c[" "]
-    
-	comienzo --> variables --> elementos --> for1 --> for2 --> if
-	if -- "Sí" --> swap --> a
-	if -- "No" --> a
-	a --> b
-	for2 --> b --> c
-	for1 --> c --> fin
-```
-
-%% 
+# Diagrama de flujo
 
 Diagrama realizado en clase
 
@@ -248,7 +229,43 @@ flowchart TB
 
  %%
 
-## Python
+# Diagrama de flujo
+
+El [[Diagrama de flujo]] se realiza de la siguiente forma.
+
+```mermaid
+flowchart TB
+	comienzo(["insertion_sort(vector)"])
+    
+	variables["`elementos = entero
+	i = entero
+	j = entero
+	aux = entero`"]
+	
+	elementos["elementos = largo(vector)"]
+	
+	for1{{"i, 1, elementos + 1"}}
+	for2{{"j, i + 1, elementos + 1"}}
+	if{"vector[i] > vector[j]"}
+	swap["`aux = vector[i]
+	vector[i] = vector[j]
+	vector[j] = aux`"]
+	
+	fin(["retornar vector"])
+	
+	a[" "]
+	b[" "]
+	c[" "]
+    
+	comienzo --> variables --> elementos --> for1 --> for2 --> if
+	if -- "Sí" --> swap --> a
+	if -- "No" --> a
+	a --> b
+	for2 --> b --> c
+	for1 --> c --> fin
+```
+
+# Python
 
 En [[Python]] se realiza de la siguiente forma.
 
