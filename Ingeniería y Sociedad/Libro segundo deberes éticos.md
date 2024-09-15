@@ -1,6 +1,6 @@
 ---
 created: 2024-09-10 18:21:08
-modified: 2024-09-15 12:41:17
+modified: 2024-09-15 13:40:43
 title: "Libro segundo: deberes éticos"
 ---
 
@@ -36,14 +36,15 @@ El profesional privado debe considerarse un **auxiliar de la administración pú
 
 ## Deberes en contratos
 
-El profesional debe actuar como **defensor de los intereses de su cliente**, pero ==no puede perjudicar a terceros==.
-
-> [!important]
-> Los contratos deben ser **claros**, y cualquier cambio debe ser **aprobado por el cliente**.
+1. El profesional debe actuar como **guardián de los intereses** del cliente, ==sin perjudicar a terceros==.
+2. Los contratos deben ser **claros**, y cualquier cambio debe ser **aprobado por el cliente**.
 
 ## Relaciones jerárquicas entre profesionales
 
 Los profesionales deben respetar las [[Jerarquía|Jerarquías]] dentro de las instituciones, pero también tratarse con **dignidad** y **respeto mutuo**, ==sin permitir injusticias== hacia colegas de niveles superiores o inferiores.
+
+> [!warning]
+> Todo profesional tiene el deber de ==no beneficiarse suplantando al colega== **injustamente desplazado**.
 
 ## Profesionales en concurso
 
@@ -57,4 +58,4 @@ Los profesionales deben asegurarse de que los concursos en los que participan **
 Define como falta ética cualquier **acción que viole los principios y normas** establecidas en el [[Código de ética profesional]].
 
 > [!tip]
-> Estas faltas son evaluadas por el **Tribunal de Ética**, que puede imponer sanciones.
+> Estas faltas son evaluadas por el *Tribunal de Ética*, que puede imponer **sanciones**.
