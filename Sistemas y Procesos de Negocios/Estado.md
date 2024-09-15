@@ -8,4 +8,4 @@ title: Estado
 
 El **estado** es uno de los [[Atributos]] de una entidad. La transición entre estados es llamada **flujo**.
 
-Por lo general, no todos los cambios de [[Estado]] pueden ocurrir en cualquier momento, por lo que podemos definir los posibles movimientos, y su órden, mediante un [[Diagrama de Transición de Estado (DTE)]].
+Por lo general, no todos los cambios de [[Estado]] pueden ocurrir en cualquier momento, por lo que podemos definir los posibles movimientos, y su órden, mediante un [[Diagrama de Transición de Estado]].
