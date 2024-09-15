@@ -1,6 +1,6 @@
 ---
 created: 2024-09-10 18:21:08
-modified: 2024-09-11 16:13:45
+modified: 2024-09-15 12:41:17
 title: "Libro segundo: deberes éticos"
 ---
 
@@ -8,24 +8,24 @@ title: "Libro segundo: deberes éticos"
 
 ## Deberes hacia la dignidad de la profesión
 
-Los profesionales deben mantener el **respeto** y la **imagen de su profesión** en la sociedad.
-
-No pueden aceptar trabajos que **comprometan la técnica** o la **dignidad profesional**, ni utilizar medios publicitarios exagerados o **engañosos**.
+1. Los profesionales deben mantener y promover la **buena reputación de la profesión** en la sociedad.
+2. No se deben ejecutar trabajos que **comprometan la técnica profesional**, ==incluso bajo órdenes==; ni utilizar medios publicitarios exagerados o **engañosos**.
+3. Evitar la ocupación de cargos **simultáneamente** en ==instituciones públicas y privadas== que puedan generar **conflicto de intereses**.
+4. No competir con otros profesionales a través de la **reducción desleal de honorarios**.
 
 ## Deberes hacia otros profesionales
 
-Incluye el **respeto mutuo** entre colegas, no difamarlos ni competir deslealmente.
-
-No pueden **apropiarse** de trabajos o ideas **sin autorización** ni sustituir a otros profesionales sin un acuerdo adecuado.
+1. No utilizar **sin autorización** ideas o documentación de **otros** profesionales.
+2. Evitar la **difamación** de colegas y ==no aceptar reemplazos== en proyectos sin previa **desvinculación formal** del profesional anterior.
 
 ## Deberes hacia clientes y el público
 
-El profesional debe actuar con **honestidad** y **responsabilidad**, mantener la [[Confidencialidad]] y ==manejar con cuidado== los [[Recursos]] financieros de sus clientes.
+1. No ofrecer servicios de **dudosa viabilidad** o **imposibles** de cumplir.
+2. Mantener el **secreto profesional** y [[Confidencialidad]] sobre la ==información relacionada con los clientes==.
+3. Manejar con **responsabilidad** los ==fondos asignados== por el cliente y **rendir cuentas** claras de su uso.
 
-No puede asumir **roles contradictorios** en una obra.
-
-> [!tip]
-> Por ejemplo, no puede ser contratista y director.
+> [!danger]
+> No puede asumir **roles contradictorios** en una obra. Por ejemplo, no puede ser contratista y director.
 
 ## Deberes entre profesionales del sector público y privado
 

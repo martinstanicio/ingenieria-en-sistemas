@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "Libro segundo deberes éticos",
+      "path": "Ingeniería y Sociedad/Libro segundo deberes éticos.md"
+    },
+    {
+      "basename": "Libro primero principios básicos",
+      "path": "Ingeniería y Sociedad/Libro primero principios básicos.md"
+    },
+    {
+      "basename": "Principio de inducción fuerte",
+      "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte.md"
+    },
+    {
+      "basename": "Libro tercero normas de procedimiento",
+      "path": "Ingeniería y Sociedad/Libro tercero normas de procedimiento.md"
+    },
+    {
+      "basename": "Código de ética profesional",
+      "path": "Ingeniería y Sociedad/Código de ética profesional.md"
+    },
+    {
+      "basename": "Decreto Nº 109994",
+      "path": "Ingeniería y Sociedad/Decreto Nº 109994.md"
+    },
+    {
       "basename": "20240909 - Socios",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
     },
     {
       "basename": "IEEE754",
       "path": "Arquitectura de Computadoras/IEEE754.md"
-    },
-    {
-      "basename": "Libro segundo deberes éticos",
-      "path": "Ingeniería y Sociedad/Libro segundo deberes éticos.md"
     },
     {
       "basename": "Diagrama de Transición de Estado",
@@ -35,14 +55,6 @@
     {
       "basename": "Confidencialidad",
       "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
-    },
-    {
-      "basename": "Decreto Nº 109994",
-      "path": "Ingeniería y Sociedad/Decreto Nº 109994.md"
-    },
-    {
-      "basename": "Código de ética profesional",
-      "path": "Ingeniería y Sociedad/Código de ética profesional.md"
     },
     {
       "basename": "Álgebra y Geometría Analítica",
@@ -187,18 +199,6 @@
     {
       "basename": "Error de sintaxis o compilación",
       "path": "Algoritmos y Estructuras de Datos/Error de sintaxis o compilación.md"
-    },
-    {
-      "basename": "Error de ejecución",
-      "path": "Algoritmos y Estructuras de Datos/Error de ejecución.md"
-    },
-    {
-      "basename": "Error lógico",
-      "path": "Algoritmos y Estructuras de Datos/Error lógico.md"
-    },
-    {
-      "basename": "Errores",
-      "path": "Algoritmos y Estructuras de Datos/Errores.md"
     }
   ],
   "omittedPaths": [],
