@@ -2,7 +2,7 @@
 aliases:
   - Búsqueda dicotómica
 created: 2024-09-03 22:31:58
-modified: 2024-09-17 21:35:31
+modified: 2024-09-17 21:57:11
 title: Búsqueda binaria
 ---
 
@@ -46,13 +46,14 @@ flowchart TB
     ans = -1
     bandera = falso`"]
 	
-	while{"low <= high y -bandera"}
+	while{"-bandera y valor >= vector[low] y valor <= vector[high]"}
 	mid["mid = (high + low) // 2"]
-	if{"valor >= vector[i]"}
-	low["bandera = verdadero"]
-	elif{"valor = vector[i]"}
-	high["ans = ibandera = verdadero"]
-	ans["`bandera = ve = verdadero`"]
+	if1{"vector[mid] = valor"}
+	if1si["`ans = mid
+	bandera = verdadero`"]
+	if2{"valor > vector[mid]"}
+	if2si["low = mid + 1"]
+	if2no["high = mid - 1"]
 		
 	fin(["retornar ans"])
 	
@@ -62,12 +63,12 @@ flowchart TB
     
 	comienzo --> variables --> inicializar --> a --> while
 	while -- "Sí" --> mid --> if1
-	if1 -- "Sí" --> if2
-	if2 -- "Sï" --> if2si --> b
-	if2 -- "No" --> b
-	b --> c
-	if1 -- "No" --> if1no --> c --> a
-	while -- "No" --> fin
+	if1 -- "Sí" --> if1si --> b
+	if1 -- "No" --> if2
+	if2 -- "Sí" --> if2si --> c
+	if2 -- "No" --> if2no --> c
+	c --> b --> a
+	while -- "No" -------> fin
 ```
 
 ## Python
@@ -81,16 +82,16 @@ def binary_search(vector, valor):
     ans = -1
     bandera = False
     
-    while low <= high and not bandera:
+    while not bandera and valor >= vector[low] and valor <= vector[high]:
         mid = (high + low) // 2
         
-        if vector[mid] < valor:
-            low = mid + 1
-        elif vector[mid] > valor:
-            high = mid - 1
-        else:
-            bandera = True
+        if vector[mid] == valor:
             ans = mid
+            bandera = True
+        elif valor > vector[mid]:
+            low = mid + 1
+        else:
+            high = mid - 1
     
     return ans
 ```

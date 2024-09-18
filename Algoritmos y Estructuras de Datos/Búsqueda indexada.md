@@ -1,6 +1,6 @@
 ---
 created: 2024-09-09 02:36:07
-modified: 2024-09-17 21:32:32
+modified: 2024-09-17 21:52:35
 title: Búsqueda indexada
 ---
 
@@ -47,11 +47,11 @@ flowchart TB
 	comienzo --> variables --> inicializar --> a --> while
 	while -- "Sí" --> contador --> if1
 	if1 -- "Sí" --> if2
-	if2 -- "Sï" --> if2si --> b
+	if2 -- "Sí" --> if2si --> b
 	if2 -- "No" --> b
 	b --> c
 	if1 -- "No" --> if1no --> c --> a
-	while -- "No" --> fin
+	while -- "No" -------> fin
 ```
 
 ## Python
