@@ -6,7 +6,7 @@ title: Vector acumulador
 
 # Vector acumulador
 
-Un [[Array|Vector]] donde cada elemento es un [[Acumulador]] para alguna serie de [[Dato|Datos]] particular.
+Un [[Vector|Vector]] donde cada elemento es un [[Acumulador]] para alguna serie de [[Dato|Datos]] particular.
 
 > [!tip]
 > Un [[Vector acumulador]] sirve para reemplazar una [[Estructura de casos]] de [[Acumulador|Acumuladores]].

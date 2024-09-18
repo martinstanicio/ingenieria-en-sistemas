@@ -6,7 +6,7 @@ title: Búsqueda
 
 # Búsqueda
 
-Un [[Algoritmos|Algoritmo]] que nos permite encontrar un [[Dato]] en un [[Array|Vector]].
+Un [[Algoritmos|Algoritmo]] que nos permite encontrar un [[Dato]] en un [[Vector|Vector]].
 
 > [!important]
 > Para estos algoritmos, el [[Dato]] utilizado para realizar la [[Búsqueda]] debe ser **único**.

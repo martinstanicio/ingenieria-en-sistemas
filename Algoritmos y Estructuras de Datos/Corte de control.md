@@ -8,13 +8,13 @@ title: Corte de control
 
 # Corte de control
 
-Determinar la cantidad de veces que se repite un [[Dato]] en un [[Array|Vector]].
+Determinar la cantidad de veces que se repite un [[Dato]] en un [[Vector|Vector]].
 
 ```python
 vector = [5, 10, 5, 15, 5]
 ```
 
-Para esto realizamos un [[Ordenamiento]] del [[Array|Vector]].
+Para esto realizamos un [[Ordenamiento]] del [[Vector|Vector]].
 
 ```python
 vector = [5, 5, 5, 10, 15]

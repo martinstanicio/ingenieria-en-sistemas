@@ -6,7 +6,7 @@ title: Vector contador
 
 # Vector contador
 
-Un [[Array|Vector]] donde cada elemento es un [[Contador]] para alguna serie de [[Dato|Datos]] particular.
+Un [[Vector|Vector]] donde cada elemento es un [[Contador]] para alguna serie de [[Dato|Datos]] particular.
 
 > [!tip]
 > Un [[Vector contador]] sirve para reemplazar una [[Estructura de casos]] de [[Contador|Contadores]].

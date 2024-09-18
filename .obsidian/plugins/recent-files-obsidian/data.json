@@ -1,20 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Búsqueda binaria",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
+      "basename": "Vector multidimensional",
+      "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
     },
     {
-      "basename": "Búsqueda indexada",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
+      "basename": "Vector",
+      "path": "Algoritmos y Estructuras de Datos/Vector.md"
     },
     {
       "basename": "Búsqueda secuencial",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
     },
     {
+      "basename": "Búsqueda binaria",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
+    },
+    {
       "basename": "Código de ética profesional",
       "path": "Ingeniería y Sociedad/Código de ética profesional.md"
+    },
+    {
+      "basename": "Ordenamiento",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
+    },
+    {
+      "basename": "Búsqueda indexada",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
     },
     {
       "basename": "Proceso",
@@ -145,10 +157,6 @@
       "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
     },
     {
-      "basename": "Ordenamiento",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
-    },
-    {
       "basename": "Ciclo desde-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Código",
       "path": "Arquitectura de Computadoras/Código.md"
-    },
-    {
-      "basename": "Algoritmos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos.md"
-    },
-    {
-      "basename": "Programación modular",
-      "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
     }
   ],
   "omittedPaths": [],

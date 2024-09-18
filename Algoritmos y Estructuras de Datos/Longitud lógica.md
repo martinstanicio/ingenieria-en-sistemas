@@ -6,7 +6,7 @@ title: Longitud lógica
 
 # Longitud lógica
 
-El largo del contenido de elemento o [[Variables|Variable]], generalmente una [[Array|Lista]] o cadena de caracteres.
+El largo del contenido de elemento o [[Variables|Variable]], generalmente una [[Vector|Lista]] o cadena de caracteres.
 
 ## Pseudocódigo
 

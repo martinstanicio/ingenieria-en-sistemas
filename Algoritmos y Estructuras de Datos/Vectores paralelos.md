@@ -6,10 +6,10 @@ title: Vectores paralelos
 
 # Vectores paralelos
 
-Cuando la **posición** de los elementos de dos o más [[Array|Vectores]] mantienen una **relación**, decimos que estamos trabajando con un [[Sistemas|Sistema]] de [[Vectores paralelos]].
+Cuando la **posición** de los elementos de dos o más [[Vector|Vectores]] mantienen una **relación**, decimos que estamos trabajando con un [[Sistemas|Sistema]] de [[Vectores paralelos]].
 
 > [!important]
-> Todos los [[Array|Vectores]] deben tener la **misma cantidad** de elementos.
+> Todos los [[Vector|Vectores]] deben tener la **misma cantidad** de elementos.
 
 Por ejemplo, podemos tener [[Vectores paralelos]] para guardar la información personal de los usuarios.
 

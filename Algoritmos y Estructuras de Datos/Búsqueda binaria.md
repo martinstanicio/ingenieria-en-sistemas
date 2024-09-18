@@ -2,16 +2,16 @@
 aliases:
   - Búsqueda dicotómica
 created: 2024-09-03 22:31:58
-modified: 2024-09-17 21:58:53
+modified: 2024-09-17 22:16:14
 title: Búsqueda binaria
 ---
 
 # Búsqueda binaria
 
-Dado un [[Array|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] divide al [[Array|Vector]] en dos subvectores de igual tamaño tantas veces como sea necesario.
+Dado un [[Vector|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] divide al [[Vector|Vector]] en dos subvectores de igual tamaño tantas veces como sea necesario.
 
 > [!important]
-> Al elemento que separará a las dos mitades del [[Array|Vector]], lo llamaremos **elemento central**.
+> Al elemento que separará a las dos mitades del [[Vector|Vector]], lo llamaremos **elemento central**.
 > 
 > Podemos obtenerlo utilizando la **división entera**.
 >
@@ -25,7 +25,7 @@ Si el valor buscado **no existe** en ninguna de las dos mitades, retornamos $-1$
 > El beneficio de este tipo de [[Búsqueda]] es que es capaz de generar una [[Salidas|Salida]] realizando un máximo de $\log n$ barridos, menor a otros tipos de [[Búsqueda]].
 
 > [!important]
-> El [[Array|Vector]] en cuestión debe estar [[Ordenamiento|Ordenado]].
+> El [[Vector|Vector]] en cuestión debe estar [[Ordenamiento|Ordenado]].
 
 ## Diagrama de flujo
 

@@ -9,7 +9,7 @@ title: Procedimiento
 Un [[Conjunto]] de sentencias que recibe **parámetros** de [[Entradas|Entrada]], ejecuta las instrucciones dadas, y, a diferencia de una [[Análisis Matemático I/Función|Función]], puede tener una ==única [[Salidas|Salida]], múltiples, o ninguna==.
 
 > [!tip]
-> La [[Salidas|Salida]] de un [[Procedimiento]] puede guardarse en [[Variables]] individuales, o en una [[Array|Lista]].
+> La [[Salidas|Salida]] de un [[Procedimiento]] puede guardarse en [[Variables]] individuales, o en una [[Vector|Lista]].
 
 ## Python
 

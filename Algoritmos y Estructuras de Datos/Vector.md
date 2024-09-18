@@ -1,13 +1,13 @@
 ---
 aliases:
   - Lista
-  - Vector
+  - Array
 created: 2024-08-06 21:28:01
-modified: 2024-08-06 22:14:39
-title: Array
+modified: 2024-09-17 22:31:29
+title: Vector
 ---
 
-# Array
+# Vector
 
 Un ==[[Conjunto]] de elementos==, dentro de los cuales podemos almacenar un [[Dato]].
 
@@ -17,42 +17,27 @@ Un ==[[Conjunto]] de elementos==, dentro de los cuales podemos almacenar un [[Da
 En [[Python]], podemos hacerlo de la siguiente forma.
 
 ```python
-array = [2, "abc", True, 0.5]
+vector = [2, "abc", True, 0.5]
 ```
 
-Para trabajar con un elemento de un [[Array]], debemos seleccionarlo por su ==índice==.
+Para trabajar con un elemento de un [[Vector]], debemos seleccionarlo por su ==índice==.
 
 > [!warning]
-> El índice de los elementos de un [[Array]] suele comenzar en $0$, no en $1$.
+> El índice de los elementos de un [[Vector]] suele comenzar en $0$, no en $1$.
 
 En [[Python]], podemos hacerlo de la siguiente forma.
 
 ```python
-array = [3, 5]
-array[0] += 4
+vector = [3, 5]
+vector[0] += 4
 
-print(array[0]) # 7
-print(array[1]) # 5
-```
-
-## Array multidimensional
-
-Un [[Array]] ==multidimensional==, es un [[Array]] cuyos ==elementos son [[Array|Arrays]] o [[Array|Vectores]]==. Por lo tanto, también podemos considerarlas [[Matriz|Matrices]]. Por ejemplo, en [[Python]], una [[Matriz]] bidimensional de $3 \times 3$:
-
-```python
-matriz = [[1, 2, 3],
-		  [4, 5, 6],
-		  [7, 8, 9]]
-```
-
-O una [[Matriz]] tridimensional de $2 \times 2 \times 2$:
-
-```python
-matriz = [[[1, 2], [3, 4]],
-		  [[5, 6], [7, 8]]]
+print(vector[0]) # 7
+print(vector[1]) # 5
 ```
 
 ## Diagrama de flujo
+
+El [[Diagrama de flujo]] se realiza de la siguiente forma.
 
 ```mermaid
 flowchart TB
@@ -66,6 +51,8 @@ flowchart TB
 ```
 
 ## Python
+
+En [[Python]] se realiza de la siguiente forma.
 
 ```python
 nombre_vector = [valor_inicial] * elementos

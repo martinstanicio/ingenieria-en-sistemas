@@ -6,13 +6,13 @@ title: Búsqueda indexada
 
 # Búsqueda indexada
 
-Dado un [[Array|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] compara elemento por elemento hasta encontrar el valor buscado; o hasta que los valores evaluados sean **mayores al valor buscado**, lo que significa que el valor buscado **no existe** y se retornará $-1$.
+Dado un [[Vector|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] compara elemento por elemento hasta encontrar el valor buscado; o hasta que los valores evaluados sean **mayores al valor buscado**, lo que significa que el valor buscado **no existe** y se retornará $-1$.
 
 > [!tip]
 > El beneficio de este tipo de [[Búsqueda]] es que en la mayoría de casos, si el valor buscado no existe, es capaz de finalizar la [[Búsqueda]] sin necesidad de recorrer todo el vector.
 
 > [!important]
-> El [[Array|Vector]] en cuestión debe estar [[Ordenamiento|Ordenado]].
+> El [[Vector|Vector]] en cuestión debe estar [[Ordenamiento|Ordenado]].
 
 ## Diagrama de flujo
 

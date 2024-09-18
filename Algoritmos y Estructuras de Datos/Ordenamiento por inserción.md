@@ -8,7 +8,7 @@ title: Ordenamiento por inserción
 
 # Ordenamiento por inserción
 
-Dado un [[Array|Vector]] de $n$ elementos, para realizar el [[Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
+Dado un [[Vector|Vector]] de $n$ elementos, para realizar el [[Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
 
 Tendremos un **elemento fijo** `i`, y un **elemento variable** `j` que siempre estará a su derecha. Realizamos barridos por el vector, y en el caso de que el elemento fijo sea mayor al elemento variable.
 
@@ -31,7 +31,7 @@ vector[i], vector[j] = vector[j], vector[i]
 
 ## Concepto
 
-Por ejemplo, con el siguiente [[Array|Vector]].
+Por ejemplo, con el siguiente [[Vector|Vector]].
 
 ```python
 vector = [10, 5, 30, 7, 15]
