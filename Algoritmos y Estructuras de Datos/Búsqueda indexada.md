@@ -1,6 +1,6 @@
 ---
 created: 2024-09-09 02:36:07
-modified: 2024-09-09 03:00:04
+modified: 2024-09-17 21:32:32
 title: Búsqueda indexada
 ---
 
@@ -27,7 +27,7 @@ flowchart TB
 	i = entero`"]
 	
 	inicializar["`bandera = falso
-	ans = -1.0
+	ans = -1
 	i = 0`"]
 	
 	while{"i < largo(vector) y -bandera"}
@@ -61,7 +61,7 @@ En [[Python]] se realiza de la siguiente forma.
 ```python
 def indexed_search(vector, valor):
     bandera = False
-    ans = -1.0
+    ans = -1
     i = 0
     
     while i < len(vector) and not bandera:

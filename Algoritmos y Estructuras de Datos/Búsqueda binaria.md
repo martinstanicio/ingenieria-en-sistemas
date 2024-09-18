@@ -2,16 +2,27 @@
 aliases:
   - Búsqueda dicotómica
 created: 2024-09-03 22:31:58
-modified: 2024-09-17 20:17:27
+modified: 2024-09-17 21:35:31
 title: Búsqueda binaria
 ---
 
 # Búsqueda binaria
 
-Dado un [[Array|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] analiza el valor del elemento en el **punto medio** del [[Array|Vector]]; si el número es mayor al valor buscado, sabemos que el valor a encontrar puede estar en la **primera mitad** del [[Array|Vector]]; caso contrario, puede estar en la **segunda mitad**. Si al realizar esta [[Búsqueda]] se determina que el valor buscado **no existe**, se retornará $-1$.
+Dado un [[Array|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] divide al [[Array|Vector]] en dos subvectores de igual tamaño tantas veces como sea necesario.
+
+> [!important]
+> Al elemento que separará a las dos mitades del [[Array|Vector]], lo llamaremos **elemento central**.
+> 
+> Podemos obtenerlo utilizando la **división entera**.
+>
+> ``` python
+> central = len(vector) // 2
+> ```
+
+Si el valor buscado **no existe** en ninguna de las dos mitades, retornamos $-1$. Si está en alguna de las mitades, **volvemos a realizar el mismo proceso**, hasta llegar a un único elemento, que puede o no ser el valor buscado.
 
 > [!tip]
-> El beneficio de este tipo de [[Búsqueda]] es que es capaz de generar una [[Salidas|Salida]] realizando en promedio $\log n$ operaciones, que es menor a otros tipos de [[Búsqueda]].
+> El beneficio de este tipo de [[Búsqueda]] es que es capaz de generar una [[Salidas|Salida]] realizando un máximo de $\log n$ barridos, menor a otros tipos de [[Búsqueda]].
 
 > [!important]
 > El [[Array|Vector]] en cuestión debe estar [[Ordenamiento|Ordenado]].
@@ -22,23 +33,26 @@ El [[Diagrama de flujo]] se realiza de la siguiente forma.
 
 ```mermaid
 flowchart TB
-	comienzo(["indexed_search(vector, valor)"])
+	comienzo(["binary_search(vector, valor)"])
     
-	variables["`bandera = logica
-	ans = real
-	i = entero`"]
+	variables["`low = entero
+    high = entero
+    mid = entero
+    ans = entero
+    bandera = logica`"]
 	
-	inicializar["`bandera = falso
-	ans = -1.0
-	i = 0`"]
+	inicializar["`low = 1
+	high = largo(vector)
+    ans = -1
+    bandera = falso`"]
 	
-	while{"i < largo(vector) y -bandera"}
-	contador["i = i + 1"]
-	if1{"valor >= vector[i]"}
-	if1no["bandera = verdadero"]
-	if2{"valor = vector[i]"}
-	if2si["`ans = i
-	bandera = verdadero`"]
+	while{"low <= high y -bandera"}
+	mid["mid = (high + low) // 2"]
+	if{"valor >= vector[i]"}
+	low["bandera = verdadero"]
+	elif{"valor = vector[i]"}
+	high["ans = ibandera = verdadero"]
+	ans["`bandera = ve = verdadero`"]
 		
 	fin(["retornar ans"])
 	
@@ -47,7 +61,7 @@ flowchart TB
 	c[" "]
     
 	comienzo --> variables --> inicializar --> a --> while
-	while -- "Sí" --> contador --> if1
+	while -- "Sí" --> mid --> if1
 	if1 -- "Sí" --> if2
 	if2 -- "Sï" --> if2si --> b
 	if2 -- "No" --> b
@@ -61,20 +75,22 @@ flowchart TB
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
-def indexed_search(vector, valor):
+def binary_search(vector, valor):
+    low = 0
+    high = len(vector) - 1
+    ans = -1
     bandera = False
-    ans = -1.0
-    i = 0
     
-    while i < len(vector) and not bandera:
-        i += 1
+    while low <= high and not bandera:
+        mid = (high + low) // 2
         
-        if valor >= vector[i]:
-            if valor == vector[i]:
-                ans = i
-                bandera = True
+        if vector[mid] < valor:
+            low = mid + 1
+        elif vector[mid] > valor:
+            high = mid - 1
         else:
             bandera = True
+            ans = mid
     
     return ans
 ```

@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Código de ética profesional",
-      "path": "Ingeniería y Sociedad/Código de ética profesional.md"
-    },
-    {
       "basename": "Búsqueda binaria",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
     },
     {
-      "basename": "Proceso",
-      "path": "Sistemas y Procesos de Negocios/Proceso.md"
-    },
-    {
       "basename": "Búsqueda indexada",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
+    },
+    {
+      "basename": "Búsqueda secuencial",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
+    },
+    {
+      "basename": "Código de ética profesional",
+      "path": "Ingeniería y Sociedad/Código de ética profesional.md"
+    },
+    {
+      "basename": "Proceso",
+      "path": "Sistemas y Procesos de Negocios/Proceso.md"
     },
     {
       "basename": "SaaS",
@@ -115,10 +119,6 @@
     {
       "basename": "Corte de control",
       "path": "Algoritmos y Estructuras de Datos/Corte de control.md"
-    },
-    {
-      "basename": "Búsqueda secuencial",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
     },
     {
       "basename": "AyED - Actividad",

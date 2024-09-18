@@ -2,7 +2,7 @@
 aliases:
   - Búsqueda lineal
 created: 2024-09-03 22:47:38
-modified: 2024-09-09 03:09:03
+modified: 2024-09-17 21:32:00
 title: Búsqueda secuencial
 ---
 
@@ -26,7 +26,7 @@ flowchart TB
 	i = entero`"]
 	
 	inicializar["`bandera = falso
-	ans = -1.0
+	ans = -1
 	i = 0`"]
 	
 	while{"i < largo(vector) y -bandera"}
@@ -56,7 +56,7 @@ En [[Python]] se realiza de la siguiente forma.
 ```python
 def linear_search(vector, valor):
     bandera = False
-    ans = -1.0
+    ans = -1
     i = 0
     
     while i < len(vector) and not bandera:
