@@ -2,7 +2,7 @@
 aliases:
   - Búsqueda dicotómica
 created: 2024-09-03 22:31:58
-modified: 2024-09-17 21:57:11
+modified: 2024-09-17 21:58:53
 title: Búsqueda binaria
 ---
 
@@ -46,7 +46,11 @@ flowchart TB
     ans = -1
     bandera = falso`"]
 	
-	while{"-bandera y valor >= vector[low] y valor <= vector[high]"}
+	while{"`-bandera
+	y
+	valor >= vector[low]
+	y
+	valor <= vector[high]`"}
 	mid["mid = (high + low) // 2"]
 	if1{"vector[mid] = valor"}
 	if1si["`ans = mid
