@@ -2,7 +2,7 @@
 aliases:
   - Matriz
 created: 2024-09-17 22:29:06
-modified: 2024-09-17 22:36:29
+modified: 2024-09-17 22:48:35
 title: Vector multidimensional
 ---
 
@@ -48,6 +48,15 @@ nombre_matriz = [valor_inicial] * elementos
 
 ## Asignación de [[Dato|Datos]]
 
+Realizaremos la carga de los datos **por fila**.
+
+> [!tip]
+> Si se quisiera hacer una **carga por columna**, solo hay que intercambiar los [[Estructura de repetición|Ciclos]].
+
+### Diagrama de flujo
+
+El [[Diagrama de flujo]] se realiza de la siguiente forma.
+
 ```mermaid
 flowchart TB
 	comienzo([comienzo])
@@ -62,9 +71,32 @@ flowchart TB
 	c = entero`"]
 	
 	for1{{"f, 0, 4"}}
-	for2{{"c, 0, "}}
+	for2{{"c, 0, 5"}}
+	input[/"num"/]
+	elem["matriz[f, c] = num"]
         
 	fin([fin])
+	
+	a[" "]
+	b[" "]
     
-	comienzo --> declaracion --> for1 --> fin
+	comienzo --> declaracion --> for1 --> for2 --> input --> elem
+	for1 --> a
+	for2 --> b
+	elem --> b --> a --> fin
+```
+
+### Python
+
+En [[Python]] se realiza de la siguiente forma.
+
+```python
+filas = 3
+columnas = 4
+matriz = ???
+
+for f in range(0, 4):
+    for c in range(0, 5):
+        num = int(input("Número: "))
+        matriz[f, c] = num
 ```

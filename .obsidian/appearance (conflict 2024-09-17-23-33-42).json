@@ -1,0 +1,9 @@
+{
+  "accentColor": "",
+  "cssTheme": "Vanilla AMOLED",
+  "enabledCssSnippets": [
+    "math",
+    "iframe"
+  ],
+  "theme": "obsidian"
+}
