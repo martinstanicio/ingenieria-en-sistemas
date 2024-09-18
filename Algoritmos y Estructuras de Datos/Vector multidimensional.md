@@ -2,7 +2,7 @@
 aliases:
   - Matriz
 created: 2024-09-17 22:29:06
-modified: 2024-09-17 22:48:35
+modified: 2024-09-18 01:45:38
 title: Vector multidimensional
 ---
 
@@ -43,7 +43,7 @@ flowchart TB
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
-nombre_matriz = [valor_inicial] * elementos
+nombre_matriz = [[0 for _ in range(columnas)] for _ in range(filas)]
 ```
 
 ## Asignación de [[Dato|Datos]]
@@ -93,10 +93,10 @@ En [[Python]] se realiza de la siguiente forma.
 ```python
 filas = 3
 columnas = 4
-matriz = ???
+matriz = [[0 for _ in range(columnas)] for _ in range(filas)]
 
-for f in range(0, 4):
-    for c in range(0, 5):
+for f in range(0, filas):
+    for c in range(0, columnas):
         num = int(input("Número: "))
-        matriz[f, c] = num
+        matriz[f][c] = num
 ```
