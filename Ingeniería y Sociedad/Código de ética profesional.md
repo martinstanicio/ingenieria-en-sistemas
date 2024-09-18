@@ -1,6 +1,6 @@
 ---
 created: 2024-09-10 17:45:44
-modified: 2024-09-15 15:33:20
+modified: 2024-09-17 14:49:51
 title: Código de ética profesional
 ---
 
@@ -19,6 +19,8 @@ Obliga a los profesionales a **cumplir con las normas legales** y **velar por el
 
 > [!note]
 > Habla del respeto a las normas **éticas** y la responsabilidad de **representar adecuadamente** a la profesión.
+
+---
 
 ## Libro segundo: deberes éticos
 
@@ -74,7 +76,9 @@ Los profesionales deben asegurarse de que los concursos en los que participan **
 Define como falta ética cualquier **acción que viole los principios y normas** establecidas en el [[Código de ética profesional]].
 
 > [!tip]
-> Estas faltas son evaluadas por el *Tribunal de Ética*, que puede imponer **sanciones**.
+> Estas faltas son evaluadas por el *Tribunal de Ética Profesional*, que puede imponer **sanciones**.
+
+---
 
 ## Libro tercero: normas de procedimiento
 
@@ -89,7 +93,7 @@ Se contempla el **derecho de apelación** en casos de rechazo de la denuncia​.
 
 ### Investigación y resolución
 
-Una vez presentada la denuncia, el Consejo investigará y emitirá un **informe**, que será evaluado por la **Junta Central** para ==determinar si hubo violación== de las normas éticas.
+Una vez presentada la denuncia, el Consejo investigará y emitirá un **informe**, que será evaluado por la *Junta Central* para ==determinar si hubo violación== de las normas éticas.
 
 > [!important]
 > El profesional implicado puede **presentar su defensa** y proponer **pruebas**.

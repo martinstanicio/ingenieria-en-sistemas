@@ -5,6 +5,38 @@
       "path": "Ingeniería y Sociedad/Código de ética profesional.md"
     },
     {
+      "basename": "Búsqueda binaria",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
+    },
+    {
+      "basename": "Proceso",
+      "path": "Sistemas y Procesos de Negocios/Proceso.md"
+    },
+    {
+      "basename": "Búsqueda indexada",
+      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
+    },
+    {
+      "basename": "SaaS",
+      "path": "Sistemas y Procesos de Negocios/SaaS.md"
+    },
+    {
+      "basename": "Entradas",
+      "path": "Sistemas y Procesos de Negocios/Entradas.md"
+    },
+    {
+      "basename": "Entropía",
+      "path": "Sistemas y Procesos de Negocios/Entropía.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "IEEE754",
+      "path": "Arquitectura de Computadoras/IEEE754.md"
+    },
+    {
       "basename": "Cardinal",
       "path": "Álgebra y Geometría Analítica/Cardinal.md"
     },
@@ -27,10 +59,6 @@
     {
       "basename": "20240909 - Socios",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
-    },
-    {
-      "basename": "IEEE754",
-      "path": "Arquitectura de Computadoras/IEEE754.md"
     },
     {
       "basename": "Diagrama de Transición de Estado",
@@ -109,16 +137,8 @@
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Cantidad de palabras.md"
     },
     {
-      "basename": "Búsqueda indexada",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
-    },
-    {
       "basename": "Búsqueda",
       "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
-    },
-    {
-      "basename": "Búsqueda binaria",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
     },
     {
       "basename": "Longitud lógica",
@@ -179,22 +199,6 @@
     {
       "basename": "Programación modular",
       "path": "Algoritmos y Estructuras de Datos/Programación modular.md"
-    },
-    {
-      "basename": "Función ORD",
-      "path": "Algoritmos y Estructuras de Datos/Función ORD.md"
-    },
-    {
-      "basename": "Función CHR",
-      "path": "Algoritmos y Estructuras de Datos/Función CHR.md"
-    },
-    {
-      "basename": "20240809 - Frases",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
-    },
-    {
-      "basename": "Error de sintaxis o compilación",
-      "path": "Algoritmos y Estructuras de Datos/Error de sintaxis o compilación.md"
     }
   ],
   "omittedPaths": [],

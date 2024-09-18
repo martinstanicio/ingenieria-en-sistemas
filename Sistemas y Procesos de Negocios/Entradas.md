@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Entrada
 created: 2024-04-09 19:13:59
-modified: 2024-05-28 15:59:45
+modified: 2024-09-17 19:25:42
 title: Entradas
 ---
 
