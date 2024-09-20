@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Untitled",
+      "path": "Algoritmos y Estructuras de Datos/Untitled.md"
+    },
+    {
+      "basename": "Ordenamiento",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
+    },
+    {
       "basename": "Vector multidimensional",
       "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
+    },
+    {
+      "basename": "Movimiento oscilatorio",
+      "path": "Física I/Movimiento oscilatorio.md"
+    },
+    {
+      "basename": "Oscilaciones",
+      "path": "Física I/Oscilaciones.md"
+    },
+    {
+      "basename": "Punto de equilibrio",
+      "path": "Física I/Punto de equilibrio.md"
+    },
+    {
+      "basename": "Momento de inercia",
+      "path": "Física I/Momento de inercia.md"
     },
     {
       "basename": "Búsqueda binaria",
@@ -19,10 +43,6 @@
     {
       "basename": "Código de ética profesional",
       "path": "Ingeniería y Sociedad/Código de ética profesional.md"
-    },
-    {
-      "basename": "Ordenamiento",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
     },
     {
       "basename": "Búsqueda indexada",
@@ -173,32 +193,12 @@
       "path": "Física I/Torque.md"
     },
     {
-      "basename": "Momento de inercia",
-      "path": "Física I/Momento de inercia.md"
-    },
-    {
       "basename": "Inercia",
       "path": "Física I/Inercia.md"
     },
     {
       "basename": "Rotación",
       "path": "Física I/Rotación.md"
-    },
-    {
-      "basename": "Posición angular",
-      "path": "Física I/Posición angular.md"
-    },
-    {
-      "basename": "Sólido rígido",
-      "path": "Física I/Sólido rígido.md"
-    },
-    {
-      "basename": "Física I",
-      "path": "Física I/Física I.md"
-    },
-    {
-      "basename": "Código",
-      "path": "Arquitectura de Computadoras/Código.md"
     }
   ],
   "omittedPaths": [],
