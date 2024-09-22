@@ -11,7 +11,7 @@ title: Búsqueda secuencial
 Este [[Algoritmos|Algoritmo]] compara elemento por elemento hasta encontrar el valor buscado. Si el valor no existe, realizará un barrido de todo el [[Vector|Vector]] y retornará $-1$.
 
 > [!tip]
-> El beneficio de este tipo de [[Búsqueda]] es que no necesitamos que el [[Vector|Vector]] esté [[Ordenamiento|Ordenado]].
+> El beneficio de este tipo de [[Búsqueda]] es que no necesitamos que el [[Vector|Vector]] esté [[Algoritmos y Estructuras de Datos/Ordenamiento|Ordenado]].
 
 ## Diagrama de flujo
 

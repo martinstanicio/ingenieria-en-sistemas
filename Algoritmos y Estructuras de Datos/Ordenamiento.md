@@ -8,7 +8,7 @@ title: Ordenamiento
 
 Existen múltiples formas de ordenar [[Vector|Vectores]], como [[Ordenamiento por inserción]] u [[Ordenamiento burbuja]].
 
-En [[Python]], podemos realizar un [[Ordenamiento]] con la [[Análisis Matemático I/Función|Función]] nativa `sort`, de la siguiente forma.
+En [[Python]], podemos realizar un [[Algoritmos y Estructuras de Datos/Ordenamiento]] con la [[Análisis Matemático I/Función|Función]] nativa `sort`, de la siguiente forma.
 
 ```python
 vector.sort()

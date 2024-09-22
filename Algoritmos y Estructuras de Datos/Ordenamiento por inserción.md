@@ -8,7 +8,7 @@ title: Ordenamiento por inserción
 
 # Ordenamiento por inserción
 
-Dado un [[Vector|Vector]] de $n$ elementos, para realizar el [[Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
+Dado un [[Vector|Vector]] de $n$ elementos, para realizar el [[Algoritmos y Estructuras de Datos/Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
 
 Tendremos un **elemento fijo** `i`, y un **elemento variable** `j` que siempre estará a su derecha. Realizamos barridos por el vector, y en el caso de que el elemento fijo sea mayor al elemento variable.
 

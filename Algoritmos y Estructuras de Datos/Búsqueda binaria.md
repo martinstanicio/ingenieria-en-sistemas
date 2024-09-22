@@ -8,7 +8,7 @@ title: Búsqueda binaria
 
 # Búsqueda binaria
 
-Dado un [[Vector|Vector]] [[Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] divide al [[Vector|Vector]] en dos subvectores de igual tamaño tantas veces como sea necesario.
+Dado un [[Vector|Vector]] [[Algoritmos y Estructuras de Datos/Ordenamiento|Ordenado]], este [[Algoritmos|Algoritmo]] divide al [[Vector|Vector]] en dos subvectores de igual tamaño tantas veces como sea necesario.
 
 > [!important]
 > Al elemento que separará a las dos mitades del [[Vector|Vector]], lo llamaremos **elemento central**.
@@ -25,7 +25,7 @@ Si el valor buscado **no existe** en ninguna de las dos mitades, retornamos $-1$
 > El beneficio de este tipo de [[Búsqueda]] es que es capaz de generar una [[Salidas|Salida]] realizando un máximo de $\log n$ barridos, menor a otros tipos de [[Búsqueda]].
 
 > [!important]
-> El [[Vector|Vector]] en cuestión debe estar [[Ordenamiento|Ordenado]].
+> El [[Vector|Vector]] en cuestión debe estar [[Algoritmos y Estructuras de Datos/Ordenamiento|Ordenado]].
 
 ## Diagrama de flujo
 

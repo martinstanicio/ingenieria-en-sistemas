@@ -8,7 +8,7 @@ title: Ordenamiento burbuja
 
 # Ordenamiento burbuja
 
-Dado un [[Vector|Vector]] de $n$ elementos, para realizar el [[Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
+Dado un [[Vector|Vector]] de $n$ elementos, para realizar el [[Algoritmos y Estructuras de Datos/Ordenamiento]], deberemos realizar $n - 1$ *barridos*.
 
 ## Diagrama de flujo
 

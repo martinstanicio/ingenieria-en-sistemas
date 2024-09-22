@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Untitled",
-      "path": "Algoritmos y Estructuras de Datos/Untitled.md"
+      "basename": "Ordenamiento burbuja",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
     },
     {
       "basename": "Ordenamiento",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
+    },
+    {
+      "basename": "Ordenamiento por inserción",
+      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
     {
       "basename": "Vector multidimensional",
@@ -109,10 +113,6 @@
       "path": "Ingeniería y Sociedad/Libro primero principios Básicos.md"
     },
     {
-      "basename": "Ordenamiento burbuja",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
-    },
-    {
       "basename": "Autenticidad",
       "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
     },
@@ -123,10 +123,6 @@
     {
       "basename": "Álgebra y Geometría Analítica",
       "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
-    },
-    {
-      "basename": "Ordenamiento por inserción",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
     {
       "basename": "Teorema de Fermat",
