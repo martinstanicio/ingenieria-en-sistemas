@@ -1,16 +1,12 @@
 ---
 created: 2024-05-29 18:07:44
-modified: 2024-09-24 15:15:10
+modified: 2024-09-24 15:26:59
 title: IEEE 754
 ---
 
 # IEEE 754
 
-Un **estándar técnico** para la representación de números de **punto flotante**.
-
-## Formato de representación
-
-Los números de punto flotante se representan utilizando tres componentes:
+Un **estándar técnico** para la representación de números de **punto flotante**. Esto se hace utilizando tres componentes:
 
    - **Signo**: Indica si el número es positivo o negativo.
    - **Exponente sesgado**: Determina la magnitud del número (el factor por el cual se multiplica la base).
@@ -29,10 +25,6 @@ Algunos de los formatos más comunes, son los siguientes.
 
 > [!important]
 > No siempre puede lograrse una **representación exacta**, lo que introduce pequeños errores en los cálculos. El [[IEEE 754]] define varios modos de redondeo para **minimizar estos errores**.
-
-Este estándar es esencial en sistemas que requieren cálculos numéricos precisos, como simulaciones científicas, gráficos por computadora y procesamiento de señales.
-
-![[ieee754.jpg]]
 
 ## Mantiza normalizada
 
