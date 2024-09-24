@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "20240909 - Alumnos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
+    },
+    {
+      "basename": "Voz pasiva",
+      "path": "Inglés I/Voz pasiva.md"
+    },
+    {
+      "basename": "Oscilaciones",
+      "path": "Física I/Oscilaciones.md"
+    },
+    {
+      "basename": "Momento de inercia",
+      "path": "Física I/Momento de inercia.md"
+    },
+    {
+      "basename": "Movimiento oscilatorio",
+      "path": "Física I/Movimiento oscilatorio.md"
+    },
+    {
       "basename": "Ordenamiento burbuja",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
     },
@@ -17,20 +37,8 @@
       "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
     },
     {
-      "basename": "Movimiento oscilatorio",
-      "path": "Física I/Movimiento oscilatorio.md"
-    },
-    {
-      "basename": "Oscilaciones",
-      "path": "Física I/Oscilaciones.md"
-    },
-    {
       "basename": "Punto de equilibrio",
       "path": "Física I/Punto de equilibrio.md"
-    },
-    {
-      "basename": "Momento de inercia",
-      "path": "Física I/Momento de inercia.md"
     },
     {
       "basename": "Búsqueda binaria",
@@ -139,10 +147,6 @@
     {
       "basename": "20240909 - Frases a minúsculas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Frases a minúsculas.md"
-    },
-    {
-      "basename": "20240909 - Alumnos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
     },
     {
       "basename": "Corte de control",
