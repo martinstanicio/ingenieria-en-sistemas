@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "IEEE754",
+      "path": "Arquitectura de Computadoras/IEEE754.md"
+    },
+    {
+      "basename": "Código ponderado",
+      "path": "Arquitectura de Computadoras/Código ponderado.md"
+    },
+    {
+      "basename": "Código libre",
+      "path": "Arquitectura de Computadoras/Código libre.md"
+    },
+    {
+      "basename": "Código de Hamming",
+      "path": "Arquitectura de Computadoras/Código de Hamming.md"
+    },
+    {
+      "basename": "Código",
+      "path": "Arquitectura de Computadoras/Código.md"
+    },
+    {
       "basename": "20240909 - Alumnos",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
     },
@@ -79,10 +99,6 @@
     {
       "basename": "Información",
       "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "IEEE754",
-      "path": "Arquitectura de Computadoras/IEEE754.md"
     },
     {
       "basename": "Cardinal",
@@ -183,22 +199,6 @@
     {
       "basename": "20240903 - Ventas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
-    },
-    {
-      "basename": "20240903 - Mayor antiguedad",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Mayor antiguedad.md"
-    },
-    {
-      "basename": "Torque",
-      "path": "Física I/Torque.md"
-    },
-    {
-      "basename": "Inercia",
-      "path": "Física I/Inercia.md"
-    },
-    {
-      "basename": "Rotación",
-      "path": "Física I/Rotación.md"
     }
   ],
   "omittedPaths": [],
