@@ -5,6 +5,30 @@
       "path": "Arquitectura de Computadoras/Código de Hamming.md"
     },
     {
+      "basename": "Código",
+      "path": "Arquitectura de Computadoras/Código.md"
+    },
+    {
+      "basename": "Diodo",
+      "path": "Arquitectura de Computadoras/Diodo.md"
+    },
+    {
+      "basename": "Forma canónica",
+      "path": "Arquitectura de Computadoras/Forma canónica.md"
+    },
+    {
+      "basename": "Notación de modelos de procesos de negocios",
+      "path": "Sistemas y Procesos de Negocios/Notación de modelos de procesos de negocios.md"
+    },
+    {
+      "basename": "Transistor",
+      "path": "Arquitectura de Computadoras/Transistor.md"
+    },
+    {
+      "basename": "Código libre",
+      "path": "Arquitectura de Computadoras/Código libre.md"
+    },
+    {
       "basename": "IEEE 754",
       "path": "Arquitectura de Computadoras/IEEE 754.md"
     },
@@ -23,14 +47,6 @@
     {
       "basename": "Código ponderado",
       "path": "Arquitectura de Computadoras/Código ponderado.md"
-    },
-    {
-      "basename": "Código libre",
-      "path": "Arquitectura de Computadoras/Código libre.md"
-    },
-    {
-      "basename": "Código",
-      "path": "Arquitectura de Computadoras/Código.md"
     },
     {
       "basename": "20240909 - Alumnos",
@@ -137,10 +153,6 @@
       "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado.md"
     },
     {
-      "basename": "Notación de modelos de procesos de negocios",
-      "path": "Sistemas y Procesos de Negocios/Notación de modelos de procesos de negocios.md"
-    },
-    {
       "basename": "Libro primero principios Básicos",
       "path": "Ingeniería y Sociedad/Libro primero principios Básicos.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "20240903 - Consonantes",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
-    },
-    {
-      "basename": "20240903 - Cantidad de palabras",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Cantidad de palabras.md"
-    },
-    {
-      "basename": "Búsqueda",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda.md"
-    },
-    {
-      "basename": "Longitud lógica",
-      "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
     }
   ],
   "omittedPaths": [],
