@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Código de Gray",
+      "path": "Arquitectura de Computadoras/Código de Gray.md"
+    },
+    {
       "basename": "Código de Hamming",
       "path": "Arquitectura de Computadoras/Código de Hamming.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Mínimo",
       "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
-    },
-    {
-      "basename": "20240903 - Consonantes",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Consonantes.md"
     }
   ],
   "omittedPaths": [],
