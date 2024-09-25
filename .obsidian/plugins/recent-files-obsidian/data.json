@@ -5,6 +5,18 @@
       "path": "Arquitectura de Computadoras/IEEE 754.md"
     },
     {
+      "basename": "20240924 - Total por fila",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por fila.md"
+    },
+    {
+      "basename": "Sistemas Operativos",
+      "path": "Sistemas Operativos/Sistemas Operativos.md"
+    },
+    {
+      "basename": "Voz pasiva",
+      "path": "Inglés I/Voz pasiva.md"
+    },
+    {
       "basename": "Código ponderado",
       "path": "Arquitectura de Computadoras/Código ponderado.md"
     },
@@ -23,10 +35,6 @@
     {
       "basename": "20240909 - Alumnos",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
-    },
-    {
-      "basename": "Voz pasiva",
-      "path": "Inglés I/Voz pasiva.md"
     },
     {
       "basename": "Oscilaciones",
@@ -191,14 +199,6 @@
     {
       "basename": "Longitud lógica",
       "path": "Algoritmos y Estructuras de Datos/Longitud lógica.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
-      "basename": "20240903 - Ventas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Ventas.md"
     }
   ],
   "omittedPaths": [],

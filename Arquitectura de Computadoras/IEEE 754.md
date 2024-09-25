@@ -1,6 +1,6 @@
 ---
 created: 2024-05-29 18:07:44
-modified: 2024-09-24 15:26:59
+modified: 2024-09-24 16:43:49
 title: IEEE 754
 ---
 
@@ -26,16 +26,26 @@ Algunos de los formatos más comunes, son los siguientes.
 > [!important]
 > No siempre puede lograrse una **representación exacta**, lo que introduce pequeños errores en los cálculos. El [[IEEE 754]] define varios modos de redondeo para **minimizar estos errores**.
 
-## Mantiza normalizada
-
-El número que queremos representar, con la coma decimal desplazada tantas veces como sea necesario para que la parte entera contenga un solo $1$.
-
-El número que irá en esta parte será todo lo que esté **detrás** de la coma decimal, completando con $0$ los espacios que puedan quedar vacíos del lado derecho.
-
 ## Exponente sesgado
 
-Si para obtener la mantiza normalizada realizamos un desplazamiento de, por ejemplo, $3$ lugares, utilizando el método de desplazamiento 127, calculamos el número que debemos ingresar en el exponente sesgado.
+Indica cuántas veces la base debe multiplicarse por sí misma para obtener el valor deseado, **moviendo el punto decimal** hacia la izquierda o derecha.
+
+> [!note]
+> Se almacena utilizando un **sesgo** para evitar la necesidad de representar números negativos directamente.
+
+En lugar de guardar el exponente real, se guarda el valor del exponente sumado con un **sesgo** (un número fijo), lo que permite que el exponente **sea siempre positivo** en la representación binaria.
 
 $$
-127 + 3 = 130
+\text{exponente} + \text{sesgo} = \text{exponente sesgado}
 $$
+
+Por ejemplo, en **precisión simple**, el sesgo es $127$.
+
+## Mantiza normalizada
+
+El número que queremos representar, con punto decimal desplazado tantas veces como sea necesario para que **la parte entera contenga un solo $1$**.
+
+> [!note]
+> Decimos que la mantiza está **normalizada** si su parte entera es $1$.
+
+Como se asume que está **normalizada**, solo se almacena la **parte decimal**, mejorando la **precisión**.
