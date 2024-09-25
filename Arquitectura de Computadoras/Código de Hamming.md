@@ -5,7 +5,7 @@ title: Código de Hamming
 ---
 
 # Código de Hamming
-
+El [[Código de Hamming]] permite realizar correción de errores de un único [[Bit]].
 `k`: bits de paridad
 
 `m`: bits de mensaje
