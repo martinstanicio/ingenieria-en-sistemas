@@ -34,4 +34,3 @@ Es un [[Código libre]], también llamado *Reflected Binary Code*, que se caract
 | 13      | 1011           |
 | 14      | 1001           |
 | 15      | 1000           |
-| 16      | 0000           |

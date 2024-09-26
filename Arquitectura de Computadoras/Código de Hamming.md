@@ -1,12 +1,12 @@
 ---
 created: 2024-07-10 19:31:10
-modified: 2024-09-25 03:06:39
+modified: 2024-09-25 17:37:41
 title: Código de Hamming
 ---
 
 # Código de Hamming
 
-El [[Código de Hamming]] permite realizar **correción de errores** de un **único** [[Bit]].
+El [[Código de Hamming]] es un [[Código ponderado]] que permite realizar **correción de errores** de un **único** [[Bit]].
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WdmGSWrcMvM?si=71Gd14rEM9Y2m4cz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

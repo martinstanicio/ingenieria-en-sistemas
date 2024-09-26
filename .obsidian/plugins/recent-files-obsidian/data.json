@@ -1,24 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Código de Gray",
-      "path": "Arquitectura de Computadoras/Código de Gray.md"
+      "basename": "Forma canónica",
+      "path": "Arquitectura de Computadoras/Forma canónica.md"
     },
     {
       "basename": "Código de Hamming",
       "path": "Arquitectura de Computadoras/Código de Hamming.md"
     },
     {
-      "basename": "Código",
-      "path": "Arquitectura de Computadoras/Código.md"
+      "basename": "Código de Gray",
+      "path": "Arquitectura de Computadoras/Código de Gray.md"
     },
     {
       "basename": "Diodo",
       "path": "Arquitectura de Computadoras/Diodo.md"
     },
     {
-      "basename": "Forma canónica",
-      "path": "Arquitectura de Computadoras/Forma canónica.md"
+      "basename": "Exceso K",
+      "path": "Arquitectura de Computadoras/Exceso K.md"
+    },
+    {
+      "basename": "20240924 - Total por fila",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por fila.md"
+    },
+    {
+      "basename": "Código",
+      "path": "Arquitectura de Computadoras/Código.md"
     },
     {
       "basename": "Notación de modelos de procesos de negocios",
@@ -35,10 +43,6 @@
     {
       "basename": "IEEE 754",
       "path": "Arquitectura de Computadoras/IEEE 754.md"
-    },
-    {
-      "basename": "20240924 - Total por fila",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por fila.md"
     },
     {
       "basename": "Sistemas Operativos",
@@ -195,10 +199,6 @@
     {
       "basename": "AyED - Actividad",
       "path": "Templates/AyED - Actividad.md"
-    },
-    {
-      "basename": "Mínimo",
-      "path": "Algoritmos y Estructuras de Datos/Mínimo.md"
     }
   ],
   "omittedPaths": [],
