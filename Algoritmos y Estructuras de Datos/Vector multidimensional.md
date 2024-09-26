@@ -2,7 +2,7 @@
 aliases:
   - Matriz
 created: 2024-09-17 22:29:06
-modified: 2024-09-18 01:45:38
+modified: 2024-09-26 14:05:21
 title: Vector multidimensional
 ---
 
@@ -11,16 +11,20 @@ title: Vector multidimensional
 Un [[Vector]] ==multidimensional==, es un ==[[Vector]] de [[Vector|Vectores]]==. Por lo tanto, también podemos considerarlas [[Matriz|Matrices]]. Por ejemplo, en [[Python]], una [[Matriz]] bidimensional de $3 \times 3$:
 
 ```python
-matriz = [[1, 2, 3],
-		  [4, 5, 6],
-		  [7, 8, 9]]
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
 ```
 
 O una [[Matriz]] tridimensional de $2 \times 2 \times 2$:
 
 ```python
-matriz = [[[1, 2], [3, 4]],
-		  [[5, 6], [7, 8]]]
+matriz = [
+    [[1, 2], [3, 4],],
+    [[5, 6], [7, 8],],
+]
 ```
 
 ## Diagrama de flujo
@@ -43,7 +47,11 @@ flowchart TB
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
-nombre_matriz = [[0 for _ in range(columnas)] for _ in range(filas)]
+nombre_matriz = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
+]
 ```
 
 ## Asignación de [[Dato|Datos]]
@@ -91,9 +99,13 @@ flowchart TB
 En [[Python]] se realiza de la siguiente forma.
 
 ```python
-filas = 3
-columnas = 4
-matriz = [[0 for _ in range(columnas)] for _ in range(filas)]
+matriz = [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+]
+filas = len(matriz) # 3
+columnas = len(matriz[0]) # 4
 
 for f in range(0, filas):
     for c in range(0, columnas):

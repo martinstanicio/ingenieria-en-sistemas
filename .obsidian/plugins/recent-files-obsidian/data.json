@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "20240924 - Matriz aleatoria",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
+    },
+    {
+      "basename": "20240924 - Total por fila",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por fila.md"
+    },
+    {
+      "basename": "20240903 - Micros",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
+    },
+    {
+      "basename": "20240909 - Socios",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Vector multidimensional",
+      "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
+    },
+    {
       "basename": "Forma canónica",
       "path": "Arquitectura de Computadoras/Forma canónica.md"
     },
@@ -19,10 +43,6 @@
     {
       "basename": "Exceso K",
       "path": "Arquitectura de Computadoras/Exceso K.md"
-    },
-    {
-      "basename": "20240924 - Total por fila",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por fila.md"
     },
     {
       "basename": "Código",
@@ -85,10 +105,6 @@
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
     },
     {
-      "basename": "Vector multidimensional",
-      "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
-    },
-    {
       "basename": "Punto de equilibrio",
       "path": "Física I/Punto de equilibrio.md"
     },
@@ -137,10 +153,6 @@
       "path": "Álgebra y Geometría Analítica/Cardinal.md"
     },
     {
-      "basename": "20240903 - Micros",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
-    },
-    {
       "basename": "Ingeniería y Sociedad",
       "path": "Ingeniería y Sociedad/Ingeniería y Sociedad.md"
     },
@@ -151,10 +163,6 @@
     {
       "basename": "Decreto Nº 109994",
       "path": "Ingeniería y Sociedad/Decreto Nº 109994.md"
-    },
-    {
-      "basename": "20240909 - Socios",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
     },
     {
       "basename": "Diagrama de Transición de Estado",
@@ -191,14 +199,6 @@
     {
       "basename": "20240909 - Frases a minúsculas",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Frases a minúsculas.md"
-    },
-    {
-      "basename": "Corte de control",
-      "path": "Algoritmos y Estructuras de Datos/Corte de control.md"
-    },
-    {
-      "basename": "AyED - Actividad",
-      "path": "Templates/AyED - Actividad.md"
     }
   ],
   "omittedPaths": [],

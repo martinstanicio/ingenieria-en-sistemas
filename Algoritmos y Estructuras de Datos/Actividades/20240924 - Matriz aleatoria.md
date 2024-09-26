@@ -1,12 +1,12 @@
 ---
 created: 2024-09-24 22:27:52
-modified: 2024-09-24 22:43:04
-title: 20240924 - Total por fila
+modified: 2024-09-26 14:22:48
+title: 20240924 - Matriz aleatoria
 ---
 
-# 20240924 - Total por fila
+# 20240924 - Matriz aleatoria
 
-Se ingresa una [[Vector multidimensional|Matriz]] cuadrada de $50 \times 50$. Mostrar el número de fila que tiene el mayor total.
+Cargar una [[Vector multidimensional|Matriz]] de $4 \times 5$ con números aleatorios comprendidos en $[100, 400]$ cargando por fila.
 
 ## Diagrama de flujo
 
@@ -48,5 +48,5 @@ flowchart TB
 ## Código
 
 ```embed-python
-PATH: "vault://Algoritmos y Estructuras de Datos/python/20240924-total-por-fila.py"
+PATH: "vault://Algoritmos y Estructuras de Datos/python/20240924-matriz-aleatoria.py"
 ```
