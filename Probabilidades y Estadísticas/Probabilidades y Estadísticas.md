@@ -13,5 +13,5 @@ title: Probabilidades y Estadísticas
 
 ### Cursadas
 
-1. [Análisis Matemático I](Análisis%20Matemático%20I.md)
+1. [Análisis Matemático I](Análisis%20Matemático%20I/Análisis%20Matemático%20I.md)
 2. [Álgebra y Geometría Analítica](Álgebra%20y%20Geometría%20Analítica.md)

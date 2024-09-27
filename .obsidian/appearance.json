@@ -1,9 +1,9 @@
 {
-  "accentColor": "",
-  "cssTheme": "Blue Topaz",
+  "accentColor": "#27ae60",
+  "cssTheme": "Primary",
   "enabledCssSnippets": [
-    "math",
-    "iframe"
+    "iframe",
+    "math"
   ],
   "theme": "obsidian"
 }

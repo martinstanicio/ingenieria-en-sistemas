@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Cociente incremental",
+      "path": "Análisis Matemático I/Cociente incremental.md"
+    },
+    {
+      "basename": "Análisis Matemático I",
+      "path": "Análisis Matemático I/Análisis Matemático I.md"
+    },
+    {
       "basename": "20240924 - Matriz aleatoria",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
     },
@@ -187,18 +195,6 @@
     {
       "basename": "Teorema de Fermat",
       "path": "Análisis Matemático I/Teorema de Fermat.md"
-    },
-    {
-      "basename": "20240909 - Procedimiento para frases",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Procedimiento para frases.md"
-    },
-    {
-      "basename": "20240909 - Números más grandes",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Números más grandes.md"
-    },
-    {
-      "basename": "20240909 - Frases a minúsculas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Frases a minúsculas.md"
     }
   ],
   "omittedPaths": [],
