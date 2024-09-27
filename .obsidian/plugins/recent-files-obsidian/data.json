@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Punto frontera",
+      "path": "Análisis Matemático I/Punto frontera.md"
+    },
+    {
+      "basename": "Punto crítico",
+      "path": "Análisis Matemático I/Punto crítico.md"
+    },
+    {
+      "basename": "Asíntota no vertical",
+      "path": "Análisis Matemático I/Asíntota no vertical.md"
+    },
+    {
       "basename": "Derivadas laterales",
       "path": "Análisis Matemático I/Derivadas laterales.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Autenticidad",
       "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
-    },
-    {
-      "basename": "Confidencialidad",
-      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
-    },
-    {
-      "basename": "Álgebra y Geometría Analítica",
-      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
-    },
-    {
-      "basename": "Teorema de Fermat",
-      "path": "Análisis Matemático I/Teorema de Fermat.md"
     }
   ],
   "omittedPaths": [],
