@@ -4,8 +4,6 @@
 
 from random import randint
 
-f = 4
-c = 5
 matriz = [
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
@@ -13,8 +11,6 @@ matriz = [
     [0, 0, 0, 0, 0],
 ]
 
-for i in range(0, f):
-    for j in range(0, c):
+for i in range(0, 4):
+    for j in range(0, 5):
         matriz[i][j] = randint(100, 400)
-
-print(matriz)

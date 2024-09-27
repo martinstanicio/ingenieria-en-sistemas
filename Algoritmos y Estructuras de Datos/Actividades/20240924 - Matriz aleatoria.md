@@ -12,37 +12,24 @@ Cargar una [[Vector multidimensional|Matriz]] de $4 \times 5$ con números aleat
 
 ```mermaid
 flowchart TB
-	comienzo(["fila_mayor_total(matriz)"])
+	comienzo([comienzo])
     
-	variables["`totales[50] = real
-	max = entero
+	variables["`matriz[4, 5] = entero
 	i = entero
 	j = entero`"]
-	inicializar["`max = 0`"]
-	for1{{"i, 0, 50"}}
-	totales["totales[i] = 0.0"]
 	
-	for2{{"i, 0, 50"}}
-	for3{{"j, 0, 50"}}
-	acu["totales[i] = totales[i] + matriz[i, j]"]
+	for1{{"i, 0, 4"}}
+	for2{{"j, 0, 5"}}
+	random["matriz[i, j] = aleatorio(100, 400)"]
 	
-	if{"totales[i] > totales[max]"}
-	max["max = i"]
-    
-    fin(["retornar max"])
+	fin([fin])
     
     a[" "]
     b[" "]
-    c[" "]
-    d[" "]
     
-	comienzo --> variables --> inicializar --> for1 --> totales --> a
-	for1 --> a --> for2 --> for3 --> acu --> b
-	for3 --> b --> if
-	if -- "Sí" --> max --> c
-	if -- "No" --> c
-	c --> d
-	for2 --> d --> fin
+	comienzo --> variables --> for1 --> for2 --> random --> a
+	for2 --> a --> b
+	for1 --> b --> fin
 ```
 
 ## Código
