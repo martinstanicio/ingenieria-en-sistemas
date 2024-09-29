@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "Análisis del Punto 4",
+      "path": "Análisis del Punto 4.md"
+    },
+    {
+      "basename": "Extremo relativo",
+      "path": "Análisis Matemático I/Extremo relativo.md"
+    },
+    {
+      "basename": "20240924 - Matriz aleatoria",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
+    },
+    {
+      "basename": "20240924 - Total por línea",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por línea.md"
+    },
+    {
+      "basename": "20240927 - Matriz acumulador contador",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240927 - Matriz acumulador contador.md"
+    },
+    {
+      "basename": "Álgebra y Geometría Analítica",
+      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
+    },
+    {
+      "basename": "Código de Hamming",
+      "path": "Arquitectura de Computadoras/Código de Hamming.md"
+    },
+    {
+      "basename": "Extremo absoluto",
+      "path": "Análisis Matemático I/Extremo absoluto.md"
+    },
+    {
       "basename": "Punto frontera",
       "path": "Análisis Matemático I/Punto frontera.md"
     },
@@ -25,14 +57,6 @@
       "path": "Análisis Matemático I/Análisis Matemático I.md"
     },
     {
-      "basename": "20240924 - Matriz aleatoria",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
-    },
-    {
-      "basename": "20240924 - Total por fila",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por fila.md"
-    },
-    {
       "basename": "20240903 - Micros",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
     },
@@ -51,10 +75,6 @@
     {
       "basename": "Forma canónica",
       "path": "Arquitectura de Computadoras/Forma canónica.md"
-    },
-    {
-      "basename": "Código de Hamming",
-      "path": "Arquitectura de Computadoras/Código de Hamming.md"
     },
     {
       "basename": "Código de Gray",
@@ -179,26 +199,6 @@
     {
       "basename": "Ingeniería y Sociedad",
       "path": "Ingeniería y Sociedad/Ingeniería y Sociedad.md"
-    },
-    {
-      "basename": "Principio de inducción fuerte",
-      "path": "Lógica y Estructuras Discretas/Principio de inducción fuerte.md"
-    },
-    {
-      "basename": "Decreto Nº 109994",
-      "path": "Ingeniería y Sociedad/Decreto Nº 109994.md"
-    },
-    {
-      "basename": "Diagrama de Transición de Estado",
-      "path": "Sistemas y Procesos de Negocios/Diagrama de Transición de Estado.md"
-    },
-    {
-      "basename": "Libro primero principios Básicos",
-      "path": "Ingeniería y Sociedad/Libro primero principios Básicos.md"
-    },
-    {
-      "basename": "Autenticidad",
-      "path": "Sistemas y Procesos de Negocios/Autenticidad.md"
     }
   ],
   "omittedPaths": [],

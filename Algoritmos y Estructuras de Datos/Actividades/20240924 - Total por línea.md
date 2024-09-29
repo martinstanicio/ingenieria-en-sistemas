@@ -1,10 +1,10 @@
 ---
 created: 2024-09-24 22:27:52
-modified: 2024-09-24 22:43:04
-title: 20240924 - Total por fila
+modified: 2024-09-27 17:21:44
+title: 20240924 - Total por línea
 ---
 
-# 20240924 - Total por fila
+# 20240924 - Total por línea
 
 Se ingresa una [[Vector multidimensional|Matriz]] cuadrada de $50 \times 50$. Mostrar el número de fila que tiene el mayor total.
 
@@ -12,7 +12,7 @@ Se ingresa una [[Vector multidimensional|Matriz]] cuadrada de $50 \times 50$. Mo
 
 ```mermaid
 flowchart TB
-	comienzo(["fila_mayor_total(matriz)"])
+	comienzo(["fil_mayor_total(matriz)"])
     
 	variables["`totales[50] = real
 	max = entero
@@ -48,5 +48,5 @@ flowchart TB
 ## Código
 
 ```embed-python
-PATH: "vault://Algoritmos y Estructuras de Datos/python/20240924-total-por-fila.py"
+PATH: "vault://Algoritmos y Estructuras de Datos/python/20240924-total-por-linea.py"
 ```
