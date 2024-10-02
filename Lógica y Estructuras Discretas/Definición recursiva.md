@@ -6,7 +6,7 @@ title: Definición recursiva
 
 # Definición recursiva
 
-Cuando es difícil definir un [[Elemento]] por si mismo, pero es posible ==definirlo en términos de si mismo==, es decir de forma [[Recursividad|recursiva]], utilizamos el [[Principio de inducción débil]]. A esto lo llamamos una ==definición recursiva==.
+Cuando es difícil definir un [[Elemento]] por si mismo, pero es posible ==definirlo en términos de si mismo==, es decir de forma [[Sistemas y Procesos de Negocios/Recursividad|recursiva]], utilizamos el [[Principio de inducción débil]]. A esto lo llamamos una ==definición recursiva==.
 
 Están formadas por dos partes.
 
