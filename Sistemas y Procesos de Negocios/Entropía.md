@@ -1,6 +1,6 @@
 ---
 created: 2024-07-02 12:39:27
-modified: 2024-09-17 18:57:18
+modified: 2024-10-08 18:43:10
 title: Entropía
 ---
 
@@ -11,7 +11,7 @@ El nivel de ==incertidumbre== sobre la [[Salidas|Salida]] de un [[Sistemas|Siste
 Es decir, la [[Entropía]] se reduce al obtener [[Información]], y un sistema con baja [[Entropía]], se considera altamente organizado.
 
 > [!tip]
-> El máximo nivel de [[Entropía]] es alcanzado cuando todas las [[Salidas]] tienen la misma [[Probabilidad]] de ocurrir.
+> El máximo nivel de [[Entropía]] es alcanzado cuando todas las [[Salidas]] tienen la misma [[Probabilidad]] de ocurrir; es decir, son **equiprobables**.
 
 Para calcular la [[Entropía]] $H(S)$, con $S = \left\{ S_1, \dots, S_n \right\}$, necesitamos la [[Probabilidad]] $P(S_i)$ y la [[Información]] $I(S_i)$ de todas las [[Salidas]] posibles.
 

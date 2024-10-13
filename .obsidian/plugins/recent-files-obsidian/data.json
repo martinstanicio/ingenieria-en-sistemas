@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Archivo",
+      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
+    },
+    {
+      "basename": "Mezcla de vectores",
+      "path": "Algoritmos y Estructuras de Datos/Mezcla de vectores.md"
+    },
+    {
+      "basename": "20240909 - Alumnos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
+    },
+    {
+      "basename": "20240909 - Socios",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
+    },
+    {
       "basename": "Recursividad",
       "path": "Algoritmos y Estructuras de Datos/Recursividad.md"
+    },
+    {
+      "basename": "Colisión",
+      "path": "Física I/Colisión.md"
+    },
+    {
+      "basename": "20240924 - Matriz aleatoria",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
     },
     {
       "basename": "Vector circular",
@@ -31,10 +55,6 @@
     {
       "basename": "Extremo relativo",
       "path": "Análisis Matemático I/Extremo relativo.md"
-    },
-    {
-      "basename": "20240924 - Matriz aleatoria",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
     },
     {
       "basename": "20240924 - Total por línea",
@@ -83,10 +103,6 @@
     {
       "basename": "20240903 - Micros",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
-    },
-    {
-      "basename": "20240909 - Socios",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
     },
     {
       "basename": "Ciclo desde-hasta",
@@ -141,10 +157,6 @@
       "path": "Arquitectura de Computadoras/Código ponderado.md"
     },
     {
-      "basename": "20240909 - Alumnos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
-    },
-    {
       "basename": "Oscilaciones",
       "path": "Física I/Oscilaciones.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Código de ética profesional",
       "path": "Ingeniería y Sociedad/Código de ética profesional.md"
-    },
-    {
-      "basename": "Búsqueda indexada",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda indexada.md"
-    },
-    {
-      "basename": "Proceso",
-      "path": "Sistemas y Procesos de Negocios/Proceso.md"
-    },
-    {
-      "basename": "SaaS",
-      "path": "Sistemas y Procesos de Negocios/SaaS.md"
     }
   ],
   "omittedPaths": [],
