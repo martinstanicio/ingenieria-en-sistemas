@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Autovector",
+      "path": "Álgebra y Geometría Analítica/Autovector.md"
+    },
+    {
+      "basename": "Autovalor",
+      "path": "Álgebra y Geometría Analítica/Autovalor.md"
+    },
+    {
+      "basename": "Autopolinomio",
+      "path": "Álgebra y Geometría Analítica/Autopolinomio.md"
+    },
+    {
+      "basename": "Autoecuación",
+      "path": "Álgebra y Geometría Analítica/Autoecuación.md"
+    },
+    {
       "basename": "Archivo",
       "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "Punto de equilibrio",
       "path": "Física I/Punto de equilibrio.md"
-    },
-    {
-      "basename": "Búsqueda binaria",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda binaria.md"
-    },
-    {
-      "basename": "Vector",
-      "path": "Algoritmos y Estructuras de Datos/Vector.md"
-    },
-    {
-      "basename": "Búsqueda secuencial",
-      "path": "Algoritmos y Estructuras de Datos/Búsqueda secuencial.md"
-    },
-    {
-      "basename": "Código de ética profesional",
-      "path": "Ingeniería y Sociedad/Código de ética profesional.md"
     }
   ],
   "omittedPaths": [],
