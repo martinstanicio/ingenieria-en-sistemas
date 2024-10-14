@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Integral definida",
+      "path": "Análisis Matemático I/Integral definida.md"
+    },
+    {
+      "basename": "Integral",
+      "path": "Análisis Matemático I/Integral.md"
+    },
+    {
+      "basename": "Integral indefinida",
+      "path": "Análisis Matemático I/Integral indefinida.md"
+    },
+    {
       "basename": "Autovector",
       "path": "Álgebra y Geometría Analítica/Autovector.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Ordenamiento burbuja",
       "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
-    },
-    {
-      "basename": "Ordenamiento",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento.md"
-    },
-    {
-      "basename": "Ordenamiento por inserción",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento por inserción.md"
-    },
-    {
-      "basename": "Punto de equilibrio",
-      "path": "Física I/Punto de equilibrio.md"
     }
   ],
   "omittedPaths": [],
