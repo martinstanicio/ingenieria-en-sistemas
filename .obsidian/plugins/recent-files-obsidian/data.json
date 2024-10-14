@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Teorema de Lagrange",
+      "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
       "basename": "Integral definida",
       "path": "Análisis Matemático I/Integral definida.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Oscilaciones",
       "path": "Física I/Oscilaciones.md"
-    },
-    {
-      "basename": "Momento de inercia",
-      "path": "Física I/Momento de inercia.md"
     }
   ],
   "omittedPaths": [],
