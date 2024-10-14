@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Función de Dirichlet",
+      "path": "Análisis Matemático I/Función de Dirichlet.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
       "basename": "Integral definida",
       "path": "Análisis Matemático I/Integral definida.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Momento de inercia",
       "path": "Física I/Momento de inercia.md"
-    },
-    {
-      "basename": "Movimiento oscilatorio",
-      "path": "Física I/Movimiento oscilatorio.md"
-    },
-    {
-      "basename": "Ordenamiento burbuja",
-      "path": "Algoritmos y Estructuras de Datos/Ordenamiento burbuja.md"
     }
   ],
   "omittedPaths": [],
