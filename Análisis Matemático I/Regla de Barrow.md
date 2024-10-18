@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Segundo Teorema Fundamental del Cálculo
 created: 2024-10-17 16:21:32
-modified: 2024-10-17 16:26:02
+modified: 2024-10-17 22:42:41
 title: Regla de Barrow
 ---
 

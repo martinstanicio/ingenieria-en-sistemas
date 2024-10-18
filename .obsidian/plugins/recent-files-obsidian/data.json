@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Regla de Barrow",
-      "path": "Análisis Matemático I/Regla de Barrow.md"
+      "basename": "Integral",
+      "path": "Análisis Matemático I/Integral.md"
+    },
+    {
+      "basename": "Función primitiva",
+      "path": "Análisis Matemático I/Función primitiva.md"
+    },
+    {
+      "basename": "Teorema Fundamental del Cálculo",
+      "path": "Análisis Matemático I/Teorema Fundamental del Cálculo.md"
+    },
+    {
+      "basename": "Integración por partes",
+      "path": "Análisis Matemático I/Integración por partes.md"
     },
     {
       "basename": "Teorema de Lagrange",
       "path": "Análisis Matemático I/Teorema de Lagrange.md"
+    },
+    {
+      "basename": "Regla de Barrow",
+      "path": "Análisis Matemático I/Regla de Barrow.md"
     },
     {
       "basename": "Integral definida",
@@ -19,10 +35,6 @@
     {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Integral",
-      "path": "Análisis Matemático I/Integral.md"
     },
     {
       "basename": "Integral indefinida",
@@ -187,18 +199,6 @@
     {
       "basename": "IEEE 754",
       "path": "Arquitectura de Computadoras/IEEE 754.md"
-    },
-    {
-      "basename": "Sistemas Operativos",
-      "path": "Sistemas Operativos/Sistemas Operativos.md"
-    },
-    {
-      "basename": "Voz pasiva",
-      "path": "Inglés I/Voz pasiva.md"
-    },
-    {
-      "basename": "Código ponderado",
-      "path": "Arquitectura de Computadoras/Código ponderado.md"
     }
   ],
   "omittedPaths": [],
