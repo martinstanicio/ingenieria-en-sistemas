@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Regla de Barrow",
+      "path": "Análisis Matemático I/Regla de Barrow.md"
+    },
+    {
       "basename": "Teorema de Lagrange",
       "path": "Análisis Matemático I/Teorema de Lagrange.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Código ponderado",
       "path": "Arquitectura de Computadoras/Código ponderado.md"
-    },
-    {
-      "basename": "Oscilaciones",
-      "path": "Física I/Oscilaciones.md"
     }
   ],
   "omittedPaths": [],
