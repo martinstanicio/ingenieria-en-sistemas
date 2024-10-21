@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Integral",
-      "path": "Análisis Matemático I/Integral.md"
+      "basename": "Integral indefinida",
+      "path": "Análisis Matemático I/Integral indefinida.md"
     },
     {
       "basename": "Función primitiva",
       "path": "Análisis Matemático I/Función primitiva.md"
+    },
+    {
+      "basename": "Archivo",
+      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
+    },
+    {
+      "basename": "Integral",
+      "path": "Análisis Matemático I/Integral.md"
     },
     {
       "basename": "Teorema Fundamental del Cálculo",
@@ -37,10 +45,6 @@
       "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
-      "basename": "Integral indefinida",
-      "path": "Análisis Matemático I/Integral indefinida.md"
-    },
-    {
       "basename": "Autovector",
       "path": "Álgebra y Geometría Analítica/Autovector.md"
     },
@@ -55,10 +59,6 @@
     {
       "basename": "Autoecuación",
       "path": "Álgebra y Geometría Analítica/Autoecuación.md"
-    },
-    {
-      "basename": "Archivo",
-      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
     {
       "basename": "Mezcla de vectores",
