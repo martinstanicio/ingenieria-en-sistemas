@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Archivo",
+      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Análisis Matemático I",
+      "path": "Análisis Matemático I/Análisis Matemático I.md"
+    },
+    {
       "basename": "Teorema Fundamental del Cálculo",
       "path": "Análisis Matemático I/Teorema Fundamental del Cálculo.md"
     },
@@ -15,10 +27,6 @@
     {
       "basename": "Función primitiva",
       "path": "Análisis Matemático I/Función primitiva.md"
-    },
-    {
-      "basename": "Archivo",
-      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
     {
       "basename": "Integral",
@@ -153,10 +161,6 @@
       "path": "Análisis Matemático I/Cociente incremental.md"
     },
     {
-      "basename": "Análisis Matemático I",
-      "path": "Análisis Matemático I/Análisis Matemático I.md"
-    },
-    {
       "basename": "20240903 - Micros",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Código libre",
       "path": "Arquitectura de Computadoras/Código libre.md"
-    },
-    {
-      "basename": "IEEE 754",
-      "path": "Arquitectura de Computadoras/IEEE 754.md"
     }
   ],
   "omittedPaths": [],

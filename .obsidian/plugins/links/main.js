@@ -490,56 +490,6 @@ function parsePlainUrl(regExp, match, raw, destination) {
   }
   return linkData;
 }
-function findLink(text, startPos, endPos, linkType = 65535 /* All */) {
-  const wikiLinkRegEx = /(!?)\[\[([^\[\]|]+)(\|([^\[\]]*))?\]\]/g;
-  const mdLinkRegEx = new RegExp(RegExPatterns.Markdownlink.source, "gmi");
-  const htmlLinkRegEx = /<a\s+[^>]*href\s*=\s*['"]([^'"]*)['"][^>]*>(.*?)<\/a>/gi;
-  const autolinkRegEx1 = /<([a-z]+:\/\/[^>]+)>/gmi;
-  const autolinkRegEx = /(<([a-zA-Z]{2,32}:[^>]+)>)|(<([a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*)>)/gmi;
-  let match;
-  if (linkType & 2 /* Wiki */) {
-    while (match = wikiLinkRegEx.exec(text)) {
-      if (startPos >= match.index && endPos <= wikiLinkRegEx.lastIndex) {
-        const [raw, exclamationMark, destination, , text2] = match;
-        const linkData = parseWikiLink(wikiLinkRegEx, match, raw, exclamationMark, text2, destination);
-        return linkData;
-      }
-    }
-  }
-  if (linkType & 1 /* Markdown */) {
-    while (match = mdLinkRegEx.exec(text)) {
-      if (startPos >= match.index && endPos <= mdLinkRegEx.lastIndex) {
-        const [raw, exclamationMark, text2, destination] = match;
-        const linkData = parseMarkdownLink(mdLinkRegEx, match, raw, exclamationMark, text2, destination);
-        return linkData;
-      }
-    }
-  }
-  if (linkType & 4 /* Html */) {
-    while (match = htmlLinkRegEx.exec(text)) {
-      if (startPos >= match.index && endPos <= htmlLinkRegEx.lastIndex) {
-        const [raw, destination, text2] = match;
-        const linkData = parseHtmlLink(mdLinkRegEx, match, raw, text2, destination);
-        return linkData;
-      }
-    }
-  }
-  if (linkType & 8 /* Autolink */) {
-    while (match = autolinkRegEx.exec(text)) {
-      if (startPos >= match.index && endPos <= autolinkRegEx.lastIndex) {
-        const [raw, urlAutolink, urlDestination, mailAutolink, mailDestination] = match;
-        const linkData = parseAutolink(
-          autolinkRegEx,
-          match,
-          raw,
-          urlDestination ? urlDestination : mailDestination
-        );
-        return linkData;
-      }
-    }
-  }
-  return void 0;
-}
 function replaceAllHtmlLinks(text) {
   const htmlLinkRegEx = /<a\s+[^>]*href\s*=\s*['"]([^'"]*)['"][^>]*>(.*?)<\/a>/gi;
   return text.replace(htmlLinkRegEx, (match, url, text2) => {
@@ -615,10 +565,21 @@ function removeWhitespaces(str) {
 async function getPageTitle(url, getPageText) {
   const titleRegEx = /<title[^>]*>([^<]*?)<\/title>/i;
   const text = await getPageText(url);
-  const match = text.match(titleRegEx);
-  if (match) {
-    const [, title] = match;
-    return decodeHtmlEntities(removeWhitespaces(title));
+  if (url.hostname === "www.youtube.com" && url.pathname === "/watch") {
+    const titlePrefix = '"playerOverlayVideoDetailsRenderer":{"title":{"simpleText":"';
+    const titleStart = text.indexOf(titlePrefix);
+    if (titleStart > 0) {
+      const titleEnd = text.indexOf('"}', titleStart);
+      if (titleEnd > 0) {
+        return text.substring(titleStart + titlePrefix.length, titleEnd);
+      }
+    }
+  } else {
+    const match = text.match(titleRegEx);
+    if (match) {
+      const [, title] = match;
+      return decodeHtmlEntities(removeWhitespaces(title));
+    }
   }
   throw new Error("Page has no title.");
 }
@@ -3214,12 +3175,12 @@ var UnlinkLinkCommand = class extends CommandBase {
     } else {
       const text = editor.getValue();
       const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-      const linkData = findLink(text, cursorOffset, cursorOffset, 2 /* Wiki */ | 4 /* Html */ | 1 /* Markdown */);
+      const links = findLinks(text, 2 /* Wiki */ | 4 /* Html */ | 1 /* Markdown */, cursorOffset, cursorOffset);
       if (checking) {
-        return !!linkData;
+        return links.length > 0;
       }
-      if (linkData) {
-        this.unlinkLink(linkData, editor);
+      if (links) {
+        this.unlinkLink(links[0], editor);
       }
     }
   }
@@ -3269,13 +3230,15 @@ var DeleteLinkCommand = class extends CommandBase {
       return false;
     }
     const text = editor.getValue();
-    const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    const linkData = findLink(text, cursorOffset, cursorOffset);
+    const cursorOffsetStart = editor.posToOffset(editor.getCursor("from"));
+    const cursorOffsetEnd = editor.posToOffset(editor.getCursor("to"));
+    const links = findLinks(text, 65535 /* All */, cursorOffsetStart, cursorOffsetEnd);
+    console.log(links == null ? void 0 : links.length);
     if (checking) {
-      return !!linkData;
+      return (links == null ? void 0 : links.length) == 1;
     }
-    if (linkData) {
-      this.deleteLink(linkData, editor);
+    if ((links == null ? void 0 : links.length) == 1) {
+      this.deleteLink(links[0], editor);
     }
   }
   deleteLink(linkData, editor) {
@@ -3602,17 +3565,18 @@ var CopyLinkDestinationToClipboardCommand = class extends CommandBase {
     this.obdisianProxy = obsidianProxy;
   }
   handler(editor, checking) {
+    var _a;
     if (checking && !this.isEnabled()) {
       return false;
     }
     const text = editor.getValue();
     const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    const linkData = findLink(text, cursorOffset, cursorOffset, 2 /* Wiki */ | 1 /* Markdown */ | 4 /* Html */ | 8 /* Autolink */);
+    const links = findLinks(text, 2 /* Wiki */ | 1 /* Markdown */ | 4 /* Html */ | 8 /* Autolink */, cursorOffset, cursorOffset);
     if (checking) {
-      return !!linkData && !!linkData.destination;
+      return !!(links == null ? void 0 : links.length) && !!((_a = links[0]) == null ? void 0 : _a.destination);
     }
-    if (linkData) {
-      this.copyLinkUnderCursorToClipboard(linkData);
+    if (links == null ? void 0 : links.length) {
+      this.copyLinkUnderCursorToClipboard(links[0]);
     }
   }
   copyLinkUnderCursorToClipboard(linkData) {
@@ -3693,7 +3657,8 @@ var EditLinkTextCommand = class extends CommandBase {
   getLink(editor) {
     const text = editor.getValue();
     const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    return findLink(text, cursorOffset, cursorOffset);
+    const links = findLinks(text, 65535 /* All */, cursorOffset, cursorOffset);
+    return (links == null ? void 0 : links.length) > 0 ? links[0] : void 0;
   }
 };
 
@@ -3811,8 +3776,8 @@ var SetLinkTextCommand = class extends CommandBase {
     } else {
       const text = editor.getValue();
       const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-      const linkData = findLink(text, cursorOffset, cursorOffset, 2 /* Wiki */ | 1 /* Markdown */);
-      return linkData ? [linkData] : [];
+      const links = findLinks(text, 2 /* Wiki */ | 1 /* Markdown */, cursorOffset, cursorOffset);
+      return (links == null ? void 0 : links.length) > 0 ? [links[0]] : [];
     }
   }
   showLinkTextSuggestions(linkData, editor) {
@@ -3867,11 +3832,12 @@ var EditLinkDestinationCommand = class extends CommandBase {
       editor.setSelection(editor.offsetToPos(start2), editor.offsetToPos(end2));
     }
   }
-  //TODO: refactor - used in multiple commands
   getLink(editor) {
     const text = editor.getValue();
-    const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    return findLink(text, cursorOffset, cursorOffset);
+    const cursorOffsetStart = editor.posToOffset(editor.getCursor("from"));
+    const cursorOffsetEnd = editor.posToOffset(editor.getCursor("to"));
+    const links = findLinks(text, 65535 /* All */, cursorOffsetStart, cursorOffsetEnd);
+    return (links == null ? void 0 : links.length) == 1 ? links[0] : void 0;
   }
 };
 
@@ -3942,11 +3908,8 @@ var CreateLinkFromClipboardCommand = class extends CommandBase {
     if (checking) {
       const noteText = editor.getValue();
       const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-      const link = findLink(noteText, cursorOffset, cursorOffset, 65535 /* All */);
-      if (link && link.position.start < cursorOffset && link.position.end > cursorOffset) {
-        return false;
-      }
-      return true;
+      const links = findLinks(noteText, 65535 /* All */, cursorOffset, cursorOffset);
+      return (links == null ? void 0 : links.length) === 0;
     }
     (async () => {
       var _a, _b, _c;
@@ -4472,13 +4435,14 @@ var WrapNoteInFolderCommand = class extends CommandBase {
     if (!currentNotePath || !currentNoteParentPath) {
       return;
     }
-    const matchNoteName = currentNotePath.match(/(.*\/)(.*)\.md/);
+    const matchNoteName = currentNotePath.match(/(.*\/)?(.*)\.md/);
     if (!matchNoteName) {
       return;
     }
     const currentNoteName = matchNoteName[2];
     (async () => {
-      const newParentFolder = `${currentNoteParentPath}/${currentNoteName}`;
+      const hasSeparator = currentNoteParentPath[currentNoteParentPath.length - 1] === "/" || currentNoteParentPath[currentNoteParentPath.length - 1] == "\\";
+      const newParentFolder = `${currentNoteParentPath}${hasSeparator ? "" : "/"}${currentNoteName}`;
       await this.obsidianProxy.Vault.createFolder(newParentFolder);
       await this.obsidianProxy.Vault.rename(currentNotePath, `${newParentFolder}/${currentNoteName}.md`);
     })();
@@ -4893,12 +4857,12 @@ var EmbedLinkCommand = class extends CommandBase {
     }
     const text = editor.getValue();
     const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    const linkData = findLink(text, cursorOffset, cursorOffset, 2 /* Wiki */ | 1 /* Markdown */);
+    const links = findLinks(text, 2 /* Wiki */ | 1 /* Markdown */, cursorOffset, cursorOffset);
     if (checking) {
-      return !!linkData && !linkData.embedded && !!linkData.destination;
+      return (links == null ? void 0 : links.length) > 0 && !links[0].embedded && !!links[0].destination;
     }
-    if (linkData) {
-      this.embedLinkUnderCursor(linkData, editor);
+    if (links == null ? void 0 : links.length) {
+      this.embedLinkUnderCursor(links[0], editor);
     }
   }
   embedLinkUnderCursor(linkData, editor) {
@@ -4927,12 +4891,12 @@ var UnembedLinkCommand = class extends CommandBase {
     }
     const text = editor.getValue();
     const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    const linkData = findLink(text, cursorOffset, cursorOffset, 2 /* Wiki */ | 1 /* Markdown */);
+    const links = findLinks(text, 2 /* Wiki */ | 1 /* Markdown */, cursorOffset, cursorOffset);
     if (checking) {
-      return !!linkData && linkData.embedded && !!linkData.destination;
+      return (links == null ? void 0 : links.length) === 1 && links[0].embedded && !!links[0].destination;
     }
-    if (linkData) {
-      this.unembedLinkUnderCursor(linkData, editor);
+    if (links) {
+      this.unembedLinkUnderCursor(links[0], editor);
     }
   }
   unembedLinkUnderCursor(linkData, editor) {
@@ -5279,7 +5243,8 @@ var ObsidianLinksPlugin = class extends import_obsidian8.Plugin {
   getLink(editor) {
     const text = editor.getValue();
     const cursorOffset = editor.posToOffset(editor.getCursor("from"));
-    return findLink(text, cursorOffset, cursorOffset);
+    const links = findLinks(text, 65535 /* All */, cursorOffset, cursorOffset);
+    return (links == null ? void 0 : links.length) == 1 ? links[0] : void 0;
   }
   replaceExternalLinkUnderCursorHandler(editor, checking) {
     const linkData = this.getLink(editor);
@@ -5472,3 +5437,5 @@ map-cache/index.js:
    * Licensed under the MIT License.
    *)
 */
+
+/* nosourcemap */

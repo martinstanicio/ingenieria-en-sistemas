@@ -1,6 +1,6 @@
 ---
 created: 2024-10-08 22:10:52
-modified: 2024-10-09 00:45:40
+modified: 2024-10-22 14:13:58
 title: Archivo
 ---
 
@@ -66,12 +66,23 @@ Escribe el [[Archivo]] desde 0, eliminando sus contenidos previos.
 open(nombre, "r")
 ```
 
-Lee los contenidos de un [[Archivo]].
+Nos permite leer los contenidos de un [[Archivo]].
 
 > [!caution]
 > El [[Archivo]] debe existir. Caso contrario, devuelve un [[Errores|Error]] de tipo `FileNotFoundError`.
 
 Al abrir el [[Archivo]] en [[Archivo#Modo lectura]], un **puntero** se ubica en el **primer registro**.
+
+### Modo append
+
+```python
+open(nombre, "a")
+```
+
+Permite escribir [[Información]] al [[Archivo]], sin eliminar sus contenidos previos.
+
+> [!note]
+> Si el [[Archivo]] no existe, se crea automáticamente.
 
 ## Cerrar archivo
 
@@ -97,3 +108,5 @@ flowchart TB
     
 	comienzo --> A --> B --> C --> fin
 ```
+
+## Escribir archivo
