@@ -5,6 +5,10 @@
       "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
     {
+      "basename": "Aproximación de errores",
+      "path": "Física I/Aproximación de errores.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Transistor",
       "path": "Arquitectura de Computadoras/Transistor.md"
-    },
-    {
-      "basename": "Código libre",
-      "path": "Arquitectura de Computadoras/Código libre.md"
     }
   ],
   "omittedPaths": [],

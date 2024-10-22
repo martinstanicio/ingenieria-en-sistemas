@@ -1,6 +1,6 @@
 ---
 created: 2024-10-08 22:10:52
-modified: 2024-10-22 14:13:58
+modified: 2024-10-22 14:38:00
 title: Archivo
 ---
 
@@ -110,3 +110,16 @@ flowchart TB
 ```
 
 ## Escribir archivo
+
+Podemos escribir un **registro** a un [[Archivo]] utilizando el método `write`.
+
+```python
+archivo = open(nombre, "w")
+registro = f"{campo1};{campo2};{campo3}"
+
+archivo.write(registro + "\n")
+...
+```
+
+> [!tip]
+> Para que cada registro esté en una línea nueva, agregamos `\n`.
