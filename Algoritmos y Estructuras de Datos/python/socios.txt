@@ -1,0 +1,7 @@
+nrosocio;apellido;altura;edad;deporte
+1;Perez;1.65;22;f
+2;Gonzalez;1.75;23;b
+3;Lopez;1.80;24;f
+4;Gimenez;1.72;25;f
+5;Garcia;1.85;26;v
+6;Rodriguez;1.70;27;b
