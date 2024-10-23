@@ -1,6 +1,6 @@
 ---
 created: 2024-10-08 22:10:52
-modified: 2024-10-22 14:38:00
+modified: 2024-10-22 21:16:52
 title: Archivo
 ---
 
@@ -19,7 +19,7 @@ Por ejemplo, la siguiente tabla representa un [[Archivo]].
 | Campo      | Campo      |
 
 > [!tip]
-> Todo [[Archivo]] siempre tiene una **marca de final de [[Archivo]]** o EOF: *End Of File*.
+> Todo [[Archivo]] siempre tiene una **marca de final de [[Archivo]]** o EOF: *End Of File*. En [[Python]], es una **cadena vacía** (`""`).
 
 ## Abrir archivo
 
@@ -109,6 +109,26 @@ flowchart TB
 	comienzo --> A --> B --> C --> fin
 ```
 
+## Leer archivo
+
+Podemos leer un **registro** de un [[Archivo]] utilizando el método `readline`.
+
+> [!important]
+> Cada vez que llamamos al método `readline`, nos devuelve una nueva línea.
+
+```python
+archivo = open(nombre, "r")
+
+registro = archivo.readline()
+print(registro) # linea 1
+
+registro = archivo.readline()
+print(registro) # linea 2
+```
+
+> [!warning]
+> Una vez que se leyeron todas las líneas, el método `readline` devuelve una cadena vacía.
+
 ## Escribir archivo
 
 Podemos escribir un **registro** a un [[Archivo]] utilizando el método `write`.
@@ -118,7 +138,7 @@ archivo = open(nombre, "w")
 registro = f"{campo1};{campo2};{campo3}"
 
 archivo.write(registro + "\n")
-...
+archivo.close()
 ```
 
 > [!tip]

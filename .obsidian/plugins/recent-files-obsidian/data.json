@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Archivo",
+      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
+    },
+    {
+      "basename": "Función split",
+      "path": "Algoritmos y Estructuras de Datos/Función split.md"
+    },
+    {
       "basename": "Error relativo",
       "path": "Física I/Error relativo.md"
     },
     {
       "basename": "Error absoluto",
       "path": "Física I/Error absoluto.md"
-    },
-    {
-      "basename": "Archivo",
-      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
     {
       "basename": "Aproximación de errores",
@@ -195,10 +199,6 @@
     {
       "basename": "Exceso K",
       "path": "Arquitectura de Computadoras/Exceso K.md"
-    },
-    {
-      "basename": "Código",
-      "path": "Arquitectura de Computadoras/Código.md"
     }
   ],
   "omittedPaths": [],
