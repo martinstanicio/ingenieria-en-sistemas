@@ -1,6 +1,6 @@
 ---
 created: 2024-10-22 22:52:45
-modified: 2024-10-22 22:56:37
+modified: 2024-10-22 23:07:01
 title: 20241022 - Deportistas
 ---
 
@@ -8,9 +8,17 @@ title: 20241022 - Deportistas
 
 El usuario ingresa el deporte cuyas estadísticas queremos analizar. Mostrar:
 
-- Cantidad de deportistas
+- Cantidad de deportistas que practican ese deporte
 - Promedio de altura de las personas que practican ese deporte
 - Mayor edad de la persona que practica ese deporte
+
+Cada registro del archivo `deportistas.txt` contiene los siguientes campos:
+
+- Número de socio (entero)
+- Apellido (cadena)
+- Altura (real)
+- Edad (entero)
+- Deporte (cadena): "f", "b" o "v"
 
 ## Diagrama de flujo
 
