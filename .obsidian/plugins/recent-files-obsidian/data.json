@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos.md"
+      "basename": "AyED - Actividades",
+      "path": "AyED - Actividades.md"
     },
     {
       "basename": "Algoritmos y Estructuras de Datos",
       "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
+    },
+    {
+      "basename": "Algoritmos y Estructuras de Datos",
+      "path": "Algoritmos y Estructuras de Datos.md"
     },
     {
       "basename": "20241022 - Deportistas",
@@ -195,10 +199,6 @@
     {
       "basename": "20240903 - Micros",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
     }
   ],
   "omittedPaths": [],
