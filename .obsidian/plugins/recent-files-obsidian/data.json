@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Impulso",
+      "path": "Física I/Impulso.md"
+    },
+    {
+      "basename": "Cantidad de movimiento",
+      "path": "Física I/Cantidad de movimiento.md"
+    },
+    {
       "basename": "AyED - Actividades",
       "path": "AyED - Actividades.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Derivadas laterales",
       "path": "Análisis Matemático I/Derivadas laterales.md"
-    },
-    {
-      "basename": "Cociente incremental",
-      "path": "Análisis Matemático I/Cociente incremental.md"
-    },
-    {
-      "basename": "20240903 - Micros",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
     }
   ],
   "omittedPaths": [],
