@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Error relativo",
+      "path": "Física I/Error relativo.md"
+    },
+    {
+      "basename": "Error absoluto",
+      "path": "Física I/Error absoluto.md"
+    },
+    {
       "basename": "Archivo",
       "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Código",
       "path": "Arquitectura de Computadoras/Código.md"
-    },
-    {
-      "basename": "Notación de modelos de procesos de negocios",
-      "path": "Sistemas y Procesos de Negocios/Notación de modelos de procesos de negocios.md"
-    },
-    {
-      "basename": "Transistor",
-      "path": "Arquitectura de Computadoras/Transistor.md"
     }
   ],
   "omittedPaths": [],
