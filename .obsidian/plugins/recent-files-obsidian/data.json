@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Archivo",
-      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
+      "basename": "20241022 - Deportistas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20241022 - Deportistas.md"
+    },
+    {
+      "basename": "Función strip",
+      "path": "Algoritmos y Estructuras de Datos/Función strip.md"
     },
     {
       "basename": "Función split",
       "path": "Algoritmos y Estructuras de Datos/Función split.md"
+    },
+    {
+      "basename": "Archivo",
+      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
     {
       "basename": "Error relativo",
@@ -191,14 +199,6 @@
     {
       "basename": "Código de Gray",
       "path": "Arquitectura de Computadoras/Código de Gray.md"
-    },
-    {
-      "basename": "Diodo",
-      "path": "Arquitectura de Computadoras/Diodo.md"
-    },
-    {
-      "basename": "Exceso K",
-      "path": "Arquitectura de Computadoras/Exceso K.md"
     }
   ],
   "omittedPaths": [],

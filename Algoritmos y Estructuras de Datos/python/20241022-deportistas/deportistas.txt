@@ -1,0 +1,15 @@
+1;Perez;1.65;22;f
+2;Gonzalez;1.75;23;b
+3;Lopez;1.80;24;f
+4;Gimenez;1.72;25;f
+5;Garcia;1.85;26;v
+6;Rodriguez;1.70;27;b
+7;Diaz;1.75;28;b
+8;Martinez;1.80;29;b
+9;Hernandez;1.72;30;v
+10;Sanchez;1.85;31;f
+11;Ramirez;1.70;32;f
+12;Romero;1.75;33;v
+13;Ortiz;1.80;34;f
+14;Ruiz;1.72;35;f
+15;Dominguez;1.85;36;v
