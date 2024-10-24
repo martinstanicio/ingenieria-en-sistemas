@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Óptica",
+      "path": "Física I/Óptica.md"
+    },
+    {
+      "basename": "Archivo",
+      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
+    },
+    {
       "basename": "Colisión",
       "path": "Física I/Colisión.md"
     },
@@ -39,10 +47,6 @@
     {
       "basename": "Función split",
       "path": "Algoritmos y Estructuras de Datos/Función split.md"
-    },
-    {
-      "basename": "Archivo",
-      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
     },
     {
       "basename": "Error relativo",
@@ -195,10 +199,6 @@
     {
       "basename": "Punto crítico",
       "path": "Análisis Matemático I/Punto crítico.md"
-    },
-    {
-      "basename": "Asíntota no vertical",
-      "path": "Análisis Matemático I/Asíntota no vertical.md"
     }
   ],
   "omittedPaths": [],
