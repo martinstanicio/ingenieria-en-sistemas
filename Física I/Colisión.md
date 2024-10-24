@@ -2,7 +2,7 @@
 aliases:
   - Choque
 created: 2024-07-04 17:40:09
-modified: 2024-10-24 14:41:07
+modified: 2024-10-24 15:07:18
 title: Colisión
 ---
 
@@ -30,6 +30,19 @@ $$
 0 < e < 1
 $$
 
+Se pierde parte de la [[Energía#Energía cinética]] como calor.
+
+$$
+E_c = E_c^0 - Q_{liberado}
+$$
+
 ## Colisión plástica
 
-El [[Coeficiente de restitución]] $e$ es $0$. Luego del choque, los cuerpos quedan unidos.
+El [[Coeficiente de restitución]] $e$ es $0$. Luego del choque, los cuerpos quedan unidos. Se pierde parte de la [[Energía#Energía cinética]] como calor.
+
+$$
+E_c = E_c^0 - Q_{liberado}
+$$
+
+> [!warning]
+> En este caso, el calor liberado es mucho mayor que en una [[Colisión#Colisión inelástica]].

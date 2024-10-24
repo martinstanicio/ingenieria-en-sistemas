@@ -1,6 +1,6 @@
 ---
 created: 2024-07-04 17:43:36
-modified: 2024-10-24 14:43:49
+modified: 2024-10-24 14:44:22
 title: Coeficiente de restitución
 ---
 
@@ -15,5 +15,7 @@ $$
 Podemos calcularlo, utilizamos la velocidad inicial $v$ y velocidad final $u$ de ambos cuerpos.
 
 $$
-e = - \frac{u_1 - u_2}{v_1 - v_2}
+e =
+\frac{u_2 - u_1}{v_1 - v_2} =
+- \frac{u_1 - u_2}{v_1 - v_2}
 $$
