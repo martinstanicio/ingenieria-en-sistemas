@@ -1,6 +1,6 @@
 ---
 created: 2024-07-04 17:43:36
-modified: 2024-07-11 18:05:47
+modified: 2024-10-24 14:43:49
 title: Coeficiente de restitución
 ---
 
@@ -12,8 +12,8 @@ $$
 0 \leq e \leq 1
 $$
 
-Podemos calcularlo, utilizamos la velocidad inicial y final de ambos cuerpos.
+Podemos calcularlo, utilizamos la velocidad inicial $v$ y velocidad final $u$ de ambos cuerpos.
 
 $$
-e = - \frac{v_1 - v_2}{v_1^0 - v_2^0}
+e = - \frac{u_1 - u_2}{v_1 - v_2}
 $$

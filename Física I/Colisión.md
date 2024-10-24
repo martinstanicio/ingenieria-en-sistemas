@@ -2,15 +2,15 @@
 aliases:
   - Choque
 created: 2024-07-04 17:40:09
-modified: 2024-07-11 17:55:55
+modified: 2024-10-24 14:41:07
 title: Colisión
 ---
 
 # Colisión
 
-En toda colisión la [[Cantidad de movimiento]] es ==constante==, es decir, $\overrightarrow{P}_0 = \overrightarrow{P}_f$.
+Decimos que tenemos una [[Colisión]] cuando hay una **interacción** entre dos cuerpos en un **instante de tiempo**.
 
-Existen tres tipos de colisiones.
+En toda [[Colisión]] la [[Cantidad de movimiento]] es ==constante==, es decir, $\overrightarrow{P}_0 = \overrightarrow{P}_f$.
 
 ## Colisión totalmente elástica
 

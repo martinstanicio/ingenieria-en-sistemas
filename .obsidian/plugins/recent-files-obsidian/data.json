@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Coeficiente de restitución",
+      "path": "Física I/Coeficiente de restitución.md"
+    },
+    {
+      "basename": "Colisión",
+      "path": "Física I/Colisión.md"
+    },
+    {
       "basename": "Impulso",
       "path": "Física I/Impulso.md"
     },
@@ -129,10 +137,6 @@
       "path": "Algoritmos y Estructuras de Datos/Recursividad.md"
     },
     {
-      "basename": "Colisión",
-      "path": "Física I/Colisión.md"
-    },
-    {
       "basename": "20240924 - Matriz aleatoria",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Asíntota no vertical",
       "path": "Análisis Matemático I/Asíntota no vertical.md"
-    },
-    {
-      "basename": "Derivadas laterales",
-      "path": "Análisis Matemático I/Derivadas laterales.md"
     }
   ],
   "omittedPaths": [],
