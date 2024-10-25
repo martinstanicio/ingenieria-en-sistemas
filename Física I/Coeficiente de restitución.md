@@ -1,6 +1,6 @@
 ---
 created: 2024-07-04 17:43:36
-modified: 2024-10-24 14:44:22
+modified: 2024-10-24 23:55:56
 title: Coeficiente de restitución
 ---
 
@@ -18,4 +18,10 @@ $$
 e =
 \frac{u_2 - u_1}{v_1 - v_2} =
 - \frac{u_1 - u_2}{v_1 - v_2}
+$$
+
+También podemos calcular el [[Coeficiente de restitución]] de un objeto en caída libre si sabemos su altura inicial, y su altura luego de rebotar.
+
+$$
+e = \sqrt{\frac{h_f}{h_0}}
 $$
