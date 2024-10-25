@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Vector multidimensional",
+      "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
+    },
+    {
+      "basename": "20240909 - Alumnos",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
+    },
+    {
+      "basename": "Regla de Barrow",
+      "path": "Análisis Matemático I/Regla de Barrow.md"
+    },
+    {
+      "basename": "Integral",
+      "path": "Análisis Matemático I/Integral.md"
+    },
+    {
       "basename": "Óptica",
       "path": "Física I/Óptica.md"
     },
@@ -85,16 +101,8 @@
       "path": "Análisis Matemático I/Función primitiva.md"
     },
     {
-      "basename": "Integral",
-      "path": "Análisis Matemático I/Integral.md"
-    },
-    {
       "basename": "Teorema de Lagrange",
       "path": "Análisis Matemático I/Teorema de Lagrange.md"
-    },
-    {
-      "basename": "Regla de Barrow",
-      "path": "Análisis Matemático I/Regla de Barrow.md"
     },
     {
       "basename": "Integral definida",
@@ -129,10 +137,6 @@
       "path": "Algoritmos y Estructuras de Datos/Mezcla de vectores.md"
     },
     {
-      "basename": "20240909 - Alumnos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
-    },
-    {
       "basename": "20240909 - Socios",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
     },
@@ -151,10 +155,6 @@
     {
       "basename": "Función",
       "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Vector multidimensional",
-      "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
     },
     {
       "basename": "Vector contador",
