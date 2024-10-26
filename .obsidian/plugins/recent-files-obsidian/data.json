@@ -5,6 +5,10 @@
       "path": "Física I/Principio de conservación de la cantidad de movimiento.md"
     },
     {
+      "basename": "Energía",
+      "path": "Física I/Energía.md"
+    },
+    {
       "basename": "Impulso",
       "path": "Física I/Impulso.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Extremo absoluto",
       "path": "Análisis Matemático I/Extremo absoluto.md"
-    },
-    {
-      "basename": "Punto frontera",
-      "path": "Análisis Matemático I/Punto frontera.md"
     }
   ],
   "omittedPaths": [],
