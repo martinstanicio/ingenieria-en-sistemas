@@ -44,3 +44,5 @@ for i in range(0, 4):
 for i in range(0, 4):
     if toneladas[i] == max:
         print(f"La sucursal {i + 1} tuvo la maxima produccion alcanzada")
+
+archivo.close()
