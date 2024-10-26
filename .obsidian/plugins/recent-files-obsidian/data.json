@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Principio de conservación de la cantidad de movimiento",
+      "path": "Física I/Principio de conservación de la cantidad de movimiento.md"
+    },
+    {
       "basename": "Impulso",
       "path": "Física I/Impulso.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Punto frontera",
       "path": "Análisis Matemático I/Punto frontera.md"
-    },
-    {
-      "basename": "Punto crítico",
-      "path": "Análisis Matemático I/Punto crítico.md"
     }
   ],
   "omittedPaths": [],
