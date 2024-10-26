@@ -1,8 +1,8 @@
 ---
+aliases: 
 created: 2024-09-05 17:55:06
-modified: 2024-09-05 17:57:34
+modified: 2024-10-26 14:01:45
 title: Torque
-aliases:
 ---
 
 # Torque

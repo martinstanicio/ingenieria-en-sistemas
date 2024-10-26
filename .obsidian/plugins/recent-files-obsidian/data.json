@@ -1,20 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Principio de conservación de la cantidad de movimiento",
-      "path": "Física I/Principio de conservación de la cantidad de movimiento.md"
+      "basename": "Torque",
+      "path": "Física I/Torque.md"
     },
     {
-      "basename": "Energía",
-      "path": "Física I/Energía.md"
+      "basename": "Momento de inercia",
+      "path": "Física I/Momento de inercia.md"
+    },
+    {
+      "basename": "Cantidad de movimiento",
+      "path": "Física I/Cantidad de movimiento.md"
     },
     {
       "basename": "Impulso",
       "path": "Física I/Impulso.md"
     },
     {
-      "basename": "Cantidad de movimiento",
-      "path": "Física I/Cantidad de movimiento.md"
+      "basename": "Principio de conservación de la cantidad de movimiento",
+      "path": "Física I/Principio de conservación de la cantidad de movimiento.md"
+    },
+    {
+      "basename": "Energía",
+      "path": "Física I/Energía.md"
     },
     {
       "basename": "Colisión",
@@ -191,14 +199,6 @@
     {
       "basename": "Álgebra y Geometría Analítica",
       "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
-    },
-    {
-      "basename": "Código de Hamming",
-      "path": "Arquitectura de Computadoras/Código de Hamming.md"
-    },
-    {
-      "basename": "Extremo absoluto",
-      "path": "Análisis Matemático I/Extremo absoluto.md"
     }
   ],
   "omittedPaths": [],

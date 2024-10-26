@@ -1,6 +1,6 @@
 ---
 created: 2024-10-26 12:11:40
-modified: 2024-10-26 12:43:19
+modified: 2024-10-26 14:01:09
 title: Principio de conservación de la cantidad de movimiento
 ---
 
