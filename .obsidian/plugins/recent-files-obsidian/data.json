@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Momento de fuerza",
-      "path": "Física I/Momento de fuerza.md"
-    },
-    {
       "basename": "Momento de inercia",
       "path": "Física I/Momento de inercia.md"
+    },
+    {
+      "basename": "Inercia",
+      "path": "Física I/Inercia.md"
+    },
+    {
+      "basename": "Momento de fuerza",
+      "path": "Física I/Momento de fuerza.md"
     },
     {
       "basename": "Cantidad de movimiento",
@@ -195,10 +199,6 @@
     {
       "basename": "20240927 - Matriz acumulador contador",
       "path": "Algoritmos y Estructuras de Datos/Actividades/20240927 - Matriz acumulador contador.md"
-    },
-    {
-      "basename": "Álgebra y Geometría Analítica",
-      "path": "Álgebra y Geometría Analítica/Álgebra y Geometría Analítica.md"
     }
   ],
   "omittedPaths": [],

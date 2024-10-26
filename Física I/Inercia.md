@@ -6,4 +6,4 @@ title: Inercia
 
 # Inercia
 
-La resistencia que ofrece un cuerpo a cambiar su estado de [[Movimiento]].
+La **resistencia** que ofrece un cuerpo a cambiar su estado de [[Movimiento]].
