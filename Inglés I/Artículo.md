@@ -6,7 +6,7 @@ title: Artículo
 
 # Artículo
 
-Es la palabra que ==acompaña al [[Sustantivo]]== en la [[Frase o grupo nominal]].
+Es la palabra que ==acompaña al [[Sustantivo]]== en la [[Frase nominal]].
 
 ## Artículos indefinidos (a/an)
 

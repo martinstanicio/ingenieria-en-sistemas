@@ -16,7 +16,7 @@ title: 01 - Uso del diccionario bilingüe
 	7. **Carpet:** alfombra
 	8. **Career:** carrera profesional
 
-    Todas las palabras son [[False friends]].
+    Todas las palabras son [[Falsos cognados]].
 
 2. Busque en el diccionario el siguiente vocabulario e indique si se trata de vocabulario técnico o general.
 	- **Sprocket (técnica):** rueda dentada.

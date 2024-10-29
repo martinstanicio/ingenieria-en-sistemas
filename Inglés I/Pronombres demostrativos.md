@@ -1,10 +1,12 @@
 ---
+aliases:
+  - Adjetivos demostrativos
 created: 2024-04-21 17:54:34
-modified: 2024-05-08 01:33:30
-title: Adjetivos o pronombres demostrativos
+modified: 2024-10-28 14:53:13
+title: Pronombres demostrativos
 ---
 
-# Adjetivos o pronombres demostrativos
+# Pronombres demostrativos
 
 Son aquellos [[Adjetivo|adjetivos]] que se utilizan para ==identificar a algo o alguien== señalando la ==distancia== que mantiene con respecto al hablante. Son los siguientes:
 
