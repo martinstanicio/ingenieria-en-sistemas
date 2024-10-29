@@ -28,5 +28,5 @@ $$
 Para que un cuerpo esté en equilibrio **rotacional**:
 
 $$
-Z = I \cdot \alpha = 0
+\tau = I \cdot \alpha = 0
 $$
