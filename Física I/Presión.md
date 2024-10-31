@@ -1,6 +1,6 @@
 ---
 created: 2024-10-31 13:02:28
-modified: 2024-10-31 13:20:18
+modified: 2024-10-31 14:54:15
 title: Presión
 ---
 
@@ -20,6 +20,9 @@ $$
 > $$
 > Pa = \frac{N}{m^2}
 > $$
+
+> [!note]
+> La [[Presión]] disminuye conforme aumenta la **elevación**.
 
 ## Presión hidrostática
 
