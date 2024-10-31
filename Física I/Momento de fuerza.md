@@ -1,6 +1,7 @@
 ---
 aliases:
   - Torque
+  - Momento de torsión
 created: 2024-09-05 17:55:06
 modified: 2024-10-26 14:15:54
 title: Momento de fuerza
