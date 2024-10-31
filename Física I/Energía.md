@@ -1,6 +1,6 @@
 ---
 created: 2024-05-30 18:00:03
-modified: 2024-06-23 18:39:18
+modified: 2024-10-30 23:28:37
 title: Energía
 ---
 
@@ -20,6 +20,12 @@ $$
 
 $$
 E_c = \frac{1}{2} \cdot m \cdot v^2
+$$
+
+## Energía cinética rotacional
+
+$$
+E_{cr} = \frac{1}{2} \cdot I \cdot \omega^2
 $$
 
 ## Energía potencial gravitatoria
