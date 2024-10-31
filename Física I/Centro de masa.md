@@ -10,15 +10,11 @@ Es el punto en un **sistema de partículas** en el cual se puede considerar que 
 > [!important]
 > Este punto se comporta como si todas las [[Fuerza|Fuerzas]] externas estuvieran actuando sobre él.
 
-## Fórmula para calcular la posición del centro de masa
+Podemos calcular la **posición** del [[Centro de masa]] $\vec{R}$ mediante la siguiente fórmula.
 
-Para un sistema discreto de partículas, la posición del centro de masa (\( \vec{R} \)) se calcula mediante la siguiente fórmula:
-
-\[
-
+$$
 \vec{R} = \frac{\sum_{i=1}^n m_i \vec{r}_i}{\sum_{i=1}^n m_i}
-
-\]
+$$
 
 donde:
 
