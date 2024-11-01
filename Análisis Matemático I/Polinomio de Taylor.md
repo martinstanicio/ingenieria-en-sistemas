@@ -1,12 +1,12 @@
 ---
 created: 2024-10-30 11:43:40
-modified: 2024-10-30 12:06:22
-title: Polinomios de Taylor
+modified: 2024-11-01 14:37:59
+title: Polinomio de Taylor
 ---
 
-# Polinomios de Taylor
+# Polinomio de Taylor
 
-Son una herramienta para realizar aproximaciones de [[Análisis Matemático I/Función|Funciones]] **complejas**, en el [[Entorno]] de un punto $x = c$, utilizando **polinomios**.
+Es una herramienta para realizar aproximaciones de [[Análisis Matemático I/Función|Funciones]] **complejas**, en el [[Entorno]] de un punto $x = c$, utilizando **polinomios**.
 
 Este polinomio tendrá la siguiente forma, desarrollado en potencias de $x - c$.
 
@@ -25,4 +25,13 @@ Para determinar el valor de los coeficientes del polinomio, debemos obtener la [
 
 $$
 p^{(k)}(c) = k! \cdot a_k \Rightarrow a_k = \frac{p^{(k)}(c)}{k!}
+$$
+
+## Residuo
+
+Un [[Polinomio de Taylor]] nos permite obtener una **aproximación**, por lo que siempre habrá una diferencia con la [[Análisis Matemático I/Función|Función]] original.
+
+$$
+f(x) =
+\sum_{k = 0}^n \frac{f^{(k)}(c)}{k!} (x - c)^k + \frac{f^{n + 1}(\alpha)}{(n + 1)!} (x - c)^{(n + 1)}
 $$
