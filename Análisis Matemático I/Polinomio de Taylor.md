@@ -1,6 +1,6 @@
 ---
 created: 2024-10-30 11:43:40
-modified: 2024-11-01 14:37:59
+modified: 2024-11-01 14:42:33
 title: Polinomio de Taylor
 ---
 
@@ -27,7 +27,7 @@ $$
 p^{(k)}(c) = k! \cdot a_k \Rightarrow a_k = \frac{p^{(k)}(c)}{k!}
 $$
 
-## Residuo
+## Residuo o error
 
 Un [[Polinomio de Taylor]] nos permite obtener una **aproximación**, por lo que siempre habrá una diferencia con la [[Análisis Matemático I/Función|Función]] original.
 
@@ -35,3 +35,6 @@ $$
 f(x) =
 \sum_{k = 0}^n \frac{f^{(k)}(c)}{k!} (x - c)^k + \frac{f^{n + 1}(\alpha)}{(n + 1)!} (x - c)^{(n + 1)}
 $$
+
+> [!important]
+> El error en $x = c$ siempre será $0$.
