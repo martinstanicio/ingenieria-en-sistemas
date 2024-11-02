@@ -1,6 +1,6 @@
 ---
 created: 2024-11-02 19:26:57
-modified: 2024-11-02 19:27:46
+modified: 2024-11-02 19:44:05
 title: 20241102 - Eliminar cliente
 ---
 
@@ -13,7 +13,7 @@ Tienes un [[Archivo]] llamado `clientes.txt` que almacena [[Información]] de cl
 - Edad (entero)
 - Ciudad (cadena)
 
-Implementa un programa que permita al usuario ingresar el ID de un cliente que desea eliminar.
+Implementa un programa que permita al usuario ingresar el ID de un cliente que desea eliminar. Mostrar nombre, edad y ciudad del cliente eliminado.
 
 ## Diagrama de flujo
 
@@ -21,8 +21,19 @@ Implementa un programa que permita al usuario ingresar el ID de un cliente que d
 flowchart TB
 	comienzo([comienzo])
     
-	variables["`
-	`"]
+	declarar["`target = entero
+	clientes = archivo
+	backup = archivo
+	registro = cadena
+	eliminado = logica
+	vector[4] = cadena
+	id_cliente = entero
+	nombre = cadena
+	edad = entero
+	ciudad = cadena`"]
+	inicializar["eliminado = falso"]
+	
+	copiar1["COPIAR()"]
     
     fin([fin])
     
@@ -33,4 +44,8 @@ flowchart TB
 
 ```embed-python
 PATH: "vault://Algoritmos y Estructuras de Datos/python/20241102-eliminar-cliente/main.py"
+```
+
+```embed-python
+PATH: "vault://Algoritmos y Estructuras de Datos/python/20241102-eliminar-cliente/clientes.txt"
 ```
