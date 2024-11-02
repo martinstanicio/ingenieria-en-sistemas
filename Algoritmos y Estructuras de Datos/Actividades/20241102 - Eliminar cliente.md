@@ -33,8 +33,20 @@ flowchart TB
 	ciudad = cadena`"]
 	inicializar["eliminado = falso"]
 	
-	copiar1["COPIAR()"]
-    
+	target[/"target"/]
+	copiar1["COPIAR('clientes.txt', 'backup.txt')"]
+	
+	clientes_abrir["clientes = ABRIR('clientes.txt', 'r')"]
+	backup_abrir["backup = ABRIR('backup.txt', 'w')"]
+	registro1["registro = LEER(clientes)"]
+	
+	while{"registro <> '' y no eliminado"}
+	vector["vector = SEPARAR(registro, ';')"]
+	campos["`id_cliente = VALOR(vector[1])
+	nombre = vector[2]
+	edad = VALOR(vector[3])
+	ciudad = vector[4]`"]
+	
     fin([fin])
     
 	comienzo --> variables --> fin

@@ -1,6 +1,6 @@
 ---
 created: 2024-11-02 18:06:32
-modified: 2024-11-02 19:15:11
+modified: 2024-11-02 20:08:04
 title: 20241102 - Empleados
 ---
 
@@ -54,11 +54,11 @@ flowchart TB
 	while{"registro != ''"}
 	vector["vector = SEPARAR(registro, ';')"]
 	
-    campos["`legajo = VALOR(vector[0])
-    nombre = vector[1]
-    edad = VALOR(vector[2])
-    departamento = vector[3]
-    salario = VALOR(vector[4])`"]
+    campos["`legajo = VALOR(vector[1])
+    nombre = vector[2]
+    edad = VALOR(vector[3])
+    departamento = vector[4]
+    salario = VALOR(vector[5])`"]
     
     if1{"departamento = target"}
     if1_si["`empleados = empleados + 1
@@ -66,9 +66,9 @@ flowchart TB
     
     if2{"legajo < min_legajo"}
     if2_si["`min_legajo = legajo
-    empleado[0] = nombre
-    empleado[1] = VALOR(edad)
-    empleado[2] = VALOR(salario)`"]
+    empleado[1] = nombre
+    empleado[2] = VALOR(edad)
+    empleado[3] = VALOR(salario)`"]
     
     registro2["registro = LEER(archivo)"]
     
@@ -79,9 +79,9 @@ flowchart TB
     
     mostrar1{{"empleados"}}
     mostrar2{{"promedio_salario"}}
-    mostrar3{{"`empleado[0]
-    empleado[1]
-    empleado[2]`"}}
+    mostrar3{{"`empleado[1]
+    empleado[2]
+    empleado[3]`"}}
     
     fin([fin])
     
