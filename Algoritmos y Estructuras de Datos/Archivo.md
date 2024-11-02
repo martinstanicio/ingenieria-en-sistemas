@@ -1,6 +1,6 @@
 ---
 created: 2024-10-08 22:10:52
-modified: 2024-10-22 21:33:04
+modified: 2024-11-02 17:23:09
 title: Archivo
 ---
 
@@ -143,17 +143,79 @@ archivo.close()
 
 > [!tip]
 > Para que cada registro esté en una línea nueva, agregamos `\n`.
+
 ## Eliminar registro
 
-Podemos eliminar un **registro** de un [[Archivo]], creamos una copia del mismo con [[shutil]].
+Podemos eliminar un **registro** de un [[Archivo]], creamos una copia del mismo con [[shutil]]. Luego reescribimos el [[Archivo]] registro por registro, omitiendo aquel que queremos eliminar.
 
-```python
-archivo = open(nombre, "w")
-registro = f"{campo1};{campo2};{campo3}"
+### Diagrama de flujo
 
-archivo.write(registro + "\n")
-archivo.close()
+En [[Diagrama de flujo]] se realiza de la siguiente forma.
+
+```mermaid
+flowchart TB
+	comienzo([comienzo])
+    
+    inicializar["`socios = archivo
+    backup = archivo
+    target = entero
+    vector[5] = cadena
+    registro = cadena
+    n_socio = entero`"]
+    
+    copiar["COPIAR('socios.txt', 'backup.txt')"]
+    
+    socios_abrir["socios = ABRIR('socios.txt', 'r')"]
+    backup_abrir["backup = ABRIR('backup.txt', 'w')"]
+    
+    target[/"target"/]
+    registro1["registro = LEER(socios)"]
+    
+    while{"registro <> ''"}
+    vector["vector = SEPARAR(registro, ';')"]
+    n_socio["n_socio = VALOR(vector[0])"]
+    
+    if{"n_socio <> target"}
+    backup_guardar["backup = GUARDAR(registro)"]
+    borrado{{"Socio borrado: {n_socio}"}}
+    
+    registro2["registro = LEER(socios)"]
+    
+	fin([fin])
+    
+	comienzo --> A --> B --> C --> fin
 ```
 
-> [!tip]
-> Para que cada registro esté en una línea nueva, agregamos `\n`.
+### Python
+
+En [[Python]] se realiza de la siguiente forma.
+
+```python
+import shutil
+
+shutil.copy("socios.txt", "backup.txt")
+
+target = int(input("Número de socio a borrar: "))
+
+elem = 5
+vector = [""] * elem
+socios = open("socios.txt", "r")
+backup = open("backup.txt", "w")
+registro = socios.readline().strip()
+  
+while registro != "":
+    vector = registro.split(";")
+    n_socio = int(vector[0])
+  
+    if n_socio != target:
+        backup.write(registro + "\n")
+    else:
+        print(f"Socio eliminado: {n_socio}")
+  
+    registro = socios.readline().strip()
+  
+socios.close()
+backup.close()
+  
+shutil.copy("backup.txt", "socios.txt")
+```
