@@ -1,6 +1,6 @@
 ---
 created: 2024-10-22 22:52:45
-modified: 2024-10-22 23:07:01
+modified: 2024-11-02 18:37:00
 title: 20241022 - Deportistas
 ---
 
@@ -40,6 +40,6 @@ flowchart TB
 PATH: "vault://Algoritmos y Estructuras de Datos/python/20241022-deportistas/main.py"
 ```
 
-```embed-python
+```embed-shell
 PATH: "vault://Algoritmos y Estructuras de Datos/python/20241022-deportistas/deportistas.txt"
 ```

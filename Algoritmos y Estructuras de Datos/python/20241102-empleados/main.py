@@ -7,8 +7,8 @@ target = input("Ingrese el departamento a analizar: ")
 empleados = 0
 acu_salario = 0.0
 promedio_salario = 0.0
-min_edad = 9999
-joven = [0, "", 0.0]
+min_legajo = 9999999
+empleado = [""] * 3
 
 archivo = open("empleados.dat", "r")
 registro = archivo.readline().strip()
@@ -26,11 +26,11 @@ while registro != "":
         empleados += 1
         acu_salario += salario
 
-        if edad < min_edad:
-            min_edad = edad
-            joven[0] = legajo
-            joven[1] = nombre
-            joven[2] = salario
+        if legajo < min_legajo:
+            min_legajo = legajo
+            empleado[0] = nombre
+            empleado[1] = str(edad)
+            empleado[2] = str(salario)
 
     registro = archivo.readline().strip()
 
@@ -41,4 +41,6 @@ if empleados > 0:
 
 print(f"Cantidad de empleados: {empleados}")
 print(f"Salario promedio: {promedio_salario}")
-print(f"Empleado más joven: Legajo {joven[0]} - {joven[1]} - Salario $ {joven[2]}")
+print(
+    f"Empleado con menor legajo: {empleado[0]} - {empleado[1]} - Salario $ {empleado[2]}"
+)
