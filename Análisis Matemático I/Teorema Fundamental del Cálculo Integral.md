@@ -2,7 +2,7 @@
 aliases:
   - TFCI
 created: 2024-10-17 22:34:45
-modified: 2024-10-30 13:03:03
+modified: 2024-11-01 17:55:29
 title: Teorema Fundamental del Cálculo Integral
 ---
 

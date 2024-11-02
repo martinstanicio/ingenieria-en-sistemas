@@ -2,7 +2,7 @@
 aliases:
   - Control por ruptura
 created: 2024-09-03 21:06:59
-modified: 2024-09-09 03:57:08
+modified: 2024-11-01 17:50:28
 title: Corte de control
 ---
 
@@ -79,4 +79,36 @@ def corte_control(vector):
             z = 1
     
     print(f"{control} está {z} veces")
+```
+
+## Archivos
+
+Para realizar un [[Corte de control]] con los registros de un [[Archivo]], el proceso es similar.
+
+```python
+archivo = file.open("producciones.txt", "r")
+registro = archivo.readline().strip()
+
+while registro != "":
+    vector = registro.split(";")
+    nhorno = int(vector[0])
+    ton = float(vector[1])
+    turno = vector[2]
+    
+    control = nhorno
+    z = 0
+    acu_ton = 0.0
+    
+    while registro != "" and control == nhorno:
+        z += 1
+        acu_ton += ton
+        
+        registro = archivo.readline().strip()
+        if registro != "":
+            vector = registro.split(";")
+            nhorno = int(vector[0])
+            ton = float(vector[1])
+            turno = vector[2]
+        
+        print(f"El horno {control} produjo {acu_ton} toneladas en {z} producciones.")
 ```

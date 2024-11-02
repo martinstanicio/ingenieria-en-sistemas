@@ -1,6 +1,6 @@
 ---
 created: 2024-10-30 13:34:14
-modified: 2024-10-30 13:35:54
+modified: 2024-11-01 18:11:10
 title: Teorema del Valor Medio del Cálculo Integral
 ---
 
