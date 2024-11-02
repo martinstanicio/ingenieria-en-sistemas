@@ -143,3 +143,17 @@ archivo.close()
 
 > [!tip]
 > Para que cada registro esté en una línea nueva, agregamos `\n`.
+## Eliminar registro
+
+Podemos eliminar un **registro** de un [[Archivo]], creamos una copia del mismo con [[shutil]].
+
+```python
+archivo = open(nombre, "w")
+registro = f"{campo1};{campo2};{campo3}"
+
+archivo.write(registro + "\n")
+archivo.close()
+```
+
+> [!tip]
+> Para que cada registro esté en una línea nueva, agregamos `\n`.
