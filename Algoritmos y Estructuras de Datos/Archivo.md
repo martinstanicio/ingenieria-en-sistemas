@@ -1,6 +1,6 @@
 ---
 created: 2024-10-08 22:10:52
-modified: 2024-11-02 17:23:09
+modified: 2024-11-02 17:39:24
 title: Archivo
 ---
 
@@ -146,7 +146,7 @@ archivo.close()
 
 ## Eliminar registro
 
-Podemos eliminar un **registro** de un [[Archivo]], creamos una copia del mismo con [[shutil]]. Luego reescribimos el [[Archivo]] registro por registro, omitiendo aquel que queremos eliminar.
+Para eliminar un **registro** de un [[Archivo]], creamos una copia del mismo, donde reescribimos el [[Archivo]] registro por registro, omitiendo aquel que queremos eliminar. Luego, copiamos los contenidos de este nuevo [[Archivo]], al [[Archivo]] original.
 
 ### Diagrama de flujo
 
@@ -163,7 +163,7 @@ flowchart TB
     registro = cadena
     n_socio = entero`"]
     
-    copiar["COPIAR('socios.txt', 'backup.txt')"]
+    copiar1["COPIAR('socios.txt', 'backup.txt')"]
     
     socios_abrir["socios = ABRIR('socios.txt', 'r')"]
     backup_abrir["backup = ABRIR('backup.txt', 'w')"]
@@ -181,14 +181,26 @@ flowchart TB
     
     registro2["registro = LEER(socios)"]
     
-	fin([fin])
+    socios_cerrar["CERRAR(socios)"]
+    backup_cerrar["CERRAR(backup)"]
     
-	comienzo --> A --> B --> C --> fin
+    copiar2["COPIAR('backup.txt', 'socios.txt')"]
+    
+	fin([fin])
+	
+	a[" "]
+	b[" "]
+    
+	comienzo --> inicializar --> copiar1 --> socios_abrir --> backup_abrir --> target --> registro1 --> a --> while -- "Sí" --> vector --> n_socio --> if
+	if -- "Sí" --> backup_guardar --> b
+	if -- "No" --> borrado --> b
+	b --> registro2 --> a
+	while -- "No" ---> socios_cerrar --> backup_cerrar --> copiar2 --> fin
 ```
 
 ### Python
 
-En [[Python]] se realiza de la siguiente forma.
+En [[Python]] se realiza de la siguiente forma. Para crear la copia del [[Archivo]], utilizamos el [[Módulo shutil]].
 
 ```python
 import shutil

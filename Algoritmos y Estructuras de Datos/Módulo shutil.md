@@ -1,10 +1,10 @@
 ---
 created: 2024-10-29 21:22:13
-modified: 2024-10-29 21:27:13
-title: shutil
+modified: 2024-11-02 17:39:03
+title: Módulo shutil
 ---
 
-# shutil
+# Módulo shutil
 
 Es una [[Biblioteca]] que, entre otras cosas, nos permite crear una copia de un [[Archivo]].
 
