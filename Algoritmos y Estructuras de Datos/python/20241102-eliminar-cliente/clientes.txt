@@ -1,0 +1,4 @@
+1;Juan Perez;30;Buenos Aires
+2;Ana Lopez;25;Córdoba
+3;Carlos Díaz;40;Rosario
+4;María García;35;Mendoza
