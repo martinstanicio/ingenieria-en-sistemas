@@ -1,5 +1,5 @@
-Escobar;1;3;13
-Escobar;2;6;12
+Escobar;1;13;13
+Escobar;2;16;12
 Pilar;1;10;11
 Pilar;2;9;10
 Pilar;3;8;9

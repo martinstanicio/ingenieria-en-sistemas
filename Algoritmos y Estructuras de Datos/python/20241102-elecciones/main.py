@@ -34,11 +34,11 @@ while registro != "":
 
         if z_milei > max_milei:
             max_milei = z_milei
-            ciudad_milei = ciudad
+            ciudad_milei = control
 
         if z_massa > max_massa:
             max_massa = z_massa
-            ciudad_massa = ciudad
+            ciudad_massa = control
 
         control = ciudad
         z_milei = v_milei
@@ -52,6 +52,6 @@ print(f"Ciudad: {control}")
 print(f"Votos de Milei: {z_milei}")
 print(f"Votos de Massa: {z_massa}")
 
-# print("")
-# print(f"Ciudad con mas votos de Milei: {ciudad_milei}")
-# print(f"Ciudad con mas votos de Massa: {ciudad_massa}")
+print("")
+print(f"Ciudad con mas votos de Milei: {ciudad_milei}")
+print(f"Ciudad con mas votos de Massa: {ciudad_massa}")

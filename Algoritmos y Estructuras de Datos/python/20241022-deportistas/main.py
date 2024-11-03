@@ -22,7 +22,10 @@ while registro != "":
 
     registro = archivo.readline().strip()
 
-altura_promedio = altura_acumulador / deportistas
+archivo.close()
+
+if deportistas > 0:
+    altura_promedio = altura_acumulador / deportistas
 
 print(f"Deportistas: {deportistas}")
 print(f"Promedio de altura: {altura_promedio}")

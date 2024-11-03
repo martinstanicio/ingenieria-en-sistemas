@@ -26,12 +26,59 @@ Cada registro del archivo `deportistas.txt` contiene los siguientes campos:
 flowchart TB
 	comienzo([comienzo])
     
-	variables["`
-	`"]
+	declarar["`target = entero
+	deportistas = entero
+	altura_acumulador = real
+	altura_promedio = real
+	max_edad = entero
+	archivo = archivo
+	registro = cadena
+	vector[5] = cadena
+	altura = real
+	edad = entero
+	deporte = cadena`"]
+	inicializar["`deportistas = 0
+	altura_acumulador = 0.0
+	altura_promedio = 0.0
+	max_edad = 0`"]
+	
+	target[/"target"/]
+	
+	archivo_abrir["archivo = ABRIR('deportistas.txt', 'r')"]
+	registro1["registro = LEER(archivo)"]
+	
+	while{"registro <> ''"}
+	vector["vector = SEPARAR(registro, ';')"]
+	campos["`altura = VALOR(vector[3])
+	edad = VALOR(vector[4])
+	deporte = vector[5]`"]
+	
+	if1{"deporte = target"}
+	if1_yes["`deportistas = deportistas + 1
+	altura_acumulador = altura_acumulador + altura`"]
+	
+	if2{"edad > max_edad"}
+	if2_yes["max_edad = edad"]
+	
+	registro2["registro = LEER(archivo)"]
+	
+	archivo_cerrar["CERRAR(archivo)"]
+	
+	if3{"deportistas > 0"}
+	if3_yes["altura_promedio = altura_acumulador / deportistas"]
+	
+	mostrar1{{"deportistas"}}
+	mostrar1{{"altura_promedio"}}
+	mostrar1{{"max_edad"}}
     
     fin([fin])
     
-	comienzo --> variables --> fin
+    a[" "]
+    b[" "]
+    c[" "]
+    d[" "]
+    
+	comienzo --> declarar --> inicializar --> target --> archivo_abrir --> registro1 --> a --> while
 ```
 
 ## Código
