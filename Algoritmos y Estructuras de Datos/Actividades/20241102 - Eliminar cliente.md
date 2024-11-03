@@ -48,11 +48,37 @@ flowchart TB
 	ciudad = vector[4]`"]
 	
 	if1{"id_cliente <> target"}
-	if1_yes["GUARDAR()"]
+	if1_yes["backup = GUARDAR(registro)"]
+	eliminado["eliminado = verdadero"]
+	mostrar_eliminado{{"`id_cliente
+	nombre
+	edad
+	ciudad`"}}
+	
+	registro2["registro = LEER(clientes)"]
+	
+	clientes_cerrar["CERRAR(clientes)"]
+	backup_cerrar["CERRAR(backup)"]
+	
+	copiar2["COPIAR('backup.txt', 'clientes.txt')"]
+	
+	if2{"no eliminado"}
+	if2_yes{{"No existe un cliente con id {target}"}}
 	
     fin([fin])
     
-	comienzo --> variables --> fin
+    a[" "]
+    b[" "]
+    c[" "]
+    
+	comienzo --> declarar --> inicializar --> target --> copiar1 --> clientes_abrir --> backup_abrir --> registro1 --> a --> while -- "Sí" --> vector --> campos --> if1
+	if1 -- "Sí" --> if1_yes --> b
+	if1 -- "No" --> eliminado --> mostrar_eliminado --> b
+	b --> registro2 --> a
+	while -- "No" --> clientes_cerrar --> backup_cerrar --> copiar2 --> if2
+	if2 -- "Sí" --> if2_yes --> c
+	if2 -- "No" --> c
+	c --> fin
 ```
 
 ## Código
