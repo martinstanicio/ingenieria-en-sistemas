@@ -1,0 +1,24 @@
+2023/01/01;Buenos Aires;10;1
+2023/01/09;Cordoba;5;2
+2023/02/12;Rosario;15;2
+2023/02/15;Mendoza;20;1
+2023/03/05;Buenos Aires;17;3
+2023/03/25;Cordoba;12;4
+2023/04/12;Rosario;22;5
+2023/04/30;Mendoza;8;3
+2023/05/01;Buenos Aires;15;1
+2023/05/15;Cordoba;10;2
+2023/06/01;Rosario;20;4
+2023/06/20;Mendoza;5;3
+2023/07/01;Buenos Aires;17;1
+2023/07/15;Cordoba;12;2
+2023/08/01;Rosario;22;4
+2023/08/15;Mendoza;8;5
+2023/09/01;Buenos Aires;15;1
+2023/09/15;Cordoba;10;2
+2023/10/01;Rosario;20;4
+2023/10/15;Mendoza;5;5
+2023/11/01;Buenos Aires;17;1
+2023/11/15;Cordoba;12;2
+2023/12/01;Rosario;22;4 
+2023/12/15;Mendoza;8;5
