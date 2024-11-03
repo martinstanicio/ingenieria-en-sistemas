@@ -47,6 +47,9 @@ flowchart TB
 	edad = VALOR(vector[3])
 	ciudad = vector[4]`"]
 	
+	if1{"id_cliente <> target"}
+	if1_yes["GUARDAR()"]
+	
     fin([fin])
     
 	comienzo --> variables --> fin
