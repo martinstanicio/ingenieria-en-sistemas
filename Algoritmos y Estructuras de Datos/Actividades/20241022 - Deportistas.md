@@ -1,6 +1,6 @@
 ---
 created: 2024-10-22 22:52:45
-modified: 2024-11-02 18:37:00
+modified: 2024-11-03 13:13:17
 title: 20241022 - Deportistas
 ---
 
@@ -68,8 +68,8 @@ flowchart TB
 	if3_yes["altura_promedio = altura_acumulador / deportistas"]
 	
 	mostrar1{{"deportistas"}}
-	mostrar1{{"altura_promedio"}}
-	mostrar1{{"max_edad"}}
+	mostrar2{{"altura_promedio"}}
+	mostrar3{{"max_edad"}}
     
     fin([fin])
     
@@ -78,7 +78,16 @@ flowchart TB
     c[" "]
     d[" "]
     
-	comienzo --> declarar --> inicializar --> target --> archivo_abrir --> registro1 --> a --> while
+	comienzo --> declarar --> inicializar --> target --> archivo_abrir --> registro1 --> a --> while -- "Sí" --> vector --> campos --> if1
+	if1 -- "Sí" --> if1_yes --> if2
+	if2 -- "Sí" --> if2_yes --> b
+	if2 -- "No" --> b
+	b --> c
+	if1 -- "No" --> c --> registro2 --> a
+	while -- "No" --> archivo_cerrar --> if3
+	if3 -- "Sí" --> if3_yes --> d
+	if3 -- "No" --> d
+	d --> mostrar1 --> mostrar2 --> mostrar3 --> fin
 ```
 
 ## Código
