@@ -11,7 +11,6 @@ ciudad_milei = ""
 max_massa = -1
 ciudad_massa = ""
 
-
 z_milei = 0
 z_massa = 0
 control = vector[0]

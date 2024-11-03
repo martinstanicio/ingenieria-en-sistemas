@@ -24,19 +24,21 @@ while continuar != "no":
     fecha = input("Fecha de produccion: ")
     ton = float(input("Toneladas producidas: "))
     h = int(input("Nº de horno: "))
-    
+
     matriz_c[n - 1][h - 1] += 1
     matriz_a[n - 1][h - 1] += ton
 
 for i in range(0, 4):
     for j in range(0, 10):
         print(f"Producciones de sucursal {i + 1} horno {j + 1}: {matriz_c[i][j]}")
-        print(f"Toneladas producidas por sucursal {i + 1} horno {j + 1}: {matriz_a[i][j]}")
+        print(
+            f"Toneladas producidas por sucursal {i + 1} horno {j + 1}: {matriz_a[i][j]}"
+        )
 
-for i in range(0, 4):    
+for i in range(0, 4):
     for j in range(0, 10):
         toneladas[i] += matriz_a[i][j]
-    
+
     if toneladas[i] > max:
         max = toneladas[i]
     print(f"Toneladas producidas por sucursal {i + 1}: {toneladas[i]}")
@@ -44,5 +46,3 @@ for i in range(0, 4):
 for i in range(0, 4):
     if toneladas[i] == max:
         print(f"La sucursal {i + 1} tuvo la maxima produccion alcanzada")
-
-archivo.close()
