@@ -6,6 +6,12 @@ archivo = open("elecciones.txt", "r")
 registro = archivo.readline().strip()
 vector = registro.split(";")
 
+max_milei = 0
+ciudad_milei = ""
+max_massa = 0
+ciudad_massa = ""
+
+
 z_milei = 0
 z_massa = 0
 control = vector[0]
@@ -27,8 +33,16 @@ while registro != "":
         print(f"Votos de Massa: {z_massa}")
         print("")
         control = ciudad
-        z_milei = 0
-        z_massa = 0
+        z_milei = v_milei
+        z_massa = v_massa
+
+    if v_milei > max_milei:
+        max_milei = v_milei
+        ciudad_milei = ciudad
+
+    if v_massa > max_massa:
+        max_massa = v_massa
+        ciudad_massa = ciudad
 
     registro = archivo.readline().strip()
 
@@ -37,3 +51,8 @@ archivo.close()
 print(f"Ciudad: {control}")
 print(f"Votos de Milei: {z_milei}")
 print(f"Votos de Massa: {z_massa}")
+
+print("")
+
+print(f"Ciudad con mas votos de Milei: {ciudad_milei}")
+print(f"Ciudad con mas votos de Massa: {ciudad_massa}")
