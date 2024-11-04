@@ -12,3 +12,5 @@ def bubble_sort(vector):
                 aux = vector[i]
                 vector[i] = vector[i + 1]
                 vector[i + 1] = aux
+
+    return vector
