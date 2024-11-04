@@ -41,7 +41,7 @@ def binary_search(vector, target: int) -> int:
     return ans
 
 
-elementos = 10
+elementos = 50
 vector = [0] * elementos
 
 for i in range(0, elementos):
