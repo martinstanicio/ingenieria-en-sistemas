@@ -13,7 +13,7 @@ backup = open("backup.txt", "w")
 registro = clientes.readline().strip()
 eliminado = False
 
-while registro != "" and not eliminado:
+while registro != "":
     vector = registro.split(";")
     id_cliente = int(vector[0])
     nombre = vector[1]
