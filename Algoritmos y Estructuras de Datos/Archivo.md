@@ -1,6 +1,6 @@
 ---
 created: 2024-10-08 22:10:52
-modified: 2024-11-02 17:39:24
+modified: 2024-11-04 13:21:51
 title: Archivo
 ---
 
@@ -12,11 +12,11 @@ Un [[Archivo]] es un [[Conjunto]] de registros. Un registro es un [[Conjunto]] d
 
 Por ejemplo, la siguiente tabla representa un [[Archivo]].
 
-| Registro 1 | Registro 2 |
-| ---------- | ---------- |
-| Campo      | Campo      |
-| Campo      | Campo      |
-| Campo      | Campo      |
+|                | Campo 1 | Campo 2 |
+| -------------- | ------- | ------- |
+| **Registro 1** | Valor   | Valor   |
+| **Registro 2** | Valor   | Valor   |
+| **Registro 3** | Valor   | Valor   |
 
 > [!tip]
 > Todo [[Archivo]] siempre tiene una **marca de final de [[Archivo]]** o EOF: *End Of File*. En [[Python]], es una **cadena vacía** (`""`).
