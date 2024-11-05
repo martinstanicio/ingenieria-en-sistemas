@@ -1,9 +1,7 @@
 def binary_search(vector, target: int) -> int:
-    n = len(vector)
-    ans = -1
-
     low = 0
-    high = n - 1
+    high = len(vector) - 1
+    ans = -1
 
     while ans == -1 and low <= high:
         mid = (low + high) // 2
