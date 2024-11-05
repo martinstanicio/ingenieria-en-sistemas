@@ -1,6 +1,6 @@
 ---
 created: 2024-11-02 19:26:57
-modified: 2024-11-02 19:44:05
+modified: 2024-11-05 10:47:52
 title: 20241102 - Eliminar cliente
 ---
 
@@ -40,7 +40,7 @@ flowchart TB
 	backup_abrir["backup = ABRIR('backup.txt', 'w')"]
 	registro1["registro = LEER(clientes)"]
 	
-	while{"registro <> '' y no eliminado"}
+	while{"registro <> ''"}
 	vector["vector = SEPARAR(registro, ';')"]
 	campos["`id_cliente = VALOR(vector[1])
 	nombre = vector[2]
