@@ -1,6 +1,6 @@
 ---
 created: 2024-11-05 10:36:29
-modified: 2024-11-05 10:39:13
+modified: 2024-11-05 11:13:35
 title: 20241105 - Concesionario
 ---
 
@@ -25,12 +25,70 @@ Mostrar:
 flowchart TB
 	comienzo([comienzo])
     
-	variables["`
-	`"]
+	declarar["`vendedores = entero
+	ventas[40] = entero
+	importes[40] = real
+	meses[12] = real
+	max_ventas = entero
+	archivo = archivo
+	registro = cadena
+	vector[3] = cadena
+	n = entero
+	fecha = cadena
+	importe = real
+	mes = entero
+	i = entero`"]
+	inicializar["`vendedores = 40
+	max_ventas = -1`"]
+	
+	for1{{"i, 1, vendedores + 1"}}
+	inicializar_vectores1["`ventas[i] = 0
+	importes[i] = 0.0`"]
+	
+	for2{{"i, 1, 12 + 1"}}
+	inicializar_vectores2["meses[i] = 0.0"]
+	
+	archivo_abrir["archivo = ABRIR("ventas.txt", "r")"]
+	registro1["registro = LEER(archivo)"]
+	
+	while{"registro <> ''"}
+	vector["vector = SEPARAR(registro, ";")"]
+	campos["`n = VALOR(vector[1])
+	fecha = vector[2]
+	importe = VALOR(vector[3])`"]
+	mes["mes = VALOR(fecha[4:6])"]
+	ventas["ventas[n] = ventas[n] + 1"]
+	importes["importes[n] = importes[n] + importe"]
+	meses["meses[mes] = meses[mes] + importe"]
+	
+	registro2["registro = LEER(archivo)"]
+	
+	archivo_cerrar["CERRAR(archivo)"]
+	
+	for3{{"i, 1, vendedores + 1"}}
+	mostrar1{{"`ventas[i]
+	importes[i]`"}}
+	if1{"ventas[i] > max_ventas"}
+	max_ventas["max_ventas = ventas[i]"]
+	
+	for4{{"i, 1, 12 + 1"}}
+	mostrar2{{"meses[i]"}}
+	
+	for5{{"i, 1, vendedores + 1"}}
+	if2{"ventas[i] = max_ventas"}
+	mostrar3{{"i"}}
     
     fin([fin])
     
-	comienzo --> variables --> fin
+    a[" "]
+    b[" "]
+    c[" "]
+    d[" "]
+    
+	comienzo --> declarar --> inicializar --> for1 --> inicializar_vectores1 --> a
+	for1 --> a --> for2 --> inicializar_vectores2 --> b
+	for2 --> b --> archivo_abrir --> registro1 --> c --> while -- "Sí" --> vector --> campos --> mes --> ventas --> importes --> meses --> registro2 --> c
+	while -- "No" -->
 ```
 
 ## Código
