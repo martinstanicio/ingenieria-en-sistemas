@@ -1,6 +1,6 @@
 ---
 created: 2024-11-05 10:36:29
-modified: 2024-11-05 11:13:35
+modified: 2024-11-05 11:19:18
 title: 20241105 - Concesionario
 ---
 
@@ -48,11 +48,11 @@ flowchart TB
 	for2{{"i, 1, 12 + 1"}}
 	inicializar_vectores2["meses[i] = 0.0"]
 	
-	archivo_abrir["archivo = ABRIR("ventas.txt", "r")"]
+	archivo_abrir["archivo = ABRIR('ventas.txt', 'r')"]
 	registro1["registro = LEER(archivo)"]
 	
 	while{"registro <> ''"}
-	vector["vector = SEPARAR(registro, ";")"]
+	vector["vector = SEPARAR(registro, ';')"]
 	campos["`n = VALOR(vector[1])
 	fecha = vector[2]
 	importe = VALOR(vector[3])`"]
@@ -84,11 +84,24 @@ flowchart TB
     b[" "]
     c[" "]
     d[" "]
+    e[" "]
+    f[" "]
+    g[" "]
+    h[" "]
     
 	comienzo --> declarar --> inicializar --> for1 --> inicializar_vectores1 --> a
 	for1 --> a --> for2 --> inicializar_vectores2 --> b
 	for2 --> b --> archivo_abrir --> registro1 --> c --> while -- "Sí" --> vector --> campos --> mes --> ventas --> importes --> meses --> registro2 --> c
-	while -- "No" -->
+	while -- "No" --> archivo_cerrar --> for3 --> mostrar1 --> if1
+	if1 -- "Sí" --> max_ventas --> d
+	if1 -- "No" --> d
+	d --> e
+	for3 --> e --> for4 --> mostrar2 --> f
+	for4 --> f --> for5 --> if2
+	if2 -- "Sí" --> mostrar3 --> g
+	if2 -- "No" --> g
+	g --> h
+	for5 --> h --> fin
 ```
 
 ## Código
