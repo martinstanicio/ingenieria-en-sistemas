@@ -1,6 +1,6 @@
 ---
 created: 2024-09-10 17:45:44
-modified: 2024-09-17 14:49:51
+modified: 2024-11-05 13:43:26
 title: Código de ética profesional
 ---
 
@@ -8,10 +8,12 @@ title: Código de ética profesional
 
 Conjunto de **normas** y **principios** que guían la **conducta de los profesionales** en ciertas disciplinas.
 
-Su propósito es garantizar que los profesionales actúen con **integridad**, **responsabilidad**, y **respeto** hacia la sociedad, sus colegas y clientes, respetando las leyes y manteniendo el prestigio de su profesión.
-
 > [!note]
 > El [[Código de ética profesional]] también establece procedimientos para manejar **faltas éticas** y **aplicar sanciones** cuando sea necesario.
+
+Su propósito es garantizar que los profesionales actúen con **integridad**, **responsabilidad**, y **respeto** hacia la sociedad, sus colegas y clientes, respetando las leyes y manteniendo el prestigio de su profesión.
+
+---
 
 ## Libro primero: principios básicos
 

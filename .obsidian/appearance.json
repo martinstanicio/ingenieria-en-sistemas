@@ -1,6 +1,6 @@
 {
   "accentColor": "#27ae60",
-  "cssTheme": "Atom",
+  "cssTheme": "GitHub Theme",
   "enabledCssSnippets": [
     "iframe",
     "math"
