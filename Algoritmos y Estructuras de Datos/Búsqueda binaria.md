@@ -84,14 +84,12 @@ def binary_search(vector, valor):
     low = 0
     high = len(vector) - 1
     ans = -1
-    bandera = False
     
-    while not bandera and valor >= vector[low] and valor <= vector[high]:
+    while ans = -1 and valor >= vector[low] and valor <= vector[high]:
         mid = (high + low) // 2
         
         if vector[mid] == valor:
             ans = mid
-            bandera = True
         elif valor > vector[mid]:
             low = mid + 1
         else:
