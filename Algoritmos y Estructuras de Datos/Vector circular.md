@@ -1,6 +1,6 @@
 ---
 created: 2024-10-01 21:25:00
-modified: 2024-10-01 21:58:52
+modified: 2024-11-05 15:50:03
 title: Vector circular
 ---
 
@@ -45,7 +45,6 @@ flowchart TB
 	
 	a[" "]
 	b[" "]
-	c[" "]
     
 	comienzo --> declaracion --> inicializar --> a --> while -- "Sí" --> dato --> nuevo_elemento --> vector --> continuar --> a
 	while -- "No" --> for --> mostrar --> b --> fin
