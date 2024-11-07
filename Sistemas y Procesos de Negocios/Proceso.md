@@ -2,44 +2,66 @@
 aliases:
   - Procesos
 created: 2024-09-17 19:22:59
-modified: 2024-11-07 12:55:39
+modified: 2024-11-07 13:25:41
 title: Proceso
 ---
 
 # Proceso
 
-Conjunto de **actividades planificadas**, que implican la participación de [[Recursos]] humanos (personas) y materiales, coordinados para conseguir un [[Objetivo]] previamente identificado.
+Conjunto de [[Actividades]] **planificadas**, que implican la participación de [[Recursos]] humanos (personas) y materiales, coordinados para conseguir un [[Objetivo]] previamente identificado.
 
-Dichas actividades se encuentran relacionadas o interactúan para transformar elementos de [[Entradas|Entrada]] en resultados o [[Salidas]], con un **valor añadido**.
+Dichas [[Actividades]] se encuentran relacionadas o interactúan para transformar elementos de [[Entradas|Entrada]] en resultados o [[Salidas]], con un **valor añadido**.
 
 > [!tip]
-> Los [[Proceso|Procesos]] incluyen **secuencia de acciones** ejecutadas por **personas**, [[Sistemas]] o la interacción entre ambos, para obtener una [[Salidas|Salida]], que puede ser una de las siguientes:
-> 
-> - Subproducto
-> - Producto final
-> - Servicio
-> 
-> Cuyo **receptor** será un [[Cliente interno]] o [[Cliente externo|Externo]].
+> Los [[Proceso|Procesos]] incluyen **secuencia de acciones** ejecutadas por **personas**, [[Sistemas]] o la interacción entre ambos, para obtener una [[Salidas|Salida]], cuyo **receptor** será un [[Cliente interno]] o [[Cliente externo|Externo]].
 
-## Componentes
+Un [[Proceso]] debe tener las siguientes características:
 
-Un [[Proceso]] está compuesto por los siguientes elementos:
+- ==Objetivo==
+  Debe tener un [[Objetivo]] claro.
+  
+  *¿Qué se busca obtener con su ejecución?*
+- ==Límites==
+  Debe tener [[Límites]] definidos.
+  
+  *¿Dónde comienza y termina el [[Proceso]]?*
+  *¿Cuáles son sus [[Entradas]] y [[Salidas]]?*
+- ==Representación gráfica==
+  Debe contar con una **representación gráfica** que pueda ser **documentada** y que posea referencias para poder **vincularse** con otros [[Proceso|Procesos]].
+  
+  *Para esto utilizamos [[Notación de modelos de procesos de negocios|BPMN]].*
+- ==Actividades factibles==
+  Sus [[Actividades]] deben ser **factibles de ejecución**, mediante una lista de tareas y operaciones **concretas**.
+  
+  *¿Cuáles son los pasos a realizar? ¿Es posible realizarlos?*
+- ==Valor agregado==
+  Sus [[Actividades]] deben **aportar valor** al servicio o producto.
+  
+  *¿Qué valor agregado tiene la [[Salidas|Salida]] respecto de las [[Entradas]]?*
 
-- [[Entradas]]: un evento que inicia el [[Proceso]]. Puede ser una solicitud de cliente interno o externo. La [[Entradas|Entrada]] puede estar integrada por un conjunto de materiales, repuestos, instrucciones e información, entre otros.
-- [[Salidas|Salida]]: es el elemento, producto o servicio resultado del proceso.
-- [[Recursos]]: son todos los elementos necesarios para desarrollar el proceso. Incluyen materias primas, insumos, repuestos, recursos humanos, máquinas, equipos, herramientas y software.
+## Entrada
 
-Componentes de un [[Proceso]]:
+La [[Entradas|Entrada]] es el evento que inicia el proceso.
 
-- Cliente interno: persona o sector de la misma organización que recibe el subproducto o servicio de un proceso, es decir, que depende de la salida del [[Proceso]] del cual es cliente para activar adecuadamente las tareas del proceso
+> [!note]
+> La [[Entradas|Entrada]] puede estar integrada por un conjunto de materiales, repuestos, instrucciones, [[Información]], etc.
 
-Características de un [[Proceso]]:
+Puede ser una solicitud de [[Cliente interno]] o [[Cliente externo|Externo]].
 
-- Debe tener un [[Objetivo]] claro.
-- Tener [[Límites]] definidos
-- Contar con una **representación gráfica** que pueda ser documentada y que posea referencias para poder vincularse con otros procesos.
-- Sus actividades deben ser factiblesbde ejecución mediante una lista de tareas
-- Deben aportar valor
+## Salida
+
+La [[Salidas|Salida]] es el **resultado** del [[Proceso]]. Puede ser una de las siguientes:
+
+- Producto final
+- Subproducto
+- Servicio
+
+## Recursos
+
+Los [[Recursos]] son todos los **elementos** necesarios para **desarrollar** el [[Proceso]].
+
+> [!tip]
+> Incluyen materias primas, insumos, repuestos, [[Recursos]] humanos, máquinas, equipos, herramientas, software, etc.
 
 ![[procesos-organizacionales.jpg]]
 
