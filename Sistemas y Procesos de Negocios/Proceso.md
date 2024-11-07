@@ -2,7 +2,7 @@
 aliases:
   - Procesos
 created: 2024-09-17 19:22:59
-modified: 2024-11-07 13:29:14
+modified: 2024-11-07 14:45:32
 title: Proceso
 ---
 
@@ -41,7 +41,14 @@ Un [[Proceso]] debe tener las siguientes características:
   Realizando un **seguimiento** del [[Proceso]], se deben poder medir [[Dato|Datos]] que alimenten los indicadores, y permitan identificar **oportunidades de mejora**.
   
   *¿Cuál es la efectividad y eficiencia del [[Proceso]]? ¿Alguna de sus [[Actividades]] es un cuello de botella para el resto?*
-- 
+- ==Responsable designado==
+  Tanto el [[Proceso]] como sus [[Actividades]] deben tener un responsable designado, que asegure su **correcta realización** y **control**.
+- ==Ejecución consistente==
+  Sus tareas deben ejecutarse de manera **metódica** y **ordenada**, plasmada en instructivos.
+- ==Repetición==
+  Un [[Proceso]] debe poder ejecutarse **repetidas veces**, sin necesidad de realizar cambios.
+- ==Documentación y estandarización==
+  Los [[Proceso|Procesos]] deben estar **documentados** de forma **comprensible** por todos los involucrados. El análisis de estos registros permite la **estandarización** y **mejora**.
 
 ## Entrada
 
