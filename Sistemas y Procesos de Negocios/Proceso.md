@@ -1,16 +1,27 @@
 ---
+aliases:
+  - Procesos
 created: 2024-09-17 19:22:59
-modified: 2024-09-17 19:55:24
+modified: 2024-11-07 12:55:39
 title: Proceso
 ---
 
 # Proceso
 
-Conjunto de actividades planificadas, que implican la participación de un número de personas y de recursos materiales coordinados para conseguir un objetivo previamente identificado. Dichas actividades se encuentran relacionadas o interactúan para transformar elementos de [[Entradas|Entrada]] en resultados o [[Salidas]], con un **valor añadido**.
+Conjunto de **actividades planificadas**, que implican la participación de [[Recursos]] humanos (personas) y materiales, coordinados para conseguir un [[Objetivo]] previamente identificado.
 
-Es decir, los procesos incluyen secuencia de acciones o sucesos que son ejecutados por personas, sistemas o la interacción entre ambos, para obtener una [[Salidas|Salida]], es decir, un subproducto, producto final o servicio, cuyo receptor será un cliente interno o externo de la organización.
+Dichas actividades se encuentran relacionadas o interactúan para transformar elementos de [[Entradas|Entrada]] en resultados o [[Salidas]], con un **valor añadido**.
 
-Cada proceso inicia con el propósito de alcanzar una o más [[Salidas]], que pueden ser el elemento inicial que desencadena otros procesos, o simplemente el elemento final solicitado.
+> [!tip]
+> Los [[Proceso|Procesos]] incluyen **secuencia de acciones** ejecutadas por **personas**, [[Sistemas]] o la interacción entre ambos, para obtener una [[Salidas|Salida]], que puede ser una de las siguientes:
+> 
+> - Subproducto
+> - Producto final
+> - Servicio
+> 
+> Cuyo **receptor** será un [[Cliente interno]] o [[Cliente externo|Externo]].
+
+## Componentes
 
 Un [[Proceso]] está compuesto por los siguientes elementos:
 

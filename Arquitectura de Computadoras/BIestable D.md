@@ -1,10 +1,10 @@
 ---
 created: 2024-11-06 13:39:41
-modified: 2024-11-06 15:18:15
-title: BIestable D
+modified: 2024-11-07 12:25:57
+title: Biestable D
 ---
 
-# BIestable D
+# Biestable D
 
 Es un [[Biestable]] que, a diferencia del [[Biestable RS]], tiene una sola [[Entradas|Entrada]] $D$ (data) y está sincronizada por un **pulso de reloj** (*clock*).
 
