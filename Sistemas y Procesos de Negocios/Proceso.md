@@ -2,7 +2,7 @@
 aliases:
   - Procesos
 created: 2024-09-17 19:22:59
-modified: 2024-11-07 13:25:41
+modified: 2024-11-07 13:29:14
 title: Proceso
 ---
 
@@ -24,8 +24,7 @@ Un [[Proceso]] debe tener las siguientes características:
 - ==Límites==
   Debe tener [[Límites]] definidos.
   
-  *¿Dónde comienza y termina el [[Proceso]]?*
-  *¿Cuáles son sus [[Entradas]] y [[Salidas]]?*
+  *¿Dónde comienza y termina el [[Proceso]]? ¿Cuáles son sus [[Entradas]] y [[Salidas]]?*
 - ==Representación gráfica==
   Debe contar con una **representación gráfica** que pueda ser **documentada** y que posea referencias para poder **vincularse** con otros [[Proceso|Procesos]].
   
@@ -38,6 +37,11 @@ Un [[Proceso]] debe tener las siguientes características:
   Sus [[Actividades]] deben **aportar valor** al servicio o producto.
   
   *¿Qué valor agregado tiene la [[Salidas|Salida]] respecto de las [[Entradas]]?*
+- ==Indicadores de proceso==
+  Realizando un **seguimiento** del [[Proceso]], se deben poder medir [[Dato|Datos]] que alimenten los indicadores, y permitan identificar **oportunidades de mejora**.
+  
+  *¿Cuál es la efectividad y eficiencia del [[Proceso]]? ¿Alguna de sus [[Actividades]] es un cuello de botella para el resto?*
+- 
 
 ## Entrada
 
