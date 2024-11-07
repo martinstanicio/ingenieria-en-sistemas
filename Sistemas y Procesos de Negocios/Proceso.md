@@ -38,7 +38,7 @@ Un [[Proceso]] debe tener las siguientes características:
   
   *¿Qué valor agregado tiene la [[Salidas|Salida]] respecto de las [[Entradas]]?*
 - ==Indicadores de proceso==
-  Realizando un **seguimiento** del [[Proceso]], se deben poder medir [[Dato|Datos]] que alimenten los indicadores, y permitan identificar **oportunidades de mejora**.
+  Realizando un **seguimiento** del [[Proceso]], se deben poder medir [[Dato|Datos]] que alimenten los [[Indicadores]], y permitan identificar **oportunidades de mejora**.
   
   *¿Cuál es la efectividad y eficiencia del [[Proceso]]? ¿Alguna de sus [[Actividades]] es un cuello de botella para el resto?*
 - ==Responsable designado==

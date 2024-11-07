@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Datos
 created: 2024-04-30 20:10:53
-modified: 2024-07-02 18:57:23
+modified: 2024-11-07 15:09:30
 title: Dato
 ---
 
