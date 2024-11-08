@@ -2,7 +2,7 @@
 aliases:
   - Sistemas de información
 created: 2024-05-14 20:29:19
-modified: 2024-11-07 16:26:56
+modified: 2024-11-07 16:27:44
 title: Sistema de información
 ---
 
@@ -27,3 +27,4 @@ El [[Sistema de información]] de una organización está estrechamente realcion
 5. **Monitoreo del desempeño**
    Los [[Sistema de información|Sistemas de información]] permiten el monitoreo continuo de los [[Indicadores]], lo que es fundamental para una gestión proactiva y una mejora continua.
 6. **Integración de información**
+   Los [[Sistema de información|Sistemas de información]] integran [[Dato|Datos]] de áreas de toda la organización, permitiendo un análisis más completo de los [[Indicadores]].
