@@ -1,6 +1,6 @@
 ---
 created: 2024-11-09 15:55:34
-modified: 2024-11-09 16:36:06
+modified: 2024-11-09 17:07:57
 title: Potencias de matrices
 ---
 
@@ -76,3 +76,42 @@ A^n = \alpha A + \beta I
 $$
 
 Esto nos permite obtener los **coeficientes** $\alpha$ y $\beta$, pudiendo reemplazar directamente en la primera ecuación para obtener $A^n$.
+
+## Definición de autovalores y autovectores
+
+Este método nos sirve cuando debemos calcular la potencia de una [[Matriz]] $A \in \mathbb{R}^{n \times n}$, y luego su multiplicación por un vector $w \in \mathbb{R}^n$, de la siguiente forma.
+
+$$
+A^t \cdot w
+$$
+
+Si $A$ es [[Diagonalización|Diagonalizable]], sus [[Autovector|Autovectores]] $\set{v_1, v_2, \dots, v_n}$ forman una [[Base]] del [[Espacio vectorial]] $\mathbb{R}^n$, por lo que $w$ es [[Combinación lineal]] de los mismos.
+
+$$
+w = \alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_n v_n
+$$
+
+Si conocemos el vector $w$ y calculamos los [[Autovector|Autovectores]] $\set{v_1, v_2, \dots, v_n}$, podemos obtener el valor de los coeficientes $\set{\alpha_1, \alpha_2, \dots, \alpha_n}$.
+
+Por otro lado, la definición de [[Autovalor|Autovalores]] y [[Autovector|Autovectores]] nos permite trabajar con [[Potencias de matrices]] de la siguiente forma.
+
+$$
+A v_k = \lambda_k v_k
+\Leftrightarrow
+A^t v_k = \lambda_k^t v_k
+$$
+
+Reemplazamos a $w$ con su [[Combinación lineal]] y continuamos operando.
+
+$$
+A^t w =
+A^t \left( \alpha_1 v_1 + \alpha_2 v_2 + \dots + \alpha_n v_n \right) =
+\alpha_1 \left(A^t v_1\right) + \alpha_2 \left(A^t v_2\right) + \dots + A^t \left(A^t v_n\right) = \cdots
+$$
+
+Aplicamos la definición mencionada anteriormente, de forma que solo necesitamos reemplazar y calcular potencias de los [[Autovalor|Autovalores]].
+
+$$
+\cdots =
+\alpha_1 \cdot \lambda_1^t \cdot v_1 + \alpha_2 \cdot \lambda_2^t \cdot v_2 + \dots + \alpha_n \cdot \lambda_n^t \cdot v_n
+$$
