@@ -1,6 +1,6 @@
 ---
 created: 2024-11-11 15:40:46
-modified: 2024-11-11 15:44:46
+modified: 2024-11-11 16:12:53
 title: Complemento ortogonal
 ---
 
@@ -22,4 +22,11 @@ Dado un [[Espacio vectorial]] $V$, y un [[Subespacio vectorial]] del mismo $W$, 
 > $$
 
 ## Espacios fundamentales
-Dada una [[Matriz]] $A \in \mathbb{k}^{m \times n}$, existe una relación de **ortogonalidad** entre ciertos [[Espacio vectorial|Espacios]] fundamentales como $\ker(A)$
+
+Dada una [[Matriz]] $A \in \mathbb{k}^{m \times n}$, existe una relación de **ortogonalidad** entre ciertos [[Espacio vectorial|Espacios]] fundamentales como $\ker(A)$, $\ker(A^t)$, $\text{Fil}(A)$, $\text{Fil}(A^t)$, $\text{Col}(A)$ y $\text{Fil}(A^t)$.
+
+$$
+\left( \ker(A) = \left[ \text{Fil}(A) \right]^\bot \right)
+\land
+\left( \ker(A^t) = \left[ \text{Col}(A) \right]^\bot = \left[ \text{Fil}(A^t) \right]^\bot \right)
+$$
