@@ -23,3 +23,6 @@ $$
 \frac{\left< x, u_i \right>}{\left< u_i, u_i \right>} =
 \frac{\left< x, u_i \right>}{{\Vert u_i \Vert}^2}
 $$
+
+^51769b
+
