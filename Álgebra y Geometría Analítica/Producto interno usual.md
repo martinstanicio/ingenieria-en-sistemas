@@ -1,8 +1,10 @@
 ---
 aliases:
   - Producto interior usual
+  - Producto interno estándar
+  - Producto interior estándar
 created: 2024-11-11 13:27:41
-modified: 2024-11-11 13:43:04
+modified: 2024-11-11 14:58:48
 title: Producto interno usual
 ---
 
