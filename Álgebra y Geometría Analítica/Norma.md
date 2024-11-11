@@ -1,6 +1,6 @@
 ---
 created: 2024-11-11 15:28:06
-modified: 2024-11-11 15:38:03
+modified: 2024-11-11 17:41:51
 title: Norma
 ---
 
@@ -13,7 +13,7 @@ $$
 $$
 
 > [!tip]
-> Si la [[Norma]] de un vector es $1$, lo llamamos **vector unitario** o **versor**.
+> Si la [[Norma]] de un vector es $1$, lo llamamos [[Versor]].
 
 La [[Norma]] cuenta con ciertas propiedades.
 
