@@ -2,7 +2,7 @@
 aliases:
   - Procesos
 created: 2024-09-17 19:22:59
-modified: 2024-11-07 14:45:32
+modified: 2024-11-12 15:10:47
 title: Proceso
 ---
 
@@ -73,7 +73,3 @@ Los [[Recursos]] son todos los **elementos** necesarios para **desarrollar** el 
 
 > [!tip]
 > Incluyen materias primas, insumos, repuestos, [[Recursos]] humanos, máquinas, equipos, herramientas, software, etc.
-
-![[procesos-organizacionales.jpg]]
-
-![[procesos-organizacionales-2.jpg]]
