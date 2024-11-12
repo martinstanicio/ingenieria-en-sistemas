@@ -1,9 +1,8 @@
 ---
 created: 2024-04-30 19:56:40
-modified: 2024-11-12 13:43:47
+modified: 2024-11-12 14:29:36
 title: Información
 ---
-	
 
 # Información
 
@@ -22,6 +21,9 @@ Segun el nivel de ==sorpresa== de cada mensaje $E$, podemos calcular cuánta [[I
 $$
 I(E) = \log_2 \left( \frac{1}{P(E)} \right) \text{ bits} = - \log_2 \left( P(E) \right) \text{ bits}
 $$
+
+> [!note]
+> Medir la cantidad de [[Información]] de un mensaje, es medir qué tan **imprevisible** o **improbable** es en comparación al resto.
 
 ## Atributos primarios
 
