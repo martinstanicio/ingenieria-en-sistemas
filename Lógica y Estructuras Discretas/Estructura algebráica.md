@@ -3,18 +3,18 @@ aliases:
   - Sistema algebraico
   - Sistema matemático
 created: 2024-06-14 14:57:25
-modified: 2024-08-09 13:14:22
+modified: 2024-11-17 09:21:30
 title: Estructura algebráica
 ---
 
 # Estructura algebráica
 
-Un [[Conjunto]] relacionado con una [[Operación]] en particular.
+Uno o más [[Conjunto|Conjuntos]] relacionados con una o más [[Operación|Operaciones]] en particular.
 
 Por ejemplo, la suma en los enteros: $(\mathbb{Z}, +)$.
 
 > [!note]
-> En este caso, decimos que el [[Conjunto]] ==portador== es $\mathbb{Z}$.
+> En este caso, decimos que el [[Conjunto]] **portador** es $\mathbb{Z}$.
 
 |                           | [[Ley de cierre]] | [[Ley asociativa]] | [[Elemento neutro]] | [[Elemento simétrico]] | [[Ley conmutativa]] |
 | ------------------------- | ----------------- | ------------------ | ------------------- | ---------------------- | ------------------- |
