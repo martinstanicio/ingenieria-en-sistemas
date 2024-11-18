@@ -2,7 +2,7 @@
 aliases:
   - Grado
 created: 2024-11-18 15:09:46
-modified: 2024-11-18 15:15:29
+modified: 2024-11-18 15:33:28
 title: Valencia
 ---
 
@@ -18,6 +18,13 @@ $$
 
 > [!tip]
 > La [[Valencia]] de un vértice es igual a la cantidad de veces que aparece en la tabla de la **relación de incidencia**.
+
+En un [[Dígrafo]], la [[Valencia]] de un vértice es la suma de su [[Invalencia]] y su [[Exvalencia]].
+
+$$
+\text{val}(u) =
+\text{inval}(u) + \text{exval}(u)
+$$
 
 ---
 

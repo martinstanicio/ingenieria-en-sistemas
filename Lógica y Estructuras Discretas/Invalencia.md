@@ -1,12 +1,12 @@
 ---
 created: 2024-11-18 15:28:09
-modified: 2024-11-18 15:29:58
+modified: 2024-11-18 15:30:10
 title: Invalencia
 ---
 
 # Invalencia
 
-En un [[dígraf]]La [[Invalencia]] de un vértice $u$ es el número de ==aristas== que lo tienen como ==vértice final==.
+En un [[Dígrafo]], la [[Invalencia]] de un vértice $u$ es el número de ==aristas== que lo tienen como ==vértice final==.
 
 $$
 \text{inval}(u)
