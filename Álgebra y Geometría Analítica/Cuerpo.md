@@ -2,7 +2,7 @@
 aliases:
   - Campo
 created: 2024-03-29 21:06:45
-modified: 2024-11-17 16:38:44
+modified: 2024-11-18 14:06:14
 title: Cuerpo
 ---
 
@@ -14,7 +14,7 @@ $$
 \left( R, + \right)
 $$
 
-El [[Conjunto]] con la segunda [[Operación]], exceptuando el [[Elemento neutro]] $0$ de la primera [[Operación]],
+El [[Conjunto]] con la segunda [[Operación]], exceptuando el [[Elemento neutro]] $0$ de la primera [[Operación]], es un [[Grupo abeliano]]
 
 $$
 \left( R - \set{0}, \cdot \right)
