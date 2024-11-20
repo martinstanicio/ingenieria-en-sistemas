@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Memoria
 created: 2024-03-21 23:35:02
-modified: 2024-05-08 01:33:30
+modified: 2024-11-20 12:39:51
 title: RAM
 ---
 

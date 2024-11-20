@@ -44,6 +44,6 @@ Control de periféricos. Por ejemplo, `OUT DX, AL`, `IN AL, DX`.
 Existen dos tipos:
 
 - **Condicionales: ejecutan saltos condicionales.**
-  Tienen en cuenta [[Status Register|PSW]] antes de su ejecución. Por ejemplo, `SMP`, `SUMP`.
+  Tienen en cuenta [[Program Status Word (PSW)|PSW]] antes de su ejecución. Por ejemplo, `SMP`, `SUMP`.
 - **Incondicionales.**
-  Transfiere a otro punto del programa sin tener en cuenta [[Status Register|PSW]]. Por ejemplo, `SZ`.
+  Transfiere a otro punto del programa sin tener en cuenta [[Program Status Word (PSW)|PSW]]. Por ejemplo, `SZ`.
