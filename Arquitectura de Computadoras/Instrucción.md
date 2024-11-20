@@ -1,6 +1,6 @@
 ---
 created: 2024-11-20 11:33:26
-modified: 2024-11-20 11:45:27
+modified: 2024-11-20 12:00:33
 title: Instrucción
 ---
 
@@ -10,12 +10,13 @@ Una sentencia de código que posibilita la acción. Se escribe en **Assembler**.
 
 > [!note]
 > En muchas [[Instrucción|Instrucciones]], el resultado de la [[Operación]] suele guardarse en el primer [[Registro]] o dirección de [[RAM|Memoria]].
-> 
+>
 > ```assembly
-> ADD R1, R3, R7
+> ADD R2, R4, R7
 > ```
-> 
-> Aquí, se suma el valor almacenado en los [[Registro|Registros]] `R3` y 
+>
+> Aquí, se suma el valor almacenado en los [[Registro|Registros]] `R4` y `R7`, y se almacena en el [[Registro]] `R2`.
+
 ## Instrucciones aritmético lógicas
 
 Trabajan sobre [[Registro|Registros]] internos a la [[CPU]].
@@ -43,6 +44,6 @@ Control de periféricos. Por ejemplo, `OUT DX, AL`, `IN AL, DX`.
 Existen dos tipos:
 
 - **Condicionales: ejecutan saltos condicionales.**
-  Tienen en cuenta `PSW` antes de su ejecución. Por ejemplo, `SMP`, `SUMP`.
+  Tienen en cuenta [[Status Register|PSW]] antes de su ejecución. Por ejemplo, `SMP`, `SUMP`.
 - **Incondicionales.**
-  Transfiere a otro punto del programa sin tener en cuenta `PSW`. Por ejemplo, `SZ`.
+  Transfiere a otro punto del programa sin tener en cuenta [[Status Register|PSW]]. Por ejemplo, `SZ`.
