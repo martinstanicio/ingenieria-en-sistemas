@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Circuito combinado
 created: 2024-11-20 11:28:52
-modified: 2024-11-20 11:35:11
+modified: 2024-11-20 15:03:45
 title: Circuito combinacional
 ---
 
