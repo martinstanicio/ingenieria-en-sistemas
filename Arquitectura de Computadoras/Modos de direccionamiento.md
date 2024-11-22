@@ -1,12 +1,12 @@
 ---
 created: 2024-11-20 11:47:25
-modified: 2024-11-20 15:03:23
+modified: 2024-11-20 18:00:53
 title: Modos de direccionamiento
 ---
 
 # Modos de direccionamiento
 
-Forma en que la [[Instrucción]] le especifica la dirección en donde está el operando, ya sea en [[RAM|Memoria]] o en un [[Registro]].
+Forma en que la [[Instrucción]] especifica la dirección en donde está el operando, ya sea en [[RAM|Memoria]] o en un [[Registro]].
 
 ## Implícito
 
