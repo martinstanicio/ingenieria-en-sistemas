@@ -1,6 +1,6 @@
 ---
 created: 2024-11-18 14:55:31
-modified: 2024-11-18 15:12:59
+modified: 2024-12-05 19:33:38
 title: Grafo
 ---
 
@@ -36,3 +36,6 @@ La tabla que representa a este [[Grafo]] es la siguiente.
 | $g$ | $\set{4, 5}$ |
 | $h$ | $\set{5, 5}$ |
 | $i$ | $\set{5, 5}$ |
+
+> [!tip]
+> [Graph Online](https://graphonline.top/)
