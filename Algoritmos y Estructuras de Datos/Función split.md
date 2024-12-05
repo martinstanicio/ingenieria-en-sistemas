@@ -1,6 +1,6 @@
 ---
 created: 2024-08-20 22:48:12
-modified: 2024-10-22 21:31:08
+modified: 2024-12-05 17:20:29
 title: Función split
 ---
 
@@ -15,8 +15,8 @@ vector = variable.split(separador)
 Por ejemplo, con una [[Vector|Lista]] de apellidos.
 
 ```python
-apellidos = "Stanicio;Perez;Rey"
-vector = apellidos.split(";") # ["Stanicio", "Perez", "Rey"]
+apellidos = "Stanicio;Bayon;Rivera"
+vector = apellidos.split(";") # ["Stanicio", "Bayon", "Rivera"]
 ```
 
 ## Diagrama de flujo
