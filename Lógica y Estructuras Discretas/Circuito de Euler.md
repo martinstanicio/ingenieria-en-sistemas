@@ -7,3 +7,7 @@ title: Circuito de Euler
 # Circuito de Euler
 
 Un [[Camino de Euler]], donde el ==vértice inicial== y el ==vértice final== son ==el mismo vértice==. Es decir, debe partir y llegar al mismo vértice, pasando por todas las aristas del [[Grafo]] una única vez.
+
+---
+
+Sea $G = (V, A, \delta)$ un [[Grafo]] **conexo**. Si $G$ tiene al menos 2 vértices, es decir, $$
