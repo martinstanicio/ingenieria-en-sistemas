@@ -1,12 +1,12 @@
 ---
 created: 2025-02-14 15:38:25
-modified: 2025-02-14 15:52:19
+modified: 2025-02-14 17:35:22
 title: Secuenciadores
 ---
 
 # Secuenciadores
 
-Establecen relación o ==referencia temporal== entre [[Actividades]] o [[Proceso|Procesos]].
+Son [[Conectores]] que establecen relación o ==referencia temporal== entre [[Actividades]] o [[Proceso|Procesos]].
 
 Por ejemplo:
 
