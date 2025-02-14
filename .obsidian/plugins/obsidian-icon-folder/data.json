@@ -31,7 +31,8 @@
     "iconsInLinksEnabled": true,
     "debugMode": false,
     "iconInTitlePosition": "above",
-    "lucideIconPackType": "native"
+    "lucideIconPackType": "native",
+    "useInternalPlugins": false
   },
   "Física I": {
     "iconName": "FasBolt",

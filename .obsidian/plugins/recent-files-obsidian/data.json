@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Conectores",
+      "path": "Inglés II/Conectores.md"
+    },
+    {
+      "basename": "Secuenciadores",
+      "path": "Inglés II/Secuenciadores.md"
+    },
+    {
       "basename": "Momento de inercia",
       "path": "Física I/Momento de inercia.md"
     },
@@ -191,17 +199,12 @@
     {
       "basename": "Extremo relativo",
       "path": "Análisis Matemático I/Extremo relativo.md"
-    },
-    {
-      "basename": "20240924 - Total por línea",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Total por línea.md"
-    },
-    {
-      "basename": "20240927 - Matriz acumulador contador",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240927 - Matriz acumulador contador.md"
     }
   ],
   "omittedPaths": [],
+  "omittedTags": [],
+  "updateOn": "file-open",
+  "omitBookmarks": false,
   "maxLength": null,
   "openType": "tab"
 }

@@ -12,9 +12,9 @@ var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
-var __export = (target, all3) => {
-  for (var name2 in all3)
-    __defProp(target, name2, { get: all3[name2], enumerable: true });
+var __export = (target, all2) => {
+  for (var name2 in all2)
+    __defProp(target, name2, { get: all2[name2], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -40,35 +40,45 @@ var require_classnames = __commonJS({
     (function() {
       "use strict";
       var hasOwn = {}.hasOwnProperty;
-      var nativeCodeString = "[native code]";
       function classNames() {
-        var classes4 = [];
+        var classes3 = "";
         for (var i7 = 0; i7 < arguments.length; i7++) {
           var arg = arguments[i7];
-          if (!arg) continue;
-          var argType = typeof arg;
-          if (argType === "string" || argType === "number") {
-            classes4.push(arg);
-          } else if (Array.isArray(arg)) {
-            if (arg.length) {
-              var inner = classNames.apply(null, arg);
-              if (inner) {
-                classes4.push(inner);
-              }
-            }
-          } else if (argType === "object") {
-            if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes("[native code]")) {
-              classes4.push(arg.toString());
-              continue;
-            }
-            for (var key in arg) {
-              if (hasOwn.call(arg, key) && arg[key]) {
-                classes4.push(key);
-              }
-            }
+          if (arg) {
+            classes3 = appendClass(classes3, parseValue(arg));
           }
         }
-        return classes4.join(" ");
+        return classes3;
+      }
+      function parseValue(arg) {
+        if (typeof arg === "string" || typeof arg === "number") {
+          return arg;
+        }
+        if (typeof arg !== "object") {
+          return "";
+        }
+        if (Array.isArray(arg)) {
+          return classNames.apply(null, arg);
+        }
+        if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes("[native code]")) {
+          return arg.toString();
+        }
+        var classes3 = "";
+        for (var key in arg) {
+          if (hasOwn.call(arg, key) && arg[key]) {
+            classes3 = appendClass(classes3, key);
+          }
+        }
+        return classes3;
+      }
+      function appendClass(value, newClass) {
+        if (!newClass) {
+          return value;
+        }
+        if (value) {
+          return value + " " + newClass;
+        }
+        return value + newClass;
       }
       if (typeof module2 !== "undefined" && module2.exports) {
         classNames.default = classNames;
@@ -81,1067 +91,6 @@ var require_classnames = __commonJS({
         window.classNames = classNames;
       }
     })();
-  }
-});
-
-// node_modules/min-dash/dist/index.cjs
-var require_dist = __commonJS({
-  "node_modules/min-dash/dist/index.cjs"(exports) {
-    "use strict";
-    function flatten2(arr) {
-      return Array.prototype.concat.apply([], arr);
-    }
-    var nativeToString3 = Object.prototype.toString;
-    var nativeHasOwnProperty3 = Object.prototype.hasOwnProperty;
-    function isUndefined4(obj) {
-      return obj === void 0;
-    }
-    function isDefined2(obj) {
-      return obj !== void 0;
-    }
-    function isNil2(obj) {
-      return obj == null;
-    }
-    function isArray5(obj) {
-      return nativeToString3.call(obj) === "[object Array]";
-    }
-    function isObject2(obj) {
-      return nativeToString3.call(obj) === "[object Object]";
-    }
-    function isNumber2(obj) {
-      return nativeToString3.call(obj) === "[object Number]";
-    }
-    function isFunction2(obj) {
-      const tag = nativeToString3.call(obj);
-      return tag === "[object Function]" || tag === "[object AsyncFunction]" || tag === "[object GeneratorFunction]" || tag === "[object AsyncGeneratorFunction]" || tag === "[object Proxy]";
-    }
-    function isString2(obj) {
-      return nativeToString3.call(obj) === "[object String]";
-    }
-    function ensureArray2(obj) {
-      if (isArray5(obj)) {
-        return;
-      }
-      throw new Error("must supply array");
-    }
-    function has3(target, key) {
-      return nativeHasOwnProperty3.call(target, key);
-    }
-    function find2(collection, matcher) {
-      const matchFn = toMatcher2(matcher);
-      let match;
-      forEach3(collection, function(val, key) {
-        if (matchFn(val, key)) {
-          match = val;
-          return false;
-        }
-      });
-      return match;
-    }
-    function findIndex4(collection, matcher) {
-      const matchFn = toMatcher2(matcher);
-      let idx = isArray5(collection) ? -1 : void 0;
-      forEach3(collection, function(val, key) {
-        if (matchFn(val, key)) {
-          idx = key;
-          return false;
-        }
-      });
-      return idx;
-    }
-    function filter2(collection, matcher) {
-      const matchFn = toMatcher2(matcher);
-      let result = [];
-      forEach3(collection, function(val, key) {
-        if (matchFn(val, key)) {
-          result.push(val);
-        }
-      });
-      return result;
-    }
-    function forEach3(collection, iterator) {
-      let val, result;
-      if (isUndefined4(collection)) {
-        return;
-      }
-      const convertKey = isArray5(collection) ? toNum3 : identity3;
-      for (let key in collection) {
-        if (has3(collection, key)) {
-          val = collection[key];
-          result = iterator(val, convertKey(key));
-          if (result === false) {
-            return val;
-          }
-        }
-      }
-    }
-    function without3(arr, matcher) {
-      if (isUndefined4(arr)) {
-        return [];
-      }
-      ensureArray2(arr);
-      const matchFn = toMatcher2(matcher);
-      return arr.filter(function(el, idx) {
-        return !matchFn(el, idx);
-      });
-    }
-    function reduce2(collection, iterator, result) {
-      forEach3(collection, function(value, idx) {
-        result = iterator(result, value, idx);
-      });
-      return result;
-    }
-    function every2(collection, matcher) {
-      return !!reduce2(collection, function(matches4, val, key) {
-        return matches4 && matcher(val, key);
-      }, true);
-    }
-    function some2(collection, matcher) {
-      return !!find2(collection, matcher);
-    }
-    function map4(collection, fn2) {
-      let result = [];
-      forEach3(collection, function(val, key) {
-        result.push(fn2(val, key));
-      });
-      return result;
-    }
-    function keys2(collection) {
-      return collection && Object.keys(collection) || [];
-    }
-    function size2(collection) {
-      return keys2(collection).length;
-    }
-    function values2(collection) {
-      return map4(collection, (val) => val);
-    }
-    function groupBy2(collection, extractor, grouped = {}) {
-      extractor = toExtractor2(extractor);
-      forEach3(collection, function(val) {
-        let discriminator = extractor(val) || "_";
-        let group = grouped[discriminator];
-        if (!group) {
-          group = grouped[discriminator] = [];
-        }
-        group.push(val);
-      });
-      return grouped;
-    }
-    function uniqueBy2(extractor, ...collections) {
-      extractor = toExtractor2(extractor);
-      let grouped = {};
-      forEach3(collections, (c5) => groupBy2(c5, extractor, grouped));
-      let result = map4(grouped, function(val, key) {
-        return val[0];
-      });
-      return result;
-    }
-    var unionBy2 = uniqueBy2;
-    function sortBy2(collection, extractor) {
-      extractor = toExtractor2(extractor);
-      let sorted = [];
-      forEach3(collection, function(value, key) {
-        let disc = extractor(value, key);
-        let entry = {
-          d: disc,
-          v: value
-        };
-        for (var idx = 0; idx < sorted.length; idx++) {
-          let { d: d5 } = sorted[idx];
-          if (disc < d5) {
-            sorted.splice(idx, 0, entry);
-            return;
-          }
-        }
-        sorted.push(entry);
-      });
-      return map4(sorted, (e8) => e8.v);
-    }
-    function matchPattern2(pattern) {
-      return function(el) {
-        return every2(pattern, function(val, key) {
-          return el[key] === val;
-        });
-      };
-    }
-    function toExtractor2(extractor) {
-      return isFunction2(extractor) ? extractor : (e8) => {
-        return e8[extractor];
-      };
-    }
-    function toMatcher2(matcher) {
-      return isFunction2(matcher) ? matcher : (e8) => {
-        return e8 === matcher;
-      };
-    }
-    function identity3(arg) {
-      return arg;
-    }
-    function toNum3(arg) {
-      return Number(arg);
-    }
-    function debounce2(fn2, timeout) {
-      let timer;
-      let lastArgs;
-      let lastThis;
-      let lastNow;
-      function fire(force) {
-        let now = Date.now();
-        let scheduledDiff = force ? 0 : lastNow + timeout - now;
-        if (scheduledDiff > 0) {
-          return schedule(scheduledDiff);
-        }
-        fn2.apply(lastThis, lastArgs);
-        clear4();
-      }
-      function schedule(timeout2) {
-        timer = setTimeout(fire, timeout2);
-      }
-      function clear4() {
-        if (timer) {
-          clearTimeout(timer);
-        }
-        timer = lastNow = lastArgs = lastThis = void 0;
-      }
-      function flush() {
-        if (timer) {
-          fire(true);
-        }
-        clear4();
-      }
-      function callback(...args) {
-        lastNow = Date.now();
-        lastArgs = args;
-        lastThis = this;
-        if (!timer) {
-          schedule(timeout);
-        }
-      }
-      callback.flush = flush;
-      callback.cancel = clear4;
-      return callback;
-    }
-    function throttle(fn2, interval) {
-      let throttling = false;
-      return function(...args) {
-        if (throttling) {
-          return;
-        }
-        fn2(...args);
-        throttling = true;
-        setTimeout(() => {
-          throttling = false;
-        }, interval);
-      };
-    }
-    function bind4(fn2, target) {
-      return fn2.bind(target);
-    }
-    function assign3(target, ...others) {
-      return Object.assign(target, ...others);
-    }
-    function set4(target, path, value) {
-      let currentTarget = target;
-      forEach3(path, function(key, idx) {
-        if (typeof key !== "number" && typeof key !== "string") {
-          throw new Error("illegal key type: " + typeof key + ". Key should be of type number or string.");
-        }
-        if (key === "constructor") {
-          throw new Error("illegal key: constructor");
-        }
-        if (key === "__proto__") {
-          throw new Error("illegal key: __proto__");
-        }
-        let nextKey = path[idx + 1];
-        let nextTarget = currentTarget[key];
-        if (isDefined2(nextKey) && isNil2(nextTarget)) {
-          nextTarget = currentTarget[key] = isNaN(+nextKey) ? {} : [];
-        }
-        if (isUndefined4(nextKey)) {
-          if (isUndefined4(value)) {
-            delete currentTarget[key];
-          } else {
-            currentTarget[key] = value;
-          }
-        } else {
-          currentTarget = nextTarget;
-        }
-      });
-      return target;
-    }
-    function get3(target, path, defaultValue) {
-      let currentTarget = target;
-      forEach3(path, function(key) {
-        if (isNil2(currentTarget)) {
-          currentTarget = void 0;
-          return false;
-        }
-        currentTarget = currentTarget[key];
-      });
-      return isUndefined4(currentTarget) ? defaultValue : currentTarget;
-    }
-    function pick2(target, properties) {
-      let result = {};
-      let obj = Object(target);
-      forEach3(properties, function(prop) {
-        if (prop in obj) {
-          result[prop] = target[prop];
-        }
-      });
-      return result;
-    }
-    function omit2(target, properties) {
-      let result = {};
-      let obj = Object(target);
-      forEach3(obj, function(prop, key) {
-        if (properties.indexOf(key) === -1) {
-          result[key] = prop;
-        }
-      });
-      return result;
-    }
-    function merge(target, ...sources) {
-      if (!sources.length) {
-        return target;
-      }
-      forEach3(sources, function(source) {
-        if (!source || !isObject2(source)) {
-          return;
-        }
-        forEach3(source, function(sourceVal, key) {
-          if (key === "__proto__") {
-            return;
-          }
-          let targetVal = target[key];
-          if (isObject2(sourceVal)) {
-            if (!isObject2(targetVal)) {
-              targetVal = {};
-            }
-            target[key] = merge(targetVal, sourceVal);
-          } else {
-            target[key] = sourceVal;
-          }
-        });
-      });
-      return target;
-    }
-    exports.assign = assign3;
-    exports.bind = bind4;
-    exports.debounce = debounce2;
-    exports.ensureArray = ensureArray2;
-    exports.every = every2;
-    exports.filter = filter2;
-    exports.find = find2;
-    exports.findIndex = findIndex4;
-    exports.flatten = flatten2;
-    exports.forEach = forEach3;
-    exports.get = get3;
-    exports.groupBy = groupBy2;
-    exports.has = has3;
-    exports.isArray = isArray5;
-    exports.isDefined = isDefined2;
-    exports.isFunction = isFunction2;
-    exports.isNil = isNil2;
-    exports.isNumber = isNumber2;
-    exports.isObject = isObject2;
-    exports.isString = isString2;
-    exports.isUndefined = isUndefined4;
-    exports.keys = keys2;
-    exports.map = map4;
-    exports.matchPattern = matchPattern2;
-    exports.merge = merge;
-    exports.omit = omit2;
-    exports.pick = pick2;
-    exports.reduce = reduce2;
-    exports.set = set4;
-    exports.size = size2;
-    exports.some = some2;
-    exports.sortBy = sortBy2;
-    exports.throttle = throttle;
-    exports.unionBy = unionBy2;
-    exports.uniqueBy = uniqueBy2;
-    exports.values = values2;
-    exports.without = without3;
-  }
-});
-
-// node_modules/@bpmn-io/extract-process-variables/zeebe/index.js
-var require_zeebe = __commonJS({
-  "node_modules/@bpmn-io/extract-process-variables/zeebe/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    var minDash = require_dist();
-    function getInputOutput2(element) {
-      return (getElements2(element, "zeebe:IoMapping") || [])[0];
-    }
-    function getInputParameters2(element) {
-      return getParameters2(element, "inputParameters");
-    }
-    function getOutMappings2(element) {
-      return (getInputOutput2(element) || {}).outputParameters;
-    }
-    function getInMappings2(element) {
-      return (getInputOutput2(element) || {}).inputParameters;
-    }
-    function getInputElement(loopCharacteristics) {
-      const extensionElement = getElements2(loopCharacteristics, "zeebe:LoopCharacteristics")[0];
-      return extensionElement && extensionElement.inputElement;
-    }
-    function getOutputCollection(loopCharacteristics) {
-      const extensionElement = getElements2(loopCharacteristics, "zeebe:LoopCharacteristics")[0];
-      return extensionElement && extensionElement.outputCollection;
-    }
-    function getCalledDecision2(element) {
-      return (getElements2(element, "zeebe:CalledDecision") || [])[0];
-    }
-    function getScript2(element) {
-      return (getElements2(element, "zeebe:Script") || [])[0];
-    }
-    function getElements2(element, type, property) {
-      var elements = getExtensionElements(element, type);
-      return !property ? elements : (elements[0] || {})[property] || [];
-    }
-    function getParameters2(element, property) {
-      var inputOutput = getInputOutput2(element);
-      return inputOutput && inputOutput.get(property) || [];
-    }
-    function getExtensionElements(element, type) {
-      var elements = [];
-      var extensionElements = element.get("extensionElements");
-      if (typeof extensionElements !== "undefined") {
-        var extensionValues = extensionElements.get("values");
-        if (typeof extensionValues !== "undefined") {
-          elements = minDash.filter(extensionValues, function(value) {
-            return is$2(value, type);
-          });
-        }
-      }
-      return elements;
-    }
-    function is$2(element, type) {
-      return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
-    }
-    function getParents3(element) {
-      var parents = [];
-      var current = element;
-      while (current.$parent) {
-        parents.push(current.$parent);
-        current = current.$parent;
-      }
-      return parents;
-    }
-    function eachElement2(elements, fn2, depth) {
-      depth = depth || 0;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(s5, i7) {
-        var filter2 = fn2(s5, i7, depth);
-        if (minDash.isArray(filter2) && filter2.length) {
-          eachElement2(filter2, fn2, depth + 1);
-        }
-      });
-    }
-    function add3(elements, e8, unique) {
-      var canAdd = !unique || elements.indexOf(e8) === -1;
-      if (canAdd) {
-        elements.push(e8);
-      }
-      return canAdd;
-    }
-    function selfAndFlowElements(elements, unique, maxDepth) {
-      var result = [], processedFlowElements = [];
-      eachElement2(elements, function(element, i7, depth) {
-        add3(result, element, unique);
-        var flowElements = element.flowElements;
-        if (maxDepth === -1 || depth < maxDepth) {
-          if (flowElements && add3(processedFlowElements, flowElements, unique)) {
-            return flowElements;
-          }
-        }
-      });
-      return result;
-    }
-    function selfAndAllFlowElements2(elements, allowDuplicates) {
-      return selfAndFlowElements(elements, !allowDuplicates, -1);
-    }
-    function getElement(elementId, rootElement) {
-      var allElements = selfAndAllFlowElements2(rootElement);
-      return minDash.find(allElements, function(element) {
-        return element.id === elementId;
-      });
-    }
-    function addVariableToList(variablesList, newVariable) {
-      var foundIdx = minDash.findIndex(variablesList, function(variable) {
-        return variable.name === newVariable.name && variable.scope === newVariable.scope;
-      });
-      if (foundIdx >= 0) {
-        variablesList[foundIdx].origin = combineArrays$1(
-          variablesList[foundIdx].origin,
-          newVariable.origin
-        );
-      } else {
-        variablesList.push(newVariable);
-      }
-    }
-    function createProcessVariable(flowElement, name2, defaultScope) {
-      var scope = getScope$1(flowElement, defaultScope, name2);
-      return {
-        name: name2,
-        origin: [flowElement],
-        scope
-      };
-    }
-    function getScope$1(element, globalScope, variableName) {
-      var parents = getParents3(element);
-      var scopedParent = minDash.find(parents, function(parent) {
-        return is$1(parent, "bpmn:SubProcess") && hasInputParameter(parent, variableName);
-      });
-      return scopedParent ? scopedParent : globalScope;
-    }
-    function is$1(element, type) {
-      return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
-    }
-    function hasInputParameter(element, name2) {
-      return minDash.find(getInputParameters2(element), function(input) {
-        return input.target === name2;
-      });
-    }
-    function combineArrays$1(a6, b5) {
-      return a6.concat(b5);
-    }
-    function extractInMappings(options2) {
-      var elements = options2.elements, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var inMappings = getInMappings2(element);
-        minDash.forEach(inMappings, function(mapping) {
-          var newVariable = createProcessVariable(
-            element,
-            mapping.target,
-            element
-          );
-          addVariableToList(processVariables, newVariable);
-        });
-      });
-      return processVariables;
-    }
-    function extractInputElement(options2) {
-      var elements = options2.elements, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var loopCharacteristics = element.loopCharacteristics;
-        var inputElement = loopCharacteristics && getInputElement(loopCharacteristics);
-        if (inputElement) {
-          var newVariable = createProcessVariable(
-            element,
-            inputElement,
-            element
-          );
-          addVariableToList(processVariables, newVariable);
-        }
-      });
-      return processVariables;
-    }
-    function extractOutMappings(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var outMappings = getOutMappings2(element);
-        minDash.forEach(outMappings, function(mapping) {
-          var newVariable = createProcessVariable(
-            element,
-            mapping.target,
-            containerElement
-          );
-          addVariableToList(processVariables, newVariable);
-        });
-      });
-      return processVariables;
-    }
-    function extractOutputCollections(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var loopCharacteristics = element.loopCharacteristics;
-        var outputCollection = loopCharacteristics && getOutputCollection(loopCharacteristics);
-        if (outputCollection) {
-          var newVariable = createProcessVariable(
-            element,
-            outputCollection,
-            containerElement
-          );
-          addVariableToList(processVariables, newVariable);
-        }
-      });
-      return processVariables;
-    }
-    function extractResultVariables(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var baseElement = getCalledDecision2(element) || getScript2(element);
-        if (!baseElement) {
-          return;
-        }
-        var resultVariable = baseElement.resultVariable;
-        if (resultVariable) {
-          var newVariable = createProcessVariable(
-            element,
-            resultVariable,
-            containerElement
-          );
-          addVariableToList(processVariables, newVariable);
-        }
-      });
-      return processVariables;
-    }
-    var extractors = [
-      extractInMappings,
-      extractInputElement,
-      extractOutMappings,
-      extractOutputCollections,
-      extractResultVariables
-    ];
-    function getProcessVariables(containerElement, additionalExtractors = []) {
-      var processVariables = [];
-      var elements = selfAndAllFlowElements2([containerElement], false);
-      const allPromises = [];
-      minDash.forEach([...extractors, ...additionalExtractors], function(extractor) {
-        allPromises.push(extractor({
-          elements,
-          containerElement,
-          processVariables
-        }));
-      });
-      return Promise.all(allPromises).then(() => processVariables);
-    }
-    async function getVariablesForScope2(scope, rootElement, additionalExtractors = []) {
-      var allVariables = await getProcessVariables(rootElement, additionalExtractors);
-      var scopeElement = getElement(scope, rootElement);
-      var scopeVariables = minDash.filter(allVariables, function(variable) {
-        return variable.scope.id === scopeElement.id;
-      });
-      var parents = getParents3(scopeElement);
-      var parentsScopeVariables = minDash.filter(allVariables, function(variable) {
-        return minDash.find(parents, function(parent) {
-          return parent.id === variable.scope.id;
-        });
-      });
-      return combineArrays(scopeVariables, parentsScopeVariables);
-    }
-    function getVariablesForElement2(element, additionalExtractors = []) {
-      return getVariablesForScope2(getScope2(element), getRootElement3(element), additionalExtractors);
-    }
-    function getScope2(element) {
-      const bo = getBusinessObject3(element);
-      if (is6(element, "bpmn:Participant")) {
-        return bo.processRef.id;
-      }
-      return bo.id;
-    }
-    function getRootElement3(element) {
-      const businessObject = getBusinessObject3(element);
-      if (is6(businessObject, "bpmn:Participant")) {
-        return businessObject.processRef;
-      }
-      if (is6(businessObject, "bpmn:Process")) {
-        return businessObject;
-      }
-      let parent = businessObject;
-      while (parent.$parent && !is6(parent, "bpmn:Process")) {
-        parent = parent.$parent;
-      }
-      return parent;
-    }
-    function combineArrays(a6, b5) {
-      return a6.concat(b5);
-    }
-    function getBusinessObject3(element) {
-      return element && element.businessObject || element;
-    }
-    function is6(element, type) {
-      var bo = getBusinessObject3(element);
-      return bo && typeof bo.$instanceOf === "function" && bo.$instanceOf(type);
-    }
-    exports.getProcessVariables = getProcessVariables;
-    exports.getVariablesForElement = getVariablesForElement2;
-    exports.getVariablesForScope = getVariablesForScope2;
-  }
-});
-
-// node_modules/@bpmn-io/extract-process-variables/dist/index.js
-var require_dist2 = __commonJS({
-  "node_modules/@bpmn-io/extract-process-variables/dist/index.js"(exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    var minDash = require_dist();
-    function getInputOutput2(element) {
-      return (getElements2(element, "camunda:InputOutput") || [])[0];
-    }
-    function getInputParameters2(element) {
-      return getParameters2(element, "inputParameters");
-    }
-    function getOutputParameters2(element) {
-      return getParameters2(element, "outputParameters");
-    }
-    function getFormFields(element) {
-      var formData = getFormData2(element);
-      return formData && formData.get("fields") || [];
-    }
-    function getFormData2(element) {
-      return getElements2(element, "camunda:FormData")[0];
-    }
-    function getOutMappings2(element) {
-      return getElements2(element, "camunda:Out");
-    }
-    function getElements2(element, type, property) {
-      var elements = getExtensionElements(element, type);
-      return !property ? elements : (elements[0] || {})[property] || [];
-    }
-    function getParameters2(element, property) {
-      var inputOutput = getInputOutput2(element);
-      return inputOutput && inputOutput.get(property) || [];
-    }
-    function getExtensionElements(element, type) {
-      var elements = [];
-      var extensionElements = element.get("extensionElements");
-      if (typeof extensionElements !== "undefined") {
-        var extensionValues = extensionElements.get("values");
-        if (typeof extensionValues !== "undefined") {
-          elements = minDash.filter(extensionValues, function(value) {
-            return is$2(value, type);
-          });
-        }
-      }
-      return elements;
-    }
-    function is$2(element, type) {
-      return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
-    }
-    function getParents3(element) {
-      var parents = [];
-      var current = element;
-      while (current.$parent) {
-        parents.push(current.$parent);
-        current = current.$parent;
-      }
-      return parents;
-    }
-    function eachElement2(elements, fn2, depth) {
-      depth = depth || 0;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(s5, i7) {
-        var filter2 = fn2(s5, i7, depth);
-        if (minDash.isArray(filter2) && filter2.length) {
-          eachElement2(filter2, fn2, depth + 1);
-        }
-      });
-    }
-    function add3(elements, e8, unique) {
-      var canAdd = !unique || elements.indexOf(e8) === -1;
-      if (canAdd) {
-        elements.push(e8);
-      }
-      return canAdd;
-    }
-    function selfAndFlowElements(elements, unique, maxDepth) {
-      var result = [], processedFlowElements = [];
-      eachElement2(elements, function(element, i7, depth) {
-        add3(result, element, unique);
-        var flowElements = element.flowElements;
-        if (maxDepth === -1 || depth < maxDepth) {
-          if (flowElements && add3(processedFlowElements, flowElements, unique)) {
-            return flowElements;
-          }
-        }
-      });
-      return result;
-    }
-    function selfAndAllFlowElements2(elements, allowDuplicates) {
-      return selfAndFlowElements(elements, !allowDuplicates, -1);
-    }
-    function getElement(elementId, rootElement) {
-      var allElements = selfAndAllFlowElements2(rootElement);
-      return minDash.find(allElements, function(element) {
-        return element.id === elementId;
-      });
-    }
-    function addVariableToList(variablesList, newVariable) {
-      var foundIdx = minDash.findIndex(variablesList, function(variable) {
-        return variable.name === newVariable.name && variable.scope === newVariable.scope;
-      });
-      if (foundIdx >= 0) {
-        variablesList[foundIdx].origin = combineArrays$1(
-          variablesList[foundIdx].origin,
-          newVariable.origin
-        );
-      } else {
-        variablesList.push(newVariable);
-      }
-    }
-    function createProcessVariable(flowElement, name2, defaultScope) {
-      var scope = getScope2(flowElement, defaultScope, name2);
-      return {
-        name: name2,
-        origin: [flowElement],
-        scope
-      };
-    }
-    function getScope2(element, globalScope, variableName) {
-      var parents = getParents3(element);
-      var scopedParent = minDash.find(parents, function(parent) {
-        return is$1(parent, "bpmn:SubProcess") && hasInputParameter(parent, variableName);
-      });
-      return scopedParent ? scopedParent : globalScope;
-    }
-    function is$1(element, type) {
-      return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
-    }
-    function hasInputParameter(element, name2) {
-      return minDash.find(getInputParameters2(element), function(input) {
-        return input.name === name2;
-      });
-    }
-    function combineArrays$1(a6, b5) {
-      return a6.concat(b5);
-    }
-    function extractOutputParameters(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var outputParameters = getOutputParameters2(element);
-        minDash.forEach(outputParameters, function(parameter) {
-          var newVariable = createProcessVariable(
-            element,
-            parameter.name,
-            containerElement
-          );
-          addVariableToList(processVariables, newVariable);
-        });
-      });
-      return processVariables;
-    }
-    function extractResultVariables(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var resultVariable = getResultVariable2(element);
-        if (resultVariable) {
-          var newVariable = createProcessVariable(
-            element,
-            resultVariable,
-            containerElement
-          );
-          addVariableToList(processVariables, newVariable);
-        }
-      });
-      return processVariables;
-    }
-    function getResultVariable2(element) {
-      return element.get("camunda:resultVariable");
-    }
-    function extractFormFields(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var formFields = getFormFields(element);
-        minDash.forEach(formFields, function(field) {
-          var newVariable = createProcessVariable(
-            element,
-            field.id,
-            containerElement
-          );
-          addVariableToList(processVariables, newVariable);
-        });
-      });
-      return processVariables;
-    }
-    function extractOutMappings(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var outMappings = getOutMappings2(element);
-        minDash.forEach(outMappings, function(mapping) {
-          if (mapping.local) {
-            return;
-          }
-          var newVariable = createProcessVariable(
-            element,
-            mapping.target,
-            containerElement
-          );
-          addVariableToList(processVariables, newVariable);
-        });
-      });
-      return processVariables;
-    }
-    function getEventDefinitions2(element, type) {
-      var eventDefinitions = element.eventDefinitions;
-      if (!eventDefinitions || !type) {
-        return eventDefinitions;
-      }
-      return minDash.filter(eventDefinitions, function(definition) {
-        return is6(definition, type);
-      });
-    }
-    function getErrorEventDefinitions(element) {
-      return getEventDefinitions2(element, "bpmn:ErrorEventDefinition");
-    }
-    function getEscalationEventDefinitions(element) {
-      return getEventDefinitions2(element, "bpmn:EscalationEventDefinition");
-    }
-    function is6(element, type) {
-      return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
-    }
-    function extractEventDefinitionVariables(options2) {
-      var elements = options2.elements, containerElement = options2.containerElement, processVariables = options2.processVariables;
-      var addVariable = function(element, name2) {
-        var newVariable = createProcessVariable(
-          element,
-          name2,
-          containerElement
-        );
-        addVariableToList(processVariables, newVariable);
-      };
-      if (!minDash.isArray(elements)) {
-        elements = [elements];
-      }
-      minDash.forEach(elements, function(element) {
-        var errorEventDefinitions = getErrorEventDefinitions(element);
-        minDash.forEach(errorEventDefinitions, function(definition) {
-          var errorCodeVariable = definition.get("errorCodeVariable"), errorMessageVariable = definition.get("errorMessageVariable");
-          if (errorCodeVariable) {
-            addVariable(element, errorCodeVariable);
-          }
-          if (errorMessageVariable) {
-            addVariable(element, errorMessageVariable);
-          }
-        });
-        var escalationEventDefinitions = getEscalationEventDefinitions(element);
-        minDash.forEach(escalationEventDefinitions, function(definition) {
-          var escalationCodeVariable = definition.get("escalationCodeVariable");
-          if (escalationCodeVariable) {
-            addVariable(element, escalationCodeVariable);
-          }
-        });
-      });
-      return processVariables;
-    }
-    var extractors = [
-      extractOutputParameters,
-      extractResultVariables,
-      extractFormFields,
-      extractOutMappings,
-      extractEventDefinitionVariables
-    ];
-    function getProcessVariables(containerElement, additionalExtractors = []) {
-      const allPromises = [];
-      var processVariables = [];
-      var elements = selfAndAllFlowElements2([containerElement], false);
-      minDash.forEach([...extractors, ...additionalExtractors], function(extractor) {
-        allPromises.push(
-          extractor({
-            elements,
-            containerElement,
-            processVariables
-          })
-        );
-      });
-      return Promise.all(allPromises).then(() => processVariables);
-    }
-    async function getVariablesForScope2(scope, rootElement, additionalExtractors = []) {
-      var allVariables = await getProcessVariables(rootElement, additionalExtractors);
-      var scopeElement = getElement(scope, rootElement);
-      var scopeVariables = minDash.filter(allVariables, function(variable) {
-        return variable.scope.id === scopeElement.id;
-      });
-      var parents = getParents3(scopeElement);
-      var parentsScopeVariables = minDash.filter(allVariables, function(variable) {
-        return minDash.find(parents, function(parent) {
-          return parent.id === variable.scope.id;
-        });
-      });
-      return combineArrays(scopeVariables, parentsScopeVariables);
-    }
-    function combineArrays(a6, b5) {
-      return a6.concat(b5);
-    }
-    exports.getProcessVariables = getProcessVariables;
-    exports.getVariablesForScope = getVariablesForScope2;
-  }
-});
-
-// node_modules/bpmn-js-token-simulation/node_modules/domify/index.js
-var require_domify = __commonJS({
-  "node_modules/bpmn-js-token-simulation/node_modules/domify/index.js"(exports, module2) {
-    var wrapMap = {
-      legend: [1, "<fieldset>", "</fieldset>"],
-      tr: [2, "<table><tbody>", "</tbody></table>"],
-      col: [2, "<table><tbody></tbody><colgroup>", "</colgroup></table>"],
-      _default: [0, "", ""]
-    };
-    wrapMap.td = wrapMap.th = [3, "<table><tbody><tr>", "</tr></tbody></table>"];
-    wrapMap.option = wrapMap.optgroup = [1, '<select multiple="multiple">', "</select>"];
-    wrapMap.thead = wrapMap.tbody = wrapMap.colgroup = wrapMap.caption = wrapMap.tfoot = [1, "<table>", "</table>"];
-    wrapMap.polyline = wrapMap.ellipse = wrapMap.polygon = wrapMap.circle = wrapMap.text = wrapMap.line = wrapMap.path = wrapMap.rect = wrapMap.g = [1, '<svg xmlns="http://www.w3.org/2000/svg" version="1.1">', "</svg>"];
-    function domify2(htmlString, document2 = globalThis.document) {
-      var _a;
-      if (typeof htmlString !== "string") {
-        throw new TypeError("String expected");
-      }
-      const commentMatch = /^<!--(.*?)-->$/s.exec(htmlString);
-      if (commentMatch) {
-        return document2.createComment(commentMatch[1]);
-      }
-      const tagName = (_a = /<([\w:]+)/.exec(htmlString)) == null ? void 0 : _a[1];
-      if (!tagName) {
-        return document2.createTextNode(htmlString);
-      }
-      htmlString = htmlString.trim();
-      if (tagName === "body") {
-        const element2 = document2.createElement("html");
-        element2.innerHTML = htmlString;
-        const { lastChild } = element2;
-        lastChild.remove();
-        return lastChild;
-      }
-      let [depth, prefix4, suffix] = Object.hasOwn(wrapMap, tagName) ? wrapMap[tagName] : wrapMap._default;
-      let element = document2.createElement("div");
-      element.innerHTML = prefix4 + htmlString + suffix;
-      while (depth--) {
-        element = element.lastChild;
-      }
-      if (element.firstChild === element.lastChild) {
-        const { firstChild } = element;
-        firstChild.remove();
-        return firstChild;
-      }
-      const fragment = document2.createDocumentFragment();
-      fragment.append(...element.childNodes);
-      return fragment;
-    }
-    module2.exports = domify2;
   }
 });
 
@@ -1165,42 +114,42 @@ var require_randomColor = __commonJS({
       var colorDictionary = {};
       loadColorBounds();
       var colorRanges = [];
-      var randomColor2 = function(options2) {
-        options2 = options2 || {};
-        if (options2.seed !== void 0 && options2.seed !== null && options2.seed === parseInt(options2.seed, 10)) {
-          seed = options2.seed;
-        } else if (typeof options2.seed === "string") {
-          seed = stringToInteger(options2.seed);
-        } else if (options2.seed !== void 0 && options2.seed !== null) {
+      var randomColor2 = function(options) {
+        options = options || {};
+        if (options.seed !== void 0 && options.seed !== null && options.seed === parseInt(options.seed, 10)) {
+          seed = options.seed;
+        } else if (typeof options.seed === "string") {
+          seed = stringToInteger(options.seed);
+        } else if (options.seed !== void 0 && options.seed !== null) {
           throw new TypeError("The seed value must be an integer or string");
         } else {
           seed = null;
         }
-        var H4, S3, B6;
-        if (options2.count !== null && options2.count !== void 0) {
-          var totalColors = options2.count, colors2 = [];
-          for (var i7 = 0; i7 < options2.count; i7++) {
+        var H3, S3, B6;
+        if (options.count !== null && options.count !== void 0) {
+          var totalColors = options.count, colors2 = [];
+          for (var i7 = 0; i7 < options.count; i7++) {
             colorRanges.push(false);
           }
-          options2.count = null;
+          options.count = null;
           while (totalColors > colors2.length) {
-            var color = randomColor2(options2);
+            var color = randomColor2(options);
             if (seed !== null) {
-              options2.seed = seed;
+              options.seed = seed;
             }
             colors2.push(color);
           }
-          options2.count = totalColors;
+          options.count = totalColors;
           return colors2;
         }
-        H4 = pickHue(options2);
-        S3 = pickSaturation(H4, options2);
-        B6 = pickBrightness(H4, S3, options2);
-        return setFormat([H4, S3, B6], options2);
+        H3 = pickHue(options);
+        S3 = pickSaturation(H3, options);
+        B6 = pickBrightness(H3, S3, options);
+        return setFormat([H3, S3, B6], options);
       };
-      function pickHue(options2) {
+      function pickHue(options) {
         if (colorRanges.length > 0) {
-          var hueRange = getRealHueRange(options2.hue);
+          var hueRange = getRealHueRange(options.hue);
           var hue = randomWithin(hueRange);
           var step = (hueRange[1] - hueRange[0]) / colorRanges.length;
           var j6 = parseInt((hue - hueRange[0]) / step);
@@ -1217,7 +166,7 @@ var require_randomColor = __commonJS({
           }
           return hue;
         } else {
-          var hueRange = getHueRange(options2.hue);
+          var hueRange = getHueRange(options.hue);
           hue = randomWithin(hueRange);
           if (hue < 0) {
             hue = 360 + hue;
@@ -1225,16 +174,16 @@ var require_randomColor = __commonJS({
           return hue;
         }
       }
-      function pickSaturation(hue, options2) {
-        if (options2.hue === "monochrome") {
+      function pickSaturation(hue, options) {
+        if (options.hue === "monochrome") {
           return 0;
         }
-        if (options2.luminosity === "random") {
+        if (options.luminosity === "random") {
           return randomWithin([0, 100]);
         }
         var saturationRange = getSaturationRange(hue);
         var sMin = saturationRange[0], sMax = saturationRange[1];
-        switch (options2.luminosity) {
+        switch (options.luminosity) {
           case "bright":
             sMin = 55;
             break;
@@ -1247,9 +196,9 @@ var require_randomColor = __commonJS({
         }
         return randomWithin([sMin, sMax]);
       }
-      function pickBrightness(H4, S3, options2) {
-        var bMin = getMinimumBrightness(H4, S3), bMax = 100;
-        switch (options2.luminosity) {
+      function pickBrightness(H3, S3, options) {
+        var bMin = getMinimumBrightness(H3, S3), bMax = 100;
+        switch (options.luminosity) {
           case "dark":
             bMax = bMin + 20;
             break;
@@ -1263,8 +212,8 @@ var require_randomColor = __commonJS({
         }
         return randomWithin([bMin, bMax]);
       }
-      function setFormat(hsv, options2) {
-        switch (options2.format) {
+      function setFormat(hsv, options) {
+        switch (options.format) {
           case "hsvArray":
             return hsv;
           case "hslArray":
@@ -1274,7 +223,7 @@ var require_randomColor = __commonJS({
             return "hsl(" + hsl[0] + ", " + hsl[1] + "%, " + hsl[2] + "%)";
           case "hsla":
             var hslColor = HSVtoHSL(hsv);
-            var alpha = options2.alpha || Math.random();
+            var alpha = options.alpha || Math.random();
             return "hsla(" + hslColor[0] + ", " + hslColor[1] + "%, " + hslColor[2] + "%, " + alpha + ")";
           case "rgbArray":
             return HSVtoRGB(hsv);
@@ -1283,20 +232,20 @@ var require_randomColor = __commonJS({
             return "rgb(" + rgb.join(", ") + ")";
           case "rgba":
             var rgbColor = HSVtoRGB(hsv);
-            var alpha = options2.alpha || Math.random();
+            var alpha = options.alpha || Math.random();
             return "rgba(" + rgbColor.join(", ") + ", " + alpha + ")";
           default:
             return HSVtoHex(hsv);
         }
       }
-      function getMinimumBrightness(H4, S3) {
-        var lowerBounds = getColorInfo(H4).lowerBounds;
+      function getMinimumBrightness(H3, S3) {
+        var lowerBounds = getColorInfo(H3).lowerBounds;
         for (var i7 = 0; i7 < lowerBounds.length - 1; i7++) {
           var s1 = lowerBounds[i7][0], v1 = lowerBounds[i7][1];
           var s22 = lowerBounds[i7 + 1][0], v22 = lowerBounds[i7 + 1][1];
           if (S3 >= s1 && S3 <= s22) {
-            var m5 = (v22 - v1) / (s22 - s1), b5 = v1 - m5 * s1;
-            return m5 * S3 + b5;
+            var m6 = (v22 - v1) / (s22 - s1), b4 = v1 - m6 * s1;
+            return m6 * S3 + b4;
           }
         }
         return 0;
@@ -1421,40 +370,40 @@ var require_randomColor = __commonJS({
         }
         h5 = h5 / 360;
         var s5 = hsv[1] / 100, v5 = hsv[2] / 100;
-        var h_i = Math.floor(h5 * 6), f6 = h5 * 6 - h_i, p5 = v5 * (1 - s5), q6 = v5 * (1 - f6 * s5), t7 = v5 * (1 - (1 - f6) * s5), r7 = 256, g6 = 256, b5 = 256;
+        var h_i = Math.floor(h5 * 6), f6 = h5 * 6 - h_i, p5 = v5 * (1 - s5), q6 = v5 * (1 - f6 * s5), t7 = v5 * (1 - (1 - f6) * s5), r7 = 256, g6 = 256, b4 = 256;
         switch (h_i) {
           case 0:
             r7 = v5;
             g6 = t7;
-            b5 = p5;
+            b4 = p5;
             break;
           case 1:
             r7 = q6;
             g6 = v5;
-            b5 = p5;
+            b4 = p5;
             break;
           case 2:
             r7 = p5;
             g6 = v5;
-            b5 = t7;
+            b4 = t7;
             break;
           case 3:
             r7 = p5;
             g6 = q6;
-            b5 = v5;
+            b4 = v5;
             break;
           case 4:
             r7 = t7;
             g6 = p5;
-            b5 = v5;
+            b4 = v5;
             break;
           case 5:
             r7 = v5;
             g6 = p5;
-            b5 = q6;
+            b4 = q6;
             break;
         }
-        var result = [Math.floor(r7 * 255), Math.floor(g6 * 255), Math.floor(b5 * 255)];
+        var result = [Math.floor(r7 * 255), Math.floor(g6 * 255), Math.floor(b4 * 255)];
         return result;
       }
       function HexToHSB(hex) {
@@ -1511,1802 +460,6 @@ var require_randomColor = __commonJS({
   }
 });
 
-// node_modules/hammerjs/hammer.js
-var require_hammer = __commonJS({
-  "node_modules/hammerjs/hammer.js"(exports, module2) {
-    (function(window2, document2, exportName, undefined2) {
-      "use strict";
-      var VENDOR_PREFIXES = ["", "webkit", "Moz", "MS", "ms", "o"];
-      var TEST_ELEMENT = document2.createElement("div");
-      var TYPE_FUNCTION = "function";
-      var round14 = Math.round;
-      var abs9 = Math.abs;
-      var now = Date.now;
-      function setTimeoutContext(fn2, timeout, context) {
-        return setTimeout(bindFn(fn2, context), timeout);
-      }
-      function invokeArrayArg(arg, fn2, context) {
-        if (Array.isArray(arg)) {
-          each(arg, context[fn2], context);
-          return true;
-        }
-        return false;
-      }
-      function each(obj, iterator, context) {
-        var i7;
-        if (!obj) {
-          return;
-        }
-        if (obj.forEach) {
-          obj.forEach(iterator, context);
-        } else if (obj.length !== undefined2) {
-          i7 = 0;
-          while (i7 < obj.length) {
-            iterator.call(context, obj[i7], i7, obj);
-            i7++;
-          }
-        } else {
-          for (i7 in obj) {
-            obj.hasOwnProperty(i7) && iterator.call(context, obj[i7], i7, obj);
-          }
-        }
-      }
-      function deprecate(method, name2, message) {
-        var deprecationMessage = "DEPRECATED METHOD: " + name2 + "\n" + message + " AT \n";
-        return function() {
-          var e8 = new Error("get-stack-trace");
-          var stack = e8 && e8.stack ? e8.stack.replace(/^[^\(]+?[\n$]/gm, "").replace(/^\s+at\s+/gm, "").replace(/^Object.<anonymous>\s*\(/gm, "{anonymous}()@") : "Unknown Stack Trace";
-          var log = window2.console && (window2.console.warn || window2.console.log);
-          if (log) {
-            log.call(window2.console, deprecationMessage, stack);
-          }
-          return method.apply(this, arguments);
-        };
-      }
-      var assign3;
-      if (typeof Object.assign !== "function") {
-        assign3 = function assign4(target) {
-          if (target === undefined2 || target === null) {
-            throw new TypeError("Cannot convert undefined or null to object");
-          }
-          var output = Object(target);
-          for (var index5 = 1; index5 < arguments.length; index5++) {
-            var source = arguments[index5];
-            if (source !== undefined2 && source !== null) {
-              for (var nextKey in source) {
-                if (source.hasOwnProperty(nextKey)) {
-                  output[nextKey] = source[nextKey];
-                }
-              }
-            }
-          }
-          return output;
-        };
-      } else {
-        assign3 = Object.assign;
-      }
-      var extend3 = deprecate(function extend4(dest, src, merge2) {
-        var keys2 = Object.keys(src);
-        var i7 = 0;
-        while (i7 < keys2.length) {
-          if (!merge2 || merge2 && dest[keys2[i7]] === undefined2) {
-            dest[keys2[i7]] = src[keys2[i7]];
-          }
-          i7++;
-        }
-        return dest;
-      }, "extend", "Use `assign`.");
-      var merge = deprecate(function merge2(dest, src) {
-        return extend3(dest, src, true);
-      }, "merge", "Use `assign`.");
-      function inherit(child, base, properties) {
-        var baseP = base.prototype, childP;
-        childP = child.prototype = Object.create(baseP);
-        childP.constructor = child;
-        childP._super = baseP;
-        if (properties) {
-          assign3(childP, properties);
-        }
-      }
-      function bindFn(fn2, context) {
-        return function boundFn() {
-          return fn2.apply(context, arguments);
-        };
-      }
-      function boolOrFn(val, args) {
-        if (typeof val == TYPE_FUNCTION) {
-          return val.apply(args ? args[0] || undefined2 : undefined2, args);
-        }
-        return val;
-      }
-      function ifUndefined(val1, val2) {
-        return val1 === undefined2 ? val2 : val1;
-      }
-      function addEventListeners(target, types3, handler) {
-        each(splitStr(types3), function(type) {
-          target.addEventListener(type, handler, false);
-        });
-      }
-      function removeEventListeners(target, types3, handler) {
-        each(splitStr(types3), function(type) {
-          target.removeEventListener(type, handler, false);
-        });
-      }
-      function hasParent(node2, parent) {
-        while (node2) {
-          if (node2 == parent) {
-            return true;
-          }
-          node2 = node2.parentNode;
-        }
-        return false;
-      }
-      function inStr(str, find2) {
-        return str.indexOf(find2) > -1;
-      }
-      function splitStr(str) {
-        return str.trim().split(/\s+/g);
-      }
-      function inArray(src, find2, findByKey) {
-        if (src.indexOf && !findByKey) {
-          return src.indexOf(find2);
-        } else {
-          var i7 = 0;
-          while (i7 < src.length) {
-            if (findByKey && src[i7][findByKey] == find2 || !findByKey && src[i7] === find2) {
-              return i7;
-            }
-            i7++;
-          }
-          return -1;
-        }
-      }
-      function toArray2(obj) {
-        return Array.prototype.slice.call(obj, 0);
-      }
-      function uniqueArray(src, key, sort) {
-        var results = [];
-        var values2 = [];
-        var i7 = 0;
-        while (i7 < src.length) {
-          var val = key ? src[i7][key] : src[i7];
-          if (inArray(values2, val) < 0) {
-            results.push(src[i7]);
-          }
-          values2[i7] = val;
-          i7++;
-        }
-        if (sort) {
-          if (!key) {
-            results = results.sort();
-          } else {
-            results = results.sort(function sortUniqueArray(a6, b5) {
-              return a6[key] > b5[key];
-            });
-          }
-        }
-        return results;
-      }
-      function prefixed(obj, property) {
-        var prefix4, prop;
-        var camelProp = property[0].toUpperCase() + property.slice(1);
-        var i7 = 0;
-        while (i7 < VENDOR_PREFIXES.length) {
-          prefix4 = VENDOR_PREFIXES[i7];
-          prop = prefix4 ? prefix4 + camelProp : property;
-          if (prop in obj) {
-            return prop;
-          }
-          i7++;
-        }
-        return undefined2;
-      }
-      var _uniqueId = 1;
-      function uniqueId() {
-        return _uniqueId++;
-      }
-      function getWindowForElement(element) {
-        var doc = element.ownerDocument || element;
-        return doc.defaultView || doc.parentWindow || window2;
-      }
-      var MOBILE_REGEX = /mobile|tablet|ip(ad|hone|od)|android/i;
-      var SUPPORT_TOUCH = "ontouchstart" in window2;
-      var SUPPORT_POINTER_EVENTS = prefixed(window2, "PointerEvent") !== undefined2;
-      var SUPPORT_ONLY_TOUCH = SUPPORT_TOUCH && MOBILE_REGEX.test(navigator.userAgent);
-      var INPUT_TYPE_TOUCH = "touch";
-      var INPUT_TYPE_PEN = "pen";
-      var INPUT_TYPE_MOUSE = "mouse";
-      var INPUT_TYPE_KINECT = "kinect";
-      var COMPUTE_INTERVAL = 25;
-      var INPUT_START = 1;
-      var INPUT_MOVE = 2;
-      var INPUT_END = 4;
-      var INPUT_CANCEL = 8;
-      var DIRECTION_NONE = 1;
-      var DIRECTION_LEFT = 2;
-      var DIRECTION_RIGHT = 4;
-      var DIRECTION_UP = 8;
-      var DIRECTION_DOWN = 16;
-      var DIRECTION_HORIZONTAL = DIRECTION_LEFT | DIRECTION_RIGHT;
-      var DIRECTION_VERTICAL = DIRECTION_UP | DIRECTION_DOWN;
-      var DIRECTION_ALL = DIRECTION_HORIZONTAL | DIRECTION_VERTICAL;
-      var PROPS_XY = ["x", "y"];
-      var PROPS_CLIENT_XY = ["clientX", "clientY"];
-      function Input(manager, callback) {
-        var self2 = this;
-        this.manager = manager;
-        this.callback = callback;
-        this.element = manager.element;
-        this.target = manager.options.inputTarget;
-        this.domHandler = function(ev) {
-          if (boolOrFn(manager.options.enable, [manager])) {
-            self2.handler(ev);
-          }
-        };
-        this.init();
-      }
-      Input.prototype = {
-        /**
-         * should handle the inputEvent data and trigger the callback
-         * @virtual
-         */
-        handler: function() {
-        },
-        /**
-         * bind the events
-         */
-        init: function() {
-          this.evEl && addEventListeners(this.element, this.evEl, this.domHandler);
-          this.evTarget && addEventListeners(this.target, this.evTarget, this.domHandler);
-          this.evWin && addEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
-        },
-        /**
-         * unbind the events
-         */
-        destroy: function() {
-          this.evEl && removeEventListeners(this.element, this.evEl, this.domHandler);
-          this.evTarget && removeEventListeners(this.target, this.evTarget, this.domHandler);
-          this.evWin && removeEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
-        }
-      };
-      function createInputInstance(manager) {
-        var Type3;
-        var inputClass = manager.options.inputClass;
-        if (inputClass) {
-          Type3 = inputClass;
-        } else if (SUPPORT_POINTER_EVENTS) {
-          Type3 = PointerEventInput;
-        } else if (SUPPORT_ONLY_TOUCH) {
-          Type3 = TouchInput;
-        } else if (!SUPPORT_TOUCH) {
-          Type3 = MouseInput;
-        } else {
-          Type3 = TouchMouseInput;
-        }
-        return new Type3(manager, inputHandler);
-      }
-      function inputHandler(manager, eventType, input) {
-        var pointersLen = input.pointers.length;
-        var changedPointersLen = input.changedPointers.length;
-        var isFirst = eventType & INPUT_START && pointersLen - changedPointersLen === 0;
-        var isFinal = eventType & (INPUT_END | INPUT_CANCEL) && pointersLen - changedPointersLen === 0;
-        input.isFirst = !!isFirst;
-        input.isFinal = !!isFinal;
-        if (isFirst) {
-          manager.session = {};
-        }
-        input.eventType = eventType;
-        computeInputData(manager, input);
-        manager.emit("hammer.input", input);
-        manager.recognize(input);
-        manager.session.prevInput = input;
-      }
-      function computeInputData(manager, input) {
-        var session = manager.session;
-        var pointers = input.pointers;
-        var pointersLength = pointers.length;
-        if (!session.firstInput) {
-          session.firstInput = simpleCloneInputData(input);
-        }
-        if (pointersLength > 1 && !session.firstMultiple) {
-          session.firstMultiple = simpleCloneInputData(input);
-        } else if (pointersLength === 1) {
-          session.firstMultiple = false;
-        }
-        var firstInput = session.firstInput;
-        var firstMultiple = session.firstMultiple;
-        var offsetCenter = firstMultiple ? firstMultiple.center : firstInput.center;
-        var center2 = input.center = getCenter(pointers);
-        input.timeStamp = now();
-        input.deltaTime = input.timeStamp - firstInput.timeStamp;
-        input.angle = getAngle2(offsetCenter, center2);
-        input.distance = getDistance4(offsetCenter, center2);
-        computeDeltaXY(session, input);
-        input.offsetDirection = getDirection2(input.deltaX, input.deltaY);
-        var overallVelocity = getVelocity(input.deltaTime, input.deltaX, input.deltaY);
-        input.overallVelocityX = overallVelocity.x;
-        input.overallVelocityY = overallVelocity.y;
-        input.overallVelocity = abs9(overallVelocity.x) > abs9(overallVelocity.y) ? overallVelocity.x : overallVelocity.y;
-        input.scale = firstMultiple ? getScale(firstMultiple.pointers, pointers) : 1;
-        input.rotation = firstMultiple ? getRotation(firstMultiple.pointers, pointers) : 0;
-        input.maxPointers = !session.prevInput ? input.pointers.length : input.pointers.length > session.prevInput.maxPointers ? input.pointers.length : session.prevInput.maxPointers;
-        computeIntervalInputData(session, input);
-        var target = manager.element;
-        if (hasParent(input.srcEvent.target, target)) {
-          target = input.srcEvent.target;
-        }
-        input.target = target;
-      }
-      function computeDeltaXY(session, input) {
-        var center2 = input.center;
-        var offset = session.offsetDelta || {};
-        var prevDelta = session.prevDelta || {};
-        var prevInput = session.prevInput || {};
-        if (input.eventType === INPUT_START || prevInput.eventType === INPUT_END) {
-          prevDelta = session.prevDelta = {
-            x: prevInput.deltaX || 0,
-            y: prevInput.deltaY || 0
-          };
-          offset = session.offsetDelta = {
-            x: center2.x,
-            y: center2.y
-          };
-        }
-        input.deltaX = prevDelta.x + (center2.x - offset.x);
-        input.deltaY = prevDelta.y + (center2.y - offset.y);
-      }
-      function computeIntervalInputData(session, input) {
-        var last4 = session.lastInterval || input, deltaTime = input.timeStamp - last4.timeStamp, velocity, velocityX, velocityY, direction;
-        if (input.eventType != INPUT_CANCEL && (deltaTime > COMPUTE_INTERVAL || last4.velocity === undefined2)) {
-          var deltaX = input.deltaX - last4.deltaX;
-          var deltaY = input.deltaY - last4.deltaY;
-          var v5 = getVelocity(deltaTime, deltaX, deltaY);
-          velocityX = v5.x;
-          velocityY = v5.y;
-          velocity = abs9(v5.x) > abs9(v5.y) ? v5.x : v5.y;
-          direction = getDirection2(deltaX, deltaY);
-          session.lastInterval = input;
-        } else {
-          velocity = last4.velocity;
-          velocityX = last4.velocityX;
-          velocityY = last4.velocityY;
-          direction = last4.direction;
-        }
-        input.velocity = velocity;
-        input.velocityX = velocityX;
-        input.velocityY = velocityY;
-        input.direction = direction;
-      }
-      function simpleCloneInputData(input) {
-        var pointers = [];
-        var i7 = 0;
-        while (i7 < input.pointers.length) {
-          pointers[i7] = {
-            clientX: round14(input.pointers[i7].clientX),
-            clientY: round14(input.pointers[i7].clientY)
-          };
-          i7++;
-        }
-        return {
-          timeStamp: now(),
-          pointers,
-          center: getCenter(pointers),
-          deltaX: input.deltaX,
-          deltaY: input.deltaY
-        };
-      }
-      function getCenter(pointers) {
-        var pointersLength = pointers.length;
-        if (pointersLength === 1) {
-          return {
-            x: round14(pointers[0].clientX),
-            y: round14(pointers[0].clientY)
-          };
-        }
-        var x6 = 0, y5 = 0, i7 = 0;
-        while (i7 < pointersLength) {
-          x6 += pointers[i7].clientX;
-          y5 += pointers[i7].clientY;
-          i7++;
-        }
-        return {
-          x: round14(x6 / pointersLength),
-          y: round14(y5 / pointersLength)
-        };
-      }
-      function getVelocity(deltaTime, x6, y5) {
-        return {
-          x: x6 / deltaTime || 0,
-          y: y5 / deltaTime || 0
-        };
-      }
-      function getDirection2(x6, y5) {
-        if (x6 === y5) {
-          return DIRECTION_NONE;
-        }
-        if (abs9(x6) >= abs9(y5)) {
-          return x6 < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
-        }
-        return y5 < 0 ? DIRECTION_UP : DIRECTION_DOWN;
-      }
-      function getDistance4(p1, p22, props) {
-        if (!props) {
-          props = PROPS_XY;
-        }
-        var x6 = p22[props[0]] - p1[props[0]], y5 = p22[props[1]] - p1[props[1]];
-        return Math.sqrt(x6 * x6 + y5 * y5);
-      }
-      function getAngle2(p1, p22, props) {
-        if (!props) {
-          props = PROPS_XY;
-        }
-        var x6 = p22[props[0]] - p1[props[0]], y5 = p22[props[1]] - p1[props[1]];
-        return Math.atan2(y5, x6) * 180 / Math.PI;
-      }
-      function getRotation(start, end) {
-        return getAngle2(end[1], end[0], PROPS_CLIENT_XY) + getAngle2(start[1], start[0], PROPS_CLIENT_XY);
-      }
-      function getScale(start, end) {
-        return getDistance4(end[0], end[1], PROPS_CLIENT_XY) / getDistance4(start[0], start[1], PROPS_CLIENT_XY);
-      }
-      var MOUSE_INPUT_MAP = {
-        mousedown: INPUT_START,
-        mousemove: INPUT_MOVE,
-        mouseup: INPUT_END
-      };
-      var MOUSE_ELEMENT_EVENTS = "mousedown";
-      var MOUSE_WINDOW_EVENTS = "mousemove mouseup";
-      function MouseInput() {
-        this.evEl = MOUSE_ELEMENT_EVENTS;
-        this.evWin = MOUSE_WINDOW_EVENTS;
-        this.pressed = false;
-        Input.apply(this, arguments);
-      }
-      inherit(MouseInput, Input, {
-        /**
-         * handle mouse events
-         * @param {Object} ev
-         */
-        handler: function MEhandler(ev) {
-          var eventType = MOUSE_INPUT_MAP[ev.type];
-          if (eventType & INPUT_START && ev.button === 0) {
-            this.pressed = true;
-          }
-          if (eventType & INPUT_MOVE && ev.which !== 1) {
-            eventType = INPUT_END;
-          }
-          if (!this.pressed) {
-            return;
-          }
-          if (eventType & INPUT_END) {
-            this.pressed = false;
-          }
-          this.callback(this.manager, eventType, {
-            pointers: [ev],
-            changedPointers: [ev],
-            pointerType: INPUT_TYPE_MOUSE,
-            srcEvent: ev
-          });
-        }
-      });
-      var POINTER_INPUT_MAP = {
-        pointerdown: INPUT_START,
-        pointermove: INPUT_MOVE,
-        pointerup: INPUT_END,
-        pointercancel: INPUT_CANCEL,
-        pointerout: INPUT_CANCEL
-      };
-      var IE10_POINTER_TYPE_ENUM = {
-        2: INPUT_TYPE_TOUCH,
-        3: INPUT_TYPE_PEN,
-        4: INPUT_TYPE_MOUSE,
-        5: INPUT_TYPE_KINECT
-        // see https://twitter.com/jacobrossi/status/480596438489890816
-      };
-      var POINTER_ELEMENT_EVENTS = "pointerdown";
-      var POINTER_WINDOW_EVENTS = "pointermove pointerup pointercancel";
-      if (window2.MSPointerEvent && !window2.PointerEvent) {
-        POINTER_ELEMENT_EVENTS = "MSPointerDown";
-        POINTER_WINDOW_EVENTS = "MSPointerMove MSPointerUp MSPointerCancel";
-      }
-      function PointerEventInput() {
-        this.evEl = POINTER_ELEMENT_EVENTS;
-        this.evWin = POINTER_WINDOW_EVENTS;
-        Input.apply(this, arguments);
-        this.store = this.manager.session.pointerEvents = [];
-      }
-      inherit(PointerEventInput, Input, {
-        /**
-         * handle mouse events
-         * @param {Object} ev
-         */
-        handler: function PEhandler(ev) {
-          var store = this.store;
-          var removePointer = false;
-          var eventTypeNormalized = ev.type.toLowerCase().replace("ms", "");
-          var eventType = POINTER_INPUT_MAP[eventTypeNormalized];
-          var pointerType = IE10_POINTER_TYPE_ENUM[ev.pointerType] || ev.pointerType;
-          var isTouch = pointerType == INPUT_TYPE_TOUCH;
-          var storeIndex = inArray(store, ev.pointerId, "pointerId");
-          if (eventType & INPUT_START && (ev.button === 0 || isTouch)) {
-            if (storeIndex < 0) {
-              store.push(ev);
-              storeIndex = store.length - 1;
-            }
-          } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
-            removePointer = true;
-          }
-          if (storeIndex < 0) {
-            return;
-          }
-          store[storeIndex] = ev;
-          this.callback(this.manager, eventType, {
-            pointers: store,
-            changedPointers: [ev],
-            pointerType,
-            srcEvent: ev
-          });
-          if (removePointer) {
-            store.splice(storeIndex, 1);
-          }
-        }
-      });
-      var SINGLE_TOUCH_INPUT_MAP = {
-        touchstart: INPUT_START,
-        touchmove: INPUT_MOVE,
-        touchend: INPUT_END,
-        touchcancel: INPUT_CANCEL
-      };
-      var SINGLE_TOUCH_TARGET_EVENTS = "touchstart";
-      var SINGLE_TOUCH_WINDOW_EVENTS = "touchstart touchmove touchend touchcancel";
-      function SingleTouchInput() {
-        this.evTarget = SINGLE_TOUCH_TARGET_EVENTS;
-        this.evWin = SINGLE_TOUCH_WINDOW_EVENTS;
-        this.started = false;
-        Input.apply(this, arguments);
-      }
-      inherit(SingleTouchInput, Input, {
-        handler: function TEhandler(ev) {
-          var type = SINGLE_TOUCH_INPUT_MAP[ev.type];
-          if (type === INPUT_START) {
-            this.started = true;
-          }
-          if (!this.started) {
-            return;
-          }
-          var touches = normalizeSingleTouches.call(this, ev, type);
-          if (type & (INPUT_END | INPUT_CANCEL) && touches[0].length - touches[1].length === 0) {
-            this.started = false;
-          }
-          this.callback(this.manager, type, {
-            pointers: touches[0],
-            changedPointers: touches[1],
-            pointerType: INPUT_TYPE_TOUCH,
-            srcEvent: ev
-          });
-        }
-      });
-      function normalizeSingleTouches(ev, type) {
-        var all3 = toArray2(ev.touches);
-        var changed = toArray2(ev.changedTouches);
-        if (type & (INPUT_END | INPUT_CANCEL)) {
-          all3 = uniqueArray(all3.concat(changed), "identifier", true);
-        }
-        return [all3, changed];
-      }
-      var TOUCH_INPUT_MAP = {
-        touchstart: INPUT_START,
-        touchmove: INPUT_MOVE,
-        touchend: INPUT_END,
-        touchcancel: INPUT_CANCEL
-      };
-      var TOUCH_TARGET_EVENTS = "touchstart touchmove touchend touchcancel";
-      function TouchInput() {
-        this.evTarget = TOUCH_TARGET_EVENTS;
-        this.targetIds = {};
-        Input.apply(this, arguments);
-      }
-      inherit(TouchInput, Input, {
-        handler: function MTEhandler(ev) {
-          var type = TOUCH_INPUT_MAP[ev.type];
-          var touches = getTouches.call(this, ev, type);
-          if (!touches) {
-            return;
-          }
-          this.callback(this.manager, type, {
-            pointers: touches[0],
-            changedPointers: touches[1],
-            pointerType: INPUT_TYPE_TOUCH,
-            srcEvent: ev
-          });
-        }
-      });
-      function getTouches(ev, type) {
-        var allTouches = toArray2(ev.touches);
-        var targetIds = this.targetIds;
-        if (type & (INPUT_START | INPUT_MOVE) && allTouches.length === 1) {
-          targetIds[allTouches[0].identifier] = true;
-          return [allTouches, allTouches];
-        }
-        var i7, targetTouches, changedTouches = toArray2(ev.changedTouches), changedTargetTouches = [], target = this.target;
-        targetTouches = allTouches.filter(function(touch) {
-          return hasParent(touch.target, target);
-        });
-        if (type === INPUT_START) {
-          i7 = 0;
-          while (i7 < targetTouches.length) {
-            targetIds[targetTouches[i7].identifier] = true;
-            i7++;
-          }
-        }
-        i7 = 0;
-        while (i7 < changedTouches.length) {
-          if (targetIds[changedTouches[i7].identifier]) {
-            changedTargetTouches.push(changedTouches[i7]);
-          }
-          if (type & (INPUT_END | INPUT_CANCEL)) {
-            delete targetIds[changedTouches[i7].identifier];
-          }
-          i7++;
-        }
-        if (!changedTargetTouches.length) {
-          return;
-        }
-        return [
-          // merge targetTouches with changedTargetTouches so it contains ALL touches, including 'end' and 'cancel'
-          uniqueArray(targetTouches.concat(changedTargetTouches), "identifier", true),
-          changedTargetTouches
-        ];
-      }
-      var DEDUP_TIMEOUT = 2500;
-      var DEDUP_DISTANCE = 25;
-      function TouchMouseInput() {
-        Input.apply(this, arguments);
-        var handler = bindFn(this.handler, this);
-        this.touch = new TouchInput(this.manager, handler);
-        this.mouse = new MouseInput(this.manager, handler);
-        this.primaryTouch = null;
-        this.lastTouches = [];
-      }
-      inherit(TouchMouseInput, Input, {
-        /**
-         * handle mouse and touch events
-         * @param {Hammer} manager
-         * @param {String} inputEvent
-         * @param {Object} inputData
-         */
-        handler: function TMEhandler(manager, inputEvent, inputData) {
-          var isTouch = inputData.pointerType == INPUT_TYPE_TOUCH, isMouse = inputData.pointerType == INPUT_TYPE_MOUSE;
-          if (isMouse && inputData.sourceCapabilities && inputData.sourceCapabilities.firesTouchEvents) {
-            return;
-          }
-          if (isTouch) {
-            recordTouches.call(this, inputEvent, inputData);
-          } else if (isMouse && isSyntheticEvent.call(this, inputData)) {
-            return;
-          }
-          this.callback(manager, inputEvent, inputData);
-        },
-        /**
-         * remove the event listeners
-         */
-        destroy: function destroy() {
-          this.touch.destroy();
-          this.mouse.destroy();
-        }
-      });
-      function recordTouches(eventType, eventData) {
-        if (eventType & INPUT_START) {
-          this.primaryTouch = eventData.changedPointers[0].identifier;
-          setLastTouch.call(this, eventData);
-        } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
-          setLastTouch.call(this, eventData);
-        }
-      }
-      function setLastTouch(eventData) {
-        var touch = eventData.changedPointers[0];
-        if (touch.identifier === this.primaryTouch) {
-          var lastTouch = { x: touch.clientX, y: touch.clientY };
-          this.lastTouches.push(lastTouch);
-          var lts = this.lastTouches;
-          var removeLastTouch = function() {
-            var i7 = lts.indexOf(lastTouch);
-            if (i7 > -1) {
-              lts.splice(i7, 1);
-            }
-          };
-          setTimeout(removeLastTouch, DEDUP_TIMEOUT);
-        }
-      }
-      function isSyntheticEvent(eventData) {
-        var x6 = eventData.srcEvent.clientX, y5 = eventData.srcEvent.clientY;
-        for (var i7 = 0; i7 < this.lastTouches.length; i7++) {
-          var t7 = this.lastTouches[i7];
-          var dx = Math.abs(x6 - t7.x), dy = Math.abs(y5 - t7.y);
-          if (dx <= DEDUP_DISTANCE && dy <= DEDUP_DISTANCE) {
-            return true;
-          }
-        }
-        return false;
-      }
-      var PREFIXED_TOUCH_ACTION = prefixed(TEST_ELEMENT.style, "touchAction");
-      var NATIVE_TOUCH_ACTION = PREFIXED_TOUCH_ACTION !== undefined2;
-      var TOUCH_ACTION_COMPUTE = "compute";
-      var TOUCH_ACTION_AUTO = "auto";
-      var TOUCH_ACTION_MANIPULATION = "manipulation";
-      var TOUCH_ACTION_NONE = "none";
-      var TOUCH_ACTION_PAN_X = "pan-x";
-      var TOUCH_ACTION_PAN_Y = "pan-y";
-      var TOUCH_ACTION_MAP = getTouchActionProps();
-      function TouchAction(manager, value) {
-        this.manager = manager;
-        this.set(value);
-      }
-      TouchAction.prototype = {
-        /**
-         * set the touchAction value on the element or enable the polyfill
-         * @param {String} value
-         */
-        set: function(value) {
-          if (value == TOUCH_ACTION_COMPUTE) {
-            value = this.compute();
-          }
-          if (NATIVE_TOUCH_ACTION && this.manager.element.style && TOUCH_ACTION_MAP[value]) {
-            this.manager.element.style[PREFIXED_TOUCH_ACTION] = value;
-          }
-          this.actions = value.toLowerCase().trim();
-        },
-        /**
-         * just re-set the touchAction value
-         */
-        update: function() {
-          this.set(this.manager.options.touchAction);
-        },
-        /**
-         * compute the value for the touchAction property based on the recognizer's settings
-         * @returns {String} value
-         */
-        compute: function() {
-          var actions = [];
-          each(this.manager.recognizers, function(recognizer) {
-            if (boolOrFn(recognizer.options.enable, [recognizer])) {
-              actions = actions.concat(recognizer.getTouchAction());
-            }
-          });
-          return cleanTouchActions(actions.join(" "));
-        },
-        /**
-         * this method is called on each input cycle and provides the preventing of the browser behavior
-         * @param {Object} input
-         */
-        preventDefaults: function(input) {
-          var srcEvent = input.srcEvent;
-          var direction = input.offsetDirection;
-          if (this.manager.session.prevented) {
-            srcEvent.preventDefault();
-            return;
-          }
-          var actions = this.actions;
-          var hasNone = inStr(actions, TOUCH_ACTION_NONE) && !TOUCH_ACTION_MAP[TOUCH_ACTION_NONE];
-          var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_Y];
-          var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_X];
-          if (hasNone) {
-            var isTapPointer = input.pointers.length === 1;
-            var isTapMovement = input.distance < 2;
-            var isTapTouchTime = input.deltaTime < 250;
-            if (isTapPointer && isTapMovement && isTapTouchTime) {
-              return;
-            }
-          }
-          if (hasPanX && hasPanY) {
-            return;
-          }
-          if (hasNone || hasPanY && direction & DIRECTION_HORIZONTAL || hasPanX && direction & DIRECTION_VERTICAL) {
-            return this.preventSrc(srcEvent);
-          }
-        },
-        /**
-         * call preventDefault to prevent the browser's default behavior (scrolling in most cases)
-         * @param {Object} srcEvent
-         */
-        preventSrc: function(srcEvent) {
-          this.manager.session.prevented = true;
-          srcEvent.preventDefault();
-        }
-      };
-      function cleanTouchActions(actions) {
-        if (inStr(actions, TOUCH_ACTION_NONE)) {
-          return TOUCH_ACTION_NONE;
-        }
-        var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X);
-        var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y);
-        if (hasPanX && hasPanY) {
-          return TOUCH_ACTION_NONE;
-        }
-        if (hasPanX || hasPanY) {
-          return hasPanX ? TOUCH_ACTION_PAN_X : TOUCH_ACTION_PAN_Y;
-        }
-        if (inStr(actions, TOUCH_ACTION_MANIPULATION)) {
-          return TOUCH_ACTION_MANIPULATION;
-        }
-        return TOUCH_ACTION_AUTO;
-      }
-      function getTouchActionProps() {
-        if (!NATIVE_TOUCH_ACTION) {
-          return false;
-        }
-        var touchMap = {};
-        var cssSupports = window2.CSS && window2.CSS.supports;
-        ["auto", "manipulation", "pan-y", "pan-x", "pan-x pan-y", "none"].forEach(function(val) {
-          touchMap[val] = cssSupports ? window2.CSS.supports("touch-action", val) : true;
-        });
-        return touchMap;
-      }
-      var STATE_POSSIBLE = 1;
-      var STATE_BEGAN = 2;
-      var STATE_CHANGED = 4;
-      var STATE_ENDED = 8;
-      var STATE_RECOGNIZED = STATE_ENDED;
-      var STATE_CANCELLED = 16;
-      var STATE_FAILED = 32;
-      function Recognizer(options2) {
-        this.options = assign3({}, this.defaults, options2 || {});
-        this.id = uniqueId();
-        this.manager = null;
-        this.options.enable = ifUndefined(this.options.enable, true);
-        this.state = STATE_POSSIBLE;
-        this.simultaneous = {};
-        this.requireFail = [];
-      }
-      Recognizer.prototype = {
-        /**
-         * @virtual
-         * @type {Object}
-         */
-        defaults: {},
-        /**
-         * set options
-         * @param {Object} options
-         * @return {Recognizer}
-         */
-        set: function(options2) {
-          assign3(this.options, options2);
-          this.manager && this.manager.touchAction.update();
-          return this;
-        },
-        /**
-         * recognize simultaneous with an other recognizer.
-         * @param {Recognizer} otherRecognizer
-         * @returns {Recognizer} this
-         */
-        recognizeWith: function(otherRecognizer) {
-          if (invokeArrayArg(otherRecognizer, "recognizeWith", this)) {
-            return this;
-          }
-          var simultaneous = this.simultaneous;
-          otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-          if (!simultaneous[otherRecognizer.id]) {
-            simultaneous[otherRecognizer.id] = otherRecognizer;
-            otherRecognizer.recognizeWith(this);
-          }
-          return this;
-        },
-        /**
-         * drop the simultaneous link. it doesnt remove the link on the other recognizer.
-         * @param {Recognizer} otherRecognizer
-         * @returns {Recognizer} this
-         */
-        dropRecognizeWith: function(otherRecognizer) {
-          if (invokeArrayArg(otherRecognizer, "dropRecognizeWith", this)) {
-            return this;
-          }
-          otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-          delete this.simultaneous[otherRecognizer.id];
-          return this;
-        },
-        /**
-         * recognizer can only run when an other is failing
-         * @param {Recognizer} otherRecognizer
-         * @returns {Recognizer} this
-         */
-        requireFailure: function(otherRecognizer) {
-          if (invokeArrayArg(otherRecognizer, "requireFailure", this)) {
-            return this;
-          }
-          var requireFail = this.requireFail;
-          otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-          if (inArray(requireFail, otherRecognizer) === -1) {
-            requireFail.push(otherRecognizer);
-            otherRecognizer.requireFailure(this);
-          }
-          return this;
-        },
-        /**
-         * drop the requireFailure link. it does not remove the link on the other recognizer.
-         * @param {Recognizer} otherRecognizer
-         * @returns {Recognizer} this
-         */
-        dropRequireFailure: function(otherRecognizer) {
-          if (invokeArrayArg(otherRecognizer, "dropRequireFailure", this)) {
-            return this;
-          }
-          otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-          var index5 = inArray(this.requireFail, otherRecognizer);
-          if (index5 > -1) {
-            this.requireFail.splice(index5, 1);
-          }
-          return this;
-        },
-        /**
-         * has require failures boolean
-         * @returns {boolean}
-         */
-        hasRequireFailures: function() {
-          return this.requireFail.length > 0;
-        },
-        /**
-         * if the recognizer can recognize simultaneous with an other recognizer
-         * @param {Recognizer} otherRecognizer
-         * @returns {Boolean}
-         */
-        canRecognizeWith: function(otherRecognizer) {
-          return !!this.simultaneous[otherRecognizer.id];
-        },
-        /**
-         * You should use `tryEmit` instead of `emit` directly to check
-         * that all the needed recognizers has failed before emitting.
-         * @param {Object} input
-         */
-        emit: function(input) {
-          var self2 = this;
-          var state = this.state;
-          function emit(event3) {
-            self2.manager.emit(event3, input);
-          }
-          if (state < STATE_ENDED) {
-            emit(self2.options.event + stateStr(state));
-          }
-          emit(self2.options.event);
-          if (input.additionalEvent) {
-            emit(input.additionalEvent);
-          }
-          if (state >= STATE_ENDED) {
-            emit(self2.options.event + stateStr(state));
-          }
-        },
-        /**
-         * Check that all the require failure recognizers has failed,
-         * if true, it emits a gesture event,
-         * otherwise, setup the state to FAILED.
-         * @param {Object} input
-         */
-        tryEmit: function(input) {
-          if (this.canEmit()) {
-            return this.emit(input);
-          }
-          this.state = STATE_FAILED;
-        },
-        /**
-         * can we emit?
-         * @returns {boolean}
-         */
-        canEmit: function() {
-          var i7 = 0;
-          while (i7 < this.requireFail.length) {
-            if (!(this.requireFail[i7].state & (STATE_FAILED | STATE_POSSIBLE))) {
-              return false;
-            }
-            i7++;
-          }
-          return true;
-        },
-        /**
-         * update the recognizer
-         * @param {Object} inputData
-         */
-        recognize: function(inputData) {
-          var inputDataClone = assign3({}, inputData);
-          if (!boolOrFn(this.options.enable, [this, inputDataClone])) {
-            this.reset();
-            this.state = STATE_FAILED;
-            return;
-          }
-          if (this.state & (STATE_RECOGNIZED | STATE_CANCELLED | STATE_FAILED)) {
-            this.state = STATE_POSSIBLE;
-          }
-          this.state = this.process(inputDataClone);
-          if (this.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED | STATE_CANCELLED)) {
-            this.tryEmit(inputDataClone);
-          }
-        },
-        /**
-         * return the state of the recognizer
-         * the actual recognizing happens in this method
-         * @virtual
-         * @param {Object} inputData
-         * @returns {Const} STATE
-         */
-        process: function(inputData) {
-        },
-        // jshint ignore:line
-        /**
-         * return the preferred touch-action
-         * @virtual
-         * @returns {Array}
-         */
-        getTouchAction: function() {
-        },
-        /**
-         * called when the gesture isn't allowed to recognize
-         * like when another is being recognized or it is disabled
-         * @virtual
-         */
-        reset: function() {
-        }
-      };
-      function stateStr(state) {
-        if (state & STATE_CANCELLED) {
-          return "cancel";
-        } else if (state & STATE_ENDED) {
-          return "end";
-        } else if (state & STATE_CHANGED) {
-          return "move";
-        } else if (state & STATE_BEGAN) {
-          return "start";
-        }
-        return "";
-      }
-      function directionStr(direction) {
-        if (direction == DIRECTION_DOWN) {
-          return "down";
-        } else if (direction == DIRECTION_UP) {
-          return "up";
-        } else if (direction == DIRECTION_LEFT) {
-          return "left";
-        } else if (direction == DIRECTION_RIGHT) {
-          return "right";
-        }
-        return "";
-      }
-      function getRecognizerByNameIfManager(otherRecognizer, recognizer) {
-        var manager = recognizer.manager;
-        if (manager) {
-          return manager.get(otherRecognizer);
-        }
-        return otherRecognizer;
-      }
-      function AttrRecognizer() {
-        Recognizer.apply(this, arguments);
-      }
-      inherit(AttrRecognizer, Recognizer, {
-        /**
-         * @namespace
-         * @memberof AttrRecognizer
-         */
-        defaults: {
-          /**
-           * @type {Number}
-           * @default 1
-           */
-          pointers: 1
-        },
-        /**
-         * Used to check if it the recognizer receives valid input, like input.distance > 10.
-         * @memberof AttrRecognizer
-         * @param {Object} input
-         * @returns {Boolean} recognized
-         */
-        attrTest: function(input) {
-          var optionPointers = this.options.pointers;
-          return optionPointers === 0 || input.pointers.length === optionPointers;
-        },
-        /**
-         * Process the input and return the state for the recognizer
-         * @memberof AttrRecognizer
-         * @param {Object} input
-         * @returns {*} State
-         */
-        process: function(input) {
-          var state = this.state;
-          var eventType = input.eventType;
-          var isRecognized = state & (STATE_BEGAN | STATE_CHANGED);
-          var isValid = this.attrTest(input);
-          if (isRecognized && (eventType & INPUT_CANCEL || !isValid)) {
-            return state | STATE_CANCELLED;
-          } else if (isRecognized || isValid) {
-            if (eventType & INPUT_END) {
-              return state | STATE_ENDED;
-            } else if (!(state & STATE_BEGAN)) {
-              return STATE_BEGAN;
-            }
-            return state | STATE_CHANGED;
-          }
-          return STATE_FAILED;
-        }
-      });
-      function PanRecognizer() {
-        AttrRecognizer.apply(this, arguments);
-        this.pX = null;
-        this.pY = null;
-      }
-      inherit(PanRecognizer, AttrRecognizer, {
-        /**
-         * @namespace
-         * @memberof PanRecognizer
-         */
-        defaults: {
-          event: "pan",
-          threshold: 10,
-          pointers: 1,
-          direction: DIRECTION_ALL
-        },
-        getTouchAction: function() {
-          var direction = this.options.direction;
-          var actions = [];
-          if (direction & DIRECTION_HORIZONTAL) {
-            actions.push(TOUCH_ACTION_PAN_Y);
-          }
-          if (direction & DIRECTION_VERTICAL) {
-            actions.push(TOUCH_ACTION_PAN_X);
-          }
-          return actions;
-        },
-        directionTest: function(input) {
-          var options2 = this.options;
-          var hasMoved = true;
-          var distance4 = input.distance;
-          var direction = input.direction;
-          var x6 = input.deltaX;
-          var y5 = input.deltaY;
-          if (!(direction & options2.direction)) {
-            if (options2.direction & DIRECTION_HORIZONTAL) {
-              direction = x6 === 0 ? DIRECTION_NONE : x6 < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
-              hasMoved = x6 != this.pX;
-              distance4 = Math.abs(input.deltaX);
-            } else {
-              direction = y5 === 0 ? DIRECTION_NONE : y5 < 0 ? DIRECTION_UP : DIRECTION_DOWN;
-              hasMoved = y5 != this.pY;
-              distance4 = Math.abs(input.deltaY);
-            }
-          }
-          input.direction = direction;
-          return hasMoved && distance4 > options2.threshold && direction & options2.direction;
-        },
-        attrTest: function(input) {
-          return AttrRecognizer.prototype.attrTest.call(this, input) && (this.state & STATE_BEGAN || !(this.state & STATE_BEGAN) && this.directionTest(input));
-        },
-        emit: function(input) {
-          this.pX = input.deltaX;
-          this.pY = input.deltaY;
-          var direction = directionStr(input.direction);
-          if (direction) {
-            input.additionalEvent = this.options.event + direction;
-          }
-          this._super.emit.call(this, input);
-        }
-      });
-      function PinchRecognizer() {
-        AttrRecognizer.apply(this, arguments);
-      }
-      inherit(PinchRecognizer, AttrRecognizer, {
-        /**
-         * @namespace
-         * @memberof PinchRecognizer
-         */
-        defaults: {
-          event: "pinch",
-          threshold: 0,
-          pointers: 2
-        },
-        getTouchAction: function() {
-          return [TOUCH_ACTION_NONE];
-        },
-        attrTest: function(input) {
-          return this._super.attrTest.call(this, input) && (Math.abs(input.scale - 1) > this.options.threshold || this.state & STATE_BEGAN);
-        },
-        emit: function(input) {
-          if (input.scale !== 1) {
-            var inOut = input.scale < 1 ? "in" : "out";
-            input.additionalEvent = this.options.event + inOut;
-          }
-          this._super.emit.call(this, input);
-        }
-      });
-      function PressRecognizer() {
-        Recognizer.apply(this, arguments);
-        this._timer = null;
-        this._input = null;
-      }
-      inherit(PressRecognizer, Recognizer, {
-        /**
-         * @namespace
-         * @memberof PressRecognizer
-         */
-        defaults: {
-          event: "press",
-          pointers: 1,
-          time: 251,
-          // minimal time of the pointer to be pressed
-          threshold: 9
-          // a minimal movement is ok, but keep it low
-        },
-        getTouchAction: function() {
-          return [TOUCH_ACTION_AUTO];
-        },
-        process: function(input) {
-          var options2 = this.options;
-          var validPointers = input.pointers.length === options2.pointers;
-          var validMovement = input.distance < options2.threshold;
-          var validTime = input.deltaTime > options2.time;
-          this._input = input;
-          if (!validMovement || !validPointers || input.eventType & (INPUT_END | INPUT_CANCEL) && !validTime) {
-            this.reset();
-          } else if (input.eventType & INPUT_START) {
-            this.reset();
-            this._timer = setTimeoutContext(function() {
-              this.state = STATE_RECOGNIZED;
-              this.tryEmit();
-            }, options2.time, this);
-          } else if (input.eventType & INPUT_END) {
-            return STATE_RECOGNIZED;
-          }
-          return STATE_FAILED;
-        },
-        reset: function() {
-          clearTimeout(this._timer);
-        },
-        emit: function(input) {
-          if (this.state !== STATE_RECOGNIZED) {
-            return;
-          }
-          if (input && input.eventType & INPUT_END) {
-            this.manager.emit(this.options.event + "up", input);
-          } else {
-            this._input.timeStamp = now();
-            this.manager.emit(this.options.event, this._input);
-          }
-        }
-      });
-      function RotateRecognizer() {
-        AttrRecognizer.apply(this, arguments);
-      }
-      inherit(RotateRecognizer, AttrRecognizer, {
-        /**
-         * @namespace
-         * @memberof RotateRecognizer
-         */
-        defaults: {
-          event: "rotate",
-          threshold: 0,
-          pointers: 2
-        },
-        getTouchAction: function() {
-          return [TOUCH_ACTION_NONE];
-        },
-        attrTest: function(input) {
-          return this._super.attrTest.call(this, input) && (Math.abs(input.rotation) > this.options.threshold || this.state & STATE_BEGAN);
-        }
-      });
-      function SwipeRecognizer() {
-        AttrRecognizer.apply(this, arguments);
-      }
-      inherit(SwipeRecognizer, AttrRecognizer, {
-        /**
-         * @namespace
-         * @memberof SwipeRecognizer
-         */
-        defaults: {
-          event: "swipe",
-          threshold: 10,
-          velocity: 0.3,
-          direction: DIRECTION_HORIZONTAL | DIRECTION_VERTICAL,
-          pointers: 1
-        },
-        getTouchAction: function() {
-          return PanRecognizer.prototype.getTouchAction.call(this);
-        },
-        attrTest: function(input) {
-          var direction = this.options.direction;
-          var velocity;
-          if (direction & (DIRECTION_HORIZONTAL | DIRECTION_VERTICAL)) {
-            velocity = input.overallVelocity;
-          } else if (direction & DIRECTION_HORIZONTAL) {
-            velocity = input.overallVelocityX;
-          } else if (direction & DIRECTION_VERTICAL) {
-            velocity = input.overallVelocityY;
-          }
-          return this._super.attrTest.call(this, input) && direction & input.offsetDirection && input.distance > this.options.threshold && input.maxPointers == this.options.pointers && abs9(velocity) > this.options.velocity && input.eventType & INPUT_END;
-        },
-        emit: function(input) {
-          var direction = directionStr(input.offsetDirection);
-          if (direction) {
-            this.manager.emit(this.options.event + direction, input);
-          }
-          this.manager.emit(this.options.event, input);
-        }
-      });
-      function TapRecognizer() {
-        Recognizer.apply(this, arguments);
-        this.pTime = false;
-        this.pCenter = false;
-        this._timer = null;
-        this._input = null;
-        this.count = 0;
-      }
-      inherit(TapRecognizer, Recognizer, {
-        /**
-         * @namespace
-         * @memberof PinchRecognizer
-         */
-        defaults: {
-          event: "tap",
-          pointers: 1,
-          taps: 1,
-          interval: 300,
-          // max time between the multi-tap taps
-          time: 250,
-          // max time of the pointer to be down (like finger on the screen)
-          threshold: 9,
-          // a minimal movement is ok, but keep it low
-          posThreshold: 10
-          // a multi-tap can be a bit off the initial position
-        },
-        getTouchAction: function() {
-          return [TOUCH_ACTION_MANIPULATION];
-        },
-        process: function(input) {
-          var options2 = this.options;
-          var validPointers = input.pointers.length === options2.pointers;
-          var validMovement = input.distance < options2.threshold;
-          var validTouchTime = input.deltaTime < options2.time;
-          this.reset();
-          if (input.eventType & INPUT_START && this.count === 0) {
-            return this.failTimeout();
-          }
-          if (validMovement && validTouchTime && validPointers) {
-            if (input.eventType != INPUT_END) {
-              return this.failTimeout();
-            }
-            var validInterval = this.pTime ? input.timeStamp - this.pTime < options2.interval : true;
-            var validMultiTap = !this.pCenter || getDistance4(this.pCenter, input.center) < options2.posThreshold;
-            this.pTime = input.timeStamp;
-            this.pCenter = input.center;
-            if (!validMultiTap || !validInterval) {
-              this.count = 1;
-            } else {
-              this.count += 1;
-            }
-            this._input = input;
-            var tapCount = this.count % options2.taps;
-            if (tapCount === 0) {
-              if (!this.hasRequireFailures()) {
-                return STATE_RECOGNIZED;
-              } else {
-                this._timer = setTimeoutContext(function() {
-                  this.state = STATE_RECOGNIZED;
-                  this.tryEmit();
-                }, options2.interval, this);
-                return STATE_BEGAN;
-              }
-            }
-          }
-          return STATE_FAILED;
-        },
-        failTimeout: function() {
-          this._timer = setTimeoutContext(function() {
-            this.state = STATE_FAILED;
-          }, this.options.interval, this);
-          return STATE_FAILED;
-        },
-        reset: function() {
-          clearTimeout(this._timer);
-        },
-        emit: function() {
-          if (this.state == STATE_RECOGNIZED) {
-            this._input.tapCount = this.count;
-            this.manager.emit(this.options.event, this._input);
-          }
-        }
-      });
-      function Hammer2(element, options2) {
-        options2 = options2 || {};
-        options2.recognizers = ifUndefined(options2.recognizers, Hammer2.defaults.preset);
-        return new Manager(element, options2);
-      }
-      Hammer2.VERSION = "2.0.7";
-      Hammer2.defaults = {
-        /**
-         * set if DOM events are being triggered.
-         * But this is slower and unused by simple implementations, so disabled by default.
-         * @type {Boolean}
-         * @default false
-         */
-        domEvents: false,
-        /**
-         * The value for the touchAction property/fallback.
-         * When set to `compute` it will magically set the correct value based on the added recognizers.
-         * @type {String}
-         * @default compute
-         */
-        touchAction: TOUCH_ACTION_COMPUTE,
-        /**
-         * @type {Boolean}
-         * @default true
-         */
-        enable: true,
-        /**
-         * EXPERIMENTAL FEATURE -- can be removed/changed
-         * Change the parent input target element.
-         * If Null, then it is being set the to main element.
-         * @type {Null|EventTarget}
-         * @default null
-         */
-        inputTarget: null,
-        /**
-         * force an input class
-         * @type {Null|Function}
-         * @default null
-         */
-        inputClass: null,
-        /**
-         * Default recognizer setup when calling `Hammer()`
-         * When creating a new Manager these will be skipped.
-         * @type {Array}
-         */
-        preset: [
-          // RecognizerClass, options, [recognizeWith, ...], [requireFailure, ...]
-          [RotateRecognizer, { enable: false }],
-          [PinchRecognizer, { enable: false }, ["rotate"]],
-          [SwipeRecognizer, { direction: DIRECTION_HORIZONTAL }],
-          [PanRecognizer, { direction: DIRECTION_HORIZONTAL }, ["swipe"]],
-          [TapRecognizer],
-          [TapRecognizer, { event: "doubletap", taps: 2 }, ["tap"]],
-          [PressRecognizer]
-        ],
-        /**
-         * Some CSS properties can be used to improve the working of Hammer.
-         * Add them to this method and they will be set when creating a new Manager.
-         * @namespace
-         */
-        cssProps: {
-          /**
-           * Disables text selection to improve the dragging gesture. Mainly for desktop browsers.
-           * @type {String}
-           * @default 'none'
-           */
-          userSelect: "none",
-          /**
-           * Disable the Windows Phone grippers when pressing an element.
-           * @type {String}
-           * @default 'none'
-           */
-          touchSelect: "none",
-          /**
-           * Disables the default callout shown when you touch and hold a touch target.
-           * On iOS, when you touch and hold a touch target such as a link, Safari displays
-           * a callout containing information about the link. This property allows you to disable that callout.
-           * @type {String}
-           * @default 'none'
-           */
-          touchCallout: "none",
-          /**
-           * Specifies whether zooming is enabled. Used by IE10>
-           * @type {String}
-           * @default 'none'
-           */
-          contentZooming: "none",
-          /**
-           * Specifies that an entire element should be draggable instead of its contents. Mainly for desktop browsers.
-           * @type {String}
-           * @default 'none'
-           */
-          userDrag: "none",
-          /**
-           * Overrides the highlight color shown when the user taps a link or a JavaScript
-           * clickable element in iOS. This property obeys the alpha value, if specified.
-           * @type {String}
-           * @default 'rgba(0,0,0,0)'
-           */
-          tapHighlightColor: "rgba(0,0,0,0)"
-        }
-      };
-      var STOP = 1;
-      var FORCED_STOP = 2;
-      function Manager(element, options2) {
-        this.options = assign3({}, Hammer2.defaults, options2 || {});
-        this.options.inputTarget = this.options.inputTarget || element;
-        this.handlers = {};
-        this.session = {};
-        this.recognizers = [];
-        this.oldCssProps = {};
-        this.element = element;
-        this.input = createInputInstance(this);
-        this.touchAction = new TouchAction(this, this.options.touchAction);
-        toggleCssProps(this, true);
-        each(this.options.recognizers, function(item) {
-          var recognizer = this.add(new item[0](item[1]));
-          item[2] && recognizer.recognizeWith(item[2]);
-          item[3] && recognizer.requireFailure(item[3]);
-        }, this);
-      }
-      Manager.prototype = {
-        /**
-         * set options
-         * @param {Object} options
-         * @returns {Manager}
-         */
-        set: function(options2) {
-          assign3(this.options, options2);
-          if (options2.touchAction) {
-            this.touchAction.update();
-          }
-          if (options2.inputTarget) {
-            this.input.destroy();
-            this.input.target = options2.inputTarget;
-            this.input.init();
-          }
-          return this;
-        },
-        /**
-         * stop recognizing for this session.
-         * This session will be discarded, when a new [input]start event is fired.
-         * When forced, the recognizer cycle is stopped immediately.
-         * @param {Boolean} [force]
-         */
-        stop: function(force) {
-          this.session.stopped = force ? FORCED_STOP : STOP;
-        },
-        /**
-         * run the recognizers!
-         * called by the inputHandler function on every movement of the pointers (touches)
-         * it walks through all the recognizers and tries to detect the gesture that is being made
-         * @param {Object} inputData
-         */
-        recognize: function(inputData) {
-          var session = this.session;
-          if (session.stopped) {
-            return;
-          }
-          this.touchAction.preventDefaults(inputData);
-          var recognizer;
-          var recognizers = this.recognizers;
-          var curRecognizer = session.curRecognizer;
-          if (!curRecognizer || curRecognizer && curRecognizer.state & STATE_RECOGNIZED) {
-            curRecognizer = session.curRecognizer = null;
-          }
-          var i7 = 0;
-          while (i7 < recognizers.length) {
-            recognizer = recognizers[i7];
-            if (session.stopped !== FORCED_STOP && // 1
-            (!curRecognizer || recognizer == curRecognizer || // 2
-            recognizer.canRecognizeWith(curRecognizer))) {
-              recognizer.recognize(inputData);
-            } else {
-              recognizer.reset();
-            }
-            if (!curRecognizer && recognizer.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED)) {
-              curRecognizer = session.curRecognizer = recognizer;
-            }
-            i7++;
-          }
-        },
-        /**
-         * get a recognizer by its event name.
-         * @param {Recognizer|String} recognizer
-         * @returns {Recognizer|Null}
-         */
-        get: function(recognizer) {
-          if (recognizer instanceof Recognizer) {
-            return recognizer;
-          }
-          var recognizers = this.recognizers;
-          for (var i7 = 0; i7 < recognizers.length; i7++) {
-            if (recognizers[i7].options.event == recognizer) {
-              return recognizers[i7];
-            }
-          }
-          return null;
-        },
-        /**
-         * add a recognizer to the manager
-         * existing recognizers with the same event name will be removed
-         * @param {Recognizer} recognizer
-         * @returns {Recognizer|Manager}
-         */
-        add: function(recognizer) {
-          if (invokeArrayArg(recognizer, "add", this)) {
-            return this;
-          }
-          var existing = this.get(recognizer.options.event);
-          if (existing) {
-            this.remove(existing);
-          }
-          this.recognizers.push(recognizer);
-          recognizer.manager = this;
-          this.touchAction.update();
-          return recognizer;
-        },
-        /**
-         * remove a recognizer by name or instance
-         * @param {Recognizer|String} recognizer
-         * @returns {Manager}
-         */
-        remove: function(recognizer) {
-          if (invokeArrayArg(recognizer, "remove", this)) {
-            return this;
-          }
-          recognizer = this.get(recognizer);
-          if (recognizer) {
-            var recognizers = this.recognizers;
-            var index5 = inArray(recognizers, recognizer);
-            if (index5 !== -1) {
-              recognizers.splice(index5, 1);
-              this.touchAction.update();
-            }
-          }
-          return this;
-        },
-        /**
-         * bind event
-         * @param {String} events
-         * @param {Function} handler
-         * @returns {EventEmitter} this
-         */
-        on: function(events, handler) {
-          if (events === undefined2) {
-            return;
-          }
-          if (handler === undefined2) {
-            return;
-          }
-          var handlers = this.handlers;
-          each(splitStr(events), function(event3) {
-            handlers[event3] = handlers[event3] || [];
-            handlers[event3].push(handler);
-          });
-          return this;
-        },
-        /**
-         * unbind event, leave emit blank to remove all handlers
-         * @param {String} events
-         * @param {Function} [handler]
-         * @returns {EventEmitter} this
-         */
-        off: function(events, handler) {
-          if (events === undefined2) {
-            return;
-          }
-          var handlers = this.handlers;
-          each(splitStr(events), function(event3) {
-            if (!handler) {
-              delete handlers[event3];
-            } else {
-              handlers[event3] && handlers[event3].splice(inArray(handlers[event3], handler), 1);
-            }
-          });
-          return this;
-        },
-        /**
-         * emit event to the listeners
-         * @param {String} event
-         * @param {Object} data
-         */
-        emit: function(event3, data) {
-          if (this.options.domEvents) {
-            triggerDomEvent(event3, data);
-          }
-          var handlers = this.handlers[event3] && this.handlers[event3].slice();
-          if (!handlers || !handlers.length) {
-            return;
-          }
-          data.type = event3;
-          data.preventDefault = function() {
-            data.srcEvent.preventDefault();
-          };
-          var i7 = 0;
-          while (i7 < handlers.length) {
-            handlers[i7](data);
-            i7++;
-          }
-        },
-        /**
-         * destroy the manager and unbinds all events
-         * it doesn't unbind dom events, that is the user own responsibility
-         */
-        destroy: function() {
-          this.element && toggleCssProps(this, false);
-          this.handlers = {};
-          this.session = {};
-          this.input.destroy();
-          this.element = null;
-        }
-      };
-      function toggleCssProps(manager, add3) {
-        var element = manager.element;
-        if (!element.style) {
-          return;
-        }
-        var prop;
-        each(manager.options.cssProps, function(value, name2) {
-          prop = prefixed(element.style, name2);
-          if (add3) {
-            manager.oldCssProps[prop] = element.style[prop];
-            element.style[prop] = value;
-          } else {
-            element.style[prop] = manager.oldCssProps[prop] || "";
-          }
-        });
-        if (!add3) {
-          manager.oldCssProps = {};
-        }
-      }
-      function triggerDomEvent(event3, data) {
-        var gestureEvent = document2.createEvent("Event");
-        gestureEvent.initEvent(event3, true, true);
-        gestureEvent.gesture = data;
-        data.target.dispatchEvent(gestureEvent);
-      }
-      assign3(Hammer2, {
-        INPUT_START,
-        INPUT_MOVE,
-        INPUT_END,
-        INPUT_CANCEL,
-        STATE_POSSIBLE,
-        STATE_BEGAN,
-        STATE_CHANGED,
-        STATE_ENDED,
-        STATE_RECOGNIZED,
-        STATE_CANCELLED,
-        STATE_FAILED,
-        DIRECTION_NONE,
-        DIRECTION_LEFT,
-        DIRECTION_RIGHT,
-        DIRECTION_UP,
-        DIRECTION_DOWN,
-        DIRECTION_HORIZONTAL,
-        DIRECTION_VERTICAL,
-        DIRECTION_ALL,
-        Manager,
-        Input,
-        TouchAction,
-        TouchInput,
-        MouseInput,
-        PointerEventInput,
-        TouchMouseInput,
-        SingleTouchInput,
-        Recognizer,
-        AttrRecognizer,
-        Tap: TapRecognizer,
-        Pan: PanRecognizer,
-        Swipe: SwipeRecognizer,
-        Pinch: PinchRecognizer,
-        Rotate: RotateRecognizer,
-        Press: PressRecognizer,
-        on: addEventListeners,
-        off: removeEventListeners,
-        each,
-        merge,
-        extend: extend3,
-        assign: assign3,
-        inherit,
-        bindFn,
-        prefixed
-      });
-      var freeGlobal = typeof window2 !== "undefined" ? window2 : typeof self !== "undefined" ? self : {};
-      freeGlobal.Hammer = Hammer2;
-      if (typeof define === "function" && define.amd) {
-        define(function() {
-          return Hammer2;
-        });
-      } else if (typeof module2 != "undefined" && module2.exports) {
-        module2.exports = Hammer2;
-      } else {
-        window2[exportName] = Hammer2;
-      }
-    })(window, document, "Hammer");
-  }
-});
-
 // src/main.ts
 var main_exports = {};
 __export(main_exports, {
@@ -3327,7 +480,6 @@ var ObsidianBpmnPluginSettings = class {
     this.enable_token_simulator = true;
     this.enable_simulation_heatmap = false;
     this.enable_minimap = true;
-    this.enable_zeebe_properties = false;
     this.enable_grid = true;
     this.enable_sketchy = false;
   }
@@ -3424,10 +576,6 @@ var ObsidianBpmnPluginSettingsTab = class extends import_obsidian.PluginSettingT
       this.plugin.settings.enable_grid = value;
       this.plugin.saveData(this.plugin.settings);
     }));
-    new import_obsidian.Setting(containerEl).setName("Enable Zeebe properties").setDesc("Add the Zeebe properties in the property box. (Warning: Beta)").addToggle((toggle2) => toggle2.setValue(this.plugin.settings.enable_zeebe_properties).onChange((value) => {
-      this.plugin.settings.enable_zeebe_properties = value;
-      this.plugin.saveData(this.plugin.settings);
-    }));
   }
 };
 
@@ -3474,7 +622,7 @@ function ensureArray(obj) {
   throw new Error("must supply array");
 }
 function has(target, key) {
-  return nativeHasOwnProperty.call(target, key);
+  return !isNil(target) && nativeHasOwnProperty.call(target, key);
 }
 function find(collection, matcher) {
   const matchFn = toMatcher(matcher);
@@ -3541,8 +689,8 @@ function reduce(collection, iterator, result) {
   return result;
 }
 function every(collection, matcher) {
-  return !!reduce(collection, function(matches4, val, key) {
-    return matches4 && matcher(val, key);
+  return !!reduce(collection, function(matches3, val, key) {
+    return matches3 && matcher(val, key);
   }, true);
 }
 function some(collection, matcher) {
@@ -3641,12 +789,12 @@ function debounce(fn2, timeout) {
       return schedule(scheduledDiff);
     }
     fn2.apply(lastThis, lastArgs);
-    clear4();
+    clear3();
   }
   function schedule(timeout2) {
     timer = setTimeout(fire, timeout2);
   }
-  function clear4() {
+  function clear3() {
     if (timer) {
       clearTimeout(timer);
     }
@@ -3656,7 +804,7 @@ function debounce(fn2, timeout) {
     if (timer) {
       fire(true);
     }
-    clear4();
+    clear3();
   }
   function callback(...args) {
     lastNow = Date.now();
@@ -3667,7 +815,7 @@ function debounce(fn2, timeout) {
     }
   }
   callback.flush = flush;
-  callback.cancel = clear4;
+  callback.cancel = clear3;
   return callback;
 }
 function bind(fn2, target) {
@@ -3825,8 +973,8 @@ function isEventSubProcess(element) {
 }
 function hasEventDefinition(element, eventType) {
   var eventDefinitions = getBusinessObject(element).eventDefinitions;
-  return some(eventDefinitions, function(event3) {
-    return is(event3, eventType);
+  return some(eventDefinitions, function(event2) {
+    return is(event2, eventType);
   });
 }
 function hasErrorEventDefinition(element) {
@@ -3949,7 +1097,10 @@ function setLabel(element, text) {
   var semantic = element.businessObject, attr3 = getLabelAttr(semantic);
   if (attr3) {
     if (attr3 === "categoryValueRef") {
-      semantic["categoryValueRef"].value = text;
+      if (!semantic[attr3]) {
+        return element;
+      }
+      semantic[attr3].value = text;
     } else {
       semantic[attr3] = text;
     }
@@ -4191,7 +1342,7 @@ function extend(object, props) {
   }
   return object;
 }
-function createMatrix(a6, b5, c5, d5, e8, f6) {
+function createMatrix(a6, b4, c5, d5, e8, f6) {
   var matrix = getNode().createSVGMatrix();
   switch (arguments.length) {
     case 0:
@@ -4201,7 +1352,7 @@ function createMatrix(a6, b5, c5, d5, e8, f6) {
     case 6:
       return extend(matrix, {
         a: a6,
-        b: b5,
+        b: b4,
         c: c5,
         d: d5,
         e: e8,
@@ -4217,7 +1368,7 @@ function createTransform(matrix) {
   }
 }
 var TEXT_ENTITIES = /([&<>]{1})/g;
-var ATTR_ENTITIES = /([\n\r"]{1})/g;
+var ATTR_ENTITIES = /([&<>\n\r"]{1})/g;
 var ENTITY_REPLACEMENT = {
   "&": "&amp;",
   "<": "&lt;",
@@ -4233,9 +1384,11 @@ function escape(str, pattern) {
 function serialize(node2, output) {
   var i7, len, attrMap, attrNode, childNodes;
   switch (node2.nodeType) {
+    // TEXT
     case 3:
       output.push(escape(node2.textContent, TEXT_ENTITIES));
       break;
+    // ELEMENT
     case 1:
       output.push("<", node2.tagName);
       if (node2.hasAttributes()) {
@@ -4256,9 +1409,11 @@ function serialize(node2, output) {
         output.push("/>");
       }
       break;
+    // COMMENT
     case 8:
       output.push("<!--", escape(node2.nodeValue, TEXT_ENTITIES), "-->");
       break;
+    // CDATA
     case 4:
       output.push("<![CDATA[", node2.nodeValue, "]]>");
       break;
@@ -4340,7 +1495,7 @@ function transform(node2, transforms) {
 
 // node_modules/diagram-js/lib/util/RenderUtil.js
 function componentsToPath(elements) {
-  return elements.flat().join(",").replace(/,?([A-z]),?/g, "$1");
+  return elements.flat().join(",").replace(/,?([A-Za-z]),?/g, "$1");
 }
 function move(point) {
   return ["M", point.x, point.y];
@@ -4418,13 +1573,13 @@ function updateLine(gfx, points) {
 // node_modules/bpmn-js/lib/draw/BpmnRenderUtil.js
 var black = "hsl(225, 10%, 15%)";
 var white = "white";
-function isTypedEvent(event3, eventDefinitionType) {
-  return some(event3.eventDefinitions, function(definition) {
+function isTypedEvent(event2, eventDefinitionType) {
+  return some(event2.eventDefinitions, function(definition) {
     return definition.$type === eventDefinitionType;
   });
 }
-function isThrowEvent(event3) {
-  return event3.$type === "bpmn:IntermediateThrowEvent" || event3.$type === "bpmn:EndEvent";
+function isThrowEvent(event2) {
+  return event2.$type === "bpmn:IntermediateThrowEvent" || event2.$type === "bpmn:EndEvent";
 }
 function isCollection(element) {
   var dataObject = element.dataObjectRef;
@@ -4505,8 +1660,8 @@ function getHeight(bounds, overrides = {}) {
 }
 
 // node_modules/min-dom/dist/index.esm.js
-function _mergeNamespaces(n4, m5) {
-  m5.forEach(function(e8) {
+function _mergeNamespaces(n4, m6) {
+  m6.forEach(function(e8) {
     e8 && typeof e8 !== "string" && !Array.isArray(e8) && Object.keys(e8).forEach(function(k6) {
       if (k6 !== "default" && !(k6 in n4)) {
         var d5 = Object.getOwnPropertyDescriptor(e8, k6);
@@ -4706,10 +1861,10 @@ map2.polyline = map2.ellipse = map2.polygon = map2.circle = map2.text = map2.lin
 function parse2(html, doc) {
   if ("string" != typeof html) throw new TypeError("String expected");
   if (!doc) doc = document;
-  var m5 = /<([\w:]+)/.exec(html);
-  if (!m5) return doc.createTextNode(html);
+  var m6 = /<([\w:]+)/.exec(html);
+  if (!m6) return doc.createTextNode(html);
   html = html.replace(/^\s+|\s+$/g, "");
-  var tag = m5[1];
+  var tag = m6[1];
   if (tag == "body") {
     var el = doc.createElement("html");
     el.innerHTML = html;
@@ -4717,10 +1872,10 @@ function parse2(html, doc) {
   }
   var wrap2 = Object.prototype.hasOwnProperty.call(map2, tag) ? map2[tag] : map2._default;
   var depth = wrap2[0];
-  var prefix4 = wrap2[1];
+  var prefix3 = wrap2[1];
   var suffix = wrap2[2];
   var el = doc.createElement("div");
-  el.innerHTML = prefix4 + html + suffix;
+  el.innerHTML = prefix3 + html + suffix;
   while (depth--) el = el.lastChild;
   if (el.firstChild == el.lastChild) {
     return el.removeChild(el.firstChild);
@@ -4788,8 +1943,8 @@ var hat_1 = createCommonjsModule(function(module2) {
       res = x6 + res;
     }
     if (rem) {
-      var b5 = Math.pow(base, rem);
-      var x6 = Math.floor(Math.random() * b5).toString(base);
+      var b4 = Math.pow(base, rem);
+      var x6 = Math.floor(Math.random() * b4).toString(base);
       res = x6 + res;
     }
     var parsed = parseInt(res, base);
@@ -4833,10 +1988,10 @@ function Ids(seed) {
 Ids.prototype.next = function(element) {
   return this._seed(element || true);
 };
-Ids.prototype.nextPrefixed = function(prefix4, element) {
+Ids.prototype.nextPrefixed = function(prefix3, element) {
   var id;
   do {
-    id = prefix4 + this.next(true);
+    id = prefix3 + this.next(true);
   } while (this.assigned(id));
   this.claim(id, element);
   return id;
@@ -4887,13 +2042,13 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       strokeWidth: 2
     });
   }
-  function addMarker(id, options2) {
+  function addMarker(id, options) {
     var {
       ref = { x: 0, y: 0 },
       scale = 1,
       element,
       parentGfx = canvas._svg
-    } = options2;
+    } = options;
     var marker2 = create("marker", {
       id,
       viewBox: "0 0 20 20",
@@ -5186,164 +2341,164 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       }
       return circle;
     },
-    "bpmn:EscalationEventDefinition": function(parentGfx, event3, attrs = {}, isThrowing) {
+    "bpmn:EscalationEventDefinition": function(parentGfx, event2, attrs = {}, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_ESCALATION", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.5,
           my: 0.2
         }
       });
-      var fill = isThrowing ? getStrokeColor(event3, defaultStrokeColor, attrs.stroke) : getFillColor(event3, defaultFillColor, attrs.fill);
+      var fill = isThrowing ? getStrokeColor(event2, defaultStrokeColor, attrs.stroke) : getFillColor(event2, defaultFillColor, attrs.fill);
       return drawPath2(parentGfx, pathData, {
         fill,
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke),
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke),
         strokeWidth: 1
       });
     },
-    "bpmn:ConditionalEventDefinition": function(parentGfx, event3, attrs = {}) {
+    "bpmn:ConditionalEventDefinition": function(parentGfx, event2, attrs = {}) {
       var pathData = pathMap.getScaledPath("EVENT_CONDITIONAL", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.5,
           my: 0.222
         }
       });
       return drawPath2(parentGfx, pathData, {
-        fill: getFillColor(event3, defaultFillColor, attrs.fill),
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke),
+        fill: getFillColor(event2, defaultFillColor, attrs.fill),
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke),
         strokeWidth: 1
       });
     },
-    "bpmn:LinkEventDefinition": function(parentGfx, event3, attrs = {}, isThrowing) {
+    "bpmn:LinkEventDefinition": function(parentGfx, event2, attrs = {}, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_LINK", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.57,
           my: 0.263
         }
       });
-      var fill = isThrowing ? getStrokeColor(event3, defaultStrokeColor, attrs.stroke) : getFillColor(event3, defaultFillColor, attrs.fill);
+      var fill = isThrowing ? getStrokeColor(event2, defaultStrokeColor, attrs.stroke) : getFillColor(event2, defaultFillColor, attrs.fill);
       return drawPath2(parentGfx, pathData, {
         fill,
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke),
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke),
         strokeWidth: 1
       });
     },
-    "bpmn:ErrorEventDefinition": function(parentGfx, event3, attrs = {}, isThrowing) {
+    "bpmn:ErrorEventDefinition": function(parentGfx, event2, attrs = {}, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_ERROR", {
         xScaleFactor: 1.1,
         yScaleFactor: 1.1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.2,
           my: 0.722
         }
       });
-      var fill = isThrowing ? getStrokeColor(event3, defaultStrokeColor, attrs.stroke) : getFillColor(event3, defaultFillColor, attrs.fill);
+      var fill = isThrowing ? getStrokeColor(event2, defaultStrokeColor, attrs.stroke) : getFillColor(event2, defaultFillColor, attrs.fill);
       return drawPath2(parentGfx, pathData, {
         fill,
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke),
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke),
         strokeWidth: 1
       });
     },
-    "bpmn:CancelEventDefinition": function(parentGfx, event3, attrs = {}, isThrowing) {
+    "bpmn:CancelEventDefinition": function(parentGfx, event2, attrs = {}, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_CANCEL_45", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.638,
           my: -0.055
         }
       });
-      var fill = isThrowing ? getStrokeColor(event3, defaultStrokeColor, attrs.stroke) : "none";
+      var fill = isThrowing ? getStrokeColor(event2, defaultStrokeColor, attrs.stroke) : "none";
       var path = drawPath2(parentGfx, pathData, {
         fill,
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke),
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke),
         strokeWidth: 1
       });
       rotate(path, 45);
       return path;
     },
-    "bpmn:CompensateEventDefinition": function(parentGfx, event3, attrs = {}, isThrowing) {
+    "bpmn:CompensateEventDefinition": function(parentGfx, event2, attrs = {}, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_COMPENSATION", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.22,
           my: 0.5
         }
       });
-      var fill = isThrowing ? getStrokeColor(event3, defaultStrokeColor, attrs.stroke) : getFillColor(event3, defaultFillColor, attrs.fill);
+      var fill = isThrowing ? getStrokeColor(event2, defaultStrokeColor, attrs.stroke) : getFillColor(event2, defaultFillColor, attrs.fill);
       return drawPath2(parentGfx, pathData, {
         fill,
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke),
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke),
         strokeWidth: 1
       });
     },
-    "bpmn:SignalEventDefinition": function(parentGfx, event3, attrs = {}, isThrowing) {
+    "bpmn:SignalEventDefinition": function(parentGfx, event2, attrs = {}, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_SIGNAL", {
         xScaleFactor: 0.9,
         yScaleFactor: 0.9,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.5,
           my: 0.2
         }
       });
-      var fill = isThrowing ? getStrokeColor(event3, defaultStrokeColor, attrs.stroke) : getFillColor(event3, defaultFillColor, attrs.fill);
+      var fill = isThrowing ? getStrokeColor(event2, defaultStrokeColor, attrs.stroke) : getFillColor(event2, defaultFillColor, attrs.fill);
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill,
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke)
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke)
       });
     },
-    "bpmn:MultipleEventDefinition": function(parentGfx, event3, attrs = {}, isThrowing) {
+    "bpmn:MultipleEventDefinition": function(parentGfx, event2, attrs = {}, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_MULTIPLE", {
         xScaleFactor: 1.1,
         yScaleFactor: 1.1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.222,
           my: 0.36
         }
       });
-      var fill = isThrowing ? getStrokeColor(event3, defaultStrokeColor, attrs.stroke) : getFillColor(event3, defaultFillColor, attrs.fill);
+      var fill = isThrowing ? getStrokeColor(event2, defaultStrokeColor, attrs.stroke) : getFillColor(event2, defaultFillColor, attrs.fill);
       return drawPath2(parentGfx, pathData, {
         fill,
         strokeWidth: 1
       });
     },
-    "bpmn:ParallelMultipleEventDefinition": function(parentGfx, event3, attrs = {}) {
+    "bpmn:ParallelMultipleEventDefinition": function(parentGfx, event2, attrs = {}) {
       var pathData = pathMap.getScaledPath("EVENT_PARALLEL_MULTIPLE", {
         xScaleFactor: 1.2,
         yScaleFactor: 1.2,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.458,
           my: 0.194
         }
       });
       return drawPath2(parentGfx, pathData, {
-        fill: getFillColor(event3, defaultFillColor, attrs.fill),
-        stroke: getStrokeColor(event3, defaultStrokeColor, attrs.stroke),
+        fill: getFillColor(event2, defaultFillColor, attrs.fill),
+        stroke: getStrokeColor(event2, defaultStrokeColor, attrs.stroke),
         strokeWidth: 1
       });
     },
@@ -5803,7 +2958,7 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       if (!cancelActivity) {
         attrs.strokeDasharray = "6";
       }
-      var event3 = renderEvent(parentGfx, element, attrs);
+      var event2 = renderEvent(parentGfx, element, attrs);
       drawCircle(parentGfx, element.width, element.height, INNER_OUTER_DIST, {
         ...attrs,
         fill: "none"
@@ -5811,7 +2966,7 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
       if (renderIcon) {
         renderEventIcon(element, parentGfx, attrs);
       }
-      return event3;
+      return event2;
     },
     "bpmn:BusinessRuleTask": function(parentGfx, element, attrs = {}) {
       attrs = pickAttrs(attrs, [
@@ -5962,14 +3117,14 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
         "fill",
         "stroke"
       ]);
-      var event3 = renderEvent(parentGfx, element, {
+      var event2 = renderEvent(parentGfx, element, {
         ...attrs,
         strokeWidth: 4
       });
       if (renderIcon) {
         renderEventIcon(element, parentGfx, attrs);
       }
-      return event3;
+      return event2;
     },
     "bpmn:EventBasedGateway": function(parentGfx, element, attrs = {}) {
       attrs = pickAttrs(attrs, [
@@ -6435,11 +3590,11 @@ function BpmnRenderer(config, eventBus, styles, pathMap, canvas, textRenderer, p
           strokeDasharray: "6"
         };
       }
-      var event3 = renderEvent(parentGfx, element, attrs);
+      var event2 = renderEvent(parentGfx, element, attrs);
       if (renderIcon) {
         renderEventIcon(element, parentGfx, attrs);
       }
-      return event3;
+      return event2;
     },
     "bpmn:SubProcess": function(parentGfx, element, attrs = {}) {
       if (isExpanded(element)) {
@@ -6601,27 +3756,27 @@ BpmnRenderer.$inject = [
 BpmnRenderer.prototype.canRender = function(element) {
   return is(element, "bpmn:BaseElement");
 };
-BpmnRenderer.prototype.drawShape = function(parentGfx, element, attrs = {}) {
-  var { type } = element;
+BpmnRenderer.prototype.drawShape = function(parentGfx, shape, attrs = {}) {
+  var { type } = shape;
   var handler = this._renderer(type);
-  return handler(parentGfx, element, attrs);
+  return handler(parentGfx, shape, attrs);
 };
-BpmnRenderer.prototype.drawConnection = function(parentGfx, element, attrs = {}) {
-  var { type } = element;
+BpmnRenderer.prototype.drawConnection = function(parentGfx, connection, attrs = {}) {
+  var { type } = connection;
   var handler = this._renderer(type);
-  return handler(parentGfx, element, attrs);
+  return handler(parentGfx, connection, attrs);
 };
-BpmnRenderer.prototype.getShapePath = function(element) {
-  if (is(element, "bpmn:Event")) {
-    return getCirclePath(element);
+BpmnRenderer.prototype.getShapePath = function(shape) {
+  if (is(shape, "bpmn:Event")) {
+    return getCirclePath(shape);
   }
-  if (is(element, "bpmn:Activity")) {
-    return getRoundRectPath(element, TASK_BORDER_RADIUS);
+  if (is(shape, "bpmn:Activity")) {
+    return getRoundRectPath(shape, TASK_BORDER_RADIUS);
   }
-  if (is(element, "bpmn:Gateway")) {
-    return getDiamondPath(element);
+  if (is(shape, "bpmn:Gateway")) {
+    return getDiamondPath(shape);
   }
-  return getRectPath(element);
+  return getRectPath(shape);
 };
 function pickAttrs(attrs, keys2 = []) {
   return keys2.reduce((pickedAttrs, key) => {
@@ -6673,6 +3828,7 @@ function getTextBBox(text, fakeText) {
     }
     return bbox;
   } catch (e8) {
+    console.log(e8);
     return { width: 0, height: 0 };
   }
 }
@@ -6754,14 +3910,14 @@ function Text(config) {
     align: "center-top"
   }, config || {});
 }
-Text.prototype.createText = function(text, options2) {
-  return this.layoutText(text, options2).element;
+Text.prototype.createText = function(text, options) {
+  return this.layoutText(text, options).element;
 };
-Text.prototype.getDimensions = function(text, options2) {
-  return this.layoutText(text, options2).dimensions;
+Text.prototype.getDimensions = function(text, options) {
+  return this.layoutText(text, options).dimensions;
 };
-Text.prototype.layoutText = function(text, options2) {
-  var box = assign({}, this._config.size, options2.box), style = assign({}, this._config.style, options2.style), align = parseAlign(options2.align || this._config.align), padding = parsePadding(options2.padding !== void 0 ? options2.padding : this._config.padding), fitBox = options2.fitBox || false;
+Text.prototype.layoutText = function(text, options) {
+  var box = assign({}, this._config.size, options.box), style = assign({}, this._config.style, options.style), align = parseAlign(options.align || this._config.align), padding = parsePadding(options.padding !== void 0 ? options.padding : this._config.padding), fitBox = options.fitBox || false;
   var lineHeight = getLineHeight(style);
   var lines = text.split(/\u00AD?\r?\n/), layouted = [];
   var maxWidth = box.width - padding.left - padding.right;
@@ -6870,8 +4026,8 @@ function TextRenderer(config) {
       height: Math.max(MIN_TEXT_ANNOTATION_HEIGHT, Math.round(layoutedDimensions.height))
     };
   };
-  this.createText = function(text, options2) {
-    return textUtil.createText(text, options2 || {});
+  this.createText = function(text, options) {
+    return textUtil.createText(text, options || {});
   };
   this.getDefaultStyle = function() {
     return defaultStyle;
@@ -7158,9 +4314,9 @@ function PathMap() {
 }
 var tokenRegex = /\{([^{}]+)\}/g;
 var objNotationRegex = /(?:(?:^|\.)(.+?)(?=\[|\.|$|\()|\[('|")(.+?)\2\])(\(\))?/g;
-function replacer(all3, key, obj) {
+function replacer(all2, key, obj) {
   var res = obj;
-  key.replace(objNotationRegex, function(all4, name2, quote, quotedName, isFunc) {
+  key.replace(objNotationRegex, function(all3, name2, quote, quotedName, isFunc) {
     name2 = name2 || quotedName;
     if (res) {
       if (name2 in res) {
@@ -7169,12 +4325,12 @@ function replacer(all3, key, obj) {
       typeof res == "function" && isFunc && (res = res());
     }
   });
-  res = (res == null || res == obj ? all3 : res) + "";
+  res = (res == null || res == obj ? all2 : res) + "";
   return res;
 }
 function format(str, obj) {
-  return String(str).replace(tokenRegex, function(all3, key) {
-    return replacer(all3, key, obj);
+  return String(str).replace(tokenRegex, function(all2, key) {
+    return replacer(all2, key, obj);
   });
 }
 
@@ -7200,12 +4356,12 @@ var translate_default = {
 };
 
 // node_modules/diagram-js/lib/util/Geometry.js
-function pointDistance(a6, b5) {
-  if (!a6 || !b5) {
+function pointDistance(a6, b4) {
+  if (!a6 || !b4) {
     return -1;
   }
   return Math.sqrt(
-    Math.pow(a6.x - b5.x, 2) + Math.pow(a6.y - b5.y, 2)
+    Math.pow(a6.x - b4.x, 2) + Math.pow(a6.y - b4.y, 2)
   );
 }
 function pointsOnLine(p5, q6, r7, accuracy) {
@@ -7219,7 +4375,7 @@ function pointsOnLine(p5, q6, r7, accuracy) {
   return Math.abs(val / dist) <= accuracy;
 }
 var ALIGNED_THRESHOLD = 2;
-function pointsAligned(a6, b5) {
+function pointsAligned(a6, b4) {
   var points = Array.from(arguments).flat();
   const axisMap = {
     "x": "v",
@@ -7310,18 +4466,18 @@ function parsePathString(pathString) {
     data = clone2(pathString);
   }
   if (!data.length) {
-    String(pathString).replace(pathCommand, function(a6, b5, c5) {
-      var params = [], name2 = b5.toLowerCase();
-      c5.replace(pathValues, function(a7, b6) {
-        b6 && params.push(+b6);
+    String(pathString).replace(pathCommand, function(a6, b4, c5) {
+      var params = [], name2 = b4.toLowerCase();
+      c5.replace(pathValues, function(a7, b5) {
+        b5 && params.push(+b5);
       });
       if (name2 == "m" && params.length > 2) {
-        data.push([b5, ...params.splice(0, 2)]);
+        data.push([b4, ...params.splice(0, 2)]);
         name2 = "l";
-        b5 = b5 == "m" ? "l" : "L";
+        b4 = b4 == "m" ? "l" : "L";
       }
       while (params.length >= paramCounts[name2]) {
-        data.push([b5, ...params.splice(0, paramCounts[name2])]);
+        data.push([b4, ...params.splice(0, paramCounts[name2])]);
         if (!paramCounts[name2]) {
           break;
         }
@@ -7448,21 +4604,21 @@ function findBezierIntersections(bez1, bez2, justCount) {
   }
   for (i7 = 0; i7 < n1; i7++) {
     for (var j6 = 0; j6 < n22; j6++) {
-      var di = dots1[i7], di1 = dots1[i7 + 1], dj = dots2[j6], dj1 = dots2[j6 + 1], ci = abs(di1.x - di.x) < 0.01 ? "y" : "x", cj = abs(dj1.x - dj.x) < 0.01 ? "y" : "x", is6 = intersectLines(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y), key;
-      if (is6) {
-        key = is6.x.toFixed(9) + "#" + is6.y.toFixed(9);
+      var di = dots1[i7], di1 = dots1[i7 + 1], dj = dots2[j6], dj1 = dots2[j6 + 1], ci = abs(di1.x - di.x) < 0.01 ? "y" : "x", cj = abs(dj1.x - dj.x) < 0.01 ? "y" : "x", is8 = intersectLines(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y), key;
+      if (is8) {
+        key = is8.x.toFixed(9) + "#" + is8.y.toFixed(9);
         if (xy[key]) {
           continue;
         }
         xy[key] = true;
-        var t1 = di.t + abs((is6[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t), t22 = dj.t + abs((is6[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
+        var t1 = di.t + abs((is8[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t), t22 = dj.t + abs((is8[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
         if (t1 >= 0 && t1 <= 1 && t22 >= 0 && t22 <= 1) {
           if (justCount) {
             res++;
           } else {
             res.push({
-              x: is6.x,
-              y: is6.y,
+              x: is8.x,
+              y: is8.y,
               t1,
               t2: t22
             });
@@ -7688,37 +4844,37 @@ function arcToCurve(x1, y1, rx, ry, angle, large_arc_flag, sweep_flag, x22, y22,
   }
 }
 function curveBBox(x0, y0, x1, y1, x22, y22, x32, y32) {
-  var tvalues = [], bounds = [[], []], a6, b5, c5, t7, t1, t22, b2ac, sqrtb2ac;
+  var tvalues = [], bounds = [[], []], a6, b4, c5, t7, t1, t22, b2ac, sqrtb2ac;
   for (var i7 = 0; i7 < 2; ++i7) {
     if (i7 == 0) {
-      b5 = 6 * x0 - 12 * x1 + 6 * x22;
+      b4 = 6 * x0 - 12 * x1 + 6 * x22;
       a6 = -3 * x0 + 9 * x1 - 9 * x22 + 3 * x32;
       c5 = 3 * x1 - 3 * x0;
     } else {
-      b5 = 6 * y0 - 12 * y1 + 6 * y22;
+      b4 = 6 * y0 - 12 * y1 + 6 * y22;
       a6 = -3 * y0 + 9 * y1 - 9 * y22 + 3 * y32;
       c5 = 3 * y1 - 3 * y0;
     }
     if (abs(a6) < 1e-12) {
-      if (abs(b5) < 1e-12) {
+      if (abs(b4) < 1e-12) {
         continue;
       }
-      t7 = -c5 / b5;
+      t7 = -c5 / b4;
       if (0 < t7 && t7 < 1) {
         tvalues.push(t7);
       }
       continue;
     }
-    b2ac = b5 * b5 - 4 * c5 * a6;
+    b2ac = b4 * b4 - 4 * c5 * a6;
     sqrtb2ac = math.sqrt(b2ac);
     if (b2ac < 0) {
       continue;
     }
-    t1 = (-b5 + sqrtb2ac) / (2 * a6);
+    t1 = (-b4 + sqrtb2ac) / (2 * a6);
     if (0 < t1 && t1 < 1) {
       tvalues.push(t1);
     }
-    t22 = (-b5 - sqrtb2ac) / (2 * a6);
+    t22 = (-b4 - sqrtb2ac) / (2 * a6);
     if (0 < t22 && t22 < 1) {
       tvalues.push(t22);
     }
@@ -7939,8 +5095,8 @@ function getElementLineIntersection(elementPath, linePath2, cropStart) {
   }
   return null;
 }
-function getIntersections(a6, b5) {
-  return findPathIntersections(a6, b5);
+function getIntersections(a6, b4) {
+  return findPathIntersections(a6, b4);
 }
 function filterRedundantWaypoints(waypoints) {
   waypoints = waypoints.slice();
@@ -7957,8 +5113,8 @@ function filterRedundantWaypoints(waypoints) {
   }
   return waypoints;
 }
-function distance(a6, b5) {
-  return Math.sqrt(Math.pow(a6.x - b5.x, 2) + Math.pow(a6.y - b5.y, 2));
+function distance(a6, b4) {
+  return Math.sqrt(Math.pow(a6.x - b4.x, 2) + Math.pow(a6.y - b4.y, 2));
 }
 
 // node_modules/bpmn-js/lib/import/Util.js
@@ -8326,9 +5482,9 @@ function copyObject(src1, src2) {
 }
 
 // node_modules/diagram-js/lib/util/IdGenerator.js
-function IdGenerator(prefix4) {
+function IdGenerator(prefix3) {
   this._counter = 0;
-  this._prefix = (prefix4 ? prefix4 + "-" : "") + Math.floor(Math.random() * 1e9) + "-";
+  this._prefix = (prefix3 ? prefix3 + "-" : "") + Math.floor(Math.random() * 1e9) + "-";
 }
 IdGenerator.prototype.next = function() {
   return this._prefix + ++this._counter;
@@ -8359,24 +5515,24 @@ Overlays.$inject = [
   "canvas",
   "elementRegistry"
 ];
-Overlays.prototype.get = function(search) {
-  if (isString(search)) {
-    search = { id: search };
+Overlays.prototype.get = function(search2) {
+  if (isString(search2)) {
+    search2 = { id: search2 };
   }
-  if (isString(search.element)) {
-    search.element = this._elementRegistry.get(search.element);
+  if (isString(search2.element)) {
+    search2.element = this._elementRegistry.get(search2.element);
   }
-  if (search.element) {
-    var container = this._getOverlayContainer(search.element, true);
+  if (search2.element) {
+    var container = this._getOverlayContainer(search2.element, true);
     if (container) {
-      return search.type ? filter(container.overlays, matchPattern({ type: search.type })) : container.overlays.slice();
+      return search2.type ? filter(container.overlays, matchPattern({ type: search2.type })) : container.overlays.slice();
     } else {
       return [];
     }
-  } else if (search.type) {
-    return filter(this._overlays, matchPattern({ type: search.type }));
+  } else if (search2.type) {
+    return filter(this._overlays, matchPattern({ type: search2.type }));
   } else {
-    return search.id ? this._overlays[search.id] : null;
+    return search2.id ? this._overlays[search2.id] : null;
   }
 };
 Overlays.prototype.add = function(element, type, overlay) {
@@ -8586,11 +5742,11 @@ Overlays.prototype._init = function() {
     self2._updateOverlaysVisibilty(viewbox);
     self2.show();
   }
-  eventBus.on("canvas.viewbox.changing", function(event3) {
+  eventBus.on("canvas.viewbox.changing", function(event2) {
     self2.hide();
   });
-  eventBus.on("canvas.viewbox.changed", function(event3) {
-    updateViewbox(event3.viewbox);
+  eventBus.on("canvas.viewbox.changed", function(event2) {
+    updateViewbox(event2.viewbox);
   });
   eventBus.on(["shape.remove", "connection.remove"], function(e8) {
     var element = e8.element;
@@ -8648,8 +5804,8 @@ function setVisible(el, visible) {
 }
 function setTransform(el, transform4) {
   el.style["transform-origin"] = "top left";
-  ["", "-ms-", "-webkit-"].forEach(function(prefix4) {
-    el.style[prefix4 + "transform"] = transform4;
+  ["", "-ms-", "-webkit-"].forEach(function(prefix3) {
+    el.style[prefix3 + "transform"] = transform4;
   });
 }
 
@@ -8661,28 +5817,28 @@ var overlays_default = {
 
 // node_modules/diagram-js/lib/features/change-support/ChangeSupport.js
 function ChangeSupport(eventBus, canvas, elementRegistry, graphicsFactory) {
-  eventBus.on("element.changed", function(event3) {
-    var element = event3.element;
+  eventBus.on("element.changed", function(event2) {
+    var element = event2.element;
     if (element.parent || element === canvas.getRootElement()) {
-      event3.gfx = elementRegistry.getGraphics(element);
+      event2.gfx = elementRegistry.getGraphics(element);
     }
-    if (!event3.gfx) {
+    if (!event2.gfx) {
       return;
     }
-    eventBus.fire(getType(element) + ".changed", event3);
+    eventBus.fire(getType(element) + ".changed", event2);
   });
-  eventBus.on("elements.changed", function(event3) {
-    var elements = event3.elements;
+  eventBus.on("elements.changed", function(event2) {
+    var elements = event2.elements;
     elements.forEach(function(e8) {
       eventBus.fire("element.changed", { element: e8 });
     });
     graphicsFactory.updateContainments(elements);
   });
-  eventBus.on("shape.changed", function(event3) {
-    graphicsFactory.update("shape", event3.element, event3.gfx);
+  eventBus.on("shape.changed", function(event2) {
+    graphicsFactory.update("shape", event2.element, event2.gfx);
   });
-  eventBus.on("connection.changed", function(event3) {
-    graphicsFactory.update("connection", event3.element, event3.gfx);
+  eventBus.on("connection.changed", function(event2) {
+    graphicsFactory.update("connection", event2.element, event2.gfx);
   });
 }
 ChangeSupport.$inject = [
@@ -8705,8 +5861,8 @@ function CommandInterceptor(eventBus) {
 }
 CommandInterceptor.$inject = ["eventBus"];
 function unwrapEvent(fn2, that) {
-  return function(event3) {
-    return fn2.call(that || null, event3.context, event3.command, event3);
+  return function(event2) {
+    return fn2.call(that || null, event2.context, event2.command, event2);
   };
 }
 CommandInterceptor.prototype.on = function(events, hook, priority, handlerFn, unwrap, that) {
@@ -8734,8 +5890,8 @@ CommandInterceptor.prototype.on = function(events, hook, priority, handlerFn, un
     events = [events];
   }
   var eventBus = this._eventBus;
-  forEach(events, function(event3) {
-    var fullEvent = ["commandStack", event3, hook].filter(function(e8) {
+  forEach(events, function(event2) {
+    var fullEvent = ["commandStack", event2, hook].filter(function(e8) {
       return e8;
     }).join(".");
     eventBus.on(fullEvent, priority, unwrap ? unwrapEvent(handlerFn, that) : handlerFn, that);
@@ -8767,16 +5923,16 @@ function createHook(hook) {
 // node_modules/diagram-js/lib/features/root-elements/RootElementsBehavior.js
 function RootElementsBehavior(canvas, injector) {
   injector.invoke(CommandInterceptor, this);
-  this.executed(function(event3) {
-    var context = event3.context;
+  this.executed(function(event2) {
+    var context = event2.context;
     if (context.rootElement) {
       canvas.setRootElement(context.rootElement);
     } else {
       context.rootElement = canvas.getRootElement();
     }
   });
-  this.revert(function(event3) {
-    var context = event3.context;
+  this.revert(function(event2) {
+    var context = event2.context;
     if (context.rootElement) {
       canvas.setRootElement(context.rootElement);
     }
@@ -8844,8 +6000,8 @@ function DrilldownBreadcrumbs(eventBus, elementRegistry, canvas) {
   var containerClasses = classes2(container);
   container.appendChild(breadcrumbs);
   var businessObjectParents = [];
-  eventBus.on("element.changed", function(event3) {
-    var shape = event3.element, businessObject = getBusinessObject(shape);
+  eventBus.on("element.changed", function(event2) {
+    var shape = event2.element, businessObject = getBusinessObject(shape);
     var isPresent = find(businessObjectParents, function(element) {
       return element === businessObject;
     });
@@ -8884,8 +6040,8 @@ function DrilldownBreadcrumbs(eventBus, elementRegistry, canvas) {
       breadcrumbs.appendChild(element2);
     });
   }
-  eventBus.on("root.set", function(event3) {
-    updateBreadcrumbs(event3.element);
+  eventBus.on("root.set", function(event2) {
+    updateBreadcrumbs(event2.element);
   });
 }
 DrilldownBreadcrumbs.$inject = ["eventBus", "elementRegistry", "canvas"];
@@ -8904,8 +6060,8 @@ function getBusinessObjectParentChain(child) {
 function DrilldownCentering(eventBus, canvas) {
   var currentRoot = null;
   var positionMap = new Map2();
-  eventBus.on("root.set", function(event3) {
-    var newRoot = event3.element;
+  eventBus.on("root.set", function(event2) {
+    var newRoot = event2.element;
     var currentViewbox = canvas.viewbox();
     var storedViewbox = positionMap.get(newRoot);
     positionMap.set(currentRoot, {
@@ -9253,251 +6409,30 @@ var drilldown_default = {
   subprocessCompatibility: ["type", SubprocessCompatibility]
 };
 
-// node_modules/diagram-js/lib/features/outline/Outline.js
-var LOW_PRIORITY3 = 500;
-var DEFAULT_PRIORITY2 = 1e3;
-function Outline(eventBus, styles) {
-  this._eventBus = eventBus;
-  this.offset = 5;
-  var OUTLINE_STYLE = styles.cls("djs-outline", ["no-fill"]);
-  var self2 = this;
-  function createOutline(gfx) {
-    var outline = create("rect");
-    attr(outline, assign({
-      x: 0,
-      y: 0,
-      rx: 4,
-      width: 100,
-      height: 100
-    }, OUTLINE_STYLE));
-    return outline;
-  }
-  eventBus.on(["shape.added", "shape.changed"], LOW_PRIORITY3, function(event3) {
-    var element = event3.element, gfx = event3.gfx;
-    var outline = query(".djs-outline", gfx);
-    if (!outline) {
-      outline = self2.getOutline(element) || createOutline(gfx);
-      append(gfx, outline);
-    }
-    self2.updateShapeOutline(outline, element);
-  });
-  eventBus.on(["connection.added", "connection.changed"], function(event3) {
-    var element = event3.element, gfx = event3.gfx;
-    var outline = query(".djs-outline", gfx);
-    if (!outline) {
-      outline = createOutline(gfx);
-      append(gfx, outline);
-    }
-    self2.updateConnectionOutline(outline, element);
-  });
-}
-Outline.prototype.updateShapeOutline = function(outline, element) {
-  var updated = false;
-  var providers = this._getProviders();
-  if (providers.length) {
-    forEach(providers, function(provider) {
-      updated = updated || provider.updateOutline(element, outline);
-    });
-  }
-  if (!updated) {
-    attr(outline, {
-      x: -this.offset,
-      y: -this.offset,
-      width: element.width + this.offset * 2,
-      height: element.height + this.offset * 2
-    });
-  }
-};
-Outline.prototype.updateConnectionOutline = function(outline, connection) {
-  var bbox = getBBox(connection);
-  attr(outline, {
-    x: bbox.x - this.offset,
-    y: bbox.y - this.offset,
-    width: bbox.width + this.offset * 2,
-    height: bbox.height + this.offset * 2
-  });
-};
-Outline.prototype.registerProvider = function(priority, provider) {
-  if (!provider) {
-    provider = priority;
-    priority = DEFAULT_PRIORITY2;
-  }
-  this._eventBus.on("outline.getProviders", priority, function(event3) {
-    event3.providers.push(provider);
-  });
-};
-Outline.prototype._getProviders = function() {
-  var event3 = this._eventBus.createEvent({
-    type: "outline.getProviders",
-    providers: []
-  });
-  this._eventBus.fire(event3);
-  return event3.providers;
-};
-Outline.prototype.getOutline = function(element) {
-  var outline;
-  var providers = this._getProviders();
-  forEach(providers, function(provider) {
-    if (!isFunction(provider.getOutline)) {
-      return;
-    }
-    outline = outline || provider.getOutline(element);
-  });
-  return outline;
-};
-Outline.$inject = ["eventBus", "styles", "elementRegistry"];
-
-// node_modules/diagram-js/lib/features/outline/index.js
-var outline_default = {
-  __init__: ["outline"],
-  outline: ["type", Outline]
-};
-
-// node_modules/bpmn-js/lib/features/outline/OutlineUtil.js
-var DATA_OBJECT_REFERENCE_OUTLINE_PATH = "M44.7648 11.3263L36.9892 2.64074C36.0451 1.58628 34.5651 0.988708 33.1904 0.988708H5.98667C3.22688 0.988708 0.989624 3.34892 0.989624 6.26039V55.0235C0.989624 57.9349 3.22688 60.2952 5.98667 60.2952H40.966C43.7257 60.2952 45.963 57.9349 45.963 55.0235V14.9459C45.963 13.5998 45.6407 12.3048 44.7648 11.3263Z";
-var DATA_STORE_REFERENCE_OUTLINE_PATH = "M1.03845 48.1347C1.03845 49.3511 1.07295 50.758 1.38342 52.064C1.69949 53.3938 2.32428 54.7154 3.56383 55.6428C6.02533 57.4841 10.1161 58.7685 14.8212 59.6067C19.5772 60.4538 25.1388 60.8738 30.6831 60.8738C36.2276 60.8738 41.7891 60.4538 46.545 59.6067C51.2504 58.7687 55.3412 57.4842 57.8028 55.6429C59.0424 54.7156 59.6673 53.3938 59.9834 52.064C60.2938 50.7579 60.3285 49.351 60.3285 48.1344V13.8415C60.3285 12.6249 60.2938 11.218 59.9834 9.91171C59.6673 8.58194 59.0423 7.2602 57.8027 6.33294C55.341 4.49168 51.2503 3.20723 46.545 2.36914C41.7891 1.522 36.2276 1.10204 30.6831 1.10205C25.1388 1.10206 19.5772 1.52206 14.8213 2.36923C10.1162 3.20734 6.02543 4.49183 3.5639 6.33314C2.32433 7.26038 1.69951 8.58206 1.38343 9.91181C1.07295 11.2179 1.03845 12.6247 1.03845 13.8411V48.1347Z";
-var DATA_OBJECT_REFERENCE_STANDARD_SIZE = { width: 36, height: 50 };
-var DATA_STORE_REFERENCE_STANDARD_SIZE = { width: 50, height: 50 };
-function createPath(path, attrs, OUTLINE_STYLE) {
-  return create("path", {
-    d: path,
-    strokeWidth: 2,
-    transform: `translate(${attrs.x}, ${attrs.y})`,
-    ...OUTLINE_STYLE
-  });
-}
-
-// node_modules/bpmn-js/lib/features/outline/OutlineProvider.js
-var DEFAULT_OFFSET = 5;
-function OutlineProvider(outline, styles) {
-  this._styles = styles;
-  outline.registerProvider(this);
-}
-OutlineProvider.$inject = [
-  "outline",
-  "styles"
-];
-OutlineProvider.prototype.getOutline = function(element) {
-  const OUTLINE_STYLE = this._styles.cls("djs-outline", ["no-fill"]);
-  var outline;
-  if (isLabel(element)) {
-    return;
-  }
-  if (is(element, "bpmn:Gateway")) {
-    outline = create("rect");
-    assign(outline.style, {
-      "transform-box": "fill-box",
-      "transform": "rotate(45deg)",
-      "transform-origin": "center"
-    });
-    attr(outline, assign({
-      x: 2,
-      y: 2,
-      rx: 4,
-      width: element.width - 4,
-      height: element.height - 4
-    }, OUTLINE_STYLE));
-  } else if (isAny(element, ["bpmn:Task", "bpmn:SubProcess", "bpmn:Group", "bpmn:CallActivity"])) {
-    outline = create("rect");
-    attr(outline, assign({
-      x: -DEFAULT_OFFSET,
-      y: -DEFAULT_OFFSET,
-      rx: 14,
-      width: element.width + DEFAULT_OFFSET * 2,
-      height: element.height + DEFAULT_OFFSET * 2
-    }, OUTLINE_STYLE));
-  } else if (is(element, "bpmn:EndEvent")) {
-    outline = create("circle");
-    attr(outline, assign({
-      cx: element.width / 2,
-      cy: element.height / 2,
-      r: element.width / 2 + DEFAULT_OFFSET + 1
-    }, OUTLINE_STYLE));
-  } else if (is(element, "bpmn:Event")) {
-    outline = create("circle");
-    attr(outline, assign({
-      cx: element.width / 2,
-      cy: element.height / 2,
-      r: element.width / 2 + DEFAULT_OFFSET
-    }, OUTLINE_STYLE));
-  } else if (is(element, "bpmn:DataObjectReference") && isStandardSize(element, "bpmn:DataObjectReference")) {
-    outline = createPath(
-      DATA_OBJECT_REFERENCE_OUTLINE_PATH,
-      { x: -6, y: -6 },
-      OUTLINE_STYLE
-    );
-  } else if (is(element, "bpmn:DataStoreReference") && isStandardSize(element, "bpmn:DataStoreReference")) {
-    outline = createPath(
-      DATA_STORE_REFERENCE_OUTLINE_PATH,
-      { x: -6, y: -6 },
-      OUTLINE_STYLE
-    );
-  }
-  return outline;
-};
-OutlineProvider.prototype.updateOutline = function(element, outline) {
-  if (isLabel(element)) {
-    return;
-  }
-  if (isAny(element, ["bpmn:SubProcess", "bpmn:Group"])) {
-    attr(outline, {
-      width: element.width + DEFAULT_OFFSET * 2,
-      height: element.height + DEFAULT_OFFSET * 2
-    });
-    return true;
-  } else if (isAny(element, [
-    "bpmn:Event",
-    "bpmn:Gateway",
-    "bpmn:DataStoreReference",
-    "bpmn:DataObjectReference"
-  ])) {
-    return true;
-  }
-  return false;
-};
-function isStandardSize(element, type) {
-  var standardSize;
-  if (type === "bpmn:DataObjectReference") {
-    standardSize = DATA_OBJECT_REFERENCE_STANDARD_SIZE;
-  } else if (type === "bpmn:DataStoreReference") {
-    standardSize = DATA_STORE_REFERENCE_STANDARD_SIZE;
-  }
-  return element.width === standardSize.width && element.height === standardSize.height;
-}
-
-// node_modules/bpmn-js/lib/features/outline/index.js
-var outline_default2 = {
-  __depends__: [
-    outline_default
-  ],
-  __init__: ["outlineProvider"],
-  outlineProvider: ["type", OutlineProvider]
-};
-
 // node_modules/diagram-js/lib/util/Event.js
-function __stopPropagation(event3) {
-  if (!event3 || typeof event3.stopPropagation !== "function") {
+function __stopPropagation(event2) {
+  if (!event2 || typeof event2.stopPropagation !== "function") {
     return;
   }
-  event3.stopPropagation();
+  event2.stopPropagation();
 }
-function getOriginal(event3) {
-  return event3.originalEvent || event3.srcEvent;
+function getOriginal(event2) {
+  return event2.originalEvent || event2.srcEvent;
 }
-function stopPropagation(event3) {
-  __stopPropagation(event3);
-  __stopPropagation(getOriginal(event3));
+function stopPropagation(event2) {
+  __stopPropagation(event2);
+  __stopPropagation(getOriginal(event2));
 }
-function toPoint(event3) {
-  if (event3.pointers && event3.pointers.length) {
-    event3 = event3.pointers[0];
+function toPoint(event2) {
+  if (event2.pointers && event2.pointers.length) {
+    event2 = event2.pointers[0];
   }
-  if (event3.touches && event3.touches.length) {
-    event3 = event3.touches[0];
+  if (event2.touches && event2.touches.length) {
+    event2 = event2.touches[0];
   }
-  return event3 ? {
-    x: event3.clientX,
-    y: event3.clientY
+  return event2 ? {
+    x: event2.clientX,
+    y: event2.clientY
   } : null;
 }
 
@@ -9507,18 +6442,18 @@ function isMac() {
 }
 
 // node_modules/diagram-js/lib/util/Mouse.js
-function isButton(event3, button) {
-  return (getOriginal(event3) || event3).button === button;
+function isButton(event2, button) {
+  return (getOriginal(event2) || event2).button === button;
 }
-function isPrimaryButton(event3) {
-  return isButton(event3, 0);
+function isPrimaryButton(event2) {
+  return isButton(event2, 0);
 }
-function isAuxiliaryButton(event3) {
-  return isButton(event3, 1);
+function isAuxiliaryButton(event2) {
+  return isButton(event2, 1);
 }
-function hasPrimaryModifier(event3) {
-  var originalEvent = getOriginal(event3) || event3;
-  if (!isPrimaryButton(event3)) {
+function hasPrimaryModifier(event2) {
+  var originalEvent = getOriginal(event2) || event2;
+  if (!isPrimaryButton(event2)) {
     return false;
   }
   if (isMac()) {
@@ -9527,28 +6462,28 @@ function hasPrimaryModifier(event3) {
     return originalEvent.ctrlKey;
   }
 }
-function hasSecondaryModifier(event3) {
-  var originalEvent = getOriginal(event3) || event3;
-  return isPrimaryButton(event3) && originalEvent.shiftKey;
+function hasSecondaryModifier(event2) {
+  var originalEvent = getOriginal(event2) || event2;
+  return isPrimaryButton(event2) && originalEvent.shiftKey;
 }
 
 // node_modules/diagram-js/lib/features/interaction-events/InteractionEvents.js
-function allowAll(event3) {
+function allowAll(event2) {
   return true;
 }
-function allowPrimaryAndAuxiliary(event3) {
-  return isPrimaryButton(event3) || isAuxiliaryButton(event3);
+function allowPrimaryAndAuxiliary(event2) {
+  return isPrimaryButton(event2) || isAuxiliaryButton(event2);
 }
-var LOW_PRIORITY4 = 500;
+var LOW_PRIORITY3 = 500;
 function InteractionEvents(eventBus, elementRegistry, styles) {
   var self2 = this;
-  function fire(type, event3, element) {
-    if (isIgnored(type, event3)) {
+  function fire(type, event2, element) {
+    if (isIgnored(type, event2)) {
       return;
     }
     var target, gfx, returnValue;
     if (!element) {
-      target = event3.delegateTarget || event3.target;
+      target = event2.delegateTarget || event2.target;
       if (target) {
         gfx = target;
         element = elementRegistry.get(gfx);
@@ -9562,20 +6497,20 @@ function InteractionEvents(eventBus, elementRegistry, styles) {
     returnValue = eventBus.fire(type, {
       element,
       gfx,
-      originalEvent: event3
+      originalEvent: event2
     });
     if (returnValue === false) {
-      event3.stopPropagation();
-      event3.preventDefault();
+      event2.stopPropagation();
+      event2.preventDefault();
     }
   }
   var handlers = {};
   function mouseHandler(localEventName) {
     return handlers[localEventName];
   }
-  function isIgnored(localEventName, event3) {
+  function isIgnored(localEventName, event2) {
     var filter2 = ignoredFilters[localEventName] || isPrimaryButton;
-    return !filter2(event3);
+    return !filter2(event2);
   }
   var bindings = {
     click: "element.click",
@@ -9594,29 +6529,29 @@ function InteractionEvents(eventBus, elementRegistry, styles) {
     "element.click": allowPrimaryAndAuxiliary,
     "element.dblclick": allowPrimaryAndAuxiliary
   };
-  function triggerMouseEvent(eventName, event3, targetElement) {
+  function triggerMouseEvent(eventName, event2, targetElement) {
     var localEventName = bindings[eventName];
     if (!localEventName) {
       throw new Error("unmapped DOM event name <" + eventName + ">");
     }
-    return fire(localEventName, event3, targetElement);
+    return fire(localEventName, event2, targetElement);
   }
   var ELEMENT_SELECTOR2 = "svg, .djs-element";
-  function registerEvent(node2, event3, localEvent, ignoredFilter) {
-    var handler = handlers[localEvent] = function(event4) {
-      fire(localEvent, event4);
+  function registerEvent(node2, event2, localEvent, ignoredFilter) {
+    var handler = handlers[localEvent] = function(event3) {
+      fire(localEvent, event3);
     };
     if (ignoredFilter) {
       ignoredFilters[localEvent] = ignoredFilter;
     }
-    handler.$delegate = delegate.bind(node2, ELEMENT_SELECTOR2, event3, handler);
+    handler.$delegate = delegate.bind(node2, ELEMENT_SELECTOR2, event2, handler);
   }
-  function unregisterEvent(node2, event3, localEvent) {
+  function unregisterEvent(node2, event2, localEvent) {
     var handler = mouseHandler(localEvent);
     if (!handler) {
       return;
     }
-    delegate.unbind(node2, event3, handler.$delegate);
+    delegate.unbind(node2, event2, handler.$delegate);
   }
   function registerEvents(svg) {
     forEach(bindings, function(val, key) {
@@ -9628,29 +6563,29 @@ function InteractionEvents(eventBus, elementRegistry, styles) {
       unregisterEvent(svg, key, val);
     });
   }
-  eventBus.on("canvas.destroy", function(event3) {
-    unregisterEvents(event3.svg);
+  eventBus.on("canvas.destroy", function(event2) {
+    unregisterEvents(event2.svg);
   });
-  eventBus.on("canvas.init", function(event3) {
-    registerEvents(event3.svg);
+  eventBus.on("canvas.init", function(event2) {
+    registerEvents(event2.svg);
   });
-  eventBus.on(["shape.added", "connection.added"], function(event3) {
-    var element = event3.element, gfx = event3.gfx;
+  eventBus.on(["shape.added", "connection.added"], function(event2) {
+    var element = event2.element, gfx = event2.gfx;
     eventBus.fire("interactionEvents.createHit", { element, gfx });
   });
   eventBus.on([
     "shape.changed",
     "connection.changed"
-  ], LOW_PRIORITY4, function(event3) {
-    var element = event3.element, gfx = event3.gfx;
+  ], LOW_PRIORITY3, function(event2) {
+    var element = event2.element, gfx = event2.gfx;
     eventBus.fire("interactionEvents.updateHit", { element, gfx });
   });
-  eventBus.on("interactionEvents.createHit", LOW_PRIORITY4, function(event3) {
-    var element = event3.element, gfx = event3.gfx;
+  eventBus.on("interactionEvents.createHit", LOW_PRIORITY3, function(event2) {
+    var element = event2.element, gfx = event2.gfx;
     self2.createDefaultHit(element, gfx);
   });
-  eventBus.on("interactionEvents.updateHit", function(event3) {
-    var element = event3.element, gfx = event3.gfx;
+  eventBus.on("interactionEvents.updateHit", function(event2) {
+    var element = event2.element, gfx = event2.gfx;
     self2.updateDefaultHit(element, gfx);
   });
   var STROKE_HIT_STYLE = createHitStyle("djs-hit djs-hit-stroke");
@@ -9777,7 +6712,7 @@ Selection.prototype.get = function() {
 Selection.prototype.isSelected = function(element) {
   return this._selectedElements.indexOf(element) !== -1;
 };
-Selection.prototype.select = function(elements, add3) {
+Selection.prototype.select = function(elements, add5) {
   var selectedElements = this._selectedElements, oldSelection = selectedElements.slice();
   if (!isArray(elements)) {
     elements = elements ? [elements] : [];
@@ -9788,7 +6723,7 @@ Selection.prototype.select = function(elements, add3) {
     var elementRoot = canvas.findRoot(element);
     return rootElement === elementRoot;
   });
-  if (add3) {
+  if (add5) {
     forEach(elements, function(element) {
       if (selectedElements.indexOf(element) !== -1) {
         return;
@@ -9805,31 +6740,28 @@ Selection.prototype.select = function(elements, add3) {
 // node_modules/diagram-js/lib/features/selection/SelectionVisuals.js
 var MARKER_HOVER = "hover";
 var MARKER_SELECTED = "selected";
-var SELECTION_OUTLINE_PADDING = 6;
-function SelectionVisuals(canvas, eventBus, selection2) {
+function SelectionVisuals(canvas, eventBus) {
   this._canvas = canvas;
-  var self2 = this;
-  this._multiSelectionBox = null;
   function addMarker(e8, cls) {
     canvas.addMarker(e8, cls);
   }
   function removeMarker(e8, cls) {
     canvas.removeMarker(e8, cls);
   }
-  eventBus.on("element.hover", function(event3) {
-    addMarker(event3.element, MARKER_HOVER);
+  eventBus.on("element.hover", function(event2) {
+    addMarker(event2.element, MARKER_HOVER);
   });
-  eventBus.on("element.out", function(event3) {
-    removeMarker(event3.element, MARKER_HOVER);
+  eventBus.on("element.out", function(event2) {
+    removeMarker(event2.element, MARKER_HOVER);
   });
-  eventBus.on("selection.changed", function(event3) {
+  eventBus.on("selection.changed", function(event2) {
     function deselect(s5) {
       removeMarker(s5, MARKER_SELECTED);
     }
     function select(s5) {
       addMarker(s5, MARKER_SELECTED);
     }
-    var oldSelection = event3.oldSelection, newSelection = event3.newSelection;
+    var oldSelection = event2.oldSelection, newSelection = event2.newSelection;
     forEach(oldSelection, function(e8) {
       if (newSelection.indexOf(e8) === -1) {
         deselect(e8);
@@ -9840,49 +6772,17 @@ function SelectionVisuals(canvas, eventBus, selection2) {
         select(e8);
       }
     });
-    self2._updateSelectionOutline(newSelection);
-  });
-  eventBus.on("element.changed", function(event3) {
-    if (selection2.isSelected(event3.element)) {
-      self2._updateSelectionOutline(selection2.get());
-    }
   });
 }
 SelectionVisuals.$inject = [
   "canvas",
-  "eventBus",
-  "selection"
+  "eventBus"
 ];
-SelectionVisuals.prototype._updateSelectionOutline = function(selection2) {
-  var layer = this._canvas.getLayer("selectionOutline");
-  clear(layer);
-  var enabled = selection2.length > 1;
-  var container = this._canvas.getContainer();
-  classes(container)[enabled ? "add" : "remove"]("djs-multi-select");
-  if (!enabled) {
-    return;
-  }
-  var bBox = addSelectionOutlinePadding(getBBox(selection2));
-  var rect = create("rect");
-  attr(rect, assign({
-    rx: 3
-  }, bBox));
-  classes(rect).add("djs-selection-outline");
-  append(layer, rect);
-};
-function addSelectionOutlinePadding(bBox) {
-  return {
-    x: bBox.x - SELECTION_OUTLINE_PADDING,
-    y: bBox.y - SELECTION_OUTLINE_PADDING,
-    width: bBox.width + SELECTION_OUTLINE_PADDING * 2,
-    height: bBox.height + SELECTION_OUTLINE_PADDING * 2
-  };
-}
 
 // node_modules/diagram-js/lib/features/selection/SelectionBehavior.js
 function SelectionBehavior(eventBus, selection2, canvas, elementRegistry) {
-  eventBus.on("create.end", 500, function(event3) {
-    var context = event3.context, canExecute = context.canExecute, elements = context.elements, hints = context.hints || {}, autoSelect = hints.autoSelect;
+  eventBus.on("create.end", 500, function(event2) {
+    var context = event2.context, canExecute = context.canExecute, elements = context.elements, hints = context.hints || {}, autoSelect = hints.autoSelect;
     if (canExecute) {
       if (autoSelect === false) {
         return;
@@ -9894,15 +6794,15 @@ function SelectionBehavior(eventBus, selection2, canvas, elementRegistry) {
       }
     }
   });
-  eventBus.on("connect.end", 500, function(event3) {
-    var context = event3.context, connection = context.connection;
+  eventBus.on("connect.end", 500, function(event2) {
+    var context = event2.context, connection = context.connection;
     if (connection) {
       selection2.select(connection);
     }
   });
-  eventBus.on("shape.move.end", 500, function(event3) {
-    var previousSelection = event3.previousSelection || [];
-    var shape = elementRegistry.get(event3.context.shape.id);
+  eventBus.on("shape.move.end", 500, function(event2) {
+    var previousSelection = event2.previousSelection || [];
+    var shape = elementRegistry.get(event2.context.shape.id);
     var isSelected = find(previousSelection, function(selectedShape) {
       return shape.id === selectedShape.id;
     });
@@ -9910,24 +6810,24 @@ function SelectionBehavior(eventBus, selection2, canvas, elementRegistry) {
       selection2.select(shape);
     }
   });
-  eventBus.on("element.click", function(event3) {
-    if (!isPrimaryButton(event3)) {
+  eventBus.on("element.click", function(event2) {
+    if (!isPrimaryButton(event2)) {
       return;
     }
-    var element = event3.element;
+    var element = event2.element;
     if (element === canvas.getRootElement()) {
       element = null;
     }
     var isSelected = selection2.isSelected(element), isMultiSelect = selection2.get().length > 1;
-    var add3 = hasSecondaryModifier(event3);
+    var add5 = hasSecondaryModifier(event2);
     if (isSelected && isMultiSelect) {
-      if (add3) {
+      if (add5) {
         return selection2.deselect(element);
       } else {
         return selection2.select(element);
       }
     } else if (!isSelected) {
-      selection2.select(element, add3);
+      selection2.select(element, add5);
     } else {
       selection2.deselect(element);
     }
@@ -9947,8 +6847,7 @@ function isShown(element) {
 var selection_default = {
   __init__: ["selectionVisuals", "selectionBehavior"],
   __depends__: [
-    interaction_events_default,
-    outline_default
+    interaction_events_default
   ],
   selection: ["type", Selection],
   selectionVisuals: ["type", SelectionVisuals],
@@ -10013,10 +6912,10 @@ function Injector(modules, _parent) {
     currentlyResolving.length = 0;
     return new Error(stack ? `${msg} (Resolving: ${stack})` : msg);
   };
-  function get3(name2, strict) {
+  function get4(name2, strict) {
     if (!providers[name2] && name2.includes(".")) {
       const parts = name2.split(".");
-      let pivot = get3(
+      let pivot = get4(
         /** @type { string } */
         parts.shift()
       );
@@ -10059,7 +6958,7 @@ function Injector(modules, _parent) {
       if (hasOwnProp(locals, dep)) {
         return locals[dep];
       } else {
-        return get3(dep);
+        return get4(dep);
       }
     });
     return {
@@ -10219,7 +7118,7 @@ function Injector(modules, _parent) {
       initializers.forEach((initializer) => initializer());
     };
   }
-  this.get = get3;
+  this.get = get4;
   this.invoke = invoke;
   this.instantiate = instantiate;
   this.createChild = createChild;
@@ -10387,16 +7286,16 @@ function findRoot(element) {
   }
   return element;
 }
-function createContainer(options2) {
-  options2 = assign({}, { width: "100%", height: "100%" }, options2);
-  const container = options2.container || document.body;
+function createContainer(options) {
+  options = assign({}, { width: "100%", height: "100%" }, options);
+  const container = options.container || document.body;
   const parent = document.createElement("div");
   parent.setAttribute("class", "djs-container djs-parent");
   assign2(parent, {
     position: "relative",
     overflow: "hidden",
-    width: ensurePx(options2.width),
-    height: ensurePx(options2.height)
+    width: ensurePx(options.width),
+    height: ensurePx(options.height)
   });
   container.appendChild(parent);
   return parent;
@@ -10423,6 +7322,7 @@ function Canvas(config, eventBus, graphicsFactory, elementRegistry) {
   this._layers = {};
   this._planes = [];
   this._rootElement = null;
+  this._focused = false;
   this._init(config || {});
 }
 Canvas.$inject = [
@@ -10435,7 +7335,23 @@ Canvas.prototype._init = function(config) {
   const eventBus = this._eventBus;
   const container = this._container = createContainer(config);
   const svg = this._svg = create("svg");
-  attr(svg, { width: "100%", height: "100%" });
+  attr(svg, {
+    width: "100%",
+    height: "100%"
+  });
+  attr2(svg, "tabindex", 0);
+  config.autoFocus && eventBus.on("element.hover", () => {
+    this.restoreFocus();
+  });
+  eventBus.on("element.mousedown", 500, (event2) => {
+    this.focus();
+  });
+  svg.addEventListener("focusin", () => {
+    this._setFocused(true);
+  });
+  svg.addEventListener("focusout", () => {
+    this._setFocused(false);
+  });
   append(container, svg);
   const viewport = this._viewport = createGroup(svg, "viewport");
   if (config.deferUpdate) {
@@ -10476,6 +7392,13 @@ Canvas.prototype._destroy = function() {
   delete this._rootElement;
   delete this._viewport;
 };
+Canvas.prototype._setFocused = function(focused) {
+  if (focused == this._focused) {
+    return;
+  }
+  this._focused = focused;
+  this._eventBus.fire("canvas.focus.changed", { focused });
+};
 Canvas.prototype._clear = function() {
   const allElements = this._elementRegistry.getAll();
   allElements.forEach((element) => {
@@ -10489,6 +7412,18 @@ Canvas.prototype._clear = function() {
   this._planes = [];
   this._rootElement = null;
   delete this._cachedViewbox;
+};
+Canvas.prototype.focus = function() {
+  this._svg.focus({ preventScroll: true });
+  this._setFocused(true);
+};
+Canvas.prototype.restoreFocus = function() {
+  if (document.activeElement === document.body) {
+    this.focus();
+  }
+};
+Canvas.prototype.isFocused = function() {
+  return this._focused;
 };
 Canvas.prototype.getDefaultLayer = function() {
   return this.getLayer(BASE_LAYER, PLANE_LAYER_INDEX);
@@ -10599,7 +7534,7 @@ Canvas.prototype._findPlaneForRoot = function(rootElement) {
 Canvas.prototype.getContainer = function() {
   return this._container;
 };
-Canvas.prototype._updateMarker = function(element, marker, add3) {
+Canvas.prototype._updateMarker = function(element, marker, add5) {
   let container;
   if (!element.id) {
     element = this._elementRegistry.get(element);
@@ -10611,7 +7546,7 @@ Canvas.prototype._updateMarker = function(element, marker, add3) {
   }
   forEach([container.gfx, container.secondaryGfx], function(gfx) {
     if (gfx) {
-      if (add3) {
+      if (add5) {
         element.markers.add(marker);
         classes(gfx).add(marker);
       } else {
@@ -10620,7 +7555,7 @@ Canvas.prototype._updateMarker = function(element, marker, add3) {
       }
     }
   });
-  this._eventBus.fire("element.marker.update", { element, gfx: container.gfx, marker, add: !!add3 });
+  this._eventBus.fire("element.marker.update", { element, gfx: container.gfx, marker, add: !!add5 });
 };
 Canvas.prototype.addMarker = function(element, marker) {
   this._updateMarker(element, marker, true);
@@ -10805,7 +7740,7 @@ Canvas.prototype._viewboxChanged = function() {
 };
 Canvas.prototype.viewbox = function(box) {
   if (box === void 0 && this._cachedViewbox) {
-    return this._cachedViewbox;
+    return structuredClone(this._cachedViewbox);
   }
   const viewport = this._viewport, outerBox = this.getSize();
   let innerBox, matrix, activeLayer, transform4, scale, x6, y5;
@@ -10915,8 +7850,8 @@ Canvas.prototype.zoom = function(newScale, center2) {
   });
   return round(matrix.a, 1e3);
 };
-function setCTM(node2, m5) {
-  const mstr = "matrix(" + m5.a + "," + m5.b + "," + m5.c + "," + m5.d + "," + m5.e + "," + m5.f + ")";
+function setCTM(node2, m6) {
+  const mstr = "matrix(" + m6.a + "," + m6.b + "," + m6.c + "," + m6.d + "," + m6.e + "," + m6.f + ")";
   node2.setAttribute("transform", mstr);
 }
 Canvas.prototype._fitViewport = function(center2) {
@@ -11179,15 +8114,15 @@ function defineProperty(ref, property, target) {
     }
   });
 }
-function Refs(a6, b5) {
+function Refs(a6, b4) {
   if (!(this instanceof Refs)) {
-    return new Refs(a6, b5);
+    return new Refs(a6, b4);
   }
-  a6.inverse = b5;
-  b5.inverse = a6;
+  a6.inverse = b4;
+  b4.inverse = a6;
   this.props = {};
   this.props[a6.name] = a6;
-  this.props[b5.name] = b5;
+  this.props[b4.name] = b4;
 }
 Refs.prototype.bind = function(target, property) {
   if (typeof property === "string") {
@@ -11329,7 +8264,7 @@ ElementFactory.prototype.create = function(type, attrs) {
 
 // node_modules/diagram-js/lib/core/EventBus.js
 var FN_REF = "__fn";
-var DEFAULT_PRIORITY3 = 1e3;
+var DEFAULT_PRIORITY2 = 1e3;
 var slice2 = Array.prototype.slice;
 function EventBus() {
   this._listeners = {};
@@ -11340,7 +8275,7 @@ EventBus.prototype.on = function(events, priority, callback, that) {
   if (isFunction(priority)) {
     that = callback;
     callback = priority;
-    priority = DEFAULT_PRIORITY3;
+    priority = DEFAULT_PRIORITY2;
   }
   if (!isNumber(priority)) {
     throw new Error("priority must be a number");
@@ -11364,7 +8299,7 @@ EventBus.prototype.once = function(events, priority, callback, that) {
   if (isFunction(priority)) {
     that = callback;
     callback = priority;
-    priority = DEFAULT_PRIORITY3;
+    priority = DEFAULT_PRIORITY2;
   }
   if (!isNumber(priority)) {
     throw new Error("priority must be a number");
@@ -11381,17 +8316,17 @@ EventBus.prototype.once = function(events, priority, callback, that) {
 EventBus.prototype.off = function(events, callback) {
   events = isArray(events) ? events : [events];
   var self2 = this;
-  events.forEach(function(event3) {
-    self2._removeListener(event3, callback);
+  events.forEach(function(event2) {
+    self2._removeListener(event2, callback);
   });
 };
 EventBus.prototype.createEvent = function(data) {
-  var event3 = new InternalEvent();
-  event3.init(data);
-  return event3;
+  var event2 = new InternalEvent();
+  event2.init(data);
+  return event2;
 };
 EventBus.prototype.fire = function(type, data) {
-  var event3, firstListener, returnValue, args;
+  var event2, firstListener, returnValue, args;
   args = slice2.call(arguments);
   if (typeof type === "object") {
     data = type;
@@ -11405,23 +8340,23 @@ EventBus.prototype.fire = function(type, data) {
     return;
   }
   if (data instanceof InternalEvent) {
-    event3 = data;
+    event2 = data;
   } else {
-    event3 = this.createEvent(data);
+    event2 = this.createEvent(data);
   }
-  args[0] = event3;
-  var originalType = event3.type;
+  args[0] = event2;
+  var originalType = event2.type;
   if (type !== originalType) {
-    event3.type = type;
+    event2.type = type;
   }
   try {
-    returnValue = this._invokeListeners(event3, args, firstListener);
+    returnValue = this._invokeListeners(event2, args, firstListener);
   } finally {
     if (type !== originalType) {
-      event3.type = originalType;
+      event2.type = originalType;
     }
   }
-  if (returnValue === void 0 && event3.defaultPrevented) {
+  if (returnValue === void 0 && event2.defaultPrevented) {
     returnValue = false;
   }
   return returnValue;
@@ -11432,18 +8367,18 @@ EventBus.prototype.handleError = function(error4) {
 EventBus.prototype._destroy = function() {
   this._listeners = {};
 };
-EventBus.prototype._invokeListeners = function(event3, args, listener) {
+EventBus.prototype._invokeListeners = function(event2, args, listener) {
   var returnValue;
   while (listener) {
-    if (event3.cancelBubble) {
+    if (event2.cancelBubble) {
       break;
     }
-    returnValue = this._invokeListener(event3, args, listener);
+    returnValue = this._invokeListener(event2, args, listener);
     listener = listener.next;
   }
   return returnValue;
 };
-EventBus.prototype._invokeListener = function(event3, args, listener) {
+EventBus.prototype._invokeListener = function(event2, args, listener) {
   var returnValue;
   if (listener.callback.__isTomb) {
     return returnValue;
@@ -11451,11 +8386,11 @@ EventBus.prototype._invokeListener = function(event3, args, listener) {
   try {
     returnValue = invokeFunction(listener.callback, args);
     if (returnValue !== void 0) {
-      event3.returnValue = returnValue;
-      event3.stopPropagation();
+      event2.returnValue = returnValue;
+      event2.stopPropagation();
     }
     if (returnValue === false) {
-      event3.preventDefault();
+      event2.preventDefault();
     }
   } catch (error4) {
     if (!this.handleError(error4)) {
@@ -11465,10 +8400,10 @@ EventBus.prototype._invokeListener = function(event3, args, listener) {
   }
   return returnValue;
 };
-EventBus.prototype._addListener = function(event3, newListener) {
-  var listener = this._getListeners(event3), previousListener;
+EventBus.prototype._addListener = function(event2, newListener) {
+  var listener = this._getListeners(event2), previousListener;
   if (!listener) {
-    this._setListeners(event3, newListener);
+    this._setListeners(event2, newListener);
     return;
   }
   while (listener) {
@@ -11477,7 +8412,7 @@ EventBus.prototype._addListener = function(event3, newListener) {
       if (previousListener) {
         previousListener.next = newListener;
       } else {
-        this._setListeners(event3, newListener);
+        this._setListeners(event2, newListener);
       }
       return;
     }
@@ -11492,10 +8427,10 @@ EventBus.prototype._getListeners = function(name2) {
 EventBus.prototype._setListeners = function(name2, listener) {
   this._listeners[name2] = listener;
 };
-EventBus.prototype._removeListener = function(event3, callback) {
-  var listener = this._getListeners(event3), nextListener, previousListener, listenerCallback;
+EventBus.prototype._removeListener = function(event2, callback) {
+  var listener = this._getListeners(event2), nextListener, previousListener, listenerCallback;
   if (!callback) {
-    this._setListeners(event3, null);
+    this._setListeners(event2, null);
     return;
   }
   while (listener) {
@@ -11505,7 +8440,7 @@ EventBus.prototype._removeListener = function(event3, callback) {
       if (previousListener) {
         previousListener.next = nextListener;
       } else {
-        this._setListeners(event3, nextListener);
+        this._setListeners(event2, nextListener);
       }
     }
     previousListener = listener;
@@ -11669,16 +8604,16 @@ function bootstrap(modules) {
   injector.init();
   return injector;
 }
-function createInjector(options2) {
-  options2 = options2 || {};
+function createInjector(options) {
+  options = options || {};
   var configModule = {
-    "config": ["value", options2]
+    "config": ["value", options]
   };
-  var modules = [configModule, core_default2].concat(options2.modules || []);
+  var modules = [configModule, core_default2].concat(options.modules || []);
   return bootstrap(modules);
 }
-function Diagram(options2, injector) {
-  this._injector = injector || createInjector(options2);
+function Diagram(options, injector) {
+  this._injector = injector || createInjector(options);
   this.get("eventBus").fire("diagram.init");
 }
 Diagram.prototype.get = function(name2, strict) {
@@ -11694,7 +8629,7 @@ Diagram.prototype.clear = function() {
   this.get("eventBus").fire("diagram.clear");
 };
 
-// node_modules/moddle/dist/index.esm.js
+// node_modules/moddle/dist/index.js
 function Base() {
 }
 Base.prototype.get = function(name2) {
@@ -11768,20 +8703,20 @@ function isSimple(type) {
   return !!TYPE_CONVERTERS[type];
 }
 function parseName(name2, defaultPrefix) {
-  var parts = name2.split(/:/), localName, prefix4;
+  var parts = name2.split(/:/), localName, prefix3;
   if (parts.length === 1) {
     localName = name2;
-    prefix4 = defaultPrefix;
+    prefix3 = defaultPrefix;
   } else if (parts.length === 2) {
     localName = parts[1];
-    prefix4 = parts[0];
+    prefix3 = parts[0];
   } else {
     throw new Error("expected <prefix:localName> or <localName>, got " + name2);
   }
-  name2 = (prefix4 ? prefix4 + ":" : "") + localName;
+  name2 = (prefix3 ? prefix3 + ":" : "") + localName;
   return {
     name: name2,
-    prefix: prefix4,
+    prefix: prefix3,
     localName
   };
 }
@@ -11888,8 +8823,8 @@ DescriptorBuilder.prototype.setIdProperty = function(p5, validate) {
   this.idProperty = p5;
 };
 DescriptorBuilder.prototype.assertNotTrait = function(typeDescriptor) {
-  const _extends2 = typeDescriptor.extends || [];
-  if (_extends2.length) {
+  const _extends3 = typeDescriptor.extends || [];
+  if (_extends3.length) {
     throw new Error(
       `cannot create <${typeDescriptor.name}> extending <${typeDescriptor.extends}>`
     );
@@ -12073,17 +9008,17 @@ Properties.prototype.get = function(target, name2) {
   }
   return target[propertyName];
 };
-Properties.prototype.define = function(target, name2, options2) {
-  if (!options2.writable) {
-    var value = options2.value;
-    options2 = assign({}, options2, {
+Properties.prototype.define = function(target, name2, options) {
+  if (!options.writable) {
+    var value = options.value;
+    options = assign({}, options, {
       get: function() {
         return value;
       }
     });
-    delete options2.value;
+    delete options.value;
   }
-  Object.defineProperty(target, name2, options2);
+  Object.defineProperty(target, name2, options);
 };
 Properties.prototype.defineDescriptor = function(target, descriptor) {
   this.define(target, "$descriptor", { value: descriptor });
@@ -12211,7 +9146,7 @@ Moddle.prototype.getTypeDescriptor = function(type) {
   return this.registry.typeMap[type];
 };
 
-// node_modules/saxen/dist/index.esm.js
+// node_modules/saxen/dist/index.js
 var fromCharCode = String.fromCharCode;
 var hasOwnProperty2 = Object.prototype.hasOwnProperty;
 var ENTITY_PATTERN = /&#(\d+);|&#x([0-9a-f]+);|&(\w+);/ig;
@@ -12244,15 +9179,12 @@ function decodeEntities(s5) {
   }
   return s5;
 }
-var XSI_URI = "http://www.w3.org/2001/XMLSchema-instance";
-var XSI_PREFIX = "xsi";
-var XSI_TYPE = "xsi:type";
 var NON_WHITESPACE_OUTSIDE_ROOT_NODE = "non-whitespace outside of root node";
 function error(msg) {
   return new Error(msg);
 }
-function missingNamespaceForPrefix(prefix4) {
-  return "missing namespace for prefix <" + prefix4 + ">";
+function missingNamespaceForPrefix(prefix3) {
+  return "missing namespace for prefix <" + prefix3 + ">";
 }
 function getter(getFn) {
   return {
@@ -12267,29 +9199,29 @@ function cloneNsMatrix(nsMatrix) {
   }
   return clone4;
 }
-function uriPrefix(prefix4) {
-  return prefix4 + "$uri";
+function uriPrefix(prefix3) {
+  return prefix3 + "$uri";
 }
 function buildNsMatrix(nsUriToPrefix) {
-  var nsMatrix = {}, uri2, prefix4;
+  var nsMatrix = {}, uri2, prefix3;
   for (uri2 in nsUriToPrefix) {
-    prefix4 = nsUriToPrefix[uri2];
-    nsMatrix[prefix4] = prefix4;
-    nsMatrix[uriPrefix(prefix4)] = uri2;
+    prefix3 = nsUriToPrefix[uri2];
+    nsMatrix[prefix3] = prefix3;
+    nsMatrix[uriPrefix(prefix3)] = uri2;
   }
   return nsMatrix;
 }
 function noopGetContext() {
-  return { "line": 0, "column": 0 };
+  return { line: 0, column: 0 };
 }
 function throwFunc(err) {
   throw err;
 }
-function Parser(options2) {
+function Parser(options) {
   if (!this) {
-    return new Parser(options2);
+    return new Parser(options);
   }
-  var proxy = options2 && options2["proxy"];
+  var proxy = options && options["proxy"];
   var onText, onOpenTag, onCloseTag, onCDATA, onError = throwFunc, onWarning, onComment, onQuestion, onAttention;
   var getContext = noopGetContext;
   var maybeNS = false;
@@ -12339,9 +9271,11 @@ function Parser(options2) {
       case "attention":
         onAttention = cb;
         break;
+      // <!XXXXX zzzz="eeee">
       case "question":
         onQuestion = cb;
         break;
+      // <? ....  ?>
       case "comment":
         onComment = cb;
         break;
@@ -12361,7 +9295,6 @@ function Parser(options2) {
     for (k6 in nsMap) {
       _nsUriToPrefix[k6] = nsMap[k6];
     }
-    _nsUriToPrefix[XSI_URI] = XSI_PREFIX;
     isNamespace = true;
     nsUriToPrefix = _nsUriToPrefix;
     return this;
@@ -12528,16 +9461,6 @@ function Parser(options2) {
             continue;
           }
           name2 = defaultAlias === nsName2 ? name2.substr(w7 + 1) : nsName2 + name2.substr(w7);
-          if (name2 === XSI_TYPE) {
-            w7 = value.indexOf(":");
-            if (w7 !== -1) {
-              nsName2 = value.substring(0, w7);
-              nsName2 = nsMatrix[nsName2] || nsName2;
-              value = nsName2 + value.substring(w7);
-            } else {
-              value = defaultAlias + ":" + value;
-            }
-          }
           attrs[name2] = value;
         }
       if (maybeNS) {
@@ -12551,16 +9474,6 @@ function Parser(options2) {
               continue;
             }
             name2 = defaultAlias === nsName2 ? name2.substr(w7 + 1) : nsName2 + name2.substr(w7);
-            if (name2 === XSI_TYPE) {
-              w7 = value.indexOf(":");
-              if (w7 !== -1) {
-                nsName2 = value.substring(0, w7);
-                nsName2 = nsMatrix[nsName2] || nsName2;
-                value = nsName2 + value.substring(w7);
-              } else {
-                value = defaultAlias + ":" + value;
-              }
-            }
           }
           attrs[name2] = value;
         }
@@ -12839,7 +9752,7 @@ function Parser(options2) {
   }
 }
 
-// node_modules/moddle-xml/dist/index.esm.js
+// node_modules/moddle-xml/dist/index.js
 function hasLowerCaseAlias(pkg) {
   return pkg.xml && pkg.xml.tagAlias === "lowerCase";
 }
@@ -12847,15 +9760,13 @@ var DEFAULT_NS_MAP = {
   "xsi": "http://www.w3.org/2001/XMLSchema-instance",
   "xml": "http://www.w3.org/XML/1998/namespace"
 };
-var XSI_TYPE2 = "xsi:type";
-function serializeFormat(element) {
+var SERIALIZE_PROPERTY = "property";
+function getSerialization(element) {
   return element.xml && element.xml.serialize;
 }
-function serializeAsType(element) {
-  return serializeFormat(element) === XSI_TYPE2;
-}
-function serializeAsProperty(element) {
-  return serializeFormat(element) === "property";
+function getSerializationType(element) {
+  const type = getSerialization(element);
+  return type !== SERIALIZE_PROPERTY && (type || null);
 }
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -12868,17 +9779,19 @@ function aliasToName(aliasNs, pkg) {
 }
 function prefixedToName(nameNs, pkg) {
   var name2 = nameNs.name, localName = nameNs.localName;
-  var typePrefix = pkg.xml && pkg.xml.typePrefix;
+  var typePrefix = pkg && pkg.xml && pkg.xml.typePrefix;
   if (typePrefix && localName.indexOf(typePrefix) === 0) {
     return nameNs.prefix + ":" + localName.slice(typePrefix.length);
   } else {
     return name2;
   }
 }
-function normalizeXsiTypeName(name2, model) {
-  var nameNs = parseName(name2);
-  var pkg = model.getPackage(nameNs.prefix);
-  return prefixedToName(nameNs, pkg);
+function normalizeTypeName(name2, nsMap, model) {
+  const nameNs = parseName(name2, nsMap.xmlns);
+  const normalizedName = `${nsMap[nameNs.prefix] || nameNs.prefix}:${nameNs.localName}`;
+  const normalizedNameNs = parseName(normalizedName);
+  var pkg = model.getPackage(normalizedNameNs.prefix);
+  return prefixedToName(normalizedNameNs, pkg);
 }
 function error2(message) {
   return new Error(message);
@@ -12886,8 +9799,8 @@ function error2(message) {
 function getModdleDescriptor(element) {
   return element.$descriptor;
 }
-function Context(options2) {
-  assign(this, options2);
+function Context(options) {
+  assign(this, options);
   this.elementsById = {};
   this.references = [];
   this.warnings = [];
@@ -13034,7 +9947,9 @@ ElementHandler.prototype.createElement = function(node2) {
     } else {
       if (prop) {
         value = coerceType(prop.type, value);
-      } else if (name2 !== "xmlns") {
+      } else if (name2 === "xmlns") {
+        name2 = ":" + name2;
+      } else {
         propNameNs = parseName(name2, descriptor.ns.prefix);
         if (model.getPackage(propNameNs.prefix)) {
           context.addWarning({
@@ -13054,13 +9969,14 @@ ElementHandler.prototype.getPropertyForNode = function(node2) {
   var name2 = node2.name;
   var nameNs = parseName(name2);
   var type = this.type, model = this.model, descriptor = getModdleDescriptor(type);
-  var propertyName = nameNs.name, property = descriptor.propertiesByName[propertyName], elementTypeName, elementType;
+  var propertyName = nameNs.name, property = descriptor.propertiesByName[propertyName];
   if (property && !property.isAttr) {
-    if (serializeAsType(property)) {
-      elementTypeName = node2.attributes[XSI_TYPE2];
+    const serializationType = getSerializationType(property);
+    if (serializationType) {
+      const elementTypeName = node2.attributes[serializationType];
       if (elementTypeName) {
-        elementTypeName = normalizeXsiTypeName(elementTypeName, model);
-        elementType = model.getType(elementTypeName);
+        const normalizedTypeName = normalizeTypeName(elementTypeName, node2.ns, model);
+        const elementType = model.getType(normalizedTypeName);
         return assign({}, property, {
           effectiveType: getModdleDescriptor(elementType).name
         });
@@ -13070,8 +9986,8 @@ ElementHandler.prototype.getPropertyForNode = function(node2) {
   }
   var pkg = model.getPackage(nameNs.prefix);
   if (pkg) {
-    elementTypeName = aliasToName(nameNs, pkg);
-    elementType = model.getType(elementTypeName);
+    const elementTypeName = aliasToName(nameNs, pkg);
+    const elementType = model.getType(elementTypeName);
     property = find(descriptor.properties, function(p5) {
       return !p5.isVirtual && !p5.isReference && !p5.isAttribute && elementType.hasType(p5.type);
     });
@@ -13154,7 +10070,7 @@ function GenericElementHandler(model, typeName, context) {
 }
 GenericElementHandler.prototype = Object.create(BaseElementHandler.prototype);
 GenericElementHandler.prototype.createElement = function(node2) {
-  var name2 = node2.name, ns2 = parseName(name2), prefix4 = ns2.prefix, uri2 = node2.ns[prefix4 + "$uri"], attributes = node2.attributes;
+  var name2 = node2.name, ns2 = parseName(name2), prefix3 = ns2.prefix, uri2 = node2.ns[prefix3 + "$uri"], attributes = node2.attributes;
   return this.model.createAny(name2, uri2, attributes);
 };
 GenericElementHandler.prototype.handleChild = function(node2) {
@@ -13172,29 +10088,29 @@ GenericElementHandler.prototype.handleEnd = function() {
     this.element.$body = this.body;
   }
 };
-function Reader(options2) {
-  if (options2 instanceof Moddle) {
-    options2 = {
-      model: options2
+function Reader(options) {
+  if (options instanceof Moddle) {
+    options = {
+      model: options
     };
   }
-  assign(this, { lax: false }, options2);
+  assign(this, { lax: false }, options);
 }
-Reader.prototype.fromXML = function(xml2, options2, done) {
-  var rootHandler = options2.rootHandler;
-  if (options2 instanceof ElementHandler) {
-    rootHandler = options2;
-    options2 = {};
+Reader.prototype.fromXML = function(xml2, options, done) {
+  var rootHandler = options.rootHandler;
+  if (options instanceof ElementHandler) {
+    rootHandler = options;
+    options = {};
   } else {
-    if (typeof options2 === "string") {
-      rootHandler = this.handler(options2);
-      options2 = {};
+    if (typeof options === "string") {
+      rootHandler = this.handler(options);
+      options = {};
     } else if (typeof rootHandler === "string") {
       rootHandler = this.handler(rootHandler);
     }
   }
   var model = this.model, lax = this.lax;
-  var context = new Context(assign({}, options2, { rootHandler })), parser4 = new Parser({ proxy: true }), stack = createStack();
+  var context = new Context(assign({}, options, { rootHandler })), parser4 = new Parser({ proxy: true }), stack = createStack();
   rootHandler.context = context;
   stack.push(rootHandler);
   function handleError(err, getContext, lax2) {
@@ -13293,10 +10209,10 @@ Reader.prototype.fromXML = function(xml2, options2, done) {
   var uriMap = model.getPackages().reduce(function(uriMap2, p5) {
     uriMap2[p5.uri] = p5.prefix;
     return uriMap2;
-  }, {
-    "http://www.w3.org/XML/1998/namespace": "xml"
-    // add default xml ns
-  });
+  }, Object.entries(DEFAULT_NS_MAP).reduce(function(map4, [prefix3, url]) {
+    map4[url] = prefix3;
+    return map4;
+  }, model.config && model.config.nsMap || {}));
   parser4.ns(uriMap).on("openTag", function(obj, decodeStr, selfClosing, getContext) {
     var attrs = obj.attrs || {};
     var decodedAttrs = Object.keys(attrs).reduce(function(d5, key) {
@@ -13358,50 +10274,56 @@ var XML_PREAMBLE = '<?xml version="1.0" encoding="UTF-8"?>\n';
 var ESCAPE_ATTR_CHARS = /<|>|'|"|&|\n\r|\n/g;
 var ESCAPE_CHARS = /<|>|&/g;
 function Namespaces(parent) {
-  var prefixMap = {};
-  var uriMap = {};
-  var used = {};
-  var wellknown = [];
-  var custom = [];
-  this.byUri = function(uri2) {
-    return uriMap[uri2] || parent && parent.byUri(uri2);
-  };
-  this.add = function(ns2, isWellknown) {
-    uriMap[ns2.uri] = ns2;
-    if (isWellknown) {
-      wellknown.push(ns2);
-    } else {
-      custom.push(ns2);
-    }
-    this.mapPrefix(ns2.prefix, ns2.uri);
-  };
-  this.uriByPrefix = function(prefix4) {
-    return prefixMap[prefix4 || "xmlns"];
-  };
-  this.mapPrefix = function(prefix4, uri2) {
-    prefixMap[prefix4 || "xmlns"] = uri2;
-  };
-  this.getNSKey = function(ns2) {
-    return ns2.prefix !== void 0 ? ns2.uri + "|" + ns2.prefix : ns2.uri;
-  };
-  this.logUsed = function(ns2) {
-    var uri2 = ns2.uri;
-    var nsKey = this.getNSKey(ns2);
-    used[nsKey] = this.byUri(uri2);
-    if (parent) {
-      parent.logUsed(ns2);
-    }
-  };
-  this.getUsed = function(ns2) {
-    function isUsed(ns3) {
-      var nsKey = self2.getNSKey(ns3);
-      return used[nsKey];
-    }
-    var self2 = this;
-    var allNs = [].concat(wellknown, custom);
-    return allNs.filter(isUsed);
-  };
+  this.prefixMap = {};
+  this.uriMap = {};
+  this.used = {};
+  this.wellknown = [];
+  this.custom = [];
+  this.parent = parent;
+  this.defaultPrefixMap = parent && parent.defaultPrefixMap || {};
 }
+Namespaces.prototype.mapDefaultPrefixes = function(defaultPrefixMap) {
+  this.defaultPrefixMap = defaultPrefixMap;
+};
+Namespaces.prototype.defaultUriByPrefix = function(prefix3) {
+  return this.defaultPrefixMap[prefix3];
+};
+Namespaces.prototype.byUri = function(uri2) {
+  return this.uriMap[uri2] || this.parent && this.parent.byUri(uri2);
+};
+Namespaces.prototype.add = function(ns2, isWellknown) {
+  this.uriMap[ns2.uri] = ns2;
+  if (isWellknown) {
+    this.wellknown.push(ns2);
+  } else {
+    this.custom.push(ns2);
+  }
+  this.mapPrefix(ns2.prefix, ns2.uri);
+};
+Namespaces.prototype.uriByPrefix = function(prefix3) {
+  return this.prefixMap[prefix3 || "xmlns"] || this.parent && this.parent.uriByPrefix(prefix3);
+};
+Namespaces.prototype.mapPrefix = function(prefix3, uri2) {
+  this.prefixMap[prefix3 || "xmlns"] = uri2;
+};
+Namespaces.prototype.getNSKey = function(ns2) {
+  return ns2.prefix !== void 0 ? ns2.uri + "|" + ns2.prefix : ns2.uri;
+};
+Namespaces.prototype.logUsed = function(ns2) {
+  var uri2 = ns2.uri;
+  var nsKey = this.getNSKey(ns2);
+  this.used[nsKey] = this.byUri(uri2);
+  if (this.parent) {
+    this.parent.logUsed(ns2);
+  }
+};
+Namespaces.prototype.getUsed = function(ns2) {
+  var allNs = [].concat(this.wellknown, this.custom);
+  return allNs.filter((ns3) => {
+    var nsKey = this.getNSKey(ns3);
+    return this.used[nsKey];
+  });
+};
 function lower(string) {
   return string.charAt(0).toLowerCase() + string.slice(1);
 }
@@ -13549,7 +10471,7 @@ ElementSerializer.prototype.build = function(element) {
   var otherAttrs, properties;
   var isGeneric = elementDescriptor.isGeneric;
   if (isGeneric) {
-    otherAttrs = this.parseGeneric(element);
+    otherAttrs = this.parseGenericNsAttributes(element);
   } else {
     otherAttrs = this.parseNsAttributes(element);
   }
@@ -13559,7 +10481,9 @@ ElementSerializer.prototype.build = function(element) {
     this.ns = this.nsTagName(elementDescriptor);
   }
   this.tagName = this.addTagName(this.ns);
-  if (!isGeneric) {
+  if (isGeneric) {
+    this.parseGenericContainments(element);
+  } else {
     properties = getSerializableProperties(element);
     this.parseAttributes(filterAttributes(properties));
     this.parseContainments(filterContained(properties));
@@ -13596,25 +10520,24 @@ ElementSerializer.prototype.nsAttributeName = function(element) {
     return assign({ localName: ns2.localName }, effectiveNs);
   }
 };
-ElementSerializer.prototype.parseGeneric = function(element) {
-  var self2 = this, body = this.body;
-  var attributes = [];
-  forEach(element, function(val, key) {
-    var nonNsAttr;
-    if (key === "$body") {
-      body.push(new BodySerializer().build({ type: "String" }, val));
-    } else if (key === "$children") {
-      forEach(val, function(child) {
-        body.push(new ElementSerializer(self2).build(child));
-      });
-    } else if (key.indexOf("$") !== 0) {
-      nonNsAttr = self2.parseNsAttribute(element, key, val);
-      if (nonNsAttr) {
-        attributes.push({ name: key, value: val });
-      }
-    }
-  });
-  return attributes;
+ElementSerializer.prototype.parseGenericNsAttributes = function(element) {
+  return Object.entries(element).filter(
+    ([key, value]) => !key.startsWith("$") && this.parseNsAttribute(element, key, value)
+  ).map(
+    ([key, value]) => ({ name: key, value })
+  );
+};
+ElementSerializer.prototype.parseGenericContainments = function(element) {
+  var body = element.$body;
+  if (body) {
+    this.body.push(new BodySerializer().build({ type: "String" }, body));
+  }
+  var children = element.$children;
+  if (children) {
+    forEach(children, (child) => {
+      this.body.push(new ElementSerializer(this).build(child));
+    });
+  }
 };
 ElementSerializer.prototype.parseNsAttribute = function(element, name2, value) {
   var model = element.$model;
@@ -13639,7 +10562,7 @@ ElementSerializer.prototype.parseNsAttribute = function(element, name2, value) {
     this.getNamespaces().logUsed(actualNs);
   }
 };
-ElementSerializer.prototype.parseNsAttributes = function(element, attrs) {
+ElementSerializer.prototype.parseNsAttributes = function(element) {
   var self2 = this;
   var genericAttrs = element.$attrs;
   var attributes = [];
@@ -13654,18 +10577,11 @@ ElementSerializer.prototype.parseNsAttributes = function(element, attrs) {
 ElementSerializer.prototype.parseGenericAttributes = function(element, attributes) {
   var self2 = this;
   forEach(attributes, function(attr3) {
-    if (attr3.name === XSI_TYPE2) {
-      return;
-    }
     try {
       self2.addAttribute(self2.nsAttributeName(attr3.name), attr3.value);
     } catch (e8) {
-      console.warn(
-        "missing namespace information for ",
-        attr3.name,
-        "=",
-        attr3.value,
-        "on",
+      typeof console !== "undefined" && console.warn(
+        `missing namespace information for <${attr3.name}=${attr3.value}> on`,
         element,
         e8
       );
@@ -13690,13 +10606,15 @@ ElementSerializer.prototype.parseContainments = function(properties) {
         body.push(new ReferenceSerializer(self2.addTagName(self2.nsPropertyTagName(p5))).build(v5));
       });
     } else {
-      var asType = serializeAsType(p5), asProperty = serializeAsProperty(p5);
+      var serialization = getSerialization(p5);
       forEach(value, function(v5) {
         var serializer;
-        if (asType) {
-          serializer = new TypeSerializer(self2, p5);
-        } else if (asProperty) {
-          serializer = new ElementSerializer(self2, p5);
+        if (serialization) {
+          if (serialization === SERIALIZE_PROPERTY) {
+            serializer = new ElementSerializer(self2, p5);
+          } else {
+            serializer = new TypeSerializer(self2, p5, serialization);
+          }
         } else {
           serializer = new ElementSerializer(self2);
         }
@@ -13728,27 +10646,30 @@ ElementSerializer.prototype.logNamespace = function(ns2, wellknown, local) {
   return ns2;
 };
 ElementSerializer.prototype.logNamespaceUsed = function(ns2, local) {
-  var element = this.element, model = element.$model, namespaces = this.getNamespaces(local);
-  var prefix4 = ns2.prefix, uri2 = ns2.uri, newPrefix, idx, wellknownUri;
-  if (!prefix4 && !uri2) {
+  var namespaces = this.getNamespaces(local);
+  var prefix3 = ns2.prefix, uri2 = ns2.uri, newPrefix, idx, wellknownUri;
+  if (!prefix3 && !uri2) {
     return { localName: ns2.localName };
   }
-  wellknownUri = DEFAULT_NS_MAP[prefix4] || model && (model.getPackage(prefix4) || {}).uri;
-  uri2 = uri2 || wellknownUri || namespaces.uriByPrefix(prefix4);
+  wellknownUri = namespaces.defaultUriByPrefix(prefix3);
+  uri2 = uri2 || wellknownUri || namespaces.uriByPrefix(prefix3);
   if (!uri2) {
-    throw new Error("no namespace uri given for prefix <" + prefix4 + ">");
+    throw new Error("no namespace uri given for prefix <" + prefix3 + ">");
   }
   ns2 = namespaces.byUri(uri2);
+  if (!ns2 && !prefix3) {
+    ns2 = this.logNamespace({ uri: uri2 }, wellknownUri === uri2, true);
+  }
   if (!ns2) {
-    newPrefix = prefix4;
+    newPrefix = prefix3;
     idx = 1;
     while (namespaces.uriByPrefix(newPrefix)) {
-      newPrefix = prefix4 + "_" + idx++;
+      newPrefix = prefix3 + "_" + idx++;
     }
     ns2 = this.logNamespace({ prefix: newPrefix, uri: uri2 }, wellknownUri === uri2);
   }
-  if (prefix4) {
-    namespaces.mapPrefix(prefix4, uri2);
+  if (prefix3) {
+    namespaces.mapPrefix(prefix3, uri2);
   }
   return ns2;
 };
@@ -13808,8 +10729,8 @@ ElementSerializer.prototype.serializeTo = function(writer) {
     if (indent2) {
       writer.appendNewLine().indent();
     }
-    forEach(this.body, function(b5) {
-      b5.serializeTo(writer);
+    forEach(this.body, function(b4) {
+      b4.serializeTo(writer);
     });
     if (indent2) {
       writer.unindent().appendIndent();
@@ -13818,12 +10739,15 @@ ElementSerializer.prototype.serializeTo = function(writer) {
   }
   writer.appendNewLine();
 };
-function TypeSerializer(parent, propertyDescriptor) {
+function TypeSerializer(parent, propertyDescriptor, serialization) {
   ElementSerializer.call(this, parent, propertyDescriptor);
+  this.serialization = serialization;
 }
 inherits(TypeSerializer, ElementSerializer);
 TypeSerializer.prototype.parseNsAttributes = function(element) {
-  var attributes = ElementSerializer.prototype.parseNsAttributes.call(this, element);
+  var attributes = ElementSerializer.prototype.parseNsAttributes.call(this, element).filter(
+    (attr3) => attr3.name !== this.serialization
+  );
   var descriptor = element.$descriptor;
   if (descriptor.name === this.propertyDescriptor.type) {
     return attributes;
@@ -13832,7 +10756,7 @@ TypeSerializer.prototype.parseNsAttributes = function(element) {
   this.getNamespaces().logUsed(this.typeNs);
   var pkg = element.$model.getPackage(typeNs.uri), typePrefix = pkg.xml && pkg.xml.typePrefix || "";
   this.addAttribute(
-    this.nsAttributeName(XSI_TYPE2),
+    this.nsAttributeName(this.serialization),
     (typeNs.prefix ? typeNs.prefix + ":" : "") + typePrefix + descriptor.ns.localName
   );
   return attributes;
@@ -13873,15 +10797,18 @@ function FormatingWriter(out, format2) {
     return this;
   };
 }
-function Writer(options2) {
-  options2 = assign({ format: false, preamble: true }, options2 || {});
+function Writer(options) {
+  options = assign({ format: false, preamble: true }, options || {});
   function toXML(tree, writer) {
     var internalWriter = writer || new SavingWriter();
-    var formatingWriter = new FormatingWriter(internalWriter, options2.format);
-    if (options2.preamble) {
+    var formatingWriter = new FormatingWriter(internalWriter, options.format);
+    if (options.preamble) {
       formatingWriter.append(XML_PREAMBLE);
     }
-    new ElementSerializer().build(tree).serializeTo(formatingWriter);
+    var serializer = new ElementSerializer();
+    var model = tree.$model;
+    serializer.getNamespaces().mapDefaultPrefixes(getDefaultPrefixMappings(model));
+    serializer.build(tree).serializeTo(formatingWriter);
     if (!writer) {
       return internalWriter.value;
     }
@@ -13890,23 +10817,38 @@ function Writer(options2) {
     toXML
   };
 }
+function getDefaultPrefixMappings(model) {
+  const nsMap = model.config && model.config.nsMap || {};
+  const prefixMap = {};
+  for (const prefix3 in DEFAULT_NS_MAP) {
+    prefixMap[prefix3] = DEFAULT_NS_MAP[prefix3];
+  }
+  for (const uri2 in nsMap) {
+    const prefix3 = nsMap[uri2];
+    prefixMap[prefix3] = uri2;
+  }
+  for (const pkg of model.getPackages()) {
+    prefixMap[pkg.prefix] = pkg.uri;
+  }
+  return prefixMap;
+}
 
-// node_modules/bpmn-moddle/dist/index.esm.js
-function BpmnModdle(packages2, options2) {
-  Moddle.call(this, packages2, options2);
+// node_modules/bpmn-moddle/dist/index.js
+function BpmnModdle(packages2, options) {
+  Moddle.call(this, packages2, options);
 }
 BpmnModdle.prototype = Object.create(Moddle.prototype);
-BpmnModdle.prototype.fromXML = function(xmlStr, typeName, options2) {
+BpmnModdle.prototype.fromXML = function(xmlStr, typeName, options) {
   if (!isString(typeName)) {
-    options2 = typeName;
+    options = typeName;
     typeName = "bpmn:Definitions";
   }
-  var reader = new Reader(assign({ model: this, lax: true }, options2));
+  var reader = new Reader(assign({ model: this, lax: true }, options));
   var rootHandler = reader.handler(typeName);
   return reader.fromXML(xmlStr, rootHandler);
 };
-BpmnModdle.prototype.toXML = function(element, options2) {
-  var writer = new Writer(options2);
+BpmnModdle.prototype.toXML = function(element, options) {
+  var writer = new Writer(options);
   return new Promise(function(resolve, reject) {
     try {
       var result = writer.toXML(element);
@@ -17548,9 +14490,9 @@ var packages = {
   bioc: BiocPackage,
   color: BpmnInColorPackage
 };
-function simple(additionalPackages, options2) {
-  var pks = assign({}, packages, additionalPackages);
-  return new BpmnModdle(pks, options2);
+function SimpleBpmnModdle(additionalPackages, options) {
+  const pks = assign({}, packages, additionalPackages);
+  return new BpmnModdle(pks, options);
 }
 
 // node_modules/bpmn-js/lib/util/CompatibilityUtil.js
@@ -18004,7 +14946,7 @@ function createLightbox() {
 function open() {
   if (!lightbox) {
     createLightbox();
-    delegate.bind(lightbox, ".backdrop", "click", function(event3) {
+    delegate.bind(lightbox, ".backdrop", "click", function(event2) {
       document.body.removeChild(lightbox);
     });
   }
@@ -18012,12 +14954,12 @@ function open() {
 }
 
 // node_modules/bpmn-js/lib/BaseViewer.js
-function BaseViewer(options2) {
-  options2 = assign({}, DEFAULT_OPTIONS, options2);
-  this._moddle = this._createModdle(options2);
-  this._container = this._createContainer(options2);
+function BaseViewer(options) {
+  options = assign({}, DEFAULT_OPTIONS, options);
+  this._moddle = this._createModdle(options);
+  this._container = this._createContainer(options);
   addProjectLogo(this._container);
-  this._init(this._container, this._moddle, options2);
+  this._init(this._container, this._moddle, options);
 }
 e(BaseViewer, Diagram);
 BaseViewer.prototype.importXML = async function importXML(xml2, bpmnDiagram) {
@@ -18092,8 +15034,8 @@ BaseViewer.prototype.open = async function open2(bpmnDiagramOrId) {
   const { warnings } = await importBpmnDiagram(this, definitions, bpmnDiagram);
   return { warnings };
 };
-BaseViewer.prototype.saveXML = async function saveXML(options2) {
-  options2 = options2 || {};
+BaseViewer.prototype.saveXML = async function saveXML(options) {
+  options = options || {};
   let definitions = this._definitions, error4, xml2;
   try {
     if (!definitions) {
@@ -18102,7 +15044,7 @@ BaseViewer.prototype.saveXML = async function saveXML(options2) {
     definitions = this._emit("saveXML.start", {
       definitions
     }) || definitions;
-    const result2 = await this._moddle.toXML(definitions, options2);
+    const result2 = await this._moddle.toXML(definitions, options);
     xml2 = result2.xml;
     xml2 = this._emit("saveXML.serialized", {
       xml: xml2
@@ -18186,38 +15128,38 @@ BaseViewer.prototype.detach = function() {
   this._emit("detach", {});
   parentNode.removeChild(container);
 };
-BaseViewer.prototype._init = function(container, moddle, options2) {
-  const baseModules = options2.modules || this.getModules(options2), additionalModules = options2.additionalModules || [], staticModules = [
+BaseViewer.prototype._init = function(container, moddle, options) {
+  const baseModules = options.modules || this.getModules(options), additionalModules = options.additionalModules || [], staticModules = [
     {
       bpmnjs: ["value", this],
       moddle: ["value", moddle]
     }
   ];
   const diagramModules = [].concat(staticModules, baseModules, additionalModules);
-  const diagramOptions = assign(omit(options2, ["additionalModules"]), {
-    canvas: assign({}, options2.canvas, { container }),
+  const diagramOptions = assign(omit(options, ["additionalModules"]), {
+    canvas: assign({}, options.canvas, { container }),
     modules: diagramModules
   });
   Diagram.call(this, diagramOptions);
-  if (options2 && options2.container) {
-    this.attachTo(options2.container);
+  if (options && options.container) {
+    this.attachTo(options.container);
   }
 };
-BaseViewer.prototype._emit = function(type, event3) {
-  return this.get("eventBus").fire(type, event3);
+BaseViewer.prototype._emit = function(type, event2) {
+  return this.get("eventBus").fire(type, event2);
 };
-BaseViewer.prototype._createContainer = function(options2) {
+BaseViewer.prototype._createContainer = function(options) {
   const container = domify$1('<div class="bjs-container"></div>');
   assign2(container, {
-    width: ensureUnit(options2.width),
-    height: ensureUnit(options2.height),
-    position: options2.position
+    width: ensureUnit(options.width),
+    height: ensureUnit(options.height),
+    position: options.position
   });
   return container;
 };
-BaseViewer.prototype._createModdle = function(options2) {
-  const moddleOptions = assign({}, this._moddleExtensions, options2.moddleExtensions);
-  return new simple(moddleOptions);
+BaseViewer.prototype._createModdle = function(options) {
+  const moddleOptions = assign({}, this._moddleExtensions, options.moddleExtensions);
+  return new SimpleBpmnModdle(moddleOptions);
 };
 BaseViewer.prototype._modules = [];
 function addWarningsToError(err, warningsAry) {
@@ -18260,21 +15202,20 @@ function addProjectLogo(container) {
     zIndex: "100"
   });
   container.appendChild(linkElement);
-  event.bind(linkElement, "click", function(event3) {
+  event.bind(linkElement, "click", function(event2) {
     open();
-    event3.preventDefault();
+    event2.preventDefault();
   });
 }
 
 // node_modules/bpmn-js/lib/Viewer.js
-function Viewer(options2) {
-  BaseViewer.call(this, options2);
+function Viewer(options) {
+  BaseViewer.call(this, options);
 }
 e(Viewer, BaseViewer);
 Viewer.prototype._modules = [
   core_default,
   drilldown_default,
-  outline_default2,
   overlays_default,
   selection_default,
   translate_default
@@ -18286,43 +15227,43 @@ var KEYS_COPY = ["c", "C"];
 var KEYS_PASTE = ["v", "V"];
 var KEYS_REDO = ["y", "Y"];
 var KEYS_UNDO = ["z", "Z"];
-function hasModifier(event3) {
-  return event3.ctrlKey || event3.metaKey || event3.shiftKey || event3.altKey;
+function hasModifier(event2) {
+  return event2.ctrlKey || event2.metaKey || event2.shiftKey || event2.altKey;
 }
-function isCmd(event3) {
-  if (event3.altKey) {
+function isCmd(event2) {
+  if (event2.altKey) {
     return false;
   }
-  return event3.ctrlKey || event3.metaKey;
+  return event2.ctrlKey || event2.metaKey;
 }
-function isKey(keys2, event3) {
+function isKey(keys2, event2) {
   keys2 = isArray(keys2) ? keys2 : [keys2];
-  return keys2.indexOf(event3.key) !== -1 || keys2.indexOf(event3.code) !== -1;
+  return keys2.indexOf(event2.key) !== -1 || keys2.indexOf(event2.code) !== -1;
 }
-function isShift(event3) {
-  return event3.shiftKey;
+function isShift(event2) {
+  return event2.shiftKey;
 }
-function isCopy(event3) {
-  return isCmd(event3) && isKey(KEYS_COPY, event3);
+function isCopy(event2) {
+  return isCmd(event2) && isKey(KEYS_COPY, event2);
 }
-function isPaste(event3) {
-  return isCmd(event3) && isKey(KEYS_PASTE, event3);
+function isPaste(event2) {
+  return isCmd(event2) && isKey(KEYS_PASTE, event2);
 }
-function isUndo(event3) {
-  return isCmd(event3) && !isShift(event3) && isKey(KEYS_UNDO, event3);
+function isUndo(event2) {
+  return isCmd(event2) && !isShift(event2) && isKey(KEYS_UNDO, event2);
 }
-function isRedo(event3) {
-  return isCmd(event3) && (isKey(KEYS_REDO, event3) || isKey(KEYS_UNDO, event3) && isShift(event3));
+function isRedo(event2) {
+  return isCmd(event2) && (isKey(KEYS_REDO, event2) || isKey(KEYS_UNDO, event2) && isShift(event2));
 }
 
 // node_modules/diagram-js/lib/features/keyboard/Keyboard.js
 var KEYDOWN_EVENT = "keyboard.keydown";
 var KEYUP_EVENT = "keyboard.keyup";
-var HANDLE_MODIFIER_ATTRIBUTE = "input-handle-modified-keys";
-var DEFAULT_PRIORITY4 = 1e3;
+var DEFAULT_PRIORITY3 = 1e3;
+var compatMessage = "Keyboard binding is now implicit; explicit binding to an element got removed. For more information, see https://github.com/bpmn-io/diagram-js/issues/661";
 function Keyboard(config, eventBus) {
   var self2 = this;
-  this._config = config || {};
+  this._config = config = config || {};
   this._eventBus = eventBus;
   this._keydownHandler = this._keydownHandler.bind(this);
   this._keyupHandler = this._keyupHandler.bind(this);
@@ -18330,64 +15271,50 @@ function Keyboard(config, eventBus) {
     self2._fire("destroy");
     self2.unbind();
   });
-  eventBus.on("diagram.init", function() {
-    self2._fire("init");
-  });
-  eventBus.on("attach", function() {
-    if (config && config.bindTo) {
-      self2.bind(config.bindTo);
+  if (config.bindTo) {
+    console.error("unsupported configuration <keyboard.bindTo>", new Error(compatMessage));
+  }
+  var bind3 = config && config.bind !== false;
+  eventBus.on("canvas.init", function(event2) {
+    self2._target = event2.svg;
+    if (bind3) {
+      self2.bind();
     }
-  });
-  eventBus.on("detach", function() {
-    self2.unbind();
+    self2._fire("init");
   });
 }
 Keyboard.$inject = [
   "config.keyboard",
   "eventBus"
 ];
-Keyboard.prototype._keydownHandler = function(event3) {
-  this._keyHandler(event3, KEYDOWN_EVENT);
+Keyboard.prototype._keydownHandler = function(event2) {
+  this._keyHandler(event2, KEYDOWN_EVENT);
 };
-Keyboard.prototype._keyupHandler = function(event3) {
-  this._keyHandler(event3, KEYUP_EVENT);
+Keyboard.prototype._keyupHandler = function(event2) {
+  this._keyHandler(event2, KEYUP_EVENT);
 };
-Keyboard.prototype._keyHandler = function(event3, type) {
+Keyboard.prototype._keyHandler = function(event2, type) {
   var eventBusResult;
-  if (this._isEventIgnored(event3)) {
+  if (this._isEventIgnored(event2)) {
     return;
   }
   var context = {
-    keyEvent: event3
+    keyEvent: event2
   };
   eventBusResult = this._eventBus.fire(type || KEYDOWN_EVENT, context);
   if (eventBusResult) {
-    event3.preventDefault();
+    event2.preventDefault();
   }
 };
-Keyboard.prototype._isEventIgnored = function(event3) {
-  if (event3.defaultPrevented) {
-    return true;
-  }
-  return (isInput(event3.target) || isButton2(event3.target) && isKey([" ", "Enter"], event3)) && this._isModifiedKeyIgnored(event3);
-};
-Keyboard.prototype._isModifiedKeyIgnored = function(event3) {
-  if (!isCmd(event3)) {
-    return true;
-  }
-  var allowedModifiers = this._getAllowedModifiers(event3.target);
-  return allowedModifiers.indexOf(event3.key) === -1;
-};
-Keyboard.prototype._getAllowedModifiers = function(element) {
-  var modifierContainer = closest(element, "[" + HANDLE_MODIFIER_ATTRIBUTE + "]", true);
-  if (!modifierContainer || this._node && !this._node.contains(modifierContainer)) {
-    return [];
-  }
-  return modifierContainer.getAttribute(HANDLE_MODIFIER_ATTRIBUTE).split(",");
+Keyboard.prototype._isEventIgnored = function(event2) {
+  return false;
 };
 Keyboard.prototype.bind = function(node2) {
+  if (node2) {
+    console.error("unsupported argument <node>", new Error(compatMessage));
+  }
   this.unbind();
-  this._node = node2;
+  node2 = this._node = this._target;
   event.bind(node2, "keydown", this._keydownHandler);
   event.bind(node2, "keyup", this._keyupHandler);
   this._fire("bind");
@@ -18404,14 +15331,14 @@ Keyboard.prototype.unbind = function() {
   }
   this._node = null;
 };
-Keyboard.prototype._fire = function(event3) {
-  this._eventBus.fire("keyboard." + event3, { node: this._node });
+Keyboard.prototype._fire = function(event2) {
+  this._eventBus.fire("keyboard." + event2, { node: this._node });
 };
 Keyboard.prototype.addListener = function(priority, listener, type) {
   if (isFunction(priority)) {
     type = listener;
     listener = priority;
-    priority = DEFAULT_PRIORITY4;
+    priority = DEFAULT_PRIORITY3;
   }
   this._eventBus.on(type || KEYDOWN_EVENT, priority, listener);
 };
@@ -18422,19 +15349,13 @@ Keyboard.prototype.hasModifier = hasModifier;
 Keyboard.prototype.isCmd = isCmd;
 Keyboard.prototype.isShift = isShift;
 Keyboard.prototype.isKey = isKey;
-function isInput(target) {
-  return target && (matches(target, "input, textarea") || target.contentEditable === "true");
-}
-function isButton2(target) {
-  return target && matches(target, "button, input[type=submit], input[type=button], a[href], [aria-role=button]");
-}
 
 // node_modules/diagram-js/lib/features/keyboard/KeyboardBindings.js
-var LOW_PRIORITY5 = 500;
+var LOW_PRIORITY4 = 500;
 function KeyboardBindings(eventBus, keyboard) {
   var self2 = this;
-  eventBus.on("editorActions.init", LOW_PRIORITY5, function(event3) {
-    var editorActions = event3.editorActions;
+  eventBus.on("editorActions.init", LOW_PRIORITY4, function(event2) {
+    var editorActions = event2.editorActions;
     self2.registerBindings(keyboard, editorActions);
   });
 }
@@ -18449,57 +15370,57 @@ KeyboardBindings.prototype.registerBindings = function(keyboard, editorActions) 
     }
   }
   addListener("undo", function(context) {
-    var event3 = context.keyEvent;
-    if (isUndo(event3)) {
+    var event2 = context.keyEvent;
+    if (isUndo(event2)) {
       editorActions.trigger("undo");
       return true;
     }
   });
   addListener("redo", function(context) {
-    var event3 = context.keyEvent;
-    if (isRedo(event3)) {
+    var event2 = context.keyEvent;
+    if (isRedo(event2)) {
       editorActions.trigger("redo");
       return true;
     }
   });
   addListener("copy", function(context) {
-    var event3 = context.keyEvent;
-    if (isCopy(event3)) {
+    var event2 = context.keyEvent;
+    if (isCopy(event2)) {
       editorActions.trigger("copy");
       return true;
     }
   });
   addListener("paste", function(context) {
-    var event3 = context.keyEvent;
-    if (isPaste(event3)) {
+    var event2 = context.keyEvent;
+    if (isPaste(event2)) {
       editorActions.trigger("paste");
       return true;
     }
   });
   addListener("stepZoom", function(context) {
-    var event3 = context.keyEvent;
-    if (isKey(["+", "Add", "="], event3) && isCmd(event3)) {
+    var event2 = context.keyEvent;
+    if (isKey(["+", "Add", "="], event2) && isCmd(event2)) {
       editorActions.trigger("stepZoom", { value: 1 });
       return true;
     }
   });
   addListener("stepZoom", function(context) {
-    var event3 = context.keyEvent;
-    if (isKey(["-", "Subtract"], event3) && isCmd(event3)) {
+    var event2 = context.keyEvent;
+    if (isKey(["-", "Subtract"], event2) && isCmd(event2)) {
       editorActions.trigger("stepZoom", { value: -1 });
       return true;
     }
   });
   addListener("zoom", function(context) {
-    var event3 = context.keyEvent;
-    if (isKey("0", event3) && isCmd(event3)) {
+    var event2 = context.keyEvent;
+    if (isKey("0", event2) && isCmd(event2)) {
       editorActions.trigger("zoom", { value: 1 });
       return true;
     }
   });
   addListener("removeSelection", function(context) {
-    var event3 = context.keyEvent;
-    if (isKey(["Backspace", "Delete", "Del"], event3)) {
+    var event2 = context.keyEvent;
+    if (isKey(["Backspace", "Delete", "Del"], event2)) {
       editorActions.trigger("removeSelection");
       return true;
     }
@@ -18523,8 +15444,8 @@ function KeyboardMove(config, keyboard, canvas) {
   this._config = assign({}, DEFAULT_CONFIG, config || {});
   keyboard.addListener(arrowsListener);
   function arrowsListener(context) {
-    var event3 = context.keyEvent, config2 = self2._config;
-    if (!keyboard.isCmd(event3)) {
+    var event2 = context.keyEvent, config2 = self2._config;
+    if (!keyboard.isCmd(event2)) {
       return;
     }
     if (keyboard.isKey([
@@ -18536,10 +15457,10 @@ function KeyboardMove(config, keyboard, canvas) {
       "Down",
       "ArrowRight",
       "Right"
-    ], event3)) {
-      var speed = keyboard.isShift(event3) ? config2.moveSpeedAccelerated : config2.moveSpeed;
+    ], event2)) {
+      var speed = keyboard.isShift(event2) ? config2.moveSpeedAccelerated : config2.moveSpeed;
       var direction;
-      switch (event3.key) {
+      switch (event2.key) {
         case "ArrowLeft":
         case "Left":
           direction = "left";
@@ -18564,10 +15485,10 @@ function KeyboardMove(config, keyboard, canvas) {
       return true;
     }
   }
-  this.moveCanvas = function(options2) {
-    var dx = 0, dy = 0, speed = options2.speed;
+  this.moveCanvas = function(options) {
+    var dx = 0, dy = 0, speed = options.speed;
     var actualSpeed = speed / Math.min(Math.sqrt(canvas.viewbox().scale), 1);
-    switch (options2.direction) {
+    switch (options.direction) {
       case "left":
         dx = actualSpeed;
         break;
@@ -18605,10 +15526,10 @@ var keyboard_move_default = {
 // node_modules/diagram-js/lib/util/Cursor.js
 var CURSOR_CLS_PATTERN = /^djs-cursor-.*$/;
 function set3(mode) {
-  var classes4 = classes2(document.body);
-  classes4.removeMatching(CURSOR_CLS_PATTERN);
+  var classes3 = classes2(document.body);
+  classes3.removeMatching(CURSOR_CLS_PATTERN);
   if (mode) {
-    classes4.add("djs-cursor-" + mode);
+    classes3.add("djs-cursor-" + mode);
   }
 }
 function unset() {
@@ -18635,10 +15556,10 @@ function center(bounds) {
     y: bounds.y + bounds.height / 2
   };
 }
-function delta(a6, b5) {
+function delta(a6, b4) {
   return {
-    x: a6.x - b5.x,
-    y: a6.y - b5.y
+    x: a6.x - b4.x,
+    y: a6.y - b4.y
   };
 }
 
@@ -18646,11 +15567,18 @@ function delta(a6, b5) {
 var THRESHOLD = 15;
 function MoveCanvas(eventBus, canvas) {
   var context;
-  eventBus.on("element.mousedown", 500, function(e8) {
-    return handleStart(e8.originalEvent);
+  function handleMousedown(event2) {
+    return handleStart(event2.originalEvent);
+  }
+  eventBus.on("canvas.focus.changed", function(event2) {
+    if (event2.focused) {
+      eventBus.on("element.mousedown", 500, handleMousedown);
+    } else {
+      eventBus.off("element.mousedown", handleMousedown);
+    }
   });
-  function handleMove(event3) {
-    var start = context.start, button = context.button, position = toPoint(event3), delta2 = delta(position, start);
+  function handleMove(event2) {
+    var start = context.start, button = context.button, position = toPoint(event2), delta2 = delta(position, start);
     if (!context.dragging && length(delta2) > THRESHOLD) {
       context.dragging = true;
       if (button === 0) {
@@ -18667,25 +15595,25 @@ function MoveCanvas(eventBus, canvas) {
       });
       context.last = position;
     }
-    event3.preventDefault();
+    event2.preventDefault();
   }
-  function handleEnd(event3) {
+  function handleEnd(event2) {
     event.unbind(document, "mousemove", handleMove);
     event.unbind(document, "mouseup", handleEnd);
     context = null;
     unset();
   }
-  function handleStart(event3) {
-    if (closest(event3.target, ".djs-draggable")) {
+  function handleStart(event2) {
+    if (closest(event2.target, ".djs-draggable")) {
       return;
     }
-    var button = event3.button;
-    if (button >= 2 || event3.ctrlKey || event3.shiftKey || event3.altKey) {
+    var button = event2.button;
+    if (button >= 2 || event2.ctrlKey || event2.shiftKey || event2.altKey) {
       return;
     }
     context = {
       button,
-      start: toPoint(event3)
+      start: toPoint(event2)
     };
     event.bind(document, "mousemove", handleMove);
     event.bind(document, "mouseup", handleEnd);
@@ -18741,8 +15669,8 @@ function ZoomScroll(config, eventBus, canvas) {
   this._totalDelta = 0;
   this._scale = config.scale || DEFAULT_SCALE;
   var self2 = this;
-  eventBus.on("canvas.init", function(e8) {
-    self2._init(config.enabled !== false);
+  eventBus.on("canvas.focus.changed", function(event2) {
+    self2._init(event2.focused && config.enabled !== false);
   });
 }
 ZoomScroll.$inject = [
@@ -18764,40 +15692,40 @@ ZoomScroll.prototype.zoom = function zoom(delta2, position) {
     this._totalDelta = 0;
   }
 };
-ZoomScroll.prototype._handleWheel = function handleWheel(event3) {
-  if (closest(event3.target, ".djs-scrollable", true)) {
+ZoomScroll.prototype._handleWheel = function handleWheel(event2) {
+  if (!this._canvas.isFocused()) {
     return;
   }
   var element = this._container;
-  event3.preventDefault();
-  var isZoom = event3.ctrlKey || isMac() && event3.metaKey;
-  var isHorizontalScroll = event3.shiftKey;
+  event2.preventDefault();
+  var isZoom = event2.ctrlKey || isMac() && event2.metaKey;
+  var isHorizontalScroll = event2.shiftKey;
   var factor = -1 * this._scale, delta2;
   if (isZoom) {
-    factor *= event3.deltaMode === 0 ? 0.02 : 0.32;
+    factor *= event2.deltaMode === 0 ? 0.02 : 0.32;
   } else {
-    factor *= event3.deltaMode === 0 ? 1 : 16;
+    factor *= event2.deltaMode === 0 ? 1 : 16;
   }
   if (isZoom) {
     var elementRect = element.getBoundingClientRect();
     var offset = {
-      x: event3.clientX - elementRect.left,
-      y: event3.clientY - elementRect.top
+      x: event2.clientX - elementRect.left,
+      y: event2.clientY - elementRect.top
     };
     delta2 = Math.sqrt(
-      Math.pow(event3.deltaY, 2) + Math.pow(event3.deltaX, 2)
-    ) * sign(event3.deltaY) * factor;
+      Math.pow(event2.deltaY, 2) + Math.pow(event2.deltaX, 2)
+    ) * sign(event2.deltaY) * factor;
     this.zoom(delta2, offset);
   } else {
     if (isHorizontalScroll) {
       delta2 = {
-        dx: factor * event3.deltaY,
+        dx: factor * event2.deltaY,
         dy: 0
       };
     } else {
       delta2 = {
-        dx: factor * event3.deltaX,
-        dy: factor * event3.deltaY
+        dx: factor * event2.deltaX,
+        dy: factor * event2.deltaY
       };
     }
     this.scroll(delta2);
@@ -18840,8 +15768,8 @@ var zoomscroll_default = {
 };
 
 // node_modules/bpmn-js/lib/NavigatedViewer.js
-function NavigatedViewer(options2) {
-  Viewer.call(this, options2);
+function NavigatedViewer(options) {
+  Viewer.call(this, options);
 }
 e(NavigatedViewer, Viewer);
 NavigatedViewer.prototype._navigationModules = [
@@ -19942,16 +16870,16 @@ function _curve(points, closePoint, o5) {
   const len = points.length;
   const ops = [];
   if (len > 3) {
-    const b5 = [];
+    const b4 = [];
     const s5 = 1 - o5.curveTightness;
     ops.push({ op: "move", data: [points[1][0], points[1][1]] });
     for (let i7 = 1; i7 + 2 < len; i7++) {
       const cachedVertArray = points[i7];
-      b5[0] = [cachedVertArray[0], cachedVertArray[1]];
-      b5[1] = [cachedVertArray[0] + (s5 * points[i7 + 1][0] - s5 * points[i7 - 1][0]) / 6, cachedVertArray[1] + (s5 * points[i7 + 1][1] - s5 * points[i7 - 1][1]) / 6];
-      b5[2] = [points[i7 + 1][0] + (s5 * points[i7][0] - s5 * points[i7 + 2][0]) / 6, points[i7 + 1][1] + (s5 * points[i7][1] - s5 * points[i7 + 2][1]) / 6];
-      b5[3] = [points[i7 + 1][0], points[i7 + 1][1]];
-      ops.push({ op: "bcurveTo", data: [b5[1][0], b5[1][1], b5[2][0], b5[2][1], b5[3][0], b5[3][1]] });
+      b4[0] = [cachedVertArray[0], cachedVertArray[1]];
+      b4[1] = [cachedVertArray[0] + (s5 * points[i7 + 1][0] - s5 * points[i7 - 1][0]) / 6, cachedVertArray[1] + (s5 * points[i7 + 1][1] - s5 * points[i7 - 1][1]) / 6];
+      b4[2] = [points[i7 + 1][0] + (s5 * points[i7][0] - s5 * points[i7 + 2][0]) / 6, points[i7 + 1][1] + (s5 * points[i7][1] - s5 * points[i7 + 2][1]) / 6];
+      b4[3] = [points[i7 + 1][0], points[i7 + 1][1]];
+      ops.push({ op: "bcurveTo", data: [b4[1][0], b4[1][1], b4[2][0], b4[2][1], b4[3][0], b4[3][1]] });
     }
     if (closePoint && closePoint.length === 2) {
       const ro = o5.maxRandomnessOffset;
@@ -20101,16 +17029,16 @@ function curveToBezier(pointsIn, curveTightness = 0) {
         points.push(pointsIn[i7]);
       }
     }
-    const b5 = [];
+    const b4 = [];
     const s5 = 1 - curveTightness;
     out.push(clone3(points[0]));
     for (let i7 = 1; i7 + 2 < points.length; i7++) {
       const cachedVertArray = points[i7];
-      b5[0] = [cachedVertArray[0], cachedVertArray[1]];
-      b5[1] = [cachedVertArray[0] + (s5 * points[i7 + 1][0] - s5 * points[i7 - 1][0]) / 6, cachedVertArray[1] + (s5 * points[i7 + 1][1] - s5 * points[i7 - 1][1]) / 6];
-      b5[2] = [points[i7 + 1][0] + (s5 * points[i7][0] - s5 * points[i7 + 2][0]) / 6, points[i7 + 1][1] + (s5 * points[i7][1] - s5 * points[i7 + 2][1]) / 6];
-      b5[3] = [points[i7 + 1][0], points[i7 + 1][1]];
-      out.push(b5[1], b5[2], b5[3]);
+      b4[0] = [cachedVertArray[0], cachedVertArray[1]];
+      b4[1] = [cachedVertArray[0] + (s5 * points[i7 + 1][0] - s5 * points[i7 - 1][0]) / 6, cachedVertArray[1] + (s5 * points[i7 + 1][1] - s5 * points[i7 - 1][1]) / 6];
+      b4[2] = [points[i7 + 1][0] + (s5 * points[i7][0] - s5 * points[i7 + 2][0]) / 6, points[i7 + 1][1] + (s5 * points[i7][1] - s5 * points[i7 + 2][1]) / 6];
+      b4[3] = [points[i7 + 1][0], points[i7 + 1][1]];
+      out.push(b4[1], b4[2], b4[3]);
     }
   }
   return out;
@@ -20130,10 +17058,10 @@ function distanceToSegmentSq(p5, v5, w6) {
   t7 = Math.max(0, Math.min(1, t7));
   return distanceSq(p5, lerp(v5, w6, t7));
 }
-function lerp(a6, b5, t7) {
+function lerp(a6, b4, t7) {
   return [
-    a6[0] + (b5[0] - a6[0]) * t7,
-    a6[1] + (b5[1] - a6[1]) * t7
+    a6[0] + (b4[0] - a6[0]) * t7,
+    a6[1] + (b4[1] - a6[1]) * t7
   ];
 }
 function flatness(points, offset) {
@@ -20317,18 +17245,18 @@ var RoughGenerator = class {
   static newSeed() {
     return randomSeed();
   }
-  _o(options2) {
-    return options2 ? Object.assign({}, this.defaultOptions, options2) : this.defaultOptions;
+  _o(options) {
+    return options ? Object.assign({}, this.defaultOptions, options) : this.defaultOptions;
   }
-  _d(shape, sets, options2) {
-    return { shape, sets: sets || [], options: options2 || this.defaultOptions };
+  _d(shape, sets, options) {
+    return { shape, sets: sets || [], options: options || this.defaultOptions };
   }
-  line(x1, y1, x22, y22, options2) {
-    const o5 = this._o(options2);
+  line(x1, y1, x22, y22, options) {
+    const o5 = this._o(options);
     return this._d("line", [line(x1, y1, x22, y22, o5)], o5);
   }
-  rectangle(x6, y5, width, height, options2) {
-    const o5 = this._o(options2);
+  rectangle(x6, y5, width, height, options) {
+    const o5 = this._o(options);
     const paths2 = [];
     const outline = rectangle(x6, y5, width, height, o5);
     if (o5.fill) {
@@ -20344,8 +17272,8 @@ var RoughGenerator = class {
     }
     return this._d("rectangle", paths2, o5);
   }
-  ellipse(x6, y5, width, height, options2) {
-    const o5 = this._o(options2);
+  ellipse(x6, y5, width, height, options) {
+    const o5 = this._o(options);
     const paths2 = [];
     const ellipseParams = generateEllipseParams(width, height, o5);
     const ellipseResponse = ellipseWithParams(x6, y5, o5, ellipseParams);
@@ -20363,17 +17291,17 @@ var RoughGenerator = class {
     }
     return this._d("ellipse", paths2, o5);
   }
-  circle(x6, y5, diameter, options2) {
-    const ret = this.ellipse(x6, y5, diameter, diameter, options2);
+  circle(x6, y5, diameter, options) {
+    const ret = this.ellipse(x6, y5, diameter, diameter, options);
     ret.shape = "circle";
     return ret;
   }
-  linearPath(points, options2) {
-    const o5 = this._o(options2);
+  linearPath(points, options) {
+    const o5 = this._o(options);
     return this._d("linearPath", [linearPath(points, false, o5)], o5);
   }
-  arc(x6, y5, width, height, start, stop, closed = false, options2) {
-    const o5 = this._o(options2);
+  arc(x6, y5, width, height, start, stop, closed = false, options) {
+    const o5 = this._o(options);
     const paths2 = [];
     const outline = arc(x6, y5, width, height, start, stop, closed, true, o5);
     if (closed && o5.fill) {
@@ -20392,8 +17320,8 @@ var RoughGenerator = class {
     }
     return this._d("arc", paths2, o5);
   }
-  curve(points, options2) {
-    const o5 = this._o(options2);
+  curve(points, options) {
+    const o5 = this._o(options);
     const paths2 = [];
     const outline = curve(points, o5);
     if (o5.fill && o5.fill !== NOS && points.length >= 3) {
@@ -20410,8 +17338,8 @@ var RoughGenerator = class {
     }
     return this._d("curve", paths2, o5);
   }
-  polygon(points, options2) {
-    const o5 = this._o(options2);
+  polygon(points, options) {
+    const o5 = this._o(options);
     const paths2 = [];
     const outline = linearPath(points, true, o5);
     if (o5.fill) {
@@ -20426,8 +17354,8 @@ var RoughGenerator = class {
     }
     return this._d("polygon", paths2, o5);
   }
-  path(d5, options2) {
-    const o5 = this._o(options2);
+  path(d5, options) {
+    const o5 = this._o(options);
     const paths2 = [];
     if (!d5) {
       return this._d("path", paths2, o5);
@@ -20605,48 +17533,48 @@ var RoughCanvas = class {
   getDefaultOptions() {
     return this.gen.defaultOptions;
   }
-  line(x1, y1, x22, y22, options2) {
-    const d5 = this.gen.line(x1, y1, x22, y22, options2);
+  line(x1, y1, x22, y22, options) {
+    const d5 = this.gen.line(x1, y1, x22, y22, options);
     this.draw(d5);
     return d5;
   }
-  rectangle(x6, y5, width, height, options2) {
-    const d5 = this.gen.rectangle(x6, y5, width, height, options2);
+  rectangle(x6, y5, width, height, options) {
+    const d5 = this.gen.rectangle(x6, y5, width, height, options);
     this.draw(d5);
     return d5;
   }
-  ellipse(x6, y5, width, height, options2) {
-    const d5 = this.gen.ellipse(x6, y5, width, height, options2);
+  ellipse(x6, y5, width, height, options) {
+    const d5 = this.gen.ellipse(x6, y5, width, height, options);
     this.draw(d5);
     return d5;
   }
-  circle(x6, y5, diameter, options2) {
-    const d5 = this.gen.circle(x6, y5, diameter, options2);
+  circle(x6, y5, diameter, options) {
+    const d5 = this.gen.circle(x6, y5, diameter, options);
     this.draw(d5);
     return d5;
   }
-  linearPath(points, options2) {
-    const d5 = this.gen.linearPath(points, options2);
+  linearPath(points, options) {
+    const d5 = this.gen.linearPath(points, options);
     this.draw(d5);
     return d5;
   }
-  polygon(points, options2) {
-    const d5 = this.gen.polygon(points, options2);
+  polygon(points, options) {
+    const d5 = this.gen.polygon(points, options);
     this.draw(d5);
     return d5;
   }
-  arc(x6, y5, width, height, start, stop, closed = false, options2) {
-    const d5 = this.gen.arc(x6, y5, width, height, start, stop, closed, options2);
+  arc(x6, y5, width, height, start, stop, closed = false, options) {
+    const d5 = this.gen.arc(x6, y5, width, height, start, stop, closed, options);
     this.draw(d5);
     return d5;
   }
-  curve(points, options2) {
-    const d5 = this.gen.curve(points, options2);
+  curve(points, options) {
+    const d5 = this.gen.curve(points, options);
     this.draw(d5);
     return d5;
   }
-  path(d5, options2) {
-    const drawing = this.gen.path(d5, options2);
+  path(d5, options) {
+    const drawing = this.gen.path(d5, options);
     this.draw(drawing);
     return drawing;
   }
@@ -20729,40 +17657,40 @@ var RoughSVG = class {
   opsToPath(drawing, fixedDecimalPlaceDigits) {
     return this.gen.opsToPath(drawing, fixedDecimalPlaceDigits);
   }
-  line(x1, y1, x22, y22, options2) {
-    const d5 = this.gen.line(x1, y1, x22, y22, options2);
+  line(x1, y1, x22, y22, options) {
+    const d5 = this.gen.line(x1, y1, x22, y22, options);
     return this.draw(d5);
   }
-  rectangle(x6, y5, width, height, options2) {
-    const d5 = this.gen.rectangle(x6, y5, width, height, options2);
+  rectangle(x6, y5, width, height, options) {
+    const d5 = this.gen.rectangle(x6, y5, width, height, options);
     return this.draw(d5);
   }
-  ellipse(x6, y5, width, height, options2) {
-    const d5 = this.gen.ellipse(x6, y5, width, height, options2);
+  ellipse(x6, y5, width, height, options) {
+    const d5 = this.gen.ellipse(x6, y5, width, height, options);
     return this.draw(d5);
   }
-  circle(x6, y5, diameter, options2) {
-    const d5 = this.gen.circle(x6, y5, diameter, options2);
+  circle(x6, y5, diameter, options) {
+    const d5 = this.gen.circle(x6, y5, diameter, options);
     return this.draw(d5);
   }
-  linearPath(points, options2) {
-    const d5 = this.gen.linearPath(points, options2);
+  linearPath(points, options) {
+    const d5 = this.gen.linearPath(points, options);
     return this.draw(d5);
   }
-  polygon(points, options2) {
-    const d5 = this.gen.polygon(points, options2);
+  polygon(points, options) {
+    const d5 = this.gen.polygon(points, options);
     return this.draw(d5);
   }
-  arc(x6, y5, width, height, start, stop, closed = false, options2) {
-    const d5 = this.gen.arc(x6, y5, width, height, start, stop, closed, options2);
+  arc(x6, y5, width, height, start, stop, closed = false, options) {
+    const d5 = this.gen.arc(x6, y5, width, height, start, stop, closed, options);
     return this.draw(d5);
   }
-  curve(points, options2) {
-    const d5 = this.gen.curve(points, options2);
+  curve(points, options) {
+    const d5 = this.gen.curve(points, options);
     return this.draw(d5);
   }
-  path(d5, options2) {
-    const drawing = this.gen.path(d5, options2);
+  path(d5, options) {
+    const drawing = this.gen.path(d5, options);
     return this.draw(drawing);
   }
 };
@@ -20874,18 +17802,18 @@ function componentsToPath2(elements) {
   return elements.flat().join(",").replace(/,?([A-z]),?/g, "$1");
 }
 var black2 = "hsl(225, 10%, 15%)";
-function isTypedEvent2(event3, eventDefinitionType, filter2) {
-  function matches4(definition, filter3) {
+function isTypedEvent2(event2, eventDefinitionType, filter2) {
+  function matches3(definition, filter3) {
     return every(filter3, function(val, key) {
       return definition[key] == val;
     });
   }
-  return some(event3.eventDefinitions, function(definition) {
-    return definition.$type === eventDefinitionType && matches4(event3, filter2);
+  return some(event2.eventDefinitions, function(definition) {
+    return definition.$type === eventDefinitionType && matches3(event2, filter2);
   });
 }
-function isThrowEvent2(event3) {
-  return event3.$type === "bpmn:IntermediateThrowEvent" || event3.$type === "bpmn:EndEvent";
+function isThrowEvent2(event2) {
+  return event2.$type === "bpmn:IntermediateThrowEvent" || event2.$type === "bpmn:EndEvent";
 }
 function isCollection2(element) {
   var dataObject = element.dataObjectRef;
@@ -20989,8 +17917,8 @@ var hat_12 = createCommonjsModule2(function(module2) {
       res = x6 + res;
     }
     if (rem) {
-      var b5 = Math.pow(base, rem);
-      var x6 = Math.floor(Math.random() * b5).toString(base);
+      var b4 = Math.pow(base, rem);
+      var x6 = Math.floor(Math.random() * b4).toString(base);
       res = x6 + res;
     }
     var parsed = parseInt(res, base);
@@ -21034,10 +17962,10 @@ function Ids2(seed) {
 Ids2.prototype.next = function(element) {
   return this._seed(element || true);
 };
-Ids2.prototype.nextPrefixed = function(prefix4, element) {
+Ids2.prototype.nextPrefixed = function(prefix3, element) {
   var id;
   do {
-    id = prefix4 + this.next(true);
+    id = prefix3 + this.next(true);
   } while (this.assigned(id));
   this.claim(id, element);
   return id;
@@ -21085,12 +18013,12 @@ function BpmnRenderer2(config, eventBus, styles, pathMap, canvas, textRenderer, 
       strokeWidth: 2
     });
   }
-  function addMarker(id, options2) {
+  function addMarker(id, options) {
     var {
       ref = { x: 0, y: 0 },
       scale = 1,
       element
-    } = options2;
+    } = options;
     var marker2 = create("marker", {
       id,
       viewBox: "0 0 20 20",
@@ -21333,53 +18261,53 @@ function BpmnRenderer2(config, eventBus, styles, pathMap, canvas, textRenderer, 
     return handlers[type];
   }
   function renderEventContent(element, parentGfx) {
-    var event3 = getSemantic(element);
-    var isThrowing = isThrowEvent2(event3);
-    if (isTypedEvent2(event3, "bpmn:MessageEventDefinition")) {
+    var event2 = getSemantic(element);
+    var isThrowing = isThrowEvent2(event2);
+    if (isTypedEvent2(event2, "bpmn:MessageEventDefinition")) {
       return renderer("bpmn:MessageEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:TimerEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:TimerEventDefinition")) {
       return renderer("bpmn:TimerEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:ConditionalEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:ConditionalEventDefinition")) {
       return renderer("bpmn:ConditionalEventDefinition")(parentGfx, element);
     }
-    if (isTypedEvent2(event3, "bpmn:SignalEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:SignalEventDefinition")) {
       return renderer("bpmn:SignalEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:CancelEventDefinition") && isTypedEvent2(event3, "bpmn:TerminateEventDefinition", { parallelMultiple: false })) {
+    if (isTypedEvent2(event2, "bpmn:CancelEventDefinition") && isTypedEvent2(event2, "bpmn:TerminateEventDefinition", { parallelMultiple: false })) {
       return renderer("bpmn:MultipleEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:CancelEventDefinition") && isTypedEvent2(event3, "bpmn:TerminateEventDefinition", { parallelMultiple: true })) {
+    if (isTypedEvent2(event2, "bpmn:CancelEventDefinition") && isTypedEvent2(event2, "bpmn:TerminateEventDefinition", { parallelMultiple: true })) {
       return renderer("bpmn:ParallelMultipleEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:EscalationEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:EscalationEventDefinition")) {
       return renderer("bpmn:EscalationEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:LinkEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:LinkEventDefinition")) {
       return renderer("bpmn:LinkEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:ErrorEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:ErrorEventDefinition")) {
       return renderer("bpmn:ErrorEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:CancelEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:CancelEventDefinition")) {
       return renderer("bpmn:CancelEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:CompensateEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:CompensateEventDefinition")) {
       return renderer("bpmn:CompensateEventDefinition")(parentGfx, element, isThrowing);
     }
-    if (isTypedEvent2(event3, "bpmn:TerminateEventDefinition")) {
+    if (isTypedEvent2(event2, "bpmn:TerminateEventDefinition")) {
       return renderer("bpmn:TerminateEventDefinition")(parentGfx, element, isThrowing);
     }
     return null;
   }
-  function renderLabel(parentGfx, label, options2) {
-    options2 = assign({
+  function renderLabel(parentGfx, label, options) {
+    options = assign({
       size: {
         width: 100
       }
-    }, options2);
-    var text = textRenderer.createText(label || "", options2);
+    }, options);
+    var text = textRenderer.createText(label || "", options);
     classes(text).add("djs-label");
     append(parentGfx, text);
     return text;
@@ -21520,30 +18448,30 @@ function BpmnRenderer2(config, eventBus, styles, pathMap, canvas, textRenderer, 
       }
       return circle;
     },
-    "bpmn:EscalationEventDefinition": function(parentGfx, event3, isThrowing) {
+    "bpmn:EscalationEventDefinition": function(parentGfx, event2, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_ESCALATION", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.5,
           my: 0.2
         }
       });
-      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var fill = isThrowing ? getStrokeColor2(event2, defaultStrokeColor) : "none";
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill,
-        stroke: getStrokeColor2(event3, defaultStrokeColor)
+        stroke: getStrokeColor2(event2, defaultStrokeColor)
       });
     },
-    "bpmn:ConditionalEventDefinition": function(parentGfx, event3) {
+    "bpmn:ConditionalEventDefinition": function(parentGfx, event2) {
       var pathData = pathMap.getScaledPath("EVENT_CONDITIONAL", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.5,
           my: 0.222
@@ -21551,125 +18479,125 @@ function BpmnRenderer2(config, eventBus, styles, pathMap, canvas, textRenderer, 
       });
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
-        stroke: getStrokeColor2(event3, defaultStrokeColor),
+        stroke: getStrokeColor2(event2, defaultStrokeColor),
         roughness: 0.5
       });
     },
-    "bpmn:LinkEventDefinition": function(parentGfx, event3, isThrowing) {
+    "bpmn:LinkEventDefinition": function(parentGfx, event2, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_LINK", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.57,
           my: 0.263
         }
       });
-      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var fill = isThrowing ? getStrokeColor2(event2, defaultStrokeColor) : "none";
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill,
-        stroke: getStrokeColor2(event3, defaultStrokeColor)
+        stroke: getStrokeColor2(event2, defaultStrokeColor)
       });
     },
-    "bpmn:ErrorEventDefinition": function(parentGfx, event3, isThrowing) {
+    "bpmn:ErrorEventDefinition": function(parentGfx, event2, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_ERROR", {
         xScaleFactor: 1.1,
         yScaleFactor: 1.1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.2,
           my: 0.722
         }
       });
-      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var fill = isThrowing ? getStrokeColor2(event2, defaultStrokeColor) : "none";
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill,
-        stroke: getStrokeColor2(event3, defaultStrokeColor)
+        stroke: getStrokeColor2(event2, defaultStrokeColor)
       });
     },
-    "bpmn:CancelEventDefinition": function(parentGfx, event3, isThrowing) {
+    "bpmn:CancelEventDefinition": function(parentGfx, event2, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_CANCEL_45", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.638,
           my: -0.055
         }
       });
-      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var fill = isThrowing ? getStrokeColor2(event2, defaultStrokeColor) : "none";
       var path = drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill,
-        stroke: getStrokeColor2(event3, defaultStrokeColor)
+        stroke: getStrokeColor2(event2, defaultStrokeColor)
       });
       rotate2(path, 45);
       return path;
     },
-    "bpmn:CompensateEventDefinition": function(parentGfx, event3, isThrowing) {
+    "bpmn:CompensateEventDefinition": function(parentGfx, event2, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_COMPENSATION", {
         xScaleFactor: 1,
         yScaleFactor: 1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.22,
           my: 0.5
         }
       });
-      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var fill = isThrowing ? getStrokeColor2(event2, defaultStrokeColor) : "none";
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill,
-        stroke: getStrokeColor2(event3, defaultStrokeColor)
+        stroke: getStrokeColor2(event2, defaultStrokeColor)
       });
     },
-    "bpmn:SignalEventDefinition": function(parentGfx, event3, isThrowing) {
+    "bpmn:SignalEventDefinition": function(parentGfx, event2, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_SIGNAL", {
         xScaleFactor: 0.9,
         yScaleFactor: 0.9,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.5,
           my: 0.2
         }
       });
-      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var fill = isThrowing ? getStrokeColor2(event2, defaultStrokeColor) : "none";
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill,
-        stroke: getStrokeColor2(event3, defaultStrokeColor)
+        stroke: getStrokeColor2(event2, defaultStrokeColor)
       });
     },
-    "bpmn:MultipleEventDefinition": function(parentGfx, event3, isThrowing) {
+    "bpmn:MultipleEventDefinition": function(parentGfx, event2, isThrowing) {
       var pathData = pathMap.getScaledPath("EVENT_MULTIPLE", {
         xScaleFactor: 1.1,
         yScaleFactor: 1.1,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.222,
           my: 0.36
         }
       });
-      var fill = isThrowing ? getStrokeColor2(event3, defaultStrokeColor) : "none";
+      var fill = isThrowing ? getStrokeColor2(event2, defaultStrokeColor) : "none";
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
         fill
       });
     },
-    "bpmn:ParallelMultipleEventDefinition": function(parentGfx, event3) {
+    "bpmn:ParallelMultipleEventDefinition": function(parentGfx, event2) {
       var pathData = pathMap.getScaledPath("EVENT_PARALLEL_MULTIPLE", {
         xScaleFactor: 1.2,
         yScaleFactor: 1.2,
-        containerWidth: event3.width,
-        containerHeight: event3.height,
+        containerWidth: event2.width,
+        containerHeight: event2.height,
         position: {
           mx: 0.458,
           my: 0.194
@@ -21677,8 +18605,8 @@ function BpmnRenderer2(config, eventBus, styles, pathMap, canvas, textRenderer, 
       });
       return drawPath2(parentGfx, pathData, {
         strokeWidth: 1,
-        fill: getStrokeColor2(event3, defaultStrokeColor),
-        stroke: getStrokeColor2(event3, defaultStrokeColor)
+        fill: getStrokeColor2(event2, defaultStrokeColor),
+        stroke: getStrokeColor2(event2, defaultStrokeColor)
       });
     },
     "bpmn:EndEvent": function(parentGfx, element) {
@@ -22599,11 +19527,11 @@ var index = {
 };
 
 // node_modules/bpmn-js/lib/BaseModeler.js
-function BaseModeler(options2) {
-  BaseViewer.call(this, options2);
-  this.on("import.parse.complete", function(event3) {
-    if (!event3.error) {
-      this._collectIds(event3.definitions, event3.elementsById);
+function BaseModeler(options) {
+  BaseViewer.call(this, options);
+  this.on("import.parse.complete", function(event2) {
+    if (!event2.error) {
+      this._collectIds(event2.definitions, event2.elementsById);
     }
   }, this);
   this.on("diagram.destroy", function() {
@@ -22611,8 +19539,8 @@ function BaseModeler(options2) {
   }, this);
 }
 e(BaseModeler, BaseViewer);
-BaseModeler.prototype._createModdle = function(options2) {
-  var moddle = BaseViewer.prototype._createModdle.call(this, options2);
+BaseModeler.prototype._createModdle = function(options) {
+  var moddle = BaseViewer.prototype._createModdle.call(this, options);
   moddle.ids = new index_esm_default([32, 36, 1]);
   return moddle;
 };
@@ -22748,21 +19676,22 @@ Scheduler.prototype.schedule = function(taskFn, id = Ids3.next()) {
   return newScheduled.promise;
 };
 Scheduler.prototype._schedule = function(taskFn, id) {
-  const {
-    promise,
-    resolve,
-    reject
-  } = defer();
-  const executionId = requestAnimationFrame(() => {
+  const deferred = defer();
+  const executionId = setTimeout(() => {
     try {
-      resolve(taskFn());
+      this._scheduled[id] = null;
+      try {
+        deferred.resolve(taskFn());
+      } catch (error4) {
+        deferred.reject(error4);
+      }
     } catch (error4) {
-      reject(error4);
+      console.error("Scheduler#_schedule execution failed", error4);
     }
   });
   return {
     executionId,
-    promise
+    promise: deferred.promise
   };
 };
 Scheduler.prototype.cancel = function(id) {
@@ -22773,20 +19702,15 @@ Scheduler.prototype.cancel = function(id) {
   }
 };
 Scheduler.prototype._cancel = function(scheduled) {
-  cancelAnimationFrame(scheduled.executionId);
+  clearTimeout(scheduled.executionId);
 };
 function defer() {
-  let resolve;
-  let reject;
-  const promise = new Promise((_resolve, _reject) => {
-    resolve = _resolve;
-    reject = _reject;
+  const deferred = {};
+  deferred.promise = new Promise((resolve, reject) => {
+    deferred.resolve = resolve;
+    deferred.reject = reject;
   });
-  return {
-    promise,
-    resolve,
-    reject
-  };
+  return deferred;
 }
 
 // node_modules/diagram-js/lib/features/scheduler/index.js
@@ -22797,7 +19721,7 @@ var scheduler_default = {
 // node_modules/diagram-js/lib/features/context-pad/ContextPad.js
 var MARKER_HIDDEN = "djs-element-hidden";
 var entrySelector = ".entry";
-var DEFAULT_PRIORITY5 = 1e3;
+var DEFAULT_PRIORITY4 = 1e3;
 var CONTEXT_PAD_MARGIN = 8;
 var HOVER_DELAY = 300;
 function ContextPad(canvas, elementRegistry, eventBus, scheduler) {
@@ -22816,8 +19740,8 @@ ContextPad.$inject = [
 ];
 ContextPad.prototype._init = function() {
   var self2 = this;
-  this._eventBus.on("selection.changed", function(event3) {
-    var selection2 = event3.newSelection;
+  this._eventBus.on("selection.changed", function(event2) {
+    var selection2 = event2.newSelection;
     var target = selection2.length ? selection2.length === 1 ? selection2[0] : selection2 : null;
     if (target) {
       self2.open(target, true);
@@ -22825,8 +19749,8 @@ ContextPad.prototype._init = function() {
       self2.close();
     }
   });
-  this._eventBus.on("elements.changed", function(event3) {
-    var elements = event3.elements, current = self2._current;
+  this._eventBus.on("elements.changed", function(event2) {
+    var elements = event2.elements, current = self2._current;
     if (!current) {
       return;
     }
@@ -22848,11 +19772,11 @@ ContextPad.prototype._init = function() {
   this._eventBus.on("canvas.viewbox.changed", function() {
     self2._updatePosition();
   });
-  this._eventBus.on("element.marker.update", function(event3) {
+  this._eventBus.on("element.marker.update", function(event2) {
     if (!self2.isOpen()) {
       return;
     }
-    var element = event3.element;
+    var element = event2.element;
     var current = self2._current;
     var targets = isArray(current.target) ? current.target : [current.target];
     if (!targets.includes(element)) {
@@ -22870,10 +19794,10 @@ ContextPad.prototype._createContainer = function() {
 ContextPad.prototype.registerProvider = function(priority, provider) {
   if (!provider) {
     provider = priority;
-    priority = DEFAULT_PRIORITY5;
+    priority = DEFAULT_PRIORITY4;
   }
-  this._eventBus.on("contextPad.getProviders", priority, function(event3) {
-    event3.providers.push(provider);
+  this._eventBus.on("contextPad.getProviders", priority, function(event2) {
+    event2.providers.push(provider);
   });
 };
 ContextPad.prototype.getEntries = function(target) {
@@ -22895,14 +19819,14 @@ ContextPad.prototype.getEntries = function(target) {
   });
   return entries;
 };
-ContextPad.prototype.trigger = function(action, event3, autoActivate) {
+ContextPad.prototype.trigger = function(action, event2, autoActivate) {
   var self2 = this;
-  var entry, originalEvent, button = event3.delegateTarget || event3.target;
+  var entry, originalEvent, button = event2.delegateTarget || event2.target;
   if (!button) {
-    return event3.preventDefault();
+    return event2.preventDefault();
   }
   entry = attr2(button, "data-action");
-  originalEvent = event3.originalEvent || event3;
+  originalEvent = event2.originalEvent || event2;
   if (action === "mouseover") {
     this._timeout = setTimeout(function() {
       self2._mouseout = self2.triggerEntry(entry, "hover", originalEvent, autoActivate);
@@ -22918,7 +19842,7 @@ ContextPad.prototype.trigger = function(action, event3, autoActivate) {
   }
   return this.triggerEntry(entry, action, originalEvent, autoActivate);
 };
-ContextPad.prototype.triggerEntry = function(entryId, action, event3, autoActivate) {
+ContextPad.prototype.triggerEntry = function(entryId, action, event2, autoActivate) {
   if (!this.isShown()) {
     return;
   }
@@ -22928,19 +19852,19 @@ ContextPad.prototype.triggerEntry = function(entryId, action, event3, autoActiva
     return;
   }
   var handler = entry.action;
-  if (this._eventBus.fire("contextPad.trigger", { entry, event: event3 }) === false) {
+  if (this._eventBus.fire("contextPad.trigger", { entry, event: event2 }) === false) {
     return;
   }
   if (isFunction(handler)) {
     if (action === "click") {
-      return handler(event3, target, autoActivate);
+      return handler(event2, target, autoActivate);
     }
   } else {
     if (handler[action]) {
-      return handler[action](event3, target, autoActivate);
+      return handler[action](event2, target, autoActivate);
     }
   }
-  event3.preventDefault();
+  event2.preventDefault();
 };
 ContextPad.prototype.open = function(target, force) {
   if (!force && this.isOpen(target)) {
@@ -22950,12 +19874,12 @@ ContextPad.prototype.open = function(target, force) {
   this._updateAndOpen(target);
 };
 ContextPad.prototype._getProviders = function() {
-  var event3 = this._eventBus.createEvent({
+  var event2 = this._eventBus.createEvent({
     type: "contextPad.getProviders",
     providers: []
   });
-  this._eventBus.fire(event3);
-  return event3.providers;
+  this._eventBus.fire(event2);
+  return event2.providers;
 };
 ContextPad.prototype._updateAndOpen = function(target) {
   var entries = this.getEntries(target), html = this._createHtml(target), image;
@@ -22996,20 +19920,20 @@ ContextPad.prototype._updateAndOpen = function(target) {
 ContextPad.prototype._createHtml = function(target) {
   var self2 = this;
   var html = domify$1('<div class="djs-context-pad"></div>');
-  delegate.bind(html, entrySelector, "click", function(event3) {
-    self2.trigger("click", event3);
+  delegate.bind(html, entrySelector, "click", function(event2) {
+    self2.trigger("click", event2);
   });
-  delegate.bind(html, entrySelector, "dragstart", function(event3) {
-    self2.trigger("dragstart", event3);
+  delegate.bind(html, entrySelector, "dragstart", function(event2) {
+    self2.trigger("dragstart", event2);
   });
-  delegate.bind(html, entrySelector, "mouseover", function(event3) {
-    self2.trigger("mouseover", event3);
+  delegate.bind(html, entrySelector, "mouseover", function(event2) {
+    self2.trigger("mouseover", event2);
   });
-  delegate.bind(html, entrySelector, "mouseout", function(event3) {
-    self2.trigger("mouseout", event3);
+  delegate.bind(html, entrySelector, "mouseout", function(event2) {
+    self2.trigger("mouseout", event2);
   });
-  event.bind(html, "mousedown", function(event3) {
-    event3.stopPropagation();
+  event.bind(html, "mousedown", function(event2) {
+    event2.stopPropagation();
   });
   this._container.appendChild(html);
   this._eventBus.fire("contextPad.create", {
@@ -23094,26 +20018,29 @@ ContextPad.prototype._getPosition = function(target) {
   };
 };
 ContextPad.prototype._updatePosition = function() {
-  if (!this.isOpen()) {
-    return;
-  }
-  var html = this._current.html;
-  var position = this._getPosition(this._current.target);
-  if ("x" in position && "y" in position) {
-    html.style.left = position.x + "px";
-    html.style.top = position.y + "px";
-  } else {
-    [
-      "top",
-      "right",
-      "bottom",
-      "left"
-    ].forEach(function(key) {
-      if (key in position) {
-        html.style[key] = position[key] + "px";
-      }
-    });
-  }
+  const updateFn = () => {
+    if (!this.isOpen()) {
+      return;
+    }
+    var html = this._current.html;
+    var position = this._getPosition(this._current.target);
+    if ("x" in position && "y" in position) {
+      html.style.left = position.x + "px";
+      html.style.top = position.y + "px";
+    } else {
+      [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ].forEach(function(key) {
+        if (key in position) {
+          html.style[key] = position[key] + "px";
+        }
+      });
+    }
+  };
+  this._scheduler.schedule(updateFn, "ContextPad#_updatePosition");
 };
 ContextPad.prototype._updateVisibility = function() {
   const updateFn = () => {
@@ -23159,10 +20086,10 @@ ContextPad.prototype._getTargetBounds = function(target) {
   });
 };
 function addClasses(element, classNames) {
-  var classes4 = classes2(element);
+  var classes3 = classes2(element);
   classNames = isArray(classNames) ? classNames : classNames.split(/\s+/g);
   classNames.forEach(function(cls) {
-    classes4.add(cls);
+    classes3.add(cls);
   });
 }
 function getLastWaypoint(connection) {
@@ -23192,166 +20119,171 @@ var l;
 var u;
 var t;
 var i;
-var o;
 var r;
-var f;
+var o;
 var e3;
+var f;
 var c;
 var s;
 var a;
-var h = {};
+var h;
+var p = {};
 var v = [];
-var p = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
-var y = Array.isArray;
-function d(n4, l5) {
+var y = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
+var d = Array.isArray;
+function w(n4, l5) {
   for (var u6 in l5) n4[u6] = l5[u6];
   return n4;
 }
 function _(n4) {
-  var l5 = n4.parentNode;
-  l5 && l5.removeChild(n4);
+  n4 && n4.parentNode && n4.parentNode.removeChild(n4);
 }
 function g(l5, u6, t7) {
-  var i7, o5, r7, f6 = {};
-  for (r7 in u6) "key" == r7 ? i7 = u6[r7] : "ref" == r7 ? o5 = u6[r7] : f6[r7] = u6[r7];
-  if (arguments.length > 2 && (f6.children = arguments.length > 3 ? n.call(arguments, 2) : t7), "function" == typeof l5 && null != l5.defaultProps) for (r7 in l5.defaultProps) void 0 === f6[r7] && (f6[r7] = l5.defaultProps[r7]);
-  return b(l5, f6, i7, o5, null);
+  var i7, r7, o5, e8 = {};
+  for (o5 in u6) "key" == o5 ? i7 = u6[o5] : "ref" == o5 ? r7 = u6[o5] : e8[o5] = u6[o5];
+  if (arguments.length > 2 && (e8.children = arguments.length > 3 ? n.call(arguments, 2) : t7), "function" == typeof l5 && null != l5.defaultProps) for (o5 in l5.defaultProps) void 0 === e8[o5] && (e8[o5] = l5.defaultProps[o5]);
+  return m(l5, e8, i7, r7, null);
 }
-function b(n4, t7, i7, o5, r7) {
-  var f6 = { type: n4, props: t7, key: i7, ref: o5, __k: null, __: null, __b: 0, __e: null, __d: void 0, __c: null, constructor: void 0, __v: null == r7 ? ++u : r7, __i: -1, __u: 0 };
-  return null == r7 && null != l.vnode && l.vnode(f6), f6;
+function m(n4, t7, i7, r7, o5) {
+  var e8 = { type: n4, props: t7, key: i7, ref: r7, __k: null, __: null, __b: 0, __e: null, __c: null, constructor: void 0, __v: null == o5 ? ++u : o5, __i: -1, __u: 0 };
+  return null == o5 && null != l.vnode && l.vnode(e8), e8;
 }
-function w(n4) {
+function k(n4) {
   return n4.children;
 }
-function k(n4, l5) {
+function x(n4, l5) {
   this.props = n4, this.context = l5;
 }
-function x(n4, l5) {
-  if (null == l5) return n4.__ ? x(n4.__, n4.__i + 1) : null;
+function C(n4, l5) {
+  if (null == l5) return n4.__ ? C(n4.__, n4.__i + 1) : null;
   for (var u6; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) return u6.__e;
-  return "function" == typeof n4.type ? x(n4) : null;
+  return "function" == typeof n4.type ? C(n4) : null;
 }
-function C(n4) {
+function S(n4) {
   var l5, u6;
   if (null != (n4 = n4.__) && null != n4.__c) {
     for (n4.__e = n4.__c.base = null, l5 = 0; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) {
       n4.__e = n4.__c.base = u6.__e;
       break;
     }
-    return C(n4);
+    return S(n4);
   }
 }
-function P(n4) {
-  (!n4.__d && (n4.__d = true) && i.push(n4) && !S.__r++ || o !== l.debounceRendering) && ((o = l.debounceRendering) || r)(S);
+function M(n4) {
+  (!n4.__d && (n4.__d = true) && i.push(n4) && !P.__r++ || r !== l.debounceRendering) && ((r = l.debounceRendering) || o)(P);
 }
-function S() {
-  var n4, u6, t7, o5, r7, e8, c5, s5;
-  for (i.sort(f); n4 = i.shift(); ) n4.__d && (u6 = i.length, o5 = void 0, e8 = (r7 = (t7 = n4).__v).__e, c5 = [], s5 = [], t7.__P && ((o5 = d({}, r7)).__v = r7.__v + 1, l.vnode && l.vnode(o5), O(t7.__P, o5, r7, t7.__n, void 0 !== t7.__P.ownerSVGElement, 32 & r7.__u ? [e8] : null, c5, null == e8 ? x(r7) : e8, !!(32 & r7.__u), s5), o5.__v = r7.__v, o5.__.__k[o5.__i] = o5, j(c5, o5, s5), o5.__e != e8 && C(o5)), i.length > u6 && i.sort(f));
-  S.__r = 0;
+function P() {
+  var n4, u6, t7, r7, o5, f6, c5, s5;
+  for (i.sort(e3); n4 = i.shift(); ) n4.__d && (u6 = i.length, r7 = void 0, f6 = (o5 = (t7 = n4).__v).__e, c5 = [], s5 = [], t7.__P && ((r7 = w({}, o5)).__v = o5.__v + 1, l.vnode && l.vnode(r7), j(t7.__P, r7, o5, t7.__n, t7.__P.namespaceURI, 32 & o5.__u ? [f6] : null, c5, null == f6 ? C(o5) : f6, !!(32 & o5.__u), s5), r7.__v = o5.__v, r7.__.__k[r7.__i] = r7, z(c5, r7, s5), r7.__e != f6 && S(r7)), i.length > u6 && i.sort(e3));
+  P.__r = 0;
 }
-function $(n4, l5, u6, t7, i7, o5, r7, f6, e8, c5, s5) {
-  var a6, p5, y5, d5, _5, g6 = t7 && t7.__k || v, b5 = l5.length;
-  for (u6.__d = e8, I(u6, l5, g6), e8 = u6.__d, a6 = 0; a6 < b5; a6++) null != (y5 = u6.__k[a6]) && "boolean" != typeof y5 && "function" != typeof y5 && (p5 = -1 === y5.__i ? h : g6[y5.__i] || h, y5.__i = a6, O(n4, y5, p5, i7, o5, r7, f6, e8, c5, s5), d5 = y5.__e, y5.ref && p5.ref != y5.ref && (p5.ref && N(p5.ref, null, y5), s5.push(y5.ref, y5.__c || d5, y5)), null == _5 && null != d5 && (_5 = d5), 65536 & y5.__u || p5.__k === y5.__k ? (e8 && !e8.isConnected && (e8 = x(p5)), e8 = H(y5, e8, n4)) : "function" == typeof y5.type && void 0 !== y5.__d ? e8 = y5.__d : d5 && (e8 = d5.nextSibling), y5.__d = void 0, y5.__u &= -196609);
-  u6.__d = e8, u6.__e = _5;
+function $(n4, l5, u6, t7, i7, r7, o5, e8, f6, c5, s5) {
+  var a6, h5, y5, d5, w6, _5, g6 = t7 && t7.__k || v, m6 = l5.length;
+  for (f6 = I(u6, l5, g6, f6, m6), a6 = 0; a6 < m6; a6++) null != (y5 = u6.__k[a6]) && (h5 = -1 === y5.__i ? p : g6[y5.__i] || p, y5.__i = a6, _5 = j(n4, y5, h5, i7, r7, o5, e8, f6, c5, s5), d5 = y5.__e, y5.ref && h5.ref != y5.ref && (h5.ref && V(h5.ref, null, y5), s5.push(y5.ref, y5.__c || d5, y5)), null == w6 && null != d5 && (w6 = d5), 4 & y5.__u || h5.__k === y5.__k ? f6 = A(y5, f6, n4) : "function" == typeof y5.type && void 0 !== _5 ? f6 = _5 : d5 && (f6 = d5.nextSibling), y5.__u &= -7);
+  return u6.__e = w6, f6;
 }
-function I(n4, l5, u6) {
-  var t7, i7, o5, r7, f6, e8 = l5.length, c5 = u6.length, s5 = c5, a6 = 0;
-  for (n4.__k = [], t7 = 0; t7 < e8; t7++) r7 = t7 + a6, null != (i7 = n4.__k[t7] = null == (i7 = l5[t7]) || "boolean" == typeof i7 || "function" == typeof i7 ? null : "string" == typeof i7 || "number" == typeof i7 || "bigint" == typeof i7 || i7.constructor == String ? b(null, i7, null, null, null) : y(i7) ? b(w, { children: i7 }, null, null, null) : void 0 === i7.constructor && i7.__b > 0 ? b(i7.type, i7.props, i7.key, i7.ref ? i7.ref : null, i7.__v) : i7) ? (i7.__ = n4, i7.__b = n4.__b + 1, f6 = A(i7, u6, r7, s5), i7.__i = f6, o5 = null, -1 !== f6 && (s5--, (o5 = u6[f6]) && (o5.__u |= 131072)), null == o5 || null === o5.__v ? (-1 == f6 && a6--, "function" != typeof i7.type && (i7.__u |= 65536)) : f6 !== r7 && (f6 === r7 + 1 ? a6++ : f6 > r7 ? s5 > e8 - r7 ? a6 += f6 - r7 : a6-- : f6 < r7 ? f6 == r7 - 1 && (a6 = f6 - r7) : a6 = 0, f6 !== t7 + a6 && (i7.__u |= 65536))) : (o5 = u6[r7]) && null == o5.key && o5.__e && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = x(o5)), q(o5, o5, false), u6[r7] = null, s5--);
-  if (s5) for (t7 = 0; t7 < c5; t7++) null != (o5 = u6[t7]) && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = x(o5)), q(o5, o5));
+function I(n4, l5, u6, t7, i7) {
+  var r7, o5, e8, f6, c5, s5 = u6.length, a6 = s5, h5 = 0;
+  for (n4.__k = new Array(i7), r7 = 0; r7 < i7; r7++) null != (o5 = l5[r7]) && "boolean" != typeof o5 && "function" != typeof o5 ? (f6 = r7 + h5, (o5 = n4.__k[r7] = "string" == typeof o5 || "number" == typeof o5 || "bigint" == typeof o5 || o5.constructor == String ? m(null, o5, null, null, null) : d(o5) ? m(k, { children: o5 }, null, null, null) : void 0 === o5.constructor && o5.__b > 0 ? m(o5.type, o5.props, o5.key, o5.ref ? o5.ref : null, o5.__v) : o5).__ = n4, o5.__b = n4.__b + 1, e8 = null, -1 !== (c5 = o5.__i = L(o5, u6, f6, a6)) && (a6--, (e8 = u6[c5]) && (e8.__u |= 2)), null == e8 || null === e8.__v ? (-1 == c5 && h5--, "function" != typeof o5.type && (o5.__u |= 4)) : c5 != f6 && (c5 == f6 - 1 ? h5-- : c5 == f6 + 1 ? h5++ : (c5 > f6 ? h5-- : h5++, o5.__u |= 4))) : n4.__k[r7] = null;
+  if (a6) for (r7 = 0; r7 < s5; r7++) null != (e8 = u6[r7]) && 0 == (2 & e8.__u) && (e8.__e == t7 && (t7 = C(e8)), q(e8, e8));
+  return t7;
 }
-function H(n4, l5, u6) {
+function A(n4, l5, u6) {
   var t7, i7;
   if ("function" == typeof n4.type) {
-    for (t7 = n4.__k, i7 = 0; t7 && i7 < t7.length; i7++) t7[i7] && (t7[i7].__ = n4, l5 = H(t7[i7], l5, u6));
+    for (t7 = n4.__k, i7 = 0; t7 && i7 < t7.length; i7++) t7[i7] && (t7[i7].__ = n4, l5 = A(t7[i7], l5, u6));
     return l5;
   }
-  n4.__e != l5 && (u6.insertBefore(n4.__e, l5 || null), l5 = n4.__e);
+  n4.__e != l5 && (l5 && n4.type && !u6.contains(l5) && (l5 = C(n4)), u6.insertBefore(n4.__e, l5 || null), l5 = n4.__e);
   do {
     l5 = l5 && l5.nextSibling;
-  } while (null != l5 && 8 === l5.nodeType);
+  } while (null != l5 && 8 == l5.nodeType);
   return l5;
 }
-function A(n4, l5, u6, t7) {
-  var i7 = n4.key, o5 = n4.type, r7 = u6 - 1, f6 = u6 + 1, e8 = l5[u6];
-  if (null === e8 || e8 && i7 == e8.key && o5 === e8.type && 0 == (131072 & e8.__u)) return u6;
-  if (t7 > (null != e8 && 0 == (131072 & e8.__u) ? 1 : 0)) for (; r7 >= 0 || f6 < l5.length; ) {
-    if (r7 >= 0) {
-      if ((e8 = l5[r7]) && 0 == (131072 & e8.__u) && i7 == e8.key && o5 === e8.type) return r7;
-      r7--;
+function L(n4, l5, u6, t7) {
+  var i7, r7, o5 = n4.key, e8 = n4.type, f6 = l5[u6];
+  if (null === f6 || f6 && o5 == f6.key && e8 === f6.type && 0 == (2 & f6.__u)) return u6;
+  if (t7 > (null != f6 && 0 == (2 & f6.__u) ? 1 : 0)) for (i7 = u6 - 1, r7 = u6 + 1; i7 >= 0 || r7 < l5.length; ) {
+    if (i7 >= 0) {
+      if ((f6 = l5[i7]) && 0 == (2 & f6.__u) && o5 == f6.key && e8 === f6.type) return i7;
+      i7--;
     }
-    if (f6 < l5.length) {
-      if ((e8 = l5[f6]) && 0 == (131072 & e8.__u) && i7 == e8.key && o5 === e8.type) return f6;
-      f6++;
+    if (r7 < l5.length) {
+      if ((f6 = l5[r7]) && 0 == (2 & f6.__u) && o5 == f6.key && e8 === f6.type) return r7;
+      r7++;
     }
   }
   return -1;
 }
-function F(n4, l5, u6) {
-  "-" === l5[0] ? n4.setProperty(l5, null == u6 ? "" : u6) : n4[l5] = null == u6 ? "" : "number" != typeof u6 || p.test(l5) ? u6 : u6 + "px";
+function T(n4, l5, u6) {
+  "-" == l5[0] ? n4.setProperty(l5, null == u6 ? "" : u6) : n4[l5] = null == u6 ? "" : "number" != typeof u6 || y.test(l5) ? u6 : u6 + "px";
 }
-function L(n4, l5, u6, t7, i7) {
-  var o5;
-  n: if ("style" === l5) if ("string" == typeof u6) n4.style.cssText = u6;
+function F(n4, l5, u6, t7, i7) {
+  var r7;
+  n: if ("style" == l5) if ("string" == typeof u6) n4.style.cssText = u6;
   else {
-    if ("string" == typeof t7 && (n4.style.cssText = t7 = ""), t7) for (l5 in t7) u6 && l5 in u6 || F(n4.style, l5, "");
-    if (u6) for (l5 in u6) t7 && u6[l5] === t7[l5] || F(n4.style, l5, u6[l5]);
+    if ("string" == typeof t7 && (n4.style.cssText = t7 = ""), t7) for (l5 in t7) u6 && l5 in u6 || T(n4.style, l5, "");
+    if (u6) for (l5 in u6) t7 && u6[l5] === t7[l5] || T(n4.style, l5, u6[l5]);
   }
-  else if ("o" === l5[0] && "n" === l5[1]) o5 = l5 !== (l5 = l5.replace(/(PointerCapture)$|Capture$/i, "$1")), l5 = l5.toLowerCase() in n4 || "onFocusOut" === l5 || "onFocusIn" === l5 ? l5.toLowerCase().slice(2) : l5.slice(2), n4.l || (n4.l = {}), n4.l[l5 + o5] = u6, u6 ? t7 ? u6.u = t7.u : (u6.u = e3, n4.addEventListener(l5, o5 ? s : c, o5)) : n4.removeEventListener(l5, o5 ? s : c, o5);
+  else if ("o" == l5[0] && "n" == l5[1]) r7 = l5 != (l5 = l5.replace(f, "$1")), l5 = l5.toLowerCase() in n4 || "onFocusOut" == l5 || "onFocusIn" == l5 ? l5.toLowerCase().slice(2) : l5.slice(2), n4.l || (n4.l = {}), n4.l[l5 + r7] = u6, u6 ? t7 ? u6.u = t7.u : (u6.u = c, n4.addEventListener(l5, r7 ? a : s, r7)) : n4.removeEventListener(l5, r7 ? a : s, r7);
   else {
-    if (i7) l5 = l5.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
-    else if ("width" != l5 && "height" != l5 && "href" != l5 && "list" != l5 && "form" != l5 && "tabIndex" != l5 && "download" != l5 && "rowSpan" != l5 && "colSpan" != l5 && "role" != l5 && l5 in n4) try {
+    if ("http://www.w3.org/2000/svg" == i7) l5 = l5.replace(/xlink(H|:h)/, "h").replace(/sName$/, "s");
+    else if ("width" != l5 && "height" != l5 && "href" != l5 && "list" != l5 && "form" != l5 && "tabIndex" != l5 && "download" != l5 && "rowSpan" != l5 && "colSpan" != l5 && "role" != l5 && "popover" != l5 && l5 in n4) try {
       n4[l5] = null == u6 ? "" : u6;
       break n;
     } catch (n5) {
     }
-    "function" == typeof u6 || (null == u6 || false === u6 && "-" !== l5[4] ? n4.removeAttribute(l5) : n4.setAttribute(l5, u6));
+    "function" == typeof u6 || (null == u6 || false === u6 && "-" != l5[4] ? n4.removeAttribute(l5) : n4.setAttribute(l5, "popover" == l5 && 1 == u6 ? "" : u6));
   }
 }
-function M(n4) {
+function O(n4) {
   return function(u6) {
     if (this.l) {
       var t7 = this.l[u6.type + n4];
-      if (null == u6.t) u6.t = e3++;
+      if (null == u6.t) u6.t = c++;
       else if (u6.t < t7.u) return;
       return t7(l.event ? l.event(u6) : u6);
     }
   };
 }
-function O(n4, u6, t7, i7, o5, r7, f6, e8, c5, s5) {
-  var a6, h5, v5, p5, _5, g6, b5, m5, x6, C5, P5, S3, I4, H4, T5, A6 = u6.type;
+function j(n4, u6, t7, i7, r7, o5, e8, f6, c5, s5) {
+  var a6, h5, p5, v5, y5, g6, m6, b4, C5, S3, M4, P5, I4, A6, H3, L4, T6, F6 = u6.type;
   if (void 0 !== u6.constructor) return null;
-  128 & t7.__u && (c5 = !!(32 & t7.__u), r7 = [e8 = u6.__e = t7.__e]), (a6 = l.__b) && a6(u6);
-  n: if ("function" == typeof A6) try {
-    if (m5 = u6.props, x6 = (a6 = A6.contextType) && i7[a6.__c], C5 = a6 ? x6 ? x6.props.value : a6.__ : i7, t7.__c ? b5 = (h5 = u6.__c = t7.__c).__ = h5.__E : ("prototype" in A6 && A6.prototype.render ? u6.__c = h5 = new A6(m5, C5) : (u6.__c = h5 = new k(m5, C5), h5.constructor = A6, h5.render = B), x6 && x6.sub(h5), h5.props = m5, h5.state || (h5.state = {}), h5.context = C5, h5.__n = i7, v5 = h5.__d = true, h5.__h = [], h5._sb = []), null == h5.__s && (h5.__s = h5.state), null != A6.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = d({}, h5.__s)), d(h5.__s, A6.getDerivedStateFromProps(m5, h5.__s))), p5 = h5.props, _5 = h5.state, h5.__v = u6, v5) null == A6.getDerivedStateFromProps && null != h5.componentWillMount && h5.componentWillMount(), null != h5.componentDidMount && h5.__h.push(h5.componentDidMount);
+  128 & t7.__u && (c5 = !!(32 & t7.__u), o5 = [f6 = u6.__e = t7.__e]), (a6 = l.__b) && a6(u6);
+  n: if ("function" == typeof F6) try {
+    if (b4 = u6.props, C5 = "prototype" in F6 && F6.prototype.render, S3 = (a6 = F6.contextType) && i7[a6.__c], M4 = a6 ? S3 ? S3.props.value : a6.__ : i7, t7.__c ? m6 = (h5 = u6.__c = t7.__c).__ = h5.__E : (C5 ? u6.__c = h5 = new F6(b4, M4) : (u6.__c = h5 = new x(b4, M4), h5.constructor = F6, h5.render = B), S3 && S3.sub(h5), h5.props = b4, h5.state || (h5.state = {}), h5.context = M4, h5.__n = i7, p5 = h5.__d = true, h5.__h = [], h5._sb = []), C5 && null == h5.__s && (h5.__s = h5.state), C5 && null != F6.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = w({}, h5.__s)), w(h5.__s, F6.getDerivedStateFromProps(b4, h5.__s))), v5 = h5.props, y5 = h5.state, h5.__v = u6, p5) C5 && null == F6.getDerivedStateFromProps && null != h5.componentWillMount && h5.componentWillMount(), C5 && null != h5.componentDidMount && h5.__h.push(h5.componentDidMount);
     else {
-      if (null == A6.getDerivedStateFromProps && m5 !== p5 && null != h5.componentWillReceiveProps && h5.componentWillReceiveProps(m5, C5), !h5.__e && (null != h5.shouldComponentUpdate && false === h5.shouldComponentUpdate(m5, h5.__s, C5) || u6.__v === t7.__v)) {
-        for (u6.__v !== t7.__v && (h5.props = m5, h5.state = h5.__s, h5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.forEach(function(n5) {
+      if (C5 && null == F6.getDerivedStateFromProps && b4 !== v5 && null != h5.componentWillReceiveProps && h5.componentWillReceiveProps(b4, M4), !h5.__e && (null != h5.shouldComponentUpdate && false === h5.shouldComponentUpdate(b4, h5.__s, M4) || u6.__v == t7.__v)) {
+        for (u6.__v != t7.__v && (h5.props = b4, h5.state = h5.__s, h5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.some(function(n5) {
           n5 && (n5.__ = u6);
         }), P5 = 0; P5 < h5._sb.length; P5++) h5.__h.push(h5._sb[P5]);
-        h5._sb = [], h5.__h.length && f6.push(h5);
+        h5._sb = [], h5.__h.length && e8.push(h5);
         break n;
       }
-      null != h5.componentWillUpdate && h5.componentWillUpdate(m5, h5.__s, C5), null != h5.componentDidUpdate && h5.__h.push(function() {
-        h5.componentDidUpdate(p5, _5, g6);
+      null != h5.componentWillUpdate && h5.componentWillUpdate(b4, h5.__s, M4), C5 && null != h5.componentDidUpdate && h5.__h.push(function() {
+        h5.componentDidUpdate(v5, y5, g6);
       });
     }
-    if (h5.context = C5, h5.props = m5, h5.__P = n4, h5.__e = false, S3 = l.__r, I4 = 0, "prototype" in A6 && A6.prototype.render) {
-      for (h5.state = h5.__s, h5.__d = false, S3 && S3(u6), a6 = h5.render(h5.props, h5.state, h5.context), H4 = 0; H4 < h5._sb.length; H4++) h5.__h.push(h5._sb[H4]);
+    if (h5.context = M4, h5.props = b4, h5.__P = n4, h5.__e = false, I4 = l.__r, A6 = 0, C5) {
+      for (h5.state = h5.__s, h5.__d = false, I4 && I4(u6), a6 = h5.render(h5.props, h5.state, h5.context), H3 = 0; H3 < h5._sb.length; H3++) h5.__h.push(h5._sb[H3]);
       h5._sb = [];
     } else do {
-      h5.__d = false, S3 && S3(u6), a6 = h5.render(h5.props, h5.state, h5.context), h5.state = h5.__s;
-    } while (h5.__d && ++I4 < 25);
-    h5.state = h5.__s, null != h5.getChildContext && (i7 = d(d({}, i7), h5.getChildContext())), v5 || null == h5.getSnapshotBeforeUpdate || (g6 = h5.getSnapshotBeforeUpdate(p5, _5)), $(n4, y(T5 = null != a6 && a6.type === w && null == a6.key ? a6.props.children : a6) ? T5 : [T5], u6, t7, i7, o5, r7, f6, e8, c5, s5), h5.base = u6.__e, u6.__u &= -161, h5.__h.length && f6.push(h5), b5 && (h5.__E = h5.__ = null);
+      h5.__d = false, I4 && I4(u6), a6 = h5.render(h5.props, h5.state, h5.context), h5.state = h5.__s;
+    } while (h5.__d && ++A6 < 25);
+    h5.state = h5.__s, null != h5.getChildContext && (i7 = w(w({}, i7), h5.getChildContext())), C5 && !p5 && null != h5.getSnapshotBeforeUpdate && (g6 = h5.getSnapshotBeforeUpdate(v5, y5)), f6 = $(n4, d(L4 = null != a6 && a6.type === k && null == a6.key ? a6.props.children : a6) ? L4 : [L4], u6, t7, i7, r7, o5, e8, f6, c5, s5), h5.base = u6.__e, u6.__u &= -161, h5.__h.length && e8.push(h5), m6 && (h5.__E = h5.__ = null);
   } catch (n5) {
-    u6.__v = null, c5 || null != r7 ? (u6.__e = e8, u6.__u |= c5 ? 160 : 32, r7[r7.indexOf(e8)] = null) : (u6.__e = t7.__e, u6.__k = t7.__k), l.__e(n5, u6, t7);
+    if (u6.__v = null, c5 || null != o5) if (n5.then) {
+      for (u6.__u |= c5 ? 160 : 128; f6 && 8 == f6.nodeType && f6.nextSibling; ) f6 = f6.nextSibling;
+      o5[o5.indexOf(f6)] = null, u6.__e = f6;
+    } else for (T6 = o5.length; T6--; ) _(o5[T6]);
+    else u6.__e = t7.__e, u6.__k = t7.__k;
+    l.__e(n5, u6, t7);
   }
-  else null == r7 && u6.__v === t7.__v ? (u6.__k = t7.__k, u6.__e = t7.__e) : u6.__e = z(t7.__e, u6, t7, i7, o5, r7, f6, c5, s5);
-  (a6 = l.diffed) && a6(u6);
+  else null == o5 && u6.__v == t7.__v ? (u6.__k = t7.__k, u6.__e = t7.__e) : f6 = u6.__e = N(t7.__e, u6, t7, i7, r7, o5, e8, c5, s5);
+  return (a6 = l.diffed) && a6(u6), 128 & u6.__u ? void 0 : f6;
 }
-function j(n4, u6, t7) {
-  u6.__d = void 0;
-  for (var i7 = 0; i7 < t7.length; i7++) N(t7[i7], t7[++i7], t7[++i7]);
+function z(n4, u6, t7) {
+  for (var i7 = 0; i7 < t7.length; i7++) V(t7[i7], t7[++i7], t7[++i7]);
   l.__c && l.__c(u6, n4), n4.some(function(u7) {
     try {
       n4 = u7.__h, u7.__h = [], n4.some(function(n5) {
@@ -23362,39 +20294,47 @@ function j(n4, u6, t7) {
     }
   });
 }
-function z(l5, u6, t7, i7, o5, r7, f6, e8, c5) {
-  var s5, a6, v5, p5, d5, g6, b5, m5 = t7.props, w6 = u6.props, k6 = u6.type;
-  if ("svg" === k6 && (o5 = true), null != r7) {
-    for (s5 = 0; s5 < r7.length; s5++) if ((d5 = r7[s5]) && "setAttribute" in d5 == !!k6 && (k6 ? d5.localName === k6 : 3 === d5.nodeType)) {
-      l5 = d5, r7[s5] = null;
+function N(u6, t7, i7, r7, o5, e8, f6, c5, s5) {
+  var a6, h5, v5, y5, w6, g6, m6, b4 = i7.props, k6 = t7.props, x6 = t7.type;
+  if ("svg" == x6 ? o5 = "http://www.w3.org/2000/svg" : "math" == x6 ? o5 = "http://www.w3.org/1998/Math/MathML" : o5 || (o5 = "http://www.w3.org/1999/xhtml"), null != e8) {
+    for (a6 = 0; a6 < e8.length; a6++) if ((w6 = e8[a6]) && "setAttribute" in w6 == !!x6 && (x6 ? w6.localName == x6 : 3 == w6.nodeType)) {
+      u6 = w6, e8[a6] = null;
       break;
     }
   }
-  if (null == l5) {
-    if (null === k6) return document.createTextNode(w6);
-    l5 = o5 ? document.createElementNS("http://www.w3.org/2000/svg", k6) : document.createElement(k6, w6.is && w6), r7 = null, e8 = false;
+  if (null == u6) {
+    if (null == x6) return document.createTextNode(k6);
+    u6 = document.createElementNS(o5, x6, k6.is && k6), c5 && (l.__m && l.__m(t7, e8), c5 = false), e8 = null;
   }
-  if (null === k6) m5 === w6 || e8 && l5.data === w6 || (l5.data = w6);
+  if (null === x6) b4 === k6 || c5 && u6.data === k6 || (u6.data = k6);
   else {
-    if (r7 = r7 && n.call(l5.childNodes), m5 = t7.props || h, !e8 && null != r7) for (m5 = {}, s5 = 0; s5 < l5.attributes.length; s5++) m5[(d5 = l5.attributes[s5]).name] = d5.value;
-    for (s5 in m5) d5 = m5[s5], "children" == s5 || ("dangerouslySetInnerHTML" == s5 ? v5 = d5 : "key" === s5 || s5 in w6 || L(l5, s5, null, d5, o5));
-    for (s5 in w6) d5 = w6[s5], "children" == s5 ? p5 = d5 : "dangerouslySetInnerHTML" == s5 ? a6 = d5 : "value" == s5 ? g6 = d5 : "checked" == s5 ? b5 = d5 : "key" === s5 || e8 && "function" != typeof d5 || m5[s5] === d5 || L(l5, s5, d5, m5[s5], o5);
-    if (a6) e8 || v5 && (a6.__html === v5.__html || a6.__html === l5.innerHTML) || (l5.innerHTML = a6.__html), u6.__k = [];
-    else if (v5 && (l5.innerHTML = ""), $(l5, y(p5) ? p5 : [p5], u6, t7, i7, o5 && "foreignObject" !== k6, r7, f6, r7 ? r7[0] : t7.__k && x(t7, 0), e8, c5), null != r7) for (s5 = r7.length; s5--; ) null != r7[s5] && _(r7[s5]);
-    e8 || (s5 = "value", void 0 !== g6 && (g6 !== l5[s5] || "progress" === k6 && !g6 || "option" === k6 && g6 !== m5[s5]) && L(l5, s5, g6, m5[s5], false), s5 = "checked", void 0 !== b5 && b5 !== l5[s5] && L(l5, s5, b5, m5[s5], false));
+    if (e8 = e8 && n.call(u6.childNodes), b4 = i7.props || p, !c5 && null != e8) for (b4 = {}, a6 = 0; a6 < u6.attributes.length; a6++) b4[(w6 = u6.attributes[a6]).name] = w6.value;
+    for (a6 in b4) if (w6 = b4[a6], "children" == a6) ;
+    else if ("dangerouslySetInnerHTML" == a6) v5 = w6;
+    else if (!(a6 in k6)) {
+      if ("value" == a6 && "defaultValue" in k6 || "checked" == a6 && "defaultChecked" in k6) continue;
+      F(u6, a6, null, w6, o5);
+    }
+    for (a6 in k6) w6 = k6[a6], "children" == a6 ? y5 = w6 : "dangerouslySetInnerHTML" == a6 ? h5 = w6 : "value" == a6 ? g6 = w6 : "checked" == a6 ? m6 = w6 : c5 && "function" != typeof w6 || b4[a6] === w6 || F(u6, a6, w6, b4[a6], o5);
+    if (h5) c5 || v5 && (h5.__html === v5.__html || h5.__html === u6.innerHTML) || (u6.innerHTML = h5.__html), t7.__k = [];
+    else if (v5 && (u6.innerHTML = ""), $(u6, d(y5) ? y5 : [y5], t7, i7, r7, "foreignObject" == x6 ? "http://www.w3.org/1999/xhtml" : o5, e8, f6, e8 ? e8[0] : i7.__k && C(i7, 0), c5, s5), null != e8) for (a6 = e8.length; a6--; ) _(e8[a6]);
+    c5 || (a6 = "value", "progress" == x6 && null == g6 ? u6.removeAttribute("value") : void 0 !== g6 && (g6 !== u6[a6] || "progress" == x6 && !g6 || "option" == x6 && g6 !== b4[a6]) && F(u6, a6, g6, b4[a6], o5), a6 = "checked", void 0 !== m6 && m6 !== u6[a6] && F(u6, a6, m6, b4[a6], o5));
   }
-  return l5;
+  return u6;
 }
-function N(n4, u6, t7) {
+function V(n4, u6, t7) {
   try {
-    "function" == typeof n4 ? n4(u6) : n4.current = u6;
+    if ("function" == typeof n4) {
+      var i7 = "function" == typeof n4.__u;
+      i7 && n4.__u(), i7 && null == u6 || (n4.__u = n4(u6));
+    } else n4.current = u6;
   } catch (n5) {
     l.__e(n5, t7);
   }
 }
 function q(n4, u6, t7) {
-  var i7, o5;
-  if (l.unmount && l.unmount(n4), (i7 = n4.ref) && (i7.current && i7.current !== n4.__e || N(i7, null, u6)), null != (i7 = n4.__c)) {
+  var i7, r7;
+  if (l.unmount && l.unmount(n4), (i7 = n4.ref) && (i7.current && i7.current !== n4.__e || V(i7, null, u6)), null != (i7 = n4.__c)) {
     if (i7.componentWillUnmount) try {
       i7.componentWillUnmount();
     } catch (n5) {
@@ -23402,33 +20342,33 @@ function q(n4, u6, t7) {
     }
     i7.base = i7.__P = null;
   }
-  if (i7 = n4.__k) for (o5 = 0; o5 < i7.length; o5++) i7[o5] && q(i7[o5], u6, t7 || "function" != typeof n4.type);
-  t7 || null == n4.__e || _(n4.__e), n4.__c = n4.__ = n4.__e = n4.__d = void 0;
+  if (i7 = n4.__k) for (r7 = 0; r7 < i7.length; r7++) i7[r7] && q(i7[r7], u6, t7 || "function" != typeof n4.type);
+  t7 || _(n4.__e), n4.__c = n4.__ = n4.__e = void 0;
 }
 function B(n4, l5, u6) {
   return this.constructor(n4, u6);
 }
 function D(u6, t7, i7) {
-  var o5, r7, f6, e8;
-  l.__ && l.__(u6, t7), r7 = (o5 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, f6 = [], e8 = [], O(t7, u6 = (!o5 && i7 || t7).__k = g(w, null, [u6]), r7 || h, h, void 0 !== t7.ownerSVGElement, !o5 && i7 ? [i7] : r7 ? null : t7.firstChild ? n.call(t7.childNodes) : null, f6, !o5 && i7 ? i7 : r7 ? r7.__e : t7.firstChild, o5, e8), j(f6, u6, e8);
+  var r7, o5, e8, f6;
+  t7 == document && (t7 = document.documentElement), l.__ && l.__(u6, t7), o5 = (r7 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, e8 = [], f6 = [], j(t7, u6 = (!r7 && i7 || t7).__k = g(k, null, [u6]), o5 || p, p, t7.namespaceURI, !r7 && i7 ? [i7] : o5 ? null : t7.firstChild ? n.call(t7.childNodes) : null, e8, !r7 && i7 ? i7 : o5 ? o5.__e : t7.firstChild, r7, f6), z(e8, u6, f6);
 }
 n = v.slice, l = { __e: function(n4, l5, u6, t7) {
-  for (var i7, o5, r7; l5 = l5.__; ) if ((i7 = l5.__c) && !i7.__) try {
-    if ((o5 = i7.constructor) && null != o5.getDerivedStateFromError && (i7.setState(o5.getDerivedStateFromError(n4)), r7 = i7.__d), null != i7.componentDidCatch && (i7.componentDidCatch(n4, t7 || {}), r7 = i7.__d), r7) return i7.__E = i7;
+  for (var i7, r7, o5; l5 = l5.__; ) if ((i7 = l5.__c) && !i7.__) try {
+    if ((r7 = i7.constructor) && null != r7.getDerivedStateFromError && (i7.setState(r7.getDerivedStateFromError(n4)), o5 = i7.__d), null != i7.componentDidCatch && (i7.componentDidCatch(n4, t7 || {}), o5 = i7.__d), o5) return i7.__E = i7;
   } catch (l6) {
     n4 = l6;
   }
   throw n4;
 } }, u = 0, t = function(n4) {
   return null != n4 && null == n4.constructor;
-}, k.prototype.setState = function(n4, l5) {
+}, x.prototype.setState = function(n4, l5) {
   var u6;
-  u6 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = d({}, this.state), "function" == typeof n4 && (n4 = n4(d({}, u6), this.props)), n4 && d(u6, n4), null != n4 && this.__v && (l5 && this._sb.push(l5), P(this));
-}, k.prototype.forceUpdate = function(n4) {
-  this.__v && (this.__e = true, n4 && this.__h.push(n4), P(this));
-}, k.prototype.render = w, i = [], r = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, f = function(n4, l5) {
+  u6 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = w({}, this.state), "function" == typeof n4 && (n4 = n4(w({}, u6), this.props)), n4 && w(u6, n4), null != n4 && this.__v && (l5 && this._sb.push(l5), M(this));
+}, x.prototype.forceUpdate = function(n4) {
+  this.__v && (this.__e = true, n4 && this.__h.push(n4), M(this));
+}, x.prototype.render = k, i = [], o = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, e3 = function(n4, l5) {
   return n4.__v.__b - l5.__v.__b;
-}, S.__r = 0, e3 = 0, c = M(false), s = M(true), a = 0;
+}, P.__r = 0, f = /(PointerCapture)$|Capture$/i, c = 0, s = O(false), a = O(true), h = 0;
 
 // node_modules/htm/dist/htm.module.js
 var n2 = function(t7, s5, r7, e8) {
@@ -23455,7 +20395,7 @@ function htm_module_default(s5) {
 }
 
 // node_modules/htm/preact/index.module.js
-var m = htm_module_default.bind(g);
+var m2 = htm_module_default.bind(g);
 
 // node_modules/preact/hooks/dist/hooks.module.js
 var t3;
@@ -23464,24 +20404,23 @@ var u2;
 var i2;
 var o2 = 0;
 var f2 = [];
-var c2 = [];
-var e4 = l;
-var a2 = e4.__b;
-var v2 = e4.__r;
-var l2 = e4.diffed;
-var m2 = e4.__c;
-var s2 = e4.unmount;
-var d2 = e4.__;
-function h2(n4, t7) {
-  e4.__h && e4.__h(r2, n4, o2 || t7), o2 = 0;
+var c2 = l;
+var e4 = c2.__b;
+var a2 = c2.__r;
+var v2 = c2.diffed;
+var l2 = c2.__c;
+var m3 = c2.unmount;
+var s2 = c2.__;
+function d2(n4, t7) {
+  c2.__h && c2.__h(r2, n4, o2 || t7), o2 = 0;
   var u6 = r2.__H || (r2.__H = { __: [], __h: [] });
-  return n4 >= u6.__.length && u6.__.push({ __V: c2 }), u6.__[n4];
+  return n4 >= u6.__.length && u6.__.push({}), u6.__[n4];
 }
-function p2(n4) {
-  return o2 = 1, y2(D2, n4);
+function h2(n4) {
+  return o2 = 1, p2(D2, n4);
 }
-function y2(n4, u6, i7) {
-  var o5 = h2(t3++, 2);
+function p2(n4, u6, i7) {
+  var o5 = d2(t3++, 2);
   if (o5.t = n4, !o5.__c && (o5.__ = [i7 ? i7(u6) : D2(void 0, u6), function(n5) {
     var t7 = o5.__N ? o5.__N[0] : o5.__[0], r7 = o5.t(t7, n5);
     t7 !== r7 && (o5.__N = [r7, o5.__[1]], o5.__c.setState({}));
@@ -23494,13 +20433,13 @@ function y2(n4, u6, i7) {
       if (u7.every(function(n6) {
         return !n6.__N;
       })) return !c5 || c5.call(this, n5, t7, r7);
-      var i8 = false;
+      var i8 = o5.__c.props !== n5;
       return u7.forEach(function(n6) {
         if (n6.__N) {
           var t8 = n6.__[0];
           n6.__ = n6.__N, n6.__N = void 0, t8 !== n6.__[0] && (i8 = true);
         }
-      }), !(!i8 && o5.__c.props === n5) && (!c5 || c5.call(this, n5, t7, r7));
+      }), c5 && c5.call(this, n5, t7, r7) || i8;
     };
     r2.u = true;
     var c5 = r2.shouldComponentUpdate, e8 = r2.componentWillUpdate;
@@ -23514,25 +20453,25 @@ function y2(n4, u6, i7) {
   }
   return o5.__N || o5.__;
 }
+function y2(n4, u6) {
+  var i7 = d2(t3++, 3);
+  !c2.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__H.__h.push(i7));
+}
 function _2(n4, u6) {
-  var i7 = h2(t3++, 3);
-  !e4.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__H.__h.push(i7));
+  var i7 = d2(t3++, 4);
+  !c2.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__h.push(i7));
 }
-function A2(n4, u6) {
-  var i7 = h2(t3++, 4);
-  !e4.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__h.push(i7));
-}
-function F2(n4) {
-  return o2 = 5, q2(function() {
+function A2(n4) {
+  return o2 = 5, T2(function() {
     return { current: n4 };
   }, []);
 }
-function q2(n4, r7) {
-  var u6 = h2(t3++, 7);
-  return C2(u6.__H, r7) ? (u6.__V = n4(), u6.i = r7, u6.__h = n4, u6.__V) : u6.__;
+function T2(n4, r7) {
+  var u6 = d2(t3++, 7);
+  return C2(u6.__H, r7) && (u6.__ = n4(), u6.__H = r7, u6.__h = n4), u6.__;
 }
-function x2(n4, t7) {
-  return o2 = 8, q2(function() {
+function q2(n4, t7) {
+  return o2 = 8, T2(function() {
     return n4;
   }, t7);
 }
@@ -23540,26 +20479,26 @@ function j2() {
   for (var n4; n4 = f2.shift(); ) if (n4.__P && n4.__H) try {
     n4.__H.__h.forEach(z2), n4.__H.__h.forEach(B2), n4.__H.__h = [];
   } catch (t7) {
-    n4.__H.__h = [], e4.__e(t7, n4.__v);
+    n4.__H.__h = [], c2.__e(t7, n4.__v);
   }
 }
-e4.__b = function(n4) {
-  r2 = null, a2 && a2(n4);
-}, e4.__ = function(n4, t7) {
-  n4 && t7.__k && t7.__k.__m && (n4.__m = t7.__k.__m), d2 && d2(n4, t7);
-}, e4.__r = function(n4) {
-  v2 && v2(n4), t3 = 0;
+c2.__b = function(n4) {
+  r2 = null, e4 && e4(n4);
+}, c2.__ = function(n4, t7) {
+  n4 && t7.__k && t7.__k.__m && (n4.__m = t7.__k.__m), s2 && s2(n4, t7);
+}, c2.__r = function(n4) {
+  a2 && a2(n4), t3 = 0;
   var i7 = (r2 = n4.__c).__H;
   i7 && (u2 === r2 ? (i7.__h = [], r2.__h = [], i7.__.forEach(function(n5) {
-    n5.__N && (n5.__ = n5.__N), n5.__V = c2, n5.__N = n5.i = void 0;
+    n5.__N && (n5.__ = n5.__N), n5.i = n5.__N = void 0;
   })) : (i7.__h.forEach(z2), i7.__h.forEach(B2), i7.__h = [], t3 = 0)), u2 = r2;
-}, e4.diffed = function(n4) {
-  l2 && l2(n4);
+}, c2.diffed = function(n4) {
+  v2 && v2(n4);
   var t7 = n4.__c;
-  t7 && t7.__H && (t7.__H.__h.length && (1 !== f2.push(t7) && i2 === e4.requestAnimationFrame || ((i2 = e4.requestAnimationFrame) || w2)(j2)), t7.__H.__.forEach(function(n5) {
-    n5.i && (n5.__H = n5.i), n5.__V !== c2 && (n5.__ = n5.__V), n5.i = void 0, n5.__V = c2;
+  t7 && t7.__H && (t7.__H.__h.length && (1 !== f2.push(t7) && i2 === c2.requestAnimationFrame || ((i2 = c2.requestAnimationFrame) || w2)(j2)), t7.__H.__.forEach(function(n5) {
+    n5.i && (n5.__H = n5.i), n5.i = void 0;
   })), u2 = r2 = null;
-}, e4.__c = function(n4, t7) {
+}, c2.__c = function(n4, t7) {
   t7.some(function(n5) {
     try {
       n5.__h.forEach(z2), n5.__h = n5.__h.filter(function(n6) {
@@ -23568,11 +20507,11 @@ e4.__b = function(n4) {
     } catch (r7) {
       t7.some(function(n6) {
         n6.__h && (n6.__h = []);
-      }), t7 = [], e4.__e(r7, n5.__v);
+      }), t7 = [], c2.__e(r7, n5.__v);
     }
-  }), m2 && m2(n4, t7);
-}, e4.unmount = function(n4) {
-  s2 && s2(n4);
+  }), l2 && l2(n4, t7);
+}, c2.unmount = function(n4) {
+  m3 && m3(n4);
   var t7, r7 = n4.__c;
   r7 && r7.__H && (r7.__H.__.forEach(function(n5) {
     try {
@@ -23580,7 +20519,7 @@ e4.__b = function(n4) {
     } catch (n6) {
       t7 = n6;
     }
-  }), r7.__H = void 0, t7 && e4.__e(t7, r7.__v));
+  }), r7.__H = void 0, t7 && c2.__e(t7, r7.__v));
 };
 var k2 = "function" == typeof requestAnimationFrame;
 function w2(n4) {
@@ -23631,18 +20570,18 @@ function PopupMenuHeader(props) {
     setSelectedEntry,
     title
   } = props;
-  const groups = q2(() => groupEntries(headerEntries), [headerEntries]);
-  return m`
+  const groups = T2(() => groupEntries(headerEntries), [headerEntries]);
+  return m2`
     <div class="djs-popup-header">
       <h3 class="djs-popup-title" title=${title}>${title}</h3>
-      ${groups.map((group) => m`
+      ${groups.map((group) => m2`
         <ul key=${group.id} class="djs-popup-header-group" data-header-group=${group.id}>
 
-          ${group.entries.map((entry) => m`
+          ${group.entries.map((entry) => m2`
             <li key=${entry.id}>
               <${entry.action ? "button" : "span"}
                 class=${getHeaderClasses(entry, entry === selectedEntry)}
-                onClick=${(event3) => entry.action && onSelect(event3, entry)}
+                onClick=${(event2) => entry.action && onSelect(event2, entry)}
                 title=${entry.title || entry.label}
                 data-id=${entry.id}
                 onMouseEnter=${() => entry.action && setSelectedEntry(entry)}
@@ -23650,8 +20589,8 @@ function PopupMenuHeader(props) {
                 onFocus=${() => entry.action && setSelectedEntry(entry)}
                 onBlur=${() => entry.action && setSelectedEntry(null)}
               >
-                ${entry.imageUrl && m`<img class="djs-popup-entry-icon" src=${entry.imageUrl} alt="" />` || entry.imageHtml && m`<div class="djs-popup-entry-icon" dangerouslySetInnerHTML=${{ __html: entry.imageHtml }} />`}
-                ${entry.label ? m`
+                ${entry.imageUrl && m2`<img class="djs-popup-entry-icon" src=${entry.imageUrl} alt="" />` || entry.imageHtml && m2`<div class="djs-popup-entry-icon" dangerouslySetInnerHTML=${{ __html: entry.imageHtml }} />`}
+                ${entry.label ? m2`
                   <span class="djs-popup-label">${entry.label}</span>
                 ` : null}
               </${entry.action ? "button" : "span"}>
@@ -23696,7 +20635,7 @@ function PopupMenuItem(props) {
     onMouseLeave,
     onAction
   } = props;
-  return m`
+  return m2`
     <li
       class=${clsx_default("entry", { selected })}
       data-id=${entry.id}
@@ -23707,22 +20646,22 @@ function PopupMenuItem(props) {
       onBlur=${onMouseLeave}
       onMouseEnter=${onMouseEnter}
       onMouseLeave=${onMouseLeave}
-      onDragStart=${(event3) => onAction(event3, entry, "dragstart")}
+      onDragStart=${(event2) => onAction(event2, entry, "dragstart")}
       draggable=${true}
     >
       <div class="djs-popup-entry-content">
         <span
           class=${clsx_default("djs-popup-entry-name", entry.className)}
         >
-          ${entry.imageUrl && m`<img class="djs-popup-entry-icon" src=${entry.imageUrl} alt="" />` || entry.imageHtml && m`<div class="djs-popup-entry-icon" dangerouslySetInnerHTML=${{ __html: entry.imageHtml }} />`}
+          ${entry.imageUrl && m2`<img class="djs-popup-entry-icon" src=${entry.imageUrl} alt="" />` || entry.imageHtml && m2`<div class="djs-popup-entry-icon" dangerouslySetInnerHTML=${{ __html: entry.imageHtml }} />`}
 
-          ${entry.label ? m`
+          ${entry.label ? m2`
             <span class="djs-popup-label">
               ${entry.label}
             </span>
           ` : null}
         </span>
-        ${entry.description && m`
+        ${entry.description && m2`
           <span
             class="djs-popup-entry-description"
             title=${entry.description}
@@ -23731,11 +20670,11 @@ function PopupMenuItem(props) {
           </span>
         `}
       </div>
-      ${entry.documentationRef && m`
+      ${entry.documentationRef && m2`
         <div class="djs-popup-entry-docs">
           <a
             href="${entry.documentationRef}"
-            onClick=${(event3) => event3.stopPropagation()}
+            onClick=${(event2) => event2.stopPropagation()}
             title="Open element documentation"
             target="_blank"
             rel="noopener"
@@ -23758,9 +20697,9 @@ function PopupMenuList(props) {
     entries,
     ...restProps
   } = props;
-  const resultsRef = F2();
-  const groups = q2(() => groupEntries2(entries), [entries]);
-  A2(() => {
+  const resultsRef = A2();
+  const groups = T2(() => groupEntries2(entries), [entries]);
+  _2(() => {
     const containerEl = resultsRef.current;
     if (!containerEl)
       return;
@@ -23769,16 +20708,16 @@ function PopupMenuList(props) {
       scrollIntoView(selectedEl);
     }
   }, [selectedEntry]);
-  return m`
+  return m2`
     <div class="djs-popup-results" ref=${resultsRef}>
-      ${groups.map((group) => m`
-        ${group.name && m`
+      ${groups.map((group) => m2`
+        ${group.name && m2`
           <div key=${group.id} class="entry-header" title=${group.name}>
             ${group.name}
           </div>
         `}
         <ul class="djs-popup-group" data-group=${group.id}>
-          ${group.entries.map((entry) => m`
+          ${group.entries.map((entry) => m2`
             <${PopupMenuItem}
               key=${entry.id}
               entry=${entry}
@@ -23830,51 +20769,48 @@ function PopupMenuComponent(props) {
     title,
     width,
     scale,
-    search,
+    search: search2,
     emptyPlaceholder,
+    searchFn,
     entries: originalEntries,
     onOpened,
     onClosed
   } = props;
-  const searchable = q2(() => {
-    if (!isDefined(search)) {
+  const searchable = T2(() => {
+    if (!isDefined(search2)) {
       return false;
     }
     return originalEntries.length > 5;
-  }, [search, originalEntries]);
-  const [value, setValue] = p2("");
-  const filterEntries = x2((originalEntries2, value2) => {
+  }, [search2, originalEntries]);
+  const [value, setValue] = h2("");
+  const filterEntries = q2((originalEntries2, value2) => {
     if (!searchable) {
       return originalEntries2;
     }
-    const filter2 = (entry) => {
-      if (!value2) {
-        return (entry.rank || 0) >= 0;
-      }
-      if (entry.searchable === false) {
-        return false;
-      }
-      const searchableFields = [
-        entry.description || "",
-        entry.label || "",
-        entry.search || ""
-      ].map((string) => string.toLowerCase());
-      return value2.toLowerCase().split(/\s/g).every((word) => searchableFields.some((field) => field.includes(word)));
-    };
-    return originalEntries2.filter(filter2);
+    if (!value2.trim()) {
+      return originalEntries2.filter(({ rank = 0 }) => rank >= 0);
+    }
+    const searchableEntries = originalEntries2.filter(({ searchable: searchable2 }) => searchable2 !== false);
+    return searchFn(searchableEntries, value2, {
+      keys: [
+        "label",
+        "description",
+        "search"
+      ]
+    }).map(({ item }) => item);
   }, [searchable]);
-  const [entries, setEntries] = p2(filterEntries(originalEntries, value));
-  const [selectedEntry, setSelectedEntry] = p2(entries[0]);
-  const updateEntries = x2((newEntries) => {
+  const [entries, setEntries] = h2(filterEntries(originalEntries, value));
+  const [selectedEntry, setSelectedEntry] = h2(entries[0]);
+  const updateEntries = q2((newEntries) => {
     if (!selectedEntry || !newEntries.includes(selectedEntry)) {
       setSelectedEntry(newEntries[0]);
     }
     setEntries(newEntries);
   }, [selectedEntry, setEntries, setSelectedEntry]);
-  _2(() => {
+  y2(() => {
     updateEntries(filterEntries(originalEntries, value));
   }, [value, originalEntries]);
-  const keyboardSelect = x2((direction) => {
+  const keyboardSelect = q2((direction) => {
     const idx = entries.indexOf(selectedEntry);
     let nextIdx = idx + direction;
     if (nextIdx < 0) {
@@ -23885,32 +20821,32 @@ function PopupMenuComponent(props) {
     }
     setSelectedEntry(entries[nextIdx]);
   }, [entries, selectedEntry, setSelectedEntry]);
-  const handleKeyDown = x2((event3) => {
-    if (event3.key === "Enter" && selectedEntry) {
-      return onSelect(event3, selectedEntry);
+  const handleKeyDown = q2((event2) => {
+    if (event2.key === "Enter" && selectedEntry) {
+      return onSelect(event2, selectedEntry);
     }
-    if (event3.key === "ArrowUp") {
+    if (event2.key === "ArrowUp") {
       keyboardSelect(-1);
-      return event3.preventDefault();
+      return event2.preventDefault();
     }
-    if (event3.key === "ArrowDown") {
+    if (event2.key === "ArrowDown") {
       keyboardSelect(1);
-      return event3.preventDefault();
+      return event2.preventDefault();
     }
   }, [onSelect, selectedEntry, keyboardSelect]);
-  const handleKey = x2((event3) => {
-    if (matches(event3.target, "input")) {
-      setValue(() => event3.target.value);
+  const handleKey = q2((event2) => {
+    if (matches(event2.target, "input")) {
+      setValue(() => event2.target.value);
     }
   }, [setValue]);
-  _2(() => {
+  y2(() => {
     onOpened();
     return () => {
       onClosed();
     };
   }, []);
-  const displayHeader = q2(() => title || headerEntries.length > 0, [title, headerEntries]);
-  return m`
+  const displayHeader = T2(() => title || headerEntries.length > 0, [title, headerEntries]);
+  return m2`
     <${PopupMenuWrapper}
       onClose=${onClose}
       onKeyup=${handleKey}
@@ -23920,7 +20856,7 @@ function PopupMenuComponent(props) {
       width=${width}
       scale=${scale}
     >
-      ${displayHeader && m`
+      ${displayHeader && m2`
         <${PopupMenuHeader}
           headerEntries=${headerEntries}
           onSelect=${onSelect}
@@ -23929,15 +20865,15 @@ function PopupMenuComponent(props) {
           title=${title}
         />
       `}
-      ${originalEntries.length > 0 && m`
+      ${originalEntries.length > 0 && m2`
         <div class="djs-popup-body">
 
-          ${searchable && m`
+          ${searchable && m2`
           <div class="djs-popup-search">
             <svg class="djs-popup-search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.0325 8.5H9.625L13.3675 12.25L12.25 13.3675L8.5 9.625V9.0325L8.2975 8.8225C7.4425 9.5575 6.3325 10 5.125 10C2.4325 10 0.25 7.8175 0.25 5.125C0.25 2.4325 2.4325 0.25 5.125 0.25C7.8175 0.25 10 2.4325 10 5.125C10 6.3325 9.5575 7.4425 8.8225 8.2975L9.0325 8.5ZM1.75 5.125C1.75 6.9925 3.2575 8.5 5.125 8.5C6.9925 8.5 8.5 6.9925 8.5 5.125C8.5 3.2575 6.9925 1.75 5.125 1.75C3.2575 1.75 1.75 3.2575 1.75 5.125Z" fill="#22242A"/>
             </svg>
-            <input type="text" aria-label="${title}" />
+            <input type="text" spellcheck=${false} aria-label="${title}" />
           </div>
           `}
 
@@ -23949,7 +20885,7 @@ function PopupMenuComponent(props) {
           />
         </div>
       `}
-    ${emptyPlaceholder && entries.length === 0 && m`
+    ${emptyPlaceholder && entries.length === 0 && m2`
       <div class="djs-popup-no-results">${isFunction(emptyPlaceholder) ? emptyPlaceholder(value) : emptyPlaceholder}</div>
     `}
     </${PopupMenuWrapper}>
@@ -23964,8 +20900,8 @@ function PopupMenuWrapper(props) {
     children,
     position: positionGetter
   } = props;
-  const popupRef = F2();
-  A2(() => {
+  const popupRef = A2();
+  _2(() => {
     if (typeof positionGetter !== "function") {
       return;
     }
@@ -23974,7 +20910,7 @@ function PopupMenuWrapper(props) {
     popupEl.style.left = `${position.x}px`;
     popupEl.style.top = `${position.y}px`;
   }, [popupRef.current, positionGetter]);
-  A2(() => {
+  _2(() => {
     const popupEl = popupRef.current;
     if (!popupEl) {
       return;
@@ -23982,15 +20918,15 @@ function PopupMenuWrapper(props) {
     const inputEl = popupEl.querySelector("input");
     (inputEl || popupEl).focus();
   }, []);
-  _2(() => {
-    const handleKeyDown = (event3) => {
-      if (event3.key === "Escape") {
-        event3.preventDefault();
+  y2(() => {
+    const handleKeyDown = (event2) => {
+      if (event2.key === "Escape") {
+        event2.preventDefault();
         return onClose();
       }
     };
-    const handleClick = (event3) => {
-      const popup = closest(event3.target, ".djs-popup", true);
+    const handleClick = (event2) => {
+      const popup = closest(event2.target, ".djs-popup", true);
       if (popup) {
         return;
       }
@@ -24003,7 +20939,7 @@ function PopupMenuWrapper(props) {
       document.body.removeEventListener("click", handleClick);
     };
   }, []);
-  return m`
+  return m2`
     <div
       class=${clsx_default("djs-popup", className)}
       style=${getPopupStyle(props)}
@@ -24031,10 +20967,11 @@ var CLOSE_EVENTS = [
   "canvas.viewbox.changing",
   "commandStack.changed"
 ];
-var DEFAULT_PRIORITY6 = 1e3;
-function PopupMenu(config, eventBus, canvas) {
+var DEFAULT_PRIORITY5 = 1e3;
+function PopupMenu(config, eventBus, canvas, search2) {
   this._eventBus = eventBus;
   this._canvas = canvas;
+  this._search = search2;
   this._current = null;
   var scale = isDefined(config && config.scale) ? config.scale : {
     min: 1,
@@ -24046,9 +20983,9 @@ function PopupMenu(config, eventBus, canvas) {
   eventBus.on("diagram.destroy", () => {
     this.close();
   });
-  eventBus.on("element.changed", (event3) => {
+  eventBus.on("element.changed", (event2) => {
     const element = this.isOpen() && this._current.target;
-    if (event3.element === element) {
+    if (event2.element === element) {
       this.refresh();
     }
   });
@@ -24056,7 +20993,8 @@ function PopupMenu(config, eventBus, canvas) {
 PopupMenu.$inject = [
   "config.popupMenu",
   "eventBus",
-  "canvas"
+  "canvas",
+  "search"
 ];
 PopupMenu.prototype._render = function() {
   const {
@@ -24065,7 +21003,7 @@ PopupMenu.prototype._render = function() {
     entries,
     headerEntries,
     emptyPlaceholder,
-    options: options2
+    options
   } = this._current;
   const entriesArray = Object.entries(entries).map(
     ([key, value]) => ({ id: key, ...value })
@@ -24076,9 +21014,9 @@ PopupMenu.prototype._render = function() {
   const position = _position && ((container) => this._ensureVisible(container, _position));
   const scale = this._updateScale(this._current.container);
   const onClose = (result) => this.close(result);
-  const onSelect = (event3, entry, action) => this.trigger(event3, entry, action);
+  const onSelect = (event2, entry, action) => this.trigger(event2, entry, action);
   D(
-    m`
+    m2`
       <${PopupMenuComponent}
         onClose=${onClose}
         onSelect=${onSelect}
@@ -24090,13 +21028,14 @@ PopupMenu.prototype._render = function() {
         scale=${scale}
         onOpened=${this._onOpened.bind(this)}
         onClosed=${this._onClosed.bind(this)}
-        ...${{ ...options2 }}
+        searchFn=${this._search}
+        ...${{ ...options }}
       />
     `,
     this._current.container
   );
 };
-PopupMenu.prototype.open = function(target, providerId, position, options2) {
+PopupMenu.prototype.open = function(target, providerId, position, options) {
   if (!target) {
     throw new Error("target is missing");
   }
@@ -24122,7 +21061,7 @@ PopupMenu.prototype.open = function(target, providerId, position, options2) {
     headerEntries,
     emptyPlaceholder,
     container: this._createContainer({ provider: providerId }),
-    options: options2
+    options
   };
   this._emit("open");
   this._bindAutoClose();
@@ -24171,6 +21110,7 @@ PopupMenu.prototype.close = function() {
   }
   this._emit("close");
   this.reset();
+  this._canvas.restoreFocus();
   this._current = null;
 };
 PopupMenu.prototype.reset = function() {
@@ -24178,8 +21118,8 @@ PopupMenu.prototype.reset = function() {
   D(null, container);
   remove2(container);
 };
-PopupMenu.prototype._emit = function(event3, payload) {
-  this._eventBus.fire(`popupMenu.${event3}`, payload);
+PopupMenu.prototype._emit = function(event2, payload) {
+  this._eventBus.fire(`popupMenu.${event2}`, payload);
 };
 PopupMenu.prototype._onOpened = function() {
   this._emit("opened");
@@ -24266,19 +21206,19 @@ PopupMenu.prototype.isEmpty = function(target, providerId) {
 PopupMenu.prototype.registerProvider = function(id, priority, provider) {
   if (!provider) {
     provider = priority;
-    priority = DEFAULT_PRIORITY6;
+    priority = DEFAULT_PRIORITY5;
   }
-  this._eventBus.on("popupMenu.getProviders." + id, priority, function(event3) {
-    event3.providers.push(provider);
+  this._eventBus.on("popupMenu.getProviders." + id, priority, function(event2) {
+    event2.providers.push(provider);
   });
 };
 PopupMenu.prototype._getProviders = function(id) {
-  var event3 = this._eventBus.createEvent({
+  var event2 = this._eventBus.createEvent({
     type: "popupMenu.getProviders." + id,
     providers: []
   });
-  this._eventBus.fire(event3);
-  return event3.providers;
+  this._eventBus.fire(event2);
+  return event2.providers;
 };
 PopupMenu.prototype._getEntries = function(target, providers) {
   var entries = {};
@@ -24340,24 +21280,24 @@ PopupMenu.prototype._getEmptyPlaceholder = function(providers) {
 PopupMenu.prototype.isOpen = function() {
   return !!this._current;
 };
-PopupMenu.prototype.trigger = function(event3, entry, action = "click") {
-  event3.preventDefault();
+PopupMenu.prototype.trigger = function(event2, entry, action = "click") {
+  event2.preventDefault();
   if (!entry) {
-    let element = closest(event3.delegateTarget || event3.target, ".entry", true);
+    let element = closest(event2.delegateTarget || event2.target, ".entry", true);
     let entryId = attr2(element, DATA_REF);
     entry = { id: entryId, ...this._getEntry(entryId) };
   }
   const handler = entry.action;
-  if (this._emit("trigger", { entry, event: event3 }) === false) {
+  if (this._emit("trigger", { entry, event: event2 }) === false) {
     return;
   }
   if (isFunction(handler)) {
     if (action === "click") {
-      return handler(event3, entry);
+      return handler(event2, entry);
     }
   } else {
     if (handler[action]) {
-      return handler[action](event3, entry);
+      return handler[action](event2, entry);
     }
   }
 };
@@ -24369,8 +21309,165 @@ PopupMenu.prototype._getEntry = function(entryId) {
   return entry;
 };
 
+// node_modules/diagram-js/lib/features/search/search.js
+function search(items, pattern, options) {
+  const {
+    keys: keys2
+  } = options;
+  pattern = pattern.trim().toLowerCase();
+  if (!pattern) {
+    throw new Error("<pattern> must not be empty");
+  }
+  const words = pattern.trim().toLowerCase().split(/\s+/);
+  return items.flatMap((item) => {
+    const tokens = matchItem(item, words, keys2);
+    if (!tokens) {
+      return [];
+    }
+    return {
+      item,
+      tokens
+    };
+  }).sort(createResultSorter(keys2));
+}
+function matchItem(item, words, keys2) {
+  const {
+    matchedWords,
+    tokens
+  } = keys2.reduce((result, key) => {
+    const string = item[key];
+    const {
+      tokens: tokens2,
+      matchedWords: matchedWords2
+    } = matchString(string, words);
+    return {
+      tokens: {
+        ...result.tokens,
+        [key]: tokens2
+      },
+      matchedWords: {
+        ...result.matchedWords,
+        ...matchedWords2
+      }
+    };
+  }, {
+    matchedWords: {},
+    tokens: {}
+  });
+  if (Object.keys(matchedWords).length !== words.length) {
+    return null;
+  }
+  return tokens;
+}
+function createResultSorter(keys2) {
+  return (resultA, resultB) => {
+    for (const key of keys2) {
+      const tokenComparison = compareTokens(
+        resultA.tokens[key],
+        resultB.tokens[key]
+      );
+      if (tokenComparison !== 0) {
+        return tokenComparison;
+      }
+      const stringComparison = compareStrings(
+        resultA.item[key],
+        resultB.item[key]
+      );
+      if (stringComparison !== 0) {
+        return stringComparison;
+      }
+      continue;
+    }
+    return 0;
+  };
+}
+function compareTokens(tokensA, tokensB) {
+  return scoreTokens(tokensB) - scoreTokens(tokensA);
+}
+function scoreTokens(tokens) {
+  return tokens.reduce((sum, token) => sum + scoreToken(token), 0);
+}
+function scoreToken(token) {
+  const modifier = Math.log(token.value.length);
+  if (!token.match) {
+    return -0.07 * modifier;
+  }
+  return (token.start ? token.end ? 131.9 : 7.87 : token.wordStart ? 2.19 : 1) * modifier;
+}
+function compareStrings(a6 = "", b4 = "") {
+  return a6.localeCompare(b4);
+}
+function matchString(string, words) {
+  if (!string) {
+    return {
+      tokens: [],
+      matchedWords: {}
+    };
+  }
+  const tokens = [];
+  const matchedWords = {};
+  const wordsEscaped = words.map(escapeRegexp);
+  const regexpString = [
+    `(?<all>${wordsEscaped.join("\\s+")})`,
+    ...wordsEscaped
+  ].join("|");
+  const regexp = new RegExp(regexpString, "ig");
+  let match;
+  let lastIndex = 0;
+  while (match = regexp.exec(string)) {
+    const [value] = match;
+    const startIndex = match.index;
+    const endIndex = match.index + value.length;
+    const start = startIndex === 0;
+    const end = endIndex === string.length;
+    const all2 = !!match.groups.all;
+    const wordStart = start || /\s/.test(string.charAt(startIndex - 1));
+    const wordEnd = end || /\s/.test(string.charAt(endIndex + 1));
+    if (match.index > lastIndex) {
+      tokens.push({
+        value: string.slice(lastIndex, match.index),
+        index: lastIndex
+      });
+    }
+    tokens.push({
+      value,
+      index: match.index,
+      match: true,
+      wordStart,
+      wordEnd,
+      start,
+      end,
+      all: all2
+    });
+    const newMatchedWords = all2 ? words : [value];
+    for (const word of newMatchedWords) {
+      matchedWords[word.toLowerCase()] = true;
+    }
+    lastIndex = match.index + value.length;
+  }
+  if (lastIndex < string.length) {
+    tokens.push({
+      value: string.slice(lastIndex),
+      index: lastIndex
+    });
+  }
+  return {
+    tokens,
+    matchedWords
+  };
+}
+function escapeRegexp(string) {
+  return string.replace(/[/\-\\^$*+?.()|[\]{}]/g, "\\$&");
+}
+
+// node_modules/diagram-js/lib/features/search/index.js
+var search_default = {
+  search: ["value", search]
+};
+
 // node_modules/diagram-js/lib/features/popup-menu/index.js
 var popup_menu_default = {
+  __depends__: [search_default],
   __init__: ["popupMenu"],
   popupMenu: ["type", PopupMenu]
 };
@@ -24416,9 +21513,9 @@ var icons = {
 var AlignElementsIcons_default = icons;
 
 // node_modules/bpmn-js/lib/features/align-elements/AlignElementsContextPadProvider.js
-var LOW_PRIORITY6 = 900;
+var LOW_PRIORITY5 = 900;
 function AlignElementsContextPadProvider(contextPad, popupMenu, translate4, canvas) {
-  contextPad.registerProvider(LOW_PRIORITY6, this);
+  contextPad.registerProvider(LOW_PRIORITY5, this);
   this._contextPad = contextPad;
   this._popupMenu = popupMenu;
   this._translate = translate4;
@@ -24448,12 +21545,12 @@ AlignElementsContextPadProvider.prototype._getEntries = function() {
       title: self2._translate("Align elements"),
       html: `<div class="entry">${AlignElementsIcons_default["align"]}</div>`,
       action: {
-        click: function(event3, target) {
+        click: function(event2, target) {
           var position = self2._getMenuPosition(target);
           assign(position, {
             cursor: {
-              x: event3.x,
-              y: event3.y
+              x: event2.x,
+              y: event2.y
             }
           });
           self2._popupMenu.open(target, "align-elements", position);
@@ -24536,7 +21633,7 @@ RuleProvider.prototype.addRule = function(actions, priority, fn2) {
     actions = [actions];
   }
   actions.forEach(function(action) {
-    self2.canExecute(action, priority, function(context, action2, event3) {
+    self2.canExecute(action, priority, function(context, action2, event2) {
       return fn2(context);
     }, true);
   });
@@ -24647,38 +21744,38 @@ function getConnectedDistance(source, hints) {
   if (!filter2) {
     filter2 = noneFilter;
   }
-  function getDistance4(a6, b5) {
+  function getDistance4(a6, b4) {
     if (direction === "n") {
       if (reference === "start") {
-        return asTRBL(a6).top - asTRBL(b5).bottom;
+        return asTRBL(a6).top - asTRBL(b4).bottom;
       } else if (reference === "center") {
-        return asTRBL(a6).top - getMid(b5).y;
+        return asTRBL(a6).top - getMid(b4).y;
       } else {
-        return asTRBL(a6).top - asTRBL(b5).top;
+        return asTRBL(a6).top - asTRBL(b4).top;
       }
     } else if (direction === "w") {
       if (reference === "start") {
-        return asTRBL(a6).left - asTRBL(b5).right;
+        return asTRBL(a6).left - asTRBL(b4).right;
       } else if (reference === "center") {
-        return asTRBL(a6).left - getMid(b5).x;
+        return asTRBL(a6).left - getMid(b4).x;
       } else {
-        return asTRBL(a6).left - asTRBL(b5).left;
+        return asTRBL(a6).left - asTRBL(b4).left;
       }
     } else if (direction === "s") {
       if (reference === "start") {
-        return asTRBL(b5).top - asTRBL(a6).bottom;
+        return asTRBL(b4).top - asTRBL(a6).bottom;
       } else if (reference === "center") {
-        return getMid(b5).y - asTRBL(a6).bottom;
+        return getMid(b4).y - asTRBL(a6).bottom;
       } else {
-        return asTRBL(b5).bottom - asTRBL(a6).bottom;
+        return asTRBL(b4).bottom - asTRBL(a6).bottom;
       }
     } else {
       if (reference === "start") {
-        return asTRBL(b5).left - asTRBL(a6).right;
+        return asTRBL(b4).left - asTRBL(a6).right;
       } else if (reference === "center") {
-        return getMid(b5).x - asTRBL(a6).right;
+        return getMid(b4).x - asTRBL(a6).right;
       } else {
-        return asTRBL(b5).right - asTRBL(a6).right;
+        return asTRBL(b4).right - asTRBL(a6).right;
       }
     }
   }
@@ -24750,14 +21847,14 @@ function noneFilter() {
 }
 
 // node_modules/diagram-js/lib/features/auto-place/AutoPlace.js
-var LOW_PRIORITY7 = 100;
+var LOW_PRIORITY6 = 100;
 function AutoPlace(eventBus, modeling, canvas) {
-  eventBus.on("autoPlace", LOW_PRIORITY7, function(context) {
+  eventBus.on("autoPlace", LOW_PRIORITY6, function(context) {
     var shape = context.shape, source = context.source;
     return getNewShapePosition(source, shape);
   });
-  eventBus.on("autoPlace.end", function(event3) {
-    canvas.scrollToElement(event3.shape);
+  eventBus.on("autoPlace.end", function(event2) {
+    canvas.scrollToElement(event2.shape);
   });
   this.append = function(source, shape, hints) {
     eventBus.fire("autoPlace.start", {
@@ -24823,33 +21920,53 @@ function getParent2(element, anyType) {
   }
   return null;
 }
-function isDirectionHorizontal(element) {
+function isDirectionHorizontal(element, elementRegistry) {
+  var parent = getParent2(element, "bpmn:Process");
+  if (parent) {
+    return true;
+  }
   var types3 = ["bpmn:Participant", "bpmn:Lane"];
-  var parent = getParent2(element, types3);
+  parent = getParent2(element, types3);
   if (parent) {
     return isHorizontal(parent);
   } else if (isAny(element, types3)) {
     return isHorizontal(element);
   }
-  return true;
+  var process2;
+  for (process2 = getBusinessObject(element); process2; process2 = process2.$parent) {
+    if (is(process2, "bpmn:Process")) {
+      break;
+    }
+  }
+  if (!elementRegistry) {
+    return true;
+  }
+  var pool = elementRegistry.find(function(shape) {
+    var businessObject = getBusinessObject(shape);
+    return businessObject && businessObject.get("processRef") === process2;
+  });
+  if (!pool) {
+    return true;
+  }
+  return isHorizontal(pool);
 }
 
 // node_modules/bpmn-js/lib/features/auto-place/BpmnAutoPlaceUtil.js
-function getNewShapePosition2(source, element) {
+function getNewShapePosition2(source, element, elementRegistry) {
+  var placeHorizontally = isDirectionHorizontal(source, elementRegistry);
   if (is(element, "bpmn:TextAnnotation")) {
-    return getTextAnnotationPosition(source, element);
+    return getTextAnnotationPosition(source, element, placeHorizontally);
   }
   if (isAny(element, ["bpmn:DataObjectReference", "bpmn:DataStoreReference"])) {
-    return getDataElementPosition(source, element);
+    return getDataElementPosition(source, element, placeHorizontally);
   }
   if (is(element, "bpmn:FlowNode")) {
-    return getFlowNodePosition(source, element);
+    return getFlowNodePosition(source, element, placeHorizontally);
   }
 }
-function getFlowNodePosition(source, element) {
+function getFlowNodePosition(source, element, placeHorizontally) {
   var sourceTrbl = asTRBL(source);
   var sourceMid = getMid(source);
-  var placeHorizontally = isDirectionHorizontal(source);
   var placement = placeHorizontally ? {
     directionHint: "e",
     minDistance: 80,
@@ -24905,9 +22022,8 @@ function getDistance(orientation, minDistance, placement) {
     return 0;
   }
 }
-function getTextAnnotationPosition(source, element) {
+function getTextAnnotationPosition(source, element, placeHorizontally) {
   var sourceTrbl = asTRBL(source);
-  var placeHorizontally = isDirectionHorizontal(source);
   var position = placeHorizontally ? {
     x: sourceTrbl.right + element.width / 2,
     y: sourceTrbl.top - 50 - element.height / 2
@@ -24936,9 +22052,8 @@ function getTextAnnotationPosition(source, element) {
   };
   return findFreePosition(source, element, position, generateGetNextPosition(nextPositionDirection));
 }
-function getDataElementPosition(source, element) {
+function getDataElementPosition(source, element, placeHorizontally) {
   var sourceTrbl = asTRBL(source);
-  var placeHorizontally = isDirectionHorizontal(source);
   var position = placeHorizontally ? {
     x: sourceTrbl.right - 10 + element.width / 2,
     y: sourceTrbl.bottom + 40 + element.width / 2
@@ -24959,13 +22074,13 @@ function getDataElementPosition(source, element) {
 }
 
 // node_modules/bpmn-js/lib/features/auto-place/BpmnAutoPlace.js
-function AutoPlace2(eventBus) {
+function AutoPlace2(eventBus, elementRegistry) {
   eventBus.on("autoPlace", function(context) {
     var shape = context.shape, source = context.source;
-    return getNewShapePosition2(source, shape);
+    return getNewShapePosition2(source, shape, elementRegistry);
   });
 }
-AutoPlace2.$inject = ["eventBus"];
+AutoPlace2.$inject = ["eventBus", "elementRegistry"];
 
 // node_modules/bpmn-js/lib/features/auto-place/index.js
 var auto_place_default2 = {
@@ -24981,15 +22096,15 @@ function AutoResize(eventBus, elementRegistry, modeling, rules) {
   this._modeling = modeling;
   this._rules = rules;
   var self2 = this;
-  this.postExecuted(["shape.create"], function(event3) {
-    var context = event3.context, hints = context.hints || {}, shape = context.shape, parent = context.parent || context.newParent;
+  this.postExecuted(["shape.create"], function(event2) {
+    var context = event2.context, hints = context.hints || {}, shape = context.shape, parent = context.parent || context.newParent;
     if (hints.autoResize === false) {
       return;
     }
     self2._expand([shape], parent);
   });
-  this.postExecuted(["elements.move"], function(event3) {
-    var context = event3.context, elements = flatten(values(context.closure.topLevel)), hints = context.hints;
+  this.postExecuted(["elements.move"], function(event2) {
+    var context = event2.context, elements = flatten(values(context.closure.topLevel)), hints = context.hints;
     var autoResize = hints ? hints.autoResize : true;
     if (autoResize === false) {
       return;
@@ -25006,8 +22121,8 @@ function AutoResize(eventBus, elementRegistry, modeling, rules) {
       self2._expand(elements2, parentId);
     });
   });
-  this.postExecuted(["shape.toggleCollapse"], function(event3) {
-    var context = event3.context, hints = context.hints, shape = context.shape;
+  this.postExecuted(["shape.toggleCollapse"], function(event2) {
+    var context = event2.context, hints = context.hints, shape = context.shape;
     if (hints && hints.autoResize === false) {
       return;
     }
@@ -25016,8 +22131,8 @@ function AutoResize(eventBus, elementRegistry, modeling, rules) {
     }
     self2._expand(shape.children || [], shape);
   });
-  this.postExecuted(["shape.resize"], function(event3) {
-    var context = event3.context, hints = context.hints, shape = context.shape, parent = shape.parent;
+  this.postExecuted(["shape.resize"], function(event2) {
+    var context = event2.context, hints = context.hints, shape = context.shape, parent = shape.parent;
     if (hints && hints.autoResize === false) {
       return;
     }
@@ -25178,34 +22293,34 @@ var HIGH_PRIORITY = 1500;
 function HoverFix(elementRegistry, eventBus, injector) {
   var self2 = this;
   var dragging = injector.get("dragging", false);
-  function ensureHover(event3) {
-    if (event3.hover) {
+  function ensureHover(event2) {
+    if (event2.hover) {
       return;
     }
-    var originalEvent = event3.originalEvent;
+    var originalEvent = event2.originalEvent;
     var gfx = self2._findTargetGfx(originalEvent);
     var element = gfx && elementRegistry.get(gfx);
     if (gfx && element) {
-      event3.stopPropagation();
+      event2.stopPropagation();
       dragging.hover({ element, gfx });
       dragging.move(originalEvent);
     }
   }
   if (dragging) {
-    eventBus.on("drag.start", function(event3) {
-      eventBus.once("drag.move", HIGH_PRIORITY, function(event4) {
-        ensureHover(event4);
+    eventBus.on("drag.start", function(event2) {
+      eventBus.once("drag.move", HIGH_PRIORITY, function(event3) {
+        ensureHover(event3);
       });
     });
   }
   (function() {
     var hoverGfx;
     var hover;
-    eventBus.on("element.hover", function(event3) {
-      hoverGfx = event3.gfx;
-      hover = event3.element;
+    eventBus.on("element.hover", function(event2) {
+      hoverGfx = event2.gfx;
+      hover = event2.element;
     });
-    eventBus.on("element.hover", HIGH_PRIORITY, function(event3) {
+    eventBus.on("element.hover", HIGH_PRIORITY, function(event2) {
       if (hover) {
         eventBus.fire("element.out", {
           element: hover,
@@ -25218,12 +22333,12 @@ function HoverFix(elementRegistry, eventBus, injector) {
       hover = null;
     });
   })();
-  this._findTargetGfx = function(event3) {
+  this._findTargetGfx = function(event2) {
     var position, target;
-    if (!(event3 instanceof MouseEvent)) {
+    if (!(event2 instanceof MouseEvent)) {
       return;
     }
-    position = toPoint(event3);
+    position = toPoint(event2);
     target = document.elementFromPoint(position.x, position.y);
     return getGfx(target);
   };
@@ -25248,11 +22363,11 @@ var hover_fix_default = {
 // node_modules/diagram-js/lib/features/dragging/Dragging.js
 var round2 = Math.round;
 var DRAG_ACTIVE_CLS = "djs-drag-active";
-function preventDefault(event3) {
-  event3.preventDefault();
+function preventDefault(event2) {
+  event2.preventDefault();
 }
-function isTouchEvent(event3) {
-  return typeof TouchEvent !== "undefined" && event3 instanceof TouchEvent;
+function isTouchEvent(event2) {
+  return typeof TouchEvent !== "undefined" && event2 instanceof TouchEvent;
 }
 function getLength(point) {
   return Math.sqrt(Math.pow(point.x, 2) + Math.pow(point.y, 2));
@@ -25273,7 +22388,7 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
   }
   function fire(type, dragContext) {
     dragContext = dragContext || context;
-    var event3 = eventBus.createEvent(
+    var event2 = eventBus.createEvent(
       assign(
         {},
         dragContext.payload,
@@ -25281,10 +22396,10 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
         { isTouch: dragContext.isTouch }
       )
     );
-    if (eventBus.fire("drag." + type, event3) === false) {
+    if (eventBus.fire("drag." + type, event2) === false) {
       return false;
     }
-    return eventBus.fire(dragContext.prefix + "." + type, event3);
+    return eventBus.fire(dragContext.prefix + "." + type, event2);
   }
   function restoreSelection(previousSelection) {
     var existingSelection = previousSelection.filter(function(element) {
@@ -25292,9 +22407,9 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
     });
     existingSelection.length && selection2.select(existingSelection);
   }
-  function move2(event3, activate) {
+  function move2(event2, activate) {
     var payload = context.payload, displacement = context.displacement;
-    var globalStart = context.globalStart, globalCurrent = toPoint(event3), globalDelta = delta(globalCurrent, globalStart);
+    var globalStart = context.globalStart, globalCurrent = toPoint(event2), globalDelta = delta(globalCurrent, globalStart);
     var localStart = context.localStart, localCurrent = toLocalPoint(globalCurrent), localDelta = delta(localCurrent, localStart);
     if (!context.active && (activate || getLength(globalDelta) > context.threshold)) {
       assign(payload, {
@@ -25302,7 +22417,7 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
         y: round2(localStart.y + displacement.y),
         dx: 0,
         dy: 0
-      }, { originalEvent: event3 });
+      }, { originalEvent: event2 });
       if (false === fire("start")) {
         return cancel2();
       }
@@ -25316,23 +22431,23 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
       }
       canvas.addMarker(canvas.getRootElement(), DRAG_ACTIVE_CLS);
     }
-    stopPropagation(event3);
+    stopPropagation(event2);
     if (context.active) {
       assign(payload, {
         x: round2(localCurrent.x + displacement.x),
         y: round2(localCurrent.y + displacement.y),
         dx: round2(localDelta.x),
         dy: round2(localDelta.y)
-      }, { originalEvent: event3 });
+      }, { originalEvent: event2 });
       fire("move");
     }
   }
-  function end(event3) {
+  function end(event2) {
     var previousContext, returnValue = true;
     if (context.active) {
-      if (event3) {
-        context.payload.originalEvent = event3;
-        stopPropagation(event3);
+      if (event2) {
+        context.payload.originalEvent = event2;
+        stopPropagation(event2);
       }
       returnValue = fire("end");
     }
@@ -25342,31 +22457,31 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
     previousContext = cleanup(returnValue !== true);
     fire("ended", previousContext);
   }
-  function checkCancel(event3) {
-    if (isKey("Escape", event3)) {
-      preventDefault(event3);
+  function checkCancel(event2) {
+    if (isKey("Escape", event2)) {
+      preventDefault(event2);
       cancel2();
     }
   }
-  function trapClickAndEnd(event3) {
+  function trapClickAndEnd(event2) {
     var untrap;
     if (context.active) {
       untrap = install(eventBus);
       setTimeout(untrap, 400);
-      preventDefault(event3);
+      preventDefault(event2);
     }
-    end(event3);
+    end(event2);
   }
-  function trapTouch(event3) {
-    move2(event3);
+  function trapTouch(event2) {
+    move2(event2);
   }
-  function hover(event3) {
+  function hover(event2) {
     var payload = context.payload;
-    payload.hoverGfx = event3.gfx;
-    payload.hover = event3.element;
+    payload.hoverGfx = event2.gfx;
+    payload.hover = event2.element;
     fire("hover");
   }
-  function out(event3) {
+  function out(event2) {
     fire("out");
     var payload = context.payload;
     payload.hoverGfx = null;
@@ -25416,26 +22531,26 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
     context = null;
     return previousContext;
   }
-  function init(event3, relativeTo, prefix4, options2) {
+  function init(event2, relativeTo, prefix3, options) {
     if (context) {
       cancel2(false);
     }
     if (typeof relativeTo === "string") {
-      options2 = prefix4;
-      prefix4 = relativeTo;
+      options = prefix3;
+      prefix3 = relativeTo;
       relativeTo = null;
     }
-    options2 = assign({}, defaultOptions, options2 || {});
-    var data = options2.data || {}, originalEvent, globalStart, localStart, endDrag, isTouch;
-    if (options2.trapClick) {
+    options = assign({}, defaultOptions, options || {});
+    var data = options.data || {}, originalEvent, globalStart, localStart, endDrag, isTouch;
+    if (options.trapClick) {
       endDrag = trapClickAndEnd;
     } else {
       endDrag = end;
     }
-    if (event3) {
-      originalEvent = getOriginal(event3) || event3;
-      globalStart = toPoint(event3);
-      stopPropagation(event3);
+    if (event2) {
+      originalEvent = getOriginal(event2) || event2;
+      globalStart = toPoint(event2);
+      stopPropagation(event2);
       if (originalEvent.type === "dragstart") {
         preventDefault(originalEvent);
       }
@@ -25449,15 +22564,15 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
     }
     isTouch = isTouchEvent(originalEvent);
     context = assign({
-      prefix: prefix4,
+      prefix: prefix3,
       data,
       payload: {},
       globalStart,
       displacement: delta(relativeTo, localStart),
       localStart,
       isTouch
-    }, options2);
-    if (!options2.manual) {
+    }, options);
+    if (!options.manual) {
       if (isTouch) {
         event.bind(document, "touchstart", trapTouch, true);
         event.bind(document, "touchcancel", cancel2, true);
@@ -25475,8 +22590,8 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
       eventBus.on("element.out", out);
     }
     fire("init");
-    if (options2.autoActivate) {
-      move2(event3, true);
+    if (options.autoActivate) {
+      move2(event2, true);
     }
   }
   eventBus.on("diagram.destroy", cancel2);
@@ -25489,8 +22604,8 @@ function Dragging(eventBus, canvas, selection2, elementRegistry) {
   this.context = function() {
     return context;
   };
-  this.setOptions = function(options2) {
-    assign(defaultOptions, options2);
+  this.setOptions = function(options) {
+    assign(defaultOptions, options);
   };
 }
 Dragging.$inject = [
@@ -25574,12 +22689,12 @@ function between(val, start, end) {
 AutoScroll.prototype.stopScroll = function() {
   clearTimeout(this._scrolling);
 };
-AutoScroll.prototype.setOptions = function(options2) {
-  this._opts = assign({}, this._opts, options2);
+AutoScroll.prototype.setOptions = function(options) {
+  this._opts = assign({}, this._opts, options);
 };
-AutoScroll.prototype._toBorderPoint = function(event3) {
+AutoScroll.prototype._toBorderPoint = function(event2) {
   var clientRect = this._canvas._container.getBoundingClientRect();
-  var globalPosition = toPoint(event3.originalEvent);
+  var globalPosition = toPoint(event2.originalEvent);
   return {
     x: globalPosition.x - clientRect.left,
     y: globalPosition.y - clientRect.top
@@ -25651,13 +22766,13 @@ function getBendpointIntersection(waypoints, reference) {
 }
 function getPathIntersection(waypoints, reference) {
   var intersections = findPathIntersections(circlePath(reference, INTERSECTION_THRESHOLD), linePath(waypoints));
-  var a6 = intersections[0], b5 = intersections[intersections.length - 1], idx;
+  var a6 = intersections[0], b4 = intersections[intersections.length - 1], idx;
   if (!a6) {
     return null;
   }
-  if (a6 !== b5) {
-    if (a6.segment2 !== b5.segment2) {
-      idx = max(a6.segment2, b5.segment2) - 1;
+  if (a6 !== b4) {
+    if (a6.segment2 !== b4.segment2) {
+      idx = max(a6.segment2, b4.segment2) - 1;
       return {
         point: waypoints[idx],
         bendpoint: true,
@@ -25666,8 +22781,8 @@ function getPathIntersection(waypoints, reference) {
     }
     return {
       point: {
-        x: round3(a6.x + b5.x) / 2,
-        y: round3(a6.y + b5.y) / 2
+        x: round3(a6.x + b4.x) / 2,
+        y: round3(a6.y + b4.y) / 2
       },
       index: a6.segment2
     };
@@ -25697,17 +22812,17 @@ function rotateVector(vector, angle) {
     y: Math.sin(angle) * vector.x + Math.cos(angle) * vector.y
   };
 }
-function solveLambaSystem(a6, b5, c5) {
+function solveLambaSystem(a6, b4, c5) {
   var system = [
-    { n: a6[0] - c5[0], lambda: b5[0] },
-    { n: a6[1] - c5[1], lambda: b5[1] }
+    { n: a6[0] - c5[0], lambda: b4[0] },
+    { n: a6[1] - c5[1], lambda: b4[1] }
   ];
-  var n4 = system[0].n * b5[0] + system[1].n * b5[1], l5 = system[0].lambda * b5[0] + system[1].lambda * b5[1];
+  var n4 = system[0].n * b4[0] + system[1].n * b4[1], l5 = system[0].lambda * b4[0] + system[1].lambda * b4[1];
   return -n4 / l5;
 }
 function perpendicularFoot(point, line2) {
-  var a6 = line2[0], b5 = line2[1];
-  var bd = { x: b5.x - a6.x, y: b5.y - a6.y };
+  var a6 = line2[0], b4 = line2[1];
+  var bd = { x: b4.x - a6.x, y: b4.y - a6.y };
   var r7 = solveLambaSystem([a6.x, a6.y], [bd.x, bd.y], [point.x, point.y]);
   return { x: a6.x + r7 * bd.x, y: a6.y + r7 * bd.y };
 }
@@ -25729,8 +22844,8 @@ function getDistancePointPoint(point1, point2) {
 // node_modules/diagram-js/lib/features/bendpoints/BendpointUtil.js
 var BENDPOINT_CLS = "djs-bendpoint";
 var SEGMENT_DRAGGER_CLS = "djs-segment-dragger";
-function toCanvasCoordinates(canvas, event3) {
-  var position = toPoint(event3), clientRect = canvas._container.getBoundingClientRect(), offset;
+function toCanvasCoordinates(canvas, event2) {
+  var position = toPoint(event2), clientRect = canvas._container.getBoundingClientRect(), offset;
   offset = {
     x: clientRect.left,
     y: clientRect.top
@@ -25741,8 +22856,8 @@ function toCanvasCoordinates(canvas, event3) {
     y: viewbox.y + (position.y - offset.y) / viewbox.scale
   };
 }
-function getConnectionIntersection(canvas, waypoints, event3) {
-  var localPosition = toCanvasCoordinates(canvas, event3), intersection2 = getApproxIntersection(waypoints, localPosition);
+function getConnectionIntersection(canvas, waypoints, event2) {
+  var localPosition = toCanvasCoordinates(canvas, event2), intersection2 = getApproxIntersection(waypoints, localPosition);
   return intersection2;
 }
 function addBendpoint(parentGfx, cls) {
@@ -25863,23 +22978,23 @@ function Bendpoints(eventBus, canvas, interactionEvents, bendpointMove, connecti
     threshold = calculateSegmentMoveRegion(segmentLength) / 2;
     return threshold;
   }
-  function activateBendpointMove(event3, connection) {
-    var waypoints = connection.waypoints, intersection2 = getConnectionIntersection(canvas, waypoints, event3), threshold;
+  function activateBendpointMove(event2, connection) {
+    var waypoints = connection.waypoints, intersection2 = getConnectionIntersection(canvas, waypoints, event2), threshold;
     if (!intersection2) {
       return;
     }
     threshold = calculateIntersectionThreshold(connection, intersection2);
     if (isIntersectionMiddle(intersection2, waypoints, threshold)) {
-      connectionSegmentMove.start(event3, connection, intersection2.index);
+      connectionSegmentMove.start(event2, connection, intersection2.index);
     } else {
-      bendpointMove.start(event3, connection, intersection2.index, !intersection2.bendpoint);
+      bendpointMove.start(event2, connection, intersection2.index, !intersection2.bendpoint);
     }
     return true;
   }
   function bindInteractionEvents(node2, eventName, element) {
-    event.bind(node2, eventName, function(event3) {
-      interactionEvents.triggerMouseEvent(eventName, event3, element);
-      event3.stopPropagation();
+    event.bind(node2, eventName, function(event2) {
+      interactionEvents.triggerMouseEvent(eventName, event2, element);
+      event2.stopPropagation();
     });
   }
   function getBendpointsContainer(element, create3) {
@@ -25975,32 +23090,32 @@ function Bendpoints(eventBus, canvas, interactionEvents, bendpointMove, connecti
     }
     translate(draggerVisual, relativePosition.x, relativePosition.y);
   }
-  eventBus.on("connection.changed", function(event3) {
-    updateHandles(event3.element);
+  eventBus.on("connection.changed", function(event2) {
+    updateHandles(event2.element);
   });
-  eventBus.on("connection.remove", function(event3) {
-    var gfx = getBendpointsContainer(event3.element);
+  eventBus.on("connection.remove", function(event2) {
+    var gfx = getBendpointsContainer(event2.element);
     if (gfx) {
       remove(gfx);
     }
   });
-  eventBus.on("element.marker.update", function(event3) {
-    var element = event3.element, bendpointsGfx;
+  eventBus.on("element.marker.update", function(event2) {
+    var element = event2.element, bendpointsGfx;
     if (!element.waypoints) {
       return;
     }
     bendpointsGfx = addHandles(element);
-    if (event3.add) {
-      classes(bendpointsGfx).add(event3.marker);
+    if (event2.add) {
+      classes(bendpointsGfx).add(event2.marker);
     } else {
-      classes(bendpointsGfx).remove(event3.marker);
+      classes(bendpointsGfx).remove(event2.marker);
     }
   });
-  eventBus.on("element.mousemove", function(event3) {
-    var element = event3.element, waypoints = element.waypoints, bendpointsGfx, intersection2;
+  eventBus.on("element.mousemove", function(event2) {
+    var element = event2.element, waypoints = element.waypoints, bendpointsGfx, intersection2;
     if (waypoints) {
       bendpointsGfx = getBendpointsContainer(element, true);
-      intersection2 = getConnectionIntersection(canvas, waypoints, event3.originalEvent);
+      intersection2 = getConnectionIntersection(canvas, waypoints, event2.originalEvent);
       if (!intersection2) {
         return;
       }
@@ -26010,31 +23125,31 @@ function Bendpoints(eventBus, canvas, interactionEvents, bendpointMove, connecti
       }
     }
   });
-  eventBus.on("element.mousedown", function(event3) {
-    if (!isPrimaryButton(event3)) {
+  eventBus.on("element.mousedown", function(event2) {
+    if (!isPrimaryButton(event2)) {
       return;
     }
-    var originalEvent = event3.originalEvent, element = event3.element;
+    var originalEvent = event2.originalEvent, element = event2.element;
     if (!element.waypoints) {
       return;
     }
     return activateBendpointMove(originalEvent, element);
   });
-  eventBus.on("selection.changed", function(event3) {
-    var newSelection = event3.newSelection, primary = newSelection[0];
+  eventBus.on("selection.changed", function(event2) {
+    var newSelection = event2.newSelection, primary = newSelection[0];
     if (primary && primary.waypoints) {
       addHandles(primary);
     }
   });
-  eventBus.on("element.hover", function(event3) {
-    var element = event3.element;
+  eventBus.on("element.hover", function(event2) {
+    var element = event2.element;
     if (element.waypoints) {
       addHandles(element);
-      interactionEvents.registerEvent(event3.gfx, "mousemove", "element.mousemove");
+      interactionEvents.registerEvent(event2.gfx, "mousemove", "element.mousemove");
     }
   });
-  eventBus.on("element.out", function(event3) {
-    interactionEvents.unregisterEvent(event3.gfx, "mousemove", "element.mousemove");
+  eventBus.on("element.out", function(event2) {
+    interactionEvents.unregisterEvent(event2.gfx, "mousemove", "element.mousemove");
   });
   eventBus.on("element.updateId", function(context) {
     var element = context.element, newId = context.newId;
@@ -26068,7 +23183,7 @@ var RECONNECT_END = "reconnectEnd";
 var UPDATE_WAYPOINTS = "updateWaypoints";
 function BendpointMove(injector, eventBus, canvas, dragging, rules, modeling) {
   this._injector = injector;
-  this.start = function(event3, connection, bendpointIndex, insert) {
+  this.start = function(event2, connection, bendpointIndex, insert) {
     var gfx = canvas.getGraphics(connection), source = connection.source, target = connection.target, waypoints = connection.waypoints, type;
     if (!insert && bendpointIndex === 0) {
       type = RECONNECT_START;
@@ -26093,7 +23208,7 @@ function BendpointMove(injector, eventBus, canvas, dragging, rules, modeling) {
     if (allowed === false) {
       return;
     }
-    dragging.init(event3, "bendpoint.move", {
+    dragging.init(event2, "bendpoint.move", {
       data: {
         connection,
         connectionGfx: gfx,
@@ -26109,8 +23224,8 @@ function BendpointMove(injector, eventBus, canvas, dragging, rules, modeling) {
       }
     });
   };
-  eventBus.on("bendpoint.move.hover", function(event3) {
-    var context = event3.context, connection = context.connection, source = connection.source, target = connection.target, hover = event3.hover, type = context.type;
+  eventBus.on("bendpoint.move.hover", function(event2) {
+    var context = event2.context, connection = context.connection, source = connection.source, target = connection.target, hover = event2.hover, type = context.type;
     context.hover = hover;
     var allowed;
     if (!hover) {
@@ -26139,8 +23254,8 @@ function BendpointMove(injector, eventBus, canvas, dragging, rules, modeling) {
       context.target = type === RECONNECT_START ? hover : source;
     }
   });
-  eventBus.on(["bendpoint.move.out", "bendpoint.move.cleanup"], function(event3) {
-    var context = event3.context, type = context.type;
+  eventBus.on(["bendpoint.move.out", "bendpoint.move.cleanup"], function(event2) {
+    var context = event2.context, type = context.type;
     context.hover = null;
     context.source = null;
     context.target = null;
@@ -26148,11 +23263,11 @@ function BendpointMove(injector, eventBus, canvas, dragging, rules, modeling) {
       context.allowed = false;
     }
   });
-  eventBus.on("bendpoint.move.end", function(event3) {
-    var context = event3.context, allowed = context.allowed, bendpointIndex = context.bendpointIndex, connection = context.connection, insert = context.insert, newWaypoints = connection.waypoints.slice(), source = context.source, target = context.target, type = context.type, hints = context.hints || {};
+  eventBus.on("bendpoint.move.end", function(event2) {
+    var context = event2.context, allowed = context.allowed, bendpointIndex = context.bendpointIndex, connection = context.connection, insert = context.insert, newWaypoints = connection.waypoints.slice(), source = context.source, target = context.target, type = context.type, hints = context.hints || {};
     var docking = {
-      x: round4(event3.x),
-      y: round4(event3.y)
+      x: round4(event2.x),
+      y: round4(event2.y)
     };
     if (!allowed) {
       return false;
@@ -26230,11 +23345,11 @@ var HIGH_PRIORITY2 = 1100;
 function BendpointMovePreview(bendpointMove, injector, eventBus, canvas) {
   this._injector = injector;
   var connectionPreview = injector.get("connectionPreview", false);
-  eventBus.on("bendpoint.move.start", function(event3) {
-    var context = event3.context, bendpointIndex = context.bendpointIndex, connection = context.connection, insert = context.insert, waypoints = connection.waypoints, newWaypoints = waypoints.slice();
+  eventBus.on("bendpoint.move.start", function(event2) {
+    var context = event2.context, bendpointIndex = context.bendpointIndex, connection = context.connection, insert = context.insert, waypoints = connection.waypoints, newWaypoints = waypoints.slice();
     context.waypoints = waypoints;
     if (insert) {
-      newWaypoints.splice(bendpointIndex, 0, { x: event3.x, y: event3.y });
+      newWaypoints.splice(bendpointIndex, 0, { x: event2.x, y: event2.y });
     }
     connection.waypoints = newWaypoints;
     var draggerGfx = context.draggerGfx = addBendpoint(canvas.getLayer("overlays"));
@@ -26242,8 +23357,8 @@ function BendpointMovePreview(bendpointMove, injector, eventBus, canvas) {
     canvas.addMarker(connection, MARKER_DRAGGER);
     canvas.addMarker(connection, MARKER_CONNECT_UPDATING);
   });
-  eventBus.on("bendpoint.move.hover", function(event3) {
-    var context = event3.context, allowed = context.allowed, hover = context.hover, type = context.type;
+  eventBus.on("bendpoint.move.hover", function(event2) {
+    var context = event2.context, allowed = context.allowed, hover = context.hover, type = context.type;
     if (hover) {
       canvas.addMarker(hover, MARKER_CONNECT_HOVER);
       if (type === UPDATE_WAYPOINTS2) {
@@ -26261,15 +23376,15 @@ function BendpointMovePreview(bendpointMove, injector, eventBus, canvas) {
   eventBus.on([
     "bendpoint.move.out",
     "bendpoint.move.cleanup"
-  ], HIGH_PRIORITY2, function(event3) {
-    var context = event3.context, hover = context.hover, target = context.target;
+  ], HIGH_PRIORITY2, function(event2) {
+    var context = event2.context, hover = context.hover, target = context.target;
     if (hover) {
       canvas.removeMarker(hover, MARKER_CONNECT_HOVER);
       canvas.removeMarker(hover, target ? MARKER_OK : MARKER_NOT_OK);
     }
   });
-  eventBus.on("bendpoint.move.move", function(event3) {
-    var context = event3.context, allowed = context.allowed, bendpointIndex = context.bendpointIndex, draggerGfx = context.draggerGfx, hover = context.hover, type = context.type, connection = context.connection, source = connection.source, target = connection.target, newWaypoints = connection.waypoints.slice(), bendpoint = { x: event3.x, y: event3.y }, hints = context.hints || {}, drawPreviewHints = {};
+  eventBus.on("bendpoint.move.move", function(event2) {
+    var context = event2.context, allowed = context.allowed, bendpointIndex = context.bendpointIndex, draggerGfx = context.draggerGfx, hover = context.hover, type = context.type, connection = context.connection, source = connection.source, target = connection.target, newWaypoints = connection.waypoints.slice(), bendpoint = { x: event2.x, y: event2.y }, hints = context.hints || {}, drawPreviewHints = {};
     if (connectionPreview) {
       if (hints.connectionStart) {
         drawPreviewHints.connectionStart = hints.connectionStart;
@@ -26310,13 +23425,13 @@ function BendpointMovePreview(bendpointMove, injector, eventBus, canvas) {
       drawPreviewHints.waypoints = newWaypoints;
       connectionPreview.drawPreview(context, allowed, drawPreviewHints);
     }
-    translate(draggerGfx, event3.x, event3.y);
+    translate(draggerGfx, event2.x, event2.y);
   }, this);
   eventBus.on([
     "bendpoint.move.end",
     "bendpoint.move.cancel"
-  ], HIGH_PRIORITY2, function(event3) {
-    var context = event3.context, connection = context.connection, draggerGfx = context.draggerGfx, hover = context.hover, target = context.target, waypoints = context.waypoints;
+  ], HIGH_PRIORITY2, function(event2) {
+    var context = event2.context, connection = context.connection, draggerGfx = context.draggerGfx, hover = context.hover, target = context.target, waypoints = context.waypoints;
     connection.waypoints = waypoints;
     remove(draggerGfx);
     canvas.removeMarker(connection, MARKER_CONNECT_UPDATING);
@@ -26370,8 +23485,8 @@ function getDocking(point, referenceElement, moveAxis) {
 }
 function ConnectionSegmentMove(injector, eventBus, canvas, dragging, graphicsFactory, modeling) {
   var connectionDocking = injector.get("connectionDocking", false);
-  this.start = function(event3, connection, idx) {
-    var context, gfx = canvas.getGraphics(connection), segmentStartIndex = idx - 1, segmentEndIndex = idx, waypoints = connection.waypoints, segmentStart = waypoints[segmentStartIndex], segmentEnd = waypoints[segmentEndIndex], intersection2 = getConnectionIntersection(canvas, waypoints, event3), direction, axis, dragPosition;
+  this.start = function(event2, connection, idx) {
+    var context, gfx = canvas.getGraphics(connection), segmentStartIndex = idx - 1, segmentEndIndex = idx, waypoints = connection.waypoints, segmentStart = waypoints[segmentStartIndex], segmentEnd = waypoints[segmentEndIndex], intersection2 = getConnectionIntersection(canvas, waypoints, event2), direction, axis, dragPosition;
     direction = pointsAligned(segmentStart, segmentEnd);
     if (!direction) {
       return;
@@ -26400,7 +23515,7 @@ function ConnectionSegmentMove(injector, eventBus, canvas, dragging, graphicsFac
       axis,
       dragPosition
     };
-    dragging.init(event3, dragPosition, "connectionSegment.move", {
+    dragging.init(event2, dragPosition, "connectionSegment.move", {
       cursor: axis === "x" ? "resize-ew" : "resize-ns",
       data: {
         connection,
@@ -26422,9 +23537,9 @@ function ConnectionSegmentMove(injector, eventBus, canvas, dragging, graphicsFac
   function redrawConnection(data) {
     graphicsFactory.update("connection", data.connection, data.connectionGfx);
   }
-  function updateDragger(context, segmentOffset, event3) {
+  function updateDragger(context, segmentOffset, event2) {
     var newWaypoints = context.newWaypoints, segmentStartIndex = context.segmentStartIndex + segmentOffset, segmentStart = newWaypoints[segmentStartIndex], segmentEndIndex = context.segmentEndIndex + segmentOffset, segmentEnd = newWaypoints[segmentEndIndex], axis = flipAxis(context.axis);
-    var draggerPosition = axisFenced(event3, segmentStart, segmentEnd, axis);
+    var draggerPosition = axisFenced(event2, segmentStart, segmentEnd, axis);
     translate(context.draggerGfx, draggerPosition.x, draggerPosition.y);
   }
   function filterRedundantWaypoints2(waypoints, segmentStartIndex) {
@@ -26441,16 +23556,16 @@ function ConnectionSegmentMove(injector, eventBus, canvas, dragging, graphicsFac
       segmentOffset
     };
   }
-  eventBus.on("connectionSegment.move.start", function(event3) {
-    var context = event3.context, connection = event3.connection, layer = canvas.getLayer("overlays");
+  eventBus.on("connectionSegment.move.start", function(event2) {
+    var context = event2.context, connection = event2.connection, layer = canvas.getLayer("overlays");
     context.originalWaypoints = connection.waypoints.slice();
     context.draggerGfx = addSegmentDragger(layer, context.segmentStart, context.segmentEnd);
     classes(context.draggerGfx).add("djs-dragging");
     canvas.addMarker(connection, MARKER_CONNECT_UPDATING2);
   });
-  eventBus.on("connectionSegment.move.move", function(event3) {
-    var context = event3.context, connection = context.connection, segmentStartIndex = context.segmentStartIndex, segmentEndIndex = context.segmentEndIndex, segmentStart = context.segmentStart, segmentEnd = context.segmentEnd, axis = context.axis;
-    var newWaypoints = context.originalWaypoints.slice(), newSegmentStart = axisAdd(segmentStart, axis, event3["d" + axis]), newSegmentEnd = axisAdd(segmentEnd, axis, event3["d" + axis]);
+  eventBus.on("connectionSegment.move.move", function(event2) {
+    var context = event2.context, connection = context.connection, segmentStartIndex = context.segmentStartIndex, segmentEndIndex = context.segmentEndIndex, segmentStart = context.segmentStart, segmentEnd = context.segmentEnd, axis = context.axis;
+    var newWaypoints = context.originalWaypoints.slice(), newSegmentStart = axisAdd(segmentStart, axis, event2["d" + axis]), newSegmentEnd = axisAdd(segmentEnd, axis, event2["d" + axis]);
     var waypointCount = newWaypoints.length, segmentOffset = 0;
     newWaypoints[segmentStartIndex] = newSegmentStart;
     newWaypoints[segmentEndIndex] = newSegmentEnd;
@@ -26484,25 +23599,25 @@ function ConnectionSegmentMove(injector, eventBus, canvas, dragging, graphicsFac
       }
     }
     context.newWaypoints = connection.waypoints = cropConnection(connection, newWaypoints);
-    updateDragger(context, segmentOffset, event3);
+    updateDragger(context, segmentOffset, event2);
     context.newSegmentStartIndex = segmentStartIndex + segmentOffset;
-    redrawConnection(event3);
+    redrawConnection(event2);
   });
-  eventBus.on("connectionSegment.move.hover", function(event3) {
-    event3.context.hover = event3.hover;
-    canvas.addMarker(event3.hover, MARKER_CONNECT_HOVER2);
+  eventBus.on("connectionSegment.move.hover", function(event2) {
+    event2.context.hover = event2.hover;
+    canvas.addMarker(event2.hover, MARKER_CONNECT_HOVER2);
   });
   eventBus.on([
     "connectionSegment.move.out",
     "connectionSegment.move.cleanup"
-  ], function(event3) {
-    var hover = event3.context.hover;
+  ], function(event2) {
+    var hover = event2.context.hover;
     if (hover) {
       canvas.removeMarker(hover, MARKER_CONNECT_HOVER2);
     }
   });
-  eventBus.on("connectionSegment.move.cleanup", function(event3) {
-    var context = event3.context, connection = context.connection;
+  eventBus.on("connectionSegment.move.cleanup", function(event2) {
+    var context = event2.context, connection = context.connection;
     if (context.draggerGfx) {
       remove(context.draggerGfx);
     }
@@ -26511,13 +23626,13 @@ function ConnectionSegmentMove(injector, eventBus, canvas, dragging, graphicsFac
   eventBus.on([
     "connectionSegment.move.cancel",
     "connectionSegment.move.end"
-  ], function(event3) {
-    var context = event3.context, connection = context.connection;
+  ], function(event2) {
+    var context = event2.context, connection = context.connection;
     connection.waypoints = context.originalWaypoints;
-    redrawConnection(event3);
+    redrawConnection(event2);
   });
-  eventBus.on("connectionSegment.move.end", function(event3) {
-    var context = event3.context, connection = context.connection, newWaypoints = context.newWaypoints, newSegmentStartIndex = context.newSegmentStartIndex;
+  eventBus.on("connectionSegment.move.end", function(event2) {
+    var context = event2.context, connection = context.connection, newWaypoints = context.newWaypoints, newSegmentStartIndex = context.newSegmentStartIndex;
     newWaypoints = newWaypoints.map(function(p5) {
       return {
         original: p5.original,
@@ -26579,8 +23694,8 @@ function mid(bounds, defaultValue) {
     y: round5(bounds.y + bounds.height / 2)
   };
 }
-function isSnapped(event3, axis) {
-  var snapped = event3.snapped;
+function isSnapped(event2, axis) {
+  var snapped = event2.snapped;
   if (!snapped) {
     return false;
   }
@@ -26589,22 +23704,22 @@ function isSnapped(event3, axis) {
   }
   return snapped.x && snapped.y;
 }
-function setSnapped(event3, axis, value) {
+function setSnapped(event2, axis, value) {
   if (typeof axis !== "string") {
     throw new Error("axis must be in [x, y]");
   }
   if (typeof value !== "number" && value !== false) {
     throw new Error("value must be Number or false");
   }
-  var delta2, previousValue = event3[axis];
-  var snapped = event3.snapped = event3.snapped || {};
+  var delta2, previousValue = event2[axis];
+  var snapped = event2.snapped = event2.snapped || {};
   if (value === false) {
     snapped[axis] = false;
   } else {
     snapped[axis] = true;
     delta2 = value - previousValue;
-    event3[axis] += delta2;
-    event3["d" + axis] += delta2;
+    event2[axis] += delta2;
+    event2["d" + axis] += delta2;
   }
   return previousValue;
 }
@@ -26635,9 +23750,9 @@ function BendpointSnapping(eventBus) {
     }
     return value;
   }
-  function getSnapPoint(element, event3) {
+  function getSnapPoint(element, event2) {
     if (element.waypoints) {
-      return getClosestPointOnConnection(event3, element);
+      return getClosestPointOnConnection(event2, element);
     }
     if (element.width) {
       return {
@@ -26646,8 +23761,8 @@ function BendpointSnapping(eventBus) {
       };
     }
   }
-  function getConnectionSegmentSnaps(event3) {
-    var context = event3.context, snapPoints = context.snapPoints, connection = context.connection, waypoints = connection.waypoints, segmentStart = context.segmentStart, segmentStartIndex = context.segmentStartIndex, segmentEnd = context.segmentEnd, segmentEndIndex = context.segmentEndIndex, axis = context.axis;
+  function getConnectionSegmentSnaps(event2) {
+    var context = event2.context, snapPoints = context.snapPoints, connection = context.connection, waypoints = connection.waypoints, segmentStart = context.segmentStart, segmentStartIndex = context.segmentStartIndex, segmentEnd = context.segmentEnd, segmentEndIndex = context.segmentEndIndex, axis = context.axis;
     if (snapPoints) {
       return snapPoints;
     }
@@ -26658,10 +23773,10 @@ function BendpointSnapping(eventBus) {
       waypoints[segmentEndIndex + 1]
     ];
     if (segmentStartIndex < 2) {
-      referenceWaypoints.unshift(getSnapPoint(connection.source, event3));
+      referenceWaypoints.unshift(getSnapPoint(connection.source, event2));
     }
     if (segmentEndIndex > waypoints.length - 3) {
-      referenceWaypoints.unshift(getSnapPoint(connection.target, event3));
+      referenceWaypoints.unshift(getSnapPoint(connection.target, event2));
     }
     context.snapPoints = snapPoints = { horizontal: [], vertical: [] };
     forEach(referenceWaypoints, function(p5) {
@@ -26677,25 +23792,25 @@ function BendpointSnapping(eventBus) {
     });
     return snapPoints;
   }
-  eventBus.on("connectionSegment.move.move", 1500, function(event3) {
-    var snapPoints = getConnectionSegmentSnaps(event3), x6 = event3.x, y5 = event3.y, sx, sy;
+  eventBus.on("connectionSegment.move.move", 1500, function(event2) {
+    var snapPoints = getConnectionSegmentSnaps(event2), x6 = event2.x, y5 = event2.y, sx, sy;
     if (!snapPoints) {
       return;
     }
     sx = snapTo2(snapPoints.vertical, x6);
     sy = snapTo2(snapPoints.horizontal, y5);
     var cx = x6 - sx, cy = y5 - sy;
-    assign(event3, {
-      dx: event3.dx - cx,
-      dy: event3.dy - cy,
+    assign(event2, {
+      dx: event2.dx - cx,
+      dy: event2.dy - cy,
       x: sx,
       y: sy
     });
     if (cx || snapPoints.vertical.indexOf(x6) !== -1) {
-      setSnapped(event3, "x", sx);
+      setSnapped(event2, "x", sx);
     }
     if (cy || snapPoints.horizontal.indexOf(y5) !== -1) {
-      setSnapped(event3, "y", sy);
+      setSnapped(event2, "y", sy);
     }
   });
   function getBendpointSnaps(context) {
@@ -26718,33 +23833,33 @@ function BendpointSnapping(eventBus) {
     "connect.hover",
     "connect.move",
     "connect.end"
-  ], 1500, function(event3) {
-    var context = event3.context, hover = context.hover, hoverMid = hover && getSnapPoint(hover, event3);
+  ], 1500, function(event2) {
+    var context = event2.context, hover = context.hover, hoverMid = hover && getSnapPoint(hover, event2);
     if (!isConnection(hover) || !hoverMid || !hoverMid.x || !hoverMid.y) {
       return;
     }
-    setSnapped(event3, "x", hoverMid.x);
-    setSnapped(event3, "y", hoverMid.y);
+    setSnapped(event2, "x", hoverMid.x);
+    setSnapped(event2, "y", hoverMid.y);
   });
-  eventBus.on(["bendpoint.move.move", "bendpoint.move.end"], 1500, function(event3) {
-    var context = event3.context, snapPoints = getBendpointSnaps(context), hover = context.hover, hoverMid = hover && getSnapPoint(hover, event3), x6 = event3.x, y5 = event3.y, sx, sy;
+  eventBus.on(["bendpoint.move.move", "bendpoint.move.end"], 1500, function(event2) {
+    var context = event2.context, snapPoints = getBendpointSnaps(context), hover = context.hover, hoverMid = hover && getSnapPoint(hover, event2), x6 = event2.x, y5 = event2.y, sx, sy;
     if (!snapPoints) {
       return;
     }
     sx = snapTo2(hoverMid ? snapPoints.vertical.concat([hoverMid.x]) : snapPoints.vertical, x6);
     sy = snapTo2(hoverMid ? snapPoints.horizontal.concat([hoverMid.y]) : snapPoints.horizontal, y5);
     var cx = x6 - sx, cy = y5 - sy;
-    assign(event3, {
-      dx: event3.dx - cx,
-      dy: event3.dy - cy,
-      x: event3.x - cx,
-      y: event3.y - cy
+    assign(event2, {
+      dx: event2.dx - cx,
+      dy: event2.dy - cy,
+      x: event2.x - cx,
+      y: event2.y - cy
     });
     if (cx || snapPoints.vertical.indexOf(x6) !== -1) {
-      setSnapped(event3, "x", sx);
+      setSnapped(event2, "x", sx);
     }
     if (cy || snapPoints.horizontal.indexOf(y5) !== -1) {
-      setSnapped(event3, "y", sy);
+      setSnapped(event2, "y", sy);
     }
   });
 }
@@ -26775,8 +23890,8 @@ function Connect(eventBus, dragging, modeling, rules) {
   function canConnectReverse(source, target) {
     return canConnect2(target, source);
   }
-  eventBus.on("connect.hover", function(event3) {
-    var context = event3.context, start = context.start, hover = event3.hover, canExecute;
+  eventBus.on("connect.hover", function(event2) {
+    var context = event2.context, start = context.start, hover = event2.hover, canExecute;
     context.hover = hover;
     canExecute = context.canExecute = canConnect2(start, hover);
     if (isNil(canExecute)) {
@@ -26796,17 +23911,17 @@ function Connect(eventBus, dragging, modeling, rules) {
       context.target = start;
     }
   });
-  eventBus.on(["connect.out", "connect.cleanup"], function(event3) {
-    var context = event3.context;
+  eventBus.on(["connect.out", "connect.cleanup"], function(event2) {
+    var context = event2.context;
     context.hover = null;
     context.source = null;
     context.target = null;
     context.canExecute = false;
   });
-  eventBus.on("connect.end", function(event3) {
-    var context = event3.context, canExecute = context.canExecute, connectionStart = context.connectionStart, connectionEnd = {
-      x: event3.x,
-      y: event3.y
+  eventBus.on("connect.end", function(event2) {
+    var context = event2.context, canExecute = context.canExecute, connectionStart = context.connectionStart, connectionEnd = {
+      x: event2.x,
+      y: event2.y
     }, source = context.source, target = context.target;
     if (!canExecute) {
       return false;
@@ -26820,12 +23935,12 @@ function Connect(eventBus, dragging, modeling, rules) {
     }
     context.connection = modeling.connect(source, target, attrs, hints);
   });
-  this.start = function(event3, start, connectionStart, autoActivate) {
+  this.start = function(event2, start, connectionStart, autoActivate) {
     if (!isObject(connectionStart)) {
       autoActivate = connectionStart;
       connectionStart = getMid(start);
     }
-    dragging.init(event3, "connect", {
+    dragging.init(event2, "connect", {
       autoActivate,
       data: {
         shape: start,
@@ -26850,15 +23965,15 @@ function isReverse2(context) {
 
 // node_modules/diagram-js/lib/features/connect/ConnectPreview.js
 var HIGH_PRIORITY3 = 1100;
-var LOW_PRIORITY8 = 900;
+var LOW_PRIORITY7 = 900;
 var MARKER_OK2 = "connect-ok";
 var MARKER_NOT_OK2 = "connect-not-ok";
 function ConnectPreview(injector, eventBus, canvas) {
   var connectionPreview = injector.get("connectionPreview", false);
-  connectionPreview && eventBus.on("connect.move", function(event3) {
-    var context = event3.context, canConnect2 = context.canExecute, hover = context.hover, source = context.source, start = context.start, startPosition = context.startPosition, target = context.target, connectionStart = context.connectionStart || startPosition, connectionEnd = context.connectionEnd || {
-      x: event3.x,
-      y: event3.y
+  connectionPreview && eventBus.on("connect.move", function(event2) {
+    var context = event2.context, canConnect2 = context.canExecute, hover = context.hover, source = context.source, start = context.start, startPosition = context.startPosition, target = context.target, connectionStart = context.connectionStart || startPosition, connectionEnd = context.connectionEnd || {
+      x: event2.x,
+      y: event2.y
     }, previewStart = connectionStart, previewEnd = connectionEnd;
     if (isReverse2(context)) {
       previewStart = connectionEnd;
@@ -26871,8 +23986,8 @@ function ConnectPreview(injector, eventBus, canvas) {
       connectionEnd: previewEnd
     });
   });
-  eventBus.on("connect.hover", LOW_PRIORITY8, function(event3) {
-    var context = event3.context, hover = event3.hover, canExecute = context.canExecute;
+  eventBus.on("connect.hover", LOW_PRIORITY7, function(event2) {
+    var context = event2.context, hover = event2.hover, canExecute = context.canExecute;
     if (canExecute === null) {
       return;
     }
@@ -26881,15 +23996,15 @@ function ConnectPreview(injector, eventBus, canvas) {
   eventBus.on([
     "connect.out",
     "connect.cleanup"
-  ], HIGH_PRIORITY3, function(event3) {
-    var hover = event3.hover;
+  ], HIGH_PRIORITY3, function(event2) {
+    var hover = event2.hover;
     if (hover) {
       canvas.removeMarker(hover, MARKER_OK2);
       canvas.removeMarker(hover, MARKER_NOT_OK2);
     }
   });
-  connectionPreview && eventBus.on("connect.cleanup", function(event3) {
-    connectionPreview.cleanUp(event3.context);
+  connectionPreview && eventBus.on("connect.cleanup", function(event2) {
+    connectionPreview.cleanUp(event2.context);
   });
 }
 ConnectPreview.$inject = [
@@ -27095,9 +24210,9 @@ PreviewSupport.prototype.addFrame = function(shape, group) {
 PreviewSupport.prototype._cloneMarkers = function(gfx, className = "djs-dragger", rootGfx = gfx) {
   var self2 = this;
   if (gfx.childNodes) {
-    for (var i7 = 0; i7 < gfx.childNodes.length; i7++) {
-      self2._cloneMarkers(gfx.childNodes[i7], className, rootGfx);
-    }
+    gfx.childNodes.forEach((childNode) => {
+      self2._cloneMarkers(childNode, className, rootGfx);
+    });
   }
   if (!canHaveMarker(gfx)) {
     return;
@@ -27159,14 +24274,14 @@ var ComplexPreview = class {
    *
    * @param {CreateOptions} options
    */
-  create(options2) {
+  create(options) {
     this.cleanUp();
     const {
       created = [],
       moved = [],
       removed = [],
       resized = []
-    } = options2;
+    } = options;
     const layer = this._canvas.getLayer(LAYER_NAME);
     created.filter((element) => !isHidden(element)).forEach((element) => {
       let gfx;
@@ -27251,8 +24366,8 @@ function AdaptiveLabelPositioningBehavior(eventBus, modeling) {
     "connection.create",
     "connection.layout",
     "connection.updateWaypoints"
-  ], function(event3) {
-    var context = event3.context, connection = context.connection, source = connection.source, target = connection.target, hints = context.hints || {};
+  ], function(event2) {
+    var context = event2.context, connection = context.connection, source = connection.source, target = connection.target, hints = context.hints || {};
     if (hints.createElementsBehavior !== false) {
       checkLabelAdjustment(source);
       checkLabelAdjustment(target);
@@ -27260,16 +24375,16 @@ function AdaptiveLabelPositioningBehavior(eventBus, modeling) {
   });
   this.postExecuted([
     "label.create"
-  ], function(event3) {
-    var context = event3.context, shape = context.shape, hints = context.hints || {};
+  ], function(event2) {
+    var context = event2.context, shape = context.shape, hints = context.hints || {};
     if (hints.createElementsBehavior !== false) {
       checkLabelAdjustment(shape.labelTarget);
     }
   });
   this.postExecuted([
     "elements.create"
-  ], function(event3) {
-    var context = event3.context, elements = context.elements, hints = context.hints || {};
+  ], function(event2) {
+    var context = event2.context, elements = context.elements, hints = context.hints || {};
     if (hints.createElementsBehavior !== false) {
       elements.forEach(function(element) {
         checkLabelAdjustment(element);
@@ -27278,6 +24393,9 @@ function AdaptiveLabelPositioningBehavior(eventBus, modeling) {
   });
   function checkLabelAdjustment(element) {
     if (!hasExternalLabel(element)) {
+      return;
+    }
+    if (isConnection(element)) {
       return;
     }
     var optimalPosition = getOptimalPosition(element);
@@ -27427,12 +24545,12 @@ AssociationBehavior.$inject = [
 ];
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/AttachEventBehavior.js
-var LOW_PRIORITY9 = 500;
+var LOW_PRIORITY8 = 500;
 function AttachEventBehavior(bpmnReplace, injector) {
   injector.invoke(CommandInterceptor, this);
   this._bpmnReplace = bpmnReplace;
   var self2 = this;
-  this.postExecuted("elements.create", LOW_PRIORITY9, function(context) {
+  this.postExecuted("elements.create", LOW_PRIORITY8, function(context) {
     var elements = context.elements;
     elements = elements.filter(function(shape) {
       var host = shape.host;
@@ -27448,7 +24566,7 @@ function AttachEventBehavior(bpmnReplace, injector) {
       context.elements[index5] = self2._replaceShape(elements[index5], host);
     });
   }, true);
-  this.preExecute("elements.move", LOW_PRIORITY9, function(context) {
+  this.preExecute("elements.move", LOW_PRIORITY8, function(context) {
     var shapes = context.shapes, host = context.newHost;
     if (shapes.length !== 1) {
       return;
@@ -27491,14 +24609,14 @@ function BoundaryEventBehavior(eventBus, modeling) {
       return is(attacher, "bpmn:BoundaryEvent");
     });
   }
-  this.postExecute("connection.create", function(event3) {
-    var source = event3.context.source, target = event3.context.target, boundaryEvents = getBoundaryEvents(target);
+  this.postExecute("connection.create", function(event2) {
+    var source = event2.context.source, target = event2.context.target, boundaryEvents = getBoundaryEvents(target);
     if (is(source, "bpmn:EventBasedGateway") && is(target, "bpmn:ReceiveTask") && boundaryEvents.length > 0) {
       modeling.removeElements(boundaryEvents);
     }
   });
-  this.postExecute("connection.reconnect", function(event3) {
-    var oldSource = event3.context.oldSource, newSource = event3.context.newSource;
+  this.postExecute("connection.reconnect", function(event2) {
+    var oldSource = event2.context.oldSource, newSource = event2.context.newSource;
     if (is(oldSource, "bpmn:Gateway") && is(newSource, "bpmn:EventBasedGateway")) {
       forEach(newSource.outgoing, function(connection) {
         var target = connection.target, attachedboundaryEvents = getBoundaryEvents(target);
@@ -27651,8 +24769,8 @@ function isForCompensationAllowed(element) {
 // node_modules/bpmn-js/lib/features/modeling/behavior/CreateBehavior.js
 function CreateBehavior(injector) {
   injector.invoke(CommandInterceptor, this);
-  this.preExecute("shape.create", 1500, function(event3) {
-    var context = event3.context, parent = context.parent, shape = context.shape;
+  this.preExecute("shape.create", 1500, function(event2) {
+    var context = event2.context, parent = context.parent, shape = context.shape;
     if (is(parent, "bpmn:Lane") && !is(shape, "bpmn:Lane")) {
       context.parent = getParent2(parent, "bpmn:Participant");
     }
@@ -27664,8 +24782,8 @@ e(CreateBehavior, CommandInterceptor);
 // node_modules/bpmn-js/lib/features/modeling/behavior/CreateDataObjectBehavior.js
 function CreateDataObjectBehavior(eventBus, bpmnFactory) {
   CommandInterceptor.call(this, eventBus);
-  this.preExecute("shape.create", function(event3) {
-    var context = event3.context, shape = context.shape;
+  this.preExecute("shape.create", function(event2) {
+    var context = event2.context, shape = context.shape;
     if (is(shape, "bpmn:DataObjectReference") && shape.type !== "label") {
       var dataObject = bpmnFactory.create("bpmn:DataObject");
       shape.businessObject.dataObjectRef = dataObject;
@@ -27688,8 +24806,8 @@ function CreateParticipantBehavior(canvas, eventBus, modeling) {
   eventBus.on([
     "create.start",
     "shape.move.start"
-  ], HIGH_PRIORITY4, function(event3) {
-    var context = event3.context, shape = context.shape, rootElement = canvas.getRootElement();
+  ], HIGH_PRIORITY4, function(event2) {
+    var context = event2.context, shape = context.shape, rootElement = canvas.getRootElement();
     if (!is(shape, "bpmn:Participant") || !is(rootElement, "bpmn:Process") || !rootElement.children.length) {
       return;
     }
@@ -27704,11 +24822,11 @@ function CreateParticipantBehavior(canvas, eventBus, modeling) {
     assign(shape, participantBounds);
     context.createConstraints = getParticipantCreateConstraints(shape, childrenBBox);
   });
-  eventBus.on("create.start", HIGH_PRIORITY4, function(event3) {
-    var context = event3.context, shape = context.shape, rootElement = canvas.getRootElement(), rootElementGfx = canvas.getGraphics(rootElement);
-    function ensureHoveringProcess(event4) {
-      event4.element = rootElement;
-      event4.gfx = rootElementGfx;
+  eventBus.on("create.start", HIGH_PRIORITY4, function(event2) {
+    var context = event2.context, shape = context.shape, rootElement = canvas.getRootElement(), rootElementGfx = canvas.getGraphics(rootElement);
+    function ensureHoveringProcess(event3) {
+      event3.element = rootElement;
+      event3.gfx = rootElementGfx;
     }
     if (is(shape, "bpmn:Participant") && is(rootElement, "bpmn:Process")) {
       eventBus.on("element.hover", HIGH_PRIORITY4, ensureHoveringProcess);
@@ -27844,8 +24962,8 @@ function DataInputAssociationBehavior(eventBus, bpmnFactory) {
       remove3(element.get("properties"), targetRefProp);
     }
   }
-  function fixTargetRef(event3) {
-    var context = event3.context, connection = context.connection, connectionBo = connection.businessObject, target = connection.target, targetBo = target && target.businessObject, newTarget = context.newTarget, newTargetBo = newTarget && newTarget.businessObject, oldTarget = context.oldTarget || context.target, oldTargetBo = oldTarget && oldTarget.businessObject;
+  function fixTargetRef(event2) {
+    var context = event2.context, connection = context.connection, connectionBo = connection.businessObject, target = connection.target, targetBo = target && target.businessObject, newTarget = context.newTarget, newTargetBo = newTarget && newTarget.businessObject, oldTarget = context.oldTarget || context.target, oldTargetBo = oldTarget && oldTarget.businessObject;
     var dataAssociation = connection.businessObject, targetRefProp;
     if (oldTargetBo && oldTargetBo !== targetBo) {
       cleanupTargetRef(oldTargetBo, connectionBo);
@@ -27867,10 +24985,10 @@ DataInputAssociationBehavior.$inject = [
 ];
 e(DataInputAssociationBehavior, CommandInterceptor);
 function ifDataInputAssociation(fn2) {
-  return function(event3) {
-    var context = event3.context, connection = context.connection;
+  return function(event2) {
+    var context = event2.context, connection = context.connection;
     if (is(connection, "bpmn:DataInputAssociation")) {
-      return fn2(event3);
+      return fn2(event2);
     }
   };
 }
@@ -27922,8 +25040,8 @@ function DataStoreBehavior(canvas, commandStack, elementRegistry, eventBus) {
       });
     }
   }
-  this.preExecute("shape.create", function(event3) {
-    var context = event3.context, shape = context.shape;
+  this.preExecute("shape.create", function(event2) {
+    var context = event2.context, shape = context.shape;
     if (is(shape, "bpmn:DataStoreReference") && shape.type !== "label") {
       if (!context.hints) {
         context.hints = {};
@@ -27931,8 +25049,8 @@ function DataStoreBehavior(canvas, commandStack, elementRegistry, eventBus) {
       context.hints.autoResize = false;
     }
   });
-  this.preExecute("elements.move", function(event3) {
-    var context = event3.context, shapes = context.shapes;
+  this.preExecute("elements.move", function(event2) {
+    var context = event2.context, shapes = context.shapes;
     var dataStoreReferences = shapes.filter(function(shape) {
       return is(shape, "bpmn:DataStoreReference");
     });
@@ -27945,14 +25063,14 @@ function DataStoreBehavior(canvas, commandStack, elementRegistry, eventBus) {
       });
     }
   });
-  this.postExecute("shape.create", function(event3) {
-    var context = event3.context, shape = context.shape, parent = shape.parent;
+  this.postExecute("shape.create", function(event2) {
+    var context = event2.context, shape = context.shape, parent = shape.parent;
     if (is(shape, "bpmn:DataStoreReference") && shape.type !== "label" && is(parent, "bpmn:Collaboration")) {
       updateDataStoreParent(shape);
     }
   });
-  this.postExecute("shape.move", function(event3) {
-    var context = event3.context, shape = context.shape, oldParent = context.oldParent, parent = shape.parent;
+  this.postExecute("shape.move", function(event2) {
+    var context = event2.context, shape = context.shape, oldParent = context.oldParent, parent = shape.parent;
     if (is(oldParent, "bpmn:Collaboration")) {
       return;
     }
@@ -27961,8 +25079,8 @@ function DataStoreBehavior(canvas, commandStack, elementRegistry, eventBus) {
       updateDataStoreParent(shape, participant);
     }
   });
-  this.postExecute("shape.delete", function(event3) {
-    var context = event3.context, shape = context.shape, rootElement = canvas.getRootElement();
+  this.postExecute("shape.delete", function(event2) {
+    var context = event2.context, shape = context.shape, rootElement = canvas.getRootElement();
     if (isAny(shape, ["bpmn:Participant", "bpmn:SubProcess"]) && is(rootElement, "bpmn:Collaboration")) {
       getDataStores(rootElement).filter(function(dataStore) {
         return isDescendant(dataStore, shape);
@@ -27971,8 +25089,8 @@ function DataStoreBehavior(canvas, commandStack, elementRegistry, eventBus) {
       });
     }
   });
-  this.postExecute("canvas.updateRoot", function(event3) {
-    var context = event3.context, oldRoot = context.oldRoot, newRoot = context.newRoot;
+  this.postExecute("canvas.updateRoot", function(event2) {
+    var context = event2.context, oldRoot = context.oldRoot, newRoot = context.newRoot;
     var dataStores = getDataStores(oldRoot);
     dataStores.forEach(function(dataStore) {
       if (is(newRoot, "bpmn:Process")) {
@@ -28221,7 +25339,7 @@ function computeLanesResize(shape, newBounds) {
 }
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/DeleteLaneBehavior.js
-var LOW_PRIORITY10 = 500;
+var LOW_PRIORITY9 = 500;
 function DeleteLaneBehavior(eventBus, spaceTool) {
   CommandInterceptor.call(this, eventBus);
   function compensateLaneDelete(shape, oldParent) {
@@ -28322,8 +25440,8 @@ function DeleteLaneBehavior(eventBus, spaceTool) {
       );
     }
   }
-  this.postExecuted("shape.delete", LOW_PRIORITY10, function(event3) {
-    var context = event3.context, hints = context.hints, shape = context.shape, oldParent = context.oldParent;
+  this.postExecuted("shape.delete", LOW_PRIORITY9, function(event2) {
+    var context = event2.context, hints = context.hints, shape = context.shape, oldParent = context.oldParent;
     if (!is(shape, "bpmn:Lane")) {
       return;
     }
@@ -28340,12 +25458,12 @@ DeleteLaneBehavior.$inject = [
 e(DeleteLaneBehavior, CommandInterceptor);
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/DetachEventBehavior.js
-var LOW_PRIORITY11 = 500;
+var LOW_PRIORITY10 = 500;
 function DetachEventBehavior(bpmnReplace, injector) {
   injector.invoke(CommandInterceptor, this);
   this._bpmnReplace = bpmnReplace;
   var self2 = this;
-  this.postExecuted("elements.create", LOW_PRIORITY11, function(context) {
+  this.postExecuted("elements.create", LOW_PRIORITY10, function(context) {
     var elements = context.elements;
     elements.filter(function(shape) {
       var host = shape.host;
@@ -28356,7 +25474,7 @@ function DetachEventBehavior(bpmnReplace, injector) {
       context.elements[index5] = self2._replaceShape(elements[index5]);
     });
   }, true);
-  this.preExecute("elements.move", LOW_PRIORITY11, function(context) {
+  this.preExecute("elements.move", LOW_PRIORITY10, function(context) {
     var shapes = context.shapes, newHost = context.newHost;
     shapes.forEach(function(shape, index5) {
       var host = shape.host;
@@ -28511,8 +25629,8 @@ function copy(obj) {
 // node_modules/bpmn-js/lib/features/modeling/behavior/EventBasedGatewayBehavior.js
 function EventBasedGatewayBehavior(eventBus, modeling) {
   CommandInterceptor.call(this, eventBus);
-  this.preExecuted("connection.create", function(event3) {
-    var context = event3.context, connection = context.connection, source = context.source, target = context.target, hints = context.hints;
+  this.preExecuted("connection.create", function(event2) {
+    var context = event2.context, connection = context.connection, source = context.source, target = context.target, hints = context.hints;
     if (hints && hints.createElementsBehavior === false) {
       return;
     }
@@ -28533,8 +25651,8 @@ function EventBasedGatewayBehavior(eventBus, modeling) {
       modeling.removeConnection(sequenceFlow);
     });
   });
-  this.preExecuted("shape.replace", function(event3) {
-    var context = event3.context, newShape = context.newShape;
+  this.preExecuted("shape.replace", function(event2) {
+    var context = event2.context, newShape = context.newShape;
     if (!is(newShape, "bpmn:EventBasedGateway")) {
       return;
     }
@@ -28578,16 +25696,16 @@ function FixHoverBehavior(elementRegistry, eventBus, canvas) {
     "shape.move.move",
     "shape.move.out",
     "shape.move.end"
-  ], HIGH_PRIORITY5, function(event3) {
-    var context = event3.context, shape = context.shape || event3.shape, hover = event3.hover;
+  ], HIGH_PRIORITY5, function(event2) {
+    var context = event2.context, shape = context.shape || event2.shape, hover = event2.hover;
     if (is(hover, "bpmn:Lane") && !isAny(shape, ["bpmn:Lane", "bpmn:Participant"])) {
-      event3.hover = getLanesRoot(hover);
-      event3.hoverGfx = elementRegistry.getGraphics(event3.hover);
+      event2.hover = getLanesRoot(hover);
+      event2.hoverGfx = elementRegistry.getGraphics(event2.hover);
     }
     var rootElement = canvas.getRootElement();
     if (hover !== rootElement && (shape.labelTarget || isAny(shape, ["bpmn:Group", "bpmn:TextAnnotation"]))) {
-      event3.hover = rootElement;
-      event3.hoverGfx = elementRegistry.getGraphics(event3.hover);
+      event2.hover = rootElement;
+      event2.hoverGfx = elementRegistry.getGraphics(event2.hover);
     }
   });
   eventBus.on([
@@ -28599,40 +25717,40 @@ function FixHoverBehavior(elementRegistry, eventBus, canvas) {
     "global-connect.out",
     "global-connect.end",
     "global-connect.cleanup"
-  ], HIGH_PRIORITY5, function(event3) {
-    var hover = event3.hover;
+  ], HIGH_PRIORITY5, function(event2) {
+    var hover = event2.hover;
     if (is(hover, "bpmn:Lane")) {
-      event3.hover = getLanesRoot(hover) || hover;
-      event3.hoverGfx = elementRegistry.getGraphics(event3.hover);
+      event2.hover = getLanesRoot(hover) || hover;
+      event2.hoverGfx = elementRegistry.getGraphics(event2.hover);
     }
   });
   eventBus.on([
     "bendpoint.move.hover"
-  ], HIGH_PRIORITY5, function(event3) {
-    var context = event3.context, hover = event3.hover, type = context.type;
+  ], HIGH_PRIORITY5, function(event2) {
+    var context = event2.context, hover = event2.hover, type = context.type;
     if (is(hover, "bpmn:Lane") && /reconnect/.test(type)) {
-      event3.hover = getLanesRoot(hover) || hover;
-      event3.hoverGfx = elementRegistry.getGraphics(event3.hover);
+      event2.hover = getLanesRoot(hover) || hover;
+      event2.hoverGfx = elementRegistry.getGraphics(event2.hover);
     }
   });
   eventBus.on([
     "connect.start"
-  ], HIGH_PRIORITY5, function(event3) {
-    var context = event3.context, start = context.start;
+  ], HIGH_PRIORITY5, function(event2) {
+    var context = event2.context, start = context.start;
     if (is(start, "bpmn:Lane")) {
       context.start = getLanesRoot(start) || start;
     }
   });
-  eventBus.on("shape.move.start", HIGHEST_PRIORITY, function(event3) {
-    var shape = event3.shape;
+  eventBus.on("shape.move.start", HIGHEST_PRIORITY, function(event2) {
+    var shape = event2.shape;
     if (is(shape, "bpmn:Lane")) {
-      event3.shape = getLanesRoot(shape) || shape;
+      event2.shape = getLanesRoot(shape) || shape;
     }
   });
-  eventBus.on("spaceTool.move", HIGHEST_PRIORITY, function(event3) {
-    var hover = event3.hover;
+  eventBus.on("spaceTool.move", HIGHEST_PRIORITY, function(event2) {
+    var hover = event2.hover;
     if (hover && is(hover, "bpmn:Lane")) {
-      event3.hover = getLanesRoot(hover);
+      event2.hover = getLanesRoot(hover);
     }
   });
 }
@@ -28729,22 +25847,22 @@ function GroupBehavior(bpmnFactory, bpmnjs, elementRegistry, eventBus, injector,
       removeCategoryValue(null, businessObject.categoryValueRef.$parent, businessObject);
     }
   }
-  this.execute("label.create", function(event3) {
-    var context = event3.context, labelTarget = context.labelTarget;
+  this.execute("label.create", function(event2) {
+    var context = event2.context, labelTarget = context.labelTarget;
     if (!is(labelTarget, "bpmn:Group")) {
       return;
     }
     setCategoryValue(labelTarget, context);
   });
-  this.revert("label.create", function(event3) {
-    var context = event3.context, labelTarget = context.labelTarget;
+  this.revert("label.create", function(event2) {
+    var context = event2.context, labelTarget = context.labelTarget;
     if (!is(labelTarget, "bpmn:Group")) {
       return;
     }
     unsetCategoryValue(labelTarget, context);
   });
-  this.execute("shape.delete", function(event3) {
-    var context = event3.context, shape = context.shape, businessObject = getBusinessObject(shape);
+  this.execute("shape.delete", function(event2) {
+    var context = event2.context, shape = context.shape, businessObject = getBusinessObject(shape);
     if (!is(shape, "bpmn:Group") || shape.labelTarget) {
       return;
     }
@@ -28755,8 +25873,8 @@ function GroupBehavior(bpmnFactory, bpmnjs, elementRegistry, eventBus, injector,
       businessObject.categoryValueRef = null;
     }
   });
-  this.reverted("shape.delete", function(event3) {
-    var context = event3.context, shape = context.shape;
+  this.reverted("shape.delete", function(event2) {
+    var context = event2.context, shape = context.shape;
     if (!is(shape, "bpmn:Group") || shape.labelTarget) {
       return;
     }
@@ -28766,8 +25884,8 @@ function GroupBehavior(bpmnFactory, bpmnjs, elementRegistry, eventBus, injector,
       addCategoryValue(categoryValue, category);
     }
   });
-  this.execute("shape.create", function(event3) {
-    var context = event3.context, shape = context.shape;
+  this.execute("shape.create", function(event2) {
+    var context = event2.context, shape = context.shape;
     if (!is(shape, "bpmn:Group") || shape.labelTarget) {
       return;
     }
@@ -28775,8 +25893,8 @@ function GroupBehavior(bpmnFactory, bpmnjs, elementRegistry, eventBus, injector,
       setCategoryValue(shape, context);
     }
   });
-  this.reverted("shape.create", function(event3) {
-    var context = event3.context, shape = context.shape;
+  this.reverted("shape.create", function(event2) {
+    var context = event2.context, shape = context.shape;
     if (!is(shape, "bpmn:Group") || shape.labelTarget) {
       return;
     }
@@ -28826,14 +25944,14 @@ e(GroupBehavior, CommandInterceptor);
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/util/LineIntersect.js
 function lineIntersect(l1s, l1e, l2s, l2e) {
-  var denominator, a6, b5, c5, numerator;
+  var denominator, a6, b4, c5, numerator;
   denominator = (l2e.y - l2s.y) * (l1e.x - l1s.x) - (l2e.x - l2s.x) * (l1e.y - l1s.y);
   if (denominator == 0) {
     return null;
   }
   a6 = l1s.y - l2s.y;
-  b5 = l1s.x - l2s.x;
-  numerator = (l2e.x - l2s.x) * a6 - (l2e.y - l2s.y) * b5;
+  b4 = l1s.x - l2s.x;
+  numerator = (l2e.x - l2s.x) * a6 - (l2e.y - l2s.y) * b4;
   c5 = numerator / denominator;
   return {
     x: Math.round(l1s.x + c5 * (l1e.x - l1s.x)),
@@ -28899,8 +26017,8 @@ function IsHorizontalFix(eventBus) {
     "bpmn:Participant",
     "bpmn:Lane"
   ];
-  this.executed(["shape.move", "shape.create", "shape.resize"], function(event3) {
-    var shape = event3.context.shape, bo = getBusinessObject(shape), di = getDi(shape);
+  this.executed(["shape.move", "shape.create", "shape.resize"], function(event2) {
+    var shape = event2.context.shape, bo = getBusinessObject(shape), di = getDi(shape);
     if (isAny(bo, elementTypesToUpdate)) {
       var isHorizontal5 = di.get("isHorizontal");
       if (isHorizontal5 === void 0) {
@@ -29260,14 +26378,14 @@ function LabelBehavior(eventBus, modeling, bpmnFactory, textRenderer) {
     }
     modeling.updateLabel(element, getLabel(element));
   });
-  this.postExecute("shape.delete", function(event3) {
-    var context = event3.context, labelTarget = context.labelTarget, hints = context.hints || {};
+  this.postExecute("shape.delete", function(event2) {
+    var context = event2.context, labelTarget = context.labelTarget, hints = context.hints || {};
     if (labelTarget && hints.unsetLabel !== false) {
       modeling.updateLabel(labelTarget, null, null, { removeShape: false });
     }
   });
-  function getVisibleLabelAdjustment(event3) {
-    var context = event3.context, connection = context.connection, label = connection.label, hints = assign({}, context.hints), newWaypoints = context.newWaypoints || connection.waypoints, oldWaypoints = context.oldWaypoints;
+  function getVisibleLabelAdjustment(event2) {
+    var context = event2.context, connection = context.connection, label = connection.label, hints = assign({}, context.hints), newWaypoints = context.newWaypoints || connection.waypoints, oldWaypoints = context.oldWaypoints;
     if (typeof hints.startChanged === "undefined") {
       hints.startChanged = !!hints.connectionStart;
     }
@@ -29279,8 +26397,8 @@ function LabelBehavior(eventBus, modeling, bpmnFactory, textRenderer) {
   this.postExecute([
     "connection.layout",
     "connection.updateWaypoints"
-  ], function(event3) {
-    var context = event3.context, hints = context.hints || {};
+  ], function(event2) {
+    var context = event2.context, hints = context.hints || {};
     if (hints.labelBehavior === false) {
       return;
     }
@@ -29288,19 +26406,19 @@ function LabelBehavior(eventBus, modeling, bpmnFactory, textRenderer) {
     if (!label || !label.parent) {
       return;
     }
-    labelAdjustment = getVisibleLabelAdjustment(event3);
+    labelAdjustment = getVisibleLabelAdjustment(event2);
     modeling.moveShape(label, labelAdjustment);
   });
-  this.postExecute(["shape.replace"], function(event3) {
-    var context = event3.context, newShape = context.newShape, oldShape = context.oldShape;
+  this.postExecute(["shape.replace"], function(event2) {
+    var context = event2.context, newShape = context.newShape, oldShape = context.oldShape;
     var businessObject = getBusinessObject(newShape);
     if (businessObject && isLabelExternal(businessObject) && oldShape.label && newShape.label) {
       newShape.label.x = oldShape.label.x;
       newShape.label.y = oldShape.label.y;
     }
   });
-  this.postExecute("shape.resize", function(event3) {
-    var context = event3.context, shape = context.shape, newBounds = context.newBounds, oldBounds = context.oldBounds;
+  this.postExecute("shape.resize", function(event2) {
+    var context = event2.context, shape = context.shape, newBounds = context.newBounds, oldBounds = context.oldBounds;
     if (hasExternalLabel(shape)) {
       var label = shape.label, labelMid = getMid(label), edges = asEdges(oldBounds);
       var referencePoint = getReferencePoint(labelMid, edges);
@@ -29394,8 +26512,8 @@ function getConnectionAdjustment(position, newWaypoints, oldWaypoints, hints) {
 // node_modules/bpmn-js/lib/features/modeling/behavior/LayoutConnectionBehavior.js
 function LayoutConnectionBehavior(eventBus, modeling) {
   CommandInterceptor.call(this, eventBus);
-  function getnewAnchorPoint(event3, point) {
-    var context = event3.context, connection = context.connection, hints = assign({}, context.hints), newWaypoints = context.newWaypoints || connection.waypoints, oldWaypoints = context.oldWaypoints;
+  function getnewAnchorPoint(event2, point) {
+    var context = event2.context, connection = context.connection, hints = assign({}, context.hints), newWaypoints = context.newWaypoints || connection.waypoints, oldWaypoints = context.oldWaypoints;
     if (typeof hints.startChanged === "undefined") {
       hints.startChanged = !!hints.connectionStart;
     }
@@ -29407,26 +26525,26 @@ function LayoutConnectionBehavior(eventBus, modeling) {
   this.postExecute([
     "connection.layout",
     "connection.updateWaypoints"
-  ], function(event3) {
-    var context = event3.context;
+  ], function(event2) {
+    var context = event2.context;
     var connection = context.connection, outgoing = connection.outgoing, incoming = connection.incoming;
     incoming.forEach(function(connection2) {
       var endPoint = connection2.waypoints[connection2.waypoints.length - 1];
-      var newEndpoint = getnewAnchorPoint(event3, endPoint);
+      var newEndpoint = getnewAnchorPoint(event2, endPoint);
       var newWaypoints = [].concat(connection2.waypoints.slice(0, -1), [newEndpoint]);
       modeling.updateWaypoints(connection2, newWaypoints);
     });
     outgoing.forEach(function(connection2) {
       var startpoint = connection2.waypoints[0];
-      var newStartpoint = getnewAnchorPoint(event3, startpoint);
+      var newStartpoint = getnewAnchorPoint(event2, startpoint);
       var newWaypoints = [].concat([newStartpoint], connection2.waypoints.slice(1));
       modeling.updateWaypoints(connection2, newWaypoints);
     });
   });
   this.postExecute([
     "connection.move"
-  ], function(event3) {
-    var context = event3.context;
+  ], function(event2) {
+    var context = event2.context;
     var connection = context.connection, outgoing = connection.outgoing, incoming = connection.incoming, delta2 = context.delta;
     incoming.forEach(function(connection2) {
       var endPoint = connection2.waypoints[connection2.waypoints.length - 1];
@@ -29570,7 +26688,7 @@ function canBeNonInterrupting(shape) {
   if (!eventDefinitions || !eventDefinitions.length) {
     return false;
   }
-  return NON_INTERRUPTING_EVENT_TYPES.some((event3) => is(eventDefinitions[0], event3));
+  return NON_INTERRUPTING_EVENT_TYPES.some((event2) => is(eventDefinitions[0], event2));
 }
 function getInterruptingProperty(shape) {
   return is(shape, "bpmn:BoundaryEvent") ? "cancelActivity" : "isInterrupting";
@@ -29579,10 +26697,10 @@ function getInterruptingProperty(shape) {
 // node_modules/bpmn-js/lib/features/modeling/behavior/NonInterruptingBehavior.js
 function NonInterruptingBehavior(injector, modeling) {
   injector.invoke(CommandInterceptor, this);
-  this.postExecuted("shape.replace", function(event3) {
-    const oldShape = event3.context.oldShape;
-    const newShape = event3.context.newShape;
-    const hints = event3.context.hints;
+  this.postExecuted("shape.replace", function(event2) {
+    const oldShape = event2.context.oldShape;
+    const newShape = event2.context.newShape;
+    const hints = event2.context.hints;
     if (!canBeNonInterrupting(newShape)) {
       return;
     }
@@ -29728,8 +26846,8 @@ function ReplaceConnectionBehavior(eventBus, modeling, bpmnRules, injector) {
       });
     }
   }
-  function replaceReconnectedConnection(event3) {
-    var context = event3.context, connection = context.connection, source = context.newSource || connection.source, target = context.newTarget || connection.target, allowed, replacement;
+  function replaceReconnectedConnection(event2) {
+    var context = event2.context, connection = context.connection, source = context.newSource || connection.source, target = context.newTarget || connection.target, allowed, replacement;
     allowed = bpmnRules.canConnect(source, target);
     if (!allowed || allowed.type === connection.type) {
       return;
@@ -29763,8 +26881,8 @@ function ReplaceConnectionBehavior(eventBus, modeling, bpmnRules, injector) {
     forEach(allConnections, fixConnection);
   }, true);
   this.preExecute("connection.reconnect", replaceReconnectedConnection);
-  this.postExecuted("element.updateProperties", function(event3) {
-    var context = event3.context, properties = context.properties, element = context.element, businessObject = element.businessObject, connection;
+  this.postExecuted("element.updateProperties", function(event2) {
+    var context = event2.context, properties = context.properties, element = context.element, businessObject = element.businessObject, connection;
     if (properties.default) {
       connection = find(
         element.outgoing,
@@ -29793,8 +26911,8 @@ function ReplaceElementBehaviour(bpmnReplace, bpmnRules, elementRegistry, inject
   this._bpmnReplace = bpmnReplace;
   this._elementRegistry = elementRegistry;
   this._selection = selection2;
-  this.postExecuted(["elements.create"], 500, function(event3) {
-    var context = event3.context, target = context.parent, elements = context.elements;
+  this.postExecuted(["elements.create"], 500, function(event2) {
+    var context = event2.context, target = context.parent, elements = context.elements;
     var elementReplacements = reduce(elements, function(replacements, element) {
       var canReplace2 = bpmnRules.canReplace([element], element.host || element.parent || target);
       return canReplace2 ? replacements.concat(canReplace2.replacements) : replacements;
@@ -29803,8 +26921,8 @@ function ReplaceElementBehaviour(bpmnReplace, bpmnRules, elementRegistry, inject
       this._replaceElements(elements, elementReplacements);
     }
   }, this);
-  this.postExecuted(["elements.move"], 500, function(event3) {
-    var context = event3.context, target = context.newParent, newHost = context.newHost, elements = [];
+  this.postExecuted(["elements.move"], 500, function(event2) {
+    var context = event2.context, target = context.newParent, newHost = context.newHost, elements = [];
     forEach(context.closure.topLevel, function(topLevelElements) {
       if (isEventSubProcess(topLevelElements)) {
         elements = elements.concat(topLevelElements.children);
@@ -29867,8 +26985,8 @@ var VERTICAL_PARTICIPANT_MIN_DIMENSIONS = { width: 150, height: 300 };
 var SUB_PROCESS_MIN_DIMENSIONS = { width: 140, height: 120 };
 var TEXT_ANNOTATION_MIN_DIMENSIONS = { width: 50, height: 30 };
 function ResizeBehavior(eventBus) {
-  eventBus.on("resize.start", HIGH_PRIORITY6, function(event3) {
-    var context = event3.context, shape = context.shape, direction = context.direction, balanced = context.balanced;
+  eventBus.on("resize.start", HIGH_PRIORITY6, function(event2) {
+    var context = event2.context, shape = context.shape, direction = context.direction, balanced = context.balanced;
     if (is(shape, "bpmn:Lane") || is(shape, "bpmn:Participant")) {
       context.resizeConstraints = getParticipantResizeConstraints(shape, direction, balanced);
     }
@@ -29915,10 +27033,22 @@ function getParticipantResizeConstraints(laneShape, resizeDirection, balanced) {
   }
   allLanes.forEach(function(other) {
     var otherTrbl = asTRBL(other);
-    if (/n/.test(resizeDirection)) {
-      if (isHorizontalLane && otherTrbl.top < laneTrbl.top - 10) {
+    if (isHorizontalLane) {
+      if (otherTrbl.top < laneTrbl.top - 10) {
         isFirst = false;
       }
+      if (otherTrbl.bottom > laneTrbl.bottom + 10) {
+        isLast = false;
+      }
+    } else {
+      if (otherTrbl.left < laneTrbl.left - 10) {
+        isFirst = false;
+      }
+      if (otherTrbl.right > laneTrbl.right + 10) {
+        isLast = false;
+      }
+    }
+    if (/n/.test(resizeDirection)) {
       if (balanced && abs6(laneTrbl.top - otherTrbl.bottom) < 10) {
         addMax(maxTrbl, "top", otherTrbl.top + minDimensions.height);
       }
@@ -29927,9 +27057,6 @@ function getParticipantResizeConstraints(laneShape, resizeDirection, balanced) {
       }
     }
     if (/e/.test(resizeDirection)) {
-      if (!isHorizontalLane && otherTrbl.right > laneTrbl.right + 10) {
-        isLast = false;
-      }
       if (balanced && abs6(laneTrbl.right - otherTrbl.left) < 10) {
         addMin(maxTrbl, "right", otherTrbl.right - minDimensions.width);
       }
@@ -29938,9 +27065,6 @@ function getParticipantResizeConstraints(laneShape, resizeDirection, balanced) {
       }
     }
     if (/s/.test(resizeDirection)) {
-      if (isHorizontalLane && otherTrbl.bottom > laneTrbl.bottom + 10) {
-        isLast = false;
-      }
       if (balanced && abs6(laneTrbl.bottom - otherTrbl.top) < 10) {
         addMin(maxTrbl, "bottom", otherTrbl.bottom - minDimensions.height);
       }
@@ -29949,9 +27073,6 @@ function getParticipantResizeConstraints(laneShape, resizeDirection, balanced) {
       }
     }
     if (/w/.test(resizeDirection)) {
-      if (!isHorizontalLane && otherTrbl.left < laneTrbl.left - 10) {
-        isFirst = false;
-      }
       if (balanced && abs6(laneTrbl.left - otherTrbl.right) < 10) {
         addMax(maxTrbl, "left", otherTrbl.left + minDimensions.width);
       }
@@ -29966,16 +27087,16 @@ function getParticipantResizeConstraints(laneShape, resizeDirection, balanced) {
   var padding = isHorizontalLane ? LANE_PADDING : VERTICAL_LANE_PADDING;
   flowElements.forEach(function(flowElement) {
     var flowElementTrbl = asTRBL(flowElement);
-    if (isFirst && /n/.test(resizeDirection)) {
+    if (/n/.test(resizeDirection) && (!isHorizontalLane || isFirst)) {
       addMin(minTrbl, "top", flowElementTrbl.top - padding.top);
     }
-    if (isLast && /e/.test(resizeDirection)) {
+    if (/e/.test(resizeDirection) && (isHorizontalLane || isLast)) {
       addMax(minTrbl, "right", flowElementTrbl.right + padding.right);
     }
-    if (isLast && /s/.test(resizeDirection)) {
+    if (/s/.test(resizeDirection) && (!isHorizontalLane || isLast)) {
       addMax(minTrbl, "bottom", flowElementTrbl.bottom + padding.bottom);
     }
-    if (isFirst && /w/.test(resizeDirection)) {
+    if (/w/.test(resizeDirection) && (isHorizontalLane || isFirst)) {
       addMin(minTrbl, "left", flowElementTrbl.left - padding.left);
     }
   });
@@ -29988,14 +27109,14 @@ function getParticipantResizeConstraints(laneShape, resizeDirection, balanced) {
 // node_modules/bpmn-js/lib/features/modeling/behavior/ResizeLaneBehavior.js
 var SLIGHTLY_HIGHER_PRIORITY = 1001;
 function ResizeLaneBehavior(eventBus, modeling) {
-  eventBus.on("resize.start", SLIGHTLY_HIGHER_PRIORITY + 500, function(event3) {
-    var context = event3.context, shape = context.shape;
+  eventBus.on("resize.start", SLIGHTLY_HIGHER_PRIORITY + 500, function(event2) {
+    var context = event2.context, shape = context.shape;
     if (is(shape, "bpmn:Lane") || is(shape, "bpmn:Participant")) {
-      context.balanced = !hasPrimaryModifier(event3);
+      context.balanced = !hasPrimaryModifier(event2);
     }
   });
-  eventBus.on("resize.end", SLIGHTLY_HIGHER_PRIORITY, function(event3) {
-    var context = event3.context, shape = context.shape, canExecute = context.canExecute, newBounds = context.newBounds;
+  eventBus.on("resize.end", SLIGHTLY_HIGHER_PRIORITY, function(event2) {
+    var context = event2.context, shape = context.shape, canExecute = context.canExecute, newBounds = context.newBounds;
     if (is(shape, "bpmn:Lane") || is(shape, "bpmn:Participant")) {
       if (canExecute) {
         newBounds = roundBounds(newBounds);
@@ -30011,7 +27132,7 @@ ResizeLaneBehavior.$inject = [
 ];
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/RootElementReferenceBehavior.js
-var LOW_PRIORITY12 = 500;
+var LOW_PRIORITY11 = 500;
 function RootElementReferenceBehavior(bpmnjs, eventBus, injector, moddleCopy, bpmnFactory) {
   injector.invoke(CommandInterceptor, this);
   function canHaveRootElementReference(element) {
@@ -30037,7 +27158,7 @@ function RootElementReferenceBehavior(bpmnjs, eventBus, injector, moddleCopy, bp
       return "signalRef";
     }
   }
-  function getRootElement3(businessObject) {
+  function getRootElement4(businessObject) {
     if (isAny(businessObject, ["bpmn:ReceiveTask", "bpmn:SendTask"])) {
       return businessObject.get("messageRef");
     }
@@ -30060,7 +27181,7 @@ function RootElementReferenceBehavior(bpmnjs, eventBus, injector, moddleCopy, bp
     if (!canHaveRootElementReference(shape)) {
       return;
     }
-    var businessObject = getBusinessObject(shape), rootElement = getRootElement3(businessObject), rootElements;
+    var businessObject = getBusinessObject(shape), rootElement = getRootElement4(businessObject), rootElements;
     if (rootElement && !hasRootElement(rootElement)) {
       rootElements = bpmnjs.getDefinitions().get("rootElements");
       add2(rootElements, rootElement);
@@ -30084,12 +27205,12 @@ function RootElementReferenceBehavior(bpmnjs, eventBus, injector, moddleCopy, bp
     if (element.labelTarget || !canHaveRootElementReference(element)) {
       return;
     }
-    var businessObject = getBusinessObject(element), rootElement = getRootElement3(businessObject);
+    var businessObject = getBusinessObject(element), rootElement = getRootElement4(businessObject);
     if (rootElement) {
       descriptor.referencedRootElement = rootElement;
     }
   });
-  eventBus.on("copyPaste.pasteElement", LOW_PRIORITY12, function(context) {
+  eventBus.on("copyPaste.pasteElement", LOW_PRIORITY11, function(context) {
     var descriptor = context.descriptor, businessObject = descriptor.businessObject, referencedRootElement = descriptor.referencedRootElement;
     if (!referencedRootElement) {
       return;
@@ -30217,7 +27338,7 @@ function findResizedLane(lanes, resizeStart, isHorizontalResize) {
 }
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/SubProcessPlaneBehavior.js
-var LOW_PRIORITY13 = 400;
+var LOW_PRIORITY12 = 400;
 var HIGH_PRIORITY7 = 600;
 var DEFAULT_POSITION2 = {
   x: 180,
@@ -30368,7 +27489,7 @@ function SubProcessPlaneBehavior(canvas, eventBus, modeling, elementFactory, bpm
     }
     eventBus.fire("element.changed", { element: primaryShape });
   });
-  this.executed("shape.toggleCollapse", LOW_PRIORITY13, function(context) {
+  this.executed("shape.toggleCollapse", LOW_PRIORITY12, function(context) {
     var shape = context.shape;
     if (!is(shape, "bpmn:SubProcess")) {
       return;
@@ -30380,7 +27501,7 @@ function SubProcessPlaneBehavior(canvas, eventBus, modeling, elementFactory, bpm
       removeRoot(context);
     }
   }, true);
-  this.reverted("shape.toggleCollapse", LOW_PRIORITY13, function(context) {
+  this.reverted("shape.toggleCollapse", LOW_PRIORITY12, function(context) {
     var shape = context.shape;
     if (!is(shape, "bpmn:SubProcess")) {
       return;
@@ -30544,8 +27665,8 @@ SubProcessPlaneBehavior.$inject = [
 // node_modules/bpmn-js/lib/features/modeling/behavior/SubProcessStartEventBehavior.js
 function SubProcessStartEventBehavior(injector, modeling) {
   injector.invoke(CommandInterceptor, this);
-  this.postExecuted("shape.replace", function(event3) {
-    var oldShape = event3.context.oldShape, newShape = event3.context.newShape;
+  this.postExecuted("shape.replace", function(event2) {
+    var oldShape = event2.context.oldShape, newShape = event2.context.newShape;
     if (!is(newShape, "bpmn:SubProcess") || !(is(oldShape, "bpmn:Task") || is(oldShape, "bpmn:CallActivity")) || !isExpanded(newShape)) {
       return;
     }
@@ -30625,7 +27746,7 @@ ToggleCollapseConnectionBehaviour.$inject = [
 ];
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/ToggleElementCollapseBehaviour.js
-var LOW_PRIORITY14 = 500;
+var LOW_PRIORITY13 = 500;
 function ToggleElementCollapseBehaviour(eventBus, elementFactory, modeling) {
   CommandInterceptor.call(this, eventBus);
   function hideEmptyLabels(children) {
@@ -30660,7 +27781,7 @@ function ToggleElementCollapseBehaviour(eventBus, elementFactory, modeling) {
       height: defaultSize.height
     };
   }
-  this.executed(["shape.toggleCollapse"], LOW_PRIORITY14, function(e8) {
+  this.executed(["shape.toggleCollapse"], LOW_PRIORITY13, function(e8) {
     var context = e8.context, shape = context.shape;
     if (!is(shape, "bpmn:SubProcess")) {
       return;
@@ -30672,7 +27793,7 @@ function ToggleElementCollapseBehaviour(eventBus, elementFactory, modeling) {
       getDi(shape).isExpanded = false;
     }
   });
-  this.reverted(["shape.toggleCollapse"], LOW_PRIORITY14, function(e8) {
+  this.reverted(["shape.toggleCollapse"], LOW_PRIORITY13, function(e8) {
     var context = e8.context;
     var shape = context.shape;
     if (!shape.collapsed) {
@@ -30681,7 +27802,7 @@ function ToggleElementCollapseBehaviour(eventBus, elementFactory, modeling) {
       getDi(shape).isExpanded = false;
     }
   });
-  this.postExecuted(["shape.toggleCollapse"], LOW_PRIORITY14, function(e8) {
+  this.postExecuted(["shape.toggleCollapse"], LOW_PRIORITY13, function(e8) {
     var shape = e8.context.shape, defaultSize = elementFactory.getDefaultSize(shape), newBounds;
     if (shape.collapsed) {
       newBounds = collapsedBounds(shape, defaultSize);
@@ -30708,8 +27829,8 @@ function filterVisible(elements) {
 // node_modules/bpmn-js/lib/features/modeling/behavior/UnclaimIdBehavior.js
 function UnclaimIdBehavior(canvas, injector, moddle, modeling) {
   injector.invoke(CommandInterceptor, this);
-  this.preExecute("shape.delete", function(event3) {
-    var context = event3.context, shape = context.shape, shapeBo = shape.businessObject;
+  this.preExecute("shape.delete", function(event2) {
+    var context = event2.context, shape = context.shape, shapeBo = shape.businessObject;
     if (isLabel(shape)) {
       return;
     }
@@ -30718,8 +27839,8 @@ function UnclaimIdBehavior(canvas, injector, moddle, modeling) {
     }
     modeling.unclaimId(shapeBo.id, shapeBo);
   });
-  this.preExecute("connection.delete", function(event3) {
-    var context = event3.context, connection = context.connection, connectionBo = connection.businessObject;
+  this.preExecute("connection.delete", function(event2) {
+    var context = event2.context, connection = context.connection, connectionBo = connection.businessObject;
     modeling.unclaimId(connectionBo.id, connectionBo);
   });
   this.preExecute("canvas.updateRoot", function() {
@@ -30735,8 +27856,8 @@ UnclaimIdBehavior.$inject = ["canvas", "injector", "moddle", "modeling"];
 // node_modules/bpmn-js/lib/features/modeling/behavior/UnsetDefaultFlowBehavior.js
 function DeleteSequenceFlowBehavior(eventBus, modeling) {
   CommandInterceptor.call(this, eventBus);
-  this.preExecute("connection.delete", function(event3) {
-    var context = event3.context, connection = context.connection, source = connection.source;
+  this.preExecute("connection.delete", function(event2) {
+    var context = event2.context, connection = context.connection, source = connection.source;
     if (isDefaultFlow(connection, source)) {
       modeling.updateProperties(source, {
         "default": null
@@ -30758,7 +27879,7 @@ function isDefaultFlow(connection, source) {
 }
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/UpdateFlowNodeRefsBehavior.js
-var LOW_PRIORITY15 = 500;
+var LOW_PRIORITY14 = 500;
 var HIGH_PRIORITY8 = 5e3;
 function UpdateFlowNodeRefsBehavior(eventBus, modeling) {
   CommandInterceptor.call(this, eventBus);
@@ -30798,10 +27919,10 @@ function UpdateFlowNodeRefsBehavior(eventBus, modeling) {
     "shape.move",
     "shape.resize"
   ];
-  this.preExecute(laneRefUpdateEvents, HIGH_PRIORITY8, function(event3) {
+  this.preExecute(laneRefUpdateEvents, HIGH_PRIORITY8, function(event2) {
     initContext();
   });
-  this.postExecuted(laneRefUpdateEvents, LOW_PRIORITY15, function(event3) {
+  this.postExecuted(laneRefUpdateEvents, LOW_PRIORITY14, function(event2) {
     releaseContext();
   });
   this.preExecute([
@@ -30809,8 +27930,8 @@ function UpdateFlowNodeRefsBehavior(eventBus, modeling) {
     "shape.move",
     "shape.delete",
     "shape.resize"
-  ], function(event3) {
-    var context2 = event3.context, shape = context2.shape;
+  ], function(event2) {
+    var context2 = event2.context, shape = context2.shape;
     var updateContext = getContext();
     if (shape.labelTarget) {
       return;
@@ -30845,6 +27966,40 @@ function UpdateContext() {
     this.counter--;
     return !this.counter;
   };
+}
+
+// node_modules/bpmn-js/lib/features/modeling/behavior/SetCompensationActivityAfterPasteBehavior.js
+function SetCompensationActivityAfterPasteBehavior(eventBus, modeling) {
+  CommandInterceptor.call(this, eventBus);
+  this.postExecuted("elements.create", function(event2) {
+    const context = event2.context, elements = context.elements;
+    for (const element of elements) {
+      if (isForCompensation2(element) && !isConnectedToCompensationBoundaryEvent(element)) {
+        modeling.updateProperties(element, { isForCompensation: void 0 });
+      }
+    }
+  });
+}
+e(SetCompensationActivityAfterPasteBehavior, CommandInterceptor);
+SetCompensationActivityAfterPasteBehavior.$inject = [
+  "eventBus",
+  "modeling"
+];
+function isForCompensation2(element) {
+  const bo = getBusinessObject(element);
+  return bo && bo.isForCompensation;
+}
+function isCompensationBoundaryEvent2(element) {
+  return element && is(element, "bpmn:BoundaryEvent") && hasEventDefinition(element, "bpmn:CompensateEventDefinition");
+}
+function isConnectedToCompensationBoundaryEvent(element) {
+  const compensationAssociations = element.incoming.filter(
+    (connection) => isCompensationBoundaryEvent2(connection.source)
+  );
+  if (compensationAssociations.length > 0) {
+    return true;
+  }
+  return false;
 }
 
 // node_modules/bpmn-js/lib/features/modeling/behavior/index.js
@@ -30889,7 +28044,8 @@ var behavior_default = {
     "toggleElementCollapseBehaviour",
     "unclaimIdBehavior",
     "updateFlowNodeRefsBehavior",
-    "unsetDefaultFlowBehavior"
+    "unsetDefaultFlowBehavior",
+    "setCompensationActivityAfterPasteBehavior"
   ],
   adaptiveLabelPositioningBehavior: ["type", AdaptiveLabelPositioningBehavior],
   appendBehavior: ["type", AppendBehavior],
@@ -30930,7 +28086,8 @@ var behavior_default = {
   toggleElementCollapseBehaviour: ["type", ToggleElementCollapseBehaviour],
   unclaimIdBehavior: ["type", UnclaimIdBehavior],
   unsetDefaultFlowBehavior: ["type", DeleteSequenceFlowBehavior],
-  updateFlowNodeRefsBehavior: ["type", UpdateFlowNodeRefsBehavior]
+  updateFlowNodeRefsBehavior: ["type", UpdateFlowNodeRefsBehavior],
+  setCompensationActivityAfterPasteBehavior: ["type", SetCompensationActivityAfterPasteBehavior]
 };
 
 // node_modules/bpmn-js/lib/features/snapping/BpmnSnappingUtil.js
@@ -31053,8 +28210,8 @@ function canStartConnection(element) {
 function nonExistingOrLabel(element) {
   return !element || isLabel(element);
 }
-function isSame(a6, b5) {
-  return a6 === b5;
+function isSame(a6, b4) {
+  return a6 === b4;
 }
 function getOrganizationalParent(element) {
   do {
@@ -31075,18 +28232,18 @@ function isGroup(element) {
 function isCompensationBoundary(element) {
   return is(element, "bpmn:BoundaryEvent") && hasEventDefinition2(element, "bpmn:CompensateEventDefinition");
 }
-function isForCompensation2(element) {
+function isForCompensation3(element) {
   return getBusinessObject(element).isForCompensation;
 }
-function isSameOrganization(a6, b5) {
-  var parentA = getOrganizationalParent(a6), parentB = getOrganizationalParent(b5);
+function isSameOrganization(a6, b4) {
+  var parentA = getOrganizationalParent(a6), parentB = getOrganizationalParent(b4);
   return parentA === parentB;
 }
 function isMessageFlowSource(element) {
   return is(element, "bpmn:InteractionNode") && !is(element, "bpmn:BoundaryEvent") && (!is(element, "bpmn:Event") || is(element, "bpmn:ThrowEvent") && hasEventDefinitionOrNone(element, "bpmn:MessageEventDefinition"));
 }
 function isMessageFlowTarget(element) {
-  return is(element, "bpmn:InteractionNode") && !isForCompensation2(element) && (!is(element, "bpmn:Event") || is(element, "bpmn:CatchEvent") && hasEventDefinitionOrNone(element, "bpmn:MessageEventDefinition")) && !(is(element, "bpmn:BoundaryEvent") && !hasEventDefinition2(element, "bpmn:MessageEventDefinition"));
+  return is(element, "bpmn:InteractionNode") && !isForCompensation3(element) && (!is(element, "bpmn:Event") || is(element, "bpmn:CatchEvent") && hasEventDefinitionOrNone(element, "bpmn:MessageEventDefinition")) && !(is(element, "bpmn:BoundaryEvent") && !hasEventDefinition2(element, "bpmn:MessageEventDefinition"));
 }
 function getScopeParent(element) {
   var parent = element;
@@ -31100,8 +28257,8 @@ function getScopeParent(element) {
   }
   return null;
 }
-function isSameScope(a6, b5) {
-  var scopeParentA = getScopeParent(a6), scopeParentB = getScopeParent(b5);
+function isSameScope(a6, b4) {
+  var scopeParentA = getScopeParent(a6), scopeParentB = getScopeParent(b4);
   return scopeParentA === scopeParentB;
 }
 function hasEventDefinition2(element, eventDefinition) {
@@ -31117,10 +28274,10 @@ function hasEventDefinitionOrNone(element, eventDefinition) {
   });
 }
 function isSequenceFlowSource(element) {
-  return is(element, "bpmn:FlowNode") && !is(element, "bpmn:EndEvent") && !isEventSubProcess(element) && !(is(element, "bpmn:IntermediateThrowEvent") && hasEventDefinition2(element, "bpmn:LinkEventDefinition")) && !isCompensationBoundary(element) && !isForCompensation2(element);
+  return is(element, "bpmn:FlowNode") && !is(element, "bpmn:EndEvent") && !isEventSubProcess(element) && !(is(element, "bpmn:IntermediateThrowEvent") && hasEventDefinition2(element, "bpmn:LinkEventDefinition")) && !isCompensationBoundary(element) && !isForCompensation3(element);
 }
 function isSequenceFlowTarget(element) {
-  return is(element, "bpmn:FlowNode") && !is(element, "bpmn:StartEvent") && !is(element, "bpmn:BoundaryEvent") && !isEventSubProcess(element) && !(is(element, "bpmn:IntermediateCatchEvent") && hasEventDefinition2(element, "bpmn:LinkEventDefinition")) && !isForCompensation2(element);
+  return is(element, "bpmn:FlowNode") && !is(element, "bpmn:StartEvent") && !is(element, "bpmn:BoundaryEvent") && !isEventSubProcess(element) && !(is(element, "bpmn:IntermediateCatchEvent") && hasEventDefinition2(element, "bpmn:LinkEventDefinition")) && !isForCompensation3(element);
 }
 function isEventBasedTarget(element) {
   return is(element, "bpmn:ReceiveTask") || is(element, "bpmn:IntermediateCatchEvent") && (hasEventDefinition2(element, "bpmn:MessageEventDefinition") || hasEventDefinition2(element, "bpmn:TimerEventDefinition") || hasEventDefinition2(element, "bpmn:ConditionalEventDefinition") || hasEventDefinition2(element, "bpmn:SignalEventDefinition"));
@@ -31215,8 +28372,8 @@ function canDrop(element, target) {
   }
   return false;
 }
-function isDroppableBoundaryEvent(event3) {
-  return getBusinessObject(event3).cancelActivity && (hasNoEventDefinition(event3) || hasCommonBoundaryIntermediateEventDefinition(event3));
+function isDroppableBoundaryEvent(event2) {
+  return getBusinessObject(event2).cancelActivity && (hasNoEventDefinition(event2) || hasCommonBoundaryIntermediateEventDefinition(event2));
 }
 function isBoundaryEvent(element) {
   return !isLabel(element) && is(element, "bpmn:BoundaryEvent");
@@ -31272,7 +28429,7 @@ function canAttach(elements, target, source, position) {
   if (isEventSubProcess(target)) {
     return false;
   }
-  if (!is(target, "bpmn:Activity") || isForCompensation2(target)) {
+  if (!is(target, "bpmn:Activity") || isForCompensation3(target)) {
     return false;
   }
   if (position && !getBoundaryAttachment(position, target)) {
@@ -31492,8 +28649,8 @@ var di_ordering_default = {
 function OrderingProvider(eventBus) {
   CommandInterceptor.call(this, eventBus);
   var self2 = this;
-  this.preExecute(["shape.create", "connection.create"], function(event3) {
-    var context = event3.context, element = context.shape || context.connection, parent = context.parent;
+  this.preExecute(["shape.create", "connection.create"], function(event2) {
+    var context = event2.context, element = context.shape || context.connection, parent = context.parent;
     var ordering = self2.getOrdering(element, parent);
     if (ordering) {
       if (ordering.parent !== void 0) {
@@ -31502,8 +28659,8 @@ function OrderingProvider(eventBus) {
       context.parentIndex = ordering.index;
     }
   });
-  this.preExecute(["shape.move", "connection.move"], function(event3) {
-    var context = event3.context, element = context.shape || context.connection, parent = context.newParent || element.parent;
+  this.preExecute(["shape.move", "connection.move"], function(event2) {
+    var context = event2.context, element = context.shape || context.connection, parent = context.newParent || element.parent;
     var ordering = self2.getOrdering(element, parent);
     if (ordering) {
       if (ordering.parent !== void 0) {
@@ -31743,25 +28900,25 @@ function Create(canvas, dragging, eventBus, modeling, rules) {
     return false;
   }
   function setMarker(element, marker) {
-    [MARKER_ATTACH, MARKER_OK3, MARKER_NOT_OK3, MARKER_NEW_PARENT].forEach(function(m5) {
-      if (m5 === marker) {
-        canvas.addMarker(element, m5);
+    [MARKER_ATTACH, MARKER_OK3, MARKER_NOT_OK3, MARKER_NEW_PARENT].forEach(function(m6) {
+      if (m6 === marker) {
+        canvas.addMarker(element, m6);
       } else {
-        canvas.removeMarker(element, m5);
+        canvas.removeMarker(element, m6);
       }
     });
   }
-  eventBus.on(["create.move", "create.hover"], function(event3) {
-    var context = event3.context, elements = context.elements, hover = event3.hover, source = context.source, hints = context.hints || {};
+  eventBus.on(["create.move", "create.hover"], function(event2) {
+    var context = event2.context, elements = context.elements, hover = event2.hover, source = context.source, hints = context.hints || {};
     if (!hover) {
       context.canExecute = false;
       context.target = null;
       return;
     }
-    ensureConstraints2(event3);
+    ensureConstraints2(event2);
     var position = {
-      x: event3.x,
-      y: event3.y
+      x: event2.x,
+      y: event2.y
     };
     var canExecute = context.canExecute = hover && canCreate2(elements, hover, position, source, hints);
     if (hover && canExecute !== null) {
@@ -31773,21 +28930,21 @@ function Create(canvas, dragging, eventBus, modeling, rules) {
       }
     }
   });
-  eventBus.on(["create.end", "create.out", "create.cleanup"], function(event3) {
-    var hover = event3.hover;
+  eventBus.on(["create.end", "create.out", "create.cleanup"], function(event2) {
+    var hover = event2.hover;
     if (hover) {
       setMarker(hover, null);
     }
   });
-  eventBus.on("create.end", function(event3) {
-    var context = event3.context, source = context.source, shape = context.shape, elements = context.elements, target = context.target, canExecute = context.canExecute, attach = canExecute && canExecute.attach, connect = canExecute && canExecute.connect, hints = context.hints || {};
+  eventBus.on("create.end", function(event2) {
+    var context = event2.context, source = context.source, shape = context.shape, elements = context.elements, target = context.target, canExecute = context.canExecute, attach = canExecute && canExecute.attach, connect = canExecute && canExecute.connect, hints = context.hints || {};
     if (canExecute === false || !target) {
       return false;
     }
-    ensureConstraints2(event3);
+    ensureConstraints2(event2);
     var position = {
-      x: event3.x,
-      y: event3.y
+      x: event2.x,
+      y: event2.y
     };
     if (connect) {
       shape = modeling.appendShape(source, shape, position, target, {
@@ -31807,7 +28964,7 @@ function Create(canvas, dragging, eventBus, modeling, rules) {
       elements,
       shape
     });
-    assign(event3, {
+    assign(event2, {
       elements,
       shape
     });
@@ -31824,7 +28981,7 @@ function Create(canvas, dragging, eventBus, modeling, rules) {
       eventBus.off("elements.changed", cancel2);
     });
   });
-  this.start = function(event3, elements, context) {
+  this.start = function(event2, elements, context) {
     if (!isArray(elements)) {
       elements = [elements];
     }
@@ -31865,7 +29022,7 @@ function Create(canvas, dragging, eventBus, modeling, rules) {
         y: element.y - bbox.y - bbox.height / 2
       });
     });
-    dragging.init(event3, PREFIX, {
+    dragging.init(event2, PREFIX, {
       cursor: "grabbing",
       autoActivate: true,
       data: {
@@ -31883,22 +29040,22 @@ Create.$inject = [
   "modeling",
   "rules"
 ];
-function ensureConstraints2(event3) {
-  var context = event3.context, createConstraints = context.createConstraints;
+function ensureConstraints2(event2) {
+  var context = event2.context, createConstraints = context.createConstraints;
   if (!createConstraints) {
     return;
   }
   if (createConstraints.left) {
-    event3.x = Math.max(event3.x, createConstraints.left);
+    event2.x = Math.max(event2.x, createConstraints.left);
   }
   if (createConstraints.right) {
-    event3.x = Math.min(event3.x, createConstraints.right);
+    event2.x = Math.min(event2.x, createConstraints.right);
   }
   if (createConstraints.top) {
-    event3.y = Math.max(event3.y, createConstraints.top);
+    event2.y = Math.max(event2.y, createConstraints.top);
   }
   if (createConstraints.bottom) {
-    event3.y = Math.min(event3.y, createConstraints.bottom);
+    event2.y = Math.min(event2.y, createConstraints.bottom);
   }
 }
 function isSingleShape(elements) {
@@ -31906,7 +29063,7 @@ function isSingleShape(elements) {
 }
 
 // node_modules/diagram-js/lib/features/create/CreatePreview.js
-var LOW_PRIORITY16 = 750;
+var LOW_PRIORITY15 = 750;
 function CreatePreview(canvas, eventBus, graphicsFactory, previewSupport, styles) {
   function createDragGroup(elements) {
     var dragGroup = create("g");
@@ -31929,8 +29086,8 @@ function CreatePreview(canvas, eventBus, graphicsFactory, previewSupport, styles
     });
     return dragGroup;
   }
-  eventBus.on("create.move", LOW_PRIORITY16, function(event3) {
-    var hover = event3.hover, context = event3.context, elements = context.elements, dragGroup = context.dragGroup;
+  eventBus.on("create.move", LOW_PRIORITY15, function(event2) {
+    var hover = event2.hover, context = event2.context, elements = context.elements, dragGroup = context.dragGroup;
     if (!dragGroup) {
       dragGroup = context.dragGroup = createDragGroup(elements);
     }
@@ -31940,13 +29097,13 @@ function CreatePreview(canvas, eventBus, graphicsFactory, previewSupport, styles
         activeLayer = canvas.getActiveLayer();
         append(activeLayer, dragGroup);
       }
-      translate(dragGroup, event3.x, event3.y);
+      translate(dragGroup, event2.x, event2.y);
     } else {
       remove(dragGroup);
     }
   });
-  eventBus.on("create.cleanup", function(event3) {
-    var context = event3.context, dragGroup = context.dragGroup;
+  eventBus.on("create.cleanup", function(event2) {
+    var context = event2.context, dragGroup = context.dragGroup;
     if (dragGroup) {
       remove(dragGroup);
     }
@@ -31997,10 +29154,10 @@ Mouse.prototype.getLastMoveEvent = function() {
   return this._lastMoveEvent || createMoveEvent(0, 0);
 };
 function createMoveEvent(x6, y5) {
-  var event3 = document.createEvent("MouseEvent");
+  var event2 = document.createEvent("MouseEvent");
   var screenX = x6, screenY = y5, clientX = x6, clientY = y5;
-  if (event3.initMouseEvent) {
-    event3.initMouseEvent(
+  if (event2.initMouseEvent) {
+    event2.initMouseEvent(
       "mousemove",
       true,
       true,
@@ -32018,7 +29175,7 @@ function createMoveEvent(x6, y5) {
       null
     );
   }
-  return event3;
+  return event2;
 }
 
 // node_modules/diagram-js/lib/features/mouse/index.js
@@ -32364,13 +29521,13 @@ function copyProperties(source, target, properties) {
     }
   });
 }
-var LOW_PRIORITY17 = 750;
+var LOW_PRIORITY16 = 750;
 function BpmnCopyPaste(bpmnFactory, eventBus, moddleCopy) {
   function copy2(bo, clone4) {
     var targetBo = bpmnFactory.create(bo.$type);
     return moddleCopy.copyElement(bo, targetBo, null, clone4);
   }
-  eventBus.on("copyPaste.copyElement", LOW_PRIORITY17, function(context) {
+  eventBus.on("copyPaste.copyElement", LOW_PRIORITY16, function(context) {
     var descriptor = context.descriptor, element = context.element, businessObject = getBusinessObject(element);
     if (isLabel(element)) {
       return descriptor;
@@ -32427,7 +29584,7 @@ function BpmnCopyPaste(bpmnFactory, eventBus, moddleCopy) {
     ]);
     descriptor.type = businessObject.$type;
   });
-  eventBus.on("copyPaste.copyElement", LOW_PRIORITY17, function(context) {
+  eventBus.on("copyPaste.copyElement", LOW_PRIORITY16, function(context) {
     var descriptor = context.descriptor, element = context.element;
     if (!is(element, "bpmn:Participant")) {
       return;
@@ -32443,7 +29600,7 @@ function BpmnCopyPaste(bpmnFactory, eventBus, moddleCopy) {
       descriptor.processRef = copy2(processRef);
     }
   });
-  eventBus.on("copyPaste.pasteElement", LOW_PRIORITY17, function(context) {
+  eventBus.on("copyPaste.pasteElement", LOW_PRIORITY16, function(context) {
     var cache = context.cache, descriptor = context.descriptor;
     setReferences(
       cache,
@@ -32662,11 +29819,11 @@ Replace.prototype.replaceElement = function(oldElement, attrs, hints) {
 
 // node_modules/diagram-js/lib/features/replace/ReplaceSelectionBehavior.js
 function ReplaceSelectionBehavior(selection2, eventBus) {
-  eventBus.on("replace.end", 500, function(event3) {
+  eventBus.on("replace.end", 500, function(event2) {
     const {
       newElement,
       hints = {}
-    } = event3;
+    } = event2;
     if (hints.select === false) {
       return;
     }
@@ -32800,8 +29957,12 @@ function BpmnReplace(bpmnFactory, elementFactory, moddleCopy, modeling, replace,
       } else {
         hints.moveChildren = false;
       }
-      newElement.width = element.width;
-      newElement.height = elementFactory.getDefaultSize(newElement).height;
+      var isHorizontalPool = isHorizontal(element);
+      if (!getDi(element).isHorizontal) {
+        getDi(newElement).isHorizontal = isHorizontalPool;
+      }
+      newElement.width = isHorizontalPool ? element.width : elementFactory.getDefaultSize(newElement).width;
+      newElement.height = isHorizontalPool ? elementFactory.getDefaultSize(newElement).height : element.height;
     }
     if (!rules.allowed("shape.resize", { shape: newBusinessObject })) {
       newElement.height = elementFactory.getDefaultSize(newElement).height;
@@ -32846,9 +30007,9 @@ function hasEventDefinition3(element, type) {
     return is(definition, type);
   });
 }
-function intersection(a6, b5) {
+function intersection(a6, b4) {
   return a6.filter(function(item) {
-    return b5.includes(item);
+    return b4.includes(item);
   });
 }
 
@@ -32863,7 +30024,7 @@ var replace_default2 = {
 };
 
 // node_modules/diagram-js/lib/features/tool-manager/ToolManager.js
-var LOW_PRIORITY18 = 250;
+var LOW_PRIORITY17 = 250;
 function ToolManager(eventBus) {
   this._eventBus = eventBus;
   this._tools = [];
@@ -32894,30 +30055,30 @@ ToolManager.prototype.setActive = function(tool) {
 ToolManager.prototype.bindEvents = function(name2, events) {
   var eventBus = this._eventBus;
   var eventsToRegister = [];
-  eventBus.on(events.tool + ".init", function(event3) {
-    var context = event3.context;
+  eventBus.on(events.tool + ".init", function(event2) {
+    var context = event2.context;
     if (!context.reactivate && this.isActive(name2)) {
       this.setActive(null);
       return;
     }
     this.setActive(name2);
   }, this);
-  forEach(events, function(event3) {
-    eventsToRegister.push(event3 + ".ended");
-    eventsToRegister.push(event3 + ".canceled");
+  forEach(events, function(event2) {
+    eventsToRegister.push(event2 + ".ended");
+    eventsToRegister.push(event2 + ".canceled");
   });
-  eventBus.on(eventsToRegister, LOW_PRIORITY18, function(event3) {
+  eventBus.on(eventsToRegister, LOW_PRIORITY17, function(event2) {
     if (!this._active) {
       return;
     }
-    if (isPaletteClick(event3)) {
+    if (isPaletteClick(event2)) {
       return;
     }
     this.setActive(null);
   }, this);
 };
-function isPaletteClick(event3) {
-  var target = event3.originalEvent && event3.originalEvent.target;
+function isPaletteClick(event2) {
+  var target = event2.originalEvent && event2.originalEvent.target;
   return target && closest(target, '.group[data-group="tools"]');
 }
 
@@ -33039,34 +30200,34 @@ function SpaceTool(canvas, dragging, eventBus, modeling, rules, toolManager, mou
     tool: "spaceTool.selection",
     dragging: "spaceTool"
   });
-  eventBus.on("spaceTool.selection.end", function(event3) {
+  eventBus.on("spaceTool.selection.end", function(event2) {
     eventBus.once("spaceTool.selection.ended", function() {
-      self2.activateMakeSpace(event3.originalEvent);
+      self2.activateMakeSpace(event2.originalEvent);
     });
   });
-  eventBus.on("spaceTool.move", HIGH_PRIORITY11, function(event3) {
-    var context = event3.context, initialized = context.initialized;
+  eventBus.on("spaceTool.move", HIGH_PRIORITY11, function(event2) {
+    var context = event2.context, initialized = context.initialized;
     if (!initialized) {
-      initialized = context.initialized = self2.init(event3, context);
+      initialized = context.initialized = self2.init(event2, context);
     }
     if (initialized) {
-      ensureConstraints3(event3);
+      ensureConstraints3(event2);
     }
   });
-  eventBus.on("spaceTool.end", function(event3) {
-    var context = event3.context, axis = context.axis, direction = context.direction, movingShapes = context.movingShapes, resizingShapes = context.resizingShapes, start = context.start;
+  eventBus.on("spaceTool.end", function(event2) {
+    var context = event2.context, axis = context.axis, direction = context.direction, movingShapes = context.movingShapes, resizingShapes = context.resizingShapes, start = context.start;
     if (!context.initialized) {
       return;
     }
-    ensureConstraints3(event3);
+    ensureConstraints3(event2);
     var delta2 = {
       x: 0,
       y: 0
     };
-    delta2[axis] = round8(event3["d" + axis]);
+    delta2[axis] = round8(event2["d" + axis]);
     self2.makeSpace(movingShapes, resizingShapes, delta2, direction, start);
-    eventBus.once("spaceTool.ended", function(event4) {
-      self2.activateSelection(event4.originalEvent, true, true);
+    eventBus.once("spaceTool.ended", function(event3) {
+      self2.activateSelection(event3.originalEvent, true, true);
     });
   });
 }
@@ -33079,8 +30240,8 @@ SpaceTool.$inject = [
   "toolManager",
   "mouse"
 ];
-SpaceTool.prototype.activateSelection = function(event3, autoActivate, reactivate) {
-  this._dragging.init(event3, "spaceTool.selection", {
+SpaceTool.prototype.activateSelection = function(event2, autoActivate, reactivate) {
+  this._dragging.init(event2, "spaceTool.selection", {
     autoActivate,
     cursor: CURSOR_CROSSHAIR,
     data: {
@@ -33091,8 +30252,8 @@ SpaceTool.prototype.activateSelection = function(event3, autoActivate, reactivat
     trapClick: false
   });
 };
-SpaceTool.prototype.activateMakeSpace = function(event3) {
-  this._dragging.init(event3, "spaceTool", {
+SpaceTool.prototype.activateMakeSpace = function(event2) {
+  this._dragging.init(event2, "spaceTool", {
     autoActivate: true,
     cursor: CURSOR_CROSSHAIR,
     data: {
@@ -33103,21 +30264,21 @@ SpaceTool.prototype.activateMakeSpace = function(event3) {
 SpaceTool.prototype.makeSpace = function(movingShapes, resizingShapes, delta2, direction, start) {
   return this._modeling.createSpace(movingShapes, resizingShapes, delta2, direction, start);
 };
-SpaceTool.prototype.init = function(event3, context) {
-  var axis = abs7(event3.dx) > abs7(event3.dy) ? "x" : "y", delta2 = event3["d" + axis], start = event3[axis] - delta2;
+SpaceTool.prototype.init = function(event2, context) {
+  var axis = abs7(event2.dx) > abs7(event2.dy) ? "x" : "y", delta2 = event2["d" + axis], start = event2[axis] - delta2;
   if (abs7(delta2) < 5) {
     return false;
   }
   if (delta2 < 0) {
     delta2 *= -1;
   }
-  if (hasPrimaryModifier(event3)) {
+  if (hasPrimaryModifier(event2)) {
     delta2 *= -1;
   }
   var direction = getDirection(axis, delta2);
   var root = this._canvas.getRootElement();
-  if (!hasSecondaryModifier(event3) && event3.hover) {
-    root = event3.hover;
+  if (!hasSecondaryModifier(event2) && event2.hover) {
+    root = event2.hover;
   }
   var children = [
     ...selfAndAllChildren(root, true),
@@ -33233,31 +30394,31 @@ function addPadding2(trbl) {
     left: trbl.left - PADDING
   };
 }
-function ensureConstraints3(event3) {
-  var context = event3.context, spaceToolConstraints = context.spaceToolConstraints;
+function ensureConstraints3(event2) {
+  var context = event2.context, spaceToolConstraints = context.spaceToolConstraints;
   if (!spaceToolConstraints) {
     return;
   }
   var x6, y5;
   if (isNumber(spaceToolConstraints.left)) {
-    x6 = Math.max(event3.x, spaceToolConstraints.left);
-    event3.dx = event3.dx + x6 - event3.x;
-    event3.x = x6;
+    x6 = Math.max(event2.x, spaceToolConstraints.left);
+    event2.dx = event2.dx + x6 - event2.x;
+    event2.x = x6;
   }
   if (isNumber(spaceToolConstraints.right)) {
-    x6 = Math.min(event3.x, spaceToolConstraints.right);
-    event3.dx = event3.dx + x6 - event3.x;
-    event3.x = x6;
+    x6 = Math.min(event2.x, spaceToolConstraints.right);
+    event2.dx = event2.dx + x6 - event2.x;
+    event2.x = x6;
   }
   if (isNumber(spaceToolConstraints.top)) {
-    y5 = Math.max(event3.y, spaceToolConstraints.top);
-    event3.dy = event3.dy + y5 - event3.y;
-    event3.y = y5;
+    y5 = Math.max(event2.y, spaceToolConstraints.top);
+    event2.dy = event2.dy + y5 - event2.y;
+    event2.y = y5;
   }
   if (isNumber(spaceToolConstraints.bottom)) {
-    y5 = Math.min(event3.y, spaceToolConstraints.bottom);
-    event3.dy = event3.dy + y5 - event3.y;
-    event3.y = y5;
+    y5 = Math.min(event2.y, spaceToolConstraints.bottom);
+    event2.dy = event2.dy + y5 - event2.y;
+    event2.y = y5;
   }
 }
 function getSpaceToolConstraints(elements, axis, direction, start, minDimensions) {
@@ -33361,7 +30522,7 @@ function isAttacher2(element) {
 // node_modules/diagram-js/lib/features/space-tool/SpaceToolPreview.js
 var MARKER_DRAGGING = "djs-dragging";
 var MARKER_RESIZING = "djs-resizing";
-var LOW_PRIORITY19 = 250;
+var LOW_PRIORITY18 = 250;
 var max6 = Math.max;
 function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupport) {
   function addPreviewGfx(collection, dragGroup) {
@@ -33370,8 +30531,8 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
       canvas.addMarker(element, MARKER_DRAGGING);
     });
   }
-  eventBus.on("spaceTool.selection.start", function(event3) {
-    var space2 = canvas.getLayer("space"), context = event3.context;
+  eventBus.on("spaceTool.selection.start", function(event2) {
+    var space2 = canvas.getLayer("space"), context = event2.context;
     var orientation = {
       x: "M 0,-10000 L 0,10000",
       y: "M -10000,0 L 10000,0"
@@ -33389,18 +30550,18 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
     append(crosshairGroup, pathY);
     context.crosshairGroup = crosshairGroup;
   });
-  eventBus.on("spaceTool.selection.move", function(event3) {
-    var crosshairGroup = event3.context.crosshairGroup;
-    translate(crosshairGroup, event3.x, event3.y);
+  eventBus.on("spaceTool.selection.move", function(event2) {
+    var crosshairGroup = event2.context.crosshairGroup;
+    translate(crosshairGroup, event2.x, event2.y);
   });
-  eventBus.on("spaceTool.selection.cleanup", function(event3) {
-    var context = event3.context, crosshairGroup = context.crosshairGroup;
+  eventBus.on("spaceTool.selection.cleanup", function(event2) {
+    var context = event2.context, crosshairGroup = context.crosshairGroup;
     if (crosshairGroup) {
       remove(crosshairGroup);
     }
   });
-  eventBus.on("spaceTool.move", LOW_PRIORITY19, function(event3) {
-    var context = event3.context, line2 = context.line, axis = context.axis, movingShapes = context.movingShapes, resizingShapes = context.resizingShapes;
+  eventBus.on("spaceTool.move", LOW_PRIORITY18, function(event2) {
+    var context = event2.context, line2 = context.line, axis = context.axis, movingShapes = context.movingShapes, resizingShapes = context.resizingShapes;
     if (!context.initialized) {
       return;
     }
@@ -33471,12 +30632,12 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
       context.frames = frames;
     }
     var orientation = {
-      x: "M" + event3.x + ", -10000 L" + event3.x + ", 10000",
-      y: "M -10000, " + event3.y + " L 10000, " + event3.y
+      x: "M" + event2.x + ", -10000 L" + event2.x + ", 10000",
+      y: "M -10000, " + event2.y + " L 10000, " + event2.y
     };
     attr(line2, { d: orientation[axis] });
     var opposite = { x: "y", y: "x" };
-    var delta2 = { x: event3.dx, y: event3.dy };
+    var delta2 = { x: event2.dx, y: event2.dy };
     delta2[opposite[context.axis]] = 0;
     translate(context.dragGroup, delta2.x, delta2.y);
     forEach(context.frames, function(frame) {
@@ -33505,8 +30666,8 @@ function SpaceToolPreview(eventBus, elementRegistry, canvas, styles, previewSupp
       }
     });
   });
-  eventBus.on("spaceTool.cleanup", function(event3) {
-    var context = event3.context, movingShapes = context.movingShapes, movingConnections = context.movingConnections, resizingShapes = context.resizingShapes, line2 = context.line, dragGroup = context.dragGroup, frameGroup = context.frameGroup;
+  eventBus.on("spaceTool.cleanup", function(event2) {
+    var context = event2.context, movingShapes = context.movingShapes, movingConnections = context.movingConnections, resizingShapes = context.resizingShapes, line2 = context.line, dragGroup = context.dragGroup, frameGroup = context.frameGroup;
     forEach(movingShapes, function(shape) {
       canvas.removeMarker(shape, MARKER_DRAGGING);
     });
@@ -33698,17 +30859,17 @@ CommandStack.prototype._internalUndo = function(action) {
     this._fire(command, "reverted", action);
   });
 };
-CommandStack.prototype._fire = function(command, qualifier, event3) {
+CommandStack.prototype._fire = function(command, qualifier, event2) {
   if (arguments.length < 3) {
-    event3 = qualifier;
+    event2 = qualifier;
     qualifier = null;
   }
   const names = qualifier ? [command + "." + qualifier, qualifier] : [command];
   let result;
-  event3 = this._eventBus.createEvent(event3);
+  event2 = this._eventBus.createEvent(event2);
   for (const name2 of names) {
-    result = this._eventBus.fire("commandStack." + name2, event3);
-    if (event3.cancelBubble) {
+    result = this._eventBus.fire("commandStack." + name2, event2);
+    if (event2.cancelBubble) {
       break;
     }
   }
@@ -33829,7 +30990,7 @@ function saveClear(collection, removeFn) {
 }
 
 // node_modules/diagram-js/lib/features/label-support/LabelSupport.js
-var LOW_PRIORITY20 = 250;
+var LOW_PRIORITY19 = 250;
 var HIGH_PRIORITY12 = 1400;
 function LabelSupport(injector, eventBus, modeling) {
   CommandInterceptor.call(this, eventBus);
@@ -33839,7 +31000,7 @@ function LabelSupport(injector, eventBus, modeling) {
     context.shapes = removeLabels(shapes);
     context.validatedShapes = removeLabels(validatedShapes);
   });
-  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY20, function(e8) {
+  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY19, function(e8) {
     var context = e8.context, shapes = context.shapes;
     var labels = [];
     forEach(shapes, function(element) {
@@ -33912,7 +31073,7 @@ var label_support_default = {
 };
 
 // node_modules/diagram-js/lib/features/attach-support/AttachSupport.js
-var LOW_PRIORITY21 = 251;
+var LOW_PRIORITY20 = 251;
 var HIGH_PRIORITY13 = 1401;
 var MARKER_ATTACH2 = "attach-ok";
 function AttachSupport(injector, eventBus, canvas, rules, modeling) {
@@ -33923,7 +31084,7 @@ function AttachSupport(injector, eventBus, canvas, rules, modeling) {
     context.shapes = addAttached(shapes);
     context.validatedShapes = removeAttached(validatedShapes);
   });
-  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY21, function(e8) {
+  movePreview && eventBus.on("shape.move.start", LOW_PRIORITY20, function(e8) {
     var context = e8.context, shapes = context.shapes, attachers = getAttachers(shapes);
     forEach(attachers, function(attacher) {
       movePreview.makeDraggable(context, attacher, true);
@@ -33932,8 +31093,8 @@ function AttachSupport(injector, eventBus, canvas, rules, modeling) {
       });
     });
   });
-  movePreview && eventBus.on("shape.move.start", function(event3) {
-    var context = event3.context, shapes = context.shapes;
+  movePreview && eventBus.on("shape.move.start", function(event2) {
+    var context = event2.context, shapes = context.shapes;
     if (shapes.length !== 1) {
       return;
     }
@@ -34025,8 +31186,8 @@ function AttachSupport(injector, eventBus, canvas, rules, modeling) {
       });
     }
   });
-  this.postExecute("shape.resize", function(event3) {
-    var context = event3.context, shape = context.shape, oldBounds = context.oldBounds, newBounds = context.newBounds, attachers = shape.attachers, hints = context.hints || {};
+  this.postExecute("shape.resize", function(event2) {
+    var context = event2.context, shape = context.shape, oldBounds = context.oldBounds, newBounds = context.newBounds, attachers = shape.attachers, hints = context.hints || {};
     if (hints.attachSupport === false) {
       return;
     }
@@ -34038,8 +31199,8 @@ function AttachSupport(injector, eventBus, canvas, rules, modeling) {
       });
     });
   });
-  this.preExecute("shape.delete", function(event3) {
-    var shape = event3.context.shape;
+  this.preExecute("shape.delete", function(event2) {
+    var shape = event2.context.shape;
     saveClear(shape.attachers, function(attacher) {
       modeling.removeShape(attacher);
     });
@@ -34123,21 +31284,21 @@ BpmnFactory.prototype._ensureId = function(element) {
     this._model.ids.claim(element.id, element);
     return;
   }
-  var prefix4;
+  var prefix3;
   if (is(element, "bpmn:Activity")) {
-    prefix4 = "Activity";
+    prefix3 = "Activity";
   } else if (is(element, "bpmn:Event")) {
-    prefix4 = "Event";
+    prefix3 = "Event";
   } else if (is(element, "bpmn:Gateway")) {
-    prefix4 = "Gateway";
+    prefix3 = "Gateway";
   } else if (isAny(element, ["bpmn:SequenceFlow", "bpmn:MessageFlow"])) {
-    prefix4 = "Flow";
+    prefix3 = "Flow";
   } else {
-    prefix4 = (element.$type || "").replace(/^[^:]*:/g, "");
+    prefix3 = (element.$type || "").replace(/^[^:]*:/g, "");
   }
-  prefix4 += "_";
+  prefix3 += "_";
   if (!element.id && this._needsId(element)) {
-    element.id = this._model.ids.nextPrefixed(prefix4, element);
+    element.id = this._model.ids.nextPrefixed(prefix3, element);
   }
 };
 BpmnFactory.prototype.create = function(type, attrs) {
@@ -34225,8 +31386,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
     "connection.move",
     "connection.delete"
   ], ifBpmn(reverseUpdateParent));
-  function updateRoot(event3) {
-    var context = event3.context, oldRoot = context.oldRoot, children = oldRoot.children;
+  function updateRoot(event2) {
+    var context = event2.context, oldRoot = context.oldRoot, children = oldRoot.children;
     forEach(children, function(child) {
       if (is(child, "bpmn:BaseElement")) {
         self2.updateParent(child);
@@ -34242,21 +31403,21 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
     }
     self2.updateBounds(shape);
   }
-  this.executed(["shape.move", "shape.create", "shape.resize"], ifBpmn(function(event3) {
-    if (event3.context.shape.type === "label") {
+  this.executed(["shape.move", "shape.create", "shape.resize"], ifBpmn(function(event2) {
+    if (event2.context.shape.type === "label") {
       return;
     }
-    updateBounds(event3);
+    updateBounds(event2);
   }));
-  this.reverted(["shape.move", "shape.create", "shape.resize"], ifBpmn(function(event3) {
-    if (event3.context.shape.type === "label") {
+  this.reverted(["shape.move", "shape.create", "shape.resize"], ifBpmn(function(event2) {
+    if (event2.context.shape.type === "label") {
       return;
     }
-    updateBounds(event3);
+    updateBounds(event2);
   }));
-  eventBus.on("shape.changed", function(event3) {
-    if (event3.element.type === "label") {
-      updateBounds({ context: { shape: event3.element } });
+  eventBus.on("shape.changed", function(event2) {
+    if (event2.element.type === "label") {
+      updateBounds({ context: { shape: event2.element } });
     }
   });
   function updateConnection(e8) {
@@ -34287,8 +31448,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
     "connection.move",
     "connection.updateWaypoints"
   ], ifBpmn(updateConnectionWaypoints));
-  this.executed("connection.reconnect", ifBpmn(function(event3) {
-    var context = event3.context, connection = context.connection, oldSource = context.oldSource, newSource = context.newSource, connectionBo = getBusinessObject(connection), oldSourceBo = getBusinessObject(oldSource), newSourceBo = getBusinessObject(newSource);
+  this.executed("connection.reconnect", ifBpmn(function(event2) {
+    var context = event2.context, connection = context.connection, oldSource = context.oldSource, newSource = context.newSource, connectionBo = getBusinessObject(connection), oldSourceBo = getBusinessObject(oldSource), newSourceBo = getBusinessObject(newSource);
     if (connectionBo.conditionExpression && !isAny(newSourceBo, [
       "bpmn:Activity",
       "bpmn:ExclusiveGateway",
@@ -34302,8 +31463,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
       delete oldSourceBo.default;
     }
   }));
-  this.reverted("connection.reconnect", ifBpmn(function(event3) {
-    var context = event3.context, connection = context.connection, oldSource = context.oldSource, newSource = context.newSource, connectionBo = getBusinessObject(connection), oldSourceBo = getBusinessObject(oldSource), newSourceBo = getBusinessObject(newSource);
+  this.reverted("connection.reconnect", ifBpmn(function(event2) {
+    var context = event2.context, connection = context.connection, oldSource = context.oldSource, newSource = context.newSource, connectionBo = getBusinessObject(connection), oldSourceBo = getBusinessObject(oldSource), newSourceBo = getBusinessObject(newSource);
     if (context.oldConditionExpression) {
       connectionBo.conditionExpression = context.oldConditionExpression;
     }
@@ -34319,8 +31480,8 @@ function BpmnUpdater(eventBus, bpmnFactory, connectionDocking) {
   this.reverted(["element.updateAttachment"], ifBpmn(updateAttachment));
   this.executed("element.updateLabel", ifBpmn(updateBPMNLabel));
   this.reverted("element.updateLabel", ifBpmn(updateBPMNLabel));
-  function updateBPMNLabel(event3) {
-    const { element } = event3.context, label = getLabel(element);
+  function updateBPMNLabel(event2) {
+    const { element } = event2.context, label = getLabel(element);
     const di = getDi(element), diLabel = di && di.get("label");
     if (isLabelExternal(element) || isPlane(element)) {
       return;
@@ -34596,10 +31757,10 @@ BpmnUpdater.prototype._getLabel = function(di) {
   return di.label;
 };
 function ifBpmn(fn2) {
-  return function(event3) {
-    var context = event3.context, element = context.shape || context.connection || context.element;
+  return function(event2) {
+    var context = event2.context, element = context.shape || context.connection || context.element;
     if (is(element, "bpmn:BaseElement")) {
-      fn2(event3);
+      fn2(event2);
     }
   };
 }
@@ -34740,10 +31901,17 @@ ElementFactory2.prototype.getDefaultSize = function(element, di) {
     return { width: 36, height: 36 };
   }
   if (is(bo, "bpmn:Participant")) {
+    var isHorizontalPool = di.isHorizontal === void 0 || di.isHorizontal === true;
     if (isExpanded(bo, di)) {
-      return { width: 600, height: 250 };
+      if (isHorizontalPool) {
+        return { width: 600, height: 250 };
+      }
+      return { width: 250, height: 600 };
     } else {
-      return { width: 400, height: 60 };
+      if (isHorizontalPool) {
+        return { width: 400, height: 60 };
+      }
+      return { width: 60, height: 400 };
     }
   }
   if (is(bo, "bpmn:Lane")) {
@@ -36632,8 +33800,8 @@ UpdateFlowNodeRefsHandler.prototype._computeUpdates = function(flowNodeShapes, l
   flowNodeShapes.forEach(addFlowNodeShape);
   allFlowNodeShapes.forEach(function(flowNodeShape) {
     var flowNode = flowNodeShape.businessObject;
-    var lanes = flowNode.get(LANES_ATTR), remove4 = lanes.slice(), add3 = getNewLanes(flowNodeShape);
-    updates.push({ flowNode, remove: remove4, add: add3 });
+    var lanes = flowNode.get(LANES_ATTR), remove4 = lanes.slice(), add5 = getNewLanes(flowNodeShape);
+    updates.push({ flowNode, remove: remove4, add: add5 });
   });
   laneShapes.forEach(function(laneShape) {
     var lane = laneShape.businessObject;
@@ -37016,10 +34184,10 @@ function canLayoutStraight(direction, targetOrientation) {
     v: /top|bottom/
   }[direction].test(targetOrientation);
 }
-function getSegmentBendpoints(a6, b5, directions2) {
-  var orientation = getOrientation(b5, a6, POINT_ORIENTATION_PADDING);
+function getSegmentBendpoints(a6, b4, directions2) {
+  var orientation = getOrientation(b4, a6, POINT_ORIENTATION_PADDING);
   var startDirection = directions2.split(":")[0];
-  var xmid = round11((b5.x - a6.x) / 2 + a6.x), ymid = round11((b5.y - a6.y) / 2 + a6.y);
+  var xmid = round11((b4.x - a6.x) / 2 + a6.x), ymid = round11((b4.y - a6.y) / 2 + a6.y);
   var segmentEnd, segmentDirections;
   var layoutStraight = canLayoutStraight(startDirection, orientation), layoutHorizontal = /h|r|l/.test(startDirection), layoutTurn = false;
   var turnNextDirections = false;
@@ -37056,11 +34224,11 @@ function getSegmentBendpoints(a6, b5, directions2) {
     turnNextDirections
   };
 }
-function getStartSegment(a6, b5, directions2) {
-  return getSegmentBendpoints(a6, b5, directions2);
+function getStartSegment(a6, b4, directions2) {
+  return getSegmentBendpoints(a6, b4, directions2);
 }
-function getEndSegment(a6, b5, directions2) {
-  var invertedSegment = getSegmentBendpoints(b5, a6, invertDirections(directions2));
+function getEndSegment(a6, b4, directions2) {
+  var invertedSegment = getSegmentBendpoints(b4, a6, invertDirections(directions2));
   return {
     waypoints: invertedSegment.waypoints.slice().reverse(),
     directions: invertDirections(invertedSegment.directions),
@@ -37089,29 +34257,29 @@ function getMidSegment(startSegment, endSegment) {
 function invertDirections(directions2) {
   return directions2.split(":").reverse().join(":");
 }
-function getSimpleBendpoints(a6, b5, directions2) {
-  var xmid = round11((b5.x - a6.x) / 2 + a6.x), ymid = round11((b5.y - a6.y) / 2 + a6.y);
+function getSimpleBendpoints(a6, b4, directions2) {
+  var xmid = round11((b4.x - a6.x) / 2 + a6.x), ymid = round11((b4.y - a6.y) / 2 + a6.y);
   if (directions2 === "h:v") {
-    return [{ x: b5.x, y: a6.y }];
+    return [{ x: b4.x, y: a6.y }];
   }
   if (directions2 === "v:h") {
-    return [{ x: a6.x, y: b5.y }];
+    return [{ x: a6.x, y: b4.y }];
   }
   if (directions2 === "h:h") {
     return [
       { x: xmid, y: a6.y },
-      { x: xmid, y: b5.y }
+      { x: xmid, y: b4.y }
     ];
   }
   if (directions2 === "v:v") {
     return [
       { x: a6.x, y: ymid },
-      { x: b5.x, y: ymid }
+      { x: b4.x, y: ymid }
     ];
   }
   throw new Error("invalid directions: can only handle varians of [hv]:[hv]");
 }
-function getBendpoints(a6, b5, directions2) {
+function getBendpoints(a6, b4, directions2) {
   directions2 = directions2 || "h:h";
   if (!isValidDirections(directions2)) {
     throw new Error(
@@ -37119,19 +34287,19 @@ function getBendpoints(a6, b5, directions2) {
     );
   }
   if (isExplicitDirections(directions2)) {
-    var startSegment = getStartSegment(a6, b5, directions2), endSegment = getEndSegment(a6, b5, directions2), midSegment = getMidSegment(startSegment, endSegment);
+    var startSegment = getStartSegment(a6, b4, directions2), endSegment = getEndSegment(a6, b4, directions2), midSegment = getMidSegment(startSegment, endSegment);
     return [].concat(
       startSegment.waypoints,
       midSegment.waypoints,
       endSegment.waypoints
     );
   }
-  return getSimpleBendpoints(a6, b5, directions2);
+  return getSimpleBendpoints(a6, b4, directions2);
 }
-function connectPoints(a6, b5, directions2) {
-  var points = getBendpoints(a6, b5, directions2);
+function connectPoints(a6, b4, directions2) {
+  var points = getBendpoints(a6, b4, directions2);
   points.unshift(a6);
-  points.push(b5);
+  points.push(b4);
   return withoutRedundantPoints(points);
 }
 function connectRectangles(source, target, start, end, hints) {
@@ -37176,12 +34344,12 @@ function repairConnection(source, target, start, end, waypoints, hints) {
 function inRange(a6, start, end) {
   return a6 >= start && a6 <= end;
 }
-function isInRange(axis, a6, b5) {
+function isInRange(axis, a6, b4) {
   var size2 = {
     x: "width",
     y: "height"
   };
-  return inRange(a6[axis], b5[axis], b5[axis] + b5[size2[axis]]);
+  return inRange(a6[axis], b4[axis], b4[axis] + b4[size2[axis]]);
 }
 function tryLayoutStraight(source, target, start, end, hints) {
   var axis = {}, primaryAxis, orientation;
@@ -37266,10 +34434,10 @@ function _tryRepairConnectionSide(moved, other, newDocking, points) {
     }
     return { x: candidate.x, y: candidate.y };
   }
-  function removeOverlapping(points2, a6, b5) {
+  function removeOverlapping(points2, a6, b4) {
     var i7;
     for (i7 = points2.length - 2; i7 !== 0; i7--) {
-      if (pointInRect(points2[i7], a6, INTERSECTION_THRESHOLD2) || pointInRect(points2[i7], b5, INTERSECTION_THRESHOLD2)) {
+      if (pointInRect(points2[i7], a6, INTERSECTION_THRESHOLD2) || pointInRect(points2[i7], b4, INTERSECTION_THRESHOLD2)) {
         return points2.slice(i7);
       }
     }
@@ -37303,6 +34471,10 @@ function getDirections(orientation, defaultLayout) {
     case "left":
     case "right":
       return "h:h";
+    // 'top-left'
+    // 'top-right'
+    // 'bottom-left'
+    // 'bottom-right'
     default:
       return defaultLayout;
   }
@@ -37413,14 +34585,15 @@ var orientationDirectionMapping = {
   bottom: "b",
   left: "l"
 };
-function BpmnLayouter() {
+function BpmnLayouter(elementRegistry) {
+  this._elementRegistry = elementRegistry;
 }
 e(BpmnLayouter, BaseLayouter);
 BpmnLayouter.prototype.layoutConnection = function(connection, hints) {
   if (!hints) {
     hints = {};
   }
-  var source = hints.source || connection.source, target = hints.target || connection.target, waypoints = hints.waypoints || connection.waypoints, connectionStart = hints.connectionStart, connectionEnd = hints.connectionEnd;
+  var source = hints.source || connection.source, target = hints.target || connection.target, waypoints = hints.waypoints || connection.waypoints, connectionStart = hints.connectionStart, connectionEnd = hints.connectionEnd, elementRegistry = this._elementRegistry;
   var manhattanOptions, updatedWaypoints;
   if (!connectionStart) {
     connectionStart = getConnectionDocking(waypoints && waypoints[0], source);
@@ -37433,7 +34606,7 @@ BpmnLayouter.prototype.layoutConnection = function(connection, hints) {
       return [].concat([connectionStart], waypoints.slice(1, -1), [connectionEnd]);
     }
   }
-  var layout = isDirectionHorizontal(source) ? PREFERRED_LAYOUTS_HORIZONTAL : PREFERRED_LAYOUTS_VERTICAL;
+  var layout = isDirectionHorizontal(source, elementRegistry) ? PREFERRED_LAYOUTS_HORIZONTAL : PREFERRED_LAYOUTS_VERTICAL;
   if (is(connection, "bpmn:MessageFlow")) {
     manhattanOptions = getMessageFlowManhattanOptions(source, target, layout);
   } else if (is(connection, "bpmn:SequenceFlow") || isCompensationAssociation(source, target)) {
@@ -37520,32 +34693,32 @@ function isCompensationAssociation(source, target) {
 function isExpandedSubProcess(element) {
   return is(element, "bpmn:SubProcess") && isExpanded(element);
 }
-function isSame2(a6, b5) {
-  return a6 === b5;
+function isSame2(a6, b4) {
+  return a6 === b4;
 }
 function isAnyOrientation(orientation, orientations) {
   return orientations.indexOf(orientation) !== -1;
 }
 function getHorizontalOrientation(orientation) {
-  var matches4 = /right|left/.exec(orientation);
-  return matches4 && matches4[0];
+  var matches3 = /right|left/.exec(orientation);
+  return matches3 && matches3[0];
 }
 function getVerticalOrientation(orientation) {
-  var matches4 = /top|bottom/.exec(orientation);
-  return matches4 && matches4[0];
+  var matches3 = /top|bottom/.exec(orientation);
+  return matches3 && matches3[0];
 }
-function isOppositeOrientation(a6, b5) {
-  return oppositeOrientationMapping[a6] === b5;
+function isOppositeOrientation(a6, b4) {
+  return oppositeOrientationMapping[a6] === b4;
 }
-function isOppositeHorizontalOrientation(a6, b5) {
+function isOppositeHorizontalOrientation(a6, b4) {
   var horizontalOrientation = getHorizontalOrientation(a6);
   var oppositeHorizontalOrientation = oppositeOrientationMapping[horizontalOrientation];
-  return b5.indexOf(oppositeHorizontalOrientation) !== -1;
+  return b4.indexOf(oppositeHorizontalOrientation) !== -1;
 }
-function isOppositeVerticalOrientation(a6, b5) {
+function isOppositeVerticalOrientation(a6, b4) {
   var verticalOrientation = getVerticalOrientation(a6);
   var oppositeVerticalOrientation = oppositeOrientationMapping[verticalOrientation];
-  return b5.indexOf(oppositeVerticalOrientation) !== -1;
+  return b4.indexOf(oppositeVerticalOrientation) !== -1;
 }
 function isHorizontalOrientation(orientation) {
   return orientation === "right" || orientation === "left";
@@ -37597,8 +34770,8 @@ function shouldConnectToSameSide(axis, source, target, end) {
     y: target.y + target.height
   }, threshold) || areCloseOnAxis(axis, end, getMid(source), threshold));
 }
-function areCloseOnAxis(axis, a6, b5, threshold) {
-  return Math.abs(a6[axis] - b5[axis]) < threshold;
+function areCloseOnAxis(axis, a6, b4, threshold) {
+  return Math.abs(a6[axis] - b4[axis]) < threshold;
 }
 function getBoundaryEventSourceLayout(attachOrientation, targetOrientation, attachedToSide, isHorizontal5) {
   if (attachedToSide) {
@@ -37644,6 +34817,7 @@ function getBoundaryEventTargetLayout(attachOrientation, targetOrientation, atta
     }
   }
 }
+BpmnLayouter.$inject = ["elementRegistry"];
 
 // node_modules/diagram-js/lib/layout/CroppingConnectionDocking.js
 function dockingToPoint(docking) {
@@ -37725,9 +34899,9 @@ function AppendPreview(complexPreview, connectionDocking, elementFactory, eventB
   this._layouter = layouter;
   this._rules = rules;
 }
-AppendPreview.prototype.create = function(source, type, options2) {
+AppendPreview.prototype.create = function(source, type, options) {
   const complexPreview = this._complexPreview, connectionDocking = this._connectionDocking, elementFactory = this._elementFactory, eventBus = this._eventBus, layouter = this._layouter, rules = this._rules;
-  const shape = elementFactory.createShape(assign({ type }, options2));
+  const shape = elementFactory.createShape(assign({ type }, options));
   const position = eventBus.fire("autoPlace", {
     source,
     shape
@@ -37800,23 +34974,23 @@ function isTextNode(node2) {
 function toArray(nodeList) {
   return [].slice.call(nodeList);
 }
-function TextBox(options2) {
-  this.container = options2.container;
+function TextBox(options) {
+  this.container = options.container;
   this.parent = domify$1(
     '<div class="djs-direct-editing-parent"><div class="djs-direct-editing-content" contenteditable="true"></div></div>'
   );
   this.content = query("[contenteditable]", this.parent);
-  this.keyHandler = options2.keyHandler || function() {
+  this.keyHandler = options.keyHandler || function() {
   };
-  this.resizeHandler = options2.resizeHandler || function() {
+  this.resizeHandler = options.resizeHandler || function() {
   };
   this.autoResize = bind(this.autoResize, this);
   this.handlePaste = bind(this.handlePaste, this);
 }
-TextBox.prototype.create = function(bounds, style, value, options2) {
+TextBox.prototype.create = function(bounds, style, value, options) {
   var self2 = this;
   var parent = this.parent, content = this.content, container = this.container;
-  options2 = this.options = options2 || {};
+  options = this.options = options || {};
   style = this.style = style || {};
   var parentStyle = pick(style, [
     "width",
@@ -37871,7 +35045,7 @@ TextBox.prototype.create = function(bounds, style, value, options2) {
     outline: "none",
     wordWrap: "break-word"
   }, contentStyle);
-  if (options2.centerVertically) {
+  if (options.centerVertically) {
     assign(content.style, {
       position: "absolute",
       top: "50%",
@@ -37882,10 +35056,10 @@ TextBox.prototype.create = function(bounds, style, value, options2) {
   event.bind(content, "keydown", this.keyHandler);
   event.bind(content, "mousedown", stopPropagation2);
   event.bind(content, "paste", self2.handlePaste);
-  if (options2.autoResize) {
+  if (options.autoResize) {
     event.bind(content, "input", this.autoResize);
   }
-  if (options2.resizable) {
+  if (options.resizable) {
     this.resizable(style);
   }
   container.appendChild(parent);
@@ -37893,7 +35067,7 @@ TextBox.prototype.create = function(bounds, style, value, options2) {
   return parent;
 };
 TextBox.prototype.handlePaste = function(e8) {
-  var options2 = this.options, style = this.style;
+  var options = this.options, style = this.style;
   e8.preventDefault();
   var text;
   if (e8.clipboardData) {
@@ -37902,7 +35076,7 @@ TextBox.prototype.handlePaste = function(e8) {
     text = window.clipboardData.getData("Text");
   }
   this.insertText(text);
-  if (options2.autoResize) {
+  if (options.autoResize) {
     var hasResized = this.autoResize(style);
     if (hasResized) {
       this.resizeHandler(hasResized);
@@ -38061,6 +35235,7 @@ function normalizeEndOfLineSequences(string) {
 // node_modules/diagram-js-direct-editing/lib/DirectEditing.js
 function DirectEditing(eventBus, canvas) {
   this._eventBus = eventBus;
+  this._canvas = canvas;
   this._providers = [];
   this._textbox = new TextBox({
     container: canvas.getContainer(),
@@ -38082,14 +35257,15 @@ DirectEditing.prototype.cancel = function() {
   this._fire("cancel");
   this.close();
 };
-DirectEditing.prototype._fire = function(event3, context) {
-  this._eventBus.fire("directEditing." + event3, context || { active: this._active });
+DirectEditing.prototype._fire = function(event2, context) {
+  this._eventBus.fire("directEditing." + event2, context || { active: this._active });
 };
 DirectEditing.prototype.close = function() {
   this._textbox.destroy();
   this._fire("deactivate");
   this._active = null;
   this.resizable = void 0;
+  this._canvas.restoreFocus && this._canvas.restoreFocus();
 };
 DirectEditing.prototype.complete = function() {
   var active = this._active;
@@ -38124,8 +35300,8 @@ DirectEditing.prototype._handleKey = function(e8) {
     return this.complete();
   }
 };
-DirectEditing.prototype._handleResize = function(event3) {
-  this._fire("resize", event3);
+DirectEditing.prototype._handleResize = function(event2) {
+  this._fire("resize", event2);
 };
 DirectEditing.prototype.activate = function(element) {
   if (this.isActive()) {
@@ -39274,17 +36450,20 @@ ReplaceMenuProvider.prototype._createEntry = function(replaceOption, target, act
 ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(target) {
   var self2 = this;
   var translate4 = this._translate;
-  function toggleLoopEntry(event3, entry) {
+  function toggleLoopCharacteristics(event2, entry) {
     if (entry.active) {
       self2._modeling.updateProperties(target, { loopCharacteristics: void 0 });
       return;
     }
-    const currentLoopCharacteristics = target.businessObject.get("loopCharacteristics"), newLoopCharacteristics = self2._moddle.create(entry.options.loopCharacteristics);
-    if (currentLoopCharacteristics) {
-      self2._moddleCopy.copyElement(currentLoopCharacteristics, newLoopCharacteristics);
+    var loopCharacteristics2 = target.businessObject.get("loopCharacteristics");
+    if (loopCharacteristics2 && is(loopCharacteristics2, entry.options.loopCharacteristics)) {
+      self2._modeling.updateModdleProperties(target, loopCharacteristics2, { isSequential: entry.options.isSequential });
+    } else {
+      loopCharacteristics2 = self2._moddle.create(entry.options.loopCharacteristics, {
+        isSequential: entry.options.isSequential
+      });
+      self2._modeling.updateProperties(target, { loopCharacteristics: loopCharacteristics2 });
     }
-    newLoopCharacteristics.set("isSequential", entry.options.isSequential);
-    self2._modeling.updateProperties(target, { loopCharacteristics: newLoopCharacteristics });
   }
   var businessObject = getBusinessObject(target), loopCharacteristics = businessObject.loopCharacteristics;
   var isSequential, isLoop, isParallel;
@@ -39298,7 +36477,7 @@ ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(ta
       className: "bpmn-icon-parallel-mi-marker",
       title: translate4("Parallel multi-instance"),
       active: isParallel,
-      action: toggleLoopEntry,
+      action: toggleLoopCharacteristics,
       options: {
         loopCharacteristics: "bpmn:MultiInstanceLoopCharacteristics",
         isSequential: false
@@ -39308,7 +36487,7 @@ ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(ta
       className: "bpmn-icon-sequential-mi-marker",
       title: translate4("Sequential multi-instance"),
       active: isSequential,
-      action: toggleLoopEntry,
+      action: toggleLoopCharacteristics,
       options: {
         loopCharacteristics: "bpmn:MultiInstanceLoopCharacteristics",
         isSequential: true
@@ -39318,7 +36497,7 @@ ReplaceMenuProvider.prototype._getLoopCharacteristicsHeaderEntries = function(ta
       className: "bpmn-icon-loop-marker",
       title: translate4("Loop"),
       active: isLoop,
-      action: toggleLoopEntry,
+      action: toggleLoopCharacteristics,
       options: {
         loopCharacteristics: "bpmn:StandardLoopCharacteristics"
       }
@@ -39332,7 +36511,7 @@ ReplaceMenuProvider.prototype._getCollectionHeaderEntries = function(target) {
   if (!dataObject) {
     return {};
   }
-  function toggleIsCollection(event3, entry) {
+  function toggleIsCollection(event2, entry) {
     self2._modeling.updateModdleProperties(
       target,
       dataObject,
@@ -39353,7 +36532,7 @@ ReplaceMenuProvider.prototype._getParticipantMultiplicityHeaderEntries = functio
   var self2 = this;
   var bpmnFactory = this._bpmnFactory;
   var translate4 = this._translate;
-  function toggleParticipantMultiplicity(event3, entry) {
+  function toggleParticipantMultiplicity(event2, entry) {
     var isActive = entry.active;
     var participantMultiplicity2;
     if (!isActive) {
@@ -39384,7 +36563,7 @@ ReplaceMenuProvider.prototype._getAdHocHeaderEntries = function(element) {
       className: "bpmn-icon-ad-hoc-marker",
       title: translate4("Ad-hoc"),
       active: isAdHoc,
-      action: function(event3, entry) {
+      action: function(event2, entry) {
         if (isAdHoc) {
           return replaceElement(element, { type: "bpmn:SubProcess" }, {
             autoResize: false,
@@ -39452,14 +36631,14 @@ function ContextPadProvider(config, injector, eventBus, contextPad, modeling, el
   if (config.autoPlace !== false) {
     this._autoPlace = injector.get("autoPlace", false);
   }
-  eventBus.on("create.end", 250, function(event3) {
-    var context = event3.context, shape = context.shape;
-    if (!hasPrimaryModifier(event3) || !contextPad.isOpen(shape)) {
+  eventBus.on("create.end", 250, function(event2) {
+    var context = event2.context, shape = context.shape;
+    if (!hasPrimaryModifier(event2) || !contextPad.isOpen(shape)) {
       return;
     }
     var entries = contextPad.getEntries(shape);
     if (entries.replace) {
-      entries.replace.action.click(event3, shape);
+      entries.replace.action.click(event2, shape);
     }
   });
   eventBus.on("contextPad.close", function() {
@@ -39491,7 +36670,7 @@ ContextPadProvider.prototype.getMultiElementContextPadEntries = function(element
         className: "bpmn-icon-trash",
         title: this._translate("Delete"),
         action: {
-          click: function(event3, elements2) {
+          click: function(event2, elements2) {
             modeling.removeElements(elements2.slice());
           }
         }
@@ -39519,8 +36698,8 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
     return actions;
   }
   var businessObject = element.businessObject;
-  function startConnect(event3, element2) {
-    connect.start(event3, element2);
+  function startConnect(event2, element2) {
+    connect.start(event2, element2);
   }
   function removeElement2(e8, element2) {
     modeling.removeElements([element2]);
@@ -39547,19 +36726,19 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
     };
     return pos;
   }
-  function appendAction(type, className, title, options2) {
-    function appendStart(event3, element2) {
-      var shape = elementFactory.createShape(assign({ type }, options2));
-      create3.start(event3, shape, {
+  function appendAction(type, className, title, options) {
+    function appendStart(event2, element2) {
+      var shape = elementFactory.createShape(assign({ type }, options));
+      create3.start(event2, shape, {
         source: element2
       });
     }
     var append2 = autoPlace ? function(_5, element2) {
-      var shape = elementFactory.createShape(assign({ type }, options2));
+      var shape = elementFactory.createShape(assign({ type }, options));
       autoPlace.append(element2, shape);
     } : appendStart;
     var previewAppend = autoPlace ? function(_5, element2) {
-      appendPreview.create(element2, type, options2);
+      appendPreview.create(element2, type, options);
       return () => {
         appendPreview.cleanUp();
       };
@@ -39589,7 +36768,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
         className: "bpmn-icon-lane-insert-above",
         title: translate4("Add lane above"),
         action: {
-          click: function(event3, element2) {
+          click: function(event2, element2) {
             modeling.addLane(element2, "top");
           }
         }
@@ -39627,7 +36806,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
         className: "bpmn-icon-lane-insert-below",
         title: translate4("Add lane below"),
         action: {
-          click: function(event3, element2) {
+          click: function(event2, element2) {
             modeling.addLane(element2, "bottom");
           }
         }
@@ -39710,9 +36889,9 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
         className: "bpmn-icon-screw-wrench",
         title: translate4("Change element"),
         action: {
-          click: function(event3, element2) {
+          click: function(event2, element2) {
             var position = assign(getReplaceMenuPosition(element2), {
-              cursor: { x: event3.x, y: event3.y }
+              cursor: { x: event2.x, y: event2.y }
             });
             popupMenu.open(element2, "bpmn-replace", position, {
               title: translate4("Change element"),
@@ -39958,13 +37137,13 @@ var icons2 = {
 var DistributeElementsIcons_default = icons2;
 
 // node_modules/bpmn-js/lib/features/distribute-elements/DistributeElementsMenuProvider.js
-var LOW_PRIORITY22 = 900;
+var LOW_PRIORITY21 = 900;
 function DistributeElementsMenuProvider(popupMenu, distributeElements, translate4, rules) {
   this._distributeElements = distributeElements;
   this._translate = translate4;
   this._popupMenu = popupMenu;
   this._rules = rules;
-  popupMenu.registerProvider("align-elements", LOW_PRIORITY22, this);
+  popupMenu.registerProvider("align-elements", LOW_PRIORITY21, this);
 }
 DistributeElementsMenuProvider.$inject = [
   "popupMenu",
@@ -39990,7 +37169,7 @@ DistributeElementsMenuProvider.prototype._getEntries = function(elements) {
       title: translate4("Distribute elements horizontally"),
       className: "bjs-align-elements-menu-entry",
       imageHtml: DistributeElementsIcons_default["horizontal"],
-      action: function(event3, entry) {
+      action: function(event2, entry) {
         distributeElements.trigger(elements, "horizontal");
         popupMenu.close();
       }
@@ -39999,7 +37178,7 @@ DistributeElementsMenuProvider.prototype._getEntries = function(elements) {
       group: "distribute",
       title: translate4("Distribute elements vertically"),
       imageHtml: DistributeElementsIcons_default["vertical"],
-      action: function(event3, entry) {
+      action: function(event2, entry) {
         distributeElements.trigger(elements, "vertical");
         popupMenu.close();
       }
@@ -40267,8 +37446,8 @@ BpmnEditorActions.prototype._registerDefaultActions = function(injector) {
     });
   }
   if (selection2 && contextPad) {
-    this._registerAction("replaceElement", function(event3) {
-      contextPad.triggerEntry("replace", "click", event3);
+    this._registerAction("replaceElement", function(event2) {
+      contextPad.triggerEntry("replace", "click", event2);
     });
   }
 };
@@ -40286,8 +37465,8 @@ function BpmnGridSnapping(eventBus) {
   eventBus.on([
     "create.init",
     "shape.move.init"
-  ], function(event3) {
-    var context = event3.context, shape = event3.shape;
+  ], function(event2) {
+    var context = event2.context, shape = event2.shape;
     if (isAny(shape, [
       "bpmn:Participant",
       "bpmn:SubProcess",
@@ -40313,12 +37492,12 @@ function quantize(value, quantum, fn2) {
 
 // node_modules/diagram-js/lib/features/grid-snapping/GridSnapping.js
 var LOWER_PRIORITY2 = 1200;
-var LOW_PRIORITY23 = 800;
+var LOW_PRIORITY22 = 800;
 function GridSnapping(elementRegistry, eventBus, config) {
   var active = !config || config.active !== false;
   this._eventBus = eventBus;
   var self2 = this;
-  eventBus.on("diagram.init", LOW_PRIORITY23, function() {
+  eventBus.on("diagram.init", LOW_PRIORITY22, function() {
     self2.setActive(active);
   });
   eventBus.on([
@@ -40334,55 +37513,55 @@ function GridSnapping(elementRegistry, eventBus, config) {
     "resize.end",
     "shape.move.move",
     "shape.move.end"
-  ], LOWER_PRIORITY2, function(event3) {
-    var originalEvent = event3.originalEvent;
+  ], LOWER_PRIORITY2, function(event2) {
+    var originalEvent = event2.originalEvent;
     if (!self2.active || originalEvent && isCmd(originalEvent)) {
       return;
     }
-    var context = event3.context, gridSnappingContext = context.gridSnappingContext;
+    var context = event2.context, gridSnappingContext = context.gridSnappingContext;
     if (!gridSnappingContext) {
       gridSnappingContext = context.gridSnappingContext = {};
     }
     ["x", "y"].forEach(function(axis) {
-      var options2 = {};
-      var snapOffset = getSnapOffset(event3, axis, elementRegistry);
+      var options = {};
+      var snapOffset = getSnapOffset(event2, axis, elementRegistry);
       if (snapOffset) {
-        options2.offset = snapOffset;
+        options.offset = snapOffset;
       }
-      var snapConstraints = getSnapConstraints(event3, axis);
+      var snapConstraints = getSnapConstraints(event2, axis);
       if (snapConstraints) {
-        assign(options2, snapConstraints);
+        assign(options, snapConstraints);
       }
-      if (!isSnapped(event3, axis)) {
-        self2.snapEvent(event3, axis, options2);
+      if (!isSnapped(event2, axis)) {
+        self2.snapEvent(event2, axis, options);
       }
     });
   });
 }
-GridSnapping.prototype.snapEvent = function(event3, axis, options2) {
-  var snappedValue = this.snapValue(event3[axis], options2);
-  setSnapped(event3, axis, snappedValue);
+GridSnapping.prototype.snapEvent = function(event2, axis, options) {
+  var snappedValue = this.snapValue(event2[axis], options);
+  setSnapped(event2, axis, snappedValue);
 };
 GridSnapping.prototype.getGridSpacing = function() {
   return SPACING;
 };
-GridSnapping.prototype.snapValue = function(value, options2) {
+GridSnapping.prototype.snapValue = function(value, options) {
   var offset = 0;
-  if (options2 && options2.offset) {
-    offset = options2.offset;
+  if (options && options.offset) {
+    offset = options.offset;
   }
   value += offset;
   value = quantize(value, SPACING);
   var min5, max8;
-  if (options2 && options2.min) {
-    min5 = options2.min;
+  if (options && options.min) {
+    min5 = options.min;
     if (isNumber(min5)) {
       min5 = quantize(min5 + offset, SPACING, "ceil");
       value = Math.max(value, min5);
     }
   }
-  if (options2 && options2.max) {
-    max8 = options2.max;
+  if (options && options.max) {
+    max8 = options.max;
     if (isNumber(max8)) {
       max8 = quantize(max8 + offset, SPACING, "floor");
       value = Math.min(value, max8);
@@ -40406,8 +37585,8 @@ GridSnapping.$inject = [
   "eventBus",
   "config.gridSnapping"
 ];
-function getSnapConstraints(event3, axis) {
-  var context = event3.context, createConstraints = context.createConstraints, resizeConstraints = context.resizeConstraints || {}, gridSnappingContext = context.gridSnappingContext, snapConstraints = gridSnappingContext.snapConstraints;
+function getSnapConstraints(event2, axis) {
+  var context = event2.context, createConstraints = context.createConstraints, resizeConstraints = context.resizeConstraints || {}, gridSnappingContext = context.gridSnappingContext, snapConstraints = gridSnappingContext.snapConstraints;
   if (snapConstraints && snapConstraints[axis]) {
     return snapConstraints[axis];
   }
@@ -40460,8 +37639,8 @@ function getSnapConstraints(event3, axis) {
   }
   return snapConstraints[axis];
 }
-function getSnapOffset(event3, axis, elementRegistry) {
-  var context = event3.context, shape = event3.shape, gridSnappingContext = context.gridSnappingContext, snapLocation = gridSnappingContext.snapLocation, snapOffset = gridSnappingContext.snapOffset;
+function getSnapOffset(event2, axis, elementRegistry) {
+  var context = event2.context, shape = event2.shape, gridSnappingContext = context.gridSnappingContext, snapLocation = gridSnappingContext.snapLocation, snapOffset = gridSnappingContext.snapOffset;
   if (snapOffset && isNumber(snapOffset[axis])) {
     return snapOffset[axis];
   }
@@ -40514,8 +37693,8 @@ function ResizeBehavior2(eventBus, gridSnapping) {
   CommandInterceptor.call(this, eventBus);
   this._gridSnapping = gridSnapping;
   var self2 = this;
-  this.preExecute("shape.resize", function(event3) {
-    var context = event3.context, hints = context.hints || {}, autoResize = hints.autoResize;
+  this.preExecute("shape.resize", function(event2) {
+    var context = event2.context, hints = context.hints || {}, autoResize = hints.autoResize;
     if (!autoResize) {
       return;
     }
@@ -40603,21 +37782,21 @@ function SpaceToolBehavior2(eventBus, gridSnapping) {
   eventBus.on([
     "spaceTool.move",
     "spaceTool.end"
-  ], HIGH_PRIORITY14, function(event3) {
-    var context = event3.context;
+  ], HIGH_PRIORITY14, function(event2) {
+    var context = event2.context;
     if (!context.initialized) {
       return;
     }
     var axis = context.axis;
     var snapped;
     if (axis === "x") {
-      snapped = gridSnapping.snapValue(event3.dx);
-      event3.x = event3.x + snapped - event3.dx;
-      event3.dx = snapped;
+      snapped = gridSnapping.snapValue(event2.dx);
+      event2.x = event2.x + snapped - event2.dx;
+      event2.dx = snapped;
     } else {
-      snapped = gridSnapping.snapValue(event3.dy);
-      event3.y = event3.y + snapped - event3.dy;
-      event3.dy = snapped;
+      snapped = gridSnapping.snapValue(event2.dy);
+      event2.y = event2.y + snapped - event2.dy;
+      event2.dy = snapped;
     }
   });
 }
@@ -40645,35 +37824,36 @@ var grid_snapping_default = {
 
 // node_modules/bpmn-js/lib/features/grid-snapping/behavior/GridSnappingAutoPlaceBehavior.js
 var HIGH_PRIORITY15 = 2e3;
-function GridSnappingAutoPlaceBehavior(eventBus, gridSnapping) {
+function GridSnappingAutoPlaceBehavior(eventBus, gridSnapping, elementRegistry) {
   eventBus.on("autoPlace", HIGH_PRIORITY15, function(context) {
     var source = context.source, sourceMid = getMid(source), shape = context.shape;
-    var position = getNewShapePosition2(source, shape);
+    var position = getNewShapePosition2(source, shape, elementRegistry);
     ["x", "y"].forEach(function(axis) {
-      var options2 = {};
+      var options = {};
       if (position[axis] === sourceMid[axis]) {
         return;
       }
       if (position[axis] > sourceMid[axis]) {
-        options2.min = position[axis];
+        options.min = position[axis];
       } else {
-        options2.max = position[axis];
+        options.max = position[axis];
       }
       if (is(shape, "bpmn:TextAnnotation")) {
         if (isHorizontal3(axis)) {
-          options2.offset = -shape.width / 2;
+          options.offset = -shape.width / 2;
         } else {
-          options2.offset = -shape.height / 2;
+          options.offset = -shape.height / 2;
         }
       }
-      position[axis] = gridSnapping.snapValue(position[axis], options2);
+      position[axis] = gridSnapping.snapValue(position[axis], options);
     });
     return position;
   });
 }
 GridSnappingAutoPlaceBehavior.$inject = [
   "eventBus",
-  "gridSnapping"
+  "gridSnapping",
+  "elementRegistry"
 ];
 function isHorizontal3(axis) {
   return axis === "x";
@@ -40685,8 +37865,8 @@ function GridSnappingParticipantBehavior(canvas, eventBus, gridSnapping) {
   eventBus.on([
     "create.start",
     "shape.move.start"
-  ], HIGHER_PRIORITY, function(event3) {
-    var context = event3.context, shape = context.shape, rootElement = canvas.getRootElement();
+  ], HIGHER_PRIORITY, function(event2) {
+    var context = event2.context, shape = context.shape, rootElement = canvas.getRootElement();
     if (!is(shape, "bpmn:Participant") || !is(rootElement, "bpmn:Process") || !rootElement.children.length) {
       return;
     }
@@ -40713,8 +37893,8 @@ function GridSnappingLayoutConnectionBehavior(eventBus, gridSnapping, modeling) 
   this.postExecuted([
     "connection.create",
     "connection.layout"
-  ], HIGH_PRIORITY16, function(event3) {
-    var context = event3.context, connection = context.connection, hints = context.hints || {}, waypoints = connection.waypoints;
+  ], HIGH_PRIORITY16, function(event2) {
+    var context = event2.context, connection = context.connection, hints = context.hints || {}, waypoints = connection.waypoints;
     if (hints.connectionStart || hints.connectionEnd || hints.createElementsBehavior === false) {
       return;
     }
@@ -40883,76 +38063,76 @@ BpmnKeyboardBindings.prototype.registerBindings = function(keyboard, editorActio
     }
   }
   addListener("selectElements", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.isKey(["a", "A"], event3) && keyboard.isCmd(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.isKey(["a", "A"], event2) && keyboard.isCmd(event2)) {
       editorActions.trigger("selectElements");
       return true;
     }
   });
   addListener("find", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.isKey(["f", "F"], event3) && keyboard.isCmd(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.isKey(["f", "F"], event2) && keyboard.isCmd(event2)) {
       editorActions.trigger("find");
       return true;
     }
   });
   addListener("spaceTool", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.hasModifier(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.hasModifier(event2)) {
       return;
     }
-    if (keyboard.isKey(["s", "S"], event3)) {
+    if (keyboard.isKey(["s", "S"], event2)) {
       editorActions.trigger("spaceTool");
       return true;
     }
   });
   addListener("lassoTool", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.hasModifier(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.hasModifier(event2)) {
       return;
     }
-    if (keyboard.isKey(["l", "L"], event3)) {
+    if (keyboard.isKey(["l", "L"], event2)) {
       editorActions.trigger("lassoTool");
       return true;
     }
   });
   addListener("handTool", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.hasModifier(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.hasModifier(event2)) {
       return;
     }
-    if (keyboard.isKey(["h", "H"], event3)) {
+    if (keyboard.isKey(["h", "H"], event2)) {
       editorActions.trigger("handTool");
       return true;
     }
   });
   addListener("globalConnectTool", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.hasModifier(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.hasModifier(event2)) {
       return;
     }
-    if (keyboard.isKey(["c", "C"], event3)) {
+    if (keyboard.isKey(["c", "C"], event2)) {
       editorActions.trigger("globalConnectTool");
       return true;
     }
   });
   addListener("directEditing", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.hasModifier(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.hasModifier(event2)) {
       return;
     }
-    if (keyboard.isKey(["e", "E"], event3)) {
+    if (keyboard.isKey(["e", "E"], event2)) {
       editorActions.trigger("directEditing");
       return true;
     }
   });
   addListener("replaceElement", function(context) {
-    var event3 = context.keyEvent;
-    if (keyboard.hasModifier(event3)) {
+    var event2 = context.keyEvent;
+    if (keyboard.hasModifier(event2)) {
       return;
     }
-    if (keyboard.isKey(["r", "R"], event3)) {
-      editorActions.trigger("replaceElement", event3);
+    if (keyboard.isKey(["r", "R"], event2)) {
+      editorActions.trigger("replaceElement", event2);
       return true;
     }
   });
@@ -41016,8 +38196,8 @@ var DIRECTIONS_DELTA = {
 function KeyboardMoveSelection(config, keyboard, modeling, rules, selection2) {
   var self2 = this;
   this._config = assign({}, DEFAULT_CONFIG2, config || {});
-  keyboard.addListener(HIGHER_PRIORITY2, function(event3) {
-    var keyEvent = event3.keyEvent;
+  keyboard.addListener(HIGHER_PRIORITY2, function(event2) {
+    var keyEvent = event2.keyEvent;
     var direction = KEY_TO_DIRECTION[keyEvent.key];
     if (!direction) {
       return;
@@ -41099,18 +38279,18 @@ function Resize(eventBus, rules, modeling, dragging) {
       modeling.resizeShape(shape, newBounds);
     }
   }
-  eventBus.on("resize.start", function(event3) {
-    handleStart(event3.context);
+  eventBus.on("resize.start", function(event2) {
+    handleStart(event2.context);
   });
-  eventBus.on("resize.move", function(event3) {
+  eventBus.on("resize.move", function(event2) {
     var delta2 = {
-      x: event3.dx,
-      y: event3.dy
+      x: event2.dx,
+      y: event2.dy
     };
-    handleMove(event3.context, delta2);
+    handleMove(event2.context, delta2);
   });
-  eventBus.on("resize.end", function(event3) {
-    handleEnd(event3.context);
+  eventBus.on("resize.end", function(event2) {
+    handleEnd(event2.context);
   });
 }
 Resize.prototype.canResize = function(context) {
@@ -41118,7 +38298,7 @@ Resize.prototype.canResize = function(context) {
   var ctx = pick(context, ["newBounds", "shape", "delta", "direction"]);
   return rules.allowed("shape.resize", ctx);
 };
-Resize.prototype.activate = function(event3, shape, contextOrDirection) {
+Resize.prototype.activate = function(event2, shape, contextOrDirection) {
   var dragging = this._dragging, context, direction;
   if (typeof contextOrDirection === "string") {
     contextOrDirection = {
@@ -41130,7 +38310,7 @@ Resize.prototype.activate = function(event3, shape, contextOrDirection) {
   if (!direction) {
     throw new Error("must provide a direction (n|w|s|e|nw|se|ne|sw)");
   }
-  dragging.init(event3, getReferencePoint2(shape, direction), "resize", {
+  dragging.init(event2, getReferencePoint2(shape, direction), "resize", {
     autoActivate: true,
     cursor: getCursor(direction),
     data: {
@@ -41176,22 +38356,22 @@ function getReferencePoint2(shape, direction) {
   return referencePoint;
 }
 function getCursor(direction) {
-  var prefix4 = "resize-";
+  var prefix3 = "resize-";
   if (direction === "n" || direction === "s") {
-    return prefix4 + "ns";
+    return prefix3 + "ns";
   } else if (direction === "e" || direction === "w") {
-    return prefix4 + "ew";
+    return prefix3 + "ew";
   } else if (direction === "nw" || direction === "se") {
-    return prefix4 + "nwse";
+    return prefix3 + "nwse";
   } else {
-    return prefix4 + "nesw";
+    return prefix3 + "nesw";
   }
 }
 
 // node_modules/diagram-js/lib/features/resize/ResizePreview.js
 var MARKER_RESIZING2 = "djs-resizing";
 var MARKER_RESIZE_NOT_OK = "resize-not-ok";
-var LOW_PRIORITY24 = 500;
+var LOW_PRIORITY23 = 500;
 function ResizePreview(eventBus, canvas, previewSupport) {
   function updateFrame(context) {
     var shape = context.shape, bounds = context.newBounds, frame = context.frame;
@@ -41218,11 +38398,11 @@ function ResizePreview(eventBus, canvas, previewSupport) {
     }
     canvas.removeMarker(shape, MARKER_RESIZING2);
   }
-  eventBus.on("resize.move", LOW_PRIORITY24, function(event3) {
-    updateFrame(event3.context);
+  eventBus.on("resize.move", LOW_PRIORITY23, function(event2) {
+    updateFrame(event2.context);
   });
-  eventBus.on("resize.cleanup", function(event3) {
-    removeFrame(event3.context);
+  eventBus.on("resize.cleanup", function(event2) {
+    removeFrame(event2.context);
   });
 }
 ResizePreview.$inject = [
@@ -41258,9 +38438,9 @@ function ResizeHandles(eventBus, canvas, selection2, resize) {
 }
 ResizeHandles.prototype.makeDraggable = function(element, gfx, direction) {
   var resize = this._resize;
-  function startResize(event3) {
-    if (isPrimaryButton(event3)) {
-      resize.activate(event3, element, direction);
+  function startResize(event2) {
+    if (isPrimaryButton(event2)) {
+      resize.activate(event2, element, direction);
     }
   }
   event.bind(gfx, "mousedown", startResize);
@@ -41365,8 +38545,8 @@ function LabelEditingProvider(eventBus, bpmnFactory, canvas, directEditing, mode
   this._modeling = modeling;
   this._textRenderer = textRenderer;
   directEditing.registerProvider(this);
-  eventBus.on("element.dblclick", function(event3) {
-    activateDirectEdit(event3.element, true);
+  eventBus.on("element.dblclick", function(event2) {
+    activateDirectEdit(event2.element, true);
   });
   eventBus.on([
     "autoPlace.start",
@@ -41384,8 +38564,8 @@ function LabelEditingProvider(eventBus, bpmnFactory, canvas, directEditing, mode
   eventBus.on([
     "shape.remove",
     "connection.remove"
-  ], HIGH_PRIORITY17, function(event3) {
-    if (directEditing.isActive(event3.element)) {
+  ], HIGH_PRIORITY17, function(event2) {
+    if (directEditing.isActive(event2.element)) {
       directEditing.cancel();
     }
   });
@@ -41394,11 +38574,11 @@ function LabelEditingProvider(eventBus, bpmnFactory, canvas, directEditing, mode
       directEditing.cancel();
     }
   });
-  eventBus.on("directEditing.activate", function(event3) {
+  eventBus.on("directEditing.activate", function(event2) {
     resizeHandles.removeResizers();
   });
-  eventBus.on("create.end", 500, function(event3) {
-    var context = event3.context, element = context.shape, canExecute = event3.context.canExecute, isTouch = event3.isTouch;
+  eventBus.on("create.end", 500, function(event2) {
+    var context = event2.context, element = context.shape, canExecute = event2.context.canExecute, isTouch = event2.isTouch;
     if (isTouch) {
       return;
     }
@@ -41410,8 +38590,8 @@ function LabelEditingProvider(eventBus, bpmnFactory, canvas, directEditing, mode
     }
     activateDirectEdit(element);
   });
-  eventBus.on("autoPlace.end", 500, function(event3) {
-    activateDirectEdit(event3.shape);
+  eventBus.on("autoPlace.end", 500, function(event2) {
+    activateDirectEdit(event2.shape);
   });
   function activateDirectEdit(element, force) {
     if (force || isAny(element, ["bpmn:Task", "bpmn:TextAnnotation", "bpmn:Participant"]) || isCollapsedSubProcess(element)) {
@@ -41438,7 +38618,7 @@ LabelEditingProvider.prototype.activate = function(element) {
   };
   var bounds = this.getEditingBBox(element);
   assign(context, bounds);
-  var options2 = {};
+  var options = {};
   var style = context.style || {};
   assign(style, {
     backgroundColor: null,
@@ -41450,12 +38630,12 @@ LabelEditingProvider.prototype.activate = function(element) {
     "bpmn:Lane",
     "bpmn:CallActivity"
   ]) || isCollapsedSubProcess(element)) {
-    assign(options2, {
+    assign(options, {
       centerVertically: true
     });
   }
   if (isLabelExternal(element)) {
-    assign(options2, {
+    assign(options, {
       autoResize: true
     });
     assign(style, {
@@ -41464,7 +38644,7 @@ LabelEditingProvider.prototype.activate = function(element) {
     });
   }
   if (is(element, "bpmn:TextAnnotation")) {
-    assign(options2, {
+    assign(options, {
       resizable: true,
       autoResize: true
     });
@@ -41474,7 +38654,7 @@ LabelEditingProvider.prototype.activate = function(element) {
     });
   }
   assign(context, {
-    options: options2,
+    options,
     style
   });
   return context;
@@ -41690,7 +38870,7 @@ function LabelEditingPreview(eventBus, canvas, pathMap) {
     }
     if (is(element, "bpmn:TextAnnotation") || element.labelTarget) {
       canvas.addMarker(element, MARKER_HIDDEN2);
-    } else if (is(element, "bpmn:Task") || is(element, "bpmn:CallActivity") || is(element, "bpmn:SubProcess") || is(element, "bpmn:Participant")) {
+    } else if (is(element, "bpmn:Task") || is(element, "bpmn:CallActivity") || is(element, "bpmn:SubProcess") || is(element, "bpmn:Participant") || is(element, "bpmn:Lane")) {
       canvas.addMarker(element, MARKER_LABEL_HIDDEN);
     }
   });
@@ -41787,14 +38967,14 @@ function Tooltips(eventBus, canvas) {
   this._tooltips = {};
   this._tooltipRoot = createRoot2(canvas.getContainer());
   var self2 = this;
-  delegate.bind(this._tooltipRoot, tooltipSelector, "mousedown", function(event3) {
-    event3.stopPropagation();
+  delegate.bind(this._tooltipRoot, tooltipSelector, "mousedown", function(event2) {
+    event2.stopPropagation();
   });
-  delegate.bind(this._tooltipRoot, tooltipSelector, "mouseover", function(event3) {
-    self2.trigger("mouseover", event3);
+  delegate.bind(this._tooltipRoot, tooltipSelector, "mouseover", function(event2) {
+    self2.trigger("mouseover", event2);
   });
-  delegate.bind(this._tooltipRoot, tooltipSelector, "mouseout", function(event3) {
-    self2.trigger("mouseout", event3);
+  delegate.bind(this._tooltipRoot, tooltipSelector, "mouseout", function(event2) {
+    self2.trigger("mouseout", event2);
   });
   this._init();
 }
@@ -41816,8 +38996,8 @@ Tooltips.prototype.add = function(tooltip) {
   }
   return id;
 };
-Tooltips.prototype.trigger = function(action, event3) {
-  var node2 = event3.delegateTarget || event3.target;
+Tooltips.prototype.trigger = function(action, event2) {
+  var node2 = event2.delegateTarget || event2.target;
   var tooltip = this.get(attr2(node2, "data-tooltip-id"));
   if (!tooltip) {
     return;
@@ -41924,11 +39104,11 @@ Tooltips.prototype._init = function() {
     self2._updateTooltipVisibilty(viewbox);
     self2.show();
   }
-  this._eventBus.on("canvas.viewbox.changing", function(event3) {
+  this._eventBus.on("canvas.viewbox.changing", function(event2) {
     self2.hide();
   });
-  this._eventBus.on("canvas.viewbox.changed", function(event3) {
-    updateViewbox(event3.viewbox);
+  this._eventBus.on("canvas.viewbox.changed", function(event2) {
+    updateViewbox(event2.viewbox);
   });
 };
 
@@ -41952,10 +39132,10 @@ function ModelingFeedback(eventBus, tooltips3, translate4) {
       html: "<div>" + message + "</div>"
     });
   }
-  eventBus.on(["shape.move.rejected", "create.rejected"], function(event3) {
-    var context = event3.context, shape = context.shape, target = context.target;
+  eventBus.on(["shape.move.rejected", "create.rejected"], function(event2) {
+    var context = event2.context, shape = context.shape, target = context.target;
     if (is(target, "bpmn:Collaboration") && is(shape, "bpmn:FlowNode")) {
-      showError(event3, translate4(COLLAB_ERR_MSG));
+      showError(event2, translate4(COLLAB_ERR_MSG));
     }
   });
 }
@@ -41974,6 +39154,152 @@ var modeling_feedback_default = {
     "modelingFeedback"
   ],
   modelingFeedback: ["type", ModelingFeedback]
+};
+
+// node_modules/diagram-js/lib/features/outline/Outline.js
+var LOW_PRIORITY24 = 500;
+var DEFAULT_PRIORITY6 = 1e3;
+function Outline(eventBus, styles) {
+  this._eventBus = eventBus;
+  this.offset = 5;
+  var OUTLINE_STYLE = styles.cls("djs-outline", ["no-fill"]);
+  var self2 = this;
+  function createOutline(gfx) {
+    var outline = create("rect");
+    attr(outline, assign({
+      x: 0,
+      y: 0,
+      rx: 4,
+      width: 100,
+      height: 100
+    }, OUTLINE_STYLE));
+    return outline;
+  }
+  eventBus.on(["shape.added", "shape.changed"], LOW_PRIORITY24, function(event2) {
+    var element = event2.element, gfx = event2.gfx;
+    var outline = query(".djs-outline", gfx);
+    if (!outline) {
+      outline = self2.getOutline(element) || createOutline(gfx);
+      append(gfx, outline);
+    }
+    self2.updateShapeOutline(outline, element);
+  });
+  eventBus.on(["connection.added", "connection.changed"], function(event2) {
+    var element = event2.element, gfx = event2.gfx;
+    var outline = query(".djs-outline", gfx);
+    if (!outline) {
+      outline = createOutline(gfx);
+      append(gfx, outline);
+    }
+    self2.updateConnectionOutline(outline, element);
+  });
+}
+Outline.prototype.updateShapeOutline = function(outline, element) {
+  var updated = false;
+  var providers = this._getProviders();
+  if (providers.length) {
+    forEach(providers, function(provider) {
+      updated = updated || provider.updateOutline(element, outline);
+    });
+  }
+  if (!updated) {
+    attr(outline, {
+      x: -this.offset,
+      y: -this.offset,
+      width: element.width + this.offset * 2,
+      height: element.height + this.offset * 2
+    });
+  }
+};
+Outline.prototype.updateConnectionOutline = function(outline, connection) {
+  var bbox = getBBox(connection);
+  attr(outline, {
+    x: bbox.x - this.offset,
+    y: bbox.y - this.offset,
+    width: bbox.width + this.offset * 2,
+    height: bbox.height + this.offset * 2
+  });
+};
+Outline.prototype.registerProvider = function(priority, provider) {
+  if (!provider) {
+    provider = priority;
+    priority = DEFAULT_PRIORITY6;
+  }
+  this._eventBus.on("outline.getProviders", priority, function(event2) {
+    event2.providers.push(provider);
+  });
+};
+Outline.prototype._getProviders = function() {
+  var event2 = this._eventBus.createEvent({
+    type: "outline.getProviders",
+    providers: []
+  });
+  this._eventBus.fire(event2);
+  return event2.providers;
+};
+Outline.prototype.getOutline = function(element) {
+  var outline;
+  var providers = this._getProviders();
+  forEach(providers, function(provider) {
+    if (!isFunction(provider.getOutline)) {
+      return;
+    }
+    outline = outline || provider.getOutline(element);
+  });
+  return outline;
+};
+Outline.$inject = ["eventBus", "styles", "elementRegistry"];
+
+// node_modules/diagram-js/lib/features/outline/MultiSelectionOutline.js
+var SELECTION_OUTLINE_PADDING = 6;
+function MultiSelectionOutline(eventBus, canvas, selection2) {
+  this._canvas = canvas;
+  var self2 = this;
+  eventBus.on("element.changed", function(event2) {
+    if (selection2.isSelected(event2.element)) {
+      self2._updateMultiSelectionOutline(selection2.get());
+    }
+  });
+  eventBus.on("selection.changed", function(event2) {
+    var newSelection = event2.newSelection;
+    self2._updateMultiSelectionOutline(newSelection);
+  });
+}
+MultiSelectionOutline.prototype._updateMultiSelectionOutline = function(selection2) {
+  var layer = this._canvas.getLayer("selectionOutline");
+  clear(layer);
+  var enabled = selection2.length > 1;
+  var container = this._canvas.getContainer();
+  classes(container)[enabled ? "add" : "remove"]("djs-multi-select");
+  if (!enabled) {
+    return;
+  }
+  var bBox = addSelectionOutlinePadding(getBBox(selection2));
+  var rect = create("rect");
+  attr(rect, assign({
+    rx: 3
+  }, bBox));
+  classes(rect).add("djs-selection-outline");
+  append(layer, rect);
+};
+MultiSelectionOutline.$inject = ["eventBus", "canvas", "selection"];
+function addSelectionOutlinePadding(bBox) {
+  return {
+    x: bBox.x - SELECTION_OUTLINE_PADDING,
+    y: bBox.y - SELECTION_OUTLINE_PADDING,
+    width: bBox.width + SELECTION_OUTLINE_PADDING * 2,
+    height: bBox.height + SELECTION_OUTLINE_PADDING * 2
+  };
+}
+
+// node_modules/diagram-js/lib/features/outline/index.js
+var outline_default = {
+  __depends__: [
+    selection_default
+  ],
+  __init__: ["outline", "multiSelectionOutline"],
+  outline: ["type", Outline],
+  multiSelectionOutline: ["type", MultiSelectionOutline]
 };
 
 // node_modules/diagram-js/lib/features/move/Move.js
@@ -41996,8 +39322,8 @@ function MoveEvents(eventBus, dragging, modeling, selection2, rules) {
       target
     });
   }
-  eventBus.on("shape.move.start", HIGH_PRIORITY18, function(event3) {
-    var context = event3.context, shape = event3.shape, shapes = selection2.get().slice();
+  eventBus.on("shape.move.start", HIGH_PRIORITY18, function(event2) {
+    var context = event2.context, shape = event2.shape, shapes = selection2.get().slice();
     if (shapes.indexOf(shape) === -1) {
       shapes = [shape];
     }
@@ -42008,15 +39334,15 @@ function MoveEvents(eventBus, dragging, modeling, selection2, rules) {
       shape
     });
   });
-  eventBus.on("shape.move.start", MEDIUM_PRIORITY, function(event3) {
-    var context = event3.context, validatedShapes = context.validatedShapes, canExecute;
+  eventBus.on("shape.move.start", MEDIUM_PRIORITY, function(event2) {
+    var context = event2.context, validatedShapes = context.validatedShapes, canExecute;
     canExecute = context.canExecute = canMove2(validatedShapes);
     if (!canExecute) {
       return false;
     }
   });
-  eventBus.on("shape.move.move", LOW_PRIORITY25, function(event3) {
-    var context = event3.context, validatedShapes = context.validatedShapes, hover = event3.hover, delta2 = { x: event3.dx, y: event3.dy }, position = { x: event3.x, y: event3.y }, canExecute;
+  eventBus.on("shape.move.move", LOW_PRIORITY25, function(event2) {
+    var context = event2.context, validatedShapes = context.validatedShapes, hover = event2.hover, delta2 = { x: event2.dx, y: event2.dy }, position = { x: event2.x, y: event2.y }, canExecute;
     canExecute = canMove2(validatedShapes, delta2, position, hover);
     context.delta = delta2;
     context.canExecute = canExecute;
@@ -42026,8 +39352,8 @@ function MoveEvents(eventBus, dragging, modeling, selection2, rules) {
     }
     context.target = hover;
   });
-  eventBus.on("shape.move.end", function(event3) {
-    var context = event3.context;
+  eventBus.on("shape.move.end", function(event2) {
+    var context = event2.context;
     var delta2 = context.delta, canExecute = context.canExecute, isAttach = canExecute === "attach", shapes = context.shapes;
     if (canExecute === false) {
       return false;
@@ -42042,17 +39368,17 @@ function MoveEvents(eventBus, dragging, modeling, selection2, rules) {
       attach: isAttach
     });
   });
-  eventBus.on("element.mousedown", function(event3) {
-    if (!isPrimaryButton(event3)) {
+  eventBus.on("element.mousedown", function(event2) {
+    if (!isPrimaryButton(event2)) {
       return;
     }
-    var originalEvent = getOriginal(event3);
+    var originalEvent = getOriginal(event2);
     if (!originalEvent) {
       throw new Error("must supply DOM mousedown event");
     }
-    return start(originalEvent, event3.element);
+    return start(originalEvent, event2.element);
   });
-  function start(event3, element, activate, context) {
+  function start(event2, element, activate, context) {
     if (isObject(activate)) {
       context = activate;
       activate = false;
@@ -42060,11 +39386,11 @@ function MoveEvents(eventBus, dragging, modeling, selection2, rules) {
     if (element.waypoints || !element.parent) {
       return;
     }
-    if (classes(event3.target).has("djs-hit-no-move")) {
+    if (classes(event2.target).has("djs-hit-no-move")) {
       return;
     }
     var referencePoint = mid3(element);
-    dragging.init(event3, referencePoint, "shape.move", {
+    dragging.init(event2, referencePoint, "shape.move", {
       cursor: "grabbing",
       autoActivate: activate,
       data: {
@@ -42118,11 +39444,11 @@ function MovePreview(eventBus, canvas, styles, previewSupport) {
     return uniqueElements;
   }
   function setMarker(element, marker) {
-    [MARKER_ATTACH3, MARKER_OK4, MARKER_NOT_OK4, MARKER_NEW_PARENT2].forEach(function(m5) {
-      if (m5 === marker) {
-        canvas.addMarker(element, m5);
+    [MARKER_ATTACH3, MARKER_OK4, MARKER_NOT_OK4, MARKER_NEW_PARENT2].forEach(function(m6) {
+      if (m6 === marker) {
+        canvas.addMarker(element, m6);
       } else {
-        canvas.removeMarker(element, m5);
+        canvas.removeMarker(element, m6);
       }
     });
   }
@@ -42137,8 +39463,8 @@ function MovePreview(eventBus, canvas, styles, previewSupport) {
       context.allDraggedElements = [element];
     }
   }
-  eventBus.on("shape.move.start", LOW_PRIORITY26, function(event3) {
-    var context = event3.context, dragShapes = context.shapes, allDraggedElements = context.allDraggedElements;
+  eventBus.on("shape.move.start", LOW_PRIORITY26, function(event2) {
+    var context = event2.context, dragShapes = context.shapes, allDraggedElements = context.allDraggedElements;
     var visuallyDraggedShapes = getVisualDragShapes(dragShapes);
     if (!context.dragGroup) {
       var dragGroup = create("g");
@@ -42164,8 +39490,8 @@ function MovePreview(eventBus, canvas, styles, previewSupport) {
     context.allDraggedElements = allDraggedElements;
     context.differentParents = haveDifferentParents(dragShapes);
   });
-  eventBus.on("shape.move.move", LOW_PRIORITY26, function(event3) {
-    var context = event3.context, dragGroup = context.dragGroup, target = context.target, parent = context.shape.parent, canExecute = context.canExecute;
+  eventBus.on("shape.move.move", LOW_PRIORITY26, function(event2) {
+    var context = event2.context, dragGroup = context.dragGroup, target = context.target, parent = context.shape.parent, canExecute = context.canExecute;
     if (target) {
       if (canExecute === "attach") {
         setMarker(target, MARKER_ATTACH3);
@@ -42175,16 +39501,16 @@ function MovePreview(eventBus, canvas, styles, previewSupport) {
         setMarker(target, context.canExecute ? MARKER_OK4 : MARKER_NOT_OK4);
       }
     }
-    translate(dragGroup, event3.dx, event3.dy);
+    translate(dragGroup, event2.dx, event2.dy);
   });
-  eventBus.on(["shape.move.out", "shape.move.cleanup"], function(event3) {
-    var context = event3.context, target = context.target;
+  eventBus.on(["shape.move.out", "shape.move.cleanup"], function(event2) {
+    var context = event2.context, target = context.target;
     if (target) {
       setMarker(target, null);
     }
   });
-  eventBus.on("shape.move.cleanup", function(event3) {
-    var context = event3.context, allDraggedElements = context.allDraggedElements, dragGroup = context.dragGroup;
+  eventBus.on("shape.move.cleanup", function(event2) {
+    var context = event2.context, allDraggedElements = context.allDraggedElements, dragGroup = context.dragGroup;
     forEach(allDraggedElements, function(e8) {
       canvas.removeMarker(e8, MARKER_DRAGGING2);
     });
@@ -42247,8 +39573,8 @@ function Palette(eventBus, canvas) {
   this._eventBus = eventBus;
   this._canvas = canvas;
   var self2 = this;
-  eventBus.on("tool-manager.update", function(event3) {
-    var tool = event3.tool;
+  eventBus.on("tool-manager.update", function(event2) {
+    var tool = event2.tool;
     self2.updateToolHighlight(tool);
   });
   eventBus.on("i18n.changed", function() {
@@ -42265,8 +39591,8 @@ Palette.prototype.registerProvider = function(priority, provider) {
     provider = priority;
     priority = DEFAULT_PRIORITY7;
   }
-  this._eventBus.on("palette.getProviders", priority, function(event3) {
-    event3.providers.push(provider);
+  this._eventBus.on("palette.getProviders", priority, function(event2) {
+    event2.providers.push(provider);
   });
   this._rebuild();
 };
@@ -42294,18 +39620,18 @@ Palette.prototype._init = function() {
   var container = this._container = domify$1(Palette.HTML_MARKUP);
   parentContainer.appendChild(container);
   classes2(parentContainer).add(PALETTE_PREFIX + PALETTE_SHOWN_CLS);
-  delegate.bind(container, ELEMENT_SELECTOR, "click", function(event3) {
-    var target = event3.delegateTarget;
+  delegate.bind(container, ELEMENT_SELECTOR, "click", function(event2) {
+    var target = event2.delegateTarget;
     if (matches(target, TOGGLE_SELECTOR)) {
       return self2.toggle();
     }
-    self2.trigger("click", event3);
+    self2.trigger("click", event2);
   });
-  event.bind(container, "mousedown", function(event3) {
-    event3.stopPropagation();
+  event.bind(container, "mousedown", function(event2) {
+    event2.stopPropagation();
   });
-  delegate.bind(container, ENTRY_SELECTOR, "dragstart", function(event3) {
-    self2.trigger("dragstart", event3);
+  delegate.bind(container, ENTRY_SELECTOR, "dragstart", function(event2) {
+    self2.trigger("dragstart", event2);
   });
   eventBus.on("canvas.resized", this._layoutChanged, this);
   eventBus.fire("palette.create", {
@@ -42313,12 +39639,12 @@ Palette.prototype._init = function() {
   });
 };
 Palette.prototype._getProviders = function(id) {
-  var event3 = this._eventBus.createEvent({
+  var event2 = this._eventBus.createEvent({
     type: "palette.getProviders",
     providers: []
   });
-  this._eventBus.fire(event3);
-  return event3.providers;
+  this._eventBus.fire(event2);
+  return event2.providers;
 };
 Palette.prototype._toggleState = function(state) {
   state = state || {};
@@ -42373,35 +39699,35 @@ Palette.prototype._update = function() {
   });
   this.open();
 };
-Palette.prototype.trigger = function(action, event3, autoActivate) {
-  var entry, originalEvent, button = event3.delegateTarget || event3.target;
+Palette.prototype.trigger = function(action, event2, autoActivate) {
+  var entry, originalEvent, button = event2.delegateTarget || event2.target;
   if (!button) {
-    return event3.preventDefault();
+    return event2.preventDefault();
   }
   entry = attr2(button, "data-action");
-  originalEvent = event3.originalEvent || event3;
+  originalEvent = event2.originalEvent || event2;
   return this.triggerEntry(entry, action, originalEvent, autoActivate);
 };
-Palette.prototype.triggerEntry = function(entryId, action, event3, autoActivate) {
+Palette.prototype.triggerEntry = function(entryId, action, event2, autoActivate) {
   var entries = this._entries, entry, handler;
   entry = entries[entryId];
   if (!entry) {
     return;
   }
   handler = entry.action;
-  if (this._eventBus.fire("palette.trigger", { entry, event: event3 }) === false) {
+  if (this._eventBus.fire("palette.trigger", { entry, event: event2 }) === false) {
     return;
   }
   if (isFunction(handler)) {
     if (action === "click") {
-      return handler(event3, autoActivate);
+      return handler(event2, autoActivate);
     }
   } else {
     if (handler[action]) {
-      return handler[action](event3, autoActivate);
+      return handler[action](event2, autoActivate);
     }
   }
-  event3.preventDefault();
+  event2.preventDefault();
 };
 Palette.prototype._layoutChanged = function() {
   this._toggleState({});
@@ -42459,10 +39785,10 @@ Palette.prototype._getParentContainer = function() {
 };
 Palette.HTML_MARKUP = '<div class="djs-palette"><div class="djs-palette-entries"></div><div class="djs-palette-toggle"></div></div>';
 function addClasses2(element, classNames) {
-  var classes4 = classes2(element);
+  var classes3 = classes2(element);
   var actualClassNames = isArray(classNames) ? classNames : classNames.split(/\s+/g);
   actualClassNames.forEach(function(cls) {
-    classes4.add(cls);
+    classes3.add(cls);
   });
 }
 function addPaletteEntries(entries, provider) {
@@ -42521,44 +39847,44 @@ function LassoTool(eventBus, canvas, dragging, elementRegistry, selection2, tool
     tool: "lasso.selection",
     dragging: "lasso"
   });
-  eventBus.on("lasso.selection.end", function(event3) {
-    var target = event3.originalEvent.target;
-    if (!event3.hover && !(target instanceof SVGElement)) {
+  eventBus.on("lasso.selection.end", function(event2) {
+    var target = event2.originalEvent.target;
+    if (!event2.hover && !(target instanceof SVGElement)) {
       return;
     }
     eventBus.once("lasso.selection.ended", function() {
-      self2.activateLasso(event3.originalEvent, true);
+      self2.activateLasso(event2.originalEvent, true);
     });
   });
-  eventBus.on("lasso.end", 0, function(event3) {
-    var context = event3.context;
-    var bbox = toBBox(event3);
+  eventBus.on("lasso.end", 0, function(event2) {
+    var context = event2.context;
+    var bbox = toBBox(event2);
     var elements = elementRegistry.filter(function(element) {
       return element;
     });
-    var add3 = hasSecondaryModifier(event3);
-    self2.select(elements, bbox, add3 ? context.selection : []);
+    var add5 = hasSecondaryModifier(event2);
+    self2.select(elements, bbox, add5 ? context.selection : []);
   });
-  eventBus.on("lasso.start", function(event3) {
-    var context = event3.context;
-    context.bbox = toBBox(event3);
+  eventBus.on("lasso.start", function(event2) {
+    var context = event2.context;
+    context.bbox = toBBox(event2);
     visuals.create(context);
     context.selection = selection2.get();
   });
-  eventBus.on("lasso.move", function(event3) {
-    var context = event3.context;
-    context.bbox = toBBox(event3);
+  eventBus.on("lasso.move", function(event2) {
+    var context = event2.context;
+    context.bbox = toBBox(event2);
     visuals.update(context);
   });
-  eventBus.on("lasso.cleanup", function(event3) {
-    var context = event3.context;
+  eventBus.on("lasso.cleanup", function(event2) {
+    var context = event2.context;
     visuals.remove(context);
   });
-  eventBus.on("element.mousedown", 1500, function(event3) {
-    if (!hasSecondaryModifier(event3)) {
+  eventBus.on("element.mousedown", 1500, function(event2) {
+    if (!hasSecondaryModifier(event2)) {
       return;
     }
-    self2.activateLasso(event3.originalEvent);
+    self2.activateLasso(event2.originalEvent);
     return true;
   });
 }
@@ -42571,8 +39897,8 @@ LassoTool.$inject = [
   "toolManager",
   "mouse"
 ];
-LassoTool.prototype.activateLasso = function(event3, autoActivate) {
-  this._dragging.init(event3, "lasso", {
+LassoTool.prototype.activateLasso = function(event2, autoActivate) {
+  this._dragging.init(event2, "lasso", {
     autoActivate,
     cursor: LASSO_TOOL_CURSOR,
     data: {
@@ -42580,8 +39906,8 @@ LassoTool.prototype.activateLasso = function(event3, autoActivate) {
     }
   });
 };
-LassoTool.prototype.activateSelection = function(event3, autoActivate) {
-  this._dragging.init(event3, "lasso.selection", {
+LassoTool.prototype.activateSelection = function(event2, autoActivate) {
+  this._dragging.init(event2, "lasso.selection", {
     trapClick: false,
     autoActivate,
     cursor: LASSO_TOOL_CURSOR,
@@ -42609,14 +39935,14 @@ LassoTool.prototype.isActive = function() {
   var context = this._dragging.context();
   return context && /^lasso/.test(context.prefix);
 };
-function toBBox(event3) {
+function toBBox(event2) {
   var start = {
-    x: event3.x - event3.dx,
-    y: event3.y - event3.dy
+    x: event2.x - event2.dx,
+    y: event2.y - event2.dy
   };
   var end = {
-    x: event3.x,
-    y: event3.y
+    x: event2.x,
+    y: event2.y
   };
   var bbox;
   if (start.x <= end.x && start.y < end.y || start.x < end.x && start.y <= end.y) {
@@ -42679,11 +40005,11 @@ function HandTool(eventBus, canvas, dragging, injector, toolManager, mouse) {
     tool: "hand",
     dragging: "hand.move"
   });
-  eventBus.on("element.mousedown", HIGH_PRIORITY19, function(event3) {
-    if (!hasPrimaryModifier(event3)) {
+  eventBus.on("element.mousedown", HIGH_PRIORITY19, function(event2) {
+    if (!hasPrimaryModifier(event2)) {
       return;
     }
-    self2.activateMove(event3.originalEvent, true);
+    self2.activateMove(event2.originalEvent, true);
     return false;
   });
   keyboard && keyboard.addListener(HIGH_PRIORITY19, function(e8) {
@@ -42699,27 +40025,27 @@ function HandTool(eventBus, canvas, dragging, injector, toolManager, mouse) {
     }
     self2.toggle();
   }, "keyboard.keyup");
-  eventBus.on("hand.end", function(event3) {
-    var target = event3.originalEvent.target;
-    if (!event3.hover && !(target instanceof SVGElement)) {
+  eventBus.on("hand.end", function(event2) {
+    var target = event2.originalEvent.target;
+    if (!event2.hover && !(target instanceof SVGElement)) {
       return false;
     }
     eventBus.once("hand.ended", function() {
-      self2.activateMove(event3.originalEvent, { reactivate: true });
+      self2.activateMove(event2.originalEvent, { reactivate: true });
     });
   });
-  eventBus.on("hand.move.move", function(event3) {
+  eventBus.on("hand.move.move", function(event2) {
     var scale = canvas.viewbox().scale;
     canvas.scroll({
-      dx: event3.dx * scale,
-      dy: event3.dy * scale
+      dx: event2.dx * scale,
+      dy: event2.dy * scale
     });
   });
-  eventBus.on("hand.move.end", function(event3) {
-    var context = event3.context, reactivate = context.reactivate;
-    if (!hasPrimaryModifier(event3) && reactivate) {
-      eventBus.once("hand.move.ended", function(event4) {
-        self2.activateHand(event4.originalEvent, true, true);
+  eventBus.on("hand.move.end", function(event2) {
+    var context = event2.context, reactivate = context.reactivate;
+    if (!hasPrimaryModifier(event2) && reactivate) {
+      eventBus.once("hand.move.ended", function(event3) {
+        self2.activateHand(event3.originalEvent, true, true);
       });
     }
     return false;
@@ -42733,12 +40059,12 @@ HandTool.$inject = [
   "toolManager",
   "mouse"
 ];
-HandTool.prototype.activateMove = function(event3, autoActivate, context) {
+HandTool.prototype.activateMove = function(event2, autoActivate, context) {
   if (typeof autoActivate === "object") {
     context = autoActivate;
     autoActivate = false;
   }
-  this._dragging.init(event3, "hand.move", {
+  this._dragging.init(event2, "hand.move", {
     autoActivate,
     cursor: HAND_CURSOR,
     data: {
@@ -42746,8 +40072,8 @@ HandTool.prototype.activateMove = function(event3, autoActivate, context) {
     }
   });
 };
-HandTool.prototype.activateHand = function(event3, autoActivate, reactivate) {
-  this._dragging.init(event3, "hand", {
+HandTool.prototype.activateHand = function(event2, autoActivate, reactivate) {
+  this._dragging.init(event2, "hand", {
     trapClick: false,
     autoActivate,
     cursor: HAND_CURSOR,
@@ -42798,8 +40124,8 @@ function GlobalConnect(eventBus, dragging, connect, canvas, toolManager, rules, 
     tool: "global-connect",
     dragging: "global-connect.drag"
   });
-  eventBus.on("global-connect.hover", function(event3) {
-    var context = event3.context, startTarget = event3.hover;
+  eventBus.on("global-connect.hover", function(event2) {
+    var context = event2.context, startTarget = event2.hover;
     var canStartConnect = context.canStartConnect = self2.canStartConnect(startTarget);
     if (canStartConnect === null) {
       return;
@@ -42807,16 +40133,16 @@ function GlobalConnect(eventBus, dragging, connect, canvas, toolManager, rules, 
     context.startTarget = startTarget;
     canvas.addMarker(startTarget, canStartConnect ? MARKER_OK5 : MARKER_NOT_OK5);
   });
-  eventBus.on(["global-connect.out", "global-connect.cleanup"], function(event3) {
-    var startTarget = event3.context.startTarget, canStartConnect = event3.context.canStartConnect;
+  eventBus.on(["global-connect.out", "global-connect.cleanup"], function(event2) {
+    var startTarget = event2.context.startTarget, canStartConnect = event2.context.canStartConnect;
     if (startTarget) {
       canvas.removeMarker(startTarget, canStartConnect ? MARKER_OK5 : MARKER_NOT_OK5);
     }
   });
-  eventBus.on(["global-connect.ended"], function(event3) {
-    var context = event3.context, startTarget = context.startTarget, startPosition = {
-      x: event3.x,
-      y: event3.y
+  eventBus.on(["global-connect.ended"], function(event2) {
+    var context = event2.context, startTarget = context.startTarget, startPosition = {
+      x: event2.x,
+      y: event2.y
     };
     var canStartConnect = self2.canStartConnect(startTarget);
     if (!canStartConnect) {
@@ -42840,8 +40166,8 @@ GlobalConnect.$inject = [
   "rules",
   "mouse"
 ];
-GlobalConnect.prototype.start = function(event3, autoActivate) {
-  this._dragging.init(event3, "global-connect", {
+GlobalConnect.prototype.start = function(event2, autoActivate) {
+  this._dragging.init(event2, "global-connect", {
     autoActivate,
     trapClick: false,
     data: {
@@ -42900,10 +40226,10 @@ PaletteProvider.$inject = [
 ];
 PaletteProvider.prototype.getPaletteEntries = function() {
   var actions = {}, create3 = this._create, elementFactory = this._elementFactory, spaceTool = this._spaceTool, lassoTool = this._lassoTool, handTool = this._handTool, globalConnect = this._globalConnect, translate4 = this._translate;
-  function createAction2(type, group, className, title, options2) {
-    function createListener(event3) {
-      var shape = elementFactory.createShape(assign({ type }, options2));
-      create3.start(event3, shape);
+  function createAction2(type, group, className, title, options) {
+    function createListener(event2) {
+      var shape = elementFactory.createShape(assign({ type }, options));
+      create3.start(event2, shape);
     }
     return {
       group,
@@ -42915,7 +40241,7 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       }
     };
   }
-  function createSubprocess(event3) {
+  function createSubprocess(event2) {
     var subProcess = elementFactory.createShape({
       type: "bpmn:SubProcess",
       x: 0,
@@ -42928,14 +40254,14 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       y: 82,
       parent: subProcess
     });
-    create3.start(event3, [subProcess, startEvent], {
+    create3.start(event2, [subProcess, startEvent], {
       hints: {
         autoSelect: [subProcess]
       }
     });
   }
-  function createParticipant(event3) {
-    create3.start(event3, elementFactory.createParticipantShape());
+  function createParticipant(event2) {
+    create3.start(event2, elementFactory.createParticipantShape());
   }
   assign(actions, {
     "hand-tool": {
@@ -42943,8 +40269,8 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       className: "bpmn-icon-hand-tool",
       title: translate4("Activate hand tool"),
       action: {
-        click: function(event3) {
-          handTool.activateHand(event3);
+        click: function(event2) {
+          handTool.activateHand(event2);
         }
       }
     },
@@ -42953,8 +40279,8 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       className: "bpmn-icon-lasso-tool",
       title: translate4("Activate lasso tool"),
       action: {
-        click: function(event3) {
-          lassoTool.activateSelection(event3);
+        click: function(event2) {
+          lassoTool.activateSelection(event2);
         }
       }
     },
@@ -42963,8 +40289,8 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       className: "bpmn-icon-space-tool",
       title: translate4("Activate create/remove space tool"),
       action: {
-        click: function(event3) {
-          spaceTool.activateSelection(event3);
+        click: function(event2) {
+          spaceTool.activateSelection(event2);
         }
       }
     },
@@ -42973,8 +40299,8 @@ PaletteProvider.prototype.getPaletteEntries = function() {
       className: "bpmn-icon-connection-multi",
       title: translate4("Activate global connect tool"),
       action: {
-        click: function(event3) {
-          globalConnect.start(event3);
+        click: function(event2) {
+          globalConnect.start(event2);
         }
       }
     },
@@ -43107,8 +40433,8 @@ function BpmnReplacePreview(eventBus, elementRegistry, elementFactory, canvas, p
       }
     });
   }
-  eventBus.on("shape.move.move", LOW_PRIORITY27, function(event3) {
-    var context = event3.context, canExecute = context.canExecute;
+  eventBus.on("shape.move.move", LOW_PRIORITY27, function(event2) {
+    var context = event2.context, canExecute = context.canExecute;
     if (!context.visualReplacements) {
       context.visualReplacements = {};
     }
@@ -43150,16 +40476,16 @@ function BpmnConnectSnapping(eventBus) {
     "connect.hover",
     "connect.move",
     "connect.end"
-  ], HIGHER_PRIORITY3, function(event3) {
-    var context = event3.context, canExecute = context.canExecute, start = context.start, hover = context.hover, source = context.source, target = context.target;
-    if (event3.originalEvent && isCmd(event3.originalEvent)) {
+  ], HIGHER_PRIORITY3, function(event2) {
+    var context = event2.context, canExecute = context.canExecute, start = context.start, hover = context.hover, source = context.source, target = context.target;
+    if (event2.originalEvent && isCmd(event2.originalEvent)) {
       return;
     }
     if (!context.initialConnectionStart) {
       context.initialConnectionStart = context.connectionStart;
     }
     if (canExecute && hover) {
-      snapToShape(event3, hover, getTargetBoundsPadding(hover));
+      snapToShape(event2, hover, getTargetBoundsPadding(hover));
     }
     if (hover && isAnyType(canExecute, [
       "bpmn:Association",
@@ -43169,20 +40495,20 @@ function BpmnConnectSnapping(eventBus) {
     ])) {
       context.connectionStart = mid(start);
       if (isAny(hover, ["bpmn:Event", "bpmn:Gateway"])) {
-        snapToPosition(event3, mid(hover));
+        snapToPosition(event2, mid(hover));
       }
       if (isAny(hover, ["bpmn:Task", "bpmn:SubProcess"])) {
-        snapToTargetMid(event3, hover);
+        snapToTargetMid(event2, hover);
       }
       if (is(source, "bpmn:BoundaryEvent") && target === source.host) {
-        snapBoundaryEventLoop(event3);
+        snapBoundaryEventLoop(event2);
       }
     } else if (isType2(canExecute, "bpmn:MessageFlow")) {
       if (is(start, "bpmn:Event")) {
         context.connectionStart = mid(start);
       }
       if (is(hover, "bpmn:Event")) {
-        snapToPosition(event3, mid(hover));
+        snapToPosition(event2, mid(hover));
       }
     } else {
       context.connectionStart = context.initialConnectionStart;
@@ -43190,26 +40516,26 @@ function BpmnConnectSnapping(eventBus) {
   });
 }
 BpmnConnectSnapping.$inject = ["eventBus"];
-function snapToShape(event3, target, padding) {
+function snapToShape(event2, target, padding) {
   AXES.forEach(function(axis) {
     var dimensionForAxis = getDimensionForAxis(axis, target);
-    if (event3[axis] < target[axis] + padding) {
-      setSnapped(event3, axis, target[axis] + padding);
-    } else if (event3[axis] > target[axis] + dimensionForAxis - padding) {
-      setSnapped(event3, axis, target[axis] + dimensionForAxis - padding);
+    if (event2[axis] < target[axis] + padding) {
+      setSnapped(event2, axis, target[axis] + padding);
+    } else if (event2[axis] > target[axis] + dimensionForAxis - padding) {
+      setSnapped(event2, axis, target[axis] + dimensionForAxis - padding);
     }
   });
 }
-function snapToTargetMid(event3, target) {
+function snapToTargetMid(event2, target) {
   var targetMid = mid(target);
   AXES.forEach(function(axis) {
-    if (isMid(event3, target, axis)) {
-      setSnapped(event3, axis, targetMid[axis]);
+    if (isMid(event2, target, axis)) {
+      setSnapped(event2, axis, targetMid[axis]);
     }
   });
 }
-function snapBoundaryEventLoop(event3) {
-  var context = event3.context, source = context.source, target = context.target;
+function snapBoundaryEventLoop(event2) {
+  var context = event2.context, source = context.source, target = context.target;
   if (isReverse3(context)) {
     return;
   }
@@ -43221,20 +40547,20 @@ function snapBoundaryEventLoop(event3) {
     axes.push("y");
   }
   axes.forEach(function(axis) {
-    var coordinate = event3[axis], newCoordinate;
+    var coordinate = event2[axis], newCoordinate;
     if (abs8(coordinate - sourceMid[axis]) < BOUNDARY_TO_HOST_THRESHOLD2) {
       if (coordinate > sourceMid[axis]) {
         newCoordinate = sourceMid[axis] + BOUNDARY_TO_HOST_THRESHOLD2;
       } else {
         newCoordinate = sourceMid[axis] - BOUNDARY_TO_HOST_THRESHOLD2;
       }
-      setSnapped(event3, axis, newCoordinate);
+      setSnapped(event2, axis, newCoordinate);
     }
   });
 }
-function snapToPosition(event3, position) {
-  setSnapped(event3, "x", position.x);
-  setSnapped(event3, "y", position.y);
+function snapToPosition(event2, position) {
+  setSnapped(event2, "x", position.x);
+  setSnapped(event2, "y", position.y);
 }
 function isType2(attrs, type) {
   return attrs && attrs.type === type;
@@ -43254,8 +40580,8 @@ function getTargetBoundsPadding(target) {
     return TARGET_BOUNDS_PADDING;
   }
 }
-function isMid(event3, target, axis) {
-  return event3[axis] > target[axis] + TARGET_CENTER_PADDING && event3[axis] < target[axis] + getDimensionForAxis(axis, target) - TARGET_CENTER_PADDING;
+function isMid(event2, target, axis) {
+  return event2[axis] > target[axis] + TARGET_CENTER_PADDING && event2[axis] < target[axis] + getDimensionForAxis(axis, target) - TARGET_CENTER_PADDING;
 }
 function isReverse3(context) {
   var hover = context.hover, source = context.source;
@@ -43336,20 +40662,20 @@ function CreateMoveSnapping(elementRegistry, eventBus, snapping) {
   eventBus.on([
     "create.start",
     "shape.move.start"
-  ], function(event3) {
-    self2.initSnap(event3);
+  ], function(event2) {
+    self2.initSnap(event2);
   });
   eventBus.on([
     "create.move",
     "create.end",
     "shape.move.move",
     "shape.move.end"
-  ], HIGHER_PRIORITY4, function(event3) {
-    var context = event3.context, shape = context.shape, snapContext = context.snapContext, target = context.target;
-    if (event3.originalEvent && isCmd(event3.originalEvent)) {
+  ], HIGHER_PRIORITY4, function(event2) {
+    var context = event2.context, shape = context.shape, snapContext = context.snapContext, target = context.target;
+    if (event2.originalEvent && isCmd(event2.originalEvent)) {
       return;
     }
-    if (isSnapped(event3) || !target) {
+    if (isSnapped(event2) || !target) {
       return;
     }
     var snapPoints = snapContext.pointsForTarget(target);
@@ -43357,7 +40683,7 @@ function CreateMoveSnapping(elementRegistry, eventBus, snapping) {
       snapPoints = self2.addSnapTargetPoints(snapPoints, shape, target);
       snapPoints.initialized = true;
     }
-    snapping.snap(event3, snapPoints);
+    snapping.snap(event2, snapPoints);
   });
   eventBus.on([
     "create.cleanup",
@@ -43371,19 +40697,19 @@ CreateMoveSnapping.$inject = [
   "eventBus",
   "snapping"
 ];
-CreateMoveSnapping.prototype.initSnap = function(event3) {
+CreateMoveSnapping.prototype.initSnap = function(event2) {
   var elementRegistry = this._elementRegistry;
-  var context = event3.context, shape = context.shape, snapContext = context.snapContext;
+  var context = event2.context, shape = context.shape, snapContext = context.snapContext;
   if (!snapContext) {
     snapContext = context.snapContext = new SnapContext();
   }
   var shapeMid;
   if (elementRegistry.get(shape.id)) {
-    shapeMid = mid(shape, event3);
+    shapeMid = mid(shape, event2);
   } else {
     shapeMid = {
-      x: event3.x + mid(shape).x,
-      y: event3.y + mid(shape).y
+      x: event2.x + mid(shape).x,
+      y: event2.y + mid(shape).y
     };
   }
   var shapeTopLeft = {
@@ -43394,19 +40720,19 @@ CreateMoveSnapping.prototype.initSnap = function(event3) {
     y: shapeMid.y + shape.height / 2
   };
   snapContext.setSnapOrigin("mid", {
-    x: shapeMid.x - event3.x,
-    y: shapeMid.y - event3.y
+    x: shapeMid.x - event2.x,
+    y: shapeMid.y - event2.y
   });
   if (isLabel(shape)) {
     return snapContext;
   }
   snapContext.setSnapOrigin("top-left", {
-    x: shapeTopLeft.x - event3.x,
-    y: shapeTopLeft.y - event3.y
+    x: shapeTopLeft.x - event2.x,
+    y: shapeTopLeft.y - event2.y
   });
   snapContext.setSnapOrigin("bottom-right", {
-    x: shapeBottomRight.x - event3.x,
-    y: shapeBottomRight.y - event3.y
+    x: shapeBottomRight.x - event2.x,
+    y: shapeBottomRight.y - event2.y
   });
   return snapContext;
 };
@@ -43458,11 +40784,11 @@ function BpmnCreateMoveSnapping(eventBus, injector) {
     "create.end",
     "shape.move.move",
     "shape.move.end"
-  ], HIGH_PRIORITY20, function(event3) {
-    var context = event3.context, canExecute = context.canExecute, target = context.target;
+  ], HIGH_PRIORITY20, function(event2) {
+    var context = event2.context, canExecute = context.canExecute, target = context.target;
     var canAttach2 = canExecute && (canExecute === "attach" || canExecute.attach);
-    if (canAttach2 && !isSnapped(event3)) {
-      snapBoundaryEvent(event3, target);
+    if (canAttach2 && !isSnapped(event2)) {
+      snapBoundaryEvent(event2, target);
     }
   });
 }
@@ -43471,19 +40797,19 @@ BpmnCreateMoveSnapping.$inject = [
   "eventBus",
   "injector"
 ];
-BpmnCreateMoveSnapping.prototype.initSnap = function(event3) {
-  var snapContext = CreateMoveSnapping.prototype.initSnap.call(this, event3);
-  var shape = event3.shape;
+BpmnCreateMoveSnapping.prototype.initSnap = function(event2) {
+  var snapContext = CreateMoveSnapping.prototype.initSnap.call(this, event2);
+  var shape = event2.shape;
   var isMove = !!this._elementRegistry.get(shape.id);
   forEach(shape.outgoing, function(connection) {
     var docking = connection.waypoints[0];
     docking = docking.original || docking;
-    snapContext.setSnapOrigin(connection.id + "-docking", getDockingSnapOrigin(docking, isMove, event3));
+    snapContext.setSnapOrigin(connection.id + "-docking", getDockingSnapOrigin(docking, isMove, event2));
   });
   forEach(shape.incoming, function(connection) {
     var docking = connection.waypoints[connection.waypoints.length - 1];
     docking = docking.original || docking;
-    snapContext.setSnapOrigin(connection.id + "-docking", getDockingSnapOrigin(docking, isMove, event3));
+    snapContext.setSnapOrigin(connection.id + "-docking", getDockingSnapOrigin(docking, isMove, event2));
   });
   if (is(shape, "bpmn:Participant")) {
     snapContext.setSnapLocations(["top-left", "bottom-right", "mid"]);
@@ -43528,10 +40854,10 @@ BpmnCreateMoveSnapping.prototype.getSnapTargets = function(shape, target) {
     return !is(snapTarget, "bpmn:Lane");
   });
 };
-function snapBoundaryEvent(event3, target) {
+function snapBoundaryEvent(event2, target) {
   var targetTRBL = asTRBL(target);
-  var direction = getBoundaryAttachment(event3, target);
-  var context = event3.context, shape = context.shape;
+  var direction = getBoundaryAttachment(event2, target);
+  var context = event2.context, shape = context.shape;
   var offset;
   if (shape.parent) {
     offset = { x: 0, y: 0 };
@@ -43539,14 +40865,14 @@ function snapBoundaryEvent(event3, target) {
     offset = getMid(shape);
   }
   if (/top/.test(direction)) {
-    setSnapped(event3, "y", targetTRBL.top - offset.y);
+    setSnapped(event2, "y", targetTRBL.top - offset.y);
   } else if (/bottom/.test(direction)) {
-    setSnapped(event3, "y", targetTRBL.bottom - offset.y);
+    setSnapped(event2, "y", targetTRBL.bottom - offset.y);
   }
   if (/left/.test(direction)) {
-    setSnapped(event3, "x", targetTRBL.left - offset.x);
+    setSnapped(event2, "x", targetTRBL.left - offset.x);
   } else if (/right/.test(direction)) {
-    setSnapped(event3, "x", targetTRBL.right - offset.x);
+    setSnapped(event2, "x", targetTRBL.right - offset.x);
   }
 }
 function areAll(elements, type) {
@@ -43560,26 +40886,26 @@ function isContainer(element) {
   }
   return is(element, "bpmn:Participant");
 }
-function setSnappedIfConstrained(event3) {
-  var context = event3.context, createConstraints = context.createConstraints;
+function setSnappedIfConstrained(event2) {
+  var context = event2.context, createConstraints = context.createConstraints;
   if (!createConstraints) {
     return;
   }
   var top = createConstraints.top, right = createConstraints.right, bottom = createConstraints.bottom, left = createConstraints.left;
-  if (left && left >= event3.x || right && right <= event3.x) {
-    setSnapped(event3, "x", event3.x);
+  if (left && left >= event2.x || right && right <= event2.x) {
+    setSnapped(event2, "x", event2.x);
   }
-  if (top && top >= event3.y || bottom && bottom <= event3.y) {
-    setSnapped(event3, "y", event3.y);
+  if (top && top >= event2.y || bottom && bottom <= event2.y) {
+    setSnapped(event2, "y", event2.y);
   }
 }
 function includes7(array, value) {
   return array.indexOf(value) !== -1;
 }
-function getDockingSnapOrigin(docking, isMove, event3) {
+function getDockingSnapOrigin(docking, isMove, event2) {
   return isMove ? {
-    x: docking.x - event3.x,
-    y: docking.y - event3.y
+    x: docking.x - event2.x,
+    y: docking.y - event2.y
   } : {
     x: docking.x,
     y: docking.y
@@ -43590,18 +40916,18 @@ function getDockingSnapOrigin(docking, isMove, event3) {
 var HIGHER_PRIORITY5 = 1250;
 function ResizeSnapping(eventBus, snapping) {
   var self2 = this;
-  eventBus.on(["resize.start"], function(event3) {
-    self2.initSnap(event3);
+  eventBus.on(["resize.start"], function(event2) {
+    self2.initSnap(event2);
   });
   eventBus.on([
     "resize.move",
     "resize.end"
-  ], HIGHER_PRIORITY5, function(event3) {
-    var context = event3.context, shape = context.shape, parent = shape.parent, direction = context.direction, snapContext = context.snapContext;
-    if (event3.originalEvent && isCmd(event3.originalEvent)) {
+  ], HIGHER_PRIORITY5, function(event2) {
+    var context = event2.context, shape = context.shape, parent = shape.parent, direction = context.direction, snapContext = context.snapContext;
+    if (event2.originalEvent && isCmd(event2.originalEvent)) {
       return;
     }
-    if (isSnapped(event3)) {
+    if (isSnapped(event2)) {
       return;
     }
     var snapPoints = snapContext.pointsForTarget(parent);
@@ -43610,26 +40936,26 @@ function ResizeSnapping(eventBus, snapping) {
       snapPoints.initialized = true;
     }
     if (isHorizontal4(direction)) {
-      setSnapped(event3, "x", event3.x);
+      setSnapped(event2, "x", event2.x);
     }
     if (isVertical(direction)) {
-      setSnapped(event3, "y", event3.y);
+      setSnapped(event2, "y", event2.y);
     }
-    snapping.snap(event3, snapPoints);
+    snapping.snap(event2, snapPoints);
   });
   eventBus.on(["resize.cleanup"], function() {
     snapping.hide();
   });
 }
-ResizeSnapping.prototype.initSnap = function(event3) {
-  var context = event3.context, shape = context.shape, direction = context.direction, snapContext = context.snapContext;
+ResizeSnapping.prototype.initSnap = function(event2) {
+  var context = event2.context, shape = context.shape, direction = context.direction, snapContext = context.snapContext;
   if (!snapContext) {
     snapContext = context.snapContext = new SnapContext();
   }
   var snapOrigin = getSnapOrigin(shape, direction);
   snapContext.setSnapOrigin("corner", {
-    x: snapOrigin.x - event3.x,
-    y: snapOrigin.y - event3.y
+    x: snapOrigin.x - event2.x,
+    y: snapOrigin.y - event2.y
   });
   return snapContext;
 };
@@ -43690,17 +41016,17 @@ function Snapping(canvas) {
   this._asyncHide = debounce(bind(this.hide, this), SNAP_LINE_HIDE_DELAY);
 }
 Snapping.$inject = ["canvas"];
-Snapping.prototype.snap = function(event3, snapPoints) {
-  var context = event3.context, snapContext = context.snapContext, snapLocations = snapContext.getSnapLocations();
+Snapping.prototype.snap = function(event2, snapPoints) {
+  var context = event2.context, snapContext = context.snapContext, snapLocations = snapContext.getSnapLocations();
   var snapping = {
-    x: isSnapped(event3, "x"),
-    y: isSnapped(event3, "y")
+    x: isSnapped(event2, "x"),
+    y: isSnapped(event2, "y")
   };
   forEach(snapLocations, function(location) {
     var snapOrigin = snapContext.getSnapOrigin(location);
     var snapCurrent = {
-      x: event3.x + snapOrigin.x,
-      y: event3.y + snapOrigin.y
+      x: event2.x + snapOrigin.x,
+      y: event2.y + snapOrigin.y
     };
     forEach(["x", "y"], function(axis) {
       var locationSnapping;
@@ -43723,7 +41049,7 @@ Snapping.prototype.snap = function(event3, snapPoints) {
   forEach(["x", "y"], function(axis) {
     var axisSnapping = snapping[axis];
     if (isObject(axisSnapping)) {
-      setSnapped(event3, axis, axisSnapping.originValue);
+      setSnapped(event2, axis, axisSnapping.originValue);
     }
   });
 };
@@ -43802,25 +41128,32 @@ var snapping_default2 = {
 };
 
 // node_modules/diagram-js/lib/features/search-pad/SearchPad.js
-function SearchPad(canvas, eventBus, overlays, selection2, translate4) {
+var SCROLL_TO_ELEMENT_PADDING = 300;
+function SearchPad(canvas, eventBus, selection2, translate4) {
   this._open = false;
-  this._results = [];
+  this._results = {};
   this._eventMaps = [];
+  this._cachedRootElement = null;
+  this._cachedSelection = null;
+  this._cachedViewbox = null;
   this._canvas = canvas;
   this._eventBus = eventBus;
-  this._overlays = overlays;
   this._selection = selection2;
   this._translate = translate4;
   this._container = this._getBoxHtml();
   this._searchInput = query(SearchPad.INPUT_SELECTOR, this._container);
   this._resultsContainer = query(SearchPad.RESULTS_CONTAINER_SELECTOR, this._container);
   this._canvas.getContainer().appendChild(this._container);
-  eventBus.on(["canvas.destroy", "diagram.destroy"], this.close, this);
+  eventBus.on([
+    "canvas.destroy",
+    "diagram.destroy",
+    "drag.init",
+    "elements.changed"
+  ], this.close, this);
 }
 SearchPad.$inject = [
   "canvas",
   "eventBus",
-  "overlays",
   "selection",
   "translate"
 ];
@@ -43834,7 +41167,7 @@ SearchPad.prototype._bindEvents = function() {
     });
   }
   listen(document, "html", "click", function(e8) {
-    self2.close();
+    self2.close(false);
   });
   listen(this._container, SearchPad.INPUT_SELECTOR, "click", function(e8) {
     e8.stopPropagation();
@@ -43863,7 +41196,7 @@ SearchPad.prototype._bindEvents = function() {
     }
     if (isKey("Enter", e8)) {
       var selected = self2._getCurrentResult();
-      return selected ? self2._select(selected) : self2.close();
+      return selected ? self2._select(selected) : self2.close(false);
     }
     if (isKey("ArrowUp", e8)) {
       return self2._scrollToDirection(true);
@@ -43878,18 +41211,22 @@ SearchPad.prototype._bindEvents = function() {
   });
 };
 SearchPad.prototype._unbindEvents = function() {
-  this._eventMaps.forEach(function(m5) {
-    delegate.unbind(m5.el, m5.type, m5.listener);
+  this._eventMaps.forEach(function(m6) {
+    delegate.unbind(m6.el, m6.type, m6.listener);
   });
 };
 SearchPad.prototype._search = function(pattern) {
   var self2 = this;
   this._clearResults();
-  if (!pattern || pattern === "") {
+  if (!pattern.trim()) {
     return;
   }
   var searchResults = this._searchProvider.find(pattern);
+  searchResults = searchResults.filter(function(searchResult) {
+    return !self2._canvas.getRootElements().includes(searchResult.element);
+  });
   if (!searchResults.length) {
+    this._selection.select(null);
     return;
   }
   searchResults.forEach(function(result) {
@@ -43930,8 +41267,7 @@ SearchPad.prototype._scrollToNode = function(node2) {
 };
 SearchPad.prototype._clearResults = function() {
   clear2(this._resultsContainer);
-  this._results = [];
-  this._resetOverlay();
+  this._results = {};
   this._eventBus.fire("searchPad.cleared");
 };
 SearchPad.prototype._getCurrentResult = function() {
@@ -43957,24 +41293,45 @@ SearchPad.prototype.open = function() {
   if (this.isOpen()) {
     return;
   }
+  this._cachedRootElement = this._canvas.getRootElement();
+  this._cachedSelection = this._selection.get();
+  this._cachedViewbox = this._canvas.viewbox();
+  this._selection.select(null);
   this._bindEvents();
   this._open = true;
+  classes2(this._canvas.getContainer()).add("djs-search-open");
   classes2(this._container).add("open");
   this._searchInput.focus();
   this._eventBus.fire("searchPad.opened");
 };
-SearchPad.prototype.close = function() {
+SearchPad.prototype.close = function(restoreCached = true) {
   if (!this.isOpen()) {
     return;
   }
+  if (restoreCached) {
+    if (this._cachedRootElement) {
+      this._canvas.setRootElement(this._cachedRootElement);
+    }
+    if (this._cachedSelection) {
+      this._selection.select(this._cachedSelection);
+    }
+    if (this._cachedViewbox) {
+      this._canvas.viewbox(this._cachedViewbox);
+    }
+    this._eventBus.fire("searchPad.restored");
+  }
+  this._cachedRootElement = null;
+  this._cachedSelection = null;
+  this._cachedViewbox = null;
   this._unbindEvents();
   this._open = false;
+  classes2(this._canvas.getContainer()).remove("djs-search-open");
   classes2(this._container).remove("open");
   this._clearResults();
   this._searchInput.value = "";
   this._searchInput.blur();
-  this._resetOverlay();
   this._eventBus.fire("searchPad.closed");
+  this._canvas.restoreFocus();
 };
 SearchPad.prototype.toggle = function() {
   this.isOpen() ? this.close() : this.open();
@@ -43993,29 +41350,23 @@ SearchPad.prototype._preselect = function(node2) {
   var id = attr2(node2, SearchPad.RESULT_ID_ATTRIBUTE);
   var element = this._results[id].element;
   classes2(node2).add(SearchPad.RESULT_SELECTED_CLASS);
-  this._resetOverlay(element);
-  this._canvas.scrollToElement(element, { top: 400 });
+  this._canvas.scrollToElement(element, {
+    top: SCROLL_TO_ELEMENT_PADDING
+  });
   this._selection.select(element);
   this._eventBus.fire("searchPad.preselected", element);
 };
 SearchPad.prototype._select = function(node2) {
   var id = attr2(node2, SearchPad.RESULT_ID_ATTRIBUTE);
   var element = this._results[id].element;
-  this.close();
-  this._resetOverlay();
-  this._canvas.scrollToElement(element, { top: 400 });
+  this._cachedSelection = null;
+  this._cachedViewbox = null;
+  this.close(false);
+  this._canvas.scrollToElement(element, {
+    top: SCROLL_TO_ELEMENT_PADDING
+  });
   this._selection.select(element);
   this._eventBus.fire("searchPad.selected", element);
-};
-SearchPad.prototype._resetOverlay = function(element) {
-  if (this._overlayId) {
-    this._overlays.remove(this._overlayId);
-  }
-  if (element) {
-    var box = getBBox(element);
-    var overlay = constructOverlay(box);
-    this._overlayId = this._overlays.add(element, overlay);
-  }
 };
 SearchPad.prototype._getBoxHtml = function() {
   const box = domify$1(SearchPad.BOX_HTML);
@@ -44025,25 +41376,6 @@ SearchPad.prototype._getBoxHtml = function() {
   }
   return box;
 };
-function constructOverlay(box) {
-  var offset = 6;
-  var w6 = box.width + offset * 2;
-  var h5 = box.height + offset * 2;
-  var styles = {
-    width: w6 + "px",
-    height: h5 + "px"
-  };
-  var html = domify$1('<div class="' + SearchPad.OVERLAY_CLASS + '"></div>');
-  assign2(html, styles);
-  return {
-    position: {
-      bottom: h5 - offset,
-      right: w6 - offset
-    },
-    show: true,
-    html
-  };
-}
 function createInnerTextNode(parentNode, tokens, template) {
   var text = createHtmlText(tokens);
   var childNode = domify$1(template);
@@ -44053,10 +41385,12 @@ function createInnerTextNode(parentNode, tokens, template) {
 function createHtmlText(tokens) {
   var htmlText = "";
   tokens.forEach(function(t7) {
-    if (t7.matched) {
-      htmlText += '<strong class="' + SearchPad.RESULT_HIGHLIGHT_CLASS + '">' + escapeHTML(t7.matched) + "</strong>";
+    var text = escapeHTML(t7.value || t7.matched || t7.normal);
+    var match = t7.match || t7.matched;
+    if (match) {
+      htmlText += '<b class="' + SearchPad.RESULT_HIGHLIGHT_CLASS + '">' + text + "</b>";
     } else {
-      htmlText += escapeHTML(t7.normal);
+      htmlText += text;
     }
   });
   return htmlText !== "" ? htmlText : null;
@@ -44069,8 +41403,15 @@ SearchPad.RESULT_SELECTED_CLASS = "djs-search-result-selected";
 SearchPad.RESULT_SELECTED_SELECTOR = "." + SearchPad.RESULT_SELECTED_CLASS;
 SearchPad.RESULT_ID_ATTRIBUTE = "data-result-id";
 SearchPad.RESULT_HIGHLIGHT_CLASS = "djs-search-highlight";
-SearchPad.OVERLAY_CLASS = "djs-search-overlay";
-SearchPad.BOX_HTML = '<div class="djs-search-container djs-draggable djs-scrollable"><div class="djs-search-input"><input type="text"/></div><div class="djs-search-results"></div></div>';
+SearchPad.BOX_HTML = `<div class="djs-search-container djs-scrollable">
+  <div class="djs-search-input">
+    <svg class="djs-search-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.0325 8.5H9.625L13.3675 12.25L12.25 13.3675L8.5 9.625V9.0325L8.2975 8.8225C7.4425 9.5575 6.3325 10 5.125 10C2.4325 10 0.25 7.8175 0.25 5.125C0.25 2.4325 2.4325 0.25 5.125 0.25C7.8175 0.25 10 2.4325 10 5.125C10 6.3325 9.5575 7.4425 8.8225 8.2975L9.0325 8.5ZM1.75 5.125C1.75 6.9925 3.2575 8.5 5.125 8.5C6.9925 8.5 8.5 6.9925 8.5 5.125C8.5 3.2575 6.9925 1.75 5.125 1.75C3.2575 1.75 1.75 3.2575 1.75 5.125Z" fill="#22242A"/>
+    </svg>
+    <input type="text" spellcheck="false" />
+  </div>
+  <div class="djs-search-results" />
+</div>`;
 SearchPad.RESULT_HTML = '<div class="djs-search-result"></div>';
 SearchPad.RESULT_PRIMARY_HTML = '<div class="djs-search-result-primary"></div>';
 SearchPad.RESULT_SECONDARY_HTML = '<p class="djs-search-result-secondary"></p>';
@@ -44086,91 +41427,189 @@ var search_pad_default = {
 };
 
 // node_modules/bpmn-js/lib/features/search/BpmnSearchProvider.js
-function BpmnSearchProvider(elementRegistry, searchPad, canvas) {
+function BpmnSearchProvider(elementRegistry, searchPad, canvas, search2) {
   this._elementRegistry = elementRegistry;
   this._canvas = canvas;
+  this._search = search2;
   searchPad.registerProvider(this);
 }
 BpmnSearchProvider.$inject = [
   "elementRegistry",
   "searchPad",
-  "canvas"
+  "canvas",
+  "search"
 ];
 BpmnSearchProvider.prototype.find = function(pattern) {
   var rootElements = this._canvas.getRootElements();
   var elements = this._elementRegistry.filter(function(element) {
-    if (element.labelTarget) {
-      return false;
+    return !isLabel(element) && !rootElements.includes(element);
+  });
+  return this._search(
+    elements.map((element) => {
+      return {
+        element,
+        label: getLabel(element),
+        id: element.id
+      };
+    }),
+    pattern,
+    {
+      keys: [
+        "label",
+        "id"
+      ]
     }
-    return true;
-  });
-  elements = filter(elements, function(element) {
-    return !rootElements.includes(element);
-  });
-  elements = map(elements, function(element) {
-    return {
-      primaryTokens: matchAndSplit(getLabel(element), pattern),
-      secondaryTokens: matchAndSplit(element.id, pattern),
-      element
-    };
-  });
-  elements = filter(elements, function(element) {
-    return hasMatched(element.primaryTokens) || hasMatched(element.secondaryTokens);
-  });
-  elements = sortBy(elements, function(element) {
-    return getLabel(element.element) + element.element.id;
-  });
-  return elements;
+  ).map(toSearchPadResult);
 };
-function hasMatched(tokens) {
-  var matched = filter(tokens, function(token) {
-    return !!token.matched;
-  });
-  return matched.length > 0;
-}
-function matchAndSplit(text, pattern) {
-  var tokens = [], originalText = text;
-  if (!text) {
-    return tokens;
-  }
-  text = text.toLowerCase();
-  pattern = pattern.toLowerCase();
-  var i7 = text.indexOf(pattern);
-  if (i7 > -1) {
-    if (i7 !== 0) {
-      tokens.push({
-        normal: originalText.substr(0, i7)
-      });
-    }
-    tokens.push({
-      matched: originalText.substr(i7, pattern.length)
-    });
-    if (pattern.length + i7 < text.length) {
-      tokens.push({
-        normal: originalText.substr(pattern.length + i7, text.length)
-      });
-    }
-  } else {
-    tokens.push({
-      normal: originalText
-    });
-  }
-  return tokens;
+function toSearchPadResult(result) {
+  const {
+    item: {
+      element
+    },
+    tokens
+  } = result;
+  return {
+    element,
+    primaryTokens: tokens.label,
+    secondaryTokens: tokens.id
+  };
 }
 
 // node_modules/bpmn-js/lib/features/search/index.js
-var search_default = {
+var search_default2 = {
   __depends__: [
-    search_pad_default
+    search_pad_default,
+    search_default
   ],
   __init__: ["bpmnSearch"],
   bpmnSearch: ["type", BpmnSearchProvider]
 };
 
+// node_modules/bpmn-js/lib/features/outline/OutlineUtil.js
+var DATA_OBJECT_REFERENCE_OUTLINE_PATH = "M44.7648 11.3263L36.9892 2.64074C36.0451 1.58628 34.5651 0.988708 33.1904 0.988708H5.98667C3.22688 0.988708 0.989624 3.34892 0.989624 6.26039V55.0235C0.989624 57.9349 3.22688 60.2952 5.98667 60.2952H40.966C43.7257 60.2952 45.963 57.9349 45.963 55.0235V14.9459C45.963 13.5998 45.6407 12.3048 44.7648 11.3263Z";
+var DATA_STORE_REFERENCE_OUTLINE_PATH = "M1.03845 48.1347C1.03845 49.3511 1.07295 50.758 1.38342 52.064C1.69949 53.3938 2.32428 54.7154 3.56383 55.6428C6.02533 57.4841 10.1161 58.7685 14.8212 59.6067C19.5772 60.4538 25.1388 60.8738 30.6831 60.8738C36.2276 60.8738 41.7891 60.4538 46.545 59.6067C51.2504 58.7687 55.3412 57.4842 57.8028 55.6429C59.0424 54.7156 59.6673 53.3938 59.9834 52.064C60.2938 50.7579 60.3285 49.351 60.3285 48.1344V13.8415C60.3285 12.6249 60.2938 11.218 59.9834 9.91171C59.6673 8.58194 59.0423 7.2602 57.8027 6.33294C55.341 4.49168 51.2503 3.20723 46.545 2.36914C41.7891 1.522 36.2276 1.10204 30.6831 1.10205C25.1388 1.10206 19.5772 1.52206 14.8213 2.36923C10.1162 3.20734 6.02543 4.49183 3.5639 6.33314C2.32433 7.26038 1.69951 8.58206 1.38343 9.91181C1.07295 11.2179 1.03845 12.6247 1.03845 13.8411V48.1347Z";
+var DATA_OBJECT_REFERENCE_STANDARD_SIZE = { width: 36, height: 50 };
+var DATA_STORE_REFERENCE_STANDARD_SIZE = { width: 50, height: 50 };
+function createPath(path, attrs, OUTLINE_STYLE) {
+  return create("path", {
+    d: path,
+    strokeWidth: 2,
+    transform: `translate(${attrs.x}, ${attrs.y})`,
+    ...OUTLINE_STYLE
+  });
+}
+
+// node_modules/bpmn-js/lib/features/outline/OutlineProvider.js
+var DEFAULT_OFFSET = 5;
+function OutlineProvider(outline, styles) {
+  this._styles = styles;
+  outline.registerProvider(this);
+}
+OutlineProvider.$inject = [
+  "outline",
+  "styles"
+];
+OutlineProvider.prototype.getOutline = function(element) {
+  const OUTLINE_STYLE = this._styles.cls("djs-outline", ["no-fill"]);
+  var outline;
+  if (isLabel(element)) {
+    return;
+  }
+  if (is(element, "bpmn:Gateway")) {
+    outline = create("rect");
+    assign(outline.style, {
+      "transform-box": "fill-box",
+      "transform": "rotate(45deg)",
+      "transform-origin": "center"
+    });
+    attr(outline, assign({
+      x: 2,
+      y: 2,
+      rx: 4,
+      width: element.width - 4,
+      height: element.height - 4
+    }, OUTLINE_STYLE));
+  } else if (isAny(element, ["bpmn:Task", "bpmn:SubProcess", "bpmn:Group", "bpmn:CallActivity"])) {
+    outline = create("rect");
+    attr(outline, assign({
+      x: -DEFAULT_OFFSET,
+      y: -DEFAULT_OFFSET,
+      rx: 14,
+      width: element.width + DEFAULT_OFFSET * 2,
+      height: element.height + DEFAULT_OFFSET * 2
+    }, OUTLINE_STYLE));
+  } else if (is(element, "bpmn:EndEvent")) {
+    outline = create("circle");
+    attr(outline, assign({
+      cx: element.width / 2,
+      cy: element.height / 2,
+      r: element.width / 2 + DEFAULT_OFFSET + 1
+    }, OUTLINE_STYLE));
+  } else if (is(element, "bpmn:Event")) {
+    outline = create("circle");
+    attr(outline, assign({
+      cx: element.width / 2,
+      cy: element.height / 2,
+      r: element.width / 2 + DEFAULT_OFFSET
+    }, OUTLINE_STYLE));
+  } else if (is(element, "bpmn:DataObjectReference") && isStandardSize(element, "bpmn:DataObjectReference")) {
+    outline = createPath(
+      DATA_OBJECT_REFERENCE_OUTLINE_PATH,
+      { x: -6, y: -6 },
+      OUTLINE_STYLE
+    );
+  } else if (is(element, "bpmn:DataStoreReference") && isStandardSize(element, "bpmn:DataStoreReference")) {
+    outline = createPath(
+      DATA_STORE_REFERENCE_OUTLINE_PATH,
+      { x: -6, y: -6 },
+      OUTLINE_STYLE
+    );
+  }
+  return outline;
+};
+OutlineProvider.prototype.updateOutline = function(element, outline) {
+  if (isLabel(element)) {
+    return;
+  }
+  if (isAny(element, ["bpmn:SubProcess", "bpmn:Group"])) {
+    attr(outline, {
+      width: element.width + DEFAULT_OFFSET * 2,
+      height: element.height + DEFAULT_OFFSET * 2
+    });
+    return true;
+  } else if (isAny(element, [
+    "bpmn:Event",
+    "bpmn:Gateway",
+    "bpmn:DataStoreReference",
+    "bpmn:DataObjectReference"
+  ])) {
+    return true;
+  }
+  return false;
+};
+function isStandardSize(element, type) {
+  var standardSize;
+  if (type === "bpmn:DataObjectReference") {
+    standardSize = DATA_OBJECT_REFERENCE_STANDARD_SIZE;
+  } else if (type === "bpmn:DataStoreReference") {
+    standardSize = DATA_STORE_REFERENCE_STANDARD_SIZE;
+  }
+  return element.width === standardSize.width && element.height === standardSize.height;
+}
+
+// node_modules/bpmn-js/lib/features/outline/index.js
+var outline_default2 = {
+  __depends__: [
+    outline_default
+  ],
+  __init__: ["outlineProvider"],
+  outlineProvider: ["type", OutlineProvider]
+};
+
 // node_modules/bpmn-js/lib/Modeler.js
 var initialDiagram = '<?xml version="1.0" encoding="UTF-8"?><bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" targetNamespace="http://bpmn.io/schema/bpmn" id="Definitions_1"><bpmn:process id="Process_1" isExecutable="false"><bpmn:startEvent id="StartEvent_1"/></bpmn:process><bpmndi:BPMNDiagram id="BPMNDiagram_1"><bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1"><bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1"><dc:Bounds height="36.0" width="36.0" x="173.0" y="102.0"/></bpmndi:BPMNShape></bpmndi:BPMNPlane></bpmndi:BPMNDiagram></bpmn:definitions>';
-function Modeler(options2) {
-  BaseModeler.call(this, options2);
+function Modeler(options) {
+  BaseModeler.call(this, options);
 }
 e(Modeler, BaseModeler);
 Modeler.Viewer = Viewer;
@@ -44210,7 +41649,8 @@ Modeler.prototype._modelingModules = [
   replace_preview_default,
   resize_default,
   snapping_default2,
-  search_default
+  search_default2,
+  outline_default2
 ];
 Modeler.prototype._modules = [].concat(
   Viewer.prototype._modules,
@@ -44256,13 +41696,13 @@ function _3() {
 function g3(n4) {
   return n4.children;
 }
-function b3(n4, l5) {
+function b2(n4, l5) {
   this.props = n4, this.context = l5;
 }
-function m3(n4, l5) {
-  if (null == l5) return n4.__ ? m3(n4.__, n4.__i + 1) : null;
+function m4(n4, l5) {
+  if (null == l5) return n4.__ ? m4(n4.__, n4.__i + 1) : null;
   for (var u6; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) return u6.__e;
-  return "function" == typeof n4.type ? m3(n4) : null;
+  return "function" == typeof n4.type ? m4(n4) : null;
 }
 function k3(n4) {
   var l5, u6;
@@ -44279,18 +41719,18 @@ function w3(n4) {
 }
 function x3() {
   var n4, u6, t7, o5, r7, e8, c5, s5, a6;
-  for (i3.sort(f3); n4 = i3.shift(); ) n4.__d && (u6 = i3.length, o5 = void 0, e8 = (r7 = (t7 = n4).__v).__e, s5 = [], a6 = [], (c5 = t7.__P) && ((o5 = v3({}, r7)).__v = r7.__v + 1, l3.vnode && l3.vnode(o5), L2(c5, o5, r7, t7.__n, void 0 !== c5.ownerSVGElement, 32 & r7.__u ? [e8] : null, s5, null == e8 ? m3(r7) : e8, !!(32 & r7.__u), a6), o5.__.__k[o5.__i] = o5, M2(s5, o5, a6), o5.__e != e8 && k3(o5)), i3.length > u6 && i3.sort(f3));
+  for (i3.sort(f3); n4 = i3.shift(); ) n4.__d && (u6 = i3.length, o5 = void 0, e8 = (r7 = (t7 = n4).__v).__e, s5 = [], a6 = [], (c5 = t7.__P) && ((o5 = v3({}, r7)).__v = r7.__v + 1, l3.vnode && l3.vnode(o5), L2(c5, o5, r7, t7.__n, void 0 !== c5.ownerSVGElement, 32 & r7.__u ? [e8] : null, s5, null == e8 ? m4(r7) : e8, !!(32 & r7.__u), a6), o5.__.__k[o5.__i] = o5, M2(s5, o5, a6), o5.__e != e8 && k3(o5)), i3.length > u6 && i3.sort(f3));
   x3.__r = 0;
 }
 function C3(n4, l5, u6, t7, i7, o5, r7, f6, e8, a6, h5) {
-  var v5, p5, y5, d5, _5, g6 = t7 && t7.__k || s3, b5 = l5.length;
-  for (u6.__d = e8, P3(u6, l5, g6), e8 = u6.__d, v5 = 0; v5 < b5; v5++) null != (y5 = u6.__k[v5]) && "boolean" != typeof y5 && "function" != typeof y5 && (p5 = -1 === y5.__i ? c3 : g6[y5.__i] || c3, y5.__i = v5, L2(n4, y5, p5, i7, o5, r7, f6, e8, a6, h5), d5 = y5.__e, y5.ref && p5.ref != y5.ref && (p5.ref && z3(p5.ref, null, y5), h5.push(y5.ref, y5.__c || d5, y5)), null == _5 && null != d5 && (_5 = d5), 65536 & y5.__u || p5.__k === y5.__k ? e8 = S2(y5, e8, n4) : "function" == typeof y5.type && void 0 !== y5.__d ? e8 = y5.__d : d5 && (e8 = d5.nextSibling), y5.__d = void 0, y5.__u &= -196609);
+  var v5, p5, y5, d5, _5, g6 = t7 && t7.__k || s3, b4 = l5.length;
+  for (u6.__d = e8, P3(u6, l5, g6), e8 = u6.__d, v5 = 0; v5 < b4; v5++) null != (y5 = u6.__k[v5]) && "boolean" != typeof y5 && "function" != typeof y5 && (p5 = -1 === y5.__i ? c3 : g6[y5.__i] || c3, y5.__i = v5, L2(n4, y5, p5, i7, o5, r7, f6, e8, a6, h5), d5 = y5.__e, y5.ref && p5.ref != y5.ref && (p5.ref && z3(p5.ref, null, y5), h5.push(y5.ref, y5.__c || d5, y5)), null == _5 && null != d5 && (_5 = d5), 65536 & y5.__u || p5.__k === y5.__k ? e8 = S2(y5, e8, n4) : "function" == typeof y5.type && void 0 !== y5.__d ? e8 = y5.__d : d5 && (e8 = d5.nextSibling), y5.__d = void 0, y5.__u &= -196609);
   u6.__d = e8, u6.__e = _5;
 }
 function P3(n4, l5, u6) {
   var t7, i7, o5, r7, f6, e8 = l5.length, c5 = u6.length, s5 = c5, a6 = 0;
-  for (n4.__k = [], t7 = 0; t7 < e8; t7++) null != (i7 = n4.__k[t7] = null == (i7 = l5[t7]) || "boolean" == typeof i7 || "function" == typeof i7 ? null : "string" == typeof i7 || "number" == typeof i7 || "bigint" == typeof i7 || i7.constructor == String ? d3(null, i7, null, null, i7) : h3(i7) ? d3(g3, { children: i7 }, null, null, null) : void 0 === i7.constructor && i7.__b > 0 ? d3(i7.type, i7.props, i7.key, i7.ref ? i7.ref : null, i7.__v) : i7) ? (i7.__ = n4, i7.__b = n4.__b + 1, f6 = H2(i7, u6, r7 = t7 + a6, s5), i7.__i = f6, o5 = null, -1 !== f6 && (s5--, (o5 = u6[f6]) && (o5.__u |= 131072)), null == o5 || null === o5.__v ? (-1 == f6 && a6--, "function" != typeof i7.type && (i7.__u |= 65536)) : f6 !== r7 && (f6 === r7 + 1 ? a6++ : f6 > r7 ? s5 > e8 - r7 ? a6 += f6 - r7 : a6-- : a6 = f6 < r7 && f6 == r7 - 1 ? f6 - r7 : 0, f6 !== t7 + a6 && (i7.__u |= 65536))) : (o5 = u6[t7]) && null == o5.key && o5.__e && (o5.__e == n4.__d && (n4.__d = m3(o5)), N2(o5, o5, false), u6[t7] = null, s5--);
-  if (s5) for (t7 = 0; t7 < c5; t7++) null != (o5 = u6[t7]) && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = m3(o5)), N2(o5, o5));
+  for (n4.__k = [], t7 = 0; t7 < e8; t7++) null != (i7 = n4.__k[t7] = null == (i7 = l5[t7]) || "boolean" == typeof i7 || "function" == typeof i7 ? null : "string" == typeof i7 || "number" == typeof i7 || "bigint" == typeof i7 || i7.constructor == String ? d3(null, i7, null, null, i7) : h3(i7) ? d3(g3, { children: i7 }, null, null, null) : void 0 === i7.constructor && i7.__b > 0 ? d3(i7.type, i7.props, i7.key, i7.ref ? i7.ref : null, i7.__v) : i7) ? (i7.__ = n4, i7.__b = n4.__b + 1, f6 = H(i7, u6, r7 = t7 + a6, s5), i7.__i = f6, o5 = null, -1 !== f6 && (s5--, (o5 = u6[f6]) && (o5.__u |= 131072)), null == o5 || null === o5.__v ? (-1 == f6 && a6--, "function" != typeof i7.type && (i7.__u |= 65536)) : f6 !== r7 && (f6 === r7 + 1 ? a6++ : f6 > r7 ? s5 > e8 - r7 ? a6 += f6 - r7 : a6-- : a6 = f6 < r7 && f6 == r7 - 1 ? f6 - r7 : 0, f6 !== t7 + a6 && (i7.__u |= 65536))) : (o5 = u6[t7]) && null == o5.key && o5.__e && (o5.__e == n4.__d && (n4.__d = m4(o5)), N2(o5, o5, false), u6[t7] = null, s5--);
+  if (s5) for (t7 = 0; t7 < c5; t7++) null != (o5 = u6[t7]) && 0 == (131072 & o5.__u) && (o5.__e == n4.__d && (n4.__d = m4(o5)), N2(o5, o5));
 }
 function S2(n4, l5, u6) {
   var t7, i7;
@@ -44305,7 +41745,7 @@ function $2(n4, l5) {
     $2(n5, l5);
   }) : l5.push(n4)), l5;
 }
-function H2(n4, l5, u6, t7) {
+function H(n4, l5, u6, t7) {
   var i7 = n4.key, o5 = n4.type, r7 = u6 - 1, f6 = u6 + 1, e8 = l5[u6];
   if (null === e8 || e8 && i7 == e8.key && o5 === e8.type) return u6;
   if (t7 > (null != e8 && 0 == (131072 & e8.__u) ? 1 : 0)) for (; r7 >= 0 || f6 < l5.length; ) {
@@ -44323,7 +41763,7 @@ function H2(n4, l5, u6, t7) {
 function I2(n4, l5, u6) {
   "-" === l5[0] ? n4.setProperty(l5, null == u6 ? "" : u6) : n4[l5] = null == u6 ? "" : "number" != typeof u6 || a3.test(l5) ? u6 : u6 + "px";
 }
-function T2(n4, l5, u6, t7, i7) {
+function T3(n4, l5, u6, t7, i7) {
   var o5;
   n: if ("style" === l5) if ("string" == typeof u6) n4.style.cssText = u6;
   else {
@@ -44352,11 +41792,11 @@ function D3(n4) {
   return this.l[n4.type + true](l3.event ? l3.event(n4) : n4);
 }
 function L2(n4, u6, t7, i7, o5, r7, f6, e8, c5, s5) {
-  var a6, p5, y5, d5, _5, m5, k6, w6, x6, P5, S3, $4, H4, I4, T5, A6 = u6.type;
+  var a6, p5, y5, d5, _5, m6, k6, w6, x6, P5, S3, $4, H3, I4, T6, A6 = u6.type;
   if (void 0 !== u6.constructor) return null;
   128 & t7.__u && (c5 = !!(32 & t7.__u), r7 = [e8 = u6.__e = t7.__e]), (a6 = l3.__b) && a6(u6);
   n: if ("function" == typeof A6) try {
-    if (w6 = u6.props, x6 = (a6 = A6.contextType) && i7[a6.__c], P5 = a6 ? x6 ? x6.props.value : a6.__ : i7, t7.__c ? k6 = (p5 = u6.__c = t7.__c).__ = p5.__E : ("prototype" in A6 && A6.prototype.render ? u6.__c = p5 = new A6(w6, P5) : (u6.__c = p5 = new b3(w6, P5), p5.constructor = A6, p5.render = O2), x6 && x6.sub(p5), p5.props = w6, p5.state || (p5.state = {}), p5.context = P5, p5.__n = i7, y5 = p5.__d = true, p5.__h = [], p5._sb = []), null == p5.__s && (p5.__s = p5.state), null != A6.getDerivedStateFromProps && (p5.__s == p5.state && (p5.__s = v3({}, p5.__s)), v3(p5.__s, A6.getDerivedStateFromProps(w6, p5.__s))), d5 = p5.props, _5 = p5.state, p5.__v = u6, y5) null == A6.getDerivedStateFromProps && null != p5.componentWillMount && p5.componentWillMount(), null != p5.componentDidMount && p5.__h.push(p5.componentDidMount);
+    if (w6 = u6.props, x6 = (a6 = A6.contextType) && i7[a6.__c], P5 = a6 ? x6 ? x6.props.value : a6.__ : i7, t7.__c ? k6 = (p5 = u6.__c = t7.__c).__ = p5.__E : ("prototype" in A6 && A6.prototype.render ? u6.__c = p5 = new A6(w6, P5) : (u6.__c = p5 = new b2(w6, P5), p5.constructor = A6, p5.render = O2), x6 && x6.sub(p5), p5.props = w6, p5.state || (p5.state = {}), p5.context = P5, p5.__n = i7, y5 = p5.__d = true, p5.__h = [], p5._sb = []), null == p5.__s && (p5.__s = p5.state), null != A6.getDerivedStateFromProps && (p5.__s == p5.state && (p5.__s = v3({}, p5.__s)), v3(p5.__s, A6.getDerivedStateFromProps(w6, p5.__s))), d5 = p5.props, _5 = p5.state, p5.__v = u6, y5) null == A6.getDerivedStateFromProps && null != p5.componentWillMount && p5.componentWillMount(), null != p5.componentDidMount && p5.__h.push(p5.componentDidMount);
     else {
       if (null == A6.getDerivedStateFromProps && w6 !== d5 && null != p5.componentWillReceiveProps && p5.componentWillReceiveProps(w6, P5), !p5.__e && (null != p5.shouldComponentUpdate && false === p5.shouldComponentUpdate(w6, p5.__s, P5) || u6.__v === t7.__v)) {
         for (u6.__v !== t7.__v && (p5.props = w6, p5.state = p5.__s, p5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.forEach(function(n5) {
@@ -44366,16 +41806,16 @@ function L2(n4, u6, t7, i7, o5, r7, f6, e8, c5, s5) {
         break n;
       }
       null != p5.componentWillUpdate && p5.componentWillUpdate(w6, p5.__s, P5), null != p5.componentDidUpdate && p5.__h.push(function() {
-        p5.componentDidUpdate(d5, _5, m5);
+        p5.componentDidUpdate(d5, _5, m6);
       });
     }
-    if (p5.context = P5, p5.props = w6, p5.__P = n4, p5.__e = false, $4 = l3.__r, H4 = 0, "prototype" in A6 && A6.prototype.render) {
+    if (p5.context = P5, p5.props = w6, p5.__P = n4, p5.__e = false, $4 = l3.__r, H3 = 0, "prototype" in A6 && A6.prototype.render) {
       for (p5.state = p5.__s, p5.__d = false, $4 && $4(u6), a6 = p5.render(p5.props, p5.state, p5.context), I4 = 0; I4 < p5._sb.length; I4++) p5.__h.push(p5._sb[I4]);
       p5._sb = [];
     } else do {
       p5.__d = false, $4 && $4(u6), a6 = p5.render(p5.props, p5.state, p5.context), p5.state = p5.__s;
-    } while (p5.__d && ++H4 < 25);
-    p5.state = p5.__s, null != p5.getChildContext && (i7 = v3(v3({}, i7), p5.getChildContext())), y5 || null == p5.getSnapshotBeforeUpdate || (m5 = p5.getSnapshotBeforeUpdate(d5, _5)), C3(n4, h3(T5 = null != a6 && a6.type === g3 && null == a6.key ? a6.props.children : a6) ? T5 : [T5], u6, t7, i7, o5, r7, f6, e8, c5, s5), p5.base = u6.__e, u6.__u &= -161, p5.__h.length && f6.push(p5), k6 && (p5.__E = p5.__ = null);
+    } while (p5.__d && ++H3 < 25);
+    p5.state = p5.__s, null != p5.getChildContext && (i7 = v3(v3({}, i7), p5.getChildContext())), y5 || null == p5.getSnapshotBeforeUpdate || (m6 = p5.getSnapshotBeforeUpdate(d5, _5)), C3(n4, h3(T6 = null != a6 && a6.type === g3 && null == a6.key ? a6.props.children : a6) ? T6 : [T6], u6, t7, i7, o5, r7, f6, e8, c5, s5), p5.base = u6.__e, u6.__u &= -161, p5.__h.length && f6.push(p5), k6 && (p5.__E = p5.__ = null);
   } catch (n5) {
     u6.__v = null, c5 || null != r7 ? (u6.__e = e8, u6.__u |= c5 ? 160 : 32, r7[r7.indexOf(e8)] = null) : (u6.__e = t7.__e, u6.__k = t7.__k), l3.__e(n5, u6, t7);
   }
@@ -44396,7 +41836,7 @@ function M2(n4, u6, t7) {
   });
 }
 function j3(l5, u6, t7, i7, o5, r7, f6, e8, s5) {
-  var a6, v5, y5, d5, _5, g6, b5, k6 = t7.props, w6 = u6.props, x6 = u6.type;
+  var a6, v5, y5, d5, _5, g6, b4, k6 = t7.props, w6 = u6.props, x6 = u6.type;
   if ("svg" === x6 && (o5 = true), null != r7) {
     for (a6 = 0; a6 < r7.length; a6++) if ((_5 = r7[a6]) && "setAttribute" in _5 == !!x6 && (x6 ? _5.localName === x6 : 3 === _5.nodeType)) {
       l5 = _5, r7[a6] = null;
@@ -44410,11 +41850,11 @@ function j3(l5, u6, t7, i7, o5, r7, f6, e8, s5) {
   if (null === x6) k6 === w6 || e8 && l5.data === w6 || (l5.data = w6);
   else {
     if (r7 = r7 && n3.call(l5.childNodes), k6 = t7.props || c3, !e8 && null != r7) for (k6 = {}, a6 = 0; a6 < l5.attributes.length; a6++) k6[(_5 = l5.attributes[a6]).name] = _5.value;
-    for (a6 in k6) _5 = k6[a6], "children" == a6 || ("dangerouslySetInnerHTML" == a6 ? y5 = _5 : "key" === a6 || a6 in w6 || T2(l5, a6, null, _5, o5));
-    for (a6 in w6) _5 = w6[a6], "children" == a6 ? d5 = _5 : "dangerouslySetInnerHTML" == a6 ? v5 = _5 : "value" == a6 ? g6 = _5 : "checked" == a6 ? b5 = _5 : "key" === a6 || e8 && "function" != typeof _5 || k6[a6] === _5 || T2(l5, a6, _5, k6[a6], o5);
+    for (a6 in k6) _5 = k6[a6], "children" == a6 || ("dangerouslySetInnerHTML" == a6 ? y5 = _5 : "key" === a6 || a6 in w6 || T3(l5, a6, null, _5, o5));
+    for (a6 in w6) _5 = w6[a6], "children" == a6 ? d5 = _5 : "dangerouslySetInnerHTML" == a6 ? v5 = _5 : "value" == a6 ? g6 = _5 : "checked" == a6 ? b4 = _5 : "key" === a6 || e8 && "function" != typeof _5 || k6[a6] === _5 || T3(l5, a6, _5, k6[a6], o5);
     if (v5) e8 || y5 && (v5.__html === y5.__html || v5.__html === l5.innerHTML) || (l5.innerHTML = v5.__html), u6.__k = [];
-    else if (y5 && (l5.innerHTML = ""), C3(l5, h3(d5) ? d5 : [d5], u6, t7, i7, o5 && "foreignObject" !== x6, r7, f6, r7 ? r7[0] : t7.__k && m3(t7, 0), e8, s5), null != r7) for (a6 = r7.length; a6--; ) null != r7[a6] && p3(r7[a6]);
-    e8 || (a6 = "value", void 0 !== g6 && (g6 !== l5[a6] || "progress" === x6 && !g6 || "option" === x6 && g6 !== k6[a6]) && T2(l5, a6, g6, k6[a6], false), a6 = "checked", void 0 !== b5 && b5 !== l5[a6] && T2(l5, a6, b5, k6[a6], false));
+    else if (y5 && (l5.innerHTML = ""), C3(l5, h3(d5) ? d5 : [d5], u6, t7, i7, o5 && "foreignObject" !== x6, r7, f6, r7 ? r7[0] : t7.__k && m4(t7, 0), e8, s5), null != r7) for (a6 = r7.length; a6--; ) null != r7[a6] && p3(r7[a6]);
+    e8 || (a6 = "value", void 0 !== g6 && (g6 !== l5[a6] || "progress" === x6 && !g6 || "option" === x6 && g6 !== k6[a6]) && T3(l5, a6, g6, k6[a6], false), a6 = "checked", void 0 !== b4 && b4 !== l5[a6] && T3(l5, a6, b4, k6[a6], false));
   }
   return l5;
 }
@@ -44483,12 +41923,12 @@ n3 = s3.slice, l3 = { __e: function(n4, l5, u6, t7) {
   throw n4;
 } }, u3 = 0, t4 = function(n4) {
   return null != n4 && null == n4.constructor;
-}, b3.prototype.setState = function(n4, l5) {
+}, b2.prototype.setState = function(n4, l5) {
   var u6;
   u6 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = v3({}, this.state), "function" == typeof n4 && (n4 = n4(v3({}, u6), this.props)), n4 && v3(u6, n4), null != n4 && this.__v && (l5 && this._sb.push(l5), w3(this));
-}, b3.prototype.forceUpdate = function(n4) {
+}, b2.prototype.forceUpdate = function(n4) {
   this.__v && (this.__e = true, n4 && this.__h.push(n4), w3(this));
-}, b3.prototype.render = g3, i3 = [], r4 = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, f3 = function(n4, l5) {
+}, b2.prototype.render = g3, i3 = [], r4 = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, f3 = function(n4, l5) {
   return n4.__v.__b - l5.__v.__b;
 }, x3.__r = 0, e5 = 0;
 
@@ -44504,7 +41944,7 @@ var e6 = l3.__b;
 var a4 = l3.__r;
 var v4 = l3.diffed;
 var l4 = l3.__c;
-var m4 = l3.unmount;
+var m5 = l3.unmount;
 function d4(t7, u6) {
   l3.__h && l3.__h(r5, t7, o4 || u6), o4 = 0;
   var i7 = r5.__H || (r5.__H = { __: [], __h: [] });
@@ -44573,7 +42013,7 @@ function F4(n4, r7) {
   var u6 = d4(t5++, 7);
   return z4(u6.__H, r7) ? (u6.__V = n4(), u6.i = r7, u6.__h = n4, u6.__V) : u6.__;
 }
-function T3(n4, t7) {
+function T4(n4, t7) {
   return o4 = 8, F4(function() {
     return n4;
   }, t7);
@@ -44594,7 +42034,7 @@ function V2() {
   }
   return n4.__;
 }
-function b4() {
+function b3() {
   for (var t7; t7 = f4.shift(); ) if (t7.__P && t7.__H) try {
     t7.__H.__h.forEach(k4), t7.__H.__h.forEach(w4), t7.__H.__h = [];
   } catch (r7) {
@@ -44612,7 +42052,7 @@ l3.__b = function(n4) {
 }, l3.diffed = function(t7) {
   v4 && v4(t7);
   var o5 = t7.__c;
-  o5 && o5.__H && (o5.__H.__h.length && (1 !== f4.push(o5) && i4 === l3.requestAnimationFrame || ((i4 = l3.requestAnimationFrame) || j4)(b4)), o5.__H.__.forEach(function(n4) {
+  o5 && o5.__H && (o5.__H.__h.length && (1 !== f4.push(o5) && i4 === l3.requestAnimationFrame || ((i4 = l3.requestAnimationFrame) || j4)(b3)), o5.__H.__.forEach(function(n4) {
     n4.i && (n4.__H = n4.i), n4.__V !== c4 && (n4.__ = n4.__V), n4.i = void 0, n4.__V = c4;
   })), u4 = r5 = null;
 }, l3.__c = function(t7, r7) {
@@ -44628,7 +42068,7 @@ l3.__b = function(n4) {
     }
   }), l4 && l4(t7, r7);
 }, l3.unmount = function(t7) {
-  m4 && m4(t7);
+  m5 && m5(t7);
   var r7, u6 = t7.__c;
   u6 && u6.__H && (u6.__H.__.forEach(function(n4) {
     try {
@@ -44685,7 +42125,7 @@ function w5(n4, e8) {
   }
   return u6.displayName = "Memo(" + (n4.displayName || n4.name) + ")", u6.prototype.isReactComponent = true, u6.__f = true, u6;
 }
-(E2.prototype = new b3()).isPureReactComponent = true, E2.prototype.shouldComponentUpdate = function(n4, t7) {
+(E2.prototype = new b2()).isPureReactComponent = true, E2.prototype.shouldComponentUpdate = function(n4, t7) {
   return C4(this.props, n4) || C4(this.state, t7);
 };
 var x5 = l3.__b;
@@ -44717,7 +42157,7 @@ l3.__e = function(n4, t7, e8, r7) {
   }
   O3(n4, t7, e8, r7);
 };
-var T4 = l3.unmount;
+var T5 = l3.unmount;
 function F5(n4, t7, e8) {
   return n4 && (n4.__c && n4.__c.__H && (n4.__c.__H.__.forEach(function(n5) {
     "function" == typeof n5.__c && n5.__c();
@@ -44755,8 +42195,8 @@ function M3() {
 }
 l3.unmount = function(n4) {
   var t7 = n4.__c;
-  t7 && t7.__R && t7.__R(), t7 && 32 & n4.__u && (n4.type = null), T4 && T4(n4);
-}, (L3.prototype = new b3()).__c = function(n4, t7) {
+  t7 && t7.__R && t7.__R(), t7 && 32 & n4.__u && (n4.type = null), T5 && T5(n4);
+}, (L3.prototype = new b2()).__c = function(n4, t7) {
   var e8 = t7.__c, r7 = this;
   null == r7.t && (r7.t = []), r7.t.push(e8);
   var u6 = U(r7.__v), o5 = false, i7 = function() {
@@ -44815,7 +42255,7 @@ function j5(n4, e8) {
   var r7 = y3(P4, { __v: n4, i: e8 });
   return r7.containerInfo = e8, r7;
 }
-(M3.prototype = new b3()).__a = function(n4) {
+(M3.prototype = new b2()).__a = function(n4) {
   var t7 = this, e8 = U(t7.__v), r7 = t7.o.get(n4);
   return r7[0]++, function(u6) {
     var o5 = function() {
@@ -44837,7 +42277,7 @@ function j5(n4, e8) {
 };
 var z5 = "undefined" != typeof Symbol && Symbol.for && Symbol.for("react.element") || 60103;
 var B5 = /^(?:accent|alignment|arabic|baseline|cap|clip(?!PathU)|color|dominant|fill|flood|font|glyph(?!R)|horiz|image(!S)|letter|lighting|marker(?!H|W|U)|overline|paint|pointer|shape|stop|strikethrough|stroke|text(?!L)|transform|underline|unicode|units|v|vector|vert|word|writing|x(?!C))[A-Z]/;
-var H3 = /^on(Ani|Tra|Tou|BeforeInp|Compo)/;
+var H2 = /^on(Ani|Tra|Tou|BeforeInp|Compo)/;
 var Z = /[A-Z0-9]/g;
 var Y = "undefined" != typeof document;
 var $3 = function(n4) {
@@ -44849,8 +42289,8 @@ function q5(n4, t7, e8) {
 function G(n4, t7, e8) {
   return B3(n4, t7), "function" == typeof e8 && e8(), n4 ? n4.__c : null;
 }
-b3.prototype.isReactComponent = {}, ["componentWillMount", "componentWillReceiveProps", "componentWillUpdate"].forEach(function(t7) {
-  Object.defineProperty(b3.prototype, t7, { configurable: true, get: function() {
+b2.prototype.isReactComponent = {}, ["componentWillMount", "componentWillReceiveProps", "componentWillUpdate"].forEach(function(t7) {
+  Object.defineProperty(b2.prototype, t7, { configurable: true, get: function() {
     return this["UNSAFE_" + t7];
   }, set: function(n4) {
     Object.defineProperty(this, t7, { configurable: true, writable: true, value: n4 });
@@ -44880,7 +42320,7 @@ l3.vnode = function(n4) {
       var i7 = t7[o5];
       if (!("value" === o5 && "defaultValue" in t7 && null == i7 || Y && "children" === o5 && "noscript" === e8 || "class" === o5 || "className" === o5)) {
         var l5 = o5.toLowerCase();
-        "defaultValue" === o5 && "value" in t7 && null == t7.value ? o5 = "value" : "download" === o5 && true === i7 ? i7 = "" : "ondoubleclick" === l5 ? o5 = "ondblclick" : "onchange" !== l5 || "input" !== e8 && "textarea" !== e8 || $3(t7.type) ? "onfocus" === l5 ? o5 = "onfocusin" : "onblur" === l5 ? o5 = "onfocusout" : H3.test(o5) ? o5 = l5 : -1 === e8.indexOf("-") && B5.test(o5) ? o5 = o5.replace(Z, "-$&").toLowerCase() : null === i7 && (i7 = void 0) : l5 = o5 = "oninput", "oninput" === l5 && u6[o5 = l5] && (o5 = "oninputCapture"), u6[o5] = i7;
+        "defaultValue" === o5 && "value" in t7 && null == t7.value ? o5 = "value" : "download" === o5 && true === i7 ? i7 = "" : "ondoubleclick" === l5 ? o5 = "ondblclick" : "onchange" !== l5 || "input" !== e8 && "textarea" !== e8 || $3(t7.type) ? "onfocus" === l5 ? o5 = "onfocusin" : "onblur" === l5 ? o5 = "onfocusout" : H2.test(o5) ? o5 = l5 : -1 === e8.indexOf("-") && B5.test(o5) ? o5 = o5.replace(Z, "-$&").toLowerCase() : null === i7 && (i7 = void 0) : l5 = o5 = "oninput", "oninput" === l5 && u6[o5 = l5] && (o5 = "oninputCapture"), u6[o5] = i7;
       }
     }
     "select" == e8 && u6.multiple && Array.isArray(u6.value) && (u6.value = $2(t7.children).forEach(function(n6) {
@@ -44958,7 +42398,7 @@ function En(n4) {
     return true;
   }
 }
-var wn = { useState: h4, useId: V2, useReducer: s4, useEffect: p4, useLayoutEffect: y4, useInsertionEffect: Sn, useTransition: bn, useDeferredValue: _n, useSyncExternalStore: Cn, startTransition: yn, useRef: _4, useImperativeHandle: A4, useMemo: F4, useCallback: T3, useContext: q4, useDebugValue: x4, version: "17.0.2", Children: A5, render: q5, hydrate: G, unmountComponentAtNode: hn, createPortal: j5, createElement: y3, createContext: F3, createFactory: cn, cloneElement: sn, createRef: _3, Fragment: g3, isValidElement: fn, isElement: gn, isFragment: an, findDOMNode: vn, Component: b3, PureComponent: E2, memo: w5, forwardRef: N3, flushSync: pn, unstable_batchedUpdates: dn, StrictMode: mn, Suspense: L3, SuspenseList: M3, lazy: D4, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: on };
+var wn = { useState: h4, useId: V2, useReducer: s4, useEffect: p4, useLayoutEffect: y4, useInsertionEffect: Sn, useTransition: bn, useDeferredValue: _n, useSyncExternalStore: Cn, startTransition: yn, useRef: _4, useImperativeHandle: A4, useMemo: F4, useCallback: T4, useContext: q4, useDebugValue: x4, version: "17.0.2", Children: A5, render: q5, hydrate: G, unmountComponentAtNode: hn, createPortal: j5, createElement: y3, createContext: F3, createFactory: cn, cloneElement: sn, createRef: _3, Fragment: g3, isValidElement: fn, isElement: gn, isFragment: an, findDOMNode: vn, Component: b2, PureComponent: E2, memo: w5, forwardRef: N3, flushSync: pn, unstable_batchedUpdates: dn, StrictMode: mn, Suspense: L3, SuspenseList: M3, lazy: D4, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: on };
 
 // node_modules/@bpmn-io/properties-panel/preact/jsx-runtime/dist/jsxRuntime.module.js
 var f5 = 0;
@@ -44981,50 +42421,50 @@ var import_highlight4 = require("@lezer/highlight");
 // node_modules/lezer-feel/dist/index.js
 var import_lr = require("@lezer/lr");
 var import_highlight = require("@lezer/highlight");
-var propertyIdentifier = 120;
-var identifier = 121;
-var nameIdentifier = 122;
-var insertSemi = 123;
-var expression0 = 127;
+var propertyIdentifier = 121;
+var identifier = 122;
+var nameIdentifier = 123;
+var insertSemi = 124;
+var expression0 = 128;
 var ForExpression = 4;
-var forExpressionStart = 130;
+var forExpressionStart = 131;
 var ForInExpression = 7;
 var Name = 8;
 var Identifier = 9;
 var AdditionalIdentifier = 10;
-var forExpressionBodyStart = 138;
+var forExpressionBodyStart = 139;
 var IfExpression = 19;
-var ifExpressionStart = 139;
+var ifExpressionStart = 140;
 var QuantifiedExpression = 23;
-var quantifiedExpressionStart = 140;
+var quantifiedExpressionStart = 141;
 var QuantifiedInExpression = 27;
 var PositiveUnaryTest = 37;
 var ArithmeticExpression = 41;
-var arithmeticPlusStart = 144;
-var arithmeticTimesStart = 145;
-var arithmeticExpStart = 146;
-var arithmeticUnaryStart = 147;
+var arithmeticPlusStart = 145;
+var arithmeticTimesStart = 146;
+var arithmeticExpStart = 147;
+var arithmeticUnaryStart = 148;
 var VariableName = 47;
-var PathExpression = 67;
-var pathExpressionStart = 152;
-var FilterExpression = 69;
-var filterExpressionStart = 153;
-var FunctionInvocation = 71;
-var functionInvocationStart = 154;
-var ParameterName = 75;
-var nil = 159;
-var NumericLiteral = 78;
-var StringLiteral = 79;
-var BooleanLiteral = 80;
-var listStart = 165;
-var List = 88;
-var FunctionDefinition = 89;
-var functionDefinitionStart = 167;
-var Context2 = 96;
-var contextStart = 169;
-var ContextEntry = 97;
-var PropertyName = 99;
-var PropertyIdentifier = 100;
+var PathExpression = 68;
+var pathExpressionStart = 154;
+var FilterExpression = 70;
+var filterExpressionStart = 155;
+var FunctionInvocation = 72;
+var functionInvocationStart = 156;
+var ParameterName = 76;
+var nil = 161;
+var NumericLiteral = 79;
+var StringLiteral = 80;
+var BooleanLiteral = 81;
+var listStart = 167;
+var List = 89;
+var FunctionDefinition = 90;
+var functionDefinitionStart = 169;
+var Context2 = 97;
+var contextStart = 171;
+var ContextEntry = 98;
+var PropertyName = 100;
+var PropertyIdentifier = 101;
 var LOG_PARSE = typeof process != "undefined" && process.env && /\bfparse(:dbg)?\b/.test(process.env.LOG);
 var LOG_PARSE_DEBUG = typeof process != "undefined" && process.env && /\bfparse:dbg\b/.test(process.env.LOG);
 var LOG_VARS = typeof process != "undefined" && process.env && /\bcontext\b/.test(process.env.LOG);
@@ -45129,9 +42569,9 @@ function parseSpaces(input, offset) {
     }
   }
 }
-function parseName2(input, variables2) {
-  const contextKeys = variables2.contextKeys();
-  const start = variables2.tokens;
+function parseName2(input, variables) {
+  const contextKeys = variables.contextKeys();
+  const start = variables.tokens;
   for (let i7 = 0, tokens = [], nextMatch = null; ; ) {
     const namePart = start.length + tokens.length > 0;
     const maybeSpace = tokens.length > 0;
@@ -45255,11 +42695,11 @@ var ValueProducer = class _ValueProducer {
   constructor(fn2) {
     this.fn = fn2;
   }
-  get(variables2) {
-    return this.fn(variables2);
+  get(variables) {
+    return this.fn(variables);
   }
   /**
-   * @param { Function }
+   * @param { Function } fn
    *
    * @return { ValueProducer }
    */
@@ -45278,7 +42718,7 @@ var VariableContext = class {
   /**
    * Creates a new context from a JavaScript object.
    *
-   * @param {any} value
+   * @param {any} [value]
    */
   constructor(value = {}) {
     this.value = value;
@@ -45302,23 +42742,49 @@ var VariableContext = class {
    */
   get(key) {
     const result = this.value[key];
-    if (this.constructor.isAtomic(result)) {
+    const constructor = (
+      /** @type { typeof VariableContext } */
+      this.constructor
+    );
+    if (constructor.isAtomic(result)) {
       return result;
     }
-    return this.constructor.of(result);
+    return constructor.of(result);
   }
   /**
    * Creates a new context with the given key added.
    *
    * @param {String} key
    * @param {any} value
+   *
    * @returns {VariableContext} new context with the given key added
    */
   set(key, value) {
-    return this.constructor.of({
+    const constructor = (
+      /** @type { typeof VariableContext } */
+      this.constructor
+    );
+    return constructor.of({
       ...this.value,
       [key]: value
     });
+  }
+  /**
+   * Non-destructively merge another context into this one,
+   * and return the result.
+   *
+   * @param {ContextValue} other
+   *
+   * @return {VariableContext}
+   */
+  merge(other) {
+    const constructor = (
+      /** @type { typeof VariableContext } */
+      this.constructor
+    );
+    return new constructor(
+      constructor.__merge(this.value, other)
+    );
   }
   /**
    * Wether the given value is atomic. Non-atomic values need to be wrapped in a
@@ -45331,31 +42797,75 @@ var VariableContext = class {
     return !value || value instanceof this || value instanceof ValueProducer || typeof value !== "object";
   }
   /**
-   * Takes any number of Contexts and merges them into a single Context.
+   * Takes any number of Contexts and merges them into a single context.
    *
-   * @param  {...Context} contexts
-   * @returns {VariableContext}
+   * @param { ...VariableContext } contexts
+   * @returns { VariableContext }
    */
   static of(...contexts) {
-    const unwrap = (context) => {
-      if (!context || typeof context !== "object") {
-        return {};
+    return contexts.reduce((context, otherContext) => {
+      return context.merge(otherContext);
+    }, new this({}));
+  }
+  /**
+   * Returns the raw representation of the given context.
+   *
+   * @param {VariableContext | any} context
+   *
+   * @return {any}
+   */
+  static __unwrap(context) {
+    if (!context) {
+      return {};
+    }
+    if (context instanceof this) {
+      return context.value;
+    }
+    if (typeof context !== "object") {
+      return {};
+    }
+    return { ...context };
+  }
+  /**
+   * Non-destructively merges two contexts (or their values)
+   * with each other, returning the result.
+   *
+   * @param {ContextValue} context
+   * @param {ContextValue} other
+   *
+   * @return {any}
+   */
+  static __merge(context, other) {
+    return reduce(this.__unwrap(other), (merged, value, key) => {
+      if (value instanceof ValueProducer) {
+        return {
+          ...merged,
+          [key]: value
+        };
       }
-      if (context instanceof this) {
-        return context.value;
+      value = this.__unwrap(value);
+      if (has(merged, key)) {
+        value = this.__merge(this.__unwrap(merged[key]), value);
       }
-      return { ...context };
-    };
-    const merged = contexts.reduce((merged2, context) => {
       return {
-        ...merged2,
-        ...unwrap(context)
+        ...merged,
+        [key]: value
       };
-    }, {});
-    return new this(merged);
+    }, this.__unwrap(context));
   }
 };
 var Variables = class _Variables {
+  /**
+   * @param { {
+   *   name?: string,
+   *   tokens?: string[],
+   *   children?: Variables[],
+   *   parent: Variables | null
+   *   context: VariableContext,
+   *   value?: any,
+   *   raw?: any
+   * } } options
+   */
   constructor({
     name: name2 = "Expressions",
     tokens = [],
@@ -45364,7 +42874,7 @@ var Variables = class _Variables {
     context,
     value,
     raw
-  } = {}) {
+  }) {
     this.name = name2;
     this.tokens = tokens;
     this.children = children;
@@ -45508,10 +43018,10 @@ var Variables = class _Variables {
    *
    * @return { Variables }
    */
-  assign(options2 = {}) {
+  assign(options = {}) {
     return _Variables.of({
       ...this,
-      ...options2
+      ...options
     });
   }
   /**
@@ -45519,17 +43029,30 @@ var Variables = class _Variables {
    *
    * @return { Variables }
    */
-  of(options2 = {}) {
+  of(options = {}) {
     const defaultOptions = {
       context: this.context,
       parent: this.parent
     };
     return _Variables.of({
       ...defaultOptions,
-      ...options2
+      ...options
     });
   }
-  static of(options2) {
+  /**
+   * @param { {
+   *   name?: string,
+   *   tokens?: string[],
+   *   children?: Variables[],
+   *   parent?: Variables | null
+   *   context: VariableContext,
+   *   value?: any,
+   *   raw?: any
+   * } } options
+   *
+   * @return {Variables}
+   */
+  static of(options) {
     const {
       name: name2,
       tokens = [],
@@ -45538,7 +43061,7 @@ var Variables = class _Variables {
       context,
       value,
       raw
-    } = options2;
+    } = options;
     if (!context) {
       throw new Error("must provide <context>");
     }
@@ -45556,14 +43079,14 @@ var Variables = class _Variables {
 function normalizeContextKey(name2) {
   return name2.replace(/\s*([./\-'+]|\*\*?)\s*/g, " $1 ").replace(/\s{2,}/g, " ").trim();
 }
-function wrap(variables2, scopeName, code) {
-  const parts = variables2.children.filter((c5) => c5.name !== scopeName);
-  const children = variables2.children.filter((c5) => c5.name === scopeName);
+function wrap(variables, scopeName, code) {
+  const parts = variables.children.filter((c5) => c5.name !== scopeName);
+  const children = variables.children.filter((c5) => c5.name === scopeName);
   const namePart = parts[0];
   const valuePart = parts[Math.max(1, parts.length - 1)];
-  const name2 = namePart.computedValue();
+  const name2 = namePart == null ? void 0 : namePart.computedValue();
   const value = (valuePart == null ? void 0 : valuePart.computedValue()) || null;
-  return variables2.assign({
+  return variables.assign({
     children
   }).enterScope(scopeName).pushChildren(parts).exitScope(code).define(name2, value);
 }
@@ -45573,10 +43096,10 @@ function trackVariables(context = {}, Context3 = VariableContext) {
   });
   return new import_lr.ContextTracker({
     start,
-    reduce(variables2, term, stack, input) {
+    reduce(variables, term, stack, input) {
       if (term === IfExpression) {
-        const [thenPart, elsePart] = variables2.children.slice(-2);
-        variables2 = variables2.assign({
+        const [thenPart, elsePart] = variables.children.slice(-2);
+        variables = variables.assign({
           value: Context3.of(
             thenPart == null ? void 0 : thenPart.computedValue(),
             elsePart == null ? void 0 : elsePart.computedValue()
@@ -45584,17 +43107,17 @@ function trackVariables(context = {}, Context3 = VariableContext) {
         });
       }
       if (term === List) {
-        variables2 = variables2.assign({
+        variables = variables.assign({
           value: Context3.of(
-            ...variables2.children.map(
+            ...variables.children.map(
               (c5) => c5 == null ? void 0 : c5.computedValue()
             )
           )
         });
       }
       if (term === FilterExpression) {
-        const [sourcePart, _5] = variables2.children.slice(-2);
-        variables2 = variables2.assign({
+        const [sourcePart, _5] = variables.children.slice(-2);
+        variables = variables.assign({
           value: sourcePart == null ? void 0 : sourcePart.computedValue()
         });
       }
@@ -45602,21 +43125,21 @@ function trackVariables(context = {}, Context3 = VariableContext) {
         const [
           name2,
           ...args
-        ] = variables2.children;
+        ] = variables.children;
         if ((name2 == null ? void 0 : name2.raw) === "get value") {
-          variables2 = getContextValue(variables2, args);
+          variables = getContextValue(variables, args);
         }
       }
       const start2 = contextStarts[term];
       if (start2) {
-        return variables2.enterScope(start2);
+        return variables.enterScope(start2);
       }
       const prefixedStart = prefixedContextStarts[term];
       if (prefixedStart) {
         const {
           children: currentChildren,
           context: currentContext
-        } = variables2;
+        } = variables;
         const children = currentChildren.slice(0, -1);
         const lastChild = last2(currentChildren);
         let newContext = null;
@@ -45629,90 +43152,90 @@ function trackVariables(context = {}, Context3 = VariableContext) {
             lastChild == null ? void 0 : lastChild.computedValue()
           ).set("item", lastChild == null ? void 0 : lastChild.computedValue());
         }
-        return variables2.assign({ children }).enterScope(prefixedStart).pushChild(lastChild).assign({ context: newContext || currentContext });
+        return variables.assign({ children }).enterScope(prefixedStart).pushChild(lastChild).assign({ context: newContext || currentContext });
       }
       const code = input.read(input.pos, stack.pos);
       const end = contextEnds[term];
       if (end) {
-        return variables2.exitScope(code);
+        return variables.exitScope(code);
       }
       if (term === ContextEntry) {
-        const parts = variables2.children.filter((c5) => c5.name !== "ContextEntry");
+        const parts = variables.children.filter((c5) => c5.name !== "ContextEntry");
         const name2 = parts[0];
         const value = last2(parts);
-        return wrap(variables2, "ContextEntry", code).assign(
+        return wrap(variables, "ContextEntry", code).assign(
           {
-            value: Context3.of(variables2.value).set(name2.computedValue(), value == null ? void 0 : value.computedValue())
+            value: Context3.of(variables.value).set(name2 == null ? void 0 : name2.computedValue(), value == null ? void 0 : value.computedValue())
           }
         );
       }
       if (term === ForInExpression || term === QuantifiedInExpression) {
-        return wrap(variables2, "InExpression", code);
+        return wrap(variables, "InExpression", code);
       }
       if (term === forExpressionBodyStart) {
-        return variables2.define(
+        return variables.define(
           "partial",
-          ValueProducer.of((variables3) => {
+          ValueProducer.of((variables2) => {
             var _a;
-            return (_a = last2(variables3.children)) == null ? void 0 : _a.computedValue();
+            return (_a = last2(variables2.children)) == null ? void 0 : _a.computedValue();
           })
         );
       }
       if (term === ParameterName) {
-        const name2 = last2(variables2.children).computedValue();
-        return variables2.define(name2, 1);
+        const name2 = last2(variables.children).computedValue();
+        return variables.define(name2, 1);
       }
       if (term === arithmeticPlusStart || term === arithmeticTimesStart || term === arithmeticExpStart) {
-        const children = variables2.children.slice(0, -1);
-        const lastChild = last2(variables2.children);
-        return variables2.assign({
+        const children = variables.children.slice(0, -1);
+        const lastChild = last2(variables.children);
+        return variables.assign({
           children
         }).enterScope("ArithmeticExpression").pushChild(lastChild);
       }
       if (term === arithmeticUnaryStart) {
-        return variables2.enterScope("ArithmeticExpression");
+        return variables.enterScope("ArithmeticExpression");
       }
       if (term === Identifier || term === AdditionalIdentifier || term === PropertyIdentifier) {
-        return variables2.token(code);
+        return variables.token(code);
       }
       if (term === StringLiteral) {
-        return variables2.literal(code.replace(/^"|"$/g, ""));
+        return variables.literal(code.replace(/^"|"$/g, ""));
       }
       if (term === BooleanLiteral) {
-        return variables2.literal(code === "true" ? true : false);
+        return variables.literal(code === "true" ? true : false);
       }
       if (term === NumericLiteral) {
-        return variables2.literal(parseFloat(code));
+        return variables.literal(parseFloat(code));
       }
       if (term === nil) {
-        return variables2.literal(null);
+        return variables.literal(null);
       }
       if (term === VariableName) {
-        return variables2.resolveName();
+        return variables.resolveName();
       }
       if (term === Name || term === PropertyName) {
-        return variables2.declareName();
+        return variables.declareName();
       }
       if (term === expression0 || term === PositiveUnaryTest) {
-        if (variables2.tokens.length > 0) {
+        if (variables.tokens.length > 0) {
           throw new Error("uncleared name");
         }
       }
       if (term === expression0) {
-        let parent = variables2;
+        let parent = variables;
         while (parent.parent) {
           parent = parent.exitScope(code);
         }
         return parent;
       }
-      return variables2;
+      return variables;
     }
   });
 }
 var variableTracker = trackVariables({});
-function getContextValue(variables2, args) {
+function getContextValue(variables, args) {
   if (!args.length) {
-    return variables2.assign({
+    return variables.assign({
       value: null
     });
   }
@@ -45720,7 +43243,7 @@ function getContextValue(variables2, args) {
     args = extractNamedArgs(args, ["m", "key"]);
   }
   if (args.length !== 2) {
-    return variables2.assign({
+    return variables.assign({
       value: null
     });
   }
@@ -45731,11 +43254,11 @@ function getContextValue(variables2, args) {
   const keyValue = key == null ? void 0 : key.computedValue();
   const contextValue = context == null ? void 0 : context.computedValue();
   if (!contextValue || typeof contextValue !== "object" || typeof keyValue !== "string") {
-    return variables2.assign({
+    return variables.assign({
       value: null
     });
   }
-  return variables2.assign({
+  return variables.assign({
     value: [normalizeContextKey(keyValue), keyValue].reduce((value, keyValue2) => {
       return contextValue.get(keyValue2) || value;
     }, null)
@@ -45764,7 +43287,7 @@ var feelHighlighting = (0, import_highlight.styleTags)({
   function: import_highlight.tags.definitionKeyword,
   as: import_highlight.tags.keyword,
   "Type/...": import_highlight.tags.typeName,
-  Wildcard: import_highlight.tags.special,
+  Wildcard: import_highlight.tags.special(import_highlight.tags.variableName),
   null: import_highlight.tags.null,
   LineComment: import_highlight.tags.lineComment,
   BlockComment: import_highlight.tags.blockComment,
@@ -45783,29 +43306,30 @@ var feelHighlighting = (0, import_highlight.styleTags)({
   ", ;": import_highlight.tags.separator,
   "..": import_highlight.tags.punctuation
 });
-var spec_identifier = { __proto__: null, for: 10, in: 32, return: 36, if: 40, then: 42, else: 44, some: 48, every: 50, satisfies: 56, or: 60, and: 64, between: 72, instance: 86, of: 89, days: 99, time: 101, duration: 103, years: 105, months: 107, date: 109, list: 115, context: 121, function: 128, null: 154, true: 326, false: 326, "?": 168, external: 184, not: 209 };
+var spec_identifier = { __proto__: null, for: 10, in: 32, return: 36, if: 40, then: 42, else: 44, some: 48, every: 50, satisfies: 56, or: 60, and: 64, between: 72, instance: 86, of: 89, days: 101, time: 103, duration: 105, years: 107, months: 109, date: 111, list: 117, context: 123, function: 130, null: 156, true: 330, false: 330, "?": 170, external: 186, not: 211 };
 var parser = import_lr.LRParser.deserialize({
   version: 14,
-  states: "CpO`QYOOO`QYOOO$gQYOOOOQU'#Ce'#CeO$qQYO'#C`O%zQYO'#FPOOQQ'#Fe'#FeO&UQYO'#FeO`QYO'#DVOOQU'#Em'#EmO'rQ^O'#D]OOQO'#Fl'#FlO)oQWO'#DuOOQQ'#D|'#D|OOQQ'#D}'#D}OOQQ'#EO'#EOO)tOWO'#ERO)oQWO'#EPOOQQ'#EP'#EPOOQQ'#Fr'#FrOOQQ'#Fp'#FpOOQQ'#Fw'#FwOOQQ'#ET'#ETO`QYO'#EVOOQQ'#FR'#FRO)yQ^O'#FRO+pQYO'#EWO+wQWO'#EXOOQP'#F{'#F{O+|QXO'#E`OOQQ'#Fx'#FxOOQQ'#FQ'#FQQOQWOOOOQQ'#FS'#FSOOQQ'#F]'#F]O`QYO'#CoOOQQ'#F^'#F^O$qQYO'#CsO,XQYO'#DvOOQQ'#Fq'#FqO,^QYO'#EQOOQO'#EQ'#EQO`QYO'#EUO`QYO'#ETOOQO'#Fy'#FyQ,fQWOOO,kQYO'#DRO-bQWO'#FaOOQO'#DT'#DTO-mQYO'#FeO-tQWOOO.kQYO'#CdO.xQYO'#FUOOQQ'#Cc'#CcO.}QYO'#FTOOQQ'#Cb'#CbO/VQYO,58zO`QYO,59iOOQQ'#Fb'#FbOOQQ'#Fc'#FcOOQQ'#Fd'#FdO`QYO,59qO`QYO,59qO`QYO,59qOOQQ'#Fj'#FjO$qQYO,5:]OOQQ'#Fk'#FkO`QYO,5:_O`QYO,59eO`QYO,59gO`QYO,59iO0uQYO,59iO0|QYO,59rOOQQ,5:h,5:hO1RQYO,59qOOQU-E8k-E8kO2uQYO'#FmOOQQ,5:a,5:aOOQQ,5:m,5:mOOQQ,5:k,5:kO2|QYO,5:qOOQQ,5;m,5;mO3WQYO,5:pO3eQWO,5:rO3jQYO,5:sOOQP'#Ed'#EdO4aQXO'#EcOOQO'#Eb'#EbO4hQWO'#EaO4mQWO'#F|O4uQWO,5:zO4zQYO,59ZO.xQYO'#F`OOQQ'#Cw'#CwO5RQYO'#F_OOQQ'#Cv'#CvO5ZQYO,59_O5`QYO,5:bO5eQYO,5:lO3PQYO,5:pO5jQYO,5:oO`QYO'#EvQ,fQWOOO`QYO'#ElO6aQWO,5;{O`QYOOOOQR'#Cf'#CfOOQQ'#Ei'#EiO7ZQYO,59OO`QYO,5;pOOQQ'#FX'#FXO$qQYO'#EjO7kQYO,5;oO`QYO1G.fOOQQ'#F['#F[O8bQYO1G/TO;XQYO1G/]O;cQYO1G/]O;mQYO1G/]OOQQ1G/w1G/wO=aQYO1G/yO=hQYO1G/PO>qQYO1G/RO?zQYO1G/TO`QYO1G/TOOQQ1G/T1G/TO@bQYO1G/^O@|Q^O'#CdOB`QYO'#FoOOQO'#Dy'#DyOBjQWO'#DxOBoQWO'#FnOOQO'#Dw'#DwOOQO'#Dz'#DzOBwQWO,5<XOOQQ1G0]1G0]O`QYO1G0[O`QYO'#ErOB|QWO,5<ZOOQQ1G0^1G0^OCXQWO'#EZOCdQWO'#FzOOQO'#EY'#EYOClQWO1G0_OOQP'#Et'#EtOCqQXO,5:}O`QYO,5:{OCxQXO'#EuODQQWO,5<hOOQQ1G0f1G0fO`QYO1G.uO`QYO,5;zO$qQYO'#EkODYQYO,5;yO`QYO1G.yODbQYO1G/|OOQO1G0W1G0WOOQO,5;b,5;bOOQO-E8t-E8tOOQO,5;W,5;WOOQO-E8j-E8jODgQWOOOOQQ-E8g-E8gODlQYO'#CmOOQQ1G1[1G1[OOQQ,5;U,5;UOOQQ-E8h-E8hODyQYO7+$QOOQQ7+%e7+%eO`QYO7+$oOEpQYO,5:qOE}QWO7+$oOFSQYO'#D[OOQQ'#DZ'#DZOGvQYO'#D^OG{QYO'#D^OHQQYO'#D^OHVQ`O'#DfOH[Q`O'#DiOHaQ`O'#DmOOQQ7+$x7+$xO`QYO,5:dO$qQYO'#EqOHfQWO,5<YOOQQ1G1s1G1sOIlQYO7+%vOIyQYO,5;^OOQO-E8p-E8pO@bQYO,5:uO$qQYO'#EsOJWQWO,5<fOJ`QYO7+%yOOQP-E8r-E8rOJgQYO1G0gOOQO,5;a,5;aOOQO-E8s-E8sOJqQYO7+$aOJxQYO1G1fOOQQ,5;V,5;VOOQQ-E8i-E8iOKSQYO7+$eOOQO7+%h7+%hO`QYO,59XOKyQYO<<HZOOQQ<<HZ<<HZO$qQYO'#EnOMSQYO,59vONvQYO,59xON{QYO,59xO! QQYO,59xO! VQYO,5:QO$qQYO,5:TO! qQbO,5:XO! xQYO1G0OOOQO,5;],5;]OOQO-E8o-E8oO!!SQYO<<IbOOQQ<<Ib<<IbOOQO1G0a1G0aOOQO,5;_,5;_OOQO-E8q-E8qO!%OQYO'#E]OOQQ<<Ie<<IeO`QYO<<IeO`QYO<<G{O!%uQYO1G.sOOQQ,5;Y,5;YOOQQ-E8l-E8lO!&PQYO1G/dOOQQ1G/d1G/dO!&UQbO'#D]O!&gQ`O'#D[O!&rQ`O1G/lO!&wQWO'#DlO!&|Q`O'#FfOOQO'#Dk'#DkO!'UQ`O1G/oOOQO'#Dp'#DpO!'ZQ`O'#FhOOQO'#Do'#DoO!'cQ`O1G/sOOQQAN?PAN?PO!'hQYOAN=gOOQQ7+%O7+%OO!(_Q`O,59vOOQQ7+%W7+%WO! VQYO,5:WO$qQYO'#EoO!(jQ`O,5<QOOQQ7+%Z7+%ZO! VQYO'#EpO!(rQ`O,5<SO!(zQ`O7+%_OOQO1G/r1G/rOOQO,5;Z,5;ZOOQO-E8m-E8mOOQO,5;[,5;[OOQO-E8n-E8nO@bQYO<<HyOOQQAN>eAN>eO$qQYO'#EnO! VQYO<<HyO!)PQ`O7+%_O!)UQ`O1G/sO! qQbO,5:XO!)ZQ`O'#Dm",
-  stateData: "!)h~O#qOS#rOSPOSQOS~OTqOZVO[UOdrOhtOitOs{OvgO!SyO!TyO!UvO!WxO!b|O!fzO!heO!owO!vhO#RlO#mRO#nRO$g]O$h^O$i_O$j`O~OTqO[UOdrOhtOitOs{OvgO!SyO!TyO!UvO!WxO!b|O!fzO!heO!owO!vhO#RlO#mRO#nRO$g]O$h^O$i_O$j`O~OZ!RO#[!SO~P!|O#mRO#nRO~OZ![O[![O]!]O^!]O_!^O`!iOn!fOp!gOr!ZOs!ZOt!hO{!jO!h!dO#y!bOv$`X~O#k#sX$q#sX~P$yO$g!kOT$XXZ$XX[$XXd$XXh$XXi$XXs$XXv$XX!S$XX!T$XX!U$XX!W$XX!b$XX!f$XX!h$XX!o$XX!v$XX#R$XX#m$XX#n$XX$h$XX$i$XX$j$XX~O#mRO#nROZ!PX[!PX]!PX^!PX_!PX`!PXn!PXp!PXr!PXs!PXt!PXv!PX{!PX!h!PX#k!PX#o!PX#y!PX$q!PX#}!PXx!PX#|!PX!f!PXe!PXb!PX#Q!PXf!PXl!PX~Ov!nO~O$h^O~O#o!sOZ#uX[#uX]#uX^#uX_#uX`#uXn#uXp#uXr#uXs#uXt#uXv#uX{#uX!h#uX#k#uX#y#uX$q#uX#}#uXx#uX#|#uX!f#uXe#uXb#uX#Q#uXf#uXl#uX~O!f$cP~P`Ov!vO~O#l!wO$h^O#Q$pP~Op#TO~Op#UOv!tX~O$q#XO~O#kuX#}uX$quXxuX#|uX!fuXeuXbuX#QuXfuXluX~P$yO#}#ZO#k$TXx$TX~O#k#ZX~P&UOv#]O~OZ#^O[#^O]#^O^#^O_#^O#mRO#nRO#y#^O#z#^O$ZWX~O`WXxWX#}WX~P-yO`#bO~O#}#cOb#wX~Ob#fO~OTqOZVO[UOdrOhtOitOs{O!SyO!TyO!UvO!WxO!b|O!fzO!heO!owO!vhO#RlO#mRO#nRO$g]O$h^O$i_O$j`O~Ov#pO~P/[O|#rO~O{!jO!h!dO#y!bOZya[ya]ya^ya_ya`yanyapyaryasyatyav$`X#kya$qya#}yaxya#|ya!fyaeyabya#Qyafyalya~Ox$cP~P`Ox#{O#|#|O~P$yO#|#|O#}#}O!f$cX~P$yO!f$PO~O#mRO#nROx$nP~OZ#^O[#^O]#^O^#^O_#^O#l!wO#y#^O#z#^O~O$Z#VX~P3uO$Z$WO~O#}$XO#Q$pX~O#Q$ZO~Oe$[O~P$yO#}$^Ol$RX~Ol$`O~O!V$aO~O!S$bO~O#k!wa$q!wa#}!wax!wa#|!wa!f!wae!wab!wa#Q!waf!wal!wa~P$yO#}#ZO#k$Tax$Ta~OZ#^O[#^O]#^O^#^O_#^O#mRO#nRO#y#^O#z#^O~O`Wa$ZWaxWa#}Wa~P6lO#}#cOb#wa~OZ![O[![O]!]O^!]O_!^O{!jO!h!dO#y!bOv$`X~O`qinqipqirqisqitqi#kqi$qqi#}qixqi#|qi!fqieqibqi#Qqifqilqi~P7sO_!^O{!jO!h!dO#y!bOZyi[yi`yinyipyiryisyityiv$`X#kyi$qyi#}yixyi#|yi!fyieyibyi#Qyifyilyi~O]!]O^!]O~P9kO]yi^yi~P9kO{!jO!h!dO#y!bOZyi[yi]yi^yi_yi`yinyipyiryisyityiv$`X#kyi$qyi#}yixyi#|yi!fyieyibyi#Qyifyilyi~O!f$nO~P$yO`!iOp!gOr!ZOs!ZOt!hOnmi#kmi$qmi#}mixmi#|mi!fmiemibmi#Qmifmilmi~P7sO`!iOr!ZOs!ZOt!hOnoipoi#koi$qoi#}oixoi#|oi!foieoiboi#Qoifoiloi~P7sO`!iOn!fOp$oOr!ZOs!ZOt!hO~P7sO!R$tO!U$uO!W$vO!Z$wO!^$xO!b$yO#mRO#nRO~OZ#aX[#aX]#aX^#aX_#aX`#aXn#aXp#aXr#aXs#aXt#aXv#aXx#aX{#aX!h#aX#m#aX#n#aX#o#aX#y#aX#}#aX~P-yO#}#}Ox$cX~P$yO$Z${O~O#}$|Ox$bX~Ox%OO~O#}#}O!f$cax$ca~O$Z%SOx!}X#}!}X~O#}%TOx$nX~Ox%VO~O$Z#Va~P3uO#l!wO$h^O~O#}$XO#Q$pa~O#}$^Ol$Ra~O!T%aO~OxpO~O#|%bObaX#}aX~P$yO#kSq$qSq#}SqxSq#|Sq!fSqeSqbSq#QSqfSqlSq~P$yOx#{O#|#|O#}uX~P$yOx%dO~O#y%eOZ!OX[!OX]!OX^!OX_!OX`!OXn!OXp!OXr!OXs!OXt!OXv!OX{!OX!h!OX#k!OX$q!OX#}!OXx!OX#|!OX!f!OXe!OXb!OX#Q!OXf!OXl!OX~Op%gO~Op%hO~Op%iO~O![%jO~O![%kO~O![%lO~O#}$|Ox$ba~OZ![O[![O]!]O^!]O_!^O`!iOn!fOp!gOr!ZOs!ZOt!hO{!jO#y!bOv$`X~Ox%qO!f%qO!h%pO~PHnO!f#fa#}#fax#fa~P$yO#}%TOx$na~O#O%wO~P`O#Q#Ti#}#Ti~P$yOf%xO~P$yOl$Si#}$Si~P$yO#kgq$qgq#}gqxgq#|gq!fgqegqbgq#Qgqfgqlgq~P$yO`qynqypqyrqysqytqy#kqy$qqy#}qyxqy#|qy!fqyeqybqy#Qqyfqylqy~P7sO#y%eOZ!Oa[!Oa]!Oa^!Oa_!Oa`!Oan!Oap!Oar!Oas!Oat!Oav!Oa{!Oa!h!Oa#k!Oa$q!Oa#}!Oax!Oa#|!Oa!f!Oae!Oab!Oa#Q!Oaf!Oal!Oa~O!S%|O~O!V%|O~O!S%}O~O!R$tO!U$uO!W$vO!Z$wO!^$xO!b&sO#mRO#nRO~O!X$[P~P! VOx!li#}!li~P$yOT$_XZ$_X[$_X]!xy^!xy_!xy`!xyd$_Xh$_Xi$_Xn!xyp!xyr!xys$_Xt!xyv$_X{!xy!S$_X!T$_X!U$_X!W$_X!b$_X!f$_X!h$_X!o$_X!v$_X#R$_X#k!xy#m$_X#n$_X#y!xy$g$_X$h$_X$i$_X$j$_X$q!xy#}!xyx!xy#|!xye!xyb!xy#Q!xyf!xyl!xy~O#k#PX$q#PX#}#PXx#PX#|#PX!f#PXe#PXb#PX#Q#PXf#PXl#PX~P$yObai#}ai~P$yO!T&]O~O#mRO#nRO!X!PX#y!PX#}!PX~O#y&nO!X!OX#}!OX~O!X&_O~O$Z&`O~O#}&aO!X$YX~O!X&cO~O#}&dO!X$[X~O!X&fO~O#kc!R$qc!R#}c!Rxc!R#|c!R!fc!Rec!Rbc!R#Qc!Rfc!Rlc!R~P$yO#y&nO!X!Oa#}!Oa~O#}&aO!X$Ya~O#}&dO!X$[a~O$]&lO~O$]&oO~O!X&pO~O![&rO~OQP_^$g]#y~",
-  goto: "Du$qPPPP$rP%k%n%t&W'qPPPPPP'zP$rPPP$rPP'}(QP$rP$rP$rPPP(WP(cP$r$rPP(l)R)^)RPPPPPPP)RPP)RP*k*n)RP*t*z$rP$rP$r+R+z+},T+zP,]-U,],].U.}P$r/v$r0o0o1h1kP1qPP0o1w1}.Q2RPP2ZP2^2e2k2q2w4S4^4d4j4p4w4}5T5ZPPPPPPPP5a5j7q8j9c9fPP9jPP9p9s:l;e;h;l;q<`=O=o>hP>kP>o?b@T@|ASAV$rA]A]PPPPBU7qB}CvCyDr!mhOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR!YSQ!WSR$k#cS!US#cS#Ou$^W#u!n!v$|%TT&R%k&a#WXOPQWYgjsz{!Z!_!`!a!c!e!f!g!h!i#X#Z#]#a#e#p#r#|#}$W$[$]$`$o${%S%V%b%e%j%l%w%x&O&`&d&l&n&o&rb!TSu!v#c$^$|%T%k&aU#_!T#`#sR#s!nU#_!T#`#sT$U!x$VR$j#aR#SuQ#QuR%^$^U!PQ#]#pQ#q!iR$e#ZQpQQ$g#]R$q#pQ$z#rQ%r%SQ&Q%jU&V%l&d&rQ&g&`T&m&l&oc$s#r%S%j%l&`&d&l&o&r!liOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xQ#k!cU$r#r%S&lS%z%e&n]&P%j%l&`&d&o&rR&U%kQ&S%kR&h&aQ&Y%lR&q&rS&W%l&rR&j&d!mZOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR#z!nQ#w!nR%n$|S#v!n$|T$Q!v%T!mcOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!lcOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xQ!p`T!ym$X!maOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!mbOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!mfOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!mnOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR$T!vQ$R!vR%s%TQ%v%VR&Z%wQ!{mR%Y$XT!zm$XS!xm$XT$U!x$VRpQS#`!T#sR$h#`Q#d!WR$l#dQ$_#QR%_$_Q#[!PR$f#[!vYOPQWgjsz{!Z!_!`!a!c!e!f!g!h!i!n#X#Z#]#a#e#p#r#|#}$W$[$]$`$o${%S%V%b%e%w%x&lS!mY&O_&O%j%l&`&d&n&o&rQ%f$rS%{%f&^R&^&PQ&b&SR&i&bQ&e&WR&k&eQ$}#wR%o$}S$O!t#tR%R$OQ%U$RR%t%UQ$V!xR%W$VQ$Y!{R%Z$YQ#Y}R$d#YQpOQ}PR$c#XUTOP#XW!OQ!i#Z#]Q!lWQ!rgQ!tjQ!}sQ#VzQ#W{Q#g!ZQ#h!_Q#i!`Q#j!aQ#l!eQ#m!fQ#n!gQ#o!hQ#t!nQ$i#aQ$m#eQ$p#pQ%P#|Q%Q#}Q%X$WQ%[$[Q%]$]Q%`$`Q%c$oQ%m${S%u%V%wQ%y%bR&[%x!moOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!mSOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR!XST!VS#cQ#a!UR$]#OR#e!Y!msOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!muOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR#RuT#Pu$^V!QQ#]#p!X!_T!O!r!t!}#V#W#g#l#m#n#o#t$i$m$p%P%Q%X%[%]%`%c%m%u%y&[!Z!`T!O!r!t!}#V#W#g#h#l#m#n#o#t$i$m$p%P%Q%X%[%]%`%c%m%u%y&[!]!aT!O!r!t!}#V#W#g#h#i#l#m#n#o#t$i$m$p%P%Q%X%[%]%`%c%m%u%y&[!mWOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR&T%kT&X%l&r!a!cT!O!l!r!t!}#V#W#g#h#i#j#l#m#n#o#t$i$m$p%P%Q%X%[%]%`%c%m%u%y&[!a!eT!O!l!r!t!}#V#W#g#h#i#j#l#m#n#o#t$i$m$p%P%Q%X%[%]%`%c%m%u%y&[!m[OPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xQ!o[R!qaR#x!nQ!ujR#y!n!mdOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!mjOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%x!mkOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR$S!v!mmOPQWgjsz{!Z!_!`!a!e!f!g!h!i!n#X#Z#]#a#e#p#|#}$W$[$]$`$o${%V%b%w%xR!|m",
-  nodeNames: "\u26A0 LineComment BlockComment Expression ForExpression for InExpressions InExpression Name Identifier Identifier ArithOp ArithOp ArithOp ArithOp ArithOp in IterationContext return IfExpression if then else QuantifiedExpression some every InExpressions InExpression satisfies Disjunction or Conjunction and Comparison CompareOp CompareOp between PositiveUnaryTest ( PositiveUnaryTests ) ArithmeticExpression InstanceOfExpression instance of Type QualifiedName VariableName SpecialType days time duration years months date > ListType list < ContextType context ContextEntryTypes ContextEntryType FunctionType function ArgumentTypes ArgumentType PathExpression ] FilterExpression [ FunctionInvocation SpecialFunctionName NamedParameters NamedParameter ParameterName PositionalParameters null NumericLiteral StringLiteral BooleanLiteral DateTimeLiteral DateTimeConstructor AtLiteral ? SimplePositiveUnaryTest Interval ParenthesizedExpression List FunctionDefinition FormalParameters FormalParameter external FunctionBody } { Context ContextEntry Key Name Identifier Expressions UnaryTests Wildcard not",
-  maxTerm: 171,
+  states: "C|O`QYOOO`QYOOO$mQYOOOOQU'#Ce'#CeO$wQYO'#C`O&QQYO'#FQOOQQ'#Ff'#FfO&[QYO'#FfO`QYO'#DVOOQU'#En'#EnO'{Q^O'#D]OOQU'#D^'#D^OOQU'#D]'#D]OOQO'#Fn'#FnO)xQWO'#DvOOQQ'#D}'#D}OOQQ'#EO'#EOOOQQ'#EP'#EPO)}OWO'#ESO)xQWO'#EQOOQQ'#EQ'#EQOOQQ'#Ft'#FtOOQQ'#Fr'#FrOOQQ'#Fy'#FyOOQQ'#EU'#EUO`QYO'#EWOOQQ'#FS'#FSO*SQ^O'#FSO+yQYO'#EXO,QQWO'#EYOOQP'#F}'#F}O,VQXO'#EaOOQQ'#Fz'#FzOOQQ'#FR'#FRQOQWOOOOQQ'#FT'#FTOOQQ'#F^'#F^O`QYO'#CoOOQQ'#F_'#F_O$wQYO'#CsO,bQYO'#DwOOQQ'#Fs'#FsO,gQYO'#EROOQO'#ER'#ERO`QYO'#EVO`QYO'#EUOOQO'#F{'#F{Q,oQWOOO,tQYO'#DRO-kQWO'#FbOOQO'#DT'#DTO-vQYO'#FfO-}QWOOO.tQYO'#CdO/RQYO'#FVOOQQ'#Cc'#CcO/WQYO'#FUOOQQ'#Cb'#CbO/`QYO,58zO`QYO,59iOOQQ'#Fc'#FcOOQQ'#Fd'#FdOOQQ'#Fe'#FeO`QYO,59qO`QYO,59qO`QYO,59qOOQQ'#Fl'#FlO/eQYO,5:^OOQQ'#Fm'#FmO`QYO,5:`O`QYO,59eO`QYO,59gO`QYO,59iO1^QYO,59iO1eQYO,59rOOQQ,5:i,5:iO1jQYO,59qOOQU-E8l-E8lO3^QYO'#FoOOQQ,5:b,5:bOOQQ,5:n,5:nOOQQ,5:l,5:lO3eQYO,5:rOOQQ,5;n,5;nO3oQYO,5:qO3|QWO,5:sO4RQYO,5:tOOQP'#Ee'#EeO4xQXO'#EdOOQO'#Ec'#EcO5PQWO'#EbO5UQWO'#GOO5^QWO,5:{O5cQYO,59ZO/RQYO'#FaOOQQ'#Cw'#CwO5jQYO'#F`OOQQ'#Cv'#CvO5rQYO,59_O5wQYO,5:cO5|QYO,5:mO3hQYO,5:qO6RQYO,5:pO`QYO'#EwQ,oQWOOO`QYO'#EmO6xQWO,5;|O`QYOOOOQR'#Cf'#CfOOQQ'#Ej'#EjO7rQYO,59OO`QYO,5;qOOQQ'#FY'#FYO$wQYO'#EkO8SQYO,5;pO`QYO1G.fOOQQ'#F]'#F]O8yQYO1G/TO;pQYO1G/]O;zQYO1G/]O<UQYO1G/]OOQQ1G/x1G/xO=xQYO1G/zO>PQYO1G/PO?YQYO1G/RO@cQYO1G/TO`QYO1G/TOOQQ1G/T1G/TO@yQYO1G/^OAhQ^O'#CdOBzQYO'#FqOOQO'#Dz'#DzOCUQWO'#DyOCZQWO'#FpOOQO'#Dx'#DxOOQO'#D{'#D{OCcQWO,5<ZOOQQ1G0^1G0^O`QYO1G0]O`QYO'#EsOChQWO,5<]OOQQ1G0_1G0_OCsQWO'#E[ODOQWO'#F|OOQO'#EZ'#EZODWQWO1G0`OOQP'#Eu'#EuOD]QXO,5;OO`QYO,5:|ODdQXO'#EvODlQWO,5<jOOQQ1G0g1G0gO`QYO1G.uO`QYO,5;{O$wQYO'#ElODtQYO,5;zO`QYO1G.yOD|QYO1G/}OOQO1G0X1G0XOOQO,5;c,5;cOOQO-E8u-E8uOOQO,5;X,5;XOOQO-E8k-E8kOERQWOOOOQQ-E8h-E8hOEWQYO'#CmOOQQ1G1]1G1]OOQQ,5;V,5;VOOQQ-E8i-E8iOEeQYO7+$QOOQQ7+%f7+%fO`QYO7+$oOF[QYO,5:rOFiQWO7+$oOFnQYO'#D[OOQQ'#DZ'#DZOHbQYO'#D_OHgQYO'#D_OHlQYO'#D_OHqQ`O'#DgOHvQ`O'#DjOH{Q`O'#DnOOQQ7+$x7+$xO`QYO,5:eO$wQYO'#ErOIQQWO,5<[OOQQ1G1u1G1uOJWQYO7+%wOJeQYO,5;_OOQO-E8q-E8qO@yQYO,5:vO$wQYO'#EtOJrQWO,5<hOJzQYO7+%zOOQP-E8s-E8sOKRQYO1G0hOOQO,5;b,5;bOOQO-E8t-E8tOK]QYO7+$aOKdQYO1G1gOOQQ,5;W,5;WOOQQ-E8j-E8jOKnQYO7+$eOOQO7+%i7+%iO`QYO,59XOLeQYO<<HZOOQQ<<HZ<<HZO/eQYO'#EoOMnQYO,59vO! bQYO,59yO! gQYO,59yO! lQYO,59yO! qQYO,5:RO$wQYO,5:UO!!`QbO,5:YO!!gQYO1G0POOQO,5;^,5;^OOQO-E8p-E8pO!!qQYO<<IcOOQQ<<Ic<<IcOOQO1G0b1G0bOOQO,5;`,5;`OOQO-E8r-E8rO!%pQYO'#E^OOQQ<<If<<IfO`QYO<<IfO`QYO<<G{O!&gQYO1G.sOOQQ,5;Z,5;ZOOQQ-E8m-E8mO!&qQYO1G/eOOQQ1G/e1G/eO!&vQbO'#D]O!'XQ`O'#D[O!'dQ`O1G/mO!'iQWO'#DmO!'nQ`O'#FhOOQO'#Dl'#DlO!'vQ`O1G/pOOQO'#Dq'#DqO!'{Q`O'#FjOOQO'#Dp'#DpO!(TQ`O1G/tOOQQAN?QAN?QO!(YQYOAN=gOOQQ7+%P7+%PO!)PQ`O,59vOOQQ7+%X7+%XO! qQYO,5:XO$wQYO'#EpO!)[Q`O,5<SOOQQ7+%[7+%[O! qQYO'#EqO!)dQ`O,5<UO!)lQ`O7+%`OOQO1G/s1G/sOOQO,5;[,5;[OOQO-E8n-E8nOOQO,5;],5;]OOQO-E8o-E8oO@yQYO<<HzOOQQAN>fAN>fO/eQYO'#EoO! qQYO<<HzO!)qQ`O7+%`O!)vQ`O1G/tO!!`QbO,5:YO!){Q`O'#Dn",
+  stateData: "!*[~O#rOS#sOSPOSQOS~OTsOZVO[UOdtOhvOivOs}OviO!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~OTsO[UOdtOhvOivOs}OviO!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~OZ!TO#]!UO~P#PO#nRO#oRO~OZ!^O[!^O]!_O^!_O_!`O`!kOn!hOp!iOr!]Os!]Ot!jO{!lO!i!fO#z!dOv$bX~O#l#tX$s#tX~P%PO$i!mOT$YXZ$YX[$YXd$YXh$YXi$YXs$YXv$YX!T$YX!U$YX!V$YX!X$YX!c$YX!g$YX!i$YX!p$YX!w$YX#S$YX#n$YX#o$YX$Z$YX$j$YX$k$YX$l$YX~O#nRO#oROZ!PX[!PX]!PX^!PX_!PX`!PXn!PXp!PXr!PXs!PXt!PXv!PX{!PX!i!PX#l!PX#p!PX#z!PX$s!PX$O!PXx!PX#}!PX!g!PXe!PXb!PX#R!PXf!PXl!PX~Ov!pO~O$j`O~O#p!uOZ#vX[#vX]#vX^#vX_#vX`#vXn#vXp#vXr#vXs#vXt#vXv#vX{#vX!i#vX#l#vX#z#vX$s#vX$O#vXx#vX#}#vX!g#vXe#vXb#vX#R#vXf#vXl#vX~O!g$eP~P`Ov!xO~O#m!yO$j`O#R$rP~Op#VO~Op#WOv!uX~O$s#ZO~O#luX$OuX$suXxuX#}uX!guXeuXbuX#RuXfuXluX~P%PO$O#]O#l$UXx$UX~O#l#[X~P&[Ov#_O~OZ#`O[#`O]#`O^#`O_#`O#nRO#oRO#z#`O#{#`O$]WX~O`WXxWX$OWX~P.SO`#dO~O$O#eOb#xX~Ob#hO~O#nRO#oRO$ZZO~OTsOZVO[UOdtOhvOivOs}O!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~Ov#rO~P/pO|#tO~O{!lO!i!fO#z!dOZya[ya]ya^ya_ya`yanyapyaryasyatyav$bX#lya$sya$Oyaxya#}ya!gyaeyabya#Ryafyalya~Ox$eP~P`Ox#}O#}$OO~P%PO#}$OO$O$PO!g$eX~P%PO!g$RO~O#nRO#oROx$pP~OZ#`O[#`O]#`O^#`O_#`O#m!yO#z#`O#{#`O~O$]#WX~P4^O$]$YO~O$O$ZO#R$rX~O#R$]O~Oe$^O~P%PO$O$`Ol$SX~Ol$bO~O!W$cO~O!T$dO~O#l!xa$s!xa$O!xax!xa#}!xa!g!xae!xab!xa#R!xaf!xal!xa~P%PO$O#]O#l$Uax$Ua~OZ#`O[#`O]#`O^#`O_#`O#nRO#oRO#z#`O#{#`O~O`Wa$]WaxWa$OWa~P7TO$O#eOb#xa~OZ!^O[!^O]!_O^!_O_!`O{!lO!i!fO#z!dOv$bX~O`qinqipqirqisqitqi#lqi$sqi$Oqixqi#}qi!gqieqibqi#Rqifqilqi~P8[O_!`O{!lO!i!fO#z!dOZyi[yi`yinyipyiryisyityiv$bX#lyi$syi$Oyixyi#}yi!gyieyibyi#Ryifyilyi~O]!_O^!_O~P:SO]yi^yi~P:SO{!lO!i!fO#z!dOZyi[yi]yi^yi_yi`yinyipyiryisyityiv$bX#lyi$syi$Oyixyi#}yi!gyieyibyi#Ryifyilyi~O!g$pO~P%PO`!kOp!iOr!]Os!]Ot!jOnmi#lmi$smi$Omixmi#}mi!gmiemibmi#Rmifmilmi~P8[O`!kOr!]Os!]Ot!jOnoipoi#loi$soi$Ooixoi#}oi!goieoiboi#Roifoiloi~P8[O`!kOn!hOp$qOr!]Os!]Ot!jO~P8[O!S$vO!V$wO!X$xO![$yO!_$zO!c${O#nRO#oRO$ZZO~OZ#bX[#bX]#bX^#bX_#bX`#bXn#bXp#bXr#bXs#bXt#bXv#bXx#bX{#bX!i#bX#n#bX#o#bX#p#bX#z#bX$O#bX~P.SO$O$POx$eX~P%PO$]$}O~O$O%OOx$dX~Ox%QO~O$O$PO!g$eax$ea~O$]%UOx#OX$O#OX~O$O%VOx$pX~Ox%XO~O$]#Wa~P4^O#m!yO$j`O~O$O$ZO#R$ra~O$O$`Ol$Sa~O!U%cO~OxrO~O#}%dObaX$OaX~P%PO#lSq$sSq$OSqxSq#}Sq!gSqeSqbSq#RSqfSqlSq~P%POx#}O#}$OO$OuX~P%POx%fO~O#z%gOZ!OX[!OX]!OX^!OX_!OX`!OXn!OXp!OXr!OXs!OXt!OXv!OX{!OX!i!OX#l!OX$s!OX$O!OXx!OX#}!OX!g!OXe!OXb!OX#R!OXf!OXl!OX~Op%iO~Op%jO~Op%kO~O!]%lO~O!]%mO~O!]%nO~O$O%OOx$da~OZ!^O[!^O]!_O^!_O_!`O`!kOn!hOp!iOr!]Os!]Ot!jO{!lO#z!dOv$bX~Ox%sO!g%sO!i%rO~PIYO!g#ga$O#gax#ga~P%PO$O%VOx$pa~O#P%yO~P`O#R#Ui$O#Ui~P%POf%zO~P%POl$Ti$O$Ti~P%PO#lgq$sgq$Ogqxgq#}gq!ggqegqbgq#Rgqfgqlgq~P%PO`qynqypqyrqysqytqy#lqy$sqy$Oqyxqy#}qy!gqyeqybqy#Rqyfqylqy~P8[O#z%gOZ!Oa[!Oa]!Oa^!Oa_!Oa`!Oan!Oap!Oar!Oas!Oat!Oav!Oa{!Oa!i!Oa#l!Oa$s!Oa$O!Oax!Oa#}!Oa!g!Oae!Oab!Oa#R!Oaf!Oal!Oa~O!T&OO~O!W&OO~O!T&PO~O!S$vO!V$wO!X$xO![$yO!_$zO!c&uO#nRO#oRO$ZZO~O!Y$^P~P! qOx!mi$O!mi~P%POT$aXZ$aX[$aX]!yy^!yy_!yy`!yyd$aXh$aXi$aXn!yyp!yyr!yys$aXt!yyv$aX{!yy!T$aX!U$aX!V$aX!X$aX!c$aX!g$aX!i$aX!p$aX!w$aX#S$aX#l!yy#n$aX#o$aX#z!yy$Z$aX$i$aX$j$aX$k$aX$l$aX$s!yy$O!yyx!yy#}!yye!yyb!yy#R!yyf!yyl!yy~O#l#QX$s#QX$O#QXx#QX#}#QX!g#QXe#QXb#QX#R#QXf#QXl#QX~P%PObai$Oai~P%PO!U&_O~O#nRO#oRO!Y!PX#z!PX$O!PX~O#z&pO!Y!OX$O!OX~O!Y&aO~O$]&bO~O$O&cO!Y$[X~O!Y&eO~O$O&fO!Y$^X~O!Y&hO~O#lc!R$sc!R$Oc!Rxc!R#}c!R!gc!Rec!Rbc!R#Rc!Rfc!Rlc!R~P%PO#z&pO!Y!Oa$O!Oa~O$O&cO!Y$[a~O$O&fO!Y$^a~O$_&nO~O$_&qO~O!Y&rO~O!]&tO~O$Z~QP_^$i]#z~",
+  goto: "E|$sPPPP$tP%m%p%v&Y'sPPPPPP'|P$tPPP$tPP(P(SP$tP$tP$tPPP(YP(eP$t$tPP(n)T)`*m)TPPPPPPP)TPP)TP+r+u)TP+{,R$tP$tP$t,Y-R-U-[-RP-d.]-d-d/]0UP$t0}$t1v1v2o2rP2xPP1v3O3U/X3YPP3bP3e3l3r3x4O5Z5e5k5q5w6O6U6[6bPPPPPPPP6h6q8x9q:j:mPP:qPP:w:z;s<l<o<s<x=g>V>vP?oP?rP?v@iA[BTBZB^$tBdBdPPPPC]8xDUD}EQEy!mjOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR![SQ!YSR$m#eS!WS#eS#Qw$`W#w!p!x%O%VT&T%m&c#WXOPQWYilu|}!]!a!b!c!e!g!h!i!j!k#Z#]#_#c#g#r#t$O$P$Y$^$_$b$q$}%U%X%d%g%l%n%y%z&Q&b&f&n&p&q&tb!VSw!x#e$`%O%V%m&cU#a!V#b#uR#u!pU#a!V#b#uT$W!z$XR$l#cR#UwQ#SwR%`$`U!RQ#_#rQ#s!kR$g#]QrQQ$i#_R$s#rQ$|#tQ%t%UQ&S%lU&X%n&f&tQ&i&bT&o&n&qc$u#t%U%l%n&b&f&n&q&t!lkOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zQ#m!eU$t#t%U&nS%|%g&p]&R%l%n&b&f&q&t#V[OPQWilu|}!]!a!b!c!e!g!h!i!j!k!p#Z#]#_#c#g#r#t$O$P$Y$^$_$b$q$}%U%X%d%g%l%n%y%z&b&f&n&p&q&tR&W%mQ&U%mR&j&cQ&[%nR&s&tS&Y%n&tR&l&f!m]OPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR#|!pQ#y!pR%p%OS#x!p%OT$S!x%V!meOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!leOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zQ!rbT!{o$Z!mcOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mdOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mhOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mpOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR$V!xQ$T!xR%u%VQ%x%XR&]%yQ!}oR%[$ZT!|o$ZS!zo$ZT$W!z$XRrQS#b!V#uR$j#bQ#f!YR$n#fQ$a#SR%a$aQ#^!RR$h#^!vYOPQWilu|}!]!a!b!c!e!g!h!i!j!k!p#Z#]#_#c#g#r#t$O$P$Y$^$_$b$q$}%U%X%d%g%y%z&nS!oY&Q_&Q%l%n&b&f&p&q&tQ%h$tS%}%h&`R&`&RQ&d&UR&k&dQ&g&YR&m&gQ%P#yR%q%PS$Q!v#vR%T$QQ%W$TR%v%WQ$X!zR%Y$XQ$[!}R%]$[Q#[!PR$f#[QrOQ!PPR$e#ZUTOP#ZW!QQ!k#]#_Q!nWQ!tiQ!vlQ#PuQ#X|Q#Y}Q#i!]Q#j!aQ#k!bQ#l!cQ#n!gQ#o!hQ#p!iQ#q!jQ#v!pQ$k#cQ$o#gQ$r#rQ%R$OQ%S$PQ%Z$YQ%^$^Q%_$_Q%b$bQ%e$qQ%o$}S%w%X%yQ%{%dR&^%z!mqOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mSOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR!ZST!XS#eQ#c!WR$_#QR#g![!muOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mwOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR#TwT#Rw$`V!SQ#_#r!X!aT!Q!t!v#P#X#Y#i#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!Z!bT!Q!t!v#P#X#Y#i#j#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!]!cT!Q!t!v#P#X#Y#i#j#k#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!mWOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR&V%mT&Z%n&t!a!eT!Q!n!t!v#P#X#Y#i#j#k#l#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!a!gT!Q!n!t!v#P#X#Y#i#j#k#l#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!m^OPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zQ!q^R!scR#z!pQ!wlR#{!p!mfOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mlOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mmOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR$U!x!moOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR#Oo",
+  nodeNames: "\u26A0 LineComment BlockComment Expression ForExpression for InExpressions InExpression Name Identifier Identifier ArithOp ArithOp ArithOp ArithOp ArithOp in IterationContext return IfExpression if then else QuantifiedExpression some every InExpressions InExpression satisfies Disjunction or Conjunction and Comparison CompareOp CompareOp between PositiveUnaryTest ( PositiveUnaryTests ) ArithmeticExpression InstanceOfExpression instance of Type QualifiedName VariableName BacktickIdentifier SpecialType days time duration years months date > ListType list < ContextType context ContextEntryTypes ContextEntryType FunctionType function ArgumentTypes ArgumentType PathExpression ] FilterExpression [ FunctionInvocation SpecialFunctionName NamedParameters NamedParameter ParameterName PositionalParameters null NumericLiteral StringLiteral BooleanLiteral DateTimeLiteral DateTimeConstructor AtLiteral ? SimplePositiveUnaryTest Interval ParenthesizedExpression List FunctionDefinition FormalParameters FormalParameter external FunctionBody } { Context ContextEntry Key Name Identifier Expressions UnaryTests Wildcard not",
+  maxTerm: 173,
   context: variableTracker,
   nodeProps: [
-    ["closedBy", 38, ")", 70, "]", 95, "}"],
-    ["openedBy", 40, "(", 68, "[", 94, "{"],
-    ["group", -5, 77, 78, 79, 80, 81, "Literal"]
+    ["closedBy", 38, ")", 71, "]", 96, "}"],
+    ["openedBy", 40, "(", 69, "[", 95, "{"],
+    ["group", -5, 78, 79, 80, 81, 82, "Literal"]
   ],
   propSources: [feelHighlighting],
   skippedNodes: [0, 1, 2],
   repeatNodeCount: 14,
-  tokenData: "+l~RuXY#fYZ$ZZ[#f]^$Zpq#fqr$`rs$kwx&cxy&hyz&mz{&r{|'P|}'U}!O'Z!O!P'h!P!Q(Q!Q![){![!]*^!]!^*c!^!_*h!_!`$f!`!a*w!b!c+R!}#O+W#P#Q+]#Q#R&z#o#p+b#q#r+g$f$g#f#BY#BZ#f$IS$I_#f$I|$I}$Z$I}$JO$Z$JT$JU#f$KV$KW#f&FU&FV#f?HT?HU#f~#kY#q~XY#fZ[#fpq#f$f$g#f#BY#BZ#f$IS$I_#f$JT$JU#f$KV$KW#f&FU&FV#f?HT?HU#f~$`O#r~~$cP!_!`$f~$kOr~~$pW$h~OY$kZr$krs%Ys#O$k#O#P%_#P;'S$k;'S;=`&]<%lO$k~%_O$h~~%bRO;'S$k;'S;=`%k;=`O$k~%pX$h~OY$kZr$krs%Ys#O$k#O#P%_#P;'S$k;'S;=`&];=`<%l$k<%lO$k~&`P;=`<%l$k~&hO#z~~&mOv~~&rOx~~&wP^~z{&z~'PO_~~'UO[~~'ZO#}~R'`PZP!`!a'cQ'hO$]Q~'mQ#y~!O!P's!Q!['x~'xO#|~~'}P$g~!Q!['x~(VQ]~z{(]!P!Q)d~(`TOz(]z{(o{;'S(];'S;=`)^<%lO(]~(rVOz(]z{(o{!P(]!P!Q)X!Q;'S(];'S;=`)^<%lO(]~)^OQ~~)aP;=`<%l(]~)iSP~OY)dZ;'S)d;'S;=`)u<%lO)d~)xP;=`<%l)d~*QQ$g~!O!P*W!Q![){~*ZP!Q!['x~*cO$Z~~*hO$q~R*oP![QsP!_!`*rP*wOsPR+OP!XQsP!_!`*r~+WO$j~~+]O!h~~+bO!f~~+gO#R~~+lO#Q~",
+  tokenData: "-c~RvXY#iYZ$^Z[#i]^$^pq#iqr$crs$nwx&fxy&kyz&pz{&u{|'S|}'X}!O'^!O!P'k!P!Q(T!Q![*O![!]*a!]!^*f!^!_*k!_!`$i!`!a*z!b!c+U!}#O+Z#P#Q+`#Q#R&}#S#T+e#o#p-X#q#r-^$f$g#i#BY#BZ#i$IS$I_#i$I|$I}$^$I}$JO$^$JT$JU#i$KV$KW#i&FU&FV#i?HT?HU#i~#nY#r~XY#iZ[#ipq#i$f$g#i#BY#BZ#i$IS$I_#i$JT$JU#i$KV$KW#i&FU&FV#i?HT?HU#i~$cO#s~~$fP!_!`$i~$nOr~~$sW$j~OY$nZr$nrs%]s#O$n#O#P%b#P;'S$n;'S;=`&`<%lO$n~%bO$j~~%eRO;'S$n;'S;=`%n;=`O$n~%sX$j~OY$nZr$nrs%]s#O$n#O#P%b#P;'S$n;'S;=`&`;=`<%l$n<%lO$n~&cP;=`<%l$n~&kO#{~~&pOv~~&uOx~~&zP^~z{&}~'SO_~~'XO[~~'^O$O~R'cPZP!`!a'fQ'kO$_Q~'pQ#z~!O!P'v!Q!['{~'{O#}~~(QP$i~!Q!['{~(YQ]~z{(`!P!Q)g~(cTOz(`z{(r{;'S(`;'S;=`)a<%lO(`~(uVOz(`z{(r{!P(`!P!Q)[!Q;'S(`;'S;=`)a<%lO(`~)aOQ~~)dP;=`<%l(`~)lSP~OY)gZ;'S)g;'S;=`)x<%lO)g~){P;=`<%l)g~*TQ$i~!O!P*Z!Q![*O~*^P!Q!['{~*fO$]~~*kO$s~R*rP!]QsP!_!`*uP*zOsPR+RP!YQsP!_!`*u~+ZO$l~~+`O!i~~+eO!g~~+hWOY+eZ#O+e#O#P,Q#P#S+e#S#T,|#T;'S+e;'S;=`-R<%lO+e~,TRO;'S+e;'S;=`,^;=`O+e~,aXOY+eZ#O+e#O#P,Q#P#S+e#S#T,|#T;'S+e;'S;=`-R;=`<%l+e<%lO+e~-RO$Z~~-UP;=`<%l+e~-^O#S~~-cO#R~",
   tokenizers: [propertyIdentifiers, identifiers, insertSemicolon, 0, 1],
-  topRules: { "Expression": [0, 3], "Expressions": [1, 101], "UnaryTests": [2, 102] },
-  dynamicPrecedences: { "31": -1, "71": -1, "73": -1 },
-  specialized: [{ term: 121, get: (value) => spec_identifier[value] || -1 }],
-  tokenPrec: 2500
+  topRules: { "Expression": [0, 3], "Expressions": [1, 102], "UnaryTests": [2, 103] },
+  dialects: { camunda: 2532 },
+  dynamicPrecedences: { "31": -1, "68": 1, "72": -1, "74": -1 },
+  specialized: [{ term: 122, get: (value) => spec_identifier[value] || -1 }],
+  tokenPrec: 2534
 });
 
 // node_modules/feelers/dist/index.mjs
@@ -46057,7 +43581,7 @@ function isHorizontalRule(line2, cx, breaking) {
     else if (!space(ch))
       return -1;
   }
-  if (breaking && line2.next == 45 && isSetextUnderline(line2) > -1 && line2.depth == cx.stack.length)
+  if (breaking && line2.next == 45 && isSetextUnderline(line2) > -1 && line2.depth == cx.stack.length && cx.parser.leafBlockParsers.indexOf(DefaultLeafBlocks.SetextHeading) > -1)
     return -1;
   return count < 3 ? -1 : 1;
 }
@@ -46153,23 +43677,23 @@ var DefaultBlockParsers = {
     while (cx.nextLine() && line2.depth >= cx.stack.length) {
       if (line2.pos == line2.text.length) {
         addCodeText(pendingMarks, cx.lineStart - 1, cx.lineStart);
-        for (let m5 of line2.markers)
-          pendingMarks.push(m5);
+        for (let m6 of line2.markers)
+          pendingMarks.push(m6);
       } else if (line2.indent < base) {
         break;
       } else {
         if (pendingMarks.length) {
-          for (let m5 of pendingMarks) {
-            if (m5.type == Type.CodeText)
-              addCodeText(marks, m5.from, m5.to);
+          for (let m6 of pendingMarks) {
+            if (m6.type == Type.CodeText)
+              addCodeText(marks, m6.from, m6.to);
             else
-              marks.push(m5);
+              marks.push(m6);
           }
           pendingMarks = [];
         }
         addCodeText(marks, cx.lineStart - 1, cx.lineStart);
-        for (let m5 of line2.markers)
-          marks.push(m5);
+        for (let m6 of line2.markers)
+          marks.push(m6);
         to = cx.lineStart + line2.text.length;
         let codeStart = cx.lineStart + line2.findColumn(line2.baseIndent + 4);
         if (codeStart < to)
@@ -46177,7 +43701,7 @@ var DefaultBlockParsers = {
       }
     }
     if (pendingMarks.length) {
-      pendingMarks = pendingMarks.filter((m5) => m5.type != Type.CodeText);
+      pendingMarks = pendingMarks.filter((m6) => m6.type != Type.CodeText);
       if (pendingMarks.length)
         line2.markers = pendingMarks.concat(line2.markers);
     }
@@ -46199,16 +43723,16 @@ var DefaultBlockParsers = {
         while (i7 < line2.text.length && line2.text.charCodeAt(i7) == ch)
           i7++;
       if (i7 - line2.pos >= len && line2.skipSpace(i7) == line2.text.length) {
-        for (let m5 of line2.markers)
-          marks.push(m5);
+        for (let m6 of line2.markers)
+          marks.push(m6);
         marks.push(elt(Type.CodeMark, cx.lineStart + line2.pos, cx.lineStart + i7));
         cx.nextLine();
         break;
       } else {
         if (!first2)
           addCodeText(marks, cx.lineStart - 1, cx.lineStart);
-        for (let m5 of line2.markers)
-          marks.push(m5);
+        for (let m6 of line2.markers)
+          marks.push(m6);
         let textStart = cx.lineStart + line2.basePos, textEnd = cx.lineStart + line2.text.length;
         if (textStart < textEnd)
           addCodeText(marks, textStart, textEnd);
@@ -46287,8 +43811,8 @@ var DefaultBlockParsers = {
         trailing = false;
         break;
       }
-      for (let m5 of line2.markers)
-        marks.push(m5);
+      for (let m6 of line2.markers)
+        marks.push(m6);
     }
     if (trailing)
       cx.nextLine();
@@ -46493,8 +44017,8 @@ var BlockContext = class {
         if (parser4.nextLine(this, line2, leaf))
           return null;
       leaf.content += "\n" + line2.scrub();
-      for (let m5 of line2.markers)
-        leaf.marks.push(m5);
+      for (let m6 of line2.markers)
+        leaf.marks.push(m6);
     }
     this.finishLeaf(leaf);
     return null;
@@ -46841,7 +44365,7 @@ function resolveConfig(spec) {
   let rest = resolveConfig(spec.slice(1));
   if (!rest || !conf)
     return conf || rest;
-  let conc = (a6, b5) => (a6 || none).concat(b5 || none);
+  let conc = (a6, b4) => (a6 || none).concat(b4 || none);
   let wrapA = conf.wrap, wrapB = rest.wrap;
   return {
     props: conc(conf.props, rest.props),
@@ -46952,7 +44476,7 @@ var InlineDelimiter = class {
 var Escapable = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 var Punctuation = /[!"#$%&'()*+,\-.\/:;<=>?@\[\\\]^_`{|}~\xA1\u2010-\u2027]/;
 try {
-  Punctuation = new RegExp("[\\p{Pc}|\\p{Pd}|\\p{Pe}|\\p{Pf}|\\p{Pi}|\\p{Po}|\\p{Ps}]", "u");
+  Punctuation = new RegExp("[\\p{S}|\\p{P}]", "u");
 } catch (_5) {
 }
 var DefaultInline = {
@@ -46968,8 +44492,8 @@ var DefaultInline = {
   Entity(cx, next, start) {
     if (next != 38)
       return -1;
-    let m5 = /^(?:#\d+|#x[a-f\d]+|\w+);/i.exec(cx.slice(start + 1, start + 31));
-    return m5 ? cx.append(elt(Type.Entity, start, start + 1 + m5[0].length)) : -1;
+    let m6 = /^(?:#\d+|#x[a-f\d]+|\w+);/i.exec(cx.slice(start + 1, start + 31));
+    return m6 ? cx.append(elt(Type.Entity, start, start + 1 + m6[0].length)) : -1;
   },
   InlineCode(cx, next, start) {
     if (next != 96 || start && cx.char(start - 1) == 96)
@@ -47011,10 +44535,10 @@ var DefaultInline = {
     let procInst = /^\?[^]*?\?>/.exec(after);
     if (procInst)
       return cx.append(elt(Type.ProcessingInstruction, start, start + 1 + procInst[0].length));
-    let m5 = /^(?:![A-Z][^]*?>|!\[CDATA\[[^]*?\]\]>|\/\s*[a-zA-Z][\w-]*\s*>|\s*[a-zA-Z][\w-]*(\s+[a-zA-Z:_][\w-.:]*(?:\s*=\s*(?:[^\s"'=<>`]+|'[^']*'|"[^"]*"))?)*\s*(\/\s*)?>)/.exec(after);
-    if (!m5)
+    let m6 = /^(?:![A-Z][^]*?>|!\[CDATA\[[^]*?\]\]>|\/\s*[a-zA-Z][\w-]*\s*>|\s*[a-zA-Z][\w-]*(\s+[a-zA-Z:_][\w-.:]*(?:\s*=\s*(?:[^\s"'=<>`]+|'[^']*'|"[^"]*"))?)*\s*(\/\s*)?>)/.exec(after);
+    if (!m6)
       return -1;
-    return cx.append(elt(Type.HTMLTag, start, start + 1 + m5[0].length));
+    return cx.append(elt(Type.HTMLTag, start, start + 1 + m6[0].length));
   },
   Emphasis(cx, next, start) {
     if (next != 95 && next != 42)
@@ -47217,6 +44741,16 @@ var InlineContext = class {
   /// returning from [parse functions](#InlineParser.parse).
   addDelimiter(type, from, to, open3, close) {
     return this.append(new InlineDelimiter(type, from, to, (open3 ? 1 : 0) | (close ? 2 : 0)));
+  }
+  /// Returns true when there is an unmatched link or image opening
+  /// token before the current position.
+  get hasOpenLink() {
+    for (let i7 = this.parts.length - 1; i7 >= 0; i7--) {
+      let part = this.parts[i7];
+      if (part instanceof InlineDelimiter && (part.type == LinkStart || part.type == ImageStart))
+        return true;
+    }
+    return false;
   }
   /// Add an inline element. Returns the end of the element.
   addElement(elt2) {
@@ -47680,9 +45214,79 @@ function getNextNode(node2) {
   }
   return node2.nextSibling || getNextNode(node2.parent);
 }
-function lintAll(syntaxTree5) {
+var RULE_NAME = "first-item";
+var firstItem = {
+  create(context) {
+    return {
+      enter(node2) {
+        if (node2.name !== "FilterExpression") {
+          return;
+        }
+        const content = context.readContent(node2.from, node2.to);
+        if (zeroIndexPattern().test(content)) {
+          const {
+            from,
+            to
+          } = node2;
+          context.report({
+            from,
+            to,
+            message: "First item is accessed via [1]",
+            severity: "warning",
+            type: RULE_NAME,
+            actions: [
+              {
+                name: "fix",
+                apply(_5, start = from, end = to) {
+                  context.updateContent(start, end, content.replace(zeroIndexPattern(), "[1]"));
+                }
+              }
+            ]
+          });
+        }
+      }
+    };
+  }
+};
+function zeroIndexPattern() {
+  return /\[\s*0\s*\]$/;
+}
+var RULES = [
+  firstItem
+];
+function lintRules(context) {
+  const {
+    readContent,
+    syntaxTree: syntaxTree5,
+    updateContent
+  } = context;
+  const lintMessages = [];
+  const ruleContext = {
+    readContent,
+    report: (message) => {
+      lintMessages.push(message);
+    },
+    updateContent
+  };
+  const rules = RULES.map((rule) => rule.create(ruleContext));
+  syntaxTree5.iterate({
+    enter: (ref) => {
+      for (const rule of rules) {
+        rule.enter && rule.enter(ref);
+      }
+    },
+    leave: (ref) => {
+      for (const rule of rules) {
+        rule.leave && rule.leave(ref);
+      }
+    }
+  });
+  return lintMessages;
+}
+function lintAll(context) {
   const lintMessages = [
-    ...lintSyntax(syntaxTree5)
+    ...lintSyntax(context.syntaxTree),
+    ...lintRules(context)
   ];
   return lintMessages;
 }
@@ -47691,7 +45295,13 @@ var cmFeelLinter = () => (editorView) => {
     return [];
   }
   const tree = (0, import_language.syntaxTree)(editorView.state);
-  const messages = lintAll(tree);
+  const messages = lintAll({
+    syntaxTree: tree,
+    readContent: (from, to) => editorView.state.sliceDoc(from, to),
+    updateContent: (from, to, content) => editorView.dispatch({
+      changes: { from, to, insert: content }
+    })
+  });
   return messages.map((message) => ({
     ...message,
     source: message.type
@@ -48211,6 +45821,7 @@ function FeelersEditor({
   value = "",
   enableGutters = false,
   singleLine = false,
+  lineWrap = false,
   darkMode = false
 }) {
   const changeHandler = import_view2.EditorView.updateListener.of((update) => {
@@ -48270,6 +45881,9 @@ function FeelersEditor({
     ] : [],
     ...singleLine ? [
       import_state.EditorState.transactionFilter.of((tr) => tr.newDoc.lines > 1 ? [] : tr)
+    ] : [],
+    ...lineWrap ? [
+      import_view2.EditorView.lineWrapping
     ] : []
   ];
   if (readOnly) {
@@ -48316,6 +45930,7 @@ var import_language5 = require("@codemirror/language");
 var import_lint2 = require("@codemirror/lint");
 var import_state2 = require("@codemirror/state");
 var import_view3 = require("@codemirror/view");
+var import_highlight5 = require("@lezer/highlight");
 
 // node_modules/lang-feel/dist/index.js
 var import_language4 = require("@codemirror/language");
@@ -48345,13 +45960,27 @@ var snippets = [(0, import_autocomplete2.snippetCompletion)("function(${params})
   detail: "block",
   type: "keyword"
 })];
-function contextualKeyword(options2) {
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function(target) {
+    for (var i7 = 1; i7 < arguments.length; i7++) {
+      var source = arguments[i7];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+function contextualKeyword(options) {
   const {
     context: nodes,
     after,
     before,
     keyword
-  } = options2;
+  } = options;
   return ifInside({
     nodes,
     before,
@@ -48383,6 +46012,12 @@ var keywordCompletions = [contextualKeyword({
   after: "InExpressions",
   keyword: "return"
 })];
+var dontComplete = ["StringLiteral", "Identifier", "LineComment", "BlockComment", "PathExpression"];
+function snippetCompletion(snippets2) {
+  return (0, import_autocomplete2.ifNotIn)(dontComplete, (0, import_autocomplete2.completeFromList)(snippets2.map((s5) => _extends({}, s5, {
+    type: "text"
+  }))));
+}
 function matchLeft(node2, position, nodes) {
   return matchChildren(node2, position, nodes, -1);
 }
@@ -48418,13 +46053,13 @@ function matchUp(node2, nodeNames) {
   }
   return null;
 }
-function ifInside(options2, source) {
+function ifInside(options, source) {
   const {
     nodes,
     before,
     after,
     keyword
-  } = options2;
+  } = options;
   return (context) => {
     const {
       state,
@@ -48491,15 +46126,107 @@ var feelLanguage = import_language4.LRLanguage.define({
 });
 var unaryTestsLanguage = feelLanguage.configure({
   top: "UnaryTests"
-});
+}, "FEEL unary tests");
 var expressionLanguage = feelLanguage.configure({
   top: "Expression"
-});
+}, "FEEL expression");
+function feel2(config = {}) {
+  const language2 = config.dialect === "unaryTests" ? unaryTestsLanguage : expressionLanguage;
+  const dialect = config.parserDialect;
+  const contextTracker = trackVariables(config.context);
+  const contextualLang = language2.configure({
+    contextTracker,
+    dialect
+  });
+  const completions2 = config.completions || [snippetCompletion(snippets), keywordCompletions].flat();
+  return new import_language4.LanguageSupport(contextualLang, [...completions2.map((autocomplete) => contextualLang.data.of({
+    autocomplete
+  }))]);
+}
 
 // node_modules/@bpmn-io/feel-editor/dist/index.es.js
-var import_highlight5 = require("@lezer/highlight");
-function isNodeEmpty(node2) {
-  return node2.from === node2.to;
+var linter2 = [(0, import_lint2.linter)(cmFeelLinter())];
+var baseTheme = import_view3.EditorView.theme({
+  "& .cm-content": {
+    padding: "0px"
+  },
+  "& .cm-line": {
+    padding: "0px"
+  },
+  "&.cm-editor.cm-focused": {
+    outline: "none"
+  },
+  "& .cm-completionInfo": {
+    whiteSpace: "pre-wrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis"
+  },
+  "&.cm-editor": {
+    height: "100%"
+  },
+  // Don't wrap whitespace for custom HTML
+  "& .cm-completionInfo > *": {
+    whiteSpace: "normal"
+  },
+  "& .cm-completionInfo ul": {
+    margin: 0,
+    paddingLeft: "15px"
+  },
+  "& .cm-completionInfo pre": {
+    marginBottom: 0,
+    whiteSpace: "pre-wrap"
+  },
+  "& .cm-completionInfo p": {
+    marginTop: 0
+  },
+  "& .cm-completionInfo p:not(:last-of-type)": {
+    marginBottom: 0
+  }
+});
+var highlightTheme = import_view3.EditorView.baseTheme({
+  "& .variableName": {
+    color: "#10f"
+  },
+  "& .number": {
+    color: "#164"
+  },
+  "& .string": {
+    color: "#a11"
+  },
+  "& .bool": {
+    color: "#219"
+  },
+  "& .function": {
+    color: "#aa3731",
+    fontWeight: "bold"
+  },
+  "& .control": {
+    color: "#708"
+  }
+});
+var syntaxClasses = (0, import_language5.syntaxHighlighting)(
+  import_language5.HighlightStyle.define([
+    { tag: import_highlight5.tags.variableName, class: "variableName" },
+    { tag: import_highlight5.tags.name, class: "variableName" },
+    { tag: import_highlight5.tags.number, class: "number" },
+    { tag: import_highlight5.tags.string, class: "string" },
+    { tag: import_highlight5.tags.bool, class: "bool" },
+    { tag: import_highlight5.tags.function(import_highlight5.tags.variableName), class: "function" },
+    { tag: import_highlight5.tags.function(import_highlight5.tags.special(import_highlight5.tags.variableName)), class: "function" },
+    { tag: import_highlight5.tags.controlKeyword, class: "control" },
+    { tag: import_highlight5.tags.operatorKeyword, class: "control" }
+  ])
+);
+var theme2 = [baseTheme, highlightTheme, syntaxClasses];
+function _isEmpty(node2) {
+  return node2 && node2.from === node2.to;
+}
+function isEmpty(node2, pos) {
+  const nextNode = node2.nextSibling;
+  return _isEmpty(node2) || nextNode && nextNode.from === pos && _isEmpty(nextNode);
+}
+function isVariableName(node2) {
+  return node2 && node2.parent && node2.parent.name === "VariableName";
 }
 function isPathExpression(node2) {
   if (!node2) {
@@ -48510,7 +46237,196 @@ function isPathExpression(node2) {
   }
   return isPathExpression(node2.parent);
 }
-var tags5 = [
+function pathExpressionCompletion({ variables }) {
+  return (context) => {
+    const nodeBefore = (0, import_language5.syntaxTree)(context.state).resolve(context.pos, -1);
+    if (!isPathExpression(nodeBefore)) {
+      return;
+    }
+    const expression = findPathExpression(nodeBefore);
+    const from = nodeBefore === expression ? context.pos : nodeBefore.from;
+    const path = getPath(expression, context);
+    let options = variables;
+    for (var i7 = 0; i7 < path.length - 1; i7++) {
+      var childVar = options.find((val) => val.name === path[i7].name);
+      if (!childVar) {
+        return null;
+      }
+      if (childVar.isList !== "optional" && !!childVar.isList !== path[i7].isList) {
+        return;
+      }
+      options = childVar.entries;
+    }
+    if (!options) return;
+    options = options.map((v5) => ({
+      label: v5.name,
+      type: "variable",
+      info: v5.info,
+      detail: v5.detail
+    }));
+    const result = {
+      from,
+      options
+    };
+    return result;
+  };
+}
+function findPathExpression(node2) {
+  while (node2) {
+    if (node2.name === "PathExpression") {
+      return node2;
+    }
+    node2 = node2.parent;
+  }
+}
+function getPath(node2, context) {
+  let path = [];
+  for (let child = node2.firstChild; child; child = child.nextSibling) {
+    if (child.name === "PathExpression") {
+      path.push(...getPath(child, context));
+    } else if (child.name === "FilterExpression") {
+      path.push(...getFilter(child, context));
+    } else {
+      path.push({
+        name: getNodeContent(child, context),
+        isList: false
+      });
+    }
+  }
+  return path;
+}
+function getFilter(node2, context) {
+  const list = node2.firstChild;
+  if (list.name === "PathExpression") {
+    const path = getPath(list, context);
+    const last4 = path[path.length - 1];
+    last4.isList = true;
+    return path;
+  }
+  return [{
+    name: getNodeContent(list, context),
+    isList: true
+  }];
+}
+function getNodeContent(node2, context) {
+  return context.state.sliceDoc(node2.from, node2.to);
+}
+function variableCompletion({ variables = [], builtins = [] }) {
+  const options = getVariableSuggestions(variables, builtins);
+  if (!options.length) {
+    return (context) => null;
+  }
+  return (context) => {
+    const {
+      pos,
+      state
+    } = context;
+    const nodeBefore = (0, import_language5.syntaxTree)(state).resolve(pos, -1);
+    if (isEmpty(nodeBefore, pos)) {
+      return context.explicit ? {
+        from: pos,
+        options
+      } : null;
+    }
+    if (!isVariableName(nodeBefore) || isPathExpression(nodeBefore)) {
+      return null;
+    }
+    return {
+      from: nodeBefore.from,
+      options
+    };
+  };
+}
+function getVariableSuggestions(variables, builtins) {
+  return [].concat(
+    variables.map((v5) => createVariableSuggestion(v5)),
+    builtins.map((b4) => createVariableSuggestion(b4))
+  );
+}
+function createVariableSuggestion(variable, boost) {
+  if (variable.type === "function") {
+    return createFunctionVariable(variable, boost);
+  }
+  return {
+    label: variable.name,
+    type: "variable",
+    info: variable.info,
+    detail: variable.detail,
+    boost
+  };
+}
+function createFunctionVariable(variable, boost) {
+  const {
+    name: name2,
+    info,
+    detail,
+    params = []
+  } = variable;
+  const paramsWithNames = params.map(({ name: name3, type }, index5) => ({
+    name: name3 || `param ${index5 + 1}`,
+    type
+  }));
+  const template = `${name2}(${paramsWithNames.map((p5) => "${" + p5.name + "}").join(", ")})`;
+  const paramsSignature = paramsWithNames.map(({ name: name3, type }) => type ? `${name3}: ${type}` : name3).join(", ");
+  const label = `${name2}(${paramsSignature})`;
+  return (0, import_autocomplete3.snippetCompletion)(template, {
+    label,
+    type: "function",
+    info,
+    detail,
+    boost
+  });
+}
+function completions({ variables = [], builtins = [] }) {
+  return [
+    pathExpressionCompletion({ variables }),
+    variableCompletion({ variables, builtins }),
+    snippetCompletion(snippets.map((snippet) => ({ ...snippet, boost: -1 }))),
+    ...keywordCompletions
+  ];
+}
+function language(options) {
+  return feel2(options);
+}
+function createContext(variables, builtins) {
+  return variables.slice().reverse().reduce((context, builtin) => {
+    context[builtin.name] = () => {
+    };
+    return context;
+  }, {});
+}
+var builtinsFacet = import_state2.Facet.define();
+var variablesFacet = import_state2.Facet.define();
+var dialectFacet = import_state2.Facet.define();
+function configure({
+  dialect = "expression",
+  variables = [],
+  builtins = [],
+  completions: completions$1 = completions({ builtins, variables })
+}) {
+  const context = createContext([...variables, ...builtins]);
+  return [
+    dialectFacet.of(dialect),
+    builtinsFacet.of(builtins),
+    variablesFacet.of(variables),
+    language({
+      dialect,
+      context,
+      completions: completions$1
+    })
+  ];
+}
+function get3(state) {
+  const builtins = state.facet(builtinsFacet)[0];
+  const variables = state.facet(variablesFacet)[0];
+  const dialect = state.facet(dialectFacet)[0];
+  return {
+    builtins,
+    variables,
+    dialect
+  };
+}
+var camundaTags = [
   {
     name: "not(negand)",
     description: '<p>Returns the logical negation of the given value.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">not(negand: boolean): boolean\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">not(true)\n// false\n\nnot(null)\n// null\n</code></pre>\n'
@@ -48589,7 +46505,7 @@ var tags5 = [
   },
   {
     name: "date and time(from)",
-    description: '<p>Parses the given string into a date and time.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date and time(from: string): date and time\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date and time(&quot;2018-04-29T009:30:00&quot;)\n// date and time(&quot;2018-04-29T009:30:00&quot;)\n</code></pre>\n'
+    description: '<p>Parses the given string into a date and time.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date and time(from: string): date and time\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date and time(&quot;2018-04-29T09:30:00&quot;)\n// date and time(&quot;2018-04-29T09:30:00&quot;)\n</code></pre>\n'
   },
   {
     name: "date and time(date, time)",
@@ -48990,233 +46906,52 @@ var tags5 = [
   {
     name: "last day of month(date)",
     description: '<p><em>Camunda Extension</em></p>\n<p>Takes the month of the given date or date-time value and returns the last day of this month.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">last day of month(date: date): date\n</code></pre>\n<pre><code class="language-feel">last day of month(date: date and time): date\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">last day of month(date(&quot;2022-10-01&quot;))\n// date(&quot;2022-10-31&quot;))\n\nlast day of month(date and time(&quot;2022-10-16T12:00:00&quot;))\n// date(&quot;2022-10-31&quot;))\n</code></pre>\n'
+  },
+  {
+    name: "is empty(list)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns true if the given list is empty. Otherwise, returns false.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">is empty(list: list): boolean</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">is empty([])\n// true\n\nis empty([1,2,3])\n// false\n</code></pre>'
+  },
+  {
+    name: "trim(string)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns the given string without leading and trailing spaces.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">trim(string: string): string</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">trim("  hello world  ")\n// "hello world"\n\ntrim("hello   world ")\n// "hello   world"\n</code></pre>'
+  },
+  {
+    name: "uuid()",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns a UUID (Universally Unique Identifier) with 36 characters.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">uuid(): string</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">uuid()\n// "7793aab1-d761-4d38-916b-b7270e309894"\n</code></pre>'
+  },
+  {
+    name: "to base64(string)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns the given string encoded in Base64 format.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">to base64(value: string): string</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">to base64("FEEL")\n// "RkVFTA=="\n</code></pre>'
   }
 ];
-var options = tags5.map((tag) => {
-  const match = tag.name.match(/^([\w\s]+)\((.*)\)$/);
+function parseBuiltins(builtins) {
+  return builtins.map(parseBuiltin);
+}
+function parseBuiltin(builtin) {
+  const {
+    name: name2,
+    description
+  } = builtin;
+  const match = name2.match(/^([\w\s]+)\((.*)\)$/);
   const functionName = match[1];
   const functionArguments = match[2];
-  const placeHolders = functionArguments.split(", ").map((arg) => `\${${arg}}`).join(", ");
-  return (0, import_autocomplete3.snippetCompletion)(
-    `${functionName}(${placeHolders})`,
-    {
-      label: tag.name,
-      type: "function",
-      info: () => {
-        const html = domify$1(`<div class="description">${tag.description}<div>`);
-        return html;
-      },
-      boost: -1
-    }
-  );
-});
-var builtins = (context) => {
-  let nodeBefore = (0, import_language5.syntaxTree)(context.state).resolve(context.pos, -1);
-  let nextNode = nodeBefore.nextSibling;
-  const isInEmptyNode = isNodeEmpty(nodeBefore) || nextNode && nextNode.from === context.pos && isNodeEmpty(nextNode);
-  if (isInEmptyNode) {
-    return context.explicit ? {
-      from: context.pos,
-      options
-    } : null;
-  }
-  if (nodeBefore.parent && nodeBefore.parent.name !== "VariableName" || isPathExpression(nodeBefore)) {
-    return null;
-  }
+  const params = functionArguments ? functionArguments.split(", ").map((name3) => ({ name: name3 })) : [];
   return {
-    from: nodeBefore.from,
-    options
+    name: functionName,
+    type: "function",
+    params,
+    info: () => {
+      return domify$1(`<div class="description">${description}<div>`);
+    },
+    boost: 0
   };
-};
-var variablesFacet = import_state2.Facet.define();
-var pathExpression = (context) => {
-  const variables2 = context.state.facet(variablesFacet)[0];
-  const nodeBefore = (0, import_language5.syntaxTree)(context.state).resolve(context.pos, -1);
-  if (!isPathExpression(nodeBefore)) {
-    return;
-  }
-  const expression = findPathExpression(nodeBefore);
-  const from = nodeBefore === expression ? context.pos : nodeBefore.from;
-  const path = getPath(expression, context);
-  let options2 = variables2;
-  for (var i7 = 0; i7 < path.length - 1; i7++) {
-    var childVar = options2.find((val) => val.name === path[i7].name);
-    if (!childVar) {
-      return null;
-    }
-    if (childVar.isList !== "optional" && !!childVar.isList !== path[i7].isList) {
-      return;
-    }
-    options2 = childVar.entries;
-  }
-  if (!options2) return;
-  options2 = options2.map((v5) => ({
-    label: v5.name,
-    type: "variable",
-    info: v5.info,
-    detail: v5.detail
-  }));
-  const result = {
-    from,
-    options: options2
-  };
-  return result;
-};
-function findPathExpression(node2) {
-  while (node2) {
-    if (node2.name === "PathExpression") {
-      return node2;
-    }
-    node2 = node2.parent;
-  }
 }
-function getPath(node2, context) {
-  let path = [];
-  for (let child = node2.firstChild; child; child = child.nextSibling) {
-    if (child.name === "PathExpression") {
-      path.push(...getPath(child, context));
-    } else if (child.name === "FilterExpression") {
-      path.push(...getFilter(child, context));
-    } else {
-      path.push({
-        name: getNodeContent(child, context),
-        isList: false
-      });
-    }
-  }
-  return path;
-}
-function getFilter(node2, context) {
-  const list = node2.firstChild;
-  if (list.name === "PathExpression") {
-    const path = getPath(list, context);
-    const last4 = path[path.length - 1];
-    last4.isList = true;
-    return path;
-  }
-  return [{
-    name: getNodeContent(list, context),
-    isList: true
-  }];
-}
-function getNodeContent(node2, context) {
-  return context.state.sliceDoc(node2.from, node2.to);
-}
-var variables = (context) => {
-  const variables2 = context.state.facet(variablesFacet)[0];
-  const options2 = variables2.map((v5) => ({
-    label: v5.name,
-    type: "variable",
-    info: v5.info,
-    detail: v5.detail
-  }));
-  let nodeBefore = (0, import_language5.syntaxTree)(context.state).resolve(context.pos, -1);
-  let nextNode = nodeBefore.nextSibling;
-  const isInEmptyNode = isNodeEmpty(nodeBefore) || nextNode && nextNode.from === context.pos && isNodeEmpty(nextNode);
-  if (isInEmptyNode) {
-    return context.explicit ? {
-      from: context.pos,
-      options: options2
-    } : null;
-  }
-  const result = {
-    from: nodeBefore.from,
-    options: options2
-  };
-  if (nodeBefore.parent && nodeBefore.parent.name !== "VariableName" || isPathExpression(nodeBefore)) {
-    return null;
-  }
-  return result;
-};
-function autocompletion() {
-  return [
-    (0, import_autocomplete3.autocompletion)({
-      override: [
-        variables,
-        builtins,
-        (0, import_autocomplete3.completeFromList)(snippets.map((s5) => ({ ...s5, boost: -1 }))),
-        pathExpression,
-        ...keywordCompletions
-      ]
-    })
-  ];
-}
-function language() {
-  return new import_language5.LanguageSupport(feelLanguage, []);
-}
-var linter2 = [(0, import_lint2.linter)(cmFeelLinter())];
-var baseTheme = import_view3.EditorView.theme({
-  "& .cm-content": {
-    padding: "0px"
-  },
-  "& .cm-line": {
-    padding: "0px"
-  },
-  "&.cm-editor.cm-focused": {
-    outline: "none"
-  },
-  "& .cm-completionInfo": {
-    whiteSpace: "pre-wrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis"
-  },
-  // Don't wrap whitespace for custom HTML
-  "& .cm-completionInfo > *": {
-    whiteSpace: "normal"
-  },
-  "& .cm-completionInfo ul": {
-    margin: 0,
-    paddingLeft: "15px"
-  },
-  "& .cm-completionInfo pre": {
-    marginBottom: 0,
-    whiteSpace: "pre-wrap"
-  },
-  "& .cm-completionInfo p": {
-    marginTop: 0
-  },
-  "& .cm-completionInfo p:not(:last-of-type)": {
-    marginBottom: 0
-  }
-});
-var highlightTheme = import_view3.EditorView.baseTheme({
-  "& .variableName": {
-    color: "#10f"
-  },
-  "& .number": {
-    color: "#164"
-  },
-  "& .string": {
-    color: "#a11"
-  },
-  "& .bool": {
-    color: "#219"
-  },
-  "& .function": {
-    color: "#aa3731",
-    fontWeight: "bold"
-  },
-  "& .control": {
-    color: "#708"
-  }
-});
-var syntaxClasses = (0, import_language5.syntaxHighlighting)(
-  import_language5.HighlightStyle.define([
-    { tag: import_highlight5.tags.variableName, class: "variableName" },
-    { tag: import_highlight5.tags.name, class: "variableName" },
-    { tag: import_highlight5.tags.number, class: "number" },
-    { tag: import_highlight5.tags.string, class: "string" },
-    { tag: import_highlight5.tags.bool, class: "bool" },
-    { tag: import_highlight5.tags.function(import_highlight5.tags.variableName), class: "function" },
-    { tag: import_highlight5.tags.function(import_highlight5.tags.special(import_highlight5.tags.variableName)), class: "function" },
-    { tag: import_highlight5.tags.controlKeyword, class: "control" },
-    { tag: import_highlight5.tags.operatorKeyword, class: "control" }
-  ])
-);
-var theme2 = [baseTheme, highlightTheme, syntaxClasses];
-var autocompletionConf = new import_state2.Compartment();
+var camunda = parseBuiltins(camundaTags);
+var coreConf = new import_state2.Compartment();
+var placeholderConf = new import_state2.Compartment();
 function FeelEditor({
   extensions: editorExtensions = [],
+  dialect = "expression",
   container,
   contentAttributes = {},
   tooltipContainer,
@@ -49226,9 +46961,11 @@ function FeelEditor({
   },
   onLint = () => {
   },
+  placeholder: placeholder$1 = "",
   readOnly = false,
   value = "",
-  variables: variables2 = []
+  builtins = camunda,
+  variables = []
 }) {
   const changeHandler = import_view3.EditorView.updateListener.of((update) => {
     if (update.docChanged) {
@@ -49257,21 +46994,25 @@ function FeelEditor({
     }
   }) : [];
   const extensions = [
-    autocompletionConf.of(variablesFacet.of(variables2)),
-    autocompletion(),
+    (0, import_autocomplete3.autocompletion)(),
+    coreConf.of(configure({
+      dialect,
+      builtins,
+      variables
+    })),
     (0, import_language5.bracketMatching)(),
-    changeHandler,
+    (0, import_language5.indentOnInput)(),
     (0, import_autocomplete3.closeBrackets)(),
     import_view3.EditorView.contentAttributes.of(contentAttributes),
-    (0, import_language5.indentOnInput)(),
+    changeHandler,
     keyHandler,
     import_view3.keymap.of([
       ...import_commands2.defaultKeymap
     ]),
-    language(),
     linter2,
     lintHandler,
     tooltipLayout,
+    placeholderConf.of((0, import_view3.placeholder)(placeholder$1)),
     theme2,
     ...editorExtensions
   ];
@@ -49308,9 +47049,24 @@ FeelEditor.prototype.focus = function(position) {
 FeelEditor.prototype.getSelection = function() {
   return this._cmEditor.state.selection;
 };
-FeelEditor.prototype.setVariables = function(variables2) {
+FeelEditor.prototype.setVariables = function(variables) {
+  const {
+    dialect,
+    builtins
+  } = get3(this._cmEditor.state);
   this._cmEditor.dispatch({
-    effects: autocompletionConf.reconfigure(variablesFacet.of(variables2))
+    effects: [
+      coreConf.reconfigure(configure({
+        dialect,
+        builtins,
+        variables
+      }))
+    ]
+  });
+};
+FeelEditor.prototype.setPlaceholder = function(placeholder$1) {
+  this._cmEditor.dispatch({
+    effects: placeholderConf.reconfigure((0, import_view3.placeholder)(placeholder$1))
   });
 };
 
@@ -49355,7 +47111,7 @@ var getCandidates = function getCandidates2(el, includeContainer, filter2) {
   candidates = candidates.filter(filter2);
   return candidates;
 };
-var getCandidatesIteratively = function getCandidatesIteratively2(elements, includeContainer, options2) {
+var getCandidatesIteratively = function getCandidatesIteratively2(elements, includeContainer, options) {
   var candidates = [];
   var elementsToCheck = Array.from(elements);
   while (elementsToCheck.length) {
@@ -49366,8 +47122,8 @@ var getCandidatesIteratively = function getCandidatesIteratively2(elements, incl
     if (element.tagName === "SLOT") {
       var assigned = element.assignedElements();
       var content = assigned.length ? assigned : element.children;
-      var nestedCandidates = getCandidatesIteratively2(content, true, options2);
-      if (options2.flatten) {
+      var nestedCandidates = getCandidatesIteratively2(content, true, options);
+      if (options.flatten) {
         candidates.push.apply(candidates, nestedCandidates);
       } else {
         candidates.push({
@@ -49377,15 +47133,15 @@ var getCandidatesIteratively = function getCandidatesIteratively2(elements, incl
       }
     } else {
       var validCandidate = matches2.call(element, candidateSelector);
-      if (validCandidate && options2.filter(element) && (includeContainer || !elements.includes(element))) {
+      if (validCandidate && options.filter(element) && (includeContainer || !elements.includes(element))) {
         candidates.push(element);
       }
       var shadowRoot = element.shadowRoot || // check for an undisclosed shadow
-      typeof options2.getShadowRoot === "function" && options2.getShadowRoot(element);
-      var validShadowRoot = !isInert(shadowRoot, false) && (!options2.shadowRootFilter || options2.shadowRootFilter(element));
+      typeof options.getShadowRoot === "function" && options.getShadowRoot(element);
+      var validShadowRoot = !isInert(shadowRoot, false) && (!options.shadowRootFilter || options.shadowRootFilter(element));
       if (shadowRoot && validShadowRoot) {
-        var _nestedCandidates = getCandidatesIteratively2(shadowRoot === true ? element.children : shadowRoot.children, true, options2);
-        if (options2.flatten) {
+        var _nestedCandidates = getCandidatesIteratively2(shadowRoot === true ? element.children : shadowRoot.children, true, options);
+        if (options.flatten) {
           candidates.push.apply(candidates, _nestedCandidates);
         } else {
           candidates.push({
@@ -49421,14 +47177,14 @@ var getSortOrderTabIndex = function getSortOrderTabIndex2(node2, isScope) {
   }
   return tabIndex;
 };
-var sortOrderedTabbables = function sortOrderedTabbables2(a6, b5) {
-  return a6.tabIndex === b5.tabIndex ? a6.documentOrder - b5.documentOrder : a6.tabIndex - b5.tabIndex;
+var sortOrderedTabbables = function sortOrderedTabbables2(a6, b4) {
+  return a6.tabIndex === b4.tabIndex ? a6.documentOrder - b4.documentOrder : a6.tabIndex - b4.tabIndex;
 };
-var isInput2 = function isInput3(node2) {
+var isInput = function isInput2(node2) {
   return node2.tagName === "INPUT";
 };
 var isHiddenInput = function isHiddenInput2(node2) {
-  return isInput2(node2) && node2.type === "hidden";
+  return isInput(node2) && node2.type === "hidden";
 };
 var isDetailsWithSummary = function isDetailsWithSummary2(node2) {
   var r7 = node2.tagName === "DETAILS" && Array.prototype.slice.apply(node2.children).some(function(child) {
@@ -49466,7 +47222,7 @@ var isTabbableRadio = function isTabbableRadio2(node2) {
   return !checked || checked === node2;
 };
 var isRadio = function isRadio2(node2) {
-  return isInput2(node2) && node2.type === "radio";
+  return isInput(node2) && node2.type === "radio";
 };
 var isNonTabbableRadio = function isNonTabbableRadio2(node2) {
   return isRadio(node2) && !isTabbableRadio(node2);
@@ -49549,18 +47305,18 @@ var isDisabledFromFieldset = function isDisabledFromFieldset2(node2) {
   }
   return false;
 };
-var isNodeMatchingSelectorFocusable = function isNodeMatchingSelectorFocusable2(options2, node2) {
+var isNodeMatchingSelectorFocusable = function isNodeMatchingSelectorFocusable2(options, node2) {
   if (node2.disabled || // we must do an inert look up to filter out any elements inside an inert ancestor
   //  because we're limited in the type of selectors we can use in JSDom (see related
   //  note related to `candidateSelectors`)
-  isInert(node2) || isHiddenInput(node2) || isHidden4(node2, options2) || // For a details element with a summary, the summary element gets the focus
+  isInert(node2) || isHiddenInput(node2) || isHidden4(node2, options) || // For a details element with a summary, the summary element gets the focus
   isDetailsWithSummary(node2) || isDisabledFromFieldset(node2)) {
     return false;
   }
   return true;
 };
-var isNodeMatchingSelectorTabbable = function isNodeMatchingSelectorTabbable2(options2, node2) {
-  if (isNonTabbableRadio(node2) || getTabIndex(node2) < 0 || !isNodeMatchingSelectorFocusable(options2, node2)) {
+var isNodeMatchingSelectorTabbable = function isNodeMatchingSelectorTabbable2(options, node2) {
+  if (isNonTabbableRadio(node2) || getTabIndex(node2) < 0 || !isNodeMatchingSelectorFocusable(options, node2)) {
     return false;
   }
   return true;
@@ -49597,58 +47353,80 @@ var sortByOrder = function sortByOrder2(candidates) {
     return acc;
   }, []).concat(regularTabbables);
 };
-var tabbable = function tabbable2(container, options2) {
-  options2 = options2 || {};
+var tabbable = function tabbable2(container, options) {
+  options = options || {};
   var candidates;
-  if (options2.getShadowRoot) {
-    candidates = getCandidatesIteratively([container], options2.includeContainer, {
-      filter: isNodeMatchingSelectorTabbable.bind(null, options2),
+  if (options.getShadowRoot) {
+    candidates = getCandidatesIteratively([container], options.includeContainer, {
+      filter: isNodeMatchingSelectorTabbable.bind(null, options),
       flatten: false,
-      getShadowRoot: options2.getShadowRoot,
+      getShadowRoot: options.getShadowRoot,
       shadowRootFilter: isValidShadowRootTabbable
     });
   } else {
-    candidates = getCandidates(container, options2.includeContainer, isNodeMatchingSelectorTabbable.bind(null, options2));
+    candidates = getCandidates(container, options.includeContainer, isNodeMatchingSelectorTabbable.bind(null, options));
   }
   return sortByOrder(candidates);
 };
-var focusable = function focusable2(container, options2) {
-  options2 = options2 || {};
+var focusable = function focusable2(container, options) {
+  options = options || {};
   var candidates;
-  if (options2.getShadowRoot) {
-    candidates = getCandidatesIteratively([container], options2.includeContainer, {
-      filter: isNodeMatchingSelectorFocusable.bind(null, options2),
+  if (options.getShadowRoot) {
+    candidates = getCandidatesIteratively([container], options.includeContainer, {
+      filter: isNodeMatchingSelectorFocusable.bind(null, options),
       flatten: true,
-      getShadowRoot: options2.getShadowRoot
+      getShadowRoot: options.getShadowRoot
     });
   } else {
-    candidates = getCandidates(container, options2.includeContainer, isNodeMatchingSelectorFocusable.bind(null, options2));
+    candidates = getCandidates(container, options.includeContainer, isNodeMatchingSelectorFocusable.bind(null, options));
   }
   return candidates;
 };
-var isTabbable = function isTabbable2(node2, options2) {
-  options2 = options2 || {};
+var isTabbable = function isTabbable2(node2, options) {
+  options = options || {};
   if (!node2) {
     throw new Error("No node provided");
   }
   if (matches2.call(node2, candidateSelector) === false) {
     return false;
   }
-  return isNodeMatchingSelectorTabbable(options2, node2);
+  return isNodeMatchingSelectorTabbable(options, node2);
 };
 var focusableCandidateSelector = /* @__PURE__ */ candidateSelectors.concat("iframe").join(",");
-var isFocusable = function isFocusable2(node2, options2) {
-  options2 = options2 || {};
+var isFocusable = function isFocusable2(node2, options) {
+  options = options || {};
   if (!node2) {
     throw new Error("No node provided");
   }
   if (matches2.call(node2, focusableCandidateSelector) === false) {
     return false;
   }
-  return isNodeMatchingSelectorFocusable(options2, node2);
+  return isNodeMatchingSelectorFocusable(options, node2);
 };
 
 // node_modules/focus-trap/dist/focus-trap.esm.js
+function _arrayLikeToArray(r7, a6) {
+  (null == a6 || a6 > r7.length) && (a6 = r7.length);
+  for (var e8 = 0, n4 = Array(a6); e8 < a6; e8++) n4[e8] = r7[e8];
+  return n4;
+}
+function _arrayWithoutHoles(r7) {
+  if (Array.isArray(r7)) return _arrayLikeToArray(r7);
+}
+function _defineProperty(e8, r7, t7) {
+  return (r7 = _toPropertyKey(r7)) in e8 ? Object.defineProperty(e8, r7, {
+    value: t7,
+    enumerable: true,
+    configurable: true,
+    writable: true
+  }) : e8[r7] = t7, e8;
+}
+function _iterableToArray(r7) {
+  if ("undefined" != typeof Symbol && null != r7[Symbol.iterator] || null != r7["@@iterator"]) return Array.from(r7);
+}
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
 function ownKeys(e8, r7) {
   var t7 = Object.keys(e8);
   if (Object.getOwnPropertySymbols) {
@@ -49670,33 +47448,29 @@ function _objectSpread2(e8) {
   }
   return e8;
 }
-function _defineProperty(obj, key, value) {
-  key = _toPropertyKey(key);
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
+function _toConsumableArray(r7) {
+  return _arrayWithoutHoles(r7) || _iterableToArray(r7) || _unsupportedIterableToArray(r7) || _nonIterableSpread();
 }
-function _toPrimitive(input, hint) {
-  if (typeof input !== "object" || input === null) return input;
-  var prim = input[Symbol.toPrimitive];
-  if (prim !== void 0) {
-    var res = prim.call(input, hint || "default");
-    if (typeof res !== "object") return res;
+function _toPrimitive(t7, r7) {
+  if ("object" != typeof t7 || !t7) return t7;
+  var e8 = t7[Symbol.toPrimitive];
+  if (void 0 !== e8) {
+    var i7 = e8.call(t7, r7 || "default");
+    if ("object" != typeof i7) return i7;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (hint === "string" ? String : Number)(input);
+  return ("string" === r7 ? String : Number)(t7);
 }
-function _toPropertyKey(arg) {
-  var key = _toPrimitive(arg, "string");
-  return typeof key === "symbol" ? key : String(key);
+function _toPropertyKey(t7) {
+  var i7 = _toPrimitive(t7, "string");
+  return "symbol" == typeof i7 ? i7 : i7 + "";
+}
+function _unsupportedIterableToArray(r7, a6) {
+  if (r7) {
+    if ("string" == typeof r7) return _arrayLikeToArray(r7, a6);
+    var t7 = {}.toString.call(r7).slice(8, -1);
+    return "Object" === t7 && r7.constructor && (t7 = r7.constructor.name), "Map" === t7 || "Set" === t7 ? Array.from(r7) : "Arguments" === t7 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t7) ? _arrayLikeToArray(r7, a6) : void 0;
+  }
 }
 var activeFocusTraps = {
   activateTrap: function activateTrap(trapStack, trap) {
@@ -49742,25 +47516,14 @@ var isKeyBackward = function isKeyBackward2(e8) {
 var delay = function delay2(fn2) {
   return setTimeout(fn2, 0);
 };
-var findIndex2 = function findIndex3(arr, fn2) {
-  var idx = -1;
-  arr.every(function(value, i7) {
-    if (fn2(value)) {
-      idx = i7;
-      return false;
-    }
-    return true;
-  });
-  return idx;
-};
 var valueOrHandler = function valueOrHandler2(value) {
   for (var _len = arguments.length, params = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     params[_key - 1] = arguments[_key];
   }
   return typeof value === "function" ? value.apply(void 0, params) : value;
 };
-var getActualTarget = function getActualTarget2(event3) {
-  return event3.target.shadowRoot && typeof event3.composedPath === "function" ? event3.composedPath()[0] : event3.target;
+var getActualTarget = function getActualTarget2(event2) {
+  return event2.target.shadowRoot && typeof event2.composedPath === "function" ? event2.composedPath()[0] : event2.target;
 };
 var internalTrapStack = [];
 var createFocusTrap = function createFocusTrap2(elements, userOptions) {
@@ -49814,8 +47577,8 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
   var getOption = function getOption2(configOverrideOptions, optionName, configOptionName) {
     return configOverrideOptions && configOverrideOptions[optionName] !== void 0 ? configOverrideOptions[optionName] : config[configOptionName || optionName];
   };
-  var findContainerIndex = function findContainerIndex2(element, event3) {
-    var composedPath = typeof (event3 === null || event3 === void 0 ? void 0 : event3.composedPath) === "function" ? event3.composedPath() : void 0;
+  var findContainerIndex = function findContainerIndex2(element, event2) {
+    var composedPath = typeof (event2 === null || event2 === void 0 ? void 0 : event2.composedPath) === "function" ? event2.composedPath() : void 0;
     return state.containerGroups.findIndex(function(_ref) {
       var container = _ref.container, tabbableNodes = _ref.tabbableNodes;
       return container.contains(element) || // fall back to explicit tabbable search which will take into consideration any
@@ -49828,12 +47591,10 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     });
   };
   var getNodeForOption = function getNodeForOption2(optionName) {
+    var _ref2 = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, _ref2$hasFallback = _ref2.hasFallback, hasFallback = _ref2$hasFallback === void 0 ? false : _ref2$hasFallback, _ref2$params = _ref2.params, params = _ref2$params === void 0 ? [] : _ref2$params;
     var optionValue = config[optionName];
     if (typeof optionValue === "function") {
-      for (var _len2 = arguments.length, params = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        params[_key2 - 1] = arguments[_key2];
-      }
-      optionValue = optionValue.apply(void 0, params);
+      optionValue = optionValue.apply(void 0, _toConsumableArray(params));
     }
     if (optionValue === true) {
       optionValue = void 0;
@@ -49846,19 +47607,27 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     }
     var node2 = optionValue;
     if (typeof optionValue === "string") {
-      node2 = doc.querySelector(optionValue);
+      try {
+        node2 = doc.querySelector(optionValue);
+      } catch (err) {
+        throw new Error("`".concat(optionName, '` appears to be an invalid selector; error="').concat(err.message, '"'));
+      }
       if (!node2) {
-        throw new Error("`".concat(optionName, "` as selector refers to no known node"));
+        if (!hasFallback) {
+          throw new Error("`".concat(optionName, "` as selector refers to no known node"));
+        }
       }
     }
     return node2;
   };
   var getInitialFocusNode = function getInitialFocusNode2() {
-    var node2 = getNodeForOption("initialFocus");
+    var node2 = getNodeForOption("initialFocus", {
+      hasFallback: true
+    });
     if (node2 === false) {
       return false;
     }
-    if (node2 === void 0 || !isFocusable(node2, config.tabbableOptions)) {
+    if (node2 === void 0 || node2 && !isFocusable(node2, config.tabbableOptions)) {
       if (findContainerIndex(doc.activeElement) >= 0) {
         node2 = doc.activeElement;
       } else {
@@ -49866,6 +47635,8 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
         var firstTabbableNode = firstTabbableGroup && firstTabbableGroup.firstTabbableNode;
         node2 = firstTabbableNode || getNodeForOption("fallbackFocus");
       }
+    } else if (node2 === null) {
+      node2 = getNodeForOption("fallbackFocus");
     }
     if (!node2) {
       throw new Error("Your focus-trap needs to have at least one focusable element");
@@ -49945,15 +47716,25 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       throw new Error("At least one node with a positive tabindex was found in one of your focus-trap's multiple containers. Positive tabindexes are only supported in single-container focus-traps.");
     }
   };
-  var tryFocus = function tryFocus2(node2) {
+  var _getActiveElement = function getActiveElement(el) {
+    var activeElement = el.activeElement;
+    if (!activeElement) {
+      return;
+    }
+    if (activeElement.shadowRoot && activeElement.shadowRoot.activeElement !== null) {
+      return _getActiveElement(activeElement.shadowRoot);
+    }
+    return activeElement;
+  };
+  var _tryFocus = function tryFocus(node2) {
     if (node2 === false) {
       return;
     }
-    if (node2 === doc.activeElement) {
+    if (node2 === _getActiveElement(document)) {
       return;
     }
     if (!node2 || !node2.focus) {
-      tryFocus2(getInitialFocusNode());
+      _tryFocus(getInitialFocusNode());
       return;
     }
     node2.focus({
@@ -49965,16 +47746,18 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     }
   };
   var getReturnFocusNode = function getReturnFocusNode2(previousActiveElement) {
-    var node2 = getNodeForOption("setReturnFocus", previousActiveElement);
+    var node2 = getNodeForOption("setReturnFocus", {
+      params: [previousActiveElement]
+    });
     return node2 ? node2 : node2 === false ? false : previousActiveElement;
   };
-  var findNextNavNode = function findNextNavNode2(_ref2) {
-    var target = _ref2.target, event3 = _ref2.event, _ref2$isBackward = _ref2.isBackward, isBackward = _ref2$isBackward === void 0 ? false : _ref2$isBackward;
-    target = target || getActualTarget(event3);
+  var findNextNavNode = function findNextNavNode2(_ref3) {
+    var target = _ref3.target, event2 = _ref3.event, _ref3$isBackward = _ref3.isBackward, isBackward = _ref3$isBackward === void 0 ? false : _ref3$isBackward;
+    target = target || getActualTarget(event2);
     updateTabbableNodes();
     var destinationNode = null;
     if (state.tabbableGroups.length > 0) {
-      var containerIndex = findContainerIndex(target, event3);
+      var containerIndex = findContainerIndex(target, event2);
       var containerGroup = containerIndex >= 0 ? state.containerGroups[containerIndex] : void 0;
       if (containerIndex < 0) {
         if (isBackward) {
@@ -49983,8 +47766,8 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
           destinationNode = state.tabbableGroups[0].firstTabbableNode;
         }
       } else if (isBackward) {
-        var startOfGroupIndex = findIndex2(state.tabbableGroups, function(_ref3) {
-          var firstTabbableNode = _ref3.firstTabbableNode;
+        var startOfGroupIndex = state.tabbableGroups.findIndex(function(_ref4) {
+          var firstTabbableNode = _ref4.firstTabbableNode;
           return target === firstTabbableNode;
         });
         if (startOfGroupIndex < 0 && (containerGroup.container === target || isFocusable(target, config.tabbableOptions) && !isTabbable(target, config.tabbableOptions) && !containerGroup.nextTabbableNode(target, false))) {
@@ -49994,12 +47777,12 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
           var destinationGroupIndex = startOfGroupIndex === 0 ? state.tabbableGroups.length - 1 : startOfGroupIndex - 1;
           var destinationGroup = state.tabbableGroups[destinationGroupIndex];
           destinationNode = getTabIndex(target) >= 0 ? destinationGroup.lastTabbableNode : destinationGroup.lastDomTabbableNode;
-        } else if (!isTabEvent(event3)) {
+        } else if (!isTabEvent(event2)) {
           destinationNode = containerGroup.nextTabbableNode(target, false);
         }
       } else {
-        var lastOfGroupIndex = findIndex2(state.tabbableGroups, function(_ref4) {
-          var lastTabbableNode = _ref4.lastTabbableNode;
+        var lastOfGroupIndex = state.tabbableGroups.findIndex(function(_ref5) {
+          var lastTabbableNode = _ref5.lastTabbableNode;
           return target === lastTabbableNode;
         });
         if (lastOfGroupIndex < 0 && (containerGroup.container === target || isFocusable(target, config.tabbableOptions) && !isTabbable(target, config.tabbableOptions) && !containerGroup.nextTabbableNode(target))) {
@@ -50009,7 +47792,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
           var _destinationGroupIndex = lastOfGroupIndex === state.tabbableGroups.length - 1 ? 0 : lastOfGroupIndex + 1;
           var _destinationGroup = state.tabbableGroups[_destinationGroupIndex];
           destinationNode = getTabIndex(target) >= 0 ? _destinationGroup.firstTabbableNode : _destinationGroup.firstDomTabbableNode;
-        } else if (!isTabEvent(event3)) {
+        } else if (!isTabEvent(event2)) {
           destinationNode = containerGroup.nextTabbableNode(target);
         }
       }
@@ -50040,15 +47823,15 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     }
     e8.preventDefault();
   };
-  var checkFocusIn = function checkFocusIn2(event3) {
-    var target = getActualTarget(event3);
-    var targetContained = findContainerIndex(target, event3) >= 0;
+  var checkFocusIn = function checkFocusIn2(event2) {
+    var target = getActualTarget(event2);
+    var targetContained = findContainerIndex(target, event2) >= 0;
     if (targetContained || target instanceof Document) {
       if (targetContained) {
         state.mostRecentlyFocusedNode = target;
       }
     } else {
-      event3.stopImmediatePropagation();
+      event2.stopImmediatePropagation();
       var nextNode;
       var navAcrossContainers = true;
       if (state.mostRecentlyFocusedNode) {
@@ -50094,35 +47877,36 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
         });
       }
       if (nextNode) {
-        tryFocus(nextNode);
+        _tryFocus(nextNode);
       } else {
-        tryFocus(state.mostRecentlyFocusedNode || getInitialFocusNode());
+        _tryFocus(state.mostRecentlyFocusedNode || getInitialFocusNode());
       }
     }
     state.recentNavEvent = void 0;
   };
-  var checkKeyNav = function checkKeyNav2(event3) {
+  var checkKeyNav = function checkKeyNav2(event2) {
     var isBackward = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : false;
-    state.recentNavEvent = event3;
+    state.recentNavEvent = event2;
     var destinationNode = findNextNavNode({
-      event: event3,
+      event: event2,
       isBackward
     });
     if (destinationNode) {
-      if (isTabEvent(event3)) {
-        event3.preventDefault();
+      if (isTabEvent(event2)) {
+        event2.preventDefault();
       }
-      tryFocus(destinationNode);
+      _tryFocus(destinationNode);
     }
   };
-  var checkKey = function checkKey2(event3) {
-    if (isEscapeEvent(event3) && valueOrHandler(config.escapeDeactivates, event3) !== false) {
-      event3.preventDefault();
-      trap.deactivate();
-      return;
+  var checkTabKey = function checkTabKey2(event2) {
+    if (config.isKeyForward(event2) || config.isKeyBackward(event2)) {
+      checkKeyNav(event2, config.isKeyBackward(event2));
     }
-    if (config.isKeyForward(event3) || config.isKeyBackward(event3)) {
-      checkKeyNav(event3, config.isKeyBackward(event3));
+  };
+  var checkEscapeKey = function checkEscapeKey2(event2) {
+    if (isEscapeEvent(event2) && valueOrHandler(config.escapeDeactivates, event2) !== false) {
+      event2.preventDefault();
+      trap.deactivate();
     }
   };
   var checkClick = function checkClick2(e8) {
@@ -50145,8 +47929,8 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     }
     activeFocusTraps.activateTrap(trapStack, trap);
     state.delayInitialFocusTimer = config.delayInitialFocus ? delay(function() {
-      tryFocus(getInitialFocusNode());
-    }) : tryFocus(getInitialFocusNode());
+      _tryFocus(getInitialFocusNode());
+    }) : _tryFocus(getInitialFocusNode());
     doc.addEventListener("focusin", checkFocusIn, true);
     doc.addEventListener("mousedown", checkPointerDown, {
       capture: true,
@@ -50160,10 +47944,11 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       capture: true,
       passive: false
     });
-    doc.addEventListener("keydown", checkKey, {
+    doc.addEventListener("keydown", checkTabKey, {
       capture: true,
       passive: false
     });
+    doc.addEventListener("keydown", checkEscapeKey);
     return trap;
   };
   var removeListeners = function removeListeners2() {
@@ -50174,7 +47959,8 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     doc.removeEventListener("mousedown", checkPointerDown, true);
     doc.removeEventListener("touchstart", checkPointerDown, true);
     doc.removeEventListener("click", checkClick, true);
-    doc.removeEventListener("keydown", checkKey, true);
+    doc.removeEventListener("keydown", checkTabKey, true);
+    doc.removeEventListener("keydown", checkEscapeKey);
     return trap;
   };
   var checkDomRemoval = function checkDomRemoval2(mutations) {
@@ -50185,7 +47971,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       });
     });
     if (isFocusedNodeRemoved) {
-      tryFocus(getInitialFocusNode());
+      _tryFocus(getInitialFocusNode());
     }
   };
   var mutationObserver = typeof window !== "undefined" && "MutationObserver" in window ? new MutationObserver(checkDomRemoval) : void 0;
@@ -50243,7 +48029,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       if (!state.active) {
         return this;
       }
-      var options2 = _objectSpread2({
+      var options = _objectSpread2({
         onDeactivate: config.onDeactivate,
         onPostDeactivate: config.onPostDeactivate,
         checkCanReturnFocus: config.checkCanReturnFocus
@@ -50255,15 +48041,15 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       state.paused = false;
       updateObservedNodes();
       activeFocusTraps.deactivateTrap(trapStack, trap);
-      var onDeactivate = getOption(options2, "onDeactivate");
-      var onPostDeactivate = getOption(options2, "onPostDeactivate");
-      var checkCanReturnFocus = getOption(options2, "checkCanReturnFocus");
-      var returnFocus = getOption(options2, "returnFocus", "returnFocusOnDeactivate");
+      var onDeactivate = getOption(options, "onDeactivate");
+      var onPostDeactivate = getOption(options, "onPostDeactivate");
+      var checkCanReturnFocus = getOption(options, "checkCanReturnFocus");
+      var returnFocus = getOption(options, "returnFocus", "returnFocusOnDeactivate");
       onDeactivate === null || onDeactivate === void 0 || onDeactivate();
       var finishDeactivation = function finishDeactivation2() {
         delay(function() {
           if (returnFocus) {
-            tryFocus(getReturnFocusNode(state.nodeFocusedBeforeActivation));
+            _tryFocus(getReturnFocusNode(state.nodeFocusedBeforeActivation));
           }
           onPostDeactivate === null || onPostDeactivate === void 0 || onPostDeactivate();
         });
@@ -50329,6 +48115,21 @@ var ArrowIcon = function ArrowIcon2(props) {
   });
 };
 ArrowIcon.defaultProps = {
+  xmlns: "http://www.w3.org/2000/svg",
+  width: "16",
+  height: "16"
+};
+var CloseIcon = function CloseIcon2(props) {
+  return u5("svg", {
+    ...props,
+    children: u5("path", {
+      fillRule: "evenodd",
+      d: "m12 4.7-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8 12 4.7Z",
+      fill: "currentColor"
+    })
+  });
+};
+CloseIcon.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "16",
   height: "16"
@@ -50420,26 +48221,17 @@ FeelIcon$1.defaultProps = {
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
 };
-var HelpIcon = function HelpIcon2(props) {
+var LaunchIcon = function LaunchIcon2(props) {
   return u5("svg", {
     ...props,
     children: [u5("path", {
-      d: "M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm0 26a12 12 0 1 1 12-12 12 12 0 0 1-12 12Z"
-    }), u5("circle", {
-      cx: "16",
-      cy: "23.5",
-      r: "1.5"
+      d: "M26 28H6a2.003 2.003 0 0 1-2-2V6a2.003 2.003 0 0 1 2-2h10v2H6v20h20V16h2v10a2.003 2.003 0 0 1-2 2Z"
     }), u5("path", {
-      d: "M17 8h-1.5a4.49 4.49 0 0 0-4.5 4.5v.5h2v-.5a2.5 2.5 0 0 1 2.5-2.5H17a2.5 2.5 0 0 1 0 5h-2v4.5h2V17a4.5 4.5 0 0 0 0-9Z"
-    }), u5("path", {
-      style: {
-        fill: "none"
-      },
-      d: "M0 0h32v32H0z"
+      d: "M20 2v2h6.586L18 12.586 19.414 14 28 5.414V12h2V2H20z"
     })]
   });
 };
-HelpIcon.defaultProps = {
+LaunchIcon.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 32 32"
 };
@@ -50499,7 +48291,7 @@ function Header(props) {
     }), u5("div", {
       class: "bio-properties-panel-header-actions",
       children: documentationRef ? u5("a", {
-        rel: "noopener",
+        rel: "noreferrer",
         class: "bio-properties-panel-header-link",
         href: documentationRef,
         title: "Open documentation",
@@ -50569,10 +48361,10 @@ function Tooltip(props) {
   let timeout = null;
   const wrapperRef = _4(null);
   const tooltipRef = _4(null);
-  const showTooltip = async (event3) => {
+  const showTooltip = async (event2) => {
     const show = () => setShow(true);
     if (!visible && !timeout) {
-      if (event3 instanceof MouseEvent) {
+      if (event2 instanceof MouseEvent) {
         timeout = setTimeout(show, 200);
       } else {
         show();
@@ -50699,7 +48491,7 @@ function useErrors() {
   } = q4(ErrorsContext);
   return errors;
 }
-function useEvent(event3, callback, eventBus) {
+function useEvent(event2, callback, eventBus) {
   const eventContext = q4(EventContext);
   if (!eventBus) {
     ({
@@ -50708,19 +48500,19 @@ function useEvent(event3, callback, eventBus) {
   }
   const didMount = _4(false);
   if (eventBus && !didMount.current) {
-    eventBus.on(event3, callback);
+    eventBus.on(event2, callback);
   }
   p4(() => {
     if (eventBus && didMount.current) {
-      eventBus.on(event3, callback);
+      eventBus.on(event2, callback);
     }
     didMount.current = true;
     return () => {
       if (eventBus) {
-        eventBus.off(event3, callback);
+        eventBus.off(event2, callback);
       }
     };
-  }, [callback, event3, eventBus]);
+  }, [callback, event2, eventBus]);
 }
 var KEY_LENGTH = 6;
 function useKeyFactory(dependencies = []) {
@@ -50741,7 +48533,7 @@ function useLayoutState(path, defaultValue) {
     setLayoutForKey
   } = q4(LayoutContext);
   const layoutForKey = getLayoutForKey(path, defaultValue);
-  const setState = T3((newValue) => {
+  const setState = T4((newValue) => {
     setLayoutForKey(path, newValue);
   }, [setLayoutForKey]);
   return [layoutForKey, setState];
@@ -50759,8 +48551,8 @@ function useShowEntryEvent(id) {
   } = q4(LayoutContext);
   const ref = _4();
   const focus = _4(false);
-  const onShowEntry = T3((event3) => {
-    if (event3.id === id) {
+  const onShowEntry = T4((event2) => {
+    if (event2.id === id) {
       onShow();
       if (!focus.current) {
         focus.current = true;
@@ -50783,7 +48575,7 @@ function useShowEntryEvent(id) {
 }
 function useStickyIntersectionObserver(ref, scrollContainerSelector, setSticky) {
   const [scrollContainer, setScrollContainer] = h4(query(scrollContainerSelector));
-  const updateScrollContainer = T3(() => {
+  const updateScrollContainer = T4(() => {
     const newScrollContainer = query(scrollContainerSelector);
     if (newScrollContainer !== scrollContainer) {
       setScrollContainer(newScrollContainer);
@@ -50828,7 +48620,24 @@ function useStickyIntersectionObserver(ref, scrollContainerSelector, setSticky) 
 function useStaticCallback(callback) {
   const callbackRef = _4(callback);
   callbackRef.current = callback;
-  return T3((...args) => callbackRef.current(...args), []);
+  return T4((...args) => callbackRef.current(...args), []);
+}
+function useElementVisible(element) {
+  const [visible, setVisible3] = h4(!!element && !!element.clientHeight);
+  y4(() => {
+    if (!element) return;
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      requestAnimationFrame(() => {
+        const newVisible = !!entry.contentRect.height;
+        if (newVisible !== visible) {
+          setVisible3(newVisible);
+        }
+      });
+    });
+    resizeObserver.observe(element);
+    return () => resizeObserver.disconnect();
+  }, [element, visible]);
+  return visible;
 }
 function Group(props) {
   const {
@@ -50840,7 +48649,7 @@ function Group(props) {
   } = props;
   const groupRef = _4(null);
   const [open3, setOpen] = useLayoutState(["groups", id, "open"], shouldOpen);
-  const onShow = T3(() => setOpen(true), [setOpen]);
+  const onShow = T4(() => setOpen(true), [setOpen]);
   const toggleOpen = () => setOpen(!open3);
   const [edited, setEdited] = h4(false);
   const [sticky, setSticky] = h4(false);
@@ -51028,7 +48837,8 @@ var CodeEditor$1 = N3((props, ref) => {
       tooltipContainer,
       enableGutters,
       hostLanguage,
-      singleLine
+      singleLine,
+      lineWrap: true
     });
     setEditor(editor2);
     return () => {
@@ -51065,7 +48875,7 @@ var CodeEditor$1 = N3((props, ref) => {
       title: "Open pop-up editor",
       class: "bio-properties-panel-open-feel-popup",
       onClick: () => onPopupOpen("feelers"),
-      children: u5(ExternalLinkIcon, {})
+      children: u5(PopupIcon, {})
     })]
   });
 });
@@ -51101,10 +48911,11 @@ var CodeEditor = N3((props, ref) => {
     onFeelToggle = noop$5,
     onLint = noop$5,
     onPopupOpen = noop$5,
+    placeholder: placeholder2,
     popupOpen,
     disabled,
     tooltipContainer,
-    variables: variables2
+    variables
   } = props;
   const inputRef = _4();
   const [editor, setEditor] = h4();
@@ -51131,9 +48942,10 @@ var CodeEditor = N3((props, ref) => {
       onChange: handleInput,
       onKeyDown,
       onLint,
+      placeholder: placeholder2,
       tooltipContainer,
       value: localValue,
-      variables: variables2,
+      variables,
       extensions: [...enableGutters ? [(0, import_view4.lineNumbers)()] : [], import_view4.EditorView.lineWrapping],
       contentAttributes
     });
@@ -51158,8 +48970,14 @@ var CodeEditor = N3((props, ref) => {
     if (!editor) {
       return;
     }
-    editor.setVariables(variables2);
-  }, [variables2]);
+    editor.setVariables(variables);
+  }, [variables]);
+  p4(() => {
+    if (!editor) {
+      return;
+    }
+    editor.setPlaceholder(placeholder2);
+  }, [placeholder2]);
   const handleClick = () => {
     ref.current.focus();
   };
@@ -51198,7 +49016,7 @@ var noop$4 = () => {
 };
 function FeelIcon2(props) {
   const {
-    feel: feel2 = false,
+    feel: feel3 = false,
     active,
     disabled = false,
     onClick = noop$4
@@ -51213,10 +49031,10 @@ function FeelIcon2(props) {
   };
   return u5("button", {
     type: "button",
-    class: (0, import_classnames.default)("bio-properties-panel-feel-icon", active ? "active" : null, feel2 === "required" ? "required" : "optional"),
+    class: (0, import_classnames.default)("bio-properties-panel-feel-icon", active ? "active" : null, feel3 === "required" ? "required" : "optional"),
     onClick: handleClick,
-    disabled: feel2 === "required" || disabled,
-    title: feel2 === "required" ? feelRequiredLabel : feelOptionalLabel,
+    disabled: feel3 === "required" || disabled,
+    title: feel3 === "required" ? feelRequiredLabel : feelOptionalLabel,
     children: u5(FeelIcon$1, {})
   });
 }
@@ -51230,24 +49048,24 @@ var FeelPopupContext = F3({
 function createDragger(fn2, dragPreview) {
   let self2;
   let startX, startY;
-  function onDragStart(event3) {
+  function onDragStart(event2) {
     self2 = this;
-    startX = event3.clientX;
-    startY = event3.clientY;
-    if (event3.dataTransfer) {
-      event3.dataTransfer.setDragImage(dragPreview || emptyCanvas(), 0, 0);
+    startX = event2.clientX;
+    startY = event2.clientY;
+    if (event2.dataTransfer) {
+      event2.dataTransfer.setDragImage(dragPreview || emptyCanvas(), 0, 0);
     }
     document.addEventListener("dragover", onDrag, true);
     document.addEventListener("dragenter", preventDefault3, true);
     document.addEventListener("dragend", onEnd);
     document.addEventListener("drop", preventDefault3);
   }
-  function onDrag(event3) {
+  function onDrag(event2) {
     const delta2 = {
-      x: event3.clientX - startX,
-      y: event3.clientY - startY
+      x: event2.clientX - startX,
+      y: event2.clientY - startY
     };
-    return fn2.call(self2, event3, delta2);
+    return fn2.call(self2, event2, delta2);
   }
   function onEnd() {
     document.removeEventListener("dragover", onDrag, true);
@@ -51257,9 +49075,9 @@ function createDragger(fn2, dragPreview) {
   }
   return onDragStart;
 }
-function preventDefault3(event3) {
-  event3.preventDefault();
-  event3.stopPropagation();
+function preventDefault3(event2) {
+  event2.preventDefault();
+  event2.stopPropagation();
 }
 function emptyCanvas() {
   return domify$1('<canvas width="0" height="0" />');
@@ -51285,9 +49103,9 @@ function PopupComponent(props, globalRef) {
   const localRef = _4(null);
   const popupRef = globalRef || localRef;
   const containerNode = F4(() => getContainerNode(container), [container]);
-  const handleKeydown = (event3) => {
-    event3.stopPropagation();
-    if (closeOnEscape && event3.key === "Escape") {
+  const handleKeydown = (event2) => {
+    event2.stopPropagation();
+    if (closeOnEscape && event2.key === "Escape") {
       onClose();
     }
   };
@@ -51356,6 +49174,9 @@ function Title(props) {
     emit = () => {
     },
     title,
+    showCloseButton = false,
+    closeButtonTooltip = "Close popup",
+    onClose,
     ...rest
   } = props;
   const context = _4({
@@ -51364,8 +49185,8 @@ function Title(props) {
   });
   const dragPreviewRef = _4();
   const titleRef = _4();
-  const onMove = (event3, delta2) => {
-    cancel(event3);
+  const onMove = (event2, delta2) => {
+    cancel(event2);
     const {
       x: dx,
       y: dy
@@ -51382,10 +49203,10 @@ function Title(props) {
       delta: delta2
     });
   };
-  const onMoveStart = (event3) => {
+  const onMoveStart = (event2) => {
     const onDragStart = createDragger(onMove, dragPreviewRef.current);
-    onDragStart(event3);
-    event3.stopPropagation();
+    onDragStart(event2);
+    event2.stopPropagation();
     const popupParent = getPopupParent(titleRef.current);
     const bounds = popupParent.getBoundingClientRect();
     context.current.startPosition = {
@@ -51416,7 +49237,12 @@ function Title(props) {
     }), u5("div", {
       class: "bio-properties-panel-popup__title",
       children: title
-    }), children]
+    }), children, showCloseButton && u5("button", {
+      title: closeButtonTooltip,
+      class: "bio-properties-panel-popup__close",
+      onClick: onClose,
+      children: u5(CloseIcon, {})
+    })]
   });
 }
 function Body(props) {
@@ -51446,9 +49272,9 @@ function Footer(props) {
 function getPopupParent(node2) {
   return node2.closest(".bio-properties-panel-popup");
 }
-function cancel(event3) {
-  event3.preventDefault();
-  event3.stopPropagation();
+function cancel(event2) {
+  event2.preventDefault();
+  event2.stopPropagation();
 }
 function getContainerNode(node2) {
   if (typeof node2 === "string") {
@@ -51469,7 +49295,8 @@ function FEELPopupRoot(props) {
       off() {
       }
     },
-    popupContainer
+    popupContainer,
+    getPopupLinks = () => []
   } = props;
   const prevElement = usePrevious(element);
   const [popupConfig, setPopupConfig] = h4({});
@@ -51479,7 +49306,7 @@ function FEELPopupRoot(props) {
   const emit = (type, context) => {
     eventBus.fire("feelPopup." + type, context);
   };
-  const isOpen = T3(() => {
+  const isOpen = T4(() => {
     return !!open3;
   }, [open3]);
   useUpdateEffect(() => {
@@ -51494,10 +49321,10 @@ function FEELPopupRoot(props) {
     setSourceElement(_sourceElement);
     emit("open");
   };
-  const handleClose = (event3 = {}) => {
+  const handleClose = (event2 = {}) => {
     const {
       id
-    } = event3;
+    } = event2;
     if (id && id !== source) {
       return;
     }
@@ -51540,6 +49367,7 @@ function FEELPopupRoot(props) {
     children: [open3 && u5(FeelPopupComponent, {
       onClose: handleClose,
       container: popupContainer,
+      getLinks: getPopupLinks,
       sourceElement,
       emit,
       ...popupConfig
@@ -51549,6 +49377,7 @@ function FEELPopupRoot(props) {
 function FeelPopupComponent(props) {
   const {
     container,
+    getLinks,
     id,
     hostLanguage,
     onInput,
@@ -51560,7 +49389,7 @@ function FeelPopupComponent(props) {
     tooltipContainer,
     type,
     value,
-    variables: variables2,
+    variables,
     emit
   } = props;
   const editorRef = _4();
@@ -51569,13 +49398,13 @@ function FeelPopupComponent(props) {
   const handleSetReturnFocus = () => {
     sourceElement && sourceElement.focus();
   };
-  const onKeyDownCapture = (event3) => {
-    if (event3.key === "Escape") {
-      isAutoCompletionOpen.current = autoCompletionOpen(event3.target);
+  const onKeyDownCapture = (event2) => {
+    if (event2.key === "Escape") {
+      isAutoCompletionOpen.current = autoCompletionOpen(event2.target);
     }
   };
-  const onKeyDown = (event3) => {
-    if (event3.key === "Escape") {
+  const onKeyDown = (event2) => {
+    if (event2.key === "Escape") {
       if (!isAutoCompletionOpen.current) {
         onClose();
         isAutoCompletionOpen.current = false;
@@ -51612,18 +49441,21 @@ function FeelPopupComponent(props) {
     children: [u5(Popup.Title, {
       title,
       emit,
+      showCloseButton: true,
+      closeButtonTooltip: "Save and close",
+      onClose,
       draggable: true,
-      children: [type === "feel" && u5("a", {
-        href: "https://docs.camunda.io/docs/components/modeler/feel/what-is-feel/",
-        target: "_blank",
-        class: "bio-properties-panel-feel-popup__title-link",
-        children: ["Learn FEEL expressions", u5(HelpIcon, {})]
-      }), type === "feelers" && u5("a", {
-        href: "https://docs.camunda.io/docs/components/modeler/forms/configuration/forms-config-templating-syntax/",
-        target: "_blank",
-        class: "bio-properties-panel-feel-popup__title-link",
-        children: ["Learn templating", u5(HelpIcon, {})]
-      })]
+      children: u5(g3, {
+        children: getLinks(type).map((link, index5) => {
+          return u5("a", {
+            rel: "noreferrer",
+            href: link.href,
+            target: "_blank",
+            class: "bio-properties-panel-feel-popup__title-link",
+            children: [link.title, u5(LaunchIcon, {})]
+          }, index5);
+        })
+      })
     }), u5(Popup.Body, {
       children: u5("div", {
         onKeyDownCapture,
@@ -51635,7 +49467,7 @@ function FeelPopupComponent(props) {
           name: id,
           onInput,
           value,
-          variables: variables2,
+          variables,
           ref: editorRef,
           tooltipContainer
         }), type === "feelers" && u5(CodeEditor$1, {
@@ -51652,14 +49484,6 @@ function FeelPopupComponent(props) {
           singleLine,
           tooltipContainer
         })]
-      })
-    }), u5(Popup.Footer, {
-      children: u5("button", {
-        type: "button",
-        onClick: () => onClose(),
-        title: "Close pop-up editor",
-        class: "bio-properties-panel-feel-popup__close-btn",
-        children: "Close"
       })
     })]
   });
@@ -51859,10 +49683,11 @@ function FeelTextfieldComponent(props) {
     hostLanguage,
     onInput,
     onError,
-    feel: feel2,
+    placeholder: placeholder2,
+    feel: feel3,
     value = "",
     disabled = false,
-    variables: variables2,
+    variables,
     singleLine,
     tooltipContainer,
     OptionalComponent = OptionalFeelInput,
@@ -51871,7 +49696,7 @@ function FeelTextfieldComponent(props) {
   const [localValue, _setLocalValue] = h4(value);
   const editorRef = useShowEntryEvent(id);
   const containerRef = _4();
-  const feelActive = isString(localValue) && localValue.startsWith("=") || feel2 === "required";
+  const feelActive = isString(localValue) && localValue.startsWith("=") || feel3 === "required";
   const feelOnlyValue = isString(localValue) && localValue.startsWith("=") ? localValue.substring(1) : localValue;
   const [focus, _setFocus] = h4(void 0);
   const {
@@ -51898,7 +49723,7 @@ function FeelTextfieldComponent(props) {
     }
   };
   const handleFeelToggle = useStaticCallback(() => {
-    if (feel2 === "required") {
+    if (feel3 === "required") {
       return;
     }
     if (!feelActive) {
@@ -51919,12 +49744,13 @@ function FeelTextfieldComponent(props) {
       setFocus(-1);
     }
   };
-  const handleLint = useStaticCallback((lint2) => {
-    if (!(lint2 && lint2.length)) {
+  const handleLint = useStaticCallback((lint2 = []) => {
+    const syntaxError = lint2.some((report) => report.type === "Syntax Error");
+    if (syntaxError) {
+      onError("Unparsable FEEL expression.");
+    } else {
       onError(void 0);
-      return;
     }
-    onError("Unparsable FEEL expression.");
   });
   const handlePopupOpen = (type = "feel") => {
     const popupOptions = {
@@ -51937,7 +49763,7 @@ function FeelTextfieldComponent(props) {
       tooltipContainer,
       type,
       value: feelOnlyValue,
-      variables: variables2
+      variables
     };
     openPopup(id, popupOptions, editorRef.current);
   };
@@ -51958,17 +49784,17 @@ function FeelTextfieldComponent(props) {
     setLocalValue(value);
   }, [value]);
   p4(() => {
-    const copyHandler = (event3) => {
+    const copyHandler = (event2) => {
       if (!feelActive) {
         return;
       }
-      event3.clipboardData.setData("application/FEEL", event3.clipboardData.getData("text"));
+      event2.clipboardData.setData("application/FEEL", event2.clipboardData.getData("text"));
     };
-    const pasteHandler = (event3) => {
+    const pasteHandler = (event2) => {
       if (feelActive || popuOpen) {
         return;
       }
-      const data = event3.clipboardData.getData("application/FEEL");
+      const data = event2.clipboardData.getData("application/FEEL");
       if (data) {
         setTimeout(() => {
           handleFeelToggle();
@@ -52000,7 +49826,7 @@ function FeelTextfieldComponent(props) {
         children: label
       }), u5(FeelIcon2, {
         label,
-        feel: feel2,
+        feel: feel3,
         onClick: handleFeelToggle,
         active: feelActive
       })]
@@ -52009,7 +49835,7 @@ function FeelTextfieldComponent(props) {
       ref: containerRef,
       children: [u5(FeelIndicator, {
         active: feelActive,
-        disabled: feel2 !== "optional" || disabled,
+        disabled: feel3 !== "optional" || disabled,
         onClick: handleFeelToggle
       }), feelActive ? u5(CodeEditor, {
         name: id,
@@ -52026,8 +49852,9 @@ function FeelTextfieldComponent(props) {
         },
         onLint: handleLint,
         onPopupOpen: handlePopupOpen,
+        placeholder: placeholder2,
         value: feelOnlyValue,
-        variables: variables2,
+        variables,
         ref: editorRef,
         tooltipContainer
       }) : u5(OptionalComponent, {
@@ -52054,7 +49881,8 @@ var OptionalFeelInput = N3((props, ref) => {
     onInput,
     value,
     onFocus,
-    onBlur
+    onBlur,
+    placeholder: placeholder2
   } = props;
   const inputRef = _4();
   ref.current = {
@@ -52084,6 +49912,7 @@ var OptionalFeelInput = N3((props, ref) => {
     onInput: (e8) => onInput(e8.target.value),
     onFocus,
     onBlur,
+    placeholder: placeholder2,
     value: value || ""
   });
 });
@@ -52138,7 +49967,8 @@ var OptionalFeelTextArea = N3((props, ref) => {
     onInput,
     value,
     onFocus,
-    onBlur
+    onBlur,
+    placeholder: placeholder2
   } = props;
   const inputRef = _4();
   ref.current = {
@@ -52163,6 +49993,7 @@ var OptionalFeelTextArea = N3((props, ref) => {
     onInput: (e8) => onInput(e8.target.value),
     onFocus,
     onBlur,
+    placeholder: placeholder2,
     value: value || "",
     "data-gramm": "false"
   });
@@ -52240,7 +50071,7 @@ function FeelEntry(props) {
     description,
     debounce: debounce2,
     disabled,
-    feel: feel2,
+    feel: feel3,
     label,
     getValue,
     setValue,
@@ -52250,9 +50081,10 @@ function FeelEntry(props) {
     validate,
     show = noop$2,
     example,
-    variables: variables2,
+    variables,
     onFocus,
     onBlur,
+    placeholder: placeholder2,
     tooltip
   } = props;
   const [validationError, setValidationError] = h4(null);
@@ -52274,7 +50106,7 @@ function FeelEntry(props) {
     }
     setValidationError(newValidationError);
   });
-  const onError = T3((err) => {
+  const onError = T4((err) => {
     setLocalError(err);
   }, []);
   const temporaryError = useError(id);
@@ -52286,7 +50118,7 @@ function FeelEntry(props) {
       ...props,
       debounce: debounce2,
       disabled,
-      feel: feel2,
+      feel: feel3,
       id,
       key: element,
       label,
@@ -52294,12 +50126,13 @@ function FeelEntry(props) {
       onError,
       onFocus,
       onBlur,
+      placeholder: placeholder2,
       example,
       hostLanguage,
       singleLine,
       show,
       value,
-      variables: variables2,
+      variables,
       tooltipContainer,
       OptionalComponent: props.OptionalComponent,
       tooltip
@@ -52379,6 +50212,7 @@ function PropertiesPanel(props) {
     tooltipConfig,
     tooltipLoaded,
     feelPopupContainer,
+    getFeelPopupLinks,
     eventBus
   } = props;
   const [layout, setLayout] = h4(createLayout(layoutConfig));
@@ -52471,6 +50305,7 @@ function PropertiesPanel(props) {
                 element,
                 eventBus,
                 popupContainer: feelPopupContainer,
+                getPopupLinks: getFeelPopupLinks,
                 children: u5("div", {
                   class: "bio-properties-panel",
                   children: [u5(Header, {
@@ -52527,6 +50362,12 @@ function useUpdateLayoutEffect(effect, deps) {
     }
   }, deps);
 }
+function translateFallback(template, replacements) {
+  replacements = replacements || {};
+  return template.replace(/{([^}]+)}/g, function(_5, key) {
+    return replacements[key] || "{" + key + "}";
+  });
+}
 function CollapsibleEntry(props) {
   const {
     element,
@@ -52534,7 +50375,8 @@ function CollapsibleEntry(props) {
     id,
     label,
     open: shouldOpen,
-    remove: remove4
+    remove: remove4,
+    translate: translate4 = translateFallback
   } = props;
   const [open3, setOpen] = h4(shouldOpen);
   const toggleOpen = () => setOpen(!open3);
@@ -52543,14 +50385,14 @@ function CollapsibleEntry(props) {
   } = q4(LayoutContext);
   const propertiesPanelContext = {
     ...q4(LayoutContext),
-    onShow: T3(() => {
+    onShow: T4(() => {
       setOpen(true);
       if (isFunction(onShow)) {
         onShow();
       }
     }, [onShow, setOpen])
   };
-  const placeholderLabel = "<empty>";
+  const placeholderLabel = translate4("<empty>");
   return u5("div", {
     "data-entry-id": id,
     class: (0, import_classnames.default)("bio-properties-panel-collapsible-entry", open3 ? "open" : ""),
@@ -52563,14 +50405,14 @@ function CollapsibleEntry(props) {
         children: label || placeholderLabel
       }), u5("button", {
         type: "button",
-        title: "Toggle list item",
+        title: translate4("Toggle list item"),
         class: "bio-properties-panel-arrow  bio-properties-panel-collapsible-entry-arrow",
         children: u5(ArrowIcon, {
           class: open3 ? "bio-properties-panel-arrow-down" : "bio-properties-panel-arrow-right"
         })
       }), remove4 ? u5("button", {
         type: "button",
-        title: "Delete item",
+        title: translate4("Delete item"),
         class: "bio-properties-panel-remove-entry",
         onClick: remove4,
         children: u5(DeleteIcon, {})
@@ -52597,7 +50439,8 @@ function CollapsibleEntry(props) {
 function ListItem(props) {
   const {
     autoFocusEntry,
-    autoOpen
+    autoOpen,
+    translate: translate4 = translateFallback
   } = props;
   p4(() => {
     if (autoOpen && autoFocusEntry) {
@@ -52609,6 +50452,7 @@ function ListItem(props) {
         } else if (isFunction(focusableInput.focus)) {
           focusableInput.focus();
         }
+        focusableInput.scrollIntoView();
       }
     }
   }, [autoOpen, autoFocusEntry]);
@@ -52616,7 +50460,8 @@ function ListItem(props) {
     class: "bio-properties-panel-list-item",
     children: u5(CollapsibleEntry, {
       ...props,
-      open: autoOpen
+      open: autoOpen,
+      translate: translate4
     })
   });
 }
@@ -52624,79 +50469,33 @@ var noop$1 = () => {
 };
 function ListGroup(props) {
   const {
-    add: add3,
+    add: add5,
     element,
     id,
     items,
     label,
-    shouldOpen = true,
-    shouldSort = true
+    shouldOpen = false,
+    translate: translate4 = translateFallback
   } = props;
+  p4(() => {
+    if (props.shouldSort != void 0) {
+      console.warn("the property 'shouldSort' is no longer supported");
+    }
+  }, [props.shouldSort]);
   const groupRef = _4(null);
-  const [open3, setOpen] = useLayoutState(["groups", id, "open"], false);
+  const [open3, setOpen] = useLayoutState(["groups", id, "open"], shouldOpen);
   const [sticky, setSticky] = h4(false);
-  const onShow = T3(() => setOpen(true), [setOpen]);
-  const [ordering, setOrdering] = h4([]);
-  const [newItemAdded, setNewItemAdded] = h4(false);
+  const onShow = T4(() => setOpen(true), [setOpen]);
+  const [localItems, setLocalItems] = h4([]);
   const [addTriggered, setAddTriggered] = h4(false);
-  const prevItems = usePrevious(items);
   const prevElement = usePrevious(element);
-  const elementChanged = element !== prevElement;
-  const shouldHandleEffects = !elementChanged && (shouldSort || shouldOpen);
-  if (elementChanged) {
-    setOrdering(createOrdering(shouldSort ? sortItems(items) : items));
-  }
+  const toggleOpen = T4(() => setOpen(!open3), [open3]);
+  const openItemIds = element === prevElement && open3 && addTriggered ? getNewItemIds(items, localItems) : [];
   p4(() => {
-    if (!prevItems || !shouldSort) {
-      setOrdering(createOrdering(items));
-    }
-  }, [items, element]);
-  p4(() => {
+    setLocalItems(items);
     setAddTriggered(false);
-    if (shouldHandleEffects && prevItems && items.length > prevItems.length) {
-      let add4 = [];
-      items.forEach((item) => {
-        if (!ordering.includes(item.id)) {
-          add4.push(item.id);
-        }
-      });
-      let newOrdering = ordering;
-      if (addTriggered && !open3 && shouldOpen) {
-        toggleOpen();
-      }
-      if (!open3 && shouldSort) {
-        newOrdering = createOrdering(sortItems(items));
-      }
-      newOrdering = newOrdering.filter((item) => !add4.includes(item));
-      if (shouldSort) {
-        newOrdering.unshift(...add4);
-      } else {
-        newOrdering.push(...add4);
-      }
-      setOrdering(newOrdering);
-      setNewItemAdded(addTriggered);
-    } else {
-      setNewItemAdded(false);
-    }
-  }, [items, open3, shouldHandleEffects, addTriggered]);
-  p4(() => {
-    if (shouldSort && open3 && !newItemAdded) {
-      setOrdering(createOrdering(sortItems(items)));
-    }
-  }, [open3, shouldSort]);
-  p4(() => {
-    if (shouldHandleEffects && prevItems && items.length < prevItems.length) {
-      let keep = [];
-      ordering.forEach((o5) => {
-        if (getItem(items, o5)) {
-          keep.push(o5);
-        }
-      });
-      setOrdering(keep);
-    }
-  }, [items, shouldHandleEffects]);
+  }, [items]);
   useStickyIntersectionObserver(groupRef, "div.bio-properties-panel-scroll-container", setSticky);
-  const toggleOpen = () => setOpen(!open3);
   const hasItems = !!items.length;
   const propertiesPanelContext = {
     ...q4(LayoutContext),
@@ -52704,7 +50503,8 @@ function ListGroup(props) {
   };
   const handleAddClick = (e8) => {
     setAddTriggered(true);
-    add3(e8);
+    setOpen(true);
+    add5(e8);
   };
   const allErrors = useErrors();
   const hasError = items.some((item) => {
@@ -52736,22 +50536,24 @@ function ListGroup(props) {
         })
       }), u5("div", {
         class: "bio-properties-panel-group-header-buttons",
-        children: [add3 ? u5("button", {
+        children: [add5 ? u5("button", {
           type: "button",
-          title: "Create new list item",
+          title: translate4("Create new list item"),
           class: "bio-properties-panel-group-header-button bio-properties-panel-add-entry",
           onClick: handleAddClick,
           children: [u5(CreateIcon, {}), !hasItems ? u5("span", {
             class: "bio-properties-panel-add-entry-label",
-            children: "Create"
+            children: translate4("Create")
           }) : null]
         }) : null, hasItems ? u5("div", {
-          title: `List contains ${items.length} item${items.length != 1 ? "s" : ""}`,
+          title: translate4(`List contains {numOfItems} item${items.length != 1 ? "s" : ""}`, {
+            numOfItems: items.length
+          }),
           class: (0, import_classnames.default)("bio-properties-panel-list-badge", hasError ? "bio-properties-panel-list-badge--error" : ""),
           children: items.length
         }) : null, hasItems ? u5("button", {
           type: "button",
-          title: "Toggle section",
+          title: translate4("Toggle section"),
           class: "bio-properties-panel-group-header-button bio-properties-panel-arrow",
           children: u5(ArrowIcon, {
             class: open3 ? "bio-properties-panel-arrow-down" : "bio-properties-panel-arrow-right"
@@ -52762,35 +50564,31 @@ function ListGroup(props) {
       class: (0, import_classnames.default)("bio-properties-panel-list", open3 && hasItems ? "open" : ""),
       children: u5(LayoutContext.Provider, {
         value: propertiesPanelContext,
-        children: ordering.map((o5, index5) => {
-          const item = getItem(items, o5);
+        children: items.map((item, index5) => {
           if (!item) {
             return;
           }
           const {
             id: id2
           } = item;
-          const autoOpen = newItemAdded;
+          const autoOpen = openItemIds.includes(item.id);
           return y3(ListItem, {
             ...item,
             autoOpen,
             element,
             index: index5,
-            key: id2
+            key: id2,
+            translate: translate4
           });
         })
       })
     })]
   });
 }
-function sortItems(items) {
-  return sortBy(items, (i7) => i7.label.toLowerCase());
-}
-function getItem(items, id) {
-  return find(items, (i7) => i7.id === id);
-}
-function createOrdering(items) {
-  return items.map((i7) => i7.id);
+function getNewItemIds(newItems, oldItems) {
+  const newIds = newItems.map((item) => item.id);
+  const oldIds = oldItems.map((item) => item.id);
+  return newIds.filter((itemId) => !oldIds.includes(itemId));
 }
 function Checkbox(props) {
   const {
@@ -52900,24 +50698,20 @@ function List2(props) {
     onAdd,
     onRemove,
     autoFocusEntry,
-    compareFn,
     ...restProps
   } = props;
   const [open3, setOpen] = h4(!!shouldOpen);
   const hasItems = !!items.length;
   const toggleOpen = () => hasItems && setOpen(!open3);
-  const opening = !usePrevious(open3) && open3;
   const elementChanged = usePrevious(element) !== element;
-  const shouldReset = opening || elementChanged;
-  const sortedItems = useSortedItems(items, compareFn, shouldReset);
   const newItems = useNewItems(items, elementChanged);
   p4(() => {
     if (open3 && !hasItems) {
       setOpen(false);
     }
   }, [open3, hasItems]);
-  function addItem(event3) {
-    event3.stopPropagation();
+  function addItem(event2) {
+    event2.stopPropagation();
     onAdd();
     if (!open3) {
       setOpen(true);
@@ -52963,7 +50757,7 @@ function List2(props) {
       component,
       element,
       id,
-      items: sortedItems,
+      items,
       newItems,
       onRemove,
       open: open3
@@ -53022,24 +50816,6 @@ function ItemsList(props) {
     })
   });
 }
-function useSortedItems(currentItems, compareFn, shouldReset = false) {
-  const itemsRef = _4(currentItems.slice());
-  if (shouldReset) {
-    itemsRef.current = currentItems.slice();
-    if (compareFn) {
-      itemsRef.current.sort(compareFn);
-    }
-  } else {
-    const items = itemsRef.current;
-    for (const item of currentItems) {
-      if (!items.includes(item)) {
-        compareFn ? items.unshift(item) : items.push(item);
-      }
-    }
-    itemsRef.current = items.filter((item) => currentItems.includes(item));
-  }
-  return itemsRef.current;
-}
 function useNewItems(items = [], shouldReset) {
   const previousItems = usePrevious(items.slice()) || [];
   if (shouldReset) {
@@ -53052,7 +50828,7 @@ function Select(props) {
     id,
     label,
     onChange,
-    options: options2 = [],
+    options = [],
     value = "",
     disabled,
     onFocus,
@@ -53097,7 +50873,7 @@ function Select(props) {
       onBlur,
       value: localValue,
       disabled,
-      children: options2.map((option, idx) => {
+      children: options.map((option, idx) => {
         if (option.children) {
           return u5("optgroup", {
             label: option.label,
@@ -53132,7 +50908,7 @@ function SelectEntry(props) {
     validate,
     tooltip
   } = props;
-  const options2 = getOptions(element);
+  const options = getOptions(element);
   const globalError = useError(id);
   const [localError, setLocalError] = h4(null);
   let value = getValue(element);
@@ -53161,7 +50937,7 @@ function SelectEntry(props) {
       onChange,
       onFocus,
       onBlur,
-      options: options2,
+      options,
       disabled,
       tooltip,
       element
@@ -53243,12 +51019,14 @@ function TextArea(props) {
     monospace,
     onFocus,
     onBlur,
-    autoResize,
+    autoResize = true,
+    placeholder: placeholder2,
     rows = autoResize ? 1 : 2,
     tooltip
   } = props;
   const [localValue, setLocalValue] = h4(value);
   const ref = useShowEntryEvent(id);
+  const visible = useElementVisible(ref.current);
   const handleInputCallback = F4(() => {
     return debounce2((target) => onInput(target.value.length ? target.value : void 0));
   }, [onInput, debounce2]);
@@ -53260,6 +51038,9 @@ function TextArea(props) {
   y4(() => {
     autoResize && resizeToContents(ref.current);
   }, []);
+  y4(() => {
+    visible && autoResize && resizeToContents(ref.current);
+  }, [visible]);
   p4(() => {
     if (value === localValue) {
       return;
@@ -53286,6 +51067,7 @@ function TextArea(props) {
       onInput: handleInput,
       onFocus,
       onBlur,
+      placeholder: placeholder2,
       rows,
       value: localValue,
       disabled,
@@ -53308,6 +51090,7 @@ function TextAreaEntry(props) {
     validate,
     onFocus,
     onBlur,
+    placeholder: placeholder2,
     autoResize,
     tooltip
   } = props;
@@ -53343,6 +51126,7 @@ function TextAreaEntry(props) {
       debounce: debounce2,
       monospace,
       disabled,
+      placeholder: placeholder2,
       autoResize,
       tooltip,
       element
@@ -53371,6 +51155,7 @@ function Textfield(props) {
     onInput,
     onFocus,
     onBlur,
+    placeholder: placeholder2,
     value = "",
     tooltip
   } = props;
@@ -53412,6 +51197,7 @@ function Textfield(props) {
       onInput: handleInput,
       onFocus,
       onBlur,
+      placeholder: placeholder2,
       value: localValue
     })]
   });
@@ -53429,6 +51215,7 @@ function TextfieldEntry(props) {
     validate,
     onFocus,
     onBlur,
+    placeholder: placeholder2,
     tooltip
   } = props;
   const globalError = useError(id);
@@ -53460,6 +51247,7 @@ function TextfieldEntry(props) {
       onInput,
       onFocus,
       onBlur,
+      placeholder: placeholder2,
       value,
       tooltip,
       element
@@ -53531,8 +51319,310 @@ var index2 = {
   feelPopup: ["type", FeelPopupModule]
 };
 
-// node_modules/bpmn-js-properties-panel/dist/index.esm.js
-var import_zeebe = __toESM(require_zeebe());
+// node_modules/@bpmn-io/extract-process-variables/zeebe/index.mjs
+function getInputOutput(element) {
+  return (getElements(element, "zeebe:IoMapping") || [])[0];
+}
+function getInputParameters(element) {
+  return getParameters(element, "inputParameters");
+}
+function getOutMappings(element) {
+  return (getInputOutput(element) || {}).outputParameters;
+}
+function getInMappings(element) {
+  return (getInputOutput(element) || {}).inputParameters;
+}
+function getInputElement(loopCharacteristics) {
+  const extensionElement = getElements(loopCharacteristics, "zeebe:LoopCharacteristics")[0];
+  return extensionElement && extensionElement.inputElement;
+}
+function getOutputCollection(loopCharacteristics) {
+  const extensionElement = getElements(loopCharacteristics, "zeebe:LoopCharacteristics")[0];
+  return extensionElement && extensionElement.outputCollection;
+}
+function getCalledDecision(element) {
+  return (getElements(element, "zeebe:CalledDecision") || [])[0];
+}
+function getScript(element) {
+  return (getElements(element, "zeebe:Script") || [])[0];
+}
+function getElements(element, type, property) {
+  var elements = getExtensionElements(element, type);
+  return !property ? elements : (elements[0] || {})[property] || [];
+}
+function getParameters(element, property) {
+  var inputOutput = getInputOutput(element);
+  return inputOutput && inputOutput.get(property) || [];
+}
+function getExtensionElements(element, type) {
+  var elements = [];
+  var extensionElements = element.get("extensionElements");
+  if (typeof extensionElements !== "undefined") {
+    var extensionValues = extensionElements.get("values");
+    if (typeof extensionValues !== "undefined") {
+      elements = filter(extensionValues, function(value) {
+        return is$2(value, type);
+      });
+    }
+  }
+  return elements;
+}
+function is$2(element, type) {
+  return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
+}
+function getParents3(element) {
+  var parents = [];
+  var current = element;
+  while (current.$parent) {
+    parents.push(current.$parent);
+    current = current.$parent;
+  }
+  return parents;
+}
+function eachElement2(elements, fn2, depth) {
+  depth = depth || 0;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(s5, i7) {
+    var filter2 = fn2(s5, i7, depth);
+    if (isArray(filter2) && filter2.length) {
+      eachElement2(filter2, fn2, depth + 1);
+    }
+  });
+}
+function add3(elements, e8, unique) {
+  var canAdd = !unique || elements.indexOf(e8) === -1;
+  if (canAdd) {
+    elements.push(e8);
+  }
+  return canAdd;
+}
+function selfAndFlowElements(elements, unique, maxDepth) {
+  var result = [], processedFlowElements = [];
+  eachElement2(elements, function(element, i7, depth) {
+    add3(result, element, unique);
+    var flowElements = element.flowElements;
+    if (maxDepth === -1 || depth < maxDepth) {
+      if (flowElements && add3(processedFlowElements, flowElements, unique)) {
+        return flowElements;
+      }
+    }
+  });
+  return result;
+}
+function selfAndAllFlowElements2(elements, allowDuplicates) {
+  return selfAndFlowElements(elements, !allowDuplicates, -1);
+}
+function getElement(elementId, rootElement) {
+  var allElements = selfAndAllFlowElements2(rootElement);
+  return find(allElements, function(element) {
+    return element.id === elementId;
+  });
+}
+function addVariableToList(variablesList, newVariable) {
+  var foundIdx = findIndex(variablesList, function(variable) {
+    return variable.name === newVariable.name && variable.scope === newVariable.scope;
+  });
+  if (foundIdx >= 0) {
+    variablesList[foundIdx].origin = combineArrays$1(
+      variablesList[foundIdx].origin,
+      newVariable.origin
+    );
+  } else {
+    variablesList.push(newVariable);
+  }
+}
+function createProcessVariable(flowElement, name2, defaultScope) {
+  var scope = getScope$1(flowElement, defaultScope, name2);
+  return {
+    name: name2,
+    origin: [flowElement],
+    scope
+  };
+}
+function getScope$1(element, globalScope, variableName) {
+  var parents = getParents3(element);
+  var scopedParent = find(parents, function(parent) {
+    return is$1(parent, "bpmn:SubProcess") && hasInputParameter(parent, variableName);
+  });
+  return scopedParent ? scopedParent : globalScope;
+}
+function is$1(element, type) {
+  return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
+}
+function hasInputParameter(element, name2) {
+  return find(getInputParameters(element), function(input) {
+    return input.target === name2;
+  });
+}
+function combineArrays$1(a6, b4) {
+  return a6.concat(b4);
+}
+function extractInMappings(options) {
+  var elements = options.elements, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var inMappings = getInMappings(element);
+    forEach(inMappings, function(mapping) {
+      var newVariable = createProcessVariable(
+        element,
+        mapping.target,
+        element
+      );
+      addVariableToList(processVariables, newVariable);
+    });
+  });
+  return processVariables;
+}
+function extractInputElement(options) {
+  var elements = options.elements, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var loopCharacteristics = element.loopCharacteristics;
+    var inputElement = loopCharacteristics && getInputElement(loopCharacteristics);
+    if (inputElement) {
+      var newVariable = createProcessVariable(
+        element,
+        inputElement,
+        element
+      );
+      addVariableToList(processVariables, newVariable);
+    }
+  });
+  return processVariables;
+}
+function extractOutMappings(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var outMappings = getOutMappings(element);
+    forEach(outMappings, function(mapping) {
+      var newVariable = createProcessVariable(
+        element,
+        mapping.target,
+        containerElement
+      );
+      addVariableToList(processVariables, newVariable);
+    });
+  });
+  return processVariables;
+}
+function extractOutputCollections(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var loopCharacteristics = element.loopCharacteristics;
+    var outputCollection = loopCharacteristics && getOutputCollection(loopCharacteristics);
+    if (outputCollection) {
+      var newVariable = createProcessVariable(
+        element,
+        outputCollection,
+        containerElement
+      );
+      addVariableToList(processVariables, newVariable);
+    }
+  });
+  return processVariables;
+}
+function extractResultVariables(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var baseElement = getCalledDecision(element) || getScript(element);
+    if (!baseElement) {
+      return;
+    }
+    var resultVariable = baseElement.resultVariable;
+    if (resultVariable) {
+      var newVariable = createProcessVariable(
+        element,
+        resultVariable,
+        containerElement
+      );
+      addVariableToList(processVariables, newVariable);
+    }
+  });
+  return processVariables;
+}
+var extractors = [
+  extractInMappings,
+  extractInputElement,
+  extractOutMappings,
+  extractOutputCollections,
+  extractResultVariables
+];
+function getProcessVariables(containerElement, additionalExtractors = []) {
+  var processVariables = [];
+  var elements = selfAndAllFlowElements2([containerElement], false);
+  const allPromises = [];
+  forEach([...extractors, ...additionalExtractors], function(extractor) {
+    allPromises.push(extractor({
+      elements,
+      containerElement,
+      processVariables
+    }));
+  });
+  return Promise.all(allPromises).then(() => processVariables);
+}
+async function getVariablesForScope(scope, rootElement, additionalExtractors = []) {
+  var allVariables = await getProcessVariables(rootElement, additionalExtractors);
+  var scopeElement = getElement(scope, rootElement);
+  var scopeVariables = filter(allVariables, function(variable) {
+    return variable.scope.id === scopeElement.id;
+  });
+  var parents = getParents3(scopeElement);
+  var parentsScopeVariables = filter(allVariables, function(variable) {
+    return find(parents, function(parent) {
+      return parent.id === variable.scope.id;
+    });
+  });
+  return combineArrays(scopeVariables, parentsScopeVariables);
+}
+function getVariablesForElement(element, additionalExtractors = []) {
+  return getVariablesForScope(getScope(element), getRootElement2(element), additionalExtractors);
+}
+function getScope(element) {
+  const bo = getBusinessObject3(element);
+  if (is5(element, "bpmn:Participant")) {
+    return bo.processRef.id;
+  }
+  return bo.id;
+}
+function getRootElement2(element) {
+  const businessObject = getBusinessObject3(element);
+  if (is5(businessObject, "bpmn:Participant")) {
+    return businessObject.processRef;
+  }
+  if (is5(businessObject, "bpmn:Process")) {
+    return businessObject;
+  }
+  let parent = businessObject;
+  while (parent.$parent && !is5(parent, "bpmn:Process")) {
+    parent = parent.$parent;
+  }
+  return parent;
+}
+function combineArrays(a6, b4) {
+  return a6.concat(b4);
+}
+function getBusinessObject3(element) {
+  return element && element.businessObject || element;
+}
+function is5(element, type) {
+  var bo = getBusinessObject3(element);
+  return bo && typeof bo.$instanceOf === "function" && bo.$instanceOf(type);
+}
 
 // node_modules/array-move/index.js
 function arrayMoveMutable(array, fromIndex, toIndex) {
@@ -53544,8 +51634,310 @@ function arrayMoveMutable(array, fromIndex, toIndex) {
   }
 }
 
+// node_modules/@bpmn-io/extract-process-variables/dist/index.mjs
+function getInputOutput2(element) {
+  return (getElements2(element, "camunda:InputOutput") || [])[0];
+}
+function getInputParameters2(element) {
+  return getParameters2(element, "inputParameters");
+}
+function getOutputParameters(element) {
+  return getParameters2(element, "outputParameters");
+}
+function getFormFields(element) {
+  var formData = getFormData(element);
+  return formData && formData.get("fields") || [];
+}
+function getFormData(element) {
+  return getElements2(element, "camunda:FormData")[0];
+}
+function getOutMappings2(element) {
+  return getElements2(element, "camunda:Out");
+}
+function getElements2(element, type, property) {
+  var elements = getExtensionElements2(element, type);
+  return !property ? elements : (elements[0] || {})[property] || [];
+}
+function getParameters2(element, property) {
+  var inputOutput = getInputOutput2(element);
+  return inputOutput && inputOutput.get(property) || [];
+}
+function getExtensionElements2(element, type) {
+  var elements = [];
+  var extensionElements = element.get("extensionElements");
+  if (typeof extensionElements !== "undefined") {
+    var extensionValues = extensionElements.get("values");
+    if (typeof extensionValues !== "undefined") {
+      elements = filter(extensionValues, function(value) {
+        return is$22(value, type);
+      });
+    }
+  }
+  return elements;
+}
+function is$22(element, type) {
+  return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
+}
+function getParents4(element) {
+  var parents = [];
+  var current = element;
+  while (current.$parent) {
+    parents.push(current.$parent);
+    current = current.$parent;
+  }
+  return parents;
+}
+function eachElement3(elements, fn2, depth) {
+  depth = depth || 0;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(s5, i7) {
+    var filter2 = fn2(s5, i7, depth);
+    if (isArray(filter2) && filter2.length) {
+      eachElement3(filter2, fn2, depth + 1);
+    }
+  });
+}
+function add4(elements, e8, unique) {
+  var canAdd = !unique || elements.indexOf(e8) === -1;
+  if (canAdd) {
+    elements.push(e8);
+  }
+  return canAdd;
+}
+function selfAndFlowElements2(elements, unique, maxDepth) {
+  var result = [], processedFlowElements = [];
+  eachElement3(elements, function(element, i7, depth) {
+    add4(result, element, unique);
+    var flowElements = element.flowElements;
+    if (maxDepth === -1 || depth < maxDepth) {
+      if (flowElements && add4(processedFlowElements, flowElements, unique)) {
+        return flowElements;
+      }
+    }
+  });
+  return result;
+}
+function selfAndAllFlowElements3(elements, allowDuplicates) {
+  return selfAndFlowElements2(elements, !allowDuplicates, -1);
+}
+function getElement2(elementId, rootElement) {
+  var allElements = selfAndAllFlowElements3(rootElement);
+  return find(allElements, function(element) {
+    return element.id === elementId;
+  });
+}
+function addVariableToList2(variablesList, newVariable) {
+  var foundIdx = findIndex(variablesList, function(variable) {
+    return variable.name === newVariable.name && variable.scope === newVariable.scope;
+  });
+  if (foundIdx >= 0) {
+    variablesList[foundIdx].origin = combineArrays$12(
+      variablesList[foundIdx].origin,
+      newVariable.origin
+    );
+  } else {
+    variablesList.push(newVariable);
+  }
+}
+function createProcessVariable2(flowElement, name2, defaultScope) {
+  var scope = getScope2(flowElement, defaultScope, name2);
+  return {
+    name: name2,
+    origin: [flowElement],
+    scope
+  };
+}
+function getScope2(element, globalScope, variableName) {
+  var parents = getParents4(element);
+  var scopedParent = find(parents, function(parent) {
+    return is$12(parent, "bpmn:SubProcess") && hasInputParameter2(parent, variableName);
+  });
+  return scopedParent ? scopedParent : globalScope;
+}
+function is$12(element, type) {
+  return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
+}
+function hasInputParameter2(element, name2) {
+  return find(getInputParameters2(element), function(input) {
+    return input.name === name2;
+  });
+}
+function combineArrays$12(a6, b4) {
+  return a6.concat(b4);
+}
+function extractOutputParameters(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var outputParameters = getOutputParameters(element);
+    forEach(outputParameters, function(parameter) {
+      var newVariable = createProcessVariable2(
+        element,
+        parameter.name,
+        containerElement
+      );
+      addVariableToList2(processVariables, newVariable);
+    });
+  });
+  return processVariables;
+}
+function extractResultVariables2(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var resultVariable = getResultVariable(element);
+    if (resultVariable) {
+      var newVariable = createProcessVariable2(
+        element,
+        resultVariable,
+        containerElement
+      );
+      addVariableToList2(processVariables, newVariable);
+    }
+  });
+  return processVariables;
+}
+function getResultVariable(element) {
+  return element.get("camunda:resultVariable");
+}
+function extractFormFields(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var formFields = getFormFields(element);
+    forEach(formFields, function(field) {
+      var newVariable = createProcessVariable2(
+        element,
+        field.id,
+        containerElement
+      );
+      addVariableToList2(processVariables, newVariable);
+    });
+  });
+  return processVariables;
+}
+function extractOutMappings2(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var outMappings = getOutMappings2(element);
+    forEach(outMappings, function(mapping) {
+      if (mapping.local) {
+        return;
+      }
+      var newVariable = createProcessVariable2(
+        element,
+        mapping.target,
+        containerElement
+      );
+      addVariableToList2(processVariables, newVariable);
+    });
+  });
+  return processVariables;
+}
+function getEventDefinitions(element, type) {
+  var eventDefinitions = element.eventDefinitions;
+  if (!eventDefinitions || !type) {
+    return eventDefinitions;
+  }
+  return filter(eventDefinitions, function(definition) {
+    return is6(definition, type);
+  });
+}
+function getErrorEventDefinitions(element) {
+  return getEventDefinitions(element, "bpmn:ErrorEventDefinition");
+}
+function getEscalationEventDefinitions(element) {
+  return getEventDefinitions(element, "bpmn:EscalationEventDefinition");
+}
+function is6(element, type) {
+  return element && typeof element.$instanceOf === "function" && element.$instanceOf(type);
+}
+function extractEventDefinitionVariables(options) {
+  var elements = options.elements, containerElement = options.containerElement, processVariables = options.processVariables;
+  var addVariable = function(element, name2) {
+    var newVariable = createProcessVariable2(
+      element,
+      name2,
+      containerElement
+    );
+    addVariableToList2(processVariables, newVariable);
+  };
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+  forEach(elements, function(element) {
+    var errorEventDefinitions = getErrorEventDefinitions(element);
+    forEach(errorEventDefinitions, function(definition) {
+      var errorCodeVariable = definition.get("errorCodeVariable"), errorMessageVariable = definition.get("errorMessageVariable");
+      if (errorCodeVariable) {
+        addVariable(element, errorCodeVariable);
+      }
+      if (errorMessageVariable) {
+        addVariable(element, errorMessageVariable);
+      }
+    });
+    var escalationEventDefinitions = getEscalationEventDefinitions(element);
+    forEach(escalationEventDefinitions, function(definition) {
+      var escalationCodeVariable = definition.get("escalationCodeVariable");
+      if (escalationCodeVariable) {
+        addVariable(element, escalationCodeVariable);
+      }
+    });
+  });
+  return processVariables;
+}
+var extractors2 = [
+  extractOutputParameters,
+  extractResultVariables2,
+  extractFormFields,
+  extractOutMappings2,
+  extractEventDefinitionVariables
+];
+function getProcessVariables2(containerElement, additionalExtractors = []) {
+  const allPromises = [];
+  var processVariables = [];
+  var elements = selfAndAllFlowElements3([containerElement], false);
+  forEach([...extractors2, ...additionalExtractors], function(extractor) {
+    allPromises.push(
+      extractor({
+        elements,
+        containerElement,
+        processVariables
+      })
+    );
+  });
+  return Promise.all(allPromises).then(() => processVariables);
+}
+async function getVariablesForScope2(scope, rootElement, additionalExtractors = []) {
+  var allVariables = await getProcessVariables2(rootElement, additionalExtractors);
+  var scopeElement = getElement2(scope, rootElement);
+  var scopeVariables = filter(allVariables, function(variable) {
+    return variable.scope.id === scopeElement.id;
+  });
+  var parents = getParents4(scopeElement);
+  var parentsScopeVariables = filter(allVariables, function(variable) {
+    return find(parents, function(parent) {
+      return parent.id === variable.scope.id;
+    });
+  });
+  return combineArrays2(scopeVariables, parentsScopeVariables);
+}
+function combineArrays2(a6, b4) {
+  return a6.concat(b4);
+}
+
 // node_modules/bpmn-js-properties-panel/dist/index.esm.js
-var import_extract_process_variables = __toESM(require_dist2());
 var BpmnPropertiesPanelContext = F3({
   selectedElement: null,
   injector: null,
@@ -55516,19 +53908,19 @@ var EmptyIcon = ({
   mask: "url(#b)",
   xlinkHref: "#a"
 })));
-function _extends() {
-  return _extends = Object.assign ? Object.assign.bind() : function(n4) {
+function _extends2() {
+  return _extends2 = Object.assign ? Object.assign.bind() : function(n4) {
     for (var e8 = 1; e8 < arguments.length; e8++) {
       var t7 = arguments[e8];
       for (var r7 in t7) ({}).hasOwnProperty.call(t7, r7) && (n4[r7] = t7[r7]);
     }
     return n4;
-  }, _extends.apply(null, arguments);
+  }, _extends2.apply(null, arguments);
 }
 var MultipleIcon = ({
   styles = {},
   ...props
-}) => /* @__PURE__ */ wn.createElement("svg", _extends({
+}) => /* @__PURE__ */ wn.createElement("svg", _extends2({
   xmlns: "http://www.w3.org/2000/svg",
   xmlnsXlink: "http://www.w3.org/1999/xlink",
   width: "128",
@@ -55603,7 +53995,8 @@ function BpmnPropertiesPanel(props) {
     layoutConfig: initialLayoutConfig,
     descriptionConfig,
     tooltipConfig,
-    feelPopupContainer
+    feelPopupContainer,
+    getFeelPopupLinks
   } = props;
   const canvas = injector.get("canvas");
   const elementRegistry = injector.get("elementRegistry");
@@ -55708,7 +54101,7 @@ function BpmnPropertiesPanel(props) {
     }, []);
   }, [providers, selectedElement]);
   const [layoutConfig, setLayoutConfig] = h4(initialLayoutConfig || {});
-  const onLayoutChanged = T3((newLayout) => {
+  const onLayoutChanged = T4((newLayout) => {
     eventBus.fire("propertiesPanel.layoutChanged", {
       layout: newLayout
     });
@@ -55747,12 +54140,13 @@ function BpmnPropertiesPanel(props) {
       tooltipConfig,
       tooltipLoaded: onTooltipLoaded,
       feelPopupContainer,
+      getFeelPopupLinks,
       eventBus
     })
   });
 }
 function isImplicitRoot$1(element) {
-  return element && (element.isImplicit || element.id === "__implicitroot");
+  return element && element.isImplicit;
 }
 function findElement(elements, element) {
   return find(elements, (e8) => e8 === element);
@@ -55768,7 +54162,8 @@ var BpmnPropertiesPanelRenderer = class {
       layout: layoutConfig,
       description: descriptionConfig,
       tooltip: tooltipConfig,
-      feelPopupContainer
+      feelPopupContainer,
+      getFeelPopupLinks
     } = config || {};
     this._eventBus = eventBus;
     this._injector = injector;
@@ -55776,7 +54171,8 @@ var BpmnPropertiesPanelRenderer = class {
     this._descriptionConfig = descriptionConfig;
     this._tooltipConfig = tooltipConfig;
     this._feelPopupContainer = feelPopupContainer;
-    this._container = domify$1('<div style="height: 100%" class="bio-properties-panel-container"></div>');
+    this._getFeelPopupLinks = getFeelPopupLinks;
+    this._container = domify$1('<div style="height: 100%" tabindex="-1" class="bio-properties-panel-container"></div>');
     var commandStack = injector.get("commandStack", false);
     commandStack && setupKeyboard(this._container, eventBus, commandStack);
     eventBus.on("diagram.init", () => {
@@ -55787,10 +54183,10 @@ var BpmnPropertiesPanelRenderer = class {
     eventBus.on("diagram.destroy", () => {
       this.detach();
     });
-    eventBus.on("root.added", (event3) => {
+    eventBus.on("root.added", (event2) => {
       const {
         element
-      } = event3;
+      } = event2;
       this._render(element);
     });
   }
@@ -55838,8 +54234,8 @@ var BpmnPropertiesPanelRenderer = class {
       console.error("Properties provider does not implement #getGroups(element) API");
       return;
     }
-    this._eventBus.on("propertiesPanel.getProviders", priority, function(event3) {
-      event3.providers.push(provider);
+    this._eventBus.on("propertiesPanel.getProviders", priority, function(event2) {
+      event2.providers.push(provider);
     });
     this._eventBus.fire("propertiesPanel.providersChanged");
   }
@@ -55853,12 +54249,12 @@ var BpmnPropertiesPanelRenderer = class {
     });
   }
   _getProviders() {
-    const event3 = this._eventBus.createEvent({
+    const event2 = this._eventBus.createEvent({
       type: "propertiesPanel.getProviders",
       providers: []
     });
-    this._eventBus.fire(event3);
-    return event3.providers;
+    this._eventBus.fire(event2);
+    return event2.providers;
   }
   _render(element) {
     const canvas = this._injector.get("canvas");
@@ -55875,7 +54271,8 @@ var BpmnPropertiesPanelRenderer = class {
       layoutConfig: this._layoutConfig,
       descriptionConfig: this._descriptionConfig,
       tooltipConfig: this._tooltipConfig,
-      feelPopupContainer: this._feelPopupContainer
+      feelPopupContainer: this._feelPopupContainer,
+      getFeelPopupLinks: this._getFeelPopupLinks
     }), this._container);
     this._eventBus.fire("propertiesPanel.rendered");
   }
@@ -55888,21 +54285,21 @@ var BpmnPropertiesPanelRenderer = class {
 };
 BpmnPropertiesPanelRenderer.$inject = ["config.propertiesPanel", "injector", "eventBus"];
 function isImplicitRoot(element) {
-  return element && (element.isImplicit || element.id === "__implicitroot");
+  return element && element.isImplicit;
 }
 function setupKeyboard(container, eventBus, commandStack) {
-  function cancel2(event3) {
-    event3.preventDefault();
-    event3.stopPropagation();
+  function cancel2(event2) {
+    event2.preventDefault();
+    event2.stopPropagation();
   }
-  function handleKeys(event3) {
-    if (isUndo(event3)) {
+  function handleKeys(event2) {
+    if (isUndo(event2)) {
       commandStack.undo();
-      return cancel2(event3);
+      return cancel2(event2);
     }
-    if (isRedo(event3)) {
+    if (isRedo(event2)) {
       commandStack.redo();
-      return cancel2(event3);
+      return cancel2(event2);
     }
   }
   eventBus.on("keyboard.bind", function() {
@@ -55949,32 +54346,32 @@ function ReferenceSelectEntry(props) {
     element,
     getOptions
   } = props;
-  const options2 = getOptions(element);
-  const prevOptions = usePrevious(options2);
+  const options = getOptions(element);
+  const prevOptions = usePrevious(options);
   p4(() => {
-    if (autoFocusEntry && prevOptions && options2.length > prevOptions.length) {
+    if (autoFocusEntry && prevOptions && options.length > prevOptions.length) {
       const entry = query(`[data-entry-id="${autoFocusEntry}"]`);
       const focusableInput = query(".bio-properties-panel-input", entry);
       if (focusableInput) {
         focusableInput.select();
       }
     }
-  }, [options2]);
+  }, [options]);
   return u5(SelectEntry, {
     ...props
   });
 }
 function isErrorSupported(element) {
-  return isAny(element, ["bpmn:StartEvent", "bpmn:BoundaryEvent", "bpmn:EndEvent"]) && !!getErrorEventDefinition(element);
+  return isAny(element, ["bpmn:StartEvent", "bpmn:BoundaryEvent", "bpmn:EndEvent"]) && !!getErrorEventDefinition$1(element);
 }
-function getErrorEventDefinition(element) {
+function getErrorEventDefinition$1(element) {
   return getEventDefinition$1(element, "bpmn:ErrorEventDefinition");
 }
 function getTimerEventDefinition$1(element) {
   return getEventDefinition$1(element, "bpmn:TimerEventDefinition");
 }
 function getError(element) {
-  const errorEventDefinition = getErrorEventDefinition(element);
+  const errorEventDefinition = getErrorEventDefinition$1(element);
   return errorEventDefinition && errorEventDefinition.get("errorRef");
 }
 function getEventDefinition$1(element, eventType) {
@@ -56024,13 +54421,13 @@ function getEscalation(element) {
   return escalationEventDefinition && escalationEventDefinition.get("escalationRef");
 }
 function isCompensationSupported(element) {
-  return isAny(element, ["bpmn:EndEvent", "bpmn:IntermediateThrowEvent"]) && !!getCompensateEventDefinition(element);
+  return isAny(element, ["bpmn:EndEvent", "bpmn:IntermediateThrowEvent"]) && !!getCompensateEventDefinition$1(element);
 }
-function getCompensateEventDefinition(element) {
+function getCompensateEventDefinition$1(element) {
   return getEventDefinition$1(element, "bpmn:CompensateEventDefinition");
 }
 function getCompensateActivity(element) {
-  const compensateEventDefinition = getCompensateEventDefinition(element);
+  const compensateEventDefinition = getCompensateEventDefinition$1(element);
   return compensateEventDefinition && compensateEventDefinition.get("activityRef");
 }
 function CompensationProps(props) {
@@ -56056,7 +54453,7 @@ function WaitForCompletion(props) {
   } = props;
   const commandStack = useService("commandStack");
   const translate4 = useService("translate");
-  const compensateEventDefinition = getCompensateEventDefinition(element);
+  const compensateEventDefinition = getCompensateEventDefinition$1(element);
   const getValue = () => {
     return compensateEventDefinition.get("waitForCompletion");
   };
@@ -56084,7 +54481,7 @@ function ActivityRef(props) {
   const commandStack = useService("commandStack");
   const elementRegistry = useService("elementRegistry");
   const translate4 = useService("translate");
-  const compensateEventDefinition = getCompensateEventDefinition(element);
+  const compensateEventDefinition = getCompensateEventDefinition$1(element);
   const getValue = () => {
     const activityRef = getCompensateActivity(element);
     return activityRef && activityRef.get("id");
@@ -56100,18 +54497,18 @@ function ActivityRef(props) {
     });
   };
   const getOptions = () => {
-    let options2 = [{
+    let options = [{
       value: "",
       label: translate4("<none>")
     }];
     const activities = findActivityRefs(element);
     sortByName$6(activities).forEach(function(activity) {
-      options2.push({
+      options.push({
         value: activity.id,
         label: createOptionLabel(activity)
       });
     });
-    return options2;
+    return options;
   };
   return ReferenceSelectEntry({
     element,
@@ -56144,7 +54541,7 @@ function hasCompensationEventAttached(activity, boundaryEvents) {
     const {
       attachedToRef
     } = boundaryEvent;
-    const compensateEventDefinition = getCompensateEventDefinition(boundaryEvent);
+    const compensateEventDefinition = getCompensateEventDefinition$1(boundaryEvent);
     return attachedToRef && compensateEventDefinition && attachedToRef.id === activityId;
   });
 }
@@ -56295,9 +54692,9 @@ function createElement(type, properties, parent, bpmnFactory) {
   }
   return element;
 }
-function nextId(prefix4) {
+function nextId(prefix3) {
   const ids3 = new index_esm_default([32, 32, 1]);
-  return ids3.nextPrefixed(prefix4);
+  return ids3.nextPrefixed(prefix3);
 }
 function getRoot(businessObject) {
   let parent = businessObject;
@@ -56353,7 +54750,7 @@ function ErrorRef$1(props) {
   const bpmnFactory = useService("bpmnFactory");
   const commandStack = useService("commandStack");
   const translate4 = useService("translate");
-  const errorEventDefinition = getErrorEventDefinition(element);
+  const errorEventDefinition = getErrorEventDefinition$1(element);
   const getValue = () => {
     const error4 = getError(element);
     if (error4) {
@@ -56395,7 +54792,7 @@ function ErrorRef$1(props) {
     return commandStack.execute("properties-panel.multi-command-executor", commands);
   };
   const getOptions = () => {
-    let options2 = [{
+    let options = [{
       value: EMPTY_OPTION$4,
       label: translate4("<none>")
     }, {
@@ -56404,12 +54801,12 @@ function ErrorRef$1(props) {
     }];
     const errors = findRootElementsByType(getBusinessObject(element), "bpmn:Error");
     sortByName$5(errors).forEach((error4) => {
-      options2.push({
+      options.push({
         value: error4.get("id"),
         label: error4.get("name")
       });
     });
-    return options2;
+    return options;
   };
   return ReferenceSelectEntry({
     element,
@@ -56557,7 +54954,7 @@ function EscalationRef(props) {
     return commandStack.execute("properties-panel.multi-command-executor", commands);
   };
   const getOptions = () => {
-    let options2 = [{
+    let options = [{
       value: "",
       label: translate4("<none>")
     }, {
@@ -56566,12 +54963,12 @@ function EscalationRef(props) {
     }];
     const escalations = findRootElementsByType(getBusinessObject(element), "bpmn:Escalation");
     sortByName$4(escalations).forEach((escalation) => {
-      options2.push({
+      options.push({
         value: escalation.get("id"),
         label: escalation.get("name")
       });
     });
-    return options2;
+    return options;
   };
   return ReferenceSelectEntry({
     element,
@@ -56749,10 +55146,10 @@ function Id$4(props) {
       id: value
     });
   };
-  const getValue = T3((element2) => {
+  const getValue = T4((element2) => {
     return getBusinessObject(element2).id;
   }, [element]);
-  const validate = T3((value) => {
+  const validate = T4((value) => {
     const businessObject = getBusinessObject(element);
     return isIdValid(businessObject, value, translate4);
   }, [element, translate4]);
@@ -56883,7 +55280,7 @@ function MessageRef(props) {
     return commandStack.execute("properties-panel.multi-command-executor", commands);
   };
   const getOptions = () => {
-    let options2 = [{
+    let options = [{
       value: EMPTY_OPTION$3,
       label: translate4("<none>")
     }, {
@@ -56892,12 +55289,12 @@ function MessageRef(props) {
     }];
     const messages = findRootElementsByType(getBusinessObject(element), "bpmn:Message");
     sortByName$3(messages).forEach((message) => {
-      options2.push({
+      options.push({
         value: message.get("id"),
         label: message.get("name")
       });
     });
-    return options2;
+    return options;
   };
   return ReferenceSelectEntry({
     element,
@@ -57089,7 +55486,7 @@ function Name$3(props) {
   const canvas = useService("canvas");
   const bpmnFactory = useService("bpmnFactory");
   const translate4 = useService("translate");
-  let options2 = {
+  let options = {
     element,
     id: "name",
     label: translate4("Name"),
@@ -57105,8 +55502,8 @@ function Name$3(props) {
     autoResize: true
   };
   if (is(element, "bpmn:TextAnnotation")) {
-    options2 = {
-      ...options2,
+    options = {
+      ...options,
       setValue: (value) => {
         modeling.updateProperties(element, {
           text: value
@@ -57117,8 +55514,8 @@ function Name$3(props) {
       }
     };
   } else if (is(element, "bpmn:Group")) {
-    options2 = {
-      ...options2,
+    options = {
+      ...options,
       setValue: (value) => {
         const businessObject = getBusinessObject(element), categoryValueRef = businessObject.categoryValueRef;
         if (!categoryValueRef) {
@@ -57132,9 +55529,9 @@ function Name$3(props) {
       }
     };
   } else if (is(element, "bpmn:Participant")) {
-    options2.label = translate4("Participant Name");
+    options.label = translate4("Participant Name");
   }
-  return TextAreaEntry(options2);
+  return TextAreaEntry(options);
 }
 function initializeCategory(businessObject, rootElement, bpmnFactory) {
   const definitions = getBusinessObject(rootElement).$parent;
@@ -57220,7 +55617,7 @@ function ProcessId$1(props) {
       }
     });
   };
-  const validate = T3((value) => {
+  const validate = T4((value) => {
     return isIdValid(process2, value, translate4);
   }, [process2, translate4]);
   return TextfieldEntry({
@@ -57311,7 +55708,7 @@ function SignalRef(props) {
     return commandStack.execute("properties-panel.multi-command-executor", commands);
   };
   const getOptions = () => {
-    let options2 = [{
+    let options = [{
       value: EMPTY_OPTION$2,
       label: translate4("<none>")
     }, {
@@ -57320,12 +55717,12 @@ function SignalRef(props) {
     }];
     const signals = findRootElementsByType(getBusinessObject(element), "bpmn:Signal");
     sortByName$2(signals).forEach((signal) => {
-      options2.push({
+      options.push({
         value: signal.get("id"),
         label: signal.get("name")
       });
     });
-    return options2;
+    return options;
   };
   return ReferenceSelectEntry({
     element,
@@ -57369,6 +55766,9 @@ function SignalName$1(props) {
 function sortByName$2(elements) {
   return sortBy(elements, (e8) => (e8.name || "").toLowerCase());
 }
+function getErrorEventDefinition(element) {
+  return getEventDefinition3(element, "bpmn:ErrorEventDefinition");
+}
 function isTimerSupported(element) {
   return isAny(element, ["bpmn:StartEvent", "bpmn:IntermediateCatchEvent", "bpmn:BoundaryEvent"]) && !!getTimerEventDefinition(element);
 }
@@ -57408,6 +55808,9 @@ function isSignalSupported(element) {
 function getSignal(element) {
   const signalEventDefinition = getSignalEventDefinition(element);
   return signalEventDefinition && signalEventDefinition.get("signalRef");
+}
+function getCompensateEventDefinition(element) {
+  return getEventDefinition3(element, "bpmn:CompensateEventDefinition");
 }
 function TimerProps$2(props) {
   const {
@@ -57549,7 +55952,7 @@ function getTimerEventDefinitionValueDescription$2(timerDefinitionType, translat
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-date",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           children: translate4("Documentation: Timer events")
         })]
       });
@@ -57570,7 +55973,7 @@ function getTimerEventDefinitionValueDescription$2(timerDefinitionType, translat
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-cycle",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           children: translate4("Documentation: Timer events")
         })]
       });
@@ -57595,7 +55998,7 @@ function getTimerEventDefinitionValueDescription$2(timerDefinitionType, translat
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-duration",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           children: translate4("Documentation: Timer events")
         })]
       });
@@ -57831,8 +56234,16 @@ function removeExtensionElements(element, businessObject, extensionElementsToRem
     }
   });
 }
+function withProps(Component2, otherProps) {
+  return (props) => {
+    return u5(Component2, {
+      ...props,
+      ...otherProps
+    });
+  };
+}
 var fallbackResolver = {
-  getVariablesForElement: (bo) => (0, import_zeebe.getVariablesForElement)(bo)
+  getVariablesForElement: (bo) => getVariablesForElement(bo)
 };
 function withVariableContext(Component2) {
   return (props) => {
@@ -57841,13 +56252,13 @@ function withVariableContext(Component2) {
       element
     } = props;
     const bo = (bpmnElement || element).businessObject;
-    const [variables2, setVariables] = h4([]);
+    const [variables, setVariables] = h4([]);
     const eventBus = useService("eventBus");
     const variableResolver = useServiceIfAvailable("variableResolver", fallbackResolver);
     p4(() => {
       const extractVariables = async () => {
-        const variables3 = await variableResolver.getVariablesForElement(bo, element);
-        setVariables(variables3.map((variable) => {
+        const variables2 = await variableResolver.getVariablesForElement(bo, element);
+        setVariables(variables2.map((variable) => {
           return {
             ...variable,
             info: variable.info || variable.origin && "Written in " + variable.origin.map((origin) => origin.name || origin.id).join(", ")
@@ -57865,7 +56276,7 @@ function withVariableContext(Component2) {
     }, [bo]);
     return u5(Component2, {
       ...props,
-      variables: variables2
+      variables
     });
   };
 }
@@ -58194,7 +56605,7 @@ function BusinessRuleImplementation(props) {
     }
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: DEFAULT_IMPLEMENTATION_OPTION$1,
       label: translate4("<none>")
     }, {
@@ -58204,7 +56615,7 @@ function BusinessRuleImplementation(props) {
       value: JOB_WORKER_IMPLEMENTATION_OPTION$2,
       label: translate4("Job worker")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -58269,22 +56680,189 @@ function updateExtensionElements$1(element, extensionElementToAdd, bpmnFactory, 
   });
   commandStack.execute("properties-panel.multi-command-executor", commands);
 }
+function Binding$2(props) {
+  const {
+    element,
+    type
+  } = props;
+  const bpmnFactory = useService("bpmnFactory"), commandStack = useService("commandStack"), translate4 = useService("translate");
+  const getValue = () => getBindingType(element, type);
+  const setValue = (value) => {
+    const commands = [];
+    const businessObject = getBusinessObject(element);
+    let extensionElements = businessObject.get("extensionElements");
+    if (!extensionElements) {
+      extensionElements = createElement("bpmn:ExtensionElements", {
+        values: []
+      }, businessObject, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: businessObject,
+          properties: {
+            extensionElements
+          }
+        }
+      });
+    }
+    let extensionElement = getExtensionElementsList(businessObject, type)[0];
+    if (!extensionElement) {
+      extensionElement = createElement(type, {}, extensionElements, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: extensionElements,
+          properties: {
+            values: [...extensionElements.get("values"), extensionElement]
+          }
+        }
+      });
+    }
+    commands.push({
+      cmd: "element.updateModdleProperties",
+      context: {
+        element,
+        moddleElement: extensionElement,
+        properties: {
+          bindingType: value
+        }
+      }
+    });
+    commandStack.execute("properties-panel.multi-command-executor", commands);
+  };
+  const getOptions = () => [{
+    value: "latest",
+    label: translate4("latest")
+  }, {
+    value: "deployment",
+    label: translate4("deployment")
+  }, {
+    value: "versionTag",
+    label: translate4("version tag")
+  }];
+  return u5(SelectEntry, {
+    element,
+    id: "bindingType",
+    label: translate4("Binding"),
+    getValue,
+    setValue,
+    getOptions
+  });
+}
+function getBindingType(element, type) {
+  const businessObject = getBusinessObject(element);
+  const extensionElement = getExtensionElementsList(businessObject, type)[0];
+  if (!extensionElement) {
+    return "latest";
+  }
+  return extensionElement.get("bindingType");
+}
+function VersionTag$3(props) {
+  const {
+    element,
+    type
+  } = props;
+  const bpmnFactory = useService("bpmnFactory"), commandStack = useService("commandStack"), debounce2 = useService("debounceInput"), translate4 = useService("translate");
+  const getValue = () => getVersionTag$1(element, type);
+  const setValue = (value) => {
+    const commands = [];
+    const businessObject = getBusinessObject(element);
+    let extensionElements = businessObject.get("extensionElements");
+    if (!extensionElements) {
+      extensionElements = createElement("bpmn:ExtensionElements", {
+        values: []
+      }, businessObject, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: businessObject,
+          properties: {
+            extensionElements
+          }
+        }
+      });
+    }
+    let extensionElement = getExtensionElementsList(businessObject, type)[0];
+    if (!extensionElement) {
+      extensionElement = createElement(type, {}, extensionElements, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: extensionElements,
+          properties: {
+            values: [...extensionElements.get("values"), extensionElement]
+          }
+        }
+      });
+    }
+    commands.push({
+      cmd: "element.updateModdleProperties",
+      context: {
+        element,
+        moddleElement: extensionElement,
+        properties: {
+          versionTag: value
+        }
+      }
+    });
+    commandStack.execute("properties-panel.multi-command-executor", commands);
+  };
+  return TextfieldEntry({
+    element,
+    id: "versionTag",
+    label: translate4("Version tag"),
+    getValue,
+    setValue,
+    debounce: debounce2
+  });
+}
+function getVersionTag$1(element, type) {
+  const businessObject = getBusinessObject(element);
+  const extensionElement = getExtensionElementsList(businessObject, type)[0];
+  if (!extensionElement) {
+    return "";
+  }
+  return extensionElement.get("versionTag") || "";
+}
+var CalledDecisionBinding = withProps(Binding$2, {
+  type: "zeebe:CalledDecision"
+});
+var CalledDecisionVersionTag = withProps(VersionTag$3, {
+  type: "zeebe:CalledDecision"
+});
 function CalledDecisionProps(props) {
   const {
     element
   } = props;
-  if (!is(element, "bpmn:BusinessRuleTask") || !getCalledDecision(element)) {
+  if (!is(element, "bpmn:BusinessRuleTask") || !getCalledDecision2(element)) {
     return [];
   }
-  return [{
+  const entries = [{
     id: "decisionId",
     component: DecisionID,
     isEdited: isEdited$6
   }, {
+    id: "bindingType",
+    component: CalledDecisionBinding,
+    isEdited: isEdited$3
+  }];
+  if (getBindingType(element, "zeebe:CalledDecision") === "versionTag") {
+    entries.push({
+      id: "versionTag",
+      component: CalledDecisionVersionTag,
+      isEdited
+    });
+  }
+  entries.push({
     id: "resultVariable",
     component: ResultVariable$4,
     isEdited
-  }];
+  });
+  return entries;
 }
 function DecisionID(props) {
   const {
@@ -58296,7 +56874,7 @@ function DecisionID(props) {
   const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
-    return (getCalledDecision(element) || {}).decisionId;
+    return (getCalledDecision2(element) || {}).decisionId;
   };
   const setValue = (value) => {
     const commands = [];
@@ -58317,7 +56895,7 @@ function DecisionID(props) {
         }
       });
     }
-    let calledDecision = getCalledDecision(element);
+    let calledDecision = getCalledDecision2(element);
     if (!calledDecision) {
       calledDecision = createElement("zeebe:CalledDecision", {}, extensionElements, bpmnFactory);
       commands.push({
@@ -58363,7 +56941,7 @@ function ResultVariable$4(props) {
   const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
-    return (getCalledDecision(element) || {}).resultVariable;
+    return (getCalledDecision2(element) || {}).resultVariable;
   };
   const setValue = (value) => {
     const commands = [];
@@ -58384,7 +56962,7 @@ function ResultVariable$4(props) {
         }
       });
     }
-    let calledDecision = getCalledDecision(element);
+    let calledDecision = getCalledDecision2(element);
     if (!calledDecision) {
       calledDecision = createElement("zeebe:CalledDecision", {}, extensionElements, bpmnFactory);
       commands.push({
@@ -58419,7 +56997,7 @@ function ResultVariable$4(props) {
     debounce: debounce2
   });
 }
-function getCalledDecision(element) {
+function getCalledDecision2(element) {
   const businessObject = getBusinessObject(element);
   return getExtensionElementsList(businessObject, "zeebe:CalledDecision")[0];
 }
@@ -58591,6 +57169,287 @@ function EscalationCode(props) {
     debounce: debounce2
   });
 }
+function ListenerType$1(props) {
+  const {
+    idPrefix,
+    element,
+    listener
+  } = props;
+  const modeling = useService("modeling");
+  const translate4 = useService("translate");
+  const debounce2 = useService("debounceInput");
+  const setValue = (value) => {
+    modeling.updateModdleProperties(element, listener, {
+      type: value
+    });
+  };
+  const getValue = () => {
+    return listener.get("type");
+  };
+  return FeelEntryWithVariableContext({
+    element,
+    id: idPrefix + "-listenerType",
+    label: translate4("Listener type"),
+    getValue,
+    setValue,
+    debounce: debounce2,
+    feel: "optional"
+  });
+}
+function Retries(props) {
+  const {
+    idPrefix,
+    element,
+    listener
+  } = props;
+  const modeling = useService("modeling");
+  const translate4 = useService("translate");
+  const debounce2 = useService("debounceInput");
+  const setValue = (value) => {
+    modeling.updateModdleProperties(element, listener, {
+      retries: value
+    });
+  };
+  const getValue = () => {
+    return listener.get("retries");
+  };
+  return FeelEntryWithVariableContext({
+    element,
+    id: idPrefix + "-retries",
+    label: translate4("Retries"),
+    getValue,
+    setValue,
+    debounce: debounce2,
+    feel: "optional"
+  });
+}
+var EVENT_TO_LABEL$2 = {
+  "start": "Start",
+  "end": "End"
+};
+function ExecutionListenerEntries(props) {
+  const {
+    element,
+    idPrefix,
+    listener
+  } = props;
+  const eventTypes = getEventTypes(element);
+  const entries = eventTypes.length > 1 ? [{
+    id: idPrefix + "-eventType",
+    component: EventType$2,
+    idPrefix,
+    listener,
+    eventTypes
+  }] : [];
+  entries.push({
+    id: idPrefix + "-listenerType",
+    component: ListenerType$1,
+    idPrefix,
+    listener
+  }, {
+    id: idPrefix + "-retries",
+    component: Retries,
+    idPrefix,
+    listener
+  });
+  return entries;
+}
+function EventType$2(props) {
+  const {
+    idPrefix,
+    element,
+    listener,
+    eventTypes
+  } = props;
+  const modeling = useService("modeling");
+  const translate4 = useService("translate");
+  const getOptions = () => {
+    return eventTypes.map((eventType) => ({
+      value: eventType,
+      label: translate4(EVENT_TO_LABEL$2[eventType])
+    }));
+  };
+  const setValue = (value) => {
+    modeling.updateModdleProperties(element, listener, {
+      eventType: value
+    });
+  };
+  const getValue = () => {
+    return listener.get("eventType");
+  };
+  return SelectEntry({
+    element,
+    id: idPrefix + "-eventType",
+    label: translate4("Event type"),
+    getValue,
+    setValue,
+    getOptions
+  });
+}
+function getEventTypes(element) {
+  if (isAny(element, ["bpmn:BoundaryEvent", "bpmn:StartEvent"])) {
+    return ["end"];
+  }
+  if (is(element, "bpmn:EndEvent") && getErrorEventDefinition(element)) {
+    return ["start"];
+  }
+  if (is(element, "bpmn:Gateway")) {
+    return ["start"];
+  }
+  return ["start", "end"];
+}
+function ExecutionListenersProps({
+  element,
+  injector
+}) {
+  let businessObject = getRelevantBusinessObject$2(element);
+  if (!businessObject) {
+    return;
+  }
+  const moddle = injector.get("moddle");
+  if (!canHaveExecutionListeners(businessObject, moddle)) {
+    return;
+  }
+  const listeners = getListenersList$1(businessObject) || [];
+  const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack"), modeling = injector.get("modeling"), translate4 = injector.get("translate");
+  const items = listeners.map((listener, index5) => {
+    const id = element.id + "-executionListener-" + index5;
+    const type = listener.get("type") || "<no type>";
+    return {
+      id,
+      label: translate4(`${EVENT_TO_LABEL$2[listener.get("eventType")]}: {type}`, {
+        type
+      }),
+      entries: ExecutionListenerEntries({
+        idPrefix: id,
+        element,
+        listener
+      }),
+      autoFocusEntry: id + "-eventType",
+      remove: removeFactory$e({
+        modeling,
+        element,
+        listener
+      })
+    };
+  });
+  return {
+    items,
+    add: addFactory$b({
+      bpmnFactory,
+      commandStack,
+      element
+    })
+  };
+}
+function removeFactory$e({
+  modeling,
+  element,
+  listener
+}) {
+  return function(event2) {
+    event2.stopPropagation();
+    const businessObject = getRelevantBusinessObject$2(element);
+    const container = getExecutionListenersContainer(businessObject);
+    if (!container) {
+      return;
+    }
+    const listeners = without(container.get("listeners"), listener);
+    modeling.updateModdleProperties(element, container, {
+      listeners
+    });
+  };
+}
+function addFactory$b({
+  bpmnFactory,
+  commandStack,
+  element
+}) {
+  return function(event2) {
+    event2.stopPropagation();
+    let commands = [];
+    const businessObject = getRelevantBusinessObject$2(element);
+    let extensionElements = businessObject.get("extensionElements");
+    if (!extensionElements) {
+      extensionElements = createElement("bpmn:ExtensionElements", {
+        values: []
+      }, businessObject, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: businessObject,
+          properties: {
+            extensionElements
+          }
+        }
+      });
+    }
+    let executionListeners = getExecutionListenersContainer(businessObject);
+    if (!executionListeners) {
+      const parent = extensionElements;
+      executionListeners = createElement("zeebe:ExecutionListeners", {
+        listeners: []
+      }, parent, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: extensionElements,
+          properties: {
+            values: [...extensionElements.get("values"), executionListeners]
+          }
+        }
+      });
+    }
+    const executionListener = createElement("zeebe:ExecutionListener", getDefaultListenerProps$1(element), executionListeners, bpmnFactory);
+    commands.push({
+      cmd: "element.updateModdleProperties",
+      context: {
+        element,
+        moddleElement: executionListeners,
+        properties: {
+          listeners: [...executionListeners.get("listeners"), executionListener]
+        }
+      }
+    });
+    commandStack.execute("properties-panel.multi-command-executor", commands);
+  };
+}
+function getRelevantBusinessObject$2(element) {
+  let businessObject = getBusinessObject(element);
+  if (is(element, "bpmn:Participant")) {
+    return businessObject.get("processRef");
+  }
+  return businessObject;
+}
+function getExecutionListenersContainer(element) {
+  const executionListeners = getExtensionElementsList(element, "zeebe:ExecutionListeners");
+  return executionListeners && executionListeners[0];
+}
+function getListenersList$1(element) {
+  const executionListeners = getExecutionListenersContainer(element);
+  return executionListeners && executionListeners.get("listeners");
+}
+function canHaveExecutionListeners(bo, moddle) {
+  const executionListenersDescriptor = moddle.getTypeDescriptor("zeebe:ExecutionListeners");
+  if (!isAny(bo, executionListenersDescriptor.meta.allowedIn)) {
+    return false;
+  }
+  if (isCompensationBoundaryEvent3(bo)) {
+    return false;
+  }
+  return true;
+}
+function isCompensationBoundaryEvent3(bo) {
+  return is(bo, "bpmn:BoundaryEvent") && getCompensateEventDefinition(bo);
+}
+function getDefaultListenerProps$1(element) {
+  const eventTypes = getEventTypes(element);
+  return {
+    eventType: eventTypes[0]
+  };
+}
 var FORM_KEY_PREFIX = "camunda-forms:bpmn:";
 var USER_TASK_FORM_ID_PREFIX = "UserTaskForm_";
 var FORM_TYPES = {
@@ -58649,10 +57508,16 @@ function getFormType$1(element) {
     return FORM_TYPES.CUSTOM_FORM;
   }
 }
-function isZeebeUserTask(element) {
+function isZeebeUserTask$1(element) {
   const bo = getBusinessObject(element);
   return getExtensionElementsList(bo, "zeebe:UserTask").length > 0;
 }
+var FormDefinitionBinding = withProps(Binding$2, {
+  type: "zeebe:FormDefinition"
+});
+var FormDefinitionVersionTag = withProps(VersionTag$3, {
+  type: "zeebe:FormDefinition"
+});
 var NONE_VALUE = "none";
 function FormProps$1(props) {
   const {
@@ -58691,6 +57556,20 @@ function FormProps$1(props) {
       component: ExternalReference,
       isEdited: isEdited$6
     });
+  }
+  if (formType === FORM_TYPES.CAMUNDA_FORM_LINKED) {
+    entries.push({
+      id: "bindingType",
+      component: FormDefinitionBinding,
+      isEdited: isEdited$3
+    });
+    if (getBindingType(element, "zeebe:FormDefinition") === "versionTag") {
+      entries.push({
+        id: "versionTag",
+        component: FormDefinitionVersionTag,
+        isEdited
+      });
+    }
   }
   return entries;
 }
@@ -58731,7 +57610,7 @@ function setFormType(injector, element, value) {
   }
 }
 function getFormTypeOptions(translate4, element) {
-  if (isZeebeUserTask(element)) {
+  if (isZeebeUserTask$1(element)) {
     return [{
       value: NONE_VALUE,
       label: translate4("<none>")
@@ -59050,13 +57929,14 @@ function ValueProperty$2(props) {
   const getValue = (header2) => {
     return header2.value;
   };
-  return TextfieldEntry({
+  return TextAreaEntry({
     element: header,
     id: idPrefix + "-value",
     label: translate4("Value"),
     getValue,
     setValue,
-    debounce: debounce2
+    debounce: debounce2,
+    autoResize: true
   });
 }
 function HeaderProps({
@@ -59079,7 +57959,7 @@ function HeaderProps({
         header
       }),
       autoFocusEntry: id + "-key",
-      remove: removeFactory$c({
+      remove: removeFactory$d({
         commandStack,
         element,
         header
@@ -59088,20 +57968,20 @@ function HeaderProps({
   });
   return {
     items,
-    add: addFactory$9({
+    add: addFactory$a({
       bpmnFactory,
       commandStack,
       element
     })
   };
 }
-function removeFactory$c({
+function removeFactory$d({
   commandStack,
   element,
   header
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     let commands = [];
     const taskHeaders = getTaskHeaders$1(element);
     if (!taskHeaders) {
@@ -59134,13 +58014,13 @@ function removeFactory$c({
     commandStack.execute("properties-panel.multi-command-executor", commands);
   };
 }
-function addFactory$9({
+function addFactory$a({
   bpmnFactory,
   commandStack,
   element
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     let commands = [];
     const businessObject = getBusinessObject(element);
     let extensionElements = businessObject.get("extensionElements");
@@ -59397,7 +58277,7 @@ function areInputParametersSupported$1(element) {
   return isAny(element, ["bpmn:UserTask", "bpmn:SubProcess", "bpmn:CallActivity", "bpmn:BusinessRuleTask", "bpmn:ScriptTask"]) || isZeebeServiceTask(element) || isSignalThrowEvent(element);
 }
 function areOutputParametersSupported$1(element) {
-  if (is(element, "bpmn:EndEvent") && (getErrorEventDefinition(element) || getTerminateEventDefinition(element))) {
+  if (is(element, "bpmn:EndEvent") && (getErrorEventDefinition$1(element) || getTerminateEventDefinition(element))) {
     return false;
   }
   return isAny(element, ["zeebe:ZeebeServiceTask", "bpmn:UserTask", "bpmn:SubProcess", "bpmn:ReceiveTask", "bpmn:CallActivity", "bpmn:Event", "bpmn:BusinessRuleTask"]);
@@ -59434,7 +58314,7 @@ function InputProps$1({
         parameter
       }),
       autoFocusEntry: id + "-target",
-      remove: removeFactory$b({
+      remove: removeFactory$c({
         commandStack,
         element,
         parameter
@@ -59443,20 +58323,20 @@ function InputProps$1({
   });
   return {
     items,
-    add: addFactory$8({
+    add: addFactory$9({
       element,
       bpmnFactory,
       commandStack
     })
   };
 }
-function removeFactory$b({
+function removeFactory$c({
   commandStack,
   element,
   parameter
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const commands = [];
     const ioMapping = getIoMapping(element);
     if (!ioMapping) {
@@ -59489,13 +58369,13 @@ function removeFactory$b({
     commandStack.execute("properties-panel.multi-command-executor", commands);
   };
 }
-function addFactory$8({
+function addFactory$9({
   element,
   bpmnFactory,
   commandStack
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const commands = [];
     const businessObject = getBusinessObject(element);
     let extensionElements = businessObject.get("extensionElements");
@@ -60035,7 +58915,7 @@ function OutputProps$1({
         parameter
       }),
       autoFocusEntry: id + "-target",
-      remove: removeFactory$a({
+      remove: removeFactory$b({
         commandStack,
         element,
         parameter
@@ -60044,20 +58924,20 @@ function OutputProps$1({
   });
   return {
     items,
-    add: addFactory$7({
+    add: addFactory$8({
       element,
       bpmnFactory,
       commandStack
     })
   };
 }
-function removeFactory$a({
+function removeFactory$b({
   commandStack,
   element,
   parameter
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     let commands = [];
     const ioMapping = getIoMapping(element);
     if (!ioMapping) {
@@ -60090,13 +58970,13 @@ function removeFactory$a({
     commandStack.execute("properties-panel.multi-command-executor", commands);
   };
 }
-function addFactory$7({
+function addFactory$8({
   element,
   bpmnFactory,
   commandStack
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     let commands = [];
     const businessObject = getBusinessObject(element);
     let extensionElements = businessObject.get("extensionElements");
@@ -60149,6 +59029,93 @@ function addFactory$7({
     commandStack.execute("properties-panel.multi-command-executor", commands);
   };
 }
+function PriorityDefinitionProps(props) {
+  const {
+    element
+  } = props;
+  if (!isZeebeUserTask(element)) {
+    return [];
+  }
+  return [{
+    id: "priorityDefinitionPriority",
+    component: Priority$1,
+    isEdited: isEdited$6
+  }];
+}
+function Priority$1(props) {
+  const {
+    element
+  } = props;
+  const commandStack = useService("commandStack");
+  const bpmnFactory = useService("bpmnFactory");
+  const translate4 = useService("translate");
+  const debounce2 = useService("debounceInput");
+  const getValue = () => {
+    return (getPriorityDefinition(element) || {}).priority;
+  };
+  const setValue = (value) => {
+    const commands = [];
+    const businessObject = getBusinessObject(element);
+    let extensionElements = businessObject.get("extensionElements");
+    let priorityDefinition = getPriorityDefinition(element);
+    const isNullValue = value === null || value === "" || value === void 0;
+    if (priorityDefinition && isNullValue) {
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: extensionElements,
+          properties: {
+            values: extensionElements.get("values").filter((v5) => v5 !== priorityDefinition)
+          }
+        }
+      });
+    } else if (priorityDefinition && !isNullValue) {
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: priorityDefinition,
+          properties: {
+            priority: value
+          }
+        }
+      });
+    } else if (!priorityDefinition && !isNullValue) {
+      priorityDefinition = createElement("zeebe:PriorityDefinition", {
+        priority: value
+      }, extensionElements, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: extensionElements,
+          properties: {
+            values: [...extensionElements.get("values"), priorityDefinition]
+          }
+        }
+      });
+    }
+    commandStack.execute("properties-panel.multi-command-executor", commands);
+  };
+  return FeelEntryWithVariableContext({
+    element,
+    id: "priorityDefinitionPriority",
+    label: translate4("Priority"),
+    feel: "optional",
+    getValue,
+    setValue,
+    debounce: debounce2
+  });
+}
+function getPriorityDefinition(element) {
+  const businessObject = getBusinessObject(element);
+  return getExtensionElementsList(businessObject, "zeebe:PriorityDefinition")[0];
+}
+function isZeebeUserTask(element) {
+  const businessObject = getBusinessObject(element);
+  return is(element, "bpmn:UserTask") && !!getExtensionElementsList(businessObject, "zeebe:UserTask")[0];
+}
 var SCRIPT_IMPLEMENTATION_OPTION = "script";
 var JOB_WORKER_IMPLEMENTATION_OPTION$1 = "jobWorker";
 var DEFAULT_IMPLEMENTATION_OPTION = "";
@@ -60199,7 +59166,7 @@ function ScriptImplementation(props) {
     }
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: DEFAULT_IMPLEMENTATION_OPTION,
       label: translate4("<none>")
     }, {
@@ -60209,7 +59176,7 @@ function ScriptImplementation(props) {
       value: JOB_WORKER_IMPLEMENTATION_OPTION$1,
       label: translate4("Job worker")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -60292,7 +59259,7 @@ function ScriptProps$1(props) {
   const {
     element
   } = props;
-  if (!is(element, "bpmn:ScriptTask") || !getScript(element)) {
+  if (!is(element, "bpmn:ScriptTask") || !getScript2(element)) {
     return [];
   }
   return [{
@@ -60315,7 +59282,7 @@ function Expression$2(props) {
   const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
-    return (getScript(element) || {}).get("expression");
+    return (getScript2(element) || {}).get("expression");
   };
   const setValue = (value) => {
     const commands = [];
@@ -60336,7 +59303,7 @@ function Expression$2(props) {
         }
       });
     }
-    let script = getScript(element);
+    let script = getScript2(element);
     if (!script) {
       script = createElement("zeebe:Script", {}, extensionElements, bpmnFactory);
       commands.push({
@@ -60382,7 +59349,7 @@ function ResultVariable$3(props) {
   const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const getValue = () => {
-    return (getScript(element) || {}).resultVariable;
+    return (getScript2(element) || {}).resultVariable;
   };
   const setValue = (value) => {
     const commands = [];
@@ -60403,7 +59370,7 @@ function ResultVariable$3(props) {
         }
       });
     }
-    let script = getScript(element);
+    let script = getScript2(element);
     if (!script) {
       script = createElement("zeebe:Script", {}, extensionElements, bpmnFactory);
       commands.push({
@@ -60438,7 +59405,7 @@ function ResultVariable$3(props) {
     debounce: debounce2
   });
 }
-function getScript(element) {
+function getScript2(element) {
   const businessObject = getBusinessObject(element);
   return getExtensionElementsList(businessObject, "zeebe:Script")[0];
 }
@@ -60490,6 +59457,12 @@ function SignalName(props) {
     debounce: debounce2
   });
 }
+var CalledElementBinding$1 = withProps(Binding$2, {
+  type: "zeebe:CalledElement"
+});
+var CalledElementVersionTag$1 = withProps(VersionTag$3, {
+  type: "zeebe:CalledElement"
+});
 function TargetProps(props) {
   const {
     element
@@ -60497,11 +59470,23 @@ function TargetProps(props) {
   if (!is(element, "bpmn:CallActivity")) {
     return [];
   }
-  return [{
+  const entries = [{
     id: "targetProcessId",
     component: TargetProcessId,
     isEdited: isEdited$6
+  }, {
+    id: "bindingType",
+    component: CalledElementBinding$1,
+    isEdited: isEdited$3
   }];
+  if (getBindingType(element, "zeebe:CalledElement") === "versionTag") {
+    entries.push({
+      id: "versionTag",
+      component: CalledElementVersionTag$1,
+      isEdited
+    });
+  }
+  return entries;
 }
 function TargetProcessId(props) {
   const {
@@ -60644,7 +59629,7 @@ function TaskDefinitionType(props) {
   return FeelEntryWithVariableContext({
     element,
     id,
-    label: translate4("Type"),
+    label: translate4("Job type"),
     feel: "optional",
     getValue,
     setValue,
@@ -60721,6 +59706,213 @@ function TaskDefinitionRetries(props) {
 function getTaskDefinition(element) {
   const businessObject = getBusinessObject(element);
   return getExtensionElementsList(businessObject, "zeebe:TaskDefinition")[0];
+}
+var EVENT_TYPE = ["completing", "assigning"];
+var EVENT_TO_LABEL$1 = {
+  completing: "Completing",
+  assigning: "Assigning"
+};
+function TaskListenerEntries(props) {
+  const {
+    idPrefix,
+    listener
+  } = props;
+  return [{
+    id: idPrefix + "-eventType",
+    component: EventType$1,
+    idPrefix,
+    listener,
+    eventTypes: EVENT_TYPE
+  }, {
+    id: idPrefix + "-listenerType",
+    component: ListenerType$1,
+    idPrefix,
+    listener
+  }, {
+    id: idPrefix + "-retries",
+    component: Retries,
+    idPrefix,
+    listener
+  }];
+}
+function EventType$1(props) {
+  const {
+    idPrefix,
+    element,
+    listener,
+    eventTypes
+  } = props;
+  const modeling = useService("modeling");
+  const translate4 = useService("translate");
+  const getOptions = () => {
+    return eventTypes.map((eventType) => ({
+      value: eventType,
+      label: translate4(EVENT_TO_LABEL$1[eventType])
+    }));
+  };
+  const setValue = (value) => {
+    modeling.updateModdleProperties(element, listener, {
+      eventType: value
+    });
+  };
+  const getValue = () => {
+    return listener.get("eventType");
+  };
+  return SelectEntry({
+    element,
+    id: idPrefix + "-eventType",
+    label: translate4("Event type"),
+    getValue,
+    setValue,
+    getOptions
+  });
+}
+function TaskListenersProps({
+  element,
+  injector
+}) {
+  let businessObject = getRelevantBusinessObject$1(element);
+  if (!businessObject) {
+    return;
+  }
+  if (!isZeebeUserTask$1(element)) {
+    return;
+  }
+  const moddle = injector.get("moddle");
+  if (!canHaveTaskListeners(businessObject, moddle)) {
+    return;
+  }
+  const listeners = getListenersList(businessObject) || [];
+  const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack"), modeling = injector.get("modeling"), translate4 = injector.get("translate");
+  const items = listeners.map((listener, index5) => {
+    const id = element.id + "-taskListener-" + index5;
+    const type = listener.get("type") || "<no type>";
+    const eventType = listener.get("eventType");
+    const label = translate4("{eventType}: {type}", {
+      eventType: EVENT_TO_LABEL$1[eventType] || eventType,
+      type
+    });
+    return {
+      id,
+      label,
+      entries: TaskListenerEntries({
+        idPrefix: id,
+        listener
+      }),
+      autoFocusEntry: id + "-eventType",
+      remove: removeFactory$a({
+        modeling,
+        element,
+        listener
+      })
+    };
+  });
+  return {
+    items,
+    add: addFactory$7({
+      bpmnFactory,
+      commandStack,
+      element
+    })
+  };
+}
+function removeFactory$a({
+  modeling,
+  element,
+  listener
+}) {
+  return function(event2) {
+    event2.stopPropagation();
+    const businessObject = getRelevantBusinessObject$1(element);
+    const container = getTaskListenersContainer(businessObject);
+    if (!container) {
+      return;
+    }
+    const listeners = without(container.get("listeners"), listener);
+    modeling.updateModdleProperties(element, container, {
+      listeners
+    });
+  };
+}
+function addFactory$7({
+  bpmnFactory,
+  commandStack,
+  element
+}) {
+  return function(event2) {
+    event2.stopPropagation();
+    let commands = [];
+    const businessObject = getRelevantBusinessObject$1(element);
+    let extensionElements = businessObject.get("extensionElements");
+    if (!extensionElements) {
+      extensionElements = createElement("bpmn:ExtensionElements", {
+        values: []
+      }, businessObject, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: businessObject,
+          properties: {
+            extensionElements
+          }
+        }
+      });
+    }
+    let taskListeners = getTaskListenersContainer(businessObject);
+    if (!taskListeners) {
+      const parent = extensionElements;
+      taskListeners = createElement("zeebe:TaskListeners", {
+        listeners: []
+      }, parent, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: extensionElements,
+          properties: {
+            values: [...extensionElements.get("values"), taskListeners]
+          }
+        }
+      });
+    }
+    const TaskListener2 = createElement("zeebe:TaskListener", getDefaultListenerProps(), taskListeners, bpmnFactory);
+    commands.push({
+      cmd: "element.updateModdleProperties",
+      context: {
+        element,
+        moddleElement: taskListeners,
+        properties: {
+          listeners: [...taskListeners.get("listeners"), TaskListener2]
+        }
+      }
+    });
+    commandStack.execute("properties-panel.multi-command-executor", commands);
+  };
+}
+function getRelevantBusinessObject$1(element) {
+  let businessObject = getBusinessObject(element);
+  if (is(element, "bpmn:Participant")) {
+    return businessObject.get("processRef");
+  }
+  return businessObject;
+}
+function getTaskListenersContainer(element) {
+  const TaskListeners = getExtensionElementsList(element, "zeebe:TaskListeners");
+  return TaskListeners && TaskListeners[0];
+}
+function getListenersList(element) {
+  const TaskListeners = getTaskListenersContainer(element);
+  return TaskListeners && TaskListeners.get("listeners");
+}
+function canHaveTaskListeners(bo, moddle) {
+  const TaskListenersDescriptor = moddle.getTypeDescriptor("zeebe:TaskListeners");
+  return isAny(bo, TaskListenersDescriptor.meta.allowedIn);
+}
+function getDefaultListenerProps() {
+  return {
+    eventType: EVENT_TYPE[0]
+  };
 }
 function TaskScheduleProps(props) {
   const {
@@ -60947,31 +60139,31 @@ function TimerProps$1(props) {
   return entries;
 }
 function getTimerOptions(element, translate4) {
-  const options2 = [];
+  const options = [];
   if (isTimerExpressionTypeSupported("timeDate", element)) {
-    options2.push({
+    options.push({
       value: "timeDate",
       label: translate4("Date")
     });
   }
   if (isTimerExpressionTypeSupported("timeDuration", element)) {
-    options2.push({
+    options.push({
       value: "timeDuration",
       label: translate4("Duration")
     });
   }
   if (isTimerExpressionTypeSupported("timeCycle", element)) {
-    options2.push({
+    options.push({
       value: "timeCycle",
       label: translate4("Cycle")
     });
   }
-  return options2;
+  return options;
 }
 function TimerEventDefinitionType$1(props) {
   const {
     element,
-    options: options2
+    options
   } = props;
   const commandStack = useService("commandStack"), bpmnFactory = useService("bpmnFactory"), translate4 = useService("translate");
   const businessObject = getBusinessObject(element), timerEventDefinition = getTimerEventDefinition(businessObject), timerEventDefinitionType = getTimerDefinitionType(timerEventDefinition);
@@ -61001,7 +60193,7 @@ function TimerEventDefinitionType$1(props) {
     return [{
       value: "",
       label: translate4("<none>")
-    }, ...options2];
+    }, ...options];
   };
   return SelectEntry({
     element,
@@ -61081,7 +60273,7 @@ function getTimerEventDefinitionValueDescription$1(timerDefinitionType, translat
         }), u5("a", {
           href: "https://docs.camunda.io/docs/reference/bpmn-processes/timer-events/timer-events#time-date",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           title: translate4("Timer documentation"),
           children: translate4("How to configure a timer")
         })]
@@ -61107,7 +60299,7 @@ function getTimerEventDefinitionValueDescription$1(timerDefinitionType, translat
         }), u5("a", {
           href: "https://docs.camunda.io/docs/reference/bpmn-processes/timer-events/timer-events#time-cycle",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           title: translate4("Timer documentation"),
           children: translate4("How to configure a timer")
         })]
@@ -61133,7 +60325,7 @@ function getTimerEventDefinitionValueDescription$1(timerDefinitionType, translat
         }), u5("a", {
           href: "https://docs.camunda.io/docs/reference/bpmn-processes/timer-events/timer-events#time-duration",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           title: translate4("Timer documentation"),
           children: translate4("How to configure a timer")
         })]
@@ -61177,14 +60369,14 @@ function UserTaskImplementation(props) {
     }
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: ZEEBE_USER_TASK_IMPLEMENTATION_OPTION,
-      label: translate4("Zeebe user task")
+      label: translate4("Camunda user task")
     }, {
       value: JOB_WORKER_IMPLEMENTATION_OPTION,
       label: translate4("Job worker")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -61210,6 +60402,95 @@ function isUserTaskImplementationEdited(element) {
 function getZeebeUserTask(element) {
   const businessObject = getBusinessObject(element);
   return getExtensionElementsList(businessObject, "zeebe:UserTask")[0];
+}
+function VersionTagProps$1(props) {
+  const {
+    element
+  } = props;
+  const businessObject = getBusinessObject(element);
+  if (!is(element, "bpmn:Process") && !(is(element, "bpmn:Participant") && businessObject.get("processRef"))) {
+    return [];
+  }
+  return [{
+    id: "versionTag",
+    component: VersionTag$2,
+    isEdited
+  }];
+}
+function VersionTag$2(props) {
+  const {
+    element
+  } = props;
+  const bpmnFactory = useService("bpmnFactory");
+  const commandStack = useService("commandStack");
+  const debounce2 = useService("debounceInput");
+  const translate4 = useService("translate");
+  const getValue = () => {
+    const versionTag = getVersionTag(element);
+    if (versionTag) {
+      return versionTag.get("value");
+    }
+  };
+  const setValue = (value) => {
+    let commands = [];
+    const businessObject = getProcess$4(element);
+    let extensionElements = businessObject.get("extensionElements");
+    if (!extensionElements) {
+      extensionElements = createElement("bpmn:ExtensionElements", {
+        values: []
+      }, businessObject, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: businessObject,
+          properties: {
+            extensionElements
+          }
+        }
+      });
+    }
+    let versionTag = getVersionTag(element);
+    if (!versionTag) {
+      versionTag = createElement("zeebe:VersionTag", {}, extensionElements, bpmnFactory);
+      commands.push({
+        cmd: "element.updateModdleProperties",
+        context: {
+          element,
+          moddleElement: extensionElements,
+          properties: {
+            values: [...extensionElements.get("values"), versionTag]
+          }
+        }
+      });
+    }
+    commands.push({
+      cmd: "element.updateModdleProperties",
+      context: {
+        element,
+        moddleElement: versionTag,
+        properties: {
+          value
+        }
+      }
+    });
+    commandStack.execute("properties-panel.multi-command-executor", commands);
+  };
+  return TextfieldEntry({
+    element,
+    id: "versionTag",
+    label: translate4("Version tag"),
+    getValue,
+    setValue,
+    debounce: debounce2
+  });
+}
+function getProcess$4(element) {
+  return is(element, "bpmn:Process") ? getBusinessObject(element) : getBusinessObject(element).get("processRef");
+}
+function getVersionTag(element) {
+  const businessObject = getProcess$4(element);
+  return getExtensionElementsList(businessObject, "zeebe:VersionTag")[0];
 }
 function ExtensionProperty(props) {
   const {
@@ -61335,8 +60616,8 @@ function removeFactory$9({
   property,
   namespace
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const commands = [];
     const businessObject = getRelevantBusinessObject(element);
     const extensionElements = businessObject.get("extensionElements");
@@ -61377,8 +60658,8 @@ function addFactory$6({
   element,
   namespace
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     let commands = [];
     const businessObject = getRelevantBusinessObject(element);
     let extensionElements = businessObject.get("extensionElements");
@@ -61452,7 +60733,7 @@ function getPropertiesList(element, namespace = "camunda") {
   return properties && properties.get(getPropertyName(namespace));
 }
 var LOW_PRIORITY$1 = 500;
-var ZEEBE_GROUPS = [BusinessRuleImplementationGroup, CalledDecisionGroup, ScriptImplementationGroup, ScriptGroup$1, UserTaskImplementationGroup, TaskDefinitionGroup, AssignmentDefinitionGroup, FormGroup$1, ConditionGroup$1, TargetGroup, InputPropagationGroup, InputGroup$1, OutputPropagationGroup, OutputGroup$1, HeaderGroup, ExtensionPropertiesGroup$1];
+var ZEEBE_GROUPS = [BusinessRuleImplementationGroup, CalledDecisionGroup, ScriptImplementationGroup, ScriptGroup$1, UserTaskImplementationGroup, TaskDefinitionGroup, AssignmentDefinitionGroup, FormGroup$1, ConditionGroup$1, TargetGroup, InputPropagationGroup, InputGroup$1, OutputPropagationGroup, OutputGroup$1, HeaderGroup, TaskListenersGroup, ExecutionListenersGroup, ExtensionPropertiesGroup$1];
 var ZeebePropertiesProvider = class {
   constructor(propertiesPanel, injector) {
     propertiesPanel.registerProvider(LOW_PRIORITY$1, this);
@@ -61461,6 +60742,7 @@ var ZeebePropertiesProvider = class {
   getGroups(element) {
     return (groups) => {
       groups = groups.concat(this._getGroups(element));
+      updateGeneralGroup$1(groups, element);
       updateErrorGroup$1(groups, element);
       updateEscalationGroup$1(groups, element);
       updateMessageGroup(groups, element);
@@ -61658,10 +60940,44 @@ function AssignmentDefinitionGroup(element, injector) {
       element
     }), ...TaskScheduleProps({
       element
+    }), ...PriorityDefinitionProps({
+      element
     })],
     component: Group
   };
   return group.entries.length ? group : null;
+}
+function ExecutionListenersGroup(element, injector) {
+  const translate4 = injector.get("translate");
+  const group = {
+    label: translate4("Execution listeners"),
+    id: "Zeebe__ExecutionListeners",
+    component: ListGroup,
+    ...ExecutionListenersProps({
+      element,
+      injector
+    })
+  };
+  if (group.items) {
+    return group;
+  }
+  return null;
+}
+function TaskListenersGroup(element, injector) {
+  const translate4 = injector.get("translate");
+  const group = {
+    label: translate4("Task listeners"),
+    id: "Zeebe__TaskListeners",
+    component: ListGroup,
+    ...TaskListenersProps({
+      element,
+      injector
+    })
+  };
+  if (group.items) {
+    return group;
+  }
+  return null;
 }
 function ExtensionPropertiesGroup$1(element, injector) {
   const translate4 = injector.get("translate");
@@ -61679,6 +60995,20 @@ function ExtensionPropertiesGroup$1(element, injector) {
     return group;
   }
   return null;
+}
+function updateGeneralGroup$1(groups, element) {
+  const generalGroup = findGroup$1(groups, "general");
+  if (!generalGroup) {
+    return;
+  }
+  const {
+    entries
+  } = generalGroup;
+  const executableEntry = findIndex(entries, (entry) => entry.id === "isExecutable");
+  const insertIndex = executableEntry >= 0 ? executableEntry : entries.length;
+  entries.splice(insertIndex, 0, ...VersionTagProps$1({
+    element
+  }));
 }
 function updateErrorGroup$1(groups, element) {
   const errorGroup = findGroup$1(groups, "error");
@@ -61749,10 +61079,6 @@ function replaceEntries(oldEntries, newEntries) {
   const filteredEntries = oldEntries.filter((oldEntry) => !newEntries.find((newEntry) => newEntry.id === oldEntry.id));
   return [...filteredEntries, ...newEntries];
 }
-var index$12 = {
-  __init__: ["zeebePropertiesProvider"],
-  zeebePropertiesProvider: ["type", ZeebePropertiesProvider]
-};
 function AsynchronousContinuationsProps(props) {
   const {
     element
@@ -61905,7 +61231,7 @@ function BusinessKey$1(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: EMPTY_OPTION$1,
       label: translate4("<none>")
     }];
@@ -61913,13 +61239,13 @@ function BusinessKey$1(props) {
     fields.forEach((field) => {
       const id = field.get("camunda:id");
       if (id) {
-        options2.push({
+        options.push({
           value: id,
           label: id
         });
       }
     });
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -62836,14 +62162,14 @@ function ScriptType(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: "resource",
       label: translate4("External resource")
     }, {
       value: "script",
       label: translate4("Inline script")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -62997,7 +62323,7 @@ function VariableEvents(props) {
     }), u5("a", {
       href: "https://docs.camunda.org/manual/latest/reference/bpmn20/custom-extensions/extension-attributes/#variableevents",
       target: "_blank",
-      rel: "noopener",
+      rel: "noopener noreferrer",
       children: translate4("Documentation: Variable events")
     })]
   });
@@ -63075,11 +62401,11 @@ function ScriptProps(props) {
   const {
     element,
     script,
-    prefix: prefix4
+    prefix: prefix3
   } = props;
   const entries = [];
   const scriptType = getScriptType(script || element);
-  const idPrefix = prefix4 || "";
+  const idPrefix = prefix3 || "";
   entries.push({
     id: idPrefix + "scriptFormat",
     component: Format,
@@ -63170,7 +62496,7 @@ function Type$3(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: "",
       label: translate4("<none>")
     }, {
@@ -63180,7 +62506,7 @@ function Type$3(props) {
       value: "script",
       label: translate4("Inline script")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -63275,26 +62601,26 @@ function isScript$2(element) {
 function getScriptProperty(businessObject) {
   return isScript$2(businessObject) ? "value" : "script";
 }
-function getElements(businessObject, type, property) {
+function getElements3(businessObject, type, property) {
   const elements = getExtensionElementsList(businessObject, type);
   return !property ? elements : (elements[0] || {})[property] || [];
 }
-function getParameters(element, prop) {
-  const inputOutput = getInputOutput(element);
+function getParameters3(element, prop) {
+  const inputOutput = getInputOutput3(element);
   return inputOutput && inputOutput.get(prop) || [];
 }
-function getInputOutput(element) {
+function getInputOutput3(element) {
   if (is(element, "camunda:Connector")) {
     return element.get("inputOutput");
   }
   const businessObject = getBusinessObject(element);
-  return (getElements(businessObject, "camunda:InputOutput") || [])[0];
+  return (getElements3(businessObject, "camunda:InputOutput") || [])[0];
 }
-function getInputParameters(element) {
-  return getParameters(element, "inputParameters");
+function getInputParameters3(element) {
+  return getParameters3(element, "inputParameters");
 }
-function getOutputParameters(element) {
-  return getParameters(element, "outputParameters");
+function getOutputParameters2(element) {
+  return getParameters3(element, "outputParameters");
 }
 function isInputOutputSupported(element) {
   const businessObject = getBusinessObject(element);
@@ -63321,11 +62647,11 @@ function getInputOutputType(parameter) {
   return type;
 }
 function CreateParameterCmd(element, type, parent, bpmnFactory) {
-  const isInput5 = type === "camunda:InputParameter";
+  const isInput4 = type === "camunda:InputParameter";
   const newParameter = createElement(type, {
-    name: nextId(isInput5 ? "Input_" : "Output_")
+    name: nextId(isInput4 ? "Input_" : "Output_")
   }, parent, bpmnFactory);
-  const propertyName = isInput5 ? "inputParameters" : "outputParameters";
+  const propertyName = isInput4 ? "inputParameters" : "outputParameters";
   return {
     cmd: "element.updateModdleProperties",
     context: {
@@ -63356,7 +62682,7 @@ function AddParameterCmd(element, type, bpmnFactory) {
       }
     });
   }
-  let inputOutput = getInputOutput(element);
+  let inputOutput = getInputOutput3(element);
   if (!inputOutput) {
     const parent = extensionElements;
     inputOutput = createElement("camunda:InputOutput", {
@@ -63742,7 +63068,7 @@ function Name$2(props) {
   return TextfieldEntry({
     element: parameter,
     id: idPrefix + "-name",
-    label: translate4(isInput4(parameter) ? "Local variable name" : "Process variable name"),
+    label: translate4(isInput3(parameter) ? "Local variable name" : "Process variable name"),
     getValue,
     setValue,
     debounce: debounce2
@@ -63781,7 +63107,7 @@ function Type$2(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       label: translate4("List"),
       value: "list"
     }, {
@@ -63794,7 +63120,7 @@ function Type$2(props) {
       label: translate4("String or expression"),
       value: "stringOrExpression"
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element: parameter,
@@ -63837,7 +63163,7 @@ function StringOrExpression(props) {
     debounce: debounce2
   });
 }
-function isInput4(parameter) {
+function isInput3(parameter) {
   return is(parameter, "camunda:InputParameter");
 }
 function isServiceTaskLike(element) {
@@ -63925,7 +63251,7 @@ function ConnectorInputProps(props) {
   }
   const connector = getConnector$1(element);
   const commandStack = injector.get("commandStack"), bpmnFactory = injector.get("bpmnFactory");
-  const inputParameters = getInputParameters(connector) || [];
+  const inputParameters = getInputParameters3(connector) || [];
   const items = inputParameters.map((parameter, index5) => {
     const id = element.id + "-connector-inputParameter-" + index5;
     return {
@@ -63945,10 +63271,10 @@ function ConnectorInputProps(props) {
       })
     };
   });
-  function add3(event3) {
-    event3.stopPropagation();
+  function add5(event2) {
+    event2.stopPropagation();
     const commands = [];
-    let inputOutput = getInputOutput(connector);
+    let inputOutput = getInputOutput3(connector);
     if (!inputOutput) {
       inputOutput = createElement("camunda:InputOutput", {
         inputParameters: [],
@@ -63970,7 +63296,7 @@ function ConnectorInputProps(props) {
   }
   return {
     items,
-    add: add3
+    add: add5
   };
 }
 function removeFactory$8(props) {
@@ -63980,9 +63306,9 @@ function removeFactory$8(props) {
     element,
     parameter
   } = props;
-  return function(event3) {
-    event3.stopPropagation();
-    const inputOutput = getInputOutput(connector);
+  return function(event2) {
+    event2.stopPropagation();
+    const inputOutput = getInputOutput3(connector);
     if (!inputOutput) {
       return;
     }
@@ -64005,7 +63331,7 @@ function ConnectorOutputProps(props) {
   }
   const connector = getConnector$1(element);
   const commandStack = injector.get("commandStack"), bpmnFactory = injector.get("bpmnFactory");
-  const outputParameters = getOutputParameters(connector) || [];
+  const outputParameters = getOutputParameters2(connector) || [];
   const items = outputParameters.map((parameter, index5) => {
     const id = element.id + "-connector-outputParameter-" + index5;
     return {
@@ -64025,10 +63351,10 @@ function ConnectorOutputProps(props) {
       })
     };
   });
-  function add3(event3) {
-    event3.stopPropagation();
+  function add5(event2) {
+    event2.stopPropagation();
     const commands = [];
-    let inputOutput = getInputOutput(connector);
+    let inputOutput = getInputOutput3(connector);
     if (!inputOutput) {
       inputOutput = createElement("camunda:InputOutput", {
         inputParameters: [],
@@ -64050,7 +63376,7 @@ function ConnectorOutputProps(props) {
   }
   return {
     items,
-    add: add3
+    add: add5
   };
 }
 function removeFactory$7(props) {
@@ -64060,9 +63386,9 @@ function removeFactory$7(props) {
     element,
     parameter
   } = props;
-  return function(event3) {
-    event3.stopPropagation();
-    const inputOutput = getInputOutput(connector);
+  return function(event2) {
+    event2.stopPropagation();
+    const inputOutput = getInputOutput3(connector);
     if (!inputOutput) {
       return;
     }
@@ -64142,7 +63468,7 @@ function ErrorCodeVariable(props) {
   const commandStack = useService("commandStack");
   const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
-  const errorEventDefinition = getErrorEventDefinition(element);
+  const errorEventDefinition = getErrorEventDefinition$1(element);
   const getValue = () => {
     return errorEventDefinition.get("camunda:errorCodeVariable");
   };
@@ -64172,7 +63498,7 @@ function ErrorMessageVariable(props) {
   const commandStack = useService("commandStack");
   const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
-  const errorEventDefinition = getErrorEventDefinition(element);
+  const errorEventDefinition = getErrorEventDefinition$1(element);
   const getValue = () => {
     return errorEventDefinition.get("camunda:errorMessageVariable");
   };
@@ -64300,7 +63626,7 @@ function ErrorRef(props) {
     return commandStack.execute("properties-panel.multi-command-executor", commands);
   };
   const getOptions = () => {
-    let options2 = [{
+    let options = [{
       value: EMPTY_OPTION,
       label: translate4("<none>")
     }, {
@@ -64309,12 +63635,12 @@ function ErrorRef(props) {
     }];
     const errors = findRootElementsByType(getBusinessObject(element), "bpmn:Error");
     sortByName$1(errors).forEach((error4) => {
-      options2.push({
+      options.push({
         value: error4.get("id"),
         label: error4.get("name") || error4.get("id")
       });
     });
-    return options2;
+    return options;
   };
   return ReferenceSelectEntry({
     element,
@@ -64491,8 +63817,8 @@ function removeFactory$6({
   element,
   errorEventDefinition
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getBusinessObject(element);
     removeExtensionElements(element, businessObject, errorEventDefinition, commandStack);
   };
@@ -64502,8 +63828,8 @@ function addFactory$5({
   commandStack,
   element
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getBusinessObject(element);
     const error4 = createElement("camunda:ErrorEventDefinition", {}, void 0, bpmnFactory);
     addExtensionElements(element, businessObject, error4, bpmnFactory, commandStack);
@@ -64700,14 +64026,14 @@ function TypeProperty(props) {
     });
   };
   const getOptions = (element2) => {
-    const options2 = [{
+    const options = [{
       value: "string",
       label: translate4("String")
     }, {
       value: "expression",
       label: translate4("Expression")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element: field,
@@ -64740,13 +64066,14 @@ function ValueProperty(props) {
   const getValue = (field2) => {
     return field2.string || field2.stringValue || field2.expression;
   };
-  return TextfieldEntry({
+  return TextAreaEntry({
     element: field,
     id: idPrefix + "-value",
     label: translate4("Value"),
     getValue,
     setValue,
-    debounce: debounce2
+    debounce: debounce2,
+    autoResize: true
   });
 }
 function determineType(field) {
@@ -64794,8 +64121,8 @@ function removeFactory$5({
   element,
   field
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getServiceTaskLikeBusinessObject(element);
     removeExtensionElements(element, businessObject, field, commandStack);
   };
@@ -64805,8 +64132,8 @@ function addFactory$4({
   commandStack,
   element
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getServiceTaskLikeBusinessObject(element);
     const fieldInjection = createElement("camunda:Field", {
       name: void 0,
@@ -65192,7 +64519,7 @@ function Type$1(props) {
     return DEFINED_TYPE_VALUES.includes(type) ? type : CUSTOM_TYPE_VALUE;
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       label: translate4("boolean"),
       value: "boolean"
     }, {
@@ -65212,12 +64539,12 @@ function Type$1(props) {
       value: CUSTOM_TYPE_VALUE
     }];
     if (formField.get("type") === void 0) {
-      options2.unshift({
+      options.unshift({
         label: translate4("<none>"),
         value: ""
       });
     }
-    return options2;
+    return options;
   };
   return SelectEntry({
     element: formField,
@@ -65568,8 +64895,8 @@ function addFactory$3({
   commandStack,
   element
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const commands = [];
     const formData = getFormData$1(element);
     const formField = createElement("camunda:FormField", {}, formData, bpmnFactory);
@@ -65591,8 +64918,8 @@ function removeFactory$4({
   element,
   formField
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const formData = getFormData$1(element), formFields = getFormFieldsList(element);
     if (!formFields || !formFields.length) {
       return;
@@ -65649,7 +64976,7 @@ function FormType(props) {
       return "formKey";
     } else if (isDefined(businessObject.get("camunda:formRef"))) {
       return "formRef";
-    } else if (getFormData(element)) {
+    } else if (getFormData2(element)) {
       return "formData";
     }
     return "";
@@ -65735,7 +65062,7 @@ function FormType(props) {
     getOptions
   });
 }
-function getFormData(element) {
+function getFormData2(element) {
   const bo = getBusinessObject(element);
   return getExtensionElementsList(bo, "camunda:FormData")[0];
 }
@@ -65754,14 +65081,14 @@ function removePropertiesCommands(element, commandStack) {
       }
     }
   });
-  if (extensionElements && getFormData(element)) {
+  if (extensionElements && getFormData2(element)) {
     commands.push({
       cmd: "element.updateModdleProperties",
       context: {
         element,
         moddleElement: extensionElements,
         properties: {
-          values: without(extensionElements.get("values"), getFormData(element))
+          values: without(extensionElements.get("values"), getFormData2(element))
         }
       }
     });
@@ -65883,7 +65210,7 @@ function Binding$1(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: "deployment",
       label: translate4("deployment")
     }, {
@@ -65893,7 +65220,7 @@ function Binding$1(props) {
       value: "version",
       label: translate4("version")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -66019,7 +65346,7 @@ function DmnImplementationProps(props) {
     component: ResultVariable$2,
     isEdited
   });
-  if (getResultVariable(element)) {
+  if (getResultVariable2(element)) {
     entries.push({
       id: "mapDecisionResult",
       component: MapDecisionResult,
@@ -66080,7 +65407,7 @@ function Binding(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: "deployment",
       label: translate4("deployment")
     }, {
@@ -66093,7 +65420,7 @@ function Binding(props) {
       value: "versionTag",
       label: translate4("versionTag")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -66200,7 +65527,7 @@ function ResultVariable$2(props) {
   const debounce2 = useService("debounceInput");
   const businessObject = getBusinessObject(element);
   const getValue = () => {
-    return getResultVariable(businessObject);
+    return getResultVariable2(businessObject);
   };
   const setValue = (value) => {
     commandStack.execute("element.updateModdleProperties", {
@@ -66240,7 +65567,7 @@ function MapDecisionResult(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       value: "collectEntries",
       label: translate4("collectEntries (List<Object>)")
     }, {
@@ -66253,7 +65580,7 @@ function MapDecisionResult(props) {
       value: "singleResult",
       label: translate4("singleResult (Map<String, Object>)")
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element,
@@ -66268,7 +65595,7 @@ function getDecisionRefBinding(element) {
   const businessObject = getBusinessObject(element);
   return businessObject.get("camunda:decisionRefBinding") || "latest";
 }
-function getResultVariable(element) {
+function getResultVariable2(element) {
   const businessObject = getBusinessObject(element);
   return businessObject.get("camunda:resultVariable");
 }
@@ -66391,7 +65718,7 @@ function ImplementationType(props) {
   };
   const getOptions = () => {
     const businessObject = getServiceTaskLikeBusinessObject(element);
-    const options2 = [{
+    const options = [{
       value: "",
       label: translate4(IMPLEMENTATION_TYPE_NONE_LABEL)
     }, {
@@ -66405,24 +65732,24 @@ function ImplementationType(props) {
       label: translate4(IMPLEMENTATION_TYPE_DELEGATE_LABEL)
     }];
     if (isDmnCapable(businessObject)) {
-      options2.push({
+      options.push({
         value: "dmn",
         label: translate4(IMPLEMENTATION_TYPE_DMN_LABEL)
       });
     }
     if (isExternalCapable(businessObject)) {
-      options2.push({
+      options.push({
         value: "external",
         label: translate4(IMPLEMENTATION_TYPE_EXTERNAL_LABEL)
       });
     }
     if (isServiceTaskLike(businessObject)) {
-      options2.push({
+      options.push({
         value: "connector",
         label: translate4(IMPLEMENTATION_TYPE_CONNECTOR_LABEL)
       });
     }
-    return sortByPriority(options2);
+    return sortByPriority(options);
   };
   return SelectEntry({
     element,
@@ -66449,7 +65776,7 @@ function UpdateModdlePropertiesCommand(element, businessObject, newProperties) {
     }
   };
 }
-function sortByPriority(options2) {
+function sortByPriority(options) {
   const priorities = {
     [IMPLEMENTATION_TYPE_NONE_LABEL]: 0,
     [IMPLEMENTATION_TYPE_JAVA_LABEL]: 3,
@@ -66459,7 +65786,7 @@ function sortByPriority(options2) {
     [IMPLEMENTATION_TYPE_EXTERNAL_LABEL]: 2,
     [IMPLEMENTATION_TYPE_CONNECTOR_LABEL]: 6
   };
-  return sortBy(options2, (o5) => priorities[o5.label]);
+  return sortBy(options, (o5) => priorities[o5.label]);
 }
 function ImplementationProps(props) {
   const {
@@ -66840,8 +66167,8 @@ function getInMappings$1(element) {
 function findRelevantInMappings(element) {
   const inMappings = getInMappings$1(element);
   return filter(inMappings, function(mapping) {
-    const variables2 = mapping.get("variables");
-    return variables2 && variables2 === "all";
+    const variables = mapping.get("variables");
+    return variables && variables === "all";
   });
 }
 function isPropagateAll$1(element) {
@@ -66918,14 +66245,14 @@ function Type2(props) {
     });
   };
   const getOptions = () => {
-    const options2 = [{
+    const options = [{
       label: translate4("Source"),
       value: "source"
     }, {
       label: translate4("Source expression"),
       value: "sourceExpression"
     }];
-    return options2;
+    return options;
   };
   return SelectEntry({
     element: mapping,
@@ -67070,7 +66397,7 @@ function InMappingProps({
   if (!areInMappingsSupported(element)) {
     return null;
   }
-  const variableMappings = getInMappings(element) || [];
+  const variableMappings = getInMappings2(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
   const items = variableMappings.map((mapping, index5) => {
     const id = element.id + "-inMapping-" + index5;
@@ -67104,8 +66431,8 @@ function removeFactory$3({
   element,
   mapping
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getSignalEventDefinition$1(element) || getBusinessObject(element);
     removeExtensionElements(element, businessObject, mapping, commandStack);
   };
@@ -67115,8 +66442,8 @@ function addFactory$2({
   commandStack,
   element
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getSignalEventDefinition$1(element) || getBusinessObject(element);
     const newMapping = createElement("camunda:In", {
       source: ""
@@ -67125,7 +66452,7 @@ function addFactory$2({
     addExtensionElements(element, businessObject, newMapping, bpmnFactory, commandStack);
   };
 }
-function getInMappings(element) {
+function getInMappings2(element) {
   const businessObject = getBusinessObject(element);
   const signalEventDefinition = getSignalEventDefinition$1(businessObject);
   const mappings = getExtensionElementsList(signalEventDefinition || businessObject, "camunda:In");
@@ -67148,7 +66475,7 @@ function InputProps(props) {
   if (!areInputParametersSupported(element)) {
     return null;
   }
-  const inputParameters = getInputParameters(element) || [];
+  const inputParameters = getInputParameters3(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
   const items = inputParameters.map((parameter, index5) => {
     const id = element.id + "-inputParameter-" + index5;
@@ -67168,13 +66495,13 @@ function InputProps(props) {
       })
     };
   });
-  function add3(event3) {
-    event3.stopPropagation();
+  function add5(event2) {
+    event2.stopPropagation();
     commandStack.execute("properties-panel.multi-command-executor", AddParameterCmd(element, "camunda:InputParameter", bpmnFactory));
   }
   return {
     items,
-    add: add3
+    add: add5
   };
 }
 function removeFactory$2(props) {
@@ -67183,9 +66510,9 @@ function removeFactory$2(props) {
     element,
     parameter
   } = props;
-  return function(event3) {
-    event3.stopPropagation();
-    const inputOutput = getInputOutput(element);
+  return function(event2) {
+    event2.stopPropagation();
+    const inputOutput = getInputOutput3(element);
     if (!inputOutput) {
       return;
     }
@@ -67691,8 +67018,8 @@ function getOutMappings$1(element) {
 function findRelevantOutMappings(element) {
   const inMappings = getOutMappings$1(element);
   return filter(inMappings, function(mapping) {
-    const variables2 = mapping.get("variables");
-    return variables2 && variables2 === "all";
+    const variables = mapping.get("variables");
+    return variables && variables === "all";
   });
 }
 function isPropagateAll(element) {
@@ -67706,7 +67033,7 @@ function OutMappingProps({
   if (!areOutMappingsSupported(element)) {
     return null;
   }
-  const variableMappings = getOutMappings(element) || [];
+  const variableMappings = getOutMappings3(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
   const items = variableMappings.map((mapping, index5) => {
     const id = element.id + "-outMapping-" + index5;
@@ -67740,8 +67067,8 @@ function removeFactory$1({
   element,
   mapping
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getBusinessObject(element);
     removeExtensionElements(element, businessObject, mapping, commandStack);
   };
@@ -67751,8 +67078,8 @@ function addFactory$1({
   commandStack,
   element
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const businessObject = getBusinessObject(element);
     const newMapping = createElement("camunda:Out", {
       source: ""
@@ -67761,7 +67088,7 @@ function addFactory$1({
     addExtensionElements(element, businessObject, newMapping, bpmnFactory, commandStack);
   };
 }
-function getOutMappings(element) {
+function getOutMappings3(element) {
   const businessObject = getBusinessObject(element);
   const mappings = getExtensionElementsList(businessObject, "camunda:Out");
   return filter(mappings, function(mapping) {
@@ -67778,7 +67105,7 @@ function OutputProps({
   if (!areOutputParametersSupported(element)) {
     return null;
   }
-  const outputParameters = getOutputParameters(element) || [];
+  const outputParameters = getOutputParameters2(element) || [];
   const bpmnFactory = injector.get("bpmnFactory"), commandStack = injector.get("commandStack");
   const items = outputParameters.map((parameter, index5) => {
     const id = element.id + "-outputParameter-" + index5;
@@ -67812,9 +67139,9 @@ function removeFactory({
   element,
   parameter
 }) {
-  return function(event3) {
-    event3.stopPropagation();
-    const inputOutput = getInputOutput(element);
+  return function(event2) {
+    event2.stopPropagation();
+    const inputOutput = getInputOutput3(element);
     if (!inputOutput) {
       return;
     }
@@ -67832,8 +67159,8 @@ function addFactory({
   commandStack,
   element
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     commandStack.execute("properties-panel.multi-command-executor", AddParameterCmd(element, "camunda:OutputParameter", bpmnFactory));
   };
 }
@@ -67978,7 +67305,7 @@ function getTimerEventDefinitionValueDescription(timerDefinitionType, translate4
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-date",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           children: translate4("Documentation: Timer events")
         })]
       });
@@ -68003,7 +67330,7 @@ function getTimerEventDefinitionValueDescription(timerDefinitionType, translate4
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-cycle",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           children: translate4("Documentation: Timer events")
         })]
       });
@@ -68028,7 +67355,7 @@ function getTimerEventDefinitionValueDescription(timerDefinitionType, translate4
         }), u5("a", {
           href: "https://docs.camunda.org/manual/latest/reference/bpmn20/events/timer-events/#time-duration",
           target: "_blank",
-          rel: "noopener",
+          rel: "noopener noreferrer",
           children: translate4("Documentation: Timer events")
         })]
       });
@@ -68218,8 +67545,8 @@ function removeListenerFactory({
   listener,
   commandStack
 }) {
-  return function removeListener(event3) {
-    event3.stopPropagation();
+  return function removeListener(event2) {
+    event2.stopPropagation();
     removeExtensionElements(element, getListenersContainer(element), listener, commandStack);
   };
 }
@@ -68294,7 +67621,7 @@ function ListenerId({
   const translate4 = useService("translate");
   const debounce2 = useService("debounceInput");
   const commandStack = useService("commandStack");
-  let options2 = {
+  let options = {
     element,
     id,
     label: translate4("Listener ID"),
@@ -68313,7 +67640,7 @@ function ListenerId({
       return listener.get("camunda:id");
     }
   };
-  return TextfieldEntry(options2);
+  return TextfieldEntry(options);
 }
 function ListenerType({
   id,
@@ -68459,8 +67786,8 @@ function addListenerFactory({
   element,
   listenerGroup
 }) {
-  return function(event3) {
-    event3.stopPropagation();
+  return function(event2) {
+    event2.stopPropagation();
     const listener = bpmnFactory.create(listenerGroup, {
       event: getDefaultEvent(element, listenerGroup),
       class: ""
@@ -68482,9 +67809,9 @@ function addExecutionListenerFactory(props) {
   });
 }
 function getListenerLabel(listener, translate4 = (value) => value) {
-  const event3 = listener.get("event");
+  const event2 = listener.get("event");
   const implementationType = getListenerType(listener);
-  return `${translate4(EVENT_TO_LABEL[event3])}: ${translate4(IMPLEMENTATION_TYPE_TO_LABEL[implementationType])}`;
+  return `${translate4(EVENT_TO_LABEL[event2])}: ${translate4(IMPLEMENTATION_TYPE_TO_LABEL[implementationType])}`;
 }
 function getListenerTypeOptions(translate4) {
   return Object.entries(IMPLEMENTATION_TYPE_TO_LABEL).map(([value, label]) => ({
@@ -68538,8 +67865,8 @@ function getDefaultEventTypeProperties(type, bpmnFactory) {
       };
   }
 }
-function getPrefixedId(prefix4, id) {
-  return `${prefix4}-${id}`;
+function getPrefixedId(prefix3, id) {
+  return `${prefix3}-${id}`;
 }
 function getListenersContainer(element) {
   const businessObject = getBusinessObject(element);
@@ -68549,26 +67876,26 @@ function ProcessVariablesEntry(props) {
   const {
     element
   } = props;
-  const [variables2, setVariables] = h4([]);
+  const [variables, setVariables] = h4([]);
   p4(async () => {
     const businessObject = getBusinessObject(element);
-    const rootElement = getRootElement2(businessObject);
-    const scope = getScope(element);
-    const rawVariables = await (0, import_extract_process_variables.getVariablesForScope)(scope, rootElement);
+    const rootElement = getRootElement3(businessObject);
+    const scope = getScope3(element);
+    const rawVariables = await getVariablesForScope2(scope, rootElement);
     const withName = populateElementNames(sortByName(rawVariables));
     setVariables(withName);
   }, [element]);
-  if (!variables2.length) {
+  if (!variables.length) {
     return null;
   }
-  const byScope = groupByScope(variables2);
+  const byScope = groupByScope(variables);
   const multiScope = isMultiScope(byScope);
   let variableItems = [];
   if (multiScope) {
     const reversed = map(reverse(keys(byScope)), (scopeKey) => byScope[scopeKey]);
     variableItems = flatten(reversed);
   } else {
-    variableItems = variables2;
+    variableItems = variables;
   }
   const items = variableItems.map((variable, index5) => {
     const id = element.id + "-variable-" + index5;
@@ -68668,7 +67995,7 @@ function canHaveProcessVariables(element) {
   const businessObject = getBusinessObject(element);
   return isAny(element, ["bpmn:Process", "bpmn:SubProcess"]) || is(element, "bpmn:Participant") && businessObject.get("processRef");
 }
-function getRootElement2(element) {
+function getRootElement3(element) {
   const businessObject = getBusinessObject(element);
   if (is(businessObject, "bpmn:Participant")) {
     return businessObject.processRef;
@@ -68682,30 +68009,30 @@ function getRootElement2(element) {
   }
   return parent;
 }
-function getScope(element) {
+function getScope3(element) {
   const bo = getBusinessObject(element);
   if (is(element, "bpmn:Participant")) {
     return bo.processRef.id;
   }
   return bo.id;
 }
-function sortByName(variables2) {
-  return sortBy(variables2, function(variable) {
+function sortByName(variables) {
+  return sortBy(variables, function(variable) {
     return variable.name;
   });
 }
-function groupByScope(variables2) {
-  return groupBy(variables2, "scope");
+function groupByScope(variables) {
+  return groupBy(variables, "scope");
 }
-function populateElementNames(variables2) {
-  forEach(variables2, function(variable) {
+function populateElementNames(variables) {
+  forEach(variables, function(variable) {
     const names = map(variable.origin, function(element) {
       return element.name || element.id;
     });
     variable.origin = names;
     variable.scope = variable.scope.name || variable.scope.id;
   });
-  return variables2;
+  return variables;
 }
 function isMultiScope(scopedVariables) {
   return keys(scopedVariables).length > 1;
@@ -69088,10 +68415,10 @@ function Id(props) {
       id: value
     });
   };
-  const getValue = T3((element2) => {
+  const getValue = T4((element2) => {
     return getBusinessObject(element2).id;
   }, [element]);
-  const validate = T3((value) => {
+  const validate = T4((value) => {
     const businessObject = getBusinessObject(element);
     return isIdValid(businessObject, value, translate4);
   }, [element, translate4]);
@@ -69143,7 +68470,7 @@ function ProcessId(props) {
       }
     });
   };
-  const validate = T3((value) => {
+  const validate = T4((value) => {
     return isIdValid(process2, value, translate4);
   }, [process2, translate4]);
   const description = is(element, "bpmn:Participant") ? translate4("This maps to the process definition key.") : null;
@@ -70077,8 +69404,14 @@ function findSet(set4, matchFn) {
 }
 
 // node_modules/bpmn-js-token-simulation/lib/simulator/util/EventsUtil.js
-function eventsMatch(a6, b5) {
-  return ["type", "name", "ref", "iref"].every((attr3) => !(attr3 in a6) || a6[attr3] === b5[attr3]);
+function eventsMatch(a6, b4) {
+  const attrMatch = ["type", "name", "iref"].every((attr3) => !(attr3 in a6) || a6[attr3] === b4[attr3]);
+  const catchAllMatch = !b4.ref && (b4.type === "error" || b4.type === "escalation");
+  return attrMatch && (catchAllMatch || refsMatch(a6, b4));
+}
+function refsMatch(a6, b4) {
+  const attr3 = "ref";
+  return !(attr3 in a6) || a6[attr3] === b4[attr3];
 }
 
 // node_modules/bpmn-js-token-simulation/lib/simulator/util/ModelUtil.js
@@ -70152,8 +69485,8 @@ function isInterrupting3(element) {
 function isAny2(element, types3) {
   return types3.some((type) => is(element, type));
 }
-function isTypedEvent3(event3, eventDefinitionType) {
-  return some(getBusinessObject(event3).eventDefinitions, (definition) => {
+function isTypedEvent3(event2, eventDefinitionType) {
+  return some(getBusinessObject(event2).eventDefinitions, (definition) => {
     return eventDefinitionType ? is(definition, eventDefinitionType) : true;
   });
 }
@@ -70275,12 +69608,21 @@ function Simulator(injector, eventBus, elementRegistry) {
       initiator,
       scope
     } = context;
-    const event3 = getEvent(_event);
+    const event2 = getEvent(_event);
     const subscriptions2 = scope.subscriptions;
-    const matchingSubscriptions = filterSet(
+    let matchingSubscriptions = filterSet(
       subscriptions2,
-      (subscription) => eventsMatch(event3, subscription.event)
+      (subscription) => eventsMatch(event2, subscription.event)
     );
+    if (event2.type === "error" || event2.type === "escalation") {
+      const referenceSubscriptions = filterSet(
+        matchingSubscriptions,
+        (subscription) => refsMatch(event2, subscription.event)
+      );
+      if (matchingSubscriptions.every((subscription) => subscription.event.boundary) && referenceSubscriptions.some((subscription) => subscription.event.boundary) || referenceSubscriptions.some((subscription) => !subscription.event.boundary)) {
+        matchingSubscriptions = referenceSubscriptions;
+      }
+    }
     const nonInterrupting = matchingSubscriptions.filter(
       (subscription) => !subscription.event.interrupting
     );
@@ -70304,12 +69646,12 @@ function Simulator(injector, eventBus, elementRegistry) {
     });
     return [interrupt.triggerFn(initiator)].flat().filter((s5) => s5);
   }
-  function subscribe(scope, event3, triggerFn) {
-    event3 = getEvent(event3);
-    const element = event3.element;
+  function subscribe(scope, event2, triggerFn) {
+    event2 = getEvent(event2);
+    const element = event2.element;
     const subscription = {
       scope,
-      event: event3,
+      event: event2,
       element,
       triggerFn,
       remove() {
@@ -70326,12 +69668,12 @@ function Simulator(injector, eventBus, elementRegistry) {
   function unsubscribe(subscription) {
     const {
       scope,
-      event: event3
+      event: event2
     } = subscription;
     subscriptions.delete(subscription);
     scope.subscriptions.delete(subscription);
-    if (event3.element) {
-      elementChanged(event3.element);
+    if (event2.element) {
+      elementChanged(event2.element);
     }
   }
   function createInternalRef(element) {
@@ -70362,7 +69704,7 @@ function Simulator(injector, eventBus, elementRegistry) {
       boundary,
       ...iref ? { iref } : {}
     };
-    const eventDefinition = getEventDefinitions(element)[0];
+    const eventDefinition = getEventDefinitions2(element)[0];
     if (!eventDefinition) {
       return {
         ...baseEvent,
@@ -70476,11 +69818,11 @@ function Simulator(injector, eventBus, elementRegistry) {
       scope
     } = filter2;
     const elements = filter2.elements || element && [element];
-    const event3 = _event && getEvent(_event);
-    return (subscription) => (!event3 || eventsMatch(event3, subscription.event)) && (!elements || elements.includes(subscription.element)) && (!scope || scope === subscription.scope);
+    const event2 = _event && getEvent(_event);
+    return (subscription) => (!event2 || eventsMatch(event2, subscription.event)) && (!elements || elements.includes(subscription.element)) && (!scope || scope === subscription.scope);
   }
-  function scopeSubscriptionFilter(event3) {
-    const matchesSubscription = event3 === "function" ? event3 : subscriptionFilter(event3);
+  function scopeSubscriptionFilter(event2) {
+    const matchesSubscription = event2 === "function" ? event2 : subscriptionFilter(event2);
     return (scope) => Array.from(scope.subscriptions).some(matchesSubscription);
   }
   function scopeFilter(filter2) {
@@ -70557,14 +69899,14 @@ function Simulator(injector, eventBus, elementRegistry) {
       scope
     });
   }
-  function emit(event3, payload = {}) {
-    return eventBus.fire(`tokenSimulation.simulator.${event3}`, payload);
+  function emit(event2, payload = {}) {
+    return eventBus.fire(`tokenSimulation.simulator.${event2}`, payload);
   }
-  function on2(event3, callback) {
-    eventBus.on("tokenSimulation.simulator." + event3, callback);
+  function on2(event2, callback) {
+    eventBus.on("tokenSimulation.simulator." + event2, callback);
   }
-  function off(event3, callback) {
-    eventBus.off("tokenSimulation.simulator." + event3, callback);
+  function off(event2, callback) {
+    eventBus.off("tokenSimulation.simulator." + event2, callback);
   }
   function setConfig(element, updatedConfig) {
     const existingConfig = getConfig(element);
@@ -70587,11 +69929,11 @@ function Simulator(injector, eventBus, elementRegistry) {
       const startEvents = element.children.filter(isStartEvent);
       const implicitStartEvents = element.children.filter(isImplicitStartEvent);
       for (const startEvent of startEvents) {
-        const event3 = {
+        const event2 = {
           ...getEvent(startEvent),
           interrupting: false
         };
-        subscribe(scope, event3, (initiator) => signal({
+        subscribe(scope, event2, (initiator) => signal({
           element,
           startEvent,
           initiator
@@ -70599,8 +69941,8 @@ function Simulator(injector, eventBus, elementRegistry) {
       }
       if (!startEvents.length) {
         for (const implicitStartEvent of implicitStartEvents) {
-          const event3 = getNoneEvent(implicitStartEvent);
-          subscribe(scope, event3, (initiator) => signal({
+          const event2 = getNoneEvent(implicitStartEvent);
+          subscribe(scope, event2, (initiator) => signal({
             element,
             initiator
           }));
@@ -70656,7 +69998,7 @@ function Simulator(injector, eventBus, elementRegistry) {
     if (!scopes2.length) {
       return;
     }
-    const event3 = {
+    const event2 = {
       type: "all-completed",
       persistent: false
     };
@@ -70667,12 +70009,12 @@ function Simulator(injector, eventBus, elementRegistry) {
         off("destroyScope", destroyListener);
         trigger({
           scope,
-          event: event3
+          event: event2
         });
       }
     };
     on2("destroyScope", destroyListener);
-    return event3;
+    return event2;
   }
   function waitAtElement(element, wait = true) {
     setConfig(element, {
@@ -70727,8 +70069,8 @@ function NoopBehavior() {
     console.log("ignored #enter", context.element);
   };
 }
-function isRethrow(event3, interrupt) {
-  return event3.type === interrupt.type && event3.boundary && !interrupt.boundary;
+function isRethrow(event2, interrupt) {
+  return event2.type === interrupt.type && event2.boundary && !interrupt.boundary;
 }
 function isImplicitMessageCatch(element) {
   return is(element, "bpmn:ReceiveTask") || element.incoming.some((element2) => is(element2, "bpmn:MessageFlow"));
@@ -70737,13 +70079,13 @@ function isSpecialBoundaryEvent(element) {
   if (!isBoundaryEvent2(element)) {
     return false;
   }
-  const eventDefinitions = getEventDefinitions(element);
+  const eventDefinitions = getEventDefinitions2(element);
   return !eventDefinitions[0] || isAny2(eventDefinitions[0], [
     "bpmn:ConditionalEventDefinition",
     "bpmn:TimerEventDefinition"
   ]);
 }
-function getEventDefinitions(element) {
+function getEventDefinitions2(element) {
   return element.businessObject.get("eventDefinitions") || [];
 }
 
@@ -70810,9 +70152,9 @@ BoundaryEventBehavior2.prototype.signal = function(context) {
   const cancelActivity = getBusinessObject(element).cancelActivity;
   if (cancelActivity) {
     this._scopeBehavior.interrupt(hostScope, scope);
-    const event3 = this._scopeBehavior.tryExit(hostScope, scope);
-    if (event3) {
-      const subscription = this._simulator.subscribe(hostScope, event3, (initiator) => {
+    const event2 = this._scopeBehavior.tryExit(hostScope, scope);
+    if (event2) {
+      const subscription = this._simulator.subscribe(hostScope, event2, (initiator) => {
         subscription.remove();
         return this._simulator.exit(context);
       });
@@ -70868,9 +70210,9 @@ IntermediateThrowEventBehavior.prototype.enter = function(context) {
   } = context;
   const eventBehavior = this._eventBehaviors.get(element);
   if (eventBehavior) {
-    const event3 = eventBehavior(context);
-    if (event3) {
-      return this._activityBehavior.signalOnEvent(context, event3);
+    const event2 = eventBehavior(context);
+    if (event2) {
+      return this._activityBehavior.signalOnEvent(context, event2);
     }
   }
   this._activityBehavior.enter(context);
@@ -70933,9 +70275,23 @@ function ParallelGatewayBehavior(simulator, activityBehavior) {
 }
 ParallelGatewayBehavior.prototype.enter = function(context) {
   const {
+    scope
+  } = context;
+  const joiningScopes = this._findJoiningScopes(context);
+  if (joiningScopes.length) {
+    for (const childScope of joiningScopes) {
+      if (childScope !== scope) {
+        this._simulator.destroyScope(childScope.complete(), scope);
+      }
+    }
+    this._simulator.exit(context);
+  }
+};
+ParallelGatewayBehavior.prototype._findJoiningScopes = function(enterContext) {
+  const {
     scope,
     element
-  } = context;
+  } = enterContext;
   const sequenceFlows = filterSequenceFlows(element.incoming);
   const {
     parent: parentScope
@@ -70944,13 +70300,13 @@ ParallelGatewayBehavior.prototype.enter = function(context) {
     parent: parentScope,
     element
   });
-  if (elementScopes.length === sequenceFlows.length) {
-    for (const childScope of elementScopes) {
-      if (childScope !== scope) {
-        this._simulator.destroyScope(childScope.complete(), scope);
-      }
-    }
-    this._simulator.exit(context);
+  const matchingScopes = sequenceFlows.map(
+    (flow) => elementScopes.find((scope2) => scope2.initiator.element === flow)
+  ).filter((scope2) => scope2);
+  if (matchingScopes.length === sequenceFlows.length) {
+    return matchingScopes;
+  } else {
+    return [];
   }
 };
 ParallelGatewayBehavior.prototype.exit = function(context) {
@@ -71042,8 +70398,8 @@ InclusiveGatewayBehavior.prototype._tryJoin = function(context) {
   if (elementScopes[0] !== scope) {
     return;
   }
-  const event3 = this._simulator.waitForScopes(scope, remainingScopes);
-  const subscription = this._simulator.subscribe(scope, event3, () => {
+  const event2 = this._simulator.waitForScopes(scope, remainingScopes);
+  const subscription = this._simulator.subscribe(scope, event2, () => {
     subscription.remove();
     this._tryJoin(context);
   });
@@ -71130,9 +70486,9 @@ ActivityBehavior.$inject = [
   "transactionBehavior"
 ];
 ActivityBehavior.prototype.signal = function(context) {
-  const event3 = this._triggerMessages(context);
-  if (event3) {
-    return this.signalOnEvent(context, event3);
+  const event2 = this._triggerMessages(context);
+  if (event2) {
+    return this.signalOnEvent(context, event2);
   }
   this._simulator.exit(context);
 };
@@ -71144,9 +70500,9 @@ ActivityBehavior.prototype.enter = function(context) {
   if (continueEvent) {
     return this.signalOnEvent(context, continueEvent);
   }
-  const event3 = this._triggerMessages(context);
-  if (event3) {
-    return this.signalOnEvent(context, event3);
+  const event2 = this._triggerMessages(context);
+  if (event2) {
+    return this.signalOnEvent(context, event2);
   }
   this._simulator.exit(context);
 };
@@ -71171,12 +70527,12 @@ ActivityBehavior.prototype.exit = function(context) {
     this._scopeBehavior.tryExit(parentScope, scope);
   }
 };
-ActivityBehavior.prototype.signalOnEvent = function(context, event3) {
+ActivityBehavior.prototype.signalOnEvent = function(context, event2) {
   const {
     scope,
     element
   } = context;
-  const subscription = this._simulator.subscribe(scope, event3, (initiator) => {
+  const subscription = this._simulator.subscribe(scope, event2, (initiator) => {
     subscription.remove();
     return this._simulator.signal({
       scope,
@@ -71196,7 +70552,7 @@ ActivityBehavior.prototype.waitAtElement = function(element) {
 };
 ActivityBehavior.prototype._getMessageContexts = function(element, after = null) {
   const filterAfter = after ? (ctx) => ctx.referencePoint.x > after.x : () => true;
-  const sortByReference = (a6, b5) => a6.referencePoint.x - b5.referencePoint.x;
+  const sortByReference = (a6, b4) => a6.referencePoint.x - b4.referencePoint.x;
   return [
     ...element.incoming.filter(isMessageFlow).map((flow) => ({
       incoming: flow,
@@ -71580,6 +70936,7 @@ SequenceFlowBehavior.prototype.exit = function(context) {
     scope
   } = context;
   this._simulator.enter({
+    initiator: scope,
     element: element.target,
     scope: scope.parent
   });
@@ -71604,18 +70961,18 @@ MessageFlowBehavior2.prototype.exit = function(context) {
     scope: initiator
   } = context;
   const target = element.target;
-  const event3 = isCatchEvent(target) ? target : {
+  const event2 = isCatchEvent(target) ? target : {
     type: "message",
     element,
     name: element.id
   };
   const subscription = this._simulator.findSubscription({
-    event: event3,
+    event: event2,
     elements: [target, target.parent]
   });
   if (subscription) {
     this._simulator.trigger({
-      event: event3,
+      event: event2,
       initiator,
       scope: subscription.scope
     });
@@ -71623,7 +70980,7 @@ MessageFlowBehavior2.prototype.exit = function(context) {
 };
 
 // node_modules/bpmn-js-token-simulation/lib/util/ElementHelper.js
-function is5(element, types3) {
+function is7(element, types3) {
   if (element.type === "label") {
     return false;
   }
@@ -71634,14 +70991,14 @@ function is5(element, types3) {
     return is(element, type);
   });
 }
-function getEventDefinition4(event3, eventDefinitionType) {
-  return find(getBusinessObject(event3).eventDefinitions, (definition) => {
-    return is5(definition, eventDefinitionType);
+function getEventDefinition4(event2, eventDefinitionType) {
+  return find(getBusinessObject(event2).eventDefinitions, (definition) => {
+    return is7(definition, eventDefinitionType);
   });
 }
-function isTypedEvent4(event3, eventDefinitionType) {
-  return some(getBusinessObject(event3).eventDefinitions, (definition) => {
-    return is5(definition, eventDefinitionType);
+function isTypedEvent4(event2, eventDefinitionType) {
+  return some(getBusinessObject(event2).eventDefinitions, (definition) => {
+    return is7(definition, eventDefinitionType);
   });
 }
 
@@ -71727,11 +71084,23 @@ EventBehaviors.prototype.get = function(element) {
         element: element2,
         scope
       } = context;
-      this._simulator.trigger({
-        event: element2,
-        initiator: scope,
-        scope: findSubscriptionScope(scope)
+      const scopes = this._simulator.findScopes({
+        subscribedTo: {
+          event: element2
+        },
+        trait: ScopeTraits.ACTIVE
       });
+      let triggerScope = scope;
+      while (triggerScope = triggerScope.parent) {
+        if (scopes.includes(triggerScope)) {
+          this._simulator.trigger({
+            event: element2,
+            scope: triggerScope,
+            initiator: scope
+          });
+          break;
+        }
+      }
     },
     "bpmn:TerminateEventDefinition": (context) => {
       const {
@@ -71833,11 +71202,11 @@ ScopeBehavior.prototype.tryExit = function(scope, initiator) {
   });
   for (const subscription of preExitSubscriptions) {
     const {
-      event: event3,
+      event: event2,
       scope: scope2
     } = subscription;
     const scopes = this._simulator.trigger({
-      event: event3,
+      event: event2,
       scope: scope2,
       initiator
     });
@@ -71979,7 +71348,7 @@ var simulator_default = {
       eventBus.on([
         "tokenSimulation.toggleMode",
         "tokenSimulation.resetSimulation"
-      ], HIGH_PRIORITY21, (event3) => {
+      ], HIGH_PRIORITY21, (event2) => {
         simulator.reset();
       });
     }]
@@ -72074,18 +71443,18 @@ function ScopeFilter(eventBus, simulator) {
   ], () => {
     this._filter = DEFAULT_SCOPE_FILTER;
   });
-  eventBus.on(SCOPE_DESTROYED_EVENT, (event3) => {
+  eventBus.on(SCOPE_DESTROYED_EVENT, (event2) => {
     const {
       scope
-    } = event3;
+    } = event2;
     if (this._scope === scope && scope.parent) {
       this.toggle(scope.parent);
     }
   });
-  eventBus.on(SCOPE_CREATE_EVENT, (event3) => {
+  eventBus.on(SCOPE_CREATE_EVENT, (event2) => {
     const {
       scope
-    } = event3;
+    } = event2;
     if (!scope.parent && this._scope && !isAncestor(this._scope, scope)) {
       this.toggle(null);
     }
@@ -72106,8 +71475,8 @@ ScopeFilter.prototype.isShown = function(scope) {
   }
   return scope && this._filter(scope);
 };
-ScopeFilter.prototype.findScope = function(options2) {
-  return this._simulator.findScopes(options2).filter((s5) => this.isShown(s5))[0];
+ScopeFilter.prototype.findScope = function(options) {
+  return this._simulator.findScopes(options).filter((s5) => this.isShown(s5))[0];
 };
 ScopeFilter.$inject = [
   "eventBus",
@@ -72126,149 +71495,6 @@ function isAncestor(parent, scope) {
 var scope_filter_default = {
   scopeFilter: ["type", ScopeFilter]
 };
-
-// node_modules/bpmn-js-token-simulation/node_modules/min-dom/dist/index.js
-var import_domify = __toESM(require_domify(), 1);
-function _mergeNamespaces2(n4, m5) {
-  m5.forEach(function(e8) {
-    e8 && typeof e8 !== "string" && !Array.isArray(e8) && Object.keys(e8).forEach(function(k6) {
-      if (k6 !== "default" && !(k6 in n4)) {
-        var d5 = Object.getOwnPropertyDescriptor(e8, k6);
-        Object.defineProperty(n4, k6, d5.get ? d5 : {
-          enumerable: true,
-          get: function() {
-            return e8[k6];
-          }
-        });
-      }
-    });
-  });
-  return Object.freeze(n4);
-}
-var toString3 = Object.prototype.toString;
-function classes3(el) {
-  return new ClassList3(el);
-}
-function ClassList3(el) {
-  if (!el || !el.nodeType) {
-    throw new Error("A DOM element reference is required");
-  }
-  this.el = el;
-  this.list = el.classList;
-}
-ClassList3.prototype.add = function(name2) {
-  this.list.add(name2);
-  return this;
-};
-ClassList3.prototype.remove = function(name2) {
-  if ("[object RegExp]" == toString3.call(name2)) {
-    return this.removeMatching(name2);
-  }
-  this.list.remove(name2);
-  return this;
-};
-ClassList3.prototype.removeMatching = function(re) {
-  const arr = this.array();
-  for (let i7 = 0; i7 < arr.length; i7++) {
-    if (re.test(arr[i7])) {
-      this.remove(arr[i7]);
-    }
-  }
-  return this;
-};
-ClassList3.prototype.toggle = function(name2, force) {
-  if ("undefined" !== typeof force) {
-    if (force !== this.list.toggle(name2, force)) {
-      this.list.toggle(name2);
-    }
-  } else {
-    this.list.toggle(name2);
-  }
-  return this;
-};
-ClassList3.prototype.array = function() {
-  return Array.from(this.list);
-};
-ClassList3.prototype.has = ClassList3.prototype.contains = function(name2) {
-  return this.list.contains(name2);
-};
-function clear3(el) {
-  var c5;
-  while (el.childNodes.length) {
-    c5 = el.childNodes[0];
-    el.removeChild(c5);
-  }
-  return el;
-}
-function matches3(element, selector) {
-  return element && typeof element.matches === "function" && element.matches(selector);
-}
-function closest2(element, selector, checkYourSelf) {
-  var currentElem = checkYourSelf ? element : element.parentNode;
-  while (currentElem && currentElem.nodeType !== document.DOCUMENT_NODE && currentElem.nodeType !== document.DOCUMENT_FRAGMENT_NODE) {
-    if (matches3(currentElem, selector)) {
-      return currentElem;
-    }
-    currentElem = currentElem.parentNode;
-  }
-  return matches3(currentElem, selector) ? currentElem : null;
-}
-var componentEvent2 = {};
-var bind$12;
-var unbind$12;
-var prefix3;
-function detect2() {
-  bind$12 = window.addEventListener ? "addEventListener" : "attachEvent";
-  unbind$12 = window.removeEventListener ? "removeEventListener" : "detachEvent";
-  prefix3 = bind$12 !== "addEventListener" ? "on" : "";
-}
-var bind_12 = componentEvent2.bind = function(el, type, fn2, capture) {
-  if (!bind$12) detect2();
-  el[bind$12](prefix3 + type, fn2, capture || false);
-  return fn2;
-};
-var unbind_12 = componentEvent2.unbind = function(el, type, fn2, capture) {
-  if (!unbind$12) detect2();
-  el[unbind$12](prefix3 + type, fn2, capture || false);
-  return fn2;
-};
-var event2 = /* @__PURE__ */ _mergeNamespaces2({
-  __proto__: null,
-  bind: bind_12,
-  default: componentEvent2,
-  unbind: unbind_12
-}, [componentEvent2]);
-var forceCaptureEvents2 = ["focus", "blur"];
-function bind3(el, selector, type, fn2, capture) {
-  if (forceCaptureEvents2.indexOf(type) !== -1) {
-    capture = true;
-  }
-  return event2.bind(el, type, function(e8) {
-    var target = e8.target || e8.srcElement;
-    e8.delegateTarget = closest2(target, selector, true);
-    if (e8.delegateTarget) {
-      fn2.call(el, e8);
-    }
-  }, capture);
-}
-function unbind2(el, type, fn2, capture) {
-  if (forceCaptureEvents2.indexOf(type) !== -1) {
-    capture = true;
-  }
-  return event2.unbind(el, type, fn2, capture);
-}
-var delegate2 = {
-  bind: bind3,
-  unbind: unbind2
-};
-function query2(selector, el) {
-  el = el || document;
-  return el.querySelector(selector);
-}
-function all2(selector, el) {
-  el = el || document;
-  return el.querySelectorAll(selector);
-}
 
 // node_modules/bpmn-js-token-simulation/lib/animation/Animation.js
 var STYLE = getComputedStyle(document.documentElement);
@@ -72308,7 +71534,10 @@ function Animation(config, canvas, eventBus, scopeFilter) {
   this._randomize = config && config.randomize !== false;
   this._animations = /* @__PURE__ */ new Set();
   this._speed = 1;
-  eventBus.on(RESET_SIMULATION_EVENT, () => {
+  eventBus.on([
+    "diagram.destroy",
+    RESET_SIMULATION_EVENT
+  ], () => {
     this.clearAnimations();
   });
   eventBus.on(PAUSE_SIMULATION_EVENT, () => {
@@ -72317,7 +71546,7 @@ function Animation(config, canvas, eventBus, scopeFilter) {
   eventBus.on(PLAY_SIMULATION_EVENT, () => {
     this.play();
   });
-  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event3) => {
+  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event2) => {
     this.each((animation) => {
       if (this._scopeFilter.isShown(animation.scope)) {
         animation.show();
@@ -72326,10 +71555,10 @@ function Animation(config, canvas, eventBus, scopeFilter) {
       }
     });
   });
-  eventBus.on(SCOPE_DESTROYED_EVENT, (event3) => {
+  eventBus.on(SCOPE_DESTROYED_EVENT, (event2) => {
     const {
       scope
-    } = event3;
+    } = event2;
     this.clearAnimations(scope);
   });
 }
@@ -72352,7 +71581,7 @@ Animation.prototype.createAnimation = function(connection, scope, done = noop) {
   }
   const tokenGfx = this._createTokenGfx(group, scope);
   const animation = new TokenAnimation(tokenGfx, connection.waypoints, this._randomize, () => {
-    this._animations.delete(animation);
+    this._clearAnimation(animation);
     done();
   });
   animation.setSpeed(this.getAnimationSpeed());
@@ -72381,9 +71610,13 @@ Animation.prototype.getAnimationSpeed = function() {
 Animation.prototype.clearAnimations = function(scope) {
   this.each((animation) => {
     if (!scope || animation.scope === scope) {
-      animation.remove();
+      this._clearAnimation(animation);
     }
   });
+};
+Animation.prototype._clearAnimation = function(animation) {
+  animation.remove();
+  this._animations.delete(animation);
 };
 Animation.prototype._createTokenGfx = function(group, scope) {
   const parent = create(this._getTokenSVG(scope).trim());
@@ -72419,9 +71652,9 @@ Animation.prototype._getGroup = function(scope) {
     root = canvas.findRoot(scope.element);
     layer = canvas._findPlaneForRoot(root).layer;
   } else {
-    layer = query2(".viewport", canvas._svg);
+    layer = query(".viewport", canvas._svg);
   }
-  var group = query2(".bts-animation-tokens", layer);
+  var group = query(".bts-animation-tokens", layer);
   if (!group) {
     group = create('<g class="bts-animation-tokens" />');
     appendTo(
@@ -72481,7 +71714,7 @@ TokenAnimation.prototype.tick = function(tElapsed) {
     (p5) => p5.startTime <= t7 && p5.endTime > t7
   );
   if (!part) {
-    return this.remove();
+    return this.completed();
   }
   const segmentTime = t7 - part.startTime;
   const segmentLength = part.length * part.easing(segmentTime / part.duration);
@@ -72541,10 +71774,12 @@ TokenAnimation.prototype.show = function() {
 TokenAnimation.prototype.hide = function() {
   attr(this.gfx, "display", "none");
 };
+TokenAnimation.prototype.completed = function() {
+  this.done();
+};
 TokenAnimation.prototype.remove = function() {
   this.pause();
   remove(this.gfx);
-  this.done();
 };
 TokenAnimation.prototype.setSpeed = function(speed) {
   this._speed = speed;
@@ -72555,8 +71790,8 @@ function getAnimationDuration(length2, randomize = false) {
 function randomBetween(min5, max8) {
   return min5 + Math.floor(Math.random() * (max8 - min5));
 }
-function distance3(a6, b5) {
-  return Math.sqrt(Math.pow(a6.x - b5.x, 2) + Math.pow(a6.y - b5.y, 2));
+function distance3(a6, b4) {
+  return Math.sqrt(Math.pow(a6.x - b4.x, 2) + Math.pow(a6.y - b4.y, 2));
 }
 
 // node_modules/bpmn-js-token-simulation/lib/animation/index.js
@@ -72579,8 +71814,8 @@ function ColoredScopes(eventBus) {
   function getContrastYIQ(hexcolor) {
     var r7 = parseInt(hexcolor.substr(0, 2), 16);
     var g6 = parseInt(hexcolor.substr(2, 2), 16);
-    var b5 = parseInt(hexcolor.substr(4, 2), 16);
-    var yiq = (r7 * 299 + g6 * 587 + b5 * 114) / 1e3;
+    var b4 = parseInt(hexcolor.substr(4, 2), 16);
+    var yiq = (r7 * 299 + g6 * 587 + b4 * 114) / 1e3;
     return yiq;
   }
   let colorsIdx = 0;
@@ -72603,10 +71838,10 @@ function ColoredScopes(eventBus) {
       auxiliary: getContrastYIQ(primary) >= 128 ? "#111" : "#fff"
     };
   }
-  eventBus.on(SCOPE_CREATE_EVENT, HIGH_PRIORITY22, (event3) => {
+  eventBus.on(SCOPE_CREATE_EVENT, HIGH_PRIORITY22, (event2) => {
     const {
       scope
-    } = event3;
+    } = event2;
     scope.colors = getColors(scope);
   });
 }
@@ -72665,7 +71900,7 @@ function ExclusiveGatewayHandler(exclusiveGatewaySettings) {
 }
 ExclusiveGatewayHandler.prototype.createContextPads = function(element) {
   const outgoingFlows = element.outgoing.filter(function(outgoing) {
-    return is5(outgoing, "bpmn:SequenceFlow");
+    return is7(outgoing, "bpmn:SequenceFlow");
   });
   if (outgoingFlows.length < 2) {
     return;
@@ -72728,7 +71963,7 @@ function PauseHandler(simulator) {
   this._simulator = simulator;
 }
 PauseHandler.prototype.createContextPads = function(element) {
-  if (is5(element, "bpmn:ReceiveTask") || is5(element, "bpmn:SubProcess") && getBusinessObject(element).triggeredByEvent) {
+  if (is7(element, "bpmn:ReceiveTask") || is7(element, "bpmn:SubProcess") && getBusinessObject(element).triggeredByEvent) {
     return [];
   }
   return [
@@ -72766,8 +72001,8 @@ PauseHandler.prototype._togglePaused = function(element) {
   const wait = !this._isPaused(element);
   this._simulator.waitAtElement(element, wait);
 };
-PauseHandler.prototype._findSubscriptions = function(options2) {
-  return this._simulator.findSubscriptions(options2);
+PauseHandler.prototype._findSubscriptions = function(options) {
+  return this._simulator.findSubscriptions(options);
 };
 PauseHandler.$inject = [
   "simulator"
@@ -72790,7 +72025,7 @@ TriggerHandler.prototype.createTriggerContextPad = function(element) {
     const subscriptions = this._findSubscriptions({
       element
     });
-    const sortedSubscriptions = subscriptions.slice().sort((a6, b5) => {
+    const sortedSubscriptions = subscriptions.slice().sort((a6, b4) => {
       return a6.event.type === "none" ? 1 : -1;
     });
     return sortedSubscriptions;
@@ -72802,11 +72037,11 @@ TriggerHandler.prototype.createTriggerContextPad = function(element) {
   `;
   const action = (subscriptions) => {
     const {
-      event: event3,
+      event: event2,
       scope
     } = subscriptions[0];
     return this._simulator.trigger({
-      event: event3,
+      event: event2,
       scope
     });
   };
@@ -72817,8 +72052,8 @@ TriggerHandler.prototype.createTriggerContextPad = function(element) {
     contexts
   };
 };
-TriggerHandler.prototype._findSubscriptions = function(options2) {
-  return this._simulator.findSubscriptions(options2);
+TriggerHandler.prototype._findSubscriptions = function(options) {
+  return this._simulator.findSubscriptions(options);
 };
 
 // node_modules/bpmn-js-token-simulation/lib/features/context-pads/ContextPads.js
@@ -72852,30 +72087,30 @@ function ContextPads(eventBus, elementRegistry, overlays, injector, canvas, scop
     this.closeContextPads();
     this.openContextPads();
   });
-  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event3) => {
-    const showElements = all2(
+  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event2) => {
+    const showElements = all(
       ".djs-overlay-ts-context-menu [data-scope-ids]",
       overlays._overlayRoot
     );
     for (const element of showElements) {
       const scopeIds = element.dataset.scopeIds.split(",");
       const shown = scopeIds.some((id) => scopeFilter.isShown(id));
-      classes3(element).toggle("hidden", !shown);
+      classes2(element).toggle("hidden", !shown);
     }
-    const hideElements = all2(
+    const hideElements = all(
       ".djs-overlay-ts-context-menu [data-hide-scope-ids]",
       overlays._overlayRoot
     );
     for (const element of hideElements) {
       const scopeIds = element.dataset.hideScopeIds.split(",");
       const shown = scopeIds.some((id) => scopeFilter.isShown(id));
-      classes3(element).toggle("hidden", shown);
+      classes2(element).toggle("hidden", shown);
     }
   });
-  eventBus.on(ELEMENT_CHANGED_EVENT, LOW_PRIORITY29, (event3) => {
+  eventBus.on(ELEMENT_CHANGED_EVENT, LOW_PRIORITY29, (event2) => {
     const {
       element
-    } = event3;
+    } = event2;
     this.updateElementContextPads(element);
   });
 }
@@ -72886,7 +72121,7 @@ ContextPads.prototype.registerHandler = function(type, handlerCls) {
 };
 ContextPads.prototype.getHandlers = function(element) {
   return this._handlers.filter(
-    ({ type }) => is5(element, type)
+    ({ type }) => is7(element, type)
   ).map(
     ({ handler }) => handler
   );
@@ -72904,15 +72139,15 @@ ContextPads.prototype.openContextPads = function(parent) {
 ContextPads.prototype._getOverlays = function(hash) {
   return this._overlayCache.get(hash) || [];
 };
-ContextPads.prototype._addOverlay = function(element, options2) {
+ContextPads.prototype._addOverlay = function(element, options) {
   const {
     handlerHash
-  } = options2;
+  } = options;
   if (!handlerHash) {
     throw new Error("<handlerHash> required");
   }
   const overlayId = this._overlays.add(element, "bts-context-menu", {
-    ...options2,
+    ...options,
     position: {
       top: OFFSET_TOP,
       left: OFFSET_LEFT
@@ -72946,6 +72181,7 @@ ContextPads.prototype.updateElementContextPads = function(element) {
   }
 };
 ContextPads.prototype._updateElementContextPads = function(element, handler) {
+  const canvas = this._canvas;
   const contextPads = (handler.createContextPads(element) || []).filter((p5) => p5);
   const handlerHash = `${element.id}------${handler.hash}`;
   const existingOverlays = this._getOverlays(handlerHash);
@@ -72962,28 +72198,31 @@ ContextPads.prototype._updateElementContextPads = function(element, handler) {
     let existingOverlay = existingOverlays.find(
       (o5) => o5.hash === hash
     );
-    const html = existingOverlay && existingOverlay.html || (0, import_domify.default)(_html);
+    const html = existingOverlay && existingOverlay.html || domify$1(_html);
     if (_contexts) {
       const contexts = _contexts();
       html.dataset.scopeIds = contexts.map((c5) => c5.scope.id).join(",");
       const shownScopes = contexts.filter((c5) => this._scopeFilter.isShown(c5.scope));
-      classes3(html).toggle("hidden", shownScopes.length === 0);
+      classes2(html).toggle("hidden", shownScopes.length === 0);
     }
     if (_hideContexts) {
       const contexts = _hideContexts();
       html.dataset.hideScopeIds = contexts.map((c5) => c5.scope.id).join(",");
       const shownScopes = contexts.filter((c5) => this._scopeFilter.isShown(c5.scope));
-      classes3(html).toggle("hidden", shownScopes.length > 0);
+      classes2(html).toggle("hidden", shownScopes.length > 0);
     }
     if (existingOverlay) {
       updatedOverlays.push(existingOverlay);
       continue;
     }
     if (_action) {
-      event2.bind(html, "click", (event3) => {
-        event3.preventDefault();
+      event.bind(html, "click", (event2) => {
+        event2.preventDefault();
         const contexts = _contexts ? _contexts().filter((c5) => this._scopeFilter.isShown(c5.scope)) : null;
         _action(contexts);
+        if ("restoreFocus" in canvas) {
+          canvas.restoreFocus();
+        }
       });
     }
     this._addOverlay(element2, {
@@ -73040,10 +72279,10 @@ var context_pads_default = {
 
 // node_modules/bpmn-js-token-simulation/lib/features/simulation-state/SimulationState.js
 function SimulationState(eventBus, simulator, elementNotifications) {
-  eventBus.on(SCOPE_DESTROYED_EVENT, (event3) => {
+  eventBus.on(SCOPE_DESTROYED_EVENT, (event2) => {
     const {
       scope
-    } = event3;
+    } = event2;
     const {
       destroyInitiator,
       element: scopeElement
@@ -73085,7 +72324,7 @@ function ElementNotifications(overlays, eventBus) {
     this.clear();
   });
 }
-ElementNotifications.prototype.addElementNotification = function(element, options2) {
+ElementNotifications.prototype.addElementNotification = function(element, options) {
   const position = {
     top: OFFSET_TOP2,
     right: OFFSET_RIGHT
@@ -73095,10 +72334,10 @@ ElementNotifications.prototype.addElementNotification = function(element, option
     icon,
     text,
     scope = {}
-  } = options2;
+  } = options;
   const colors2 = scope.colors;
   const colorMarkup = colors2 ? `style="color: ${colors2.auxiliary}; background: ${colors2.primary}"` : "";
-  const html = (0, import_domify.default)(`
+  const html = domify$1(`
     <div class="bts-element-notification ${type || ""}" ${colorMarkup}>
       ${icon || ""}
       <span class="bts-text">${text}</span>
@@ -73136,29 +72375,29 @@ function Notifications(eventBus, canvas, scopeFilter) {
   eventBus.on([
     TOGGLE_MODE_EVENT,
     RESET_SIMULATION_EVENT
-  ], (event3) => {
+  ], (event2) => {
     this.clear();
   });
 }
 Notifications.prototype._init = function() {
-  this.container = (0, import_domify.default)('<div class="bts-notifications"></div>');
+  this.container = domify$1('<div class="bts-notifications"></div>');
   this._canvas.getContainer().appendChild(this.container);
 };
-Notifications.prototype.showNotification = function(options2) {
+Notifications.prototype.showNotification = function(options) {
   const {
     text,
     type = "info",
     icon = INFO_ICON,
     scope,
     ttl = NOTIFICATION_TIME_TO_LIVE
-  } = options2;
+  } = options;
   if (scope && !this._scopeFilter.isShown(scope)) {
     return;
   }
   const iconMarkup = icon.startsWith("<") ? icon : `<i class="${icon}"></i>`;
   const colors2 = scope && scope.colors;
   const colorMarkup = colors2 ? `style="color: ${colors2.auxiliary}; background: ${colors2.primary}"` : "";
-  const notification = (0, import_domify.default)(`
+  const notification = domify$1(`
     <div class="bts-notification ${type}">
       <span class="bts-icon">${iconMarkup}</span>
       <span class="bts-text" title="${text}">${text}</span>
@@ -73217,38 +72456,38 @@ function ShowScopes(eventBus, canvas, scopeFilter, elementColors, simulationStyl
   this._simulationStyles = simulationStyles;
   this._highlight = null;
   this._init();
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    const active = event3.active;
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    const active = event2.active;
     if (active) {
-      classes3(this._container).remove("hidden");
+      classes2(this._container).remove("hidden");
     } else {
-      classes3(this._container).add("hidden");
-      clear3(this._container);
+      classes2(this._container).add("hidden");
+      clear2(this._container);
       this.unhighlightScope();
     }
   });
-  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event3) => {
+  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event2) => {
     const allElements = this.getScopeElements();
     for (const element of allElements) {
       const scopeId = element.dataset.scopeId;
-      classes3(element).toggle("inactive", !this._scopeFilter.isShown(scopeId));
+      classes2(element).toggle("inactive", !this._scopeFilter.isShown(scopeId));
     }
   });
-  eventBus.on(SCOPE_CREATE_EVENT, (event3) => {
-    this.addScope(event3.scope);
+  eventBus.on(SCOPE_CREATE_EVENT, (event2) => {
+    this.addScope(event2.scope);
   });
-  eventBus.on(SCOPE_DESTROYED_EVENT, (event3) => {
-    this.removeScope(event3.scope);
+  eventBus.on(SCOPE_DESTROYED_EVENT, (event2) => {
+    this.removeScope(event2.scope);
   });
-  eventBus.on(SCOPE_CHANGED_EVENT, (event3) => {
-    this.updateScope(event3.scope);
+  eventBus.on(SCOPE_CHANGED_EVENT, (event2) => {
+    this.updateScope(event2.scope);
   });
   eventBus.on(RESET_SIMULATION_EVENT, () => {
     this.removeAllInstances();
   });
 }
 ShowScopes.prototype._init = function() {
-  this._container = (0, import_domify.default)('<div class="bts-scopes hidden"></div>');
+  this._container = domify$1('<div class="bts-scopes hidden"></div>');
   this._canvas.getContainer().appendChild(this._container);
 };
 ShowScopes.prototype.addScope = function(scope) {
@@ -73265,31 +72504,31 @@ ShowScopes.prototype.addScope = function(scope) {
   }
   const colors2 = scope.colors;
   const colorMarkup = colors2 ? `style="color: ${colors2.auxiliary}; background: ${colors2.primary}"` : "";
-  const html = (0, import_domify.default)(`
+  const html = domify$1(`
     <div data-scope-id="${scope.id}" class="bts-scope"
          title="View Process Instance ${scope.id}" ${colorMarkup}>
       ${scope.getTokens()}
     </div>
   `);
-  event2.bind(html, "click", () => {
+  event.bind(html, "click", () => {
     this._scopeFilter.toggle(scope);
   });
-  event2.bind(html, "mouseenter", () => {
+  event.bind(html, "mouseenter", () => {
     this.highlightScope(scopeElement);
   });
-  event2.bind(html, "mouseleave", () => {
+  event.bind(html, "mouseleave", () => {
     this.unhighlightScope();
   });
   if (!this._scopeFilter.isShown(scope)) {
-    classes3(html).add("inactive");
+    classes2(html).add("inactive");
   }
   this._container.appendChild(html);
 };
 ShowScopes.prototype.getScopeElements = function() {
-  return all2("[data-scope-id]", this._container);
+  return all("[data-scope-id]", this._container);
 };
 ShowScopes.prototype.getScopeElement = function(scope) {
-  return query2(`[data-scope-id="${scope.id}"]`, this._container);
+  return query(`[data-scope-id="${scope.id}"]`, this._container);
 };
 ShowScopes.prototype.updateScope = function(scope) {
   const element = this.getScopeElement(scope);
@@ -73311,7 +72550,7 @@ ShowScopes.prototype.highlightScope = function(element) {
   this._highlight = element;
   this._elementColors.add(element, ID2, this._getHighlightColors(), VERY_HIGH_PRIORITY);
   if (!element.parent) {
-    classes3(this._canvas.getContainer()).add("highlight");
+    classes2(this._canvas.getContainer()).add("highlight");
   }
 };
 ShowScopes.prototype.unhighlightScope = function() {
@@ -73321,7 +72560,7 @@ ShowScopes.prototype.unhighlightScope = function() {
   const element = this._highlight;
   this._elementColors.remove(element, ID2);
   if (!element.parent) {
-    classes3(this._canvas.getContainer()).remove("highlight");
+    classes2(this._canvas.getContainer()).remove("highlight");
   }
   this._highlight = null;
 };
@@ -73355,9 +72594,9 @@ SimulationStyles.prototype.get = function(prop) {
   return this._cache[prop] = this._computedStyle.getPropertyValue(prop).trim();
 };
 SimulationStyles.prototype._getComputedStyle = function() {
-  const get3 = typeof getComputedStyle === "function" ? getComputedStyle : getComputedStyleMock;
+  const get4 = typeof getComputedStyle === "function" ? getComputedStyle : getComputedStyleMock;
   const element = typeof document !== "undefined" ? document.documentElement : {};
-  return get3(element);
+  return get4(element);
 };
 function getComputedStyleMock() {
   return {
@@ -73403,34 +72642,34 @@ function getEventTypeString(element) {
     return "none";
   }
   const eventDefinition = bo.eventDefinitions[0];
-  if (is5(eventDefinition, "bpmn:MessageEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:MessageEventDefinition")) {
     return "message";
   }
-  if (is5(eventDefinition, "bpmn:TimerEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:TimerEventDefinition")) {
     return "timer";
   }
-  if (is5(eventDefinition, "bpmn:SignalEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:SignalEventDefinition")) {
     return "signal";
   }
-  if (is5(eventDefinition, "bpmn:ErrorEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:ErrorEventDefinition")) {
     return "error";
   }
-  if (is5(eventDefinition, "bpmn:EscalationEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:EscalationEventDefinition")) {
     return "escalation";
   }
-  if (is5(eventDefinition, "bpmn:CompensateEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:CompensateEventDefinition")) {
     return "compensation";
   }
-  if (is5(eventDefinition, "bpmn:ConditionalEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:ConditionalEventDefinition")) {
     return "condition";
   }
-  if (is5(eventDefinition, "bpmn:LinkEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:LinkEventDefinition")) {
     return "link";
   }
-  if (is5(eventDefinition, "bpmn:CancelEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:CancelEventDefinition")) {
     return "cancel";
   }
-  if (is5(eventDefinition, "bpmn:TerminateEventDefinition")) {
+  if (is7(eventDefinition, "bpmn:TerminateEventDefinition")) {
     return "terminate";
   }
   return "none";
@@ -73441,17 +72680,17 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
   this._canvas = canvas;
   this._scopeFilter = scopeFilter;
   this._init();
-  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event3) => {
-    const allElements = all2(".bts-entry[data-scope-id]", this._container);
+  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event2) => {
+    const allElements = all(".bts-entry[data-scope-id]", this._container);
     for (const element of allElements) {
       const scopeId = element.dataset.scopeId;
-      classes3(element).toggle("inactive", !this._scopeFilter.isShown(scopeId));
+      classes2(element).toggle("inactive", !this._scopeFilter.isShown(scopeId));
     }
   });
-  eventBus.on(SCOPE_DESTROYED_EVENT, (event3) => {
+  eventBus.on(SCOPE_DESTROYED_EVENT, (event2) => {
     const {
       scope
-    } = event3;
+    } = event2;
     const {
       element: scopeElement
     } = scope;
@@ -73464,7 +72703,7 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
     if (!processScopes.includes(scopeElement.type)) {
       return;
     }
-    const isSubProcess2 = is5(scopeElement, "bpmn:SubProcess");
+    const isSubProcess2 = is7(scopeElement, "bpmn:SubProcess");
     const text = `${isSubProcess2 ? getElementName(scopeElement) || "SubProcess" : "Process"} ${completed ? "finished" : "canceled"}`;
     this.log({
       text,
@@ -73472,10 +72711,10 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
       scope
     });
   });
-  eventBus.on(SCOPE_CREATE_EVENT, (event3) => {
+  eventBus.on(SCOPE_CREATE_EVENT, (event2) => {
     const {
       scope
-    } = event3;
+    } = event2;
     const {
       element: scopeElement
     } = scope;
@@ -73487,7 +72726,7 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
     if (!processScopes.includes(scopeElement.type)) {
       return;
     }
-    const isSubProcess2 = is5(scopeElement, "bpmn:SubProcess");
+    const isSubProcess2 = is7(scopeElement, "bpmn:SubProcess");
     const text = `${isSubProcess2 ? getElementName(scopeElement) || "SubProcess" : "Process"} started`;
     this.log({
       text,
@@ -73495,130 +72734,130 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
       scope
     });
   });
-  eventBus.on(TRACE_EVENT, (event3) => {
+  eventBus.on(TRACE_EVENT, (event2) => {
     const {
       action,
       scope: elementScope,
       element
-    } = event3;
+    } = event2;
     if (action !== "exit") {
       return;
     }
     const scope = elementScope.parent;
     const elementName = getElementName(element);
-    if (is5(element, "bpmn:ServiceTask")) {
+    if (is7(element, "bpmn:ServiceTask")) {
       return this.log({
         text: elementName || "Service Task",
         icon: "bpmn-icon-service",
         scope
       });
     }
-    if (is5(element, "bpmn:UserTask")) {
+    if (is7(element, "bpmn:UserTask")) {
       return this.log({
         text: elementName || "User Task",
         icon: "bpmn-icon-user",
         scope
       });
     }
-    if (is5(element, "bpmn:CallActivity")) {
+    if (is7(element, "bpmn:CallActivity")) {
       return this.log({
         text: elementName || "Call Activity",
         icon: "bpmn-icon-call-activity",
         scope
       });
     }
-    if (is5(element, "bpmn:ScriptTask")) {
+    if (is7(element, "bpmn:ScriptTask")) {
       return this.log({
         text: elementName || "Script Task",
         icon: "bpmn-icon-script",
         scope
       });
     }
-    if (is5(element, "bpmn:BusinessRuleTask")) {
+    if (is7(element, "bpmn:BusinessRuleTask")) {
       return this.log({
         text: elementName || "Business Rule Task",
         icon: "bpmn-icon-business-rule",
         scope
       });
     }
-    if (is5(element, "bpmn:ManualTask")) {
+    if (is7(element, "bpmn:ManualTask")) {
       return this.log({
         text: elementName || "Manual Task",
         icon: "bpmn-icon-manual-task",
         scope
       });
     }
-    if (is5(element, "bpmn:ReceiveTask")) {
+    if (is7(element, "bpmn:ReceiveTask")) {
       return this.log({
         text: elementName || "Receive Task",
         icon: "bpmn-icon-receive",
         scope
       });
     }
-    if (is5(element, "bpmn:SendTask")) {
+    if (is7(element, "bpmn:SendTask")) {
       return this.log({
         text: elementName || "Send Task",
         icon: "bpmn-icon-send",
         scope
       });
     }
-    if (is5(element, "bpmn:Task")) {
+    if (is7(element, "bpmn:Task")) {
       return this.log({
         text: elementName || "Task",
         icon: "bpmn-icon-task",
         scope
       });
     }
-    if (is5(element, "bpmn:ExclusiveGateway")) {
+    if (is7(element, "bpmn:ExclusiveGateway")) {
       return this.log({
         text: elementName || "Exclusive Gateway",
         icon: "bpmn-icon-gateway-xor",
         scope
       });
     }
-    if (is5(element, "bpmn:ParallelGateway")) {
+    if (is7(element, "bpmn:ParallelGateway")) {
       return this.log({
         text: elementName || "Parallel Gateway",
         icon: "bpmn-icon-gateway-parallel",
         scope
       });
     }
-    if (is5(element, "bpmn:InclusiveGateway")) {
+    if (is7(element, "bpmn:InclusiveGateway")) {
       return this.log({
         text: elementName || "Inclusive Gateway",
         icon: "bpmn-icon-gateway-or",
         scope
       });
     }
-    if (is5(element, "bpmn:StartEvent")) {
+    if (is7(element, "bpmn:StartEvent")) {
       return this.log({
         text: elementName || "Start Event",
         icon: `bpmn-icon-start-event-${getEventTypeString(element)}`,
         scope
       });
     }
-    if (is5(element, "bpmn:IntermediateCatchEvent")) {
+    if (is7(element, "bpmn:IntermediateCatchEvent")) {
       return this.log({
         text: elementName || "Intermediate Event",
         icon: getIconForIntermediateEvent(element, "catch"),
         scope
       });
     }
-    if (is5(element, "bpmn:IntermediateThrowEvent")) {
+    if (is7(element, "bpmn:IntermediateThrowEvent")) {
       return this.log({
         text: elementName || "Intermediate Event",
         icon: getIconForIntermediateEvent(element, "throw"),
         scope
       });
     }
-    if (is5(element, "bpmn:BoundaryEvent")) {
+    if (is7(element, "bpmn:BoundaryEvent")) {
       return this.log({
         text: elementName || "Boundary Event",
         icon: getIconForIntermediateEvent(element, "catch"),
         scope
       });
     }
-    if (is5(element, "bpmn:EndEvent")) {
+    if (is7(element, "bpmn:EndEvent")) {
       return this.log({
         text: elementName || "End Event",
         icon: `bpmn-icon-end-event-${getEventTypeString(element)}`,
@@ -73629,13 +72868,13 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
   eventBus.on([
     TOGGLE_MODE_EVENT,
     RESET_SIMULATION_EVENT
-  ], (event3) => {
+  ], (event2) => {
     this.clear();
     this.toggle(false);
   });
 }
 Log.prototype._init = function() {
-  this._container = (0, import_domify.default)(`
+  this._container = domify$1(`
     <div class="bts-log hidden djs-scrollable">
       <div class="bts-header">
         ${LogIcon("bts-log-icon")}
@@ -73649,65 +72888,65 @@ Log.prototype._init = function() {
       </div>
     </div>
   `);
-  this._placeholder = query2(".bts-placeholder", this._container);
-  this._content = query2(".bts-content", this._container);
-  event2.bind(this._content, "mousedown", (event3) => {
-    event3.stopPropagation();
+  this._placeholder = query(".bts-placeholder", this._container);
+  this._content = query(".bts-content", this._container);
+  event.bind(this._content, "mousedown", (event2) => {
+    event2.stopPropagation();
   });
-  this._close = query2(".bts-close", this._container);
-  event2.bind(this._close, "click", () => {
+  this._close = query(".bts-close", this._container);
+  event.bind(this._close, "click", () => {
     this.toggle(false);
   });
-  this._icon = query2(".bts-log-icon", this._container);
-  event2.bind(this._icon, "click", () => {
+  this._icon = query(".bts-log-icon", this._container);
+  event.bind(this._icon, "click", () => {
     this.toggle();
   });
   this._canvas.getContainer().appendChild(this._container);
-  this.paletteEntry = (0, import_domify.default)(`
+  this.paletteEntry = domify$1(`
     <div class="bts-entry" title="Toggle Simulation Log">
       ${LogIcon()}
     </div>
   `);
-  event2.bind(this.paletteEntry, "click", () => {
+  event.bind(this.paletteEntry, "click", () => {
     this.toggle();
   });
   this._tokenSimulationPalette.addEntry(this.paletteEntry, 3);
 };
 Log.prototype.isShown = function() {
   const container = this._container;
-  return !classes3(container).has("hidden");
+  return !classes2(container).has("hidden");
 };
 Log.prototype.toggle = function(shown = !this.isShown()) {
   const container = this._container;
   if (shown) {
-    classes3(container).remove("hidden");
+    classes2(container).remove("hidden");
   } else {
-    classes3(container).add("hidden");
+    classes2(container).add("hidden");
   }
 };
-Log.prototype.log = function(options2) {
+Log.prototype.log = function(options) {
   const {
     text,
     type = "info",
     icon = ICON_INFO,
     scope
-  } = options2;
+  } = options;
   const content = this._content;
-  classes3(this._placeholder).add("hidden");
+  classes2(this._placeholder).add("hidden");
   if (!this.isShown()) {
-    this._notifications.showNotification(options2);
+    this._notifications.showNotification(options);
   }
   const iconMarkup = icon.startsWith("<") ? icon : `<i class="${icon}"></i>`;
   const colors2 = scope && scope.colors;
   const colorMarkup = colors2 ? `style="background: ${colors2.primary}; color: ${colors2.auxiliary}"` : "";
-  const logEntry = (0, import_domify.default)(`
+  const logEntry = domify$1(`
     <p class="bts-entry ${type} ${scope && this._scopeFilter.isShown(scope) ? "" : "inactive"}" ${scope ? `data-scope-id="${scope.id}"` : ""}>
       <span class="bts-icon">${iconMarkup}</span>
       <span class="bts-text" title="${text}">${text}</span>
       ${scope ? `<span class="bts-scope" data-scope-id="${scope.id}" ${colorMarkup}>${scope.id}</span>` : ""}
     </p>
   `);
-  delegate2.bind(logEntry, ".bts-scope[data-scope-id]", "click", (event3) => {
+  delegate.bind(logEntry, ".bts-scope[data-scope-id]", "click", (event2) => {
     this._scopeFilter.toggle(scope);
   });
   const shouldScroll = Math.abs(content.clientHeight + content.scrollTop - content.scrollHeight) < 2;
@@ -73720,7 +72959,7 @@ Log.prototype.clear = function() {
   while (this._content.firstChild) {
     this._content.removeChild(this._content.firstChild);
   }
-  this._placeholder = (0, import_domify.default)('<p class="bts-entry placeholder">No Entries</p>');
+  this._placeholder = domify$1('<p class="bts-entry placeholder">No Entries</p>');
   this._content.appendChild(this._placeholder);
 };
 Log.$inject = [
@@ -73757,8 +72996,8 @@ function ElementSupport(eventBus, elementRegistry, canvas, notifications, elemen
   this._elementNotifications = elementNotifications;
   this._notifications = notifications;
   this._canvasParent = canvas.getContainer().parentNode;
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    if (event3.active) {
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    if (event2.active) {
       this.enable();
     } else {
       this.clear();
@@ -73774,7 +73013,7 @@ ElementSupport.prototype.enable = function() {
     if (isLabel3(element)) {
       return;
     }
-    if (!is5(element, UNSUPPORTED_ELEMENTS)) {
+    if (!is7(element, UNSUPPORTED_ELEMENTS)) {
       return;
     }
     this.showWarning(element);
@@ -73791,7 +73030,7 @@ ElementSupport.prototype.enable = function() {
   this._unsupportedElements = unsupportedElements;
 };
 ElementSupport.prototype.clear = function() {
-  classes3(this._canvasParent).remove("warning");
+  classes2(this._canvasParent).remove("warning");
 };
 ElementSupport.prototype.showWarning = function(element) {
   this._elementNotifications.addElementNotification(element, {
@@ -73830,7 +73069,7 @@ function PauseSimulation(eventBus, tokenSimulationPalette, notifications, canvas
   this.isActive = false;
   this.isPaused = true;
   this._init();
-  eventBus.on(SCOPE_CREATE_EVENT, HIGH_PRIORITY23, (event3) => {
+  eventBus.on(SCOPE_CREATE_EVENT, HIGH_PRIORITY23, (event2) => {
     this.activate();
     this.unpause();
   });
@@ -73841,17 +73080,17 @@ function PauseSimulation(eventBus, tokenSimulationPalette, notifications, canvas
     this.deactivate();
     this.pause();
   });
-  eventBus.on(TRACE_EVENT, HIGH_PRIORITY23, (event3) => {
+  eventBus.on(TRACE_EVENT, HIGH_PRIORITY23, (event2) => {
     this.unpause();
   });
 }
 PauseSimulation.prototype._init = function() {
-  this.paletteEntry = (0, import_domify.default)(`
+  this.paletteEntry = domify$1(`
     <div class="bts-entry disabled" title="Play/Pause Simulation">
       ${PLAY_MARKUP}
     </div>
   `);
-  event2.bind(this.paletteEntry, "click", this.toggle.bind(this));
+  event.bind(this.paletteEntry, "click", this.toggle.bind(this));
   this._tokenSimulationPalette.addEntry(this.paletteEntry, 1);
 };
 PauseSimulation.prototype.toggle = function() {
@@ -73865,8 +73104,8 @@ PauseSimulation.prototype.pause = function() {
   if (!this.isActive) {
     return;
   }
-  classes3(this.paletteEntry).remove("active");
-  classes3(this.canvasParent).add("paused");
+  classes2(this.paletteEntry).remove("active");
+  classes2(this.canvasParent).add("paused");
   this.paletteEntry.innerHTML = PLAY_MARKUP;
   this._eventBus.fire(PAUSE_SIMULATION_EVENT);
   this._notifications.showNotification({
@@ -73878,8 +73117,8 @@ PauseSimulation.prototype.unpause = function() {
   if (!this.isActive || !this.isPaused) {
     return;
   }
-  classes3(this.paletteEntry).add("active");
-  classes3(this.canvasParent).remove("paused");
+  classes2(this.paletteEntry).add("active");
+  classes2(this.canvasParent).remove("paused");
   this.paletteEntry.innerHTML = PAUSE_MARKUP;
   this._eventBus.fire(PLAY_SIMULATION_EVENT);
   this._notifications.showNotification({
@@ -73889,12 +73128,12 @@ PauseSimulation.prototype.unpause = function() {
 };
 PauseSimulation.prototype.activate = function() {
   this.isActive = true;
-  classes3(this.paletteEntry).remove("disabled");
+  classes2(this.paletteEntry).remove("disabled");
 };
 PauseSimulation.prototype.deactivate = function() {
   this.isActive = false;
-  classes3(this.paletteEntry).remove("active");
-  classes3(this.paletteEntry).add("disabled");
+  classes2(this.paletteEntry).remove("active");
+  classes2(this.paletteEntry).add("disabled");
 };
 PauseSimulation.$inject = [
   "eventBus",
@@ -73921,22 +73160,22 @@ function ResetSimulation(eventBus, tokenSimulationPalette, notifications) {
   this._notifications = notifications;
   this._init();
   eventBus.on(SCOPE_CREATE_EVENT, () => {
-    classes3(this._paletteEntry).remove("disabled");
+    classes2(this._paletteEntry).remove("disabled");
   });
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    const active = this._active = event3.active;
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    const active = this._active = event2.active;
     if (!active) {
       this.resetSimulation();
     }
   });
 }
 ResetSimulation.prototype._init = function() {
-  this._paletteEntry = (0, import_domify.default)(`
+  this._paletteEntry = domify$1(`
     <div class="bts-entry disabled" title="Reset Simulation">
       ${ResetIcon()}
     </div>
   `);
-  event2.bind(this._paletteEntry, "click", () => {
+  event.bind(this._paletteEntry, "click", () => {
     this.resetSimulation();
     this._notifications.showNotification({
       text: "Reset Simulation",
@@ -73946,7 +73185,7 @@ ResetSimulation.prototype._init = function() {
   this._tokenSimulationPalette.addEntry(this._paletteEntry, 2);
 };
 ResetSimulation.prototype.resetSimulation = function() {
-  classes3(this._paletteEntry).add("disabled");
+  classes2(this._paletteEntry).add("disabled");
   this._eventBus.fire(RESET_SIMULATION_EVENT);
 };
 ResetSimulation.$inject = [
@@ -73978,23 +73217,23 @@ function TokenCount(eventBus, overlays, simulator, scopeFilter, simulationStyles
   this._simulator = simulator;
   this._simulationStyles = simulationStyles;
   this.overlayIds = {};
-  eventBus.on(ELEMENT_CHANGED_EVENT, LOW_PRIORITY30, (event3) => {
+  eventBus.on(ELEMENT_CHANGED_EVENT, LOW_PRIORITY30, (event2) => {
     const {
       element
-    } = event3;
+    } = event2;
     this.removeTokenCounts(element);
     this.addTokenCounts(element);
   });
-  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event3) => {
-    const allElements = all2(".bts-token-count[data-scope-id]", overlays._overlayRoot);
+  eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event2) => {
+    const allElements = all(".bts-token-count[data-scope-id]", overlays._overlayRoot);
     for (const element of allElements) {
       const scopeId = element.dataset.scopeId;
-      classes3(element).toggle("inactive", !this._scopeFilter.isShown(scopeId));
+      classes2(element).toggle("inactive", !this._scopeFilter.isShown(scopeId));
     }
   });
 }
 TokenCount.prototype.addTokenCounts = function(element) {
-  if (is5(element, "bpmn:MessageFlow") || is5(element, "bpmn:SequenceFlow")) {
+  if (is7(element, "bpmn:MessageFlow") || is7(element, "bpmn:SequenceFlow")) {
     return;
   }
   const scopes = this._simulator.findScopes((scope) => {
@@ -74009,7 +73248,7 @@ TokenCount.prototype.addTokenCount = function(element, scopes) {
   const tokenMarkup = scopes.map((scope) => {
     return this._getTokenHTML(element, scope);
   }).join("");
-  const html = (0, import_domify.default)(`
+  const html = domify$1(`
     <div class="bts-token-count-parent">
       ${tokenMarkup}
     </div>
@@ -74081,23 +73320,23 @@ function SetAnimationSpeed(canvas, animation, eventBus) {
   this._animation = animation;
   this._eventBus = eventBus;
   this._init(animation.getAnimationSpeed());
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    const active = event3.active;
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    const active = event2.active;
     if (!active) {
-      classes3(this._container).add("hidden");
+      classes2(this._container).add("hidden");
     } else {
-      classes3(this._container).remove("hidden");
+      classes2(this._container).remove("hidden");
     }
   });
-  eventBus.on(ANIMATION_SPEED_CHANGED_EVENT, (event3) => {
-    this.setActive(event3.speed);
+  eventBus.on(ANIMATION_SPEED_CHANGED_EVENT, (event2) => {
+    this.setActive(event2.speed);
   });
 }
 SetAnimationSpeed.prototype.getToggleSpeed = function(element) {
   return parseFloat(element.dataset.speed);
 };
 SetAnimationSpeed.prototype._init = function(animationSpeed) {
-  this._container = (0, import_domify.default)(`
+  this._container = domify$1(`
     <div class="bts-set-animation-speed hidden">
       ${TachometerIcon()}
       <div class="bts-animation-speed-buttons">
@@ -74111,17 +73350,17 @@ SetAnimationSpeed.prototype._init = function(animationSpeed) {
       </div>
     </div>
   `);
-  delegate2.bind(this._container, "[data-speed]", "click", (event3) => {
-    const toggle2 = event3.delegateTarget;
+  delegate.bind(this._container, "[data-speed]", "click", (event2) => {
+    const toggle2 = event2.delegateTarget;
     const speed = this.getToggleSpeed(toggle2);
     this._animation.setAnimationSpeed(speed);
   });
   this._canvas.getContainer().appendChild(this._container);
 };
 SetAnimationSpeed.prototype.setActive = function(speed) {
-  all2("[data-speed]", this._container).forEach((toggle2) => {
+  all("[data-speed]", this._container).forEach((toggle2) => {
     const active = this.getToggleSpeed(toggle2) === speed;
-    classes3(toggle2)[active ? "add" : "remove"]("active");
+    classes2(toggle2)[active ? "add" : "remove"]("active");
   });
 };
 SetAnimationSpeed.$inject = [
@@ -74151,7 +73390,7 @@ function getNext(gateway, sequenceFlow) {
   }
 }
 function isSequenceFlow3(connection) {
-  return is5(connection, "bpmn:SequenceFlow");
+  return is7(connection, "bpmn:SequenceFlow");
 }
 var ID3 = "exclusive-gateway-settings";
 var HIGH_PRIORITY24 = 2e3;
@@ -74160,8 +73399,8 @@ function ExclusiveGatewaySettings(eventBus, elementRegistry, elementColors, simu
   this._elementColors = elementColors;
   this._simulator = simulator;
   this._simulationStyles = simulationStyles;
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    if (event3.active) {
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    if (event2.active) {
       this.setSequenceFlowsDefault();
     } else {
       this.resetSequenceFlows();
@@ -74170,7 +73409,7 @@ function ExclusiveGatewaySettings(eventBus, elementRegistry, elementColors, simu
 }
 ExclusiveGatewaySettings.prototype.setSequenceFlowsDefault = function() {
   const exclusiveGateways = this._elementRegistry.filter((element) => {
-    return is5(element, "bpmn:ExclusiveGateway");
+    return is7(element, "bpmn:ExclusiveGateway");
   });
   for (const gateway of exclusiveGateways) {
     this.setSequenceFlow(gateway);
@@ -74178,7 +73417,7 @@ ExclusiveGatewaySettings.prototype.setSequenceFlowsDefault = function() {
 };
 ExclusiveGatewaySettings.prototype.resetSequenceFlows = function() {
   const exclusiveGateways = this._elementRegistry.filter((element) => {
-    return is5(element, "bpmn:ExclusiveGateway");
+    return is7(element, "bpmn:ExclusiveGateway");
   });
   exclusiveGateways.forEach((exclusiveGateway) => {
     if (exclusiveGateway.outgoing.filter(isSequenceFlow3).length) {
@@ -74228,8 +73467,8 @@ function ElementColors(elementRegistry, eventBus, graphicsFactory) {
   this._graphicsFactory = graphicsFactory;
   this._originalColors = {};
   this._customColors = {};
-  eventBus.on(TOGGLE_MODE_EVENT, VERY_HIGH_PRIORITY2, (event3) => {
-    const active = event3.active;
+  eventBus.on(TOGGLE_MODE_EVENT, VERY_HIGH_PRIORITY2, (event2) => {
+    const active = event2.active;
     if (active) {
       this._saveOriginalColors();
     } else {
@@ -74373,8 +73612,8 @@ var ID4 = "neutral-element-colors";
 function NeutralElementColors(eventBus, elementRegistry, elementColors) {
   this._elementRegistry = elementRegistry;
   this._elementColors = elementColors;
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    const { active } = event3;
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    const { active } = event2;
     if (active) {
       this._setNeutralColors();
     }
@@ -74412,8 +73651,8 @@ function InclusiveGatewaySettings(eventBus, elementRegistry, elementColors, simu
   this._elementColors = elementColors;
   this._simulator = simulator;
   this._simulationStyles = simulationStyles;
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    if (event3.active) {
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    if (event2.active) {
       this.setDefaults();
     } else {
       this.reset();
@@ -74529,14 +73768,14 @@ function Palette2(eventBus, canvas) {
   eventBus.on(TOGGLE_MODE_EVENT, function(context) {
     var active = context.active;
     if (active) {
-      classes3(self2.container).remove("hidden");
+      classes2(self2.container).remove("hidden");
     } else {
-      classes3(self2.container).add("hidden");
+      classes2(self2.container).add("hidden");
     }
   });
 }
 Palette2.prototype._init = function() {
-  this.container = (0, import_domify.default)('<div class="bts-palette hidden"></div>');
+  this.container = domify$1('<div class="bts-palette hidden"></div>');
   this._canvas.getContainer().appendChild(this.container);
 };
 Palette2.prototype.addEntry = function(entry, index5) {
@@ -74588,8 +73827,8 @@ var base_default = {
 var HIGH_PRIORITY25 = 10001;
 function DisableModeling(eventBus, contextPad, dragging, directEditing, editorActions, modeling, palette) {
   let modelingDisabled = false;
-  eventBus.on(TOGGLE_MODE_EVENT, HIGH_PRIORITY25, (event3) => {
-    modelingDisabled = event3.active;
+  eventBus.on(TOGGLE_MODE_EVENT, HIGH_PRIORITY25, (event2) => {
+    modelingDisabled = event2.active;
     if (modelingDisabled) {
       directEditing.cancel();
       dragging.cancel();
@@ -74701,17 +73940,17 @@ function ToggleMode(eventBus, canvas, selection2, contextPad) {
   });
   eventBus.on("diagram.init", () => {
     this._canvasParent = this._canvas.getContainer().parentNode;
-    this._palette = query2(".djs-palette", this._canvas.getContainer());
+    this._palette = query(".djs-palette", this._canvas.getContainer());
     this._init();
   });
 }
 ToggleMode.prototype._init = function() {
-  this._container = (0, import_domify.default)(`
+  this._container = domify$1(`
     <div class="bts-toggle-mode">
       Token Simulation <span class="bts-toggle">${ToggleOffIcon()}</span>
     </div>
   `);
-  event2.bind(this._container, "click", () => this.toggleMode());
+  event.bind(this._container, "click", () => this.toggleMode());
   this._canvas.getContainer().appendChild(this._container);
 };
 ToggleMode.prototype.toggleMode = function(active = !this._active) {
@@ -74720,12 +73959,12 @@ ToggleMode.prototype.toggleMode = function(active = !this._active) {
   }
   if (active) {
     this._container.innerHTML = `Token Simulation <span class="bts-toggle">${ToggleOnIcon()}</span>`;
-    classes3(this._canvasParent).add("simulation");
-    classes3(this._palette).add("hidden");
+    classes2(this._canvasParent).add("simulation");
+    classes2(this._palette).add("hidden");
   } else {
     this._container.innerHTML = `Token Simulation <span class="bts-toggle">${ToggleOffIcon()}</span>`;
-    classes3(this._canvasParent).remove("simulation");
-    classes3(this._palette).remove("hidden");
+    classes2(this._canvasParent).remove("simulation");
+    classes2(this._palette).remove("hidden");
     const elements = this._selection.get();
     if (elements.length === 1) {
       this._contextPad.open(elements[0]);
@@ -74775,8 +74014,8 @@ function EditorActions2(eventBus, toggleMode, pauseSimulation, resetSimulation, 
       log.toggle();
     }
   });
-  eventBus.on(TOGGLE_MODE_EVENT, (event3) => {
-    active = event3.active;
+  eventBus.on(TOGGLE_MODE_EVENT, (event2) => {
+    active = event2.active;
   });
 }
 EditorActions2.$inject = [
@@ -74826,8 +74065,8 @@ function KeyboardBindings2(eventBus, injector) {
     }
   }
   eventBus.on("keyboard.init", function() {
-    keyboard.addListener(VERY_HIGH_PRIORITY3, function(event3) {
-      var keyEvent = event3.keyEvent;
+    keyboard.addListener(VERY_HIGH_PRIORITY3, function(event2) {
+      var keyEvent = event2.keyEvent;
       handleKeyEvent(keyEvent);
     });
   });
@@ -74841,8 +74080,8 @@ function KeyboardBindings2(eventBus, injector) {
   });
 }
 KeyboardBindings2.$inject = ["eventBus", "injector"];
-function isKey2(keys2, event3) {
-  return keys2.indexOf(event3.key) > -1;
+function isKey2(keys2, event2) {
+  return keys2.indexOf(event2.key) > -1;
 }
 
 // node_modules/bpmn-js-token-simulation/lib/features/keyboard-bindings/index.js
@@ -74872,17 +74111,17 @@ function SimulationTrace(eventBus) {
   this._log = this._log.bind(this);
 }
 SimulationTrace.$inject = ["eventBus"];
-SimulationTrace.prototype._log = function(event3) {
-  this._events.push(assign({}, event3));
+SimulationTrace.prototype._log = function(event2) {
+  this._events.push(assign({}, event2));
 };
 SimulationTrace.prototype.start = function() {
-  forEach(EventHelper_exports, (event3) => {
-    this._eventBus.on(event3, VERY_HIGH_PRIORITY4, this._log);
+  forEach(EventHelper_exports, (event2) => {
+    this._eventBus.on(event2, VERY_HIGH_PRIORITY4, this._log);
   });
 };
 SimulationTrace.prototype.stop = function() {
-  forEach(EventHelper_exports, (event3) => {
-    this._eventBus.off(event3, this._log);
+  forEach(EventHelper_exports, (event2) => {
+    this._eventBus.off(event2, this._log);
   });
 };
 SimulationTrace.prototype.getAll = function() {
@@ -74908,7 +74147,7 @@ SimulationSupport.prototype.toggleSimulation = function(active) {
 };
 SimulationSupport.prototype.getElementTrigger = function(id) {
   return this._bpmnjs.invoke(["bpmnjs", function(bpmnjs) {
-    return query2(
+    return query(
       `.djs-overlays[data-container-id='${id}'] .bts-context-pad:not(.hidden)`,
       bpmnjs._container
     );
@@ -74916,7 +74155,7 @@ SimulationSupport.prototype.getElementTrigger = function(id) {
 };
 SimulationSupport.prototype.getScopeTrigger = function(scope) {
   return this._bpmnjs.invoke(["bpmnjs", function(bpmnjs) {
-    return query2(
+    return query(
       `.bts-scopes [data-scope-id='${scope.id}']`,
       bpmnjs._container
     );
@@ -74936,8 +74175,8 @@ SimulationSupport.prototype.triggerScope = function(scope) {
 SimulationSupport.prototype.scopeDestroyed = function(scope = null) {
   return new Promise((resolve) => {
     return this._bpmnjs.invoke(["eventBus", function(eventBus) {
-      const listener = function(event3) {
-        if (scope && event3.scope !== scope) {
+      const listener = function(event2) {
+        if (scope && event2.scope !== scope) {
           return;
         }
         const scopeElements = [
@@ -74945,11 +74184,11 @@ SimulationSupport.prototype.scopeDestroyed = function(scope = null) {
           "bpmn:Process",
           "bpmn:SubProcess"
         ];
-        if (scopeElements.every((t7) => !is5(event3.scope.element, t7))) {
+        if (scopeElements.every((t7) => !is7(event2.scope.element, t7))) {
           return;
         }
         eventBus.off(SCOPE_DESTROYED_EVENT, listener);
-        return resolve(event3);
+        return resolve(event2);
       };
       eventBus.on(SCOPE_DESTROYED_EVENT, listener);
     }]);
@@ -74959,9 +74198,9 @@ SimulationSupport.prototype.elementEnter = function(id = null) {
   return new Promise((resolve) => {
     return this._bpmnjs.invoke(["eventBus", function(eventBus) {
       const wrap2 = id ? (fn2) => ifElement(id, fn2) : (fn2) => fn2;
-      const listener = wrap2(function(event3) {
+      const listener = wrap2(function(event2) {
         eventBus.off(ENTER_EVENT, listener);
-        return resolve(event3);
+        return resolve(event2);
       });
       eventBus.on(ENTER_EVENT, listener);
     }]);
@@ -74971,9 +74210,9 @@ SimulationSupport.prototype.elementExit = function(id = null) {
   return new Promise((resolve) => {
     return this._bpmnjs.invoke(["eventBus", function(eventBus) {
       const wrap2 = id ? (fn2) => ifElement(id, fn2) : (fn2) => fn2;
-      const listener = wrap2(function(event3) {
+      const listener = wrap2(function(event2) {
         eventBus.off(EXIT_EVENT2, listener);
-        return resolve(event3);
+        return resolve(event2);
       });
       eventBus.on(EXIT_EVENT2, listener);
     }]);
@@ -74981,14 +74220,14 @@ SimulationSupport.prototype.elementExit = function(id = null) {
 };
 SimulationSupport.prototype.getHistory = function(history) {
   return this._bpmnjs.invoke(["simulationTrace", function(simulationTrace) {
-    return simulationTrace.getAll().filter(function(event3) {
-      return event3.action === "exit" && (is5(event3.element, "bpmn:StartEvent") || is5(event3.element, "bpmn:BoundaryEvent")) || event3.action === "enter";
-    }).map(function(event3) {
-      return event3.element.id;
+    return simulationTrace.getAll().filter(function(event2) {
+      return event2.action === "exit" && (is7(event2.element, "bpmn:StartEvent") || is7(event2.element, "bpmn:BoundaryEvent")) || event2.action === "enter";
+    }).map(function(event2) {
+      return event2.element.id;
     });
   }]);
 };
-SimulationSupport.prototype._triggerClick = function(element, options2 = {}) {
+SimulationSupport.prototype._triggerClick = function(element, options = {}) {
   const defaultOptions = {
     pointerX: 0,
     pointerY: 0,
@@ -75000,32 +74239,32 @@ SimulationSupport.prototype._triggerClick = function(element, options2 = {}) {
     bubbles: true,
     cancelable: true
   };
-  options2 = Object.assign({}, defaultOptions, options2);
-  const event3 = document.createEvent("MouseEvents");
-  event3.initMouseEvent(
+  options = Object.assign({}, defaultOptions, options);
+  const event2 = document.createEvent("MouseEvents");
+  event2.initMouseEvent(
     "click",
-    options2.bubbles,
-    options2.cancelable,
+    options.bubbles,
+    options.cancelable,
     document.defaultView,
-    options2.button,
-    options2.pointerX,
-    options2.pointerY,
-    options2.pointerX,
-    options2.pointerY,
-    options2.ctrlKey,
-    options2.altKey,
-    options2.shiftKey,
-    options2.metaKey,
-    options2.button,
+    options.button,
+    options.pointerX,
+    options.pointerY,
+    options.pointerX,
+    options.pointerY,
+    options.ctrlKey,
+    options.altKey,
+    options.shiftKey,
+    options.metaKey,
+    options.button,
     element
   );
-  element.dispatchEvent(event3);
+  element.dispatchEvent(event2);
 };
 function ifElement(id, fn2) {
-  return function(event3) {
-    var element = event3.element;
+  return function(event2) {
+    var element = event2.element;
     if (element.id === id) {
-      fn2(event3);
+      fn2(event2);
     }
   };
 }
@@ -75033,12 +74272,12 @@ function ifElement(id, fn2) {
 // node_modules/bpmn-js-token-simulation/lib/simulation-support/index.js
 var simulation_support_default = {
   __init__: ["eventBus", function(eventBus) {
-    eventBus.on(TRACE_EVENT, function(event3) {
-      if (event3.action === "enter") {
-        eventBus.fire(ENTER_EVENT, event3);
+    eventBus.on(TRACE_EVENT, function(event2) {
+      if (event2.action === "enter") {
+        eventBus.fire(ENTER_EVENT, event2);
       }
-      if (event3.action === "exit") {
-        eventBus.fire(EXIT_EVENT2, event3);
+      if (event2.action === "exit") {
+        eventBus.fire(EXIT_EVENT2, event2);
       }
     });
   }],
@@ -75080,12 +74319,12 @@ ColorContextPadProvider.prototype._createPopupAction = function(elements) {
       title: translate4("Set color"),
       html: `<div class="entry">${colorImageSvg}</div>`,
       action: {
-        click: (event3, element) => {
+        click: (event2, element) => {
           var position = {
             ...getStartPosition(contextPad, elements),
             cursor: {
-              x: event3.x,
-              y: event3.y
+              x: event2.x,
+              y: event2.y
             }
           };
           popupMenu.open(elements, "color-picker", position);
@@ -75195,8 +74434,8 @@ function Grid(canvas, eventBus) {
     self2._init();
     self2.toggle(true);
   });
-  eventBus.on("gridSnapping.toggle", function(event3) {
-    var active = event3.active;
+  eventBus.on("gridSnapping.toggle", function(event2) {
+    var active = event2.active;
     self2.toggle(active);
     self2._centerGridAroundViewbox();
   });
@@ -75281,8 +74520,8 @@ var index3 = {
 };
 
 // node_modules/diagram-js-minimap/dist/index.esm.js
-var import_hammerjs = __toESM(require_hammer());
 var MINIMAP_VIEWBOX_PADDING = 50;
+var IDS = new IdGenerator();
 var RANGE2 = { min: 0.2, max: 4 };
 var NUM_STEPS2 = 10;
 var DELTA_THRESHOLD2 = 0.1;
@@ -75304,21 +74543,8 @@ function Minimap(config, injector, eventBus, canvas, elementRegistry) {
     parentClientRect: null,
     zoomDelta: 0
   };
+  this._minimapId = IDS.next();
   this._init();
-  var documentManager = new import_hammerjs.default.Manager(document);
-  documentManager.add(new import_hammerjs.default.Pan());
-  documentManager.on("panmove", onMousemove);
-  documentManager.on("panend", onMouseup);
-  var svgManager = new import_hammerjs.default.Manager(this._svg);
-  svgManager.add(new import_hammerjs.default.Pan());
-  svgManager.on("panstart", mousedown(true));
-  svgManager.add(new import_hammerjs.default.Tap());
-  svgManager.on("tap", function(event3) {
-    centerViewbox(getPoint(event3));
-  });
-  var viewportDomManager = new import_hammerjs.default.Manager(this._viewportDom);
-  viewportDomManager.add(new import_hammerjs.default.Pan());
-  viewportDomManager.on("panstart", mousedown(false));
   this.toggle(config && config.open || false);
   function centerViewbox(point) {
     if (!self2._state._svgClientRect || isZeroDimensional(self2._state._svgClientRect)) {
@@ -75367,8 +74593,8 @@ function Minimap(config, injector, eventBus, canvas, elementRegistry) {
       event.bind(document, "mouseup", onMouseup);
     };
   }
-  function onMousemove(event3) {
-    var point = getPoint(event3);
+  function onMousemove(event2) {
+    var point = getPoint(event2);
     if (self2._state.isDragging) {
       if (!self2._state._svgClientRect || isZeroDimensional(self2._state._svgClientRect)) {
         self2._state._svgClientRect = self2._svg.getBoundingClientRect();
@@ -75417,22 +74643,22 @@ function Minimap(config, injector, eventBus, canvas, elementRegistry) {
   }
   event.bind(this._viewportDom, "mousedown", mousedown(false));
   event.bind(this._svg, "mousedown", mousedown(true));
-  event.bind(this._parent, "wheel", function(event3) {
-    event3.preventDefault();
-    event3.stopPropagation();
-    if (!event3.ctrlKey) {
+  event.bind(this._parent, "wheel", function(event2) {
+    event2.preventDefault();
+    event2.stopPropagation();
+    if (!event2.ctrlKey) {
       return;
     }
     if (!self2._state._svgClientRect || isZeroDimensional(self2._state._svgClientRect)) {
       self2._state._svgClientRect = self2._svg.getBoundingClientRect();
     }
-    if (!isPointInside(event3, self2._state._svgClientRect)) {
+    if (!isPointInside(event2, self2._state._svgClientRect)) {
       return;
     }
-    var factor = event3.deltaMode === 0 ? 0.02 : 0.32;
+    var factor = event2.deltaMode === 0 ? 0.02 : 0.32;
     var delta2 = Math.sqrt(
-      Math.pow(event3.deltaY, 2) + Math.pow(event3.deltaX, 2)
-    ) * sign2(event3.deltaY) * -factor;
+      Math.pow(event2.deltaY, 2) + Math.pow(event2.deltaX, 2)
+    ) * sign2(event2.deltaY) * -factor;
     self2._state.zoomDelta += delta2;
     if (Math.abs(self2._state.zoomDelta) > DELTA_THRESHOLD2) {
       var direction = delta2 > 0 ? 1 : -1;
@@ -75444,16 +74670,16 @@ function Minimap(config, injector, eventBus, canvas, elementRegistry) {
       canvas.zoom(cap2(RANGE2, newLogZoomLevel), diagramPoint);
       self2._state.zoomDelta = 0;
       var diagramPoint = mapMousePositionToDiagramPoint({
-        x: event3.clientX - self2._state._svgClientRect.left,
-        y: event3.clientY - self2._state._svgClientRect.top
+        x: event2.clientX - self2._state._svgClientRect.left,
+        y: event2.clientY - self2._state._svgClientRect.top
       }, self2._svg, self2._lastViewbox);
       setViewboxCenteredAroundPoint(diagramPoint, self2._canvas);
       self2._update();
     }
   });
-  event.bind(this._toggle, "click", function(event3) {
-    event3.preventDefault();
-    event3.stopPropagation();
+  event.bind(this._toggle, "click", function(event2) {
+    event2.preventDefault();
+    event2.stopPropagation();
     self2.toggle();
   });
   eventBus.on(["shape.added", "connection.added"], function(context) {
@@ -75490,9 +74716,9 @@ function Minimap(config, injector, eventBus, canvas, elementRegistry) {
       self2._state._svgClientRect = self2._svg.getBoundingClientRect();
     }
   });
-  eventBus.on(["root.set", "plane.set"], function(event3) {
+  eventBus.on(["root.set", "plane.set"], function(event2) {
     self2._clear();
-    var element = event3.element || event3.plane.rootElement;
+    var element = event2.element || event2.plane.rootElement;
     element.children.forEach(function(el) {
       self2._addElement(el);
     });
@@ -75527,8 +74753,8 @@ Minimap.prototype._init = function() {
   var viewport = this._viewport = create("rect");
   classes(viewport).add("viewport");
   append(viewportGroup, viewport);
-  event.bind(parent, "mousedown", function(event3) {
-    event3.stopPropagation();
+  event.bind(parent, "mousedown", function(event2) {
+    event2.stopPropagation();
   });
   var viewportDom = this._viewportDom = document.createElement("div");
   classes2(viewportDom).add("viewport-dom");
@@ -75650,9 +74876,9 @@ Minimap.prototype._updateElement = function(element) {
 };
 Minimap.prototype._updateElementId = function(element, newId) {
   try {
-    var elementGfx = query("#" + escapeCSS(element.id), this._elementsGroup);
+    var elementGfx = query("#" + escapeCSS(this._prefixId(element.id)), this._elementsGroup);
     if (elementGfx) {
-      elementGfx.id = newId;
+      elementGfx.id = this._prefixId(newId);
     }
   } catch (error4) {
     console.warn("Minimap#_updateElementId errored", error4);
@@ -75676,7 +74902,7 @@ Minimap.prototype._addElement = function(element) {
   }
   var parent, x6, y5;
   var newElementGfx = this._createElement(element);
-  var newElementParentGfx = query("#" + escapeCSS(element.parent.id), this._elementsGroup);
+  var newElementParentGfx = query("#" + escapeCSS(this._prefixId(element.parent.id)), this._elementsGroup);
   if (newElementGfx) {
     var elementGfx = this._elementRegistry.getGraphics(element);
     var parentGfx = this._elementRegistry.getGraphics(element.parent);
@@ -75722,7 +74948,7 @@ Minimap.prototype._addElement = function(element) {
   }
 };
 Minimap.prototype._removeElement = function(element) {
-  var elementGfx = this._svg.getElementById(element.id);
+  var elementGfx = this._svg.getElementById(this._prefixId(element.id));
   if (elementGfx) {
     remove(elementGfx);
   }
@@ -75732,14 +74958,17 @@ Minimap.prototype._createElement = function(element) {
   if (gfx) {
     visual = getVisual(gfx);
     if (visual) {
-      var elementGfx = clone(visual);
-      attr(elementGfx, { id: element.id });
+      var elementGfx = sanitize(clone(visual));
+      attr(elementGfx, { id: this._prefixId(element.id) });
       return elementGfx;
     }
   }
 };
 Minimap.prototype._clear = function() {
   clear(this._elementsGroup);
+};
+Minimap.prototype._prefixId = function(id) {
+  return "djs-minimap-" + id + "-" + this._minimapId;
 };
 function isConnection2(element) {
   return element.waypoints;
@@ -75874,14 +75103,20 @@ function validViewbox(viewBox) {
     return isNumber(value) && isFinite(value);
   });
 }
-function getPoint(event3) {
-  if (event3.center) {
-    return event3.center;
+function getPoint(event2) {
+  if (event2.center) {
+    return event2.center;
   }
   return {
-    x: event3.clientX,
-    y: event3.clientY
+    x: event2.clientX,
+    y: event2.clientY
   };
+}
+function sanitize(gfx) {
+  all("[id]", gfx).forEach(function(element) {
+    element.remove();
+  });
+  return gfx;
 }
 var index4 = {
   __init__: ["minimap"],
@@ -75986,8 +75221,8 @@ var e7 = function() {
       if (!this.shadowCtx) return;
       var p5 = void 0;
       this.templates[d5] ? p5 = this.templates[d5] : this.templates[d5] = p5 = this._getPointTemplate(d5, n4);
-      var m5 = (u6 - i8) / (a6 - i8);
-      this.shadowCtx.globalAlpha = m5 < 0.01 ? 0.01 : m5, this.shadowCtx.drawImage(p5, l5, c5), l5 < this.renderBoundaries[0] && (this.renderBoundaries[0] = l5), c5 < this.renderBoundaries[1] && (this.renderBoundaries[1] = c5), l5 + 2 * d5 > this.renderBoundaries[2] && (this.renderBoundaries[2] = l5 + 2 * d5), c5 + 2 * d5 > this.renderBoundaries[3] && (this.renderBoundaries[3] = c5 + 2 * d5);
+      var m6 = (u6 - i8) / (a6 - i8);
+      this.shadowCtx.globalAlpha = m6 < 0.01 ? 0.01 : m6, this.shadowCtx.drawImage(p5, l5, c5), l5 < this.renderBoundaries[0] && (this.renderBoundaries[0] = l5), c5 < this.renderBoundaries[1] && (this.renderBoundaries[1] = c5), l5 + 2 * d5 > this.renderBoundaries[2] && (this.renderBoundaries[2] = l5 + 2 * d5), c5 + 2 * d5 > this.renderBoundaries[3] && (this.renderBoundaries[3] = c5 + 2 * d5);
     }
   }, i7.prototype._colorize = function() {
     var t7 = this.renderBoundaries[0], i8 = this.renderBoundaries[1], a6 = this.renderBoundaries[2] - t7, e8 = this.renderBoundaries[3] - i8, r7 = this.width, n4 = this.height;
@@ -76042,7 +75277,7 @@ var BpmnModelerView = class extends import_obsidian2.TextFileView {
   getViewData() {
     return this.data;
   }
-  setViewData(data, clear4) {
+  setViewData(data, clear3) {
     this.bpmnXml = data;
     this.bpmnModeler.importXML(this.bpmnXml).catch(function(err) {
       console.error(err);
@@ -76074,9 +75309,6 @@ var BpmnModelerView = class extends import_obsidian2.TextFileView {
       index$2,
       colors_default
     ];
-    if (this.settings.enable_zeebe_properties) {
-      modules.push(index$12);
-    }
     if (this.settings.enable_token_simulator) {
       modules.push(modeler_default2);
       modules.push(simulation_support_default);
@@ -76105,9 +75337,6 @@ var BpmnModelerView = class extends import_obsidian2.TextFileView {
     }
     this.bpmnModeler = new Modeler({
       container: this.bpmnDiv,
-      keyboard: {
-        bindTo: this.bpmnDiv.win
-      },
       propertiesPanel: {
         parent: propertyPanel
       },
@@ -76310,9 +75539,6 @@ var ObsidianBPMNPlugin = class extends import_obsidian3.Plugin {
         }
         const bpmn = parameters.enablepanzoom ? new NavigatedViewer({
           container: bpmnDiv,
-          keyboard: {
-            bindTo: bpmnDiv.win
-          },
           additionalModules: modules,
           textRenderer
         }) : new Viewer({
@@ -76425,13 +75651,6 @@ classnames/index.js:
   	http://jedwatson.github.io/classnames
   *)
 
-hammerjs/hammer.js:
-  (*! Hammer.JS - v2.0.7 - 2016-04-22
-   * http://hammerjs.github.io/
-   *
-   * Copyright (c) 2016 Jorik Tangelder;
-   * Licensed under the MIT license *)
-
 tabbable/dist/index.esm.js:
   (*!
   * tabbable 6.2.0
@@ -76440,7 +75659,9 @@ tabbable/dist/index.esm.js:
 
 focus-trap/dist/focus-trap.esm.js:
   (*!
-  * focus-trap 7.5.3
+  * focus-trap 7.6.2
   * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
   *)
 */
+
+/* nosourcemap */

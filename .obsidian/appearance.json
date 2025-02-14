@@ -5,5 +5,6 @@
     "iframe",
     "math"
   ],
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "showRibbon": false
 }
