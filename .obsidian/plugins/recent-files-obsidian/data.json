@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Definición no formal",
+      "path": "Inglés II/Definición no formal.md"
+    },
+    {
+      "basename": "Definición formal",
+      "path": "Inglés II/Definición formal.md"
+    },
+    {
+      "basename": "Definición",
+      "path": "Inglés II/Definición.md"
+    },
+    {
+      "basename": "Definición semi-formal",
+      "path": "Inglés II/Definición semi-formal.md"
+    },
+    {
       "basename": "Conectores",
       "path": "Inglés II/Conectores.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "Función",
       "path": "Algoritmos y Estructuras de Datos/Función.md"
-    },
-    {
-      "basename": "Vector contador",
-      "path": "Algoritmos y Estructuras de Datos/Vector contador.md"
-    },
-    {
-      "basename": "Criterio de la segunda derivada",
-      "path": "Análisis Matemático I/Criterio de la segunda derivada.md"
-    },
-    {
-      "basename": "Espacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
-    },
-    {
-      "basename": "Extremo relativo",
-      "path": "Análisis Matemático I/Extremo relativo.md"
     }
   ],
   "omittedPaths": [],
