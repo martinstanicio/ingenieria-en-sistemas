@@ -1,4 +1,5 @@
 {
+  "showRibbon": false,
   "newFileLocation": "current",
   "attachmentFolderPath": "./attachments",
   "alwaysUpdateLinks": true,
@@ -45,6 +46,5 @@
   "showUnsupportedFiles": true,
   "readableLineLength": true,
   "vimMode": false,
-  "spellcheck": false,
-  "showRibbon": false
+  "spellcheck": false
 }
