@@ -1,16 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "Subordinadas relativas",
+      "path": "Inglés II/Subordinadas relativas.md"
+    },
+    {
+      "basename": "Pronombres relativos",
+      "path": "Inglés II/Pronombres relativos.md"
+    },
+    {
       "basename": "Definición no formal",
       "path": "Inglés II/Definición no formal.md"
+    },
+    {
+      "basename": "Definición",
+      "path": "Inglés II/Definición.md"
     },
     {
       "basename": "Definición formal",
       "path": "Inglés II/Definición formal.md"
     },
     {
-      "basename": "Definición",
-      "path": "Inglés II/Definición.md"
+      "basename": "Sustantivo",
+      "path": "Inglés I/Sustantivo.md"
     },
     {
       "basename": "Definición semi-formal",
@@ -187,18 +199,6 @@
     {
       "basename": "Recursividad",
       "path": "Algoritmos y Estructuras de Datos/Recursividad.md"
-    },
-    {
-      "basename": "20240924 - Matriz aleatoria",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240924 - Matriz aleatoria.md"
-    },
-    {
-      "basename": "Vector circular",
-      "path": "Algoritmos y Estructuras de Datos/Vector circular.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Algoritmos y Estructuras de Datos/Función.md"
     }
   ],
   "omittedPaths": [],
