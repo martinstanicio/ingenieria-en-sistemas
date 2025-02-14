@@ -1,6 +1,6 @@
 ---
 created: 2025-02-14 14:40:18
-modified: 2025-02-14 14:56:37
+modified: 2025-02-14 15:09:11
 title: Gerundio
 ---
 
@@ -62,5 +62,11 @@ Después de los [[Cuantificadores]] *some*, *any* o *no*.
 > I am going to do *some* **cleaning**
 
 ## Posesivo
+
 Después de un ==pronombre posesivo==.
-> *His* **whining** is getting on my nerves
+
+> John*'s* **whining** is getting on my nerves
+> I hope you don't mind *my* **staying** this Saturday
+
+> [!important]
+> Esta forma de escribir no se usa con frecuencia, ya que se considera **muy formal**.
