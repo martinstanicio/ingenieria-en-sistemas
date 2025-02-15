@@ -5,6 +5,10 @@
       "path": "Inglés II/Sufijos.md"
     },
     {
+      "basename": "Adjetivo",
+      "path": "Inglés I/Adjetivo.md"
+    },
+    {
       "basename": "Prefijos",
       "path": "Inglés II/Prefijos.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Integral definida",
       "path": "Análisis Matemático I/Integral definida.md"
-    },
-    {
-      "basename": "Función de Dirichlet",
-      "path": "Análisis Matemático I/Función de Dirichlet.md"
     }
   ],
   "omittedPaths": [],

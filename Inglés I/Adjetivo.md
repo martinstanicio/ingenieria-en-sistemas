@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Adjetivos
 created: 2024-04-21 17:44:25
-modified: 2024-05-08 01:33:30
+modified: 2025-02-15 17:02:01
 title: Adjetivo
 ---
 
