@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Prefijos",
+      "path": "Inglés II/Prefijos.md"
+    },
+    {
+      "basename": "Afijos",
+      "path": "Inglés II/Afijos.md"
+    },
+    {
+      "basename": "Sufijos",
+      "path": "Inglés II/Sufijos.md"
+    },
+    {
       "basename": "Condicional 3",
       "path": "Inglés II/Condicional 3.md"
+    },
+    {
+      "basename": "Condicional",
+      "path": "Inglés II/Condicional.md"
     },
     {
       "basename": "Condicional 2",
@@ -15,10 +31,6 @@
     {
       "basename": "Condicional 0",
       "path": "Inglés II/Condicional 0.md"
-    },
-    {
-      "basename": "Condicional",
-      "path": "Inglés II/Condicional.md"
     },
     {
       "basename": "Subordinadas relativas",
@@ -187,18 +199,6 @@
     {
       "basename": "Función de Dirichlet",
       "path": "Análisis Matemático I/Función de Dirichlet.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Autovector",
-      "path": "Álgebra y Geometría Analítica/Autovector.md"
-    },
-    {
-      "basename": "Autovalor",
-      "path": "Álgebra y Geometría Analítica/Autovalor.md"
     }
   ],
   "omittedPaths": [],

@@ -1,6 +1,6 @@
 ---
 created: 2025-02-15 11:33:56
-modified: 2025-02-15 11:46:45
+modified: 2025-02-15 11:58:40
 title: Condicional 3
 ---
 
@@ -14,3 +14,6 @@ Ejemplos:
 
 - *If* they **had followed** the safety instructions, they **would have avoided** the accident.
 - *If* we **hadn't had** these financial problems, we **would have leased out** our tankers.
+
+> [!danger]
+> *Unless* no puede ser utilizado con [[Condicional 3]].

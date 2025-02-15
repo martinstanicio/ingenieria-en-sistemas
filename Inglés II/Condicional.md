@@ -1,6 +1,6 @@
 ---
 created: 2025-02-15 11:23:48
-modified: 2025-02-15 11:32:38
+modified: 2025-02-15 11:59:19
 title: Condicional
 ---
 
@@ -22,3 +22,5 @@ Consta de dos partes:
 >
 > > **The car will not move** *if* there is no petrol in the tank.
 > > **The car will not move** *unless* there is petrol in the tank.
+
+Podemos dividirlo en [[Condicional 0]], [[Condicional 1]], [[Condicional 2]] y [[Condicional 3]].
