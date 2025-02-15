@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Condicional 3",
+      "path": "Inglés II/Condicional 3.md"
+    },
+    {
+      "basename": "Condicional 2",
+      "path": "Inglés II/Condicional 2.md"
+    },
+    {
+      "basename": "Condicional 1",
+      "path": "Inglés II/Condicional 1.md"
+    },
+    {
+      "basename": "Condicional 0",
+      "path": "Inglés II/Condicional 0.md"
+    },
+    {
+      "basename": "Condicional",
+      "path": "Inglés II/Condicional.md"
+    },
+    {
       "basename": "Subordinadas relativas",
       "path": "Inglés II/Subordinadas relativas.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Autovalor",
       "path": "Álgebra y Geometría Analítica/Autovalor.md"
-    },
-    {
-      "basename": "Autopolinomio",
-      "path": "Álgebra y Geometría Analítica/Autopolinomio.md"
-    },
-    {
-      "basename": "Autoecuación",
-      "path": "Álgebra y Geometría Analítica/Autoecuación.md"
-    },
-    {
-      "basename": "Mezcla de vectores",
-      "path": "Algoritmos y Estructuras de Datos/Mezcla de vectores.md"
-    },
-    {
-      "basename": "20240909 - Socios",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Socios.md"
-    },
-    {
-      "basename": "Recursividad",
-      "path": "Algoritmos y Estructuras de Datos/Recursividad.md"
     }
   ],
   "omittedPaths": [],
