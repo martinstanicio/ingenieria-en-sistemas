@@ -1,14 +1,12 @@
 ---
 created: 2025-02-15 12:19:11
-modified: 2025-02-15 12:26:44
+modified: 2025-02-15 16:57:50
 title: Prefijos
 ---
 
 # Prefijos
 
-Son [[Afijos]] que se ubican al ==inicio de una palabra==. Los más comunes pueden transformar el significado de una palabra en **negativo**, **indicar opinión** o **repetición**.
-
-Ejemplos:
+Son [[Afijos]] que se ubican al ==inicio de una palabra==, y pueden transformar el significado de una palabra en **negativo**, **indicar opinión** o **repetición**.
 
 - **Counter-** (against, opposite)
 - **De-** (cause not)
