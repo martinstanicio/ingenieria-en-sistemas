@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasGear",
-      "FasPencil",
-      "FasImages",
-      "FabMarkdown",
-      "FabPython"
+      "FasStar",
+      "FasPeopleGroup",
+      "FasSackDollar",
+      "FasObjectGroup",
+      "FasCode"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -60,7 +60,7 @@
     "iconColor": "#f44236"
   },
   "Arquitectura de Computadoras": {
-    "iconName": "FasServer",
+    "iconName": "FasMicrochip",
     "iconColor": "#607d8b"
   },
   "Ingeniería y Sociedad": {
@@ -81,5 +81,20 @@
   "Arquitectura de Computadoras/attachments": "FasImages",
   "Lógica y Estructuras Discretas/attachments": "FasImages",
   "Sistemas y Procesos de Negocios/attachments": "FasImages",
-  "Templates": "FasGear"
+  "Templates": "FasGear",
+  "Física II": "FasWaveSquare",
+  "Análisis Matemático II": "FasSubscript",
+  "Inglés II": "FasGlobe",
+  "Probabilidades y Estadísticas": "FasChartSimple",
+  "Administración de Sistemas de Información": "FasUserTie",
+  "Análisis de Sistemas de Información": "FasClipboard",
+  "Análisis Numérico": "FasHashtag",
+  "Bases de Datos": "FasDatabase",
+  "Ciencia de Datos": "FasFlask",
+  "Comunicación de Datos": "FasTty",
+  "Desarrollo de Software": "FasCode",
+  "Diseño de Sistemas de Información": "FasObjectGroup",
+  "Economía": "FasSackDollar",
+  "Gestión Gerencial": "FasPeopleGroup",
+  "Ingeniería y Calidad de Software": "FasStar"
 }

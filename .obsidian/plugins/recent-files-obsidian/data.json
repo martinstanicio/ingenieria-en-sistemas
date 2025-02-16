@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "plan-de-estudio",
+      "path": "Ingeniería y Sociedad/attachments/plan-de-estudio.pdf"
+    },
+    {
       "basename": "Prefijos",
       "path": "Inglés II/Prefijos.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Teorema de Lagrange",
       "path": "Análisis Matemático I/Teorema de Lagrange.md"
-    },
-    {
-      "basename": "Integral definida",
-      "path": "Análisis Matemático I/Integral definida.md"
     }
   ],
   "omittedPaths": [],
