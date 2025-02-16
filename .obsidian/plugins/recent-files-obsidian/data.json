@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Administración de Sistemas de Información",
+      "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
+    },
+    {
+      "basename": "Economía",
+      "path": "Economía/Economía.md"
+    },
+    {
+      "basename": "Análisis Matemático II",
+      "path": "Análisis Matemático II/Análisis Matemático II.md"
+    },
+    {
+      "basename": "Lógica y Estructuras Discretas",
+      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
+    },
+    {
       "basename": "plan-de-estudio",
       "path": "Ingeniería y Sociedad/attachments/plan-de-estudio.pdf"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "Teorema Fundamental del Cálculo",
       "path": "Análisis Matemático I/Teorema Fundamental del Cálculo.md"
-    },
-    {
-      "basename": "Integración por partes",
-      "path": "Análisis Matemático I/Integración por partes.md"
-    },
-    {
-      "basename": "Integral indefinida",
-      "path": "Análisis Matemático I/Integral indefinida.md"
-    },
-    {
-      "basename": "Función primitiva",
-      "path": "Análisis Matemático I/Función primitiva.md"
-    },
-    {
-      "basename": "Teorema de Lagrange",
-      "path": "Análisis Matemático I/Teorema de Lagrange.md"
     }
   ],
   "omittedPaths": [],

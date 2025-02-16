@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FasStar",
-      "FasPeopleGroup",
-      "FasSackDollar",
-      "FasObjectGroup",
-      "FasCode"
+      "FasRobot",
+      "FasUsersViewfinder",
+      "FasQuoteLeft",
+      "FasHouseUser",
+      "FasCircleNodes"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -82,19 +82,54 @@
   "Lógica y Estructuras Discretas/attachments": "FasImages",
   "Sistemas y Procesos de Negocios/attachments": "FasImages",
   "Templates": "FasGear",
-  "Física II": "FasWaveSquare",
-  "Análisis Matemático II": "FasSubscript",
-  "Inglés II": "FasGlobe",
-  "Probabilidades y Estadísticas": "FasChartSimple",
+  "Física II": {
+    "iconName": "FasWaveSquare",
+    "iconColor": "#ffeb3c"
+  },
+  "Análisis Matemático II": {
+    "iconName": "FasSubscript",
+    "iconColor": "#f44236"
+  },
+  "Inglés II": {
+    "iconName": "FasGlobe",
+    "iconColor": "#4eb050"
+  },
+  "Probabilidades y Estadísticas": {
+    "iconName": "FasChartSimple",
+    "iconColor": "#3f51b5"
+  },
   "Administración de Sistemas de Información": "FasUserTie",
-  "Análisis de Sistemas de Información": "FasClipboard",
+  "Análisis de Sistemas de Información": {
+    "iconName": "FasClipboard",
+    "iconColor": "#9c28b1"
+  },
   "Análisis Numérico": "FasHashtag",
   "Bases de Datos": "FasDatabase",
   "Ciencia de Datos": "FasFlask",
-  "Comunicación de Datos": "FasTty",
+  "Comunicación de Datos": {
+    "iconName": "FasTty",
+    "iconColor": "#ec407a"
+  },
   "Desarrollo de Software": "FasCode",
   "Diseño de Sistemas de Información": "FasObjectGroup",
   "Economía": "FasSackDollar",
   "Gestión Gerencial": "FasPeopleGroup",
-  "Ingeniería y Calidad de Software": "FasStar"
+  "Ingeniería y Calidad de Software": "FasStar",
+  "Investigación Operativa": "FasWrench",
+  "Legislación": "FasScaleBalanced",
+  "Paradigmas de Programación": {
+    "iconName": "FasCubes",
+    "iconColor": "#5cadd6"
+  },
+  "Seguridad en los Sistemas de Información": "FasShieldHalved",
+  "Sistemas Operativos": "FabLinux",
+  "Proyecto Final": "FasGraduationCap",
+  "Redes de Datos": "FasCircleNodes",
+  "Simulación": "FasHouseUser",
+  "Sintaxis y Semántica de los Lenguajes": {
+    "iconName": "FasQuoteLeft",
+    "iconColor": "#00bcd5"
+  },
+  "Sistemas de Gestión": "FasUsersViewfinder",
+  "Tecnologías para la Automatización": "FasRobot"
 }
