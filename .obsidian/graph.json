@@ -15,14 +15,14 @@
       }
     },
     {
-      "query": "path:\"Inglés I\"  ",
+      "query": "path:\"Inglés\"  ",
       "color": {
         "a": 1,
         "rgb": 5025872
       }
     },
     {
-      "query": "path:\"Física I\"  ",
+      "query": "path:\"Física\"  ",
       "color": {
         "a": 1,
         "rgb": 16771900
@@ -81,6 +81,6 @@
   "repelStrength": 15,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.09499493651040745,
-  "close": true
+  "scale": 0.09911451010979132,
+  "close": false
 }
