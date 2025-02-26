@@ -1,8 +1,10 @@
 ---
 aliases:
   - Subordinada relativa
+  - Relative clause
+  - Relative clauses
 created: 2025-02-14 19:43:17
-modified: 2025-02-14 19:56:24
+modified: 2025-02-17 16:37:29
 title: Subordinadas relativas
 ---
 

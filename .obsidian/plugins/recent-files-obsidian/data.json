@@ -1,6 +1,70 @@
 {
   "recentFiles": [
     {
+      "basename": "Condicional 0",
+      "path": "Inglés II/Condicional 0.md"
+    },
+    {
+      "basename": "Condicional 3",
+      "path": "Inglés II/Condicional 3.md"
+    },
+    {
+      "basename": "Condicional 2",
+      "path": "Inglés II/Condicional 2.md"
+    },
+    {
+      "basename": "Conectores",
+      "path": "Inglés II/Conectores.md"
+    },
+    {
+      "basename": "Condicional 1",
+      "path": "Inglés II/Condicional 1.md"
+    },
+    {
+      "basename": "Definición",
+      "path": "Inglés II/Definición.md"
+    },
+    {
+      "basename": "Subordinadas relativas",
+      "path": "Inglés II/Subordinadas relativas.md"
+    },
+    {
+      "basename": "Definición formal",
+      "path": "Inglés II/Definición formal.md"
+    },
+    {
+      "basename": "Secuenciadores",
+      "path": "Inglés II/Secuenciadores.md"
+    },
+    {
+      "basename": "Pronombres relativos",
+      "path": "Inglés II/Pronombres relativos.md"
+    },
+    {
+      "basename": "Presente participio",
+      "path": "Inglés II/Presente participio.md"
+    },
+    {
+      "basename": "Gerundio",
+      "path": "Inglés II/Gerundio.md"
+    },
+    {
+      "basename": "Afijos",
+      "path": "Inglés II/Afijos.md"
+    },
+    {
+      "basename": "Inglés II",
+      "path": "Inglés II/Inglés II.md"
+    },
+    {
+      "basename": "Prefijos",
+      "path": "Inglés II/Prefijos.md"
+    },
+    {
+      "basename": "Condicional",
+      "path": "Inglés II/Condicional.md"
+    },
+    {
       "basename": "Administración de Sistemas de Información",
       "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
     },
@@ -21,10 +85,6 @@
       "path": "Ingeniería y Sociedad/attachments/plan-de-estudio.pdf"
     },
     {
-      "basename": "Prefijos",
-      "path": "Inglés II/Prefijos.md"
-    },
-    {
       "basename": "Sufijos",
       "path": "Inglés II/Sufijos.md"
     },
@@ -33,48 +93,8 @@
       "path": "Inglés I/Adjetivo.md"
     },
     {
-      "basename": "Condicional 3",
-      "path": "Inglés II/Condicional 3.md"
-    },
-    {
-      "basename": "Afijos",
-      "path": "Inglés II/Afijos.md"
-    },
-    {
-      "basename": "Condicional",
-      "path": "Inglés II/Condicional.md"
-    },
-    {
-      "basename": "Condicional 2",
-      "path": "Inglés II/Condicional 2.md"
-    },
-    {
-      "basename": "Condicional 1",
-      "path": "Inglés II/Condicional 1.md"
-    },
-    {
-      "basename": "Condicional 0",
-      "path": "Inglés II/Condicional 0.md"
-    },
-    {
-      "basename": "Subordinadas relativas",
-      "path": "Inglés II/Subordinadas relativas.md"
-    },
-    {
-      "basename": "Pronombres relativos",
-      "path": "Inglés II/Pronombres relativos.md"
-    },
-    {
       "basename": "Definición no formal",
       "path": "Inglés II/Definición no formal.md"
-    },
-    {
-      "basename": "Definición",
-      "path": "Inglés II/Definición.md"
-    },
-    {
-      "basename": "Definición formal",
-      "path": "Inglés II/Definición formal.md"
     },
     {
       "basename": "Sustantivo",
@@ -83,14 +103,6 @@
     {
       "basename": "Definición semi-formal",
       "path": "Inglés II/Definición semi-formal.md"
-    },
-    {
-      "basename": "Conectores",
-      "path": "Inglés II/Conectores.md"
-    },
-    {
-      "basename": "Secuenciadores",
-      "path": "Inglés II/Secuenciadores.md"
     },
     {
       "basename": "Momento de inercia",
@@ -187,18 +199,6 @@
     {
       "basename": "Aproximación de errores",
       "path": "Física I/Aproximación de errores.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "Análisis Matemático I",
-      "path": "Análisis Matemático I/Análisis Matemático I.md"
-    },
-    {
-      "basename": "Teorema Fundamental del Cálculo",
-      "path": "Análisis Matemático I/Teorema Fundamental del Cálculo.md"
     }
   ],
   "omittedPaths": [],
