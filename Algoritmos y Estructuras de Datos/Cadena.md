@@ -1,12 +1,14 @@
 ---
+aliases:
+  - Cadenas
 created: 2024-07-02 21:14:48
-modified: 2024-11-07 16:12:05
+modified: 2025-02-27 18:41:39
 title: Cadena
 ---
 
 # Cadena
 
-Una cadena es una [[Vector|Lista]] de carácteres.
+Una cadena es una [[Vector|Lista]] de caracteres.
 
 Podemos obtener el carácter $n \in \mathbb{Z}$ de una cadena `abc` de la siguiente forma. Si $n$ es negativo, comienza a contar desde el lado derecho de la cadena.
 

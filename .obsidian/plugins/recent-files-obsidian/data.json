@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Alfabeto",
+      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
+    },
+    {
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
+    },
+    {
+      "basename": "Lenguaje",
+      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
+    },
+    {
+      "basename": "Cadena",
+      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
+    },
+    {
+      "basename": "Lenguaje",
+      "path": "Ingeniería y Sociedad/Lenguaje.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "Algoritmos y Estructuras de Datos",
       "path": "Algoritmos y Estructuras de Datos.md"
-    },
-    {
-      "basename": "20241022 - Deportistas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20241022 - Deportistas.md"
-    },
-    {
-      "basename": "Función strip",
-      "path": "Algoritmos y Estructuras de Datos/Función strip.md"
-    },
-    {
-      "basename": "Función split",
-      "path": "Algoritmos y Estructuras de Datos/Función split.md"
-    },
-    {
-      "basename": "Error relativo",
-      "path": "Física I/Error relativo.md"
-    },
-    {
-      "basename": "Error absoluto",
-      "path": "Física I/Error absoluto.md"
     }
   ],
   "omittedPaths": [],
