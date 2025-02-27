@@ -1,32 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "Lenguaje",
-      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
-    },
-    {
-      "basename": "Cadena en blanco",
-      "path": "Lógica y Estructuras Discretas/Cadena en blanco.md"
-    },
-    {
-      "basename": "Cadena vacía",
-      "path": "Lógica y Estructuras Discretas/Cadena vacía.md"
-    },
-    {
-      "basename": "Cadena",
-      "path": "Lógica y Estructuras Discretas/Cadena.md"
+      "basename": "Cerradura positiva",
+      "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
     },
     {
       "basename": "Cerradura de Kleene",
       "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
     },
     {
-      "basename": "Cerradura positiva",
-      "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
+      "basename": "Lenguaje",
+      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
+    },
+    {
+      "basename": "Potencia de un lenguaje",
+      "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
+    },
+    {
+      "basename": "Cadena vacía",
+      "path": "Lógica y Estructuras Discretas/Cadena vacía.md"
+    },
+    {
+      "basename": "Cadena en blanco",
+      "path": "Lógica y Estructuras Discretas/Cadena en blanco.md"
+    },
+    {
+      "basename": "Cadena",
+      "path": "Lógica y Estructuras Discretas/Cadena.md"
     },
     {
       "basename": "Alfabeto",
       "path": "Lógica y Estructuras Discretas/Alfabeto.md"
+    },
+    {
+      "basename": "Lenguaje vacío",
+      "path": "Lógica y Estructuras Discretas/Lenguaje vacío.md"
+    },
+    {
+      "basename": "Potencia de un alfabeto",
+      "path": "Lógica y Estructuras Discretas/Potencia de un alfabeto.md"
     },
     {
       "basename": "Cadena",
@@ -187,18 +199,6 @@
     {
       "basename": "Coeficiente de restitución",
       "path": "Física I/Coeficiente de restitución.md"
-    },
-    {
-      "basename": "Vector multidimensional",
-      "path": "Algoritmos y Estructuras de Datos/Vector multidimensional.md"
-    },
-    {
-      "basename": "20240909 - Alumnos",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240909 - Alumnos.md"
-    },
-    {
-      "basename": "Regla de Barrow",
-      "path": "Análisis Matemático I/Regla de Barrow.md"
     }
   ],
   "omittedPaths": [],
