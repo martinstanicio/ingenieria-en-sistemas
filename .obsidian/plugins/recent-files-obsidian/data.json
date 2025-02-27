@@ -1,28 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Lenguaje",
+      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
+    },
+    {
+      "basename": "Cadena en blanco",
+      "path": "Lógica y Estructuras Discretas/Cadena en blanco.md"
+    },
+    {
+      "basename": "Cadena vacía",
+      "path": "Lógica y Estructuras Discretas/Cadena vacía.md"
+    },
+    {
+      "basename": "Cadena",
+      "path": "Lógica y Estructuras Discretas/Cadena.md"
+    },
+    {
+      "basename": "Cerradura de Kleene",
+      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
+    },
+    {
+      "basename": "Cerradura positiva",
+      "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
+    },
+    {
       "basename": "Alfabeto",
       "path": "Lógica y Estructuras Discretas/Alfabeto.md"
-    },
-    {
-      "basename": "Longitud de una cadena",
-      "path": "Lógica y Estructuras Discretas/Longitud de una cadena.md"
-    },
-    {
-      "basename": "Norma",
-      "path": "Álgebra y Geometría Analítica/Norma.md"
     },
     {
       "basename": "Cadena",
       "path": "Algoritmos y Estructuras de Datos/Cadena.md"
     },
     {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
+      "basename": "Norma",
+      "path": "Álgebra y Geometría Analítica/Norma.md"
     },
     {
-      "basename": "Lenguaje",
-      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
+      "basename": "Matriz",
+      "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Lenguaje",
@@ -183,22 +199,6 @@
     {
       "basename": "Regla de Barrow",
       "path": "Análisis Matemático I/Regla de Barrow.md"
-    },
-    {
-      "basename": "Integral",
-      "path": "Análisis Matemático I/Integral.md"
-    },
-    {
-      "basename": "Óptica",
-      "path": "Física I/Óptica.md"
-    },
-    {
-      "basename": "Archivo",
-      "path": "Algoritmos y Estructuras de Datos/Archivo.md"
-    },
-    {
-      "basename": "AyED - Actividades",
-      "path": "AyED - Actividades.md"
     }
   ],
   "omittedPaths": [],

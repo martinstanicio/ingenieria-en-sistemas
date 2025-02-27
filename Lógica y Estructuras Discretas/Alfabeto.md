@@ -1,6 +1,6 @@
 ---
 created: 2025-02-27 18:42:06
-modified: 2025-02-27 19:18:16
+modified: 2025-02-27 19:48:16
 title: Alfabeto
 ---
 
@@ -11,7 +11,7 @@ Es un [[Conjunto]] $\Sigma \neq \emptyset$ cuyos elementos se llaman **letras** 
 > [!important]
 > Ningún símbolo puede comenzar con otro símbolo del [[Alfabeto]].
 
-Se utilizan para formar ==cadenas de símbolos== o simplemente [[Cadena|Cadenas]].
+Se utilizan para formar una [[Lógica y Estructuras Discretas/Cadena|Cadena de símbolos]] o simplemente [[Lógica y Estructuras Discretas/Cadena|Cadena]].
 
 ## Potencia de $\Sigma$
 
@@ -28,11 +28,3 @@ $$
 
 > [!tip]
 > $xy$ es una ==concatenación== o ==yuxtaposición== de $x$ e $y$.
-
-Si $w \in \Sigma^k$, con $k \geq 1$, entonces $w$ se llama una [[Cadena]] de $k$ símbolos de $\Sigma$.
-
-> [!note]
-> Dado un [[Alfabeto]] $\Sigma$, se define $\Sigma^0 = \left\{ \lambda \right\}$, donde $\lambda$ representa a la ==[[Cadena]] vacía==, de forma que $\lambda \in \Sigma^0$ pero $\lambda \notin \Sigma^k, k \geq1$.
-
-> [!warning]
-> La [[Cadena]] vacía suele representarse como $\lambda$ o $\epsilon$.
