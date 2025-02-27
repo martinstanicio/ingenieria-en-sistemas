@@ -1,12 +1,12 @@
 ---
 created: 2024-04-21 23:51:31
-modified: 2024-07-07 21:47:14
+modified: 2025-02-26 20:46:35
 tags:
   - index
-title: Ingeniería en Sistemas
+title: Ingeniería en Sistemas de Información
 ---
 
-# Ingeniería en Sistemas
+# Ingeniería en Sistemas de Información
 
 ## Primer año
 

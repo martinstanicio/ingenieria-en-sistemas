@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "Condicional 0",
       "path": "Inglés II/Condicional 0.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Error absoluto",
       "path": "Física I/Error absoluto.md"
-    },
-    {
-      "basename": "Aproximación de errores",
-      "path": "Física I/Aproximación de errores.md"
     }
   ],
   "omittedPaths": [],
