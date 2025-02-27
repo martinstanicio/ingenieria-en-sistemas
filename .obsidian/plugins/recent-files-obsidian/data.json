@@ -5,16 +5,24 @@
       "path": "Lógica y Estructuras Discretas/Alfabeto.md"
     },
     {
+      "basename": "Longitud de una cadena",
+      "path": "Lógica y Estructuras Discretas/Longitud de una cadena.md"
+    },
+    {
+      "basename": "Norma",
+      "path": "Álgebra y Geometría Analítica/Norma.md"
+    },
+    {
+      "basename": "Cadena",
+      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
+    },
+    {
       "basename": "Matriz",
       "path": "Álgebra y Geometría Analítica/Matriz.md"
     },
     {
       "basename": "Lenguaje",
       "path": "Lógica y Estructuras Discretas/Lenguaje.md"
-    },
-    {
-      "basename": "Cadena",
-      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
     },
     {
       "basename": "Lenguaje",
@@ -191,14 +199,6 @@
     {
       "basename": "AyED - Actividades",
       "path": "AyED - Actividades.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos/Algoritmos y Estructuras de Datos.md"
-    },
-    {
-      "basename": "Algoritmos y Estructuras de Datos",
-      "path": "Algoritmos y Estructuras de Datos.md"
     }
   ],
   "omittedPaths": [],

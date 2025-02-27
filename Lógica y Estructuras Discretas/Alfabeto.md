@@ -1,6 +1,6 @@
 ---
 created: 2025-02-27 18:42:06
-modified: 2025-02-27 18:58:34
+modified: 2025-02-27 19:18:16
 title: Alfabeto
 ---
 
@@ -32,4 +32,7 @@ $$
 Si $w \in \Sigma^k$, con $k \geq 1$, entonces $w$ se llama una [[Cadena]] de $k$ símbolos de $\Sigma$.
 
 > [!note]
-> Dado un [[Alfabeto]] $\Sigma$, se define $\Sigma^0 = \left\{ \lambda \right\}$, donde $\lambda$ representa a la ==[[Cadena]] vacía==, de forma que $\lambda 
+> Dado un [[Alfabeto]] $\Sigma$, se define $\Sigma^0 = \left\{ \lambda \right\}$, donde $\lambda$ representa a la ==[[Cadena]] vacía==, de forma que $\lambda \in \Sigma^0$ pero $\lambda \notin \Sigma^k, k \geq1$.
+
+> [!warning]
+> La [[Cadena]] vacía suele representarse como $\lambda$ o $\epsilon$.
