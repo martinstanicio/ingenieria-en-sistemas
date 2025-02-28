@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Gramática",
+      "path": "Lógica y Estructuras Discretas/Gramática.md"
+    },
+    {
       "basename": "Cerradura positiva",
       "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Colisión",
       "path": "Física I/Colisión.md"
-    },
-    {
-      "basename": "Coeficiente de restitución",
-      "path": "Física I/Coeficiente de restitución.md"
     }
   ],
   "omittedPaths": [],
