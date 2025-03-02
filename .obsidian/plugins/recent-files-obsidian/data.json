@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Máquina de Moore",
+      "path": "Lógica y Estructuras Discretas/Máquina de Moore.md"
+    },
+    {
       "basename": "Máquina de Mealy",
       "path": "Lógica y Estructuras Discretas/Máquina de Mealy.md"
     },
@@ -9,16 +13,16 @@
       "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
     },
     {
-      "basename": "Máquina de Moore",
-      "path": "Lógica y Estructuras Discretas/Máquina de Moore.md"
-    },
-    {
       "basename": "Diagrama de estados",
       "path": "Lógica y Estructuras Discretas/Diagrama de estados.md"
     },
     {
       "basename": "Máquina",
       "path": "Lógica y Estructuras Discretas/Máquina.md"
+    },
+    {
+      "basename": "Cerradura de Kleene",
+      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
     },
     {
       "basename": "Ciclo desde-hasta",
@@ -43,10 +47,6 @@
     {
       "basename": "Cerradura positiva",
       "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
-    },
-    {
-      "basename": "Cerradura de Kleene",
-      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
     },
     {
       "basename": "Lenguaje",
