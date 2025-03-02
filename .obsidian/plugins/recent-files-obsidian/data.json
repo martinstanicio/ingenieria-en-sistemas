@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "Máquina",
-      "path": "Lógica y Estructuras Discretas/Máquina.md"
+      "basename": "Máquina de Mealy",
+      "path": "Lógica y Estructuras Discretas/Máquina de Mealy.md"
     },
     {
       "basename": "Máquina de estados finitos",
       "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
+    },
+    {
+      "basename": "Máquina de Moore",
+      "path": "Lógica y Estructuras Discretas/Máquina de Moore.md"
+    },
+    {
+      "basename": "Diagrama de estados",
+      "path": "Lógica y Estructuras Discretas/Diagrama de estados.md"
+    },
+    {
+      "basename": "Máquina",
+      "path": "Lógica y Estructuras Discretas/Máquina.md"
+    },
+    {
+      "basename": "Ciclo desde-hasta",
+      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
+    },
+    {
+      "basename": "Estructura de repetición",
+      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
+    },
+    {
+      "basename": "Estado",
+      "path": "Lógica y Estructuras Discretas/Estado.md"
+    },
+    {
+      "basename": "Estado",
+      "path": "Sistemas y Procesos de Negocios/Estado.md"
     },
     {
       "basename": "Gramática",
@@ -171,34 +199,6 @@
     {
       "basename": "Sustantivo",
       "path": "Inglés I/Sustantivo.md"
-    },
-    {
-      "basename": "Definición semi-formal",
-      "path": "Inglés II/Definición semi-formal.md"
-    },
-    {
-      "basename": "Momento de inercia",
-      "path": "Física I/Momento de inercia.md"
-    },
-    {
-      "basename": "Inercia",
-      "path": "Física I/Inercia.md"
-    },
-    {
-      "basename": "Momento de fuerza",
-      "path": "Física I/Momento de fuerza.md"
-    },
-    {
-      "basename": "Cantidad de movimiento",
-      "path": "Física I/Cantidad de movimiento.md"
-    },
-    {
-      "basename": "Impulso",
-      "path": "Física I/Impulso.md"
-    },
-    {
-      "basename": "Principio de conservación de la cantidad de movimiento",
-      "path": "Física I/Principio de conservación de la cantidad de movimiento.md"
     }
   ],
   "omittedPaths": [],

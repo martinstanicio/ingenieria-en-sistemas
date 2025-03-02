@@ -23,4 +23,4 @@ Aquellos cuya presencia o ausencia ==no altera la forma en que se define== al [[
 
 ## Atributos de estado
 
-Son características específicas que ==describen el [[Estado]] actual== del [[Elemento]], y pueden influir en ==cómo interactúa== con con el [[Sistemas|sistema]].
+Son características específicas que ==describen el [[Sistemas y Procesos de Negocios/Estado]] actual== del [[Elemento]], y pueden influir en ==cómo interactúa== con con el [[Sistemas|sistema]].

@@ -12,7 +12,7 @@ Está formada por las ==interrelaciones medianamente estables== entre los [[Elem
 > 
 > \- Buckley (1970)
 
-Estas interrelaciones son las definen las características y la naturaleza del [[Sistemas|Sistema]] en cuestión. Ello implica que, si un [[Elemento]] modifica su condición, establece una variación a nivel de totalidad sistémica, dado que moviliza cambios que alteran el [[Estado]] de los otros elementos con los que interactúan directa o indirectamente ([[Retroalimentación]]).
+Estas interrelaciones son las definen las características y la naturaleza del [[Sistemas|Sistema]] en cuestión. Ello implica que, si un [[Elemento]] modifica su condición, establece una variación a nivel de totalidad sistémica, dado que moviliza cambios que alteran el [[Sistemas y Procesos de Negocios/Estado]] de los otros elementos con los que interactúan directa o indirectamente ([[Retroalimentación]]).
 
 ## Relaciones Superfluas
 
