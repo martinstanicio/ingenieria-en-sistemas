@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Máquina",
+      "path": "Lógica y Estructuras Discretas/Máquina.md"
+    },
+    {
+      "basename": "Máquina de estados finitos",
+      "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
+    },
+    {
       "basename": "Gramática",
       "path": "Lógica y Estructuras Discretas/Gramática.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Principio de conservación de la cantidad de movimiento",
       "path": "Física I/Principio de conservación de la cantidad de movimiento.md"
-    },
-    {
-      "basename": "Energía",
-      "path": "Física I/Energía.md"
-    },
-    {
-      "basename": "Colisión",
-      "path": "Física I/Colisión.md"
     }
   ],
   "omittedPaths": [],
