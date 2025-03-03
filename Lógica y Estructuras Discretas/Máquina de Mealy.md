@@ -2,7 +2,7 @@
 aliases:
   - Máquinas de Mealy
 created: 2025-03-01 21:39:22
-modified: 2025-03-01 21:45:52
+modified: 2025-03-01 22:48:13
 title: Máquina de Mealy
 ---
 
@@ -30,3 +30,38 @@ stateDiagram
     $6 --> $1: $2 / Caramelos
     $6 --> $4: $5 / Caramelos
 ```
+
+$$
+\begin{array}{c}
+    I = \set{\text{\$2}, \text{\$5}} \\
+    O = \set{\text{Nada}, \text{Caramelos}} \\
+    k = \set{\$0, \$1, \$2, \$3, \$4, \$5, \$6} \\
+    q_0 = \$0 \\
+\end{array}
+$$
+
+| $f$ | $2  | $5  |
+| --- | --- | --- |
+| $0  | $2  | $5  |
+| $1  | $3  | $6  |
+| $2  | $4  | $0  |
+| $3  | $5  | $1  |
+| $4  | $6  | $2  |
+| $5  | $0  | $3  |
+| $6  | $1  | $4  |
+
+| $g$ | $2        | $5        |
+| --- | --------- | --------- |
+| $0  | Nada      | Nada      |
+| $1  | Nada      | Nada      |
+| $2  | Nada      | Caramelos |
+| $3  | Nada      | Caramelos |
+| $4  | Nada      | Caramelos |
+| $5  | Caramelos | Caramelos |
+| $6  | Caramelos | Caramelos |
+
+Con estos datos podemos formar la [[Máquina de Mealy]].
+
+$$
+M = \left( I, O, k, q_0, f, g \right)
+$$

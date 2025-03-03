@@ -2,7 +2,7 @@
 aliases:
   - Máquinas de Moore
 created: 2025-03-01 21:38:19
-modified: 2025-03-01 22:40:52
+modified: 2025-03-01 22:46:52
 title: Máquina de Moore
 ---
 
@@ -21,6 +21,15 @@ stateDiagram
     Luz --> Luz: On
 ```
 
+$$
+\begin{array}{c}
+    I = \set{\text{On}, \text{Off}} \\
+    O = \set{\text{Oscuridad}, \text{Luz}} \\
+    k = \set{q_1, q_2} \\
+    q_0 = q_1 \\
+\end{array}
+$$
+
 | $f$   | On    | Off   |
 | ----- | ----- | ----- |
 | $q_1$ | $q_2$ | $q_1$ |
@@ -30,12 +39,9 @@ stateDiagram
 | ----- | --------- |
 | $q_1$ | Oscuridad |
 | $q_2$ | Luz       |
+
+Con estos datos podemos formar la [[Máquina de Moore]].
+
 $$
-\begin{array}{c}
-    I = \set{\text{On}, \text{Off}} \\
-    O = \set{\text{Oscuridad}, \text{Luz}} \\
-    k = \set{q_1, q_2} \\
-    q_0 = q_1 \\
-    M = \left(  \right)
-\end{array}
+M = \left( I, O, k, q_0, f, g \right)
 $$
