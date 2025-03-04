@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "K-Equivalencia",
+      "path": "Lógica y Estructuras Discretas/K-Equivalencia.md"
+    },
+    {
+      "basename": "Relación",
+      "path": "Lógica y Estructuras Discretas/Relación.md"
+    },
+    {
+      "basename": "Equivalencia lógica",
+      "path": "Lógica y Estructuras Discretas/Equivalencia lógica.md"
+    },
+    {
+      "basename": "Estado",
+      "path": "Lógica y Estructuras Discretas/Estado.md"
+    },
+    {
+      "basename": "Máquina de estados mínimos",
+      "path": "Lógica y Estructuras Discretas/Máquina de estados mínimos.md"
+    },
+    {
+      "basename": "Máquina de estados finitos",
+      "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
+    },
+    {
       "basename": "Máquina de Mealy",
       "path": "Lógica y Estructuras Discretas/Máquina de Mealy.md"
     },
     {
       "basename": "Máquina de Moore",
       "path": "Lógica y Estructuras Discretas/Máquina de Moore.md"
-    },
-    {
-      "basename": "Máquina de estados finitos",
-      "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
     },
     {
       "basename": "Diagrama de estados",
@@ -31,10 +51,6 @@
     {
       "basename": "Estructura de repetición",
       "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
-    },
-    {
-      "basename": "Estado",
-      "path": "Lógica y Estructuras Discretas/Estado.md"
     },
     {
       "basename": "Estado",
@@ -183,22 +199,6 @@
     {
       "basename": "plan-de-estudio",
       "path": "Ingeniería y Sociedad/attachments/plan-de-estudio.pdf"
-    },
-    {
-      "basename": "Sufijos",
-      "path": "Inglés II/Sufijos.md"
-    },
-    {
-      "basename": "Adjetivo",
-      "path": "Inglés I/Adjetivo.md"
-    },
-    {
-      "basename": "Definición no formal",
-      "path": "Inglés II/Definición no formal.md"
-    },
-    {
-      "basename": "Sustantivo",
-      "path": "Inglés I/Sustantivo.md"
     }
   ],
   "omittedPaths": [],
