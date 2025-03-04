@@ -3,7 +3,7 @@ aliases:
   - Autómatas de estados finitos
   - AEF
 created: 2025-03-04 15:16:59
-modified: 2025-03-04 15:36:48
+modified: 2025-03-04 16:08:17
 title: Autómata de estados finitos
 ---
 
@@ -21,4 +21,12 @@ $$
 - $f$: [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente, $f: \left( k \times I \right) \to k$. Para cada posible combinación de [[Lógica y Estructuras Discretas/Estado|Estados]] y [[Entradas]], asigna un [[Lógica y Estructuras Discretas/Estado|Estado]].
 - $A$: [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] aceptados o finales ($A \subseteq k$).
 
+---
+
 Sea $L(G)$ el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] asociado a un [[Autómata de estados finitos|AEF]] $M$. Luego se dice que $L(G)$ es el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] ==aceptado== por el [[Autómata de estados finitos|AEF]] y se denota $L(G) = Ac(M)$.
+
+Un arreglo de [[Entradas|Entrada]] $\alpha = x_1, \dots, x_n$, perteneciente a la [[Cerradura de Kleene]] del [[Conjunto]] de [[Entradas]] ($\alpha \in I^*$), pertenece al [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado de la [[Autómata de estados finitos|AEF]] ($\alpha \in Ac(M)$) si se cumple lo siguiente.
+
+1. El [[Lógica y Estructuras Discretas/Estado|Estado]] inicial es el especificado ($q_0 = q_0$).
+2. Dado un [[Lógica y Estructuras Discretas/Estado|Estado]] y la [[Entradas|Entrada]] siguiente, la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente me devuelve siempre el [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente ($f(q_{i - 1}, x_i) = q_i$).
+3. El [[Lógica y Estructuras Discretas/Estado|Estado]] final es un [[Lógica y Estructuras Discretas/Estado|Estado]] aceptado ($q_n \in A$).
