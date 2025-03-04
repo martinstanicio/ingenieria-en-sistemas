@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Autómata de estados finitos",
+      "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
+    },
+    {
+      "basename": "Autómata",
+      "path": "Lógica y Estructuras Discretas/Autómata.md"
+    },
+    {
+      "basename": "Máquina de estados finitos",
+      "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
+    },
+    {
+      "basename": "Máquina de estados mínimos",
+      "path": "Lógica y Estructuras Discretas/Máquina de estados mínimos.md"
+    },
+    {
+      "basename": "Máquina",
+      "path": "Lógica y Estructuras Discretas/Máquina.md"
+    },
+    {
       "basename": "K-Equivalencia",
       "path": "Lógica y Estructuras Discretas/K-Equivalencia.md"
+    },
+    {
+      "basename": "Estado",
+      "path": "Lógica y Estructuras Discretas/Estado.md"
     },
     {
       "basename": "Relación",
@@ -11,18 +35,6 @@
     {
       "basename": "Equivalencia lógica",
       "path": "Lógica y Estructuras Discretas/Equivalencia lógica.md"
-    },
-    {
-      "basename": "Estado",
-      "path": "Lógica y Estructuras Discretas/Estado.md"
-    },
-    {
-      "basename": "Máquina de estados mínimos",
-      "path": "Lógica y Estructuras Discretas/Máquina de estados mínimos.md"
-    },
-    {
-      "basename": "Máquina de estados finitos",
-      "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
     },
     {
       "basename": "Máquina de Mealy",
@@ -35,10 +47,6 @@
     {
       "basename": "Diagrama de estados",
       "path": "Lógica y Estructuras Discretas/Diagrama de estados.md"
-    },
-    {
-      "basename": "Máquina",
-      "path": "Lógica y Estructuras Discretas/Máquina.md"
     },
     {
       "basename": "Cerradura de Kleene",
@@ -191,14 +199,6 @@
     {
       "basename": "Análisis Matemático II",
       "path": "Análisis Matemático II/Análisis Matemático II.md"
-    },
-    {
-      "basename": "Lógica y Estructuras Discretas",
-      "path": "Lógica y Estructuras Discretas/Lógica y Estructuras Discretas.md"
-    },
-    {
-      "basename": "plan-de-estudio",
-      "path": "Ingeniería y Sociedad/attachments/plan-de-estudio.pdf"
     }
   ],
   "omittedPaths": [],
