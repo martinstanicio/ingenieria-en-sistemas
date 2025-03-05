@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Gramática",
-      "path": "Lógica y Estructuras Discretas/Gramática.md"
-    },
-    {
       "basename": "Autómata de estados finitos",
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
+    },
+    {
+      "basename": "K-Equivalencia",
+      "path": "Lógica y Estructuras Discretas/K-Equivalencia.md"
+    },
+    {
+      "basename": "Gramática",
+      "path": "Lógica y Estructuras Discretas/Gramática.md"
     },
     {
       "basename": "Autómata",
@@ -23,10 +27,6 @@
     {
       "basename": "Máquina",
       "path": "Lógica y Estructuras Discretas/Máquina.md"
-    },
-    {
-      "basename": "K-Equivalencia",
-      "path": "Lógica y Estructuras Discretas/K-Equivalencia.md"
     },
     {
       "basename": "Estado",
