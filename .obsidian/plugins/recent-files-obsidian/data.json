@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Gramática",
+      "path": "Lógica y Estructuras Discretas/Gramática.md"
+    },
+    {
       "basename": "Autómata de estados finitos",
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
     },
@@ -63,10 +67,6 @@
     {
       "basename": "Estado",
       "path": "Sistemas y Procesos de Negocios/Estado.md"
-    },
-    {
-      "basename": "Gramática",
-      "path": "Lógica y Estructuras Discretas/Gramática.md"
     },
     {
       "basename": "Cerradura positiva",
