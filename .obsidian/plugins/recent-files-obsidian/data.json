@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Autómata de estados finitos no determinístico",
+      "path": "Lógica y Estructuras Discretas/Autómata de estados finitos no determinístico.md"
+    },
+    {
       "basename": "Autómata de estados finitos",
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
+    },
+    {
+      "basename": "Autómata",
+      "path": "Lógica y Estructuras Discretas/Autómata.md"
     },
     {
       "basename": "K-Equivalencia",
@@ -11,10 +19,6 @@
     {
       "basename": "Gramática",
       "path": "Lógica y Estructuras Discretas/Gramática.md"
-    },
-    {
-      "basename": "Autómata",
-      "path": "Lógica y Estructuras Discretas/Autómata.md"
     },
     {
       "basename": "Máquina de estados finitos",
@@ -195,10 +199,6 @@
     {
       "basename": "Economía",
       "path": "Economía/Economía.md"
-    },
-    {
-      "basename": "Análisis Matemático II",
-      "path": "Análisis Matemático II/Análisis Matemático II.md"
     }
   ],
   "omittedPaths": [],

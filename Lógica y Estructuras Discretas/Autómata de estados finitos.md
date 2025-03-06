@@ -2,8 +2,10 @@
 aliases:
   - Autómatas de estados finitos
   - AEF
+  - Autómata de estados finitos determinístico
+  - AEFD
 created: 2025-03-04 15:16:59
-modified: 2025-03-05 11:46:54
+modified: 2025-03-06 14:38:53
 title: Autómata de estados finitos
 ---
 
