@@ -2,7 +2,7 @@
 aliases:
   - Gramáticas
 created: 2025-02-28 16:10:19
-modified: 2025-02-28 17:42:41
+modified: 2025-03-06 15:03:19
 title: Gramática
 ---
 
@@ -11,7 +11,7 @@ title: Gramática
 Es una cuaterna a partir de la cual podemos generar un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
 
 $$
-G = (T, N, P, \sigma)
+G = (T, N, P, S_0)
 $$
 
 ## Símbolos terminales
@@ -46,7 +46,7 @@ Me dice como intercambiar los ==objetos intermedios== por los ==objetos finales=
 
 ## Símbolo inicial o distinguido
 
-$\sigma$ o $S$ es el **símbolo inicial o distinguido** de la [[Gramática]], y $\sigma \in N$.
+$S_0$ o $\sigma$ es el **símbolo inicial o distinguido** de la [[Gramática]], y $\sigma \in N$.
 
 Es un caso especial de los [[Gramática#Símbolos no terminales|Símbolos no terminales]], que es el punto de partida para empezar a ==generar las oraciones== de mi [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
 

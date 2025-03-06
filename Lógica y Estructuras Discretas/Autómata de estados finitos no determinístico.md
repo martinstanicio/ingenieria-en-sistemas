@@ -3,7 +3,7 @@ aliases:
   - Autómatas de estados finitos no determinísticos
   - AEFND
 created: 2025-03-06 14:40:22
-modified: 2025-03-06 14:50:50
+modified: 2025-03-06 15:05:15
 title: Autómata de estados finitos no determinístico
 ---
 
@@ -27,4 +27,18 @@ $$
 > Por lo tanto, dado $k = \set{A, B, F}$, tanto $\emptyset$, $\set{A, F}$, $\set{B}$, y $\set{A, B, F}$ son algunas de las posibles [[Imagen|Imágenes]] de la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estados]].
 
 ## Teorema de pasaje de GR a AEFND
-Sea $G = \left( N, T, P, S_0 \right)$ una [[Gramática#Tipo 3 Regular|Gramática regular]], luego existe $M = \left( I, k, q_0, f, A \right)$ un [[Autómata de estados finitos no determinístico|AEFND]]
+
+Sea $G = \left( N, T, P, S_0 \right)$ una [[Gramática#Tipo 3 Regular|Gramática regular]], luego existe $M = \left( I, k, q_0, f, A \right)$ un [[Autómata de estados finitos no determinístico|AEFND]] tal que $L(G) = Ac(M)$ donde:
+
+$$
+\begin{array}{c}
+    I = T \\
+    k = N \cup \set{F} \\
+    q_0 = S_0 \\
+    f(q_i, a) = q_j \space \text{si} \space q_i \to a q_j \in P \\
+    f(q_i, a) = F \space \text{si} \space q_i \to a \in P \\
+    A = \set{F} \\
+\end{array}
+$$
+
+Donde $F$ será el único [[Lógica y Estructuras Discretas/Estado|Estado]] aceptado, que siempre debemos agregar al formar un [[Autómata de estados finitos no determinístico|AEFND]].

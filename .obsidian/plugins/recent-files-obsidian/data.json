@@ -5,8 +5,16 @@
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos no determinístico.md"
     },
     {
+      "basename": "Gramática",
+      "path": "Lógica y Estructuras Discretas/Gramática.md"
+    },
+    {
       "basename": "Autómata de estados finitos",
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
+    },
+    {
+      "basename": "Lenguaje",
+      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
     },
     {
       "basename": "Autómata",
@@ -15,10 +23,6 @@
     {
       "basename": "K-Equivalencia",
       "path": "Lógica y Estructuras Discretas/K-Equivalencia.md"
-    },
-    {
-      "basename": "Gramática",
-      "path": "Lógica y Estructuras Discretas/Gramática.md"
     },
     {
       "basename": "Máquina de estados finitos",
@@ -75,10 +79,6 @@
     {
       "basename": "Cerradura positiva",
       "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
-    },
-    {
-      "basename": "Lenguaje",
-      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
     },
     {
       "basename": "Potencia de un lenguaje",

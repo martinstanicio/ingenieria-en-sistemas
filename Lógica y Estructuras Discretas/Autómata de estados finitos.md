@@ -5,7 +5,7 @@ aliases:
   - Autómata de estados finitos determinístico
   - AEFD
 created: 2025-03-04 15:16:59
-modified: 2025-03-06 14:38:53
+modified: 2025-03-06 15:01:46
 title: Autómata de estados finitos
 ---
 
@@ -36,6 +36,8 @@ Un arreglo de [[Entradas|Entrada]] $\alpha = x_1, \dots, x_n$, perteneciente a l
 ## Teorema de equivalencia AEF-GR
 
 Los [[Autómata de estados finitos|Autómatas de estados finitos]] y [[Gramática#Tipo 3 Regular|Gramáticas regulares]] son ==equivalentes==, ya que ambos son representaciones de [[Lógica y Estructuras Discretas/Lenguaje|Lenguajes]] **regulares**.
+
+## Teorema de pasaje de AEF a GR
 
 Sea $M = \left( I, k, q_0, f, A \right)$ un [[Autómata de estados finitos|AEF]] y formamos las siguientes producciones. Si $f(q_i, a) = q_j$ entonces $q_i \to a q_j \in P$, y además si $q_j \in A$ entonces $q_i \to a \in P$. Luego la [[Gramática]] $G = \left( k, I, P, q_0 \right)$ tal que su [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] generado es el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado por la [[Autómata de estados finitos|AEF]].
 
