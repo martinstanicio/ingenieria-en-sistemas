@@ -5,16 +5,28 @@
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos no determinístico.md"
     },
     {
-      "basename": "Gramática",
-      "path": "Lógica y Estructuras Discretas/Gramática.md"
+      "basename": "Conjunto singleton",
+      "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
+    },
+    {
+      "basename": "Lenguaje",
+      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
+    },
+    {
+      "basename": "Alfabeto",
+      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
+    },
+    {
+      "basename": "Cerradura de Kleene",
+      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
     },
     {
       "basename": "Autómata de estados finitos",
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
     },
     {
-      "basename": "Lenguaje",
-      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
+      "basename": "Gramática",
+      "path": "Lógica y Estructuras Discretas/Gramática.md"
     },
     {
       "basename": "Autómata",
@@ -61,10 +73,6 @@
       "path": "Lógica y Estructuras Discretas/Diagrama de estados.md"
     },
     {
-      "basename": "Cerradura de Kleene",
-      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
-    },
-    {
       "basename": "Ciclo desde-hasta",
       "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
     },
@@ -95,10 +103,6 @@
     {
       "basename": "Cadena",
       "path": "Lógica y Estructuras Discretas/Cadena.md"
-    },
-    {
-      "basename": "Alfabeto",
-      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
     },
     {
       "basename": "Lenguaje vacío",
@@ -195,10 +199,6 @@
     {
       "basename": "Administración de Sistemas de Información",
       "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
-    },
-    {
-      "basename": "Economía",
-      "path": "Economía/Economía.md"
     }
   ],
   "omittedPaths": [],

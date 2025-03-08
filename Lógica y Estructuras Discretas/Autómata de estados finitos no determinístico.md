@@ -3,7 +3,7 @@ aliases:
   - Autómatas de estados finitos no determinísticos
   - AEFND
 created: 2025-03-06 14:40:22
-modified: 2025-03-06 15:05:15
+modified: 2025-03-08 16:01:34
 title: Autómata de estados finitos no determinístico
 ---
 
@@ -42,3 +42,24 @@ $$
 $$
 
 Donde $F$ será el único [[Lógica y Estructuras Discretas/Estado|Estado]] aceptado, que siempre debemos agregar al formar un [[Autómata de estados finitos no determinístico|AEFND]].
+
+## Teorema de pasaje de AEFND a AEF
+
+Sea $M = \left( I, k, q_0, f, A \right)$ un [[Autómata de estados finitos no determinístico|AEFND]]. Luego existe $M' = \left( I', k', {q_0}' f', A' \right)$ un [[Autómata de estados finitos|AEF]] tal que $Ac(M) = Ac(M')$ donde:
+
+$$
+\begin{array}{c}
+    I' = I \\
+    k' = P(k) \\
+    {q_0}' = \set{q_0} \\
+    f'(X, a) = \left\{
+        \begin{array}{c}
+            \bigcup_{Y \in X} f(Y, a) \\
+            \emptyset \space \text{si} \space X = \emptyset
+        \end{array}
+    \right. \\
+    A' = \set{ X \in P(k): x \cap \set{F} \neq \emptyset, F \in A } \\
+\end{array}
+$$
+
+Como $k' = P(k)$, es decir, $k'$ es el [[Conjunto potencia]] de $k$, muchas veces obtendremos un [[Autómata de estados finitos|AEF]] con múltiples [[Lógica y Estructuras Discretas/Estado|Estados]] ==fuente==, es decir, [[Lógica y Estructuras Discretas/Estado|Estados]] a los que no es posible llegar si tomamos un [[Lógica y Estructuras Discretas/Estado|Estado]] inicial diferente. Por lo tanto, todos estos [[Lógica y Estructuras Discretas/Estado|Estados]] fuente, excepto el [[Lógica y Estructuras Discretas/Estado|Estado]] inicial, son redundantes, y podemos omitirlos al momento de formar la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estados]] siguientes y el [[Diagrama de estados]].
