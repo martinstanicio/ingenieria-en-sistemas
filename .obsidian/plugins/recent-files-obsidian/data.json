@@ -5,6 +5,14 @@
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos no determinístico.md"
     },
     {
+      "basename": "Teorema Fundamental del Cálculo Integral",
+      "path": "Análisis Matemático I/Teorema Fundamental del Cálculo Integral.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
       "basename": "Conjunto singleton",
       "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
     },
@@ -129,10 +137,6 @@
       "path": "Ingeniería y Sociedad/Lenguaje.md"
     },
     {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "Condicional 0",
       "path": "Inglés II/Condicional 0.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Condicional",
       "path": "Inglés II/Condicional.md"
-    },
-    {
-      "basename": "Administración de Sistemas de Información",
-      "path": "Administración de Sistemas de Información/Administración de Sistemas de Información.md"
     }
   ],
   "omittedPaths": [],
