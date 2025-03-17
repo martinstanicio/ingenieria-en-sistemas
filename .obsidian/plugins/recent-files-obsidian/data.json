@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Traductor de lenguajes",
-      "path": "Sintaxis y Semántica de los Lenguajes/Traductor de lenguajes.md"
-    },
-    {
       "basename": "Identificadores",
       "path": "Sintaxis y Semántica de los Lenguajes/Identificadores.md"
+    },
+    {
+      "basename": "Inducción estructural",
+      "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
+    },
+    {
+      "basename": "Traductor de lenguajes",
+      "path": "Sintaxis y Semántica de los Lenguajes/Traductor de lenguajes.md"
     },
     {
       "basename": "Token",
@@ -195,10 +199,6 @@
     {
       "basename": "Conectores",
       "path": "Inglés II/Conectores.md"
-    },
-    {
-      "basename": "Condicional 1",
-      "path": "Inglés II/Condicional 1.md"
     }
   ],
   "omittedPaths": [],
