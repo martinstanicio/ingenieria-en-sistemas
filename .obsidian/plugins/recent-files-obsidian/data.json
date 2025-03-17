@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Token",
+      "path": "Sintaxis y Semántica de los Lenguajes/Token.md"
+    },
+    {
+      "basename": "Operador relacional",
+      "path": "Sintaxis y Semántica de los Lenguajes/Operador relacional.md"
+    },
+    {
+      "basename": "Lexema",
+      "path": "Sintaxis y Semántica de los Lenguajes/Lexema.md"
+    },
+    {
+      "basename": "Léxico",
+      "path": "Sintaxis y Semántica de los Lenguajes/Léxico.md"
+    },
+    {
+      "basename": "Operadores lógicos",
+      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
+    },
+    {
       "basename": "Semántica",
       "path": "Sintaxis y Semántica de los Lenguajes/Semántica.md"
     },
     {
       "basename": "Sintaxis",
       "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis.md"
-    },
-    {
-      "basename": "Léxico",
-      "path": "Sintaxis y Semántica de los Lenguajes/Léxico.md"
     },
     {
       "basename": "Autómata de estados finitos no determinístico",
@@ -183,22 +199,6 @@
     {
       "basename": "Secuenciadores",
       "path": "Inglés II/Secuenciadores.md"
-    },
-    {
-      "basename": "Pronombres relativos",
-      "path": "Inglés II/Pronombres relativos.md"
-    },
-    {
-      "basename": "Presente participio",
-      "path": "Inglés II/Presente participio.md"
-    },
-    {
-      "basename": "Gerundio",
-      "path": "Inglés II/Gerundio.md"
-    },
-    {
-      "basename": "Afijos",
-      "path": "Inglés II/Afijos.md"
     }
   ],
   "omittedPaths": [],
