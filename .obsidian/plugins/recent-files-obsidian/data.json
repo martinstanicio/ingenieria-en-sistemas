@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Traductor de lenguajes",
+      "path": "Sintaxis y Semántica de los Lenguajes/Traductor de lenguajes.md"
+    },
+    {
+      "basename": "Identificadores",
+      "path": "Sintaxis y Semántica de los Lenguajes/Identificadores.md"
+    },
+    {
       "basename": "Token",
       "path": "Sintaxis y Semántica de los Lenguajes/Token.md"
+    },
+    {
+      "basename": "Interpretador",
+      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
+    },
+    {
+      "basename": "Compilador",
+      "path": "Algoritmos y Estructuras de Datos/Compilador.md"
     },
     {
       "basename": "Operador relacional",
@@ -183,22 +199,6 @@
     {
       "basename": "Condicional 1",
       "path": "Inglés II/Condicional 1.md"
-    },
-    {
-      "basename": "Definición",
-      "path": "Inglés II/Definición.md"
-    },
-    {
-      "basename": "Subordinadas relativas",
-      "path": "Inglés II/Subordinadas relativas.md"
-    },
-    {
-      "basename": "Definición formal",
-      "path": "Inglés II/Definición formal.md"
-    },
-    {
-      "basename": "Secuenciadores",
-      "path": "Inglés II/Secuenciadores.md"
     }
   ],
   "omittedPaths": [],
