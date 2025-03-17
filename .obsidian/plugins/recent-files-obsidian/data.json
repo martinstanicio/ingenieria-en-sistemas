@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Semántica",
+      "path": "Sintaxis y Semántica de los Lenguajes/Semántica.md"
+    },
+    {
+      "basename": "Sintaxis",
+      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis.md"
+    },
+    {
+      "basename": "Léxico",
+      "path": "Sintaxis y Semántica de los Lenguajes/Léxico.md"
+    },
+    {
       "basename": "Autómata de estados finitos no determinístico",
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos no determinístico.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Afijos",
       "path": "Inglés II/Afijos.md"
-    },
-    {
-      "basename": "Inglés II",
-      "path": "Inglés II/Inglés II.md"
-    },
-    {
-      "basename": "Prefijos",
-      "path": "Inglés II/Prefijos.md"
-    },
-    {
-      "basename": "Condicional",
-      "path": "Inglés II/Condicional.md"
     }
   ],
   "omittedPaths": [],
