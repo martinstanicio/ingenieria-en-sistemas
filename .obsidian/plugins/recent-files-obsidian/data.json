@@ -1,32 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Conjunto linealmente dependiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+      "basename": "Función vectorial de variable vectorial",
+      "path": "Análisis Matemático II/Función vectorial de variable vectorial.md"
     },
     {
-      "basename": "Combinación lineal",
-      "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
+      "basename": "Función real de variable vectorial",
+      "path": "Análisis Matemático II/Función real de variable vectorial.md"
     },
     {
-      "basename": "Conjunto linealmente independiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+      "basename": "Función vectorial de variable real",
+      "path": "Análisis Matemático II/Función vectorial de variable real.md"
     },
     {
-      "basename": "Conjunto convexo",
-      "path": "Análisis Matemático II/Conjunto convexo.md"
+      "basename": "Función real de variable real",
+      "path": "Análisis Matemático II/Función real de variable real.md"
     },
     {
-      "basename": "Conjunto múltiplemente conexo",
-      "path": "Análisis Matemático II/Conjunto múltiplemente conexo.md"
+      "basename": "Dominio",
+      "path": "Análisis Matemático I/Dominio.md"
     },
     {
-      "basename": "Conjunto simplemente conexo",
-      "path": "Análisis Matemático II/Conjunto simplemente conexo.md"
-    },
-    {
-      "basename": "Conjunto conexo",
-      "path": "Análisis Matemático II/Conjunto conexo.md"
+      "basename": "Imagen",
+      "path": "Análisis Matemático I/Imagen.md"
     },
     {
       "basename": "Conjunto cerrado",
@@ -35,6 +31,42 @@
     {
       "basename": "Conjunto abierto",
       "path": "Análisis Matemático II/Conjunto abierto.md"
+    },
+    {
+      "basename": "Espacio vectorial",
+      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
+    },
+    {
+      "basename": "Conjunto conexo",
+      "path": "Análisis Matemático II/Conjunto conexo.md"
+    },
+    {
+      "basename": "Conjunto simplemente conexo",
+      "path": "Análisis Matemático II/Conjunto simplemente conexo.md"
+    },
+    {
+      "basename": "Conjunto múltiplemente conexo",
+      "path": "Análisis Matemático II/Conjunto múltiplemente conexo.md"
+    },
+    {
+      "basename": "Conjunto convexo",
+      "path": "Análisis Matemático II/Conjunto convexo.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Conjunto linealmente independiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+    },
+    {
+      "basename": "Conjunto linealmente dependiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+    },
+    {
+      "basename": "Combinación lineal",
+      "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
     },
     {
       "basename": "Conjunto",
@@ -167,38 +199,6 @@
     {
       "basename": "Conjunto singleton",
       "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
-    },
-    {
-      "basename": "Lenguaje",
-      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
-    },
-    {
-      "basename": "Alfabeto",
-      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
-    },
-    {
-      "basename": "Cerradura de Kleene",
-      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
-    },
-    {
-      "basename": "Autómata de estados finitos",
-      "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
-    },
-    {
-      "basename": "Autómata",
-      "path": "Lógica y Estructuras Discretas/Autómata.md"
-    },
-    {
-      "basename": "K-Equivalencia",
-      "path": "Lógica y Estructuras Discretas/K-Equivalencia.md"
-    },
-    {
-      "basename": "Máquina de estados finitos",
-      "path": "Lógica y Estructuras Discretas/Máquina de estados finitos.md"
-    },
-    {
-      "basename": "Máquina de estados mínimos",
-      "path": "Lógica y Estructuras Discretas/Máquina de estados mínimos.md"
     }
   ],
   "omittedPaths": [],

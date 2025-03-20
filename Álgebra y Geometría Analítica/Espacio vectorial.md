@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Espacios vectoriales
 created: 2024-04-06 20:17:07
-modified: 2024-07-12 14:31:42
+modified: 2025-03-20 14:15:30
 title: Espacio vectorial
 ---
 

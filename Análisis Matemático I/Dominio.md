@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Conjunto de partida
 created: 2024-06-23 15:21:23
-modified: 2024-06-23 15:24:04
+modified: 2025-03-20 14:25:35
 title: Dominio
 ---
 
