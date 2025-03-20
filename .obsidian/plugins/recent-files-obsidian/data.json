@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Conjunto linealmente dependiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
+    },
+    {
+      "basename": "Combinación lineal",
+      "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
+    },
+    {
+      "basename": "Conjunto linealmente independiente",
+      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
+    },
+    {
       "basename": "Conjunto convexo",
       "path": "Análisis Matemático II/Conjunto convexo.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Máquina de estados mínimos",
       "path": "Lógica y Estructuras Discretas/Máquina de estados mínimos.md"
-    },
-    {
-      "basename": "Máquina",
-      "path": "Lógica y Estructuras Discretas/Máquina.md"
-    },
-    {
-      "basename": "Estado",
-      "path": "Lógica y Estructuras Discretas/Estado.md"
-    },
-    {
-      "basename": "Relación",
-      "path": "Lógica y Estructuras Discretas/Relación.md"
     }
   ],
   "omittedPaths": [],
