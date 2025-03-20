@@ -16,7 +16,7 @@ Estas interrelaciones son las definen las características y la naturaleza del [
 
 ## Relaciones Superfluas
 
-Aquellas que ==repiten otras relaciones dentro de un sistema==. Aunque pueden aumentar la [[Probabilidad]] de que un [[Sistemas|Sistema]] funcione de manera continua, también implican un costo adicional.
+Aquellas que ==repiten otras relaciones dentro de un sistema==. Aunque pueden aumentar la [[Sistemas y Procesos de Negocios/Probabilidad]] de que un [[Sistemas|Sistema]] funcione de manera continua, también implican un costo adicional.
 
 Su presencia se justifica por la ==confiabilidad que aportan== al sistema, pero es importante considerar su costo en relación con los beneficios que aportan.
 

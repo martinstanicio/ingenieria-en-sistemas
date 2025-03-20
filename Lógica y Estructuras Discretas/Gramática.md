@@ -2,7 +2,7 @@
 aliases:
   - Gramáticas
 created: 2025-02-28 16:10:19
-modified: 2025-03-06 15:03:19
+modified: 2025-03-17 21:18:03
 title: Gramática
 ---
 
@@ -99,7 +99,7 @@ $$
 
 Siendo $\lambda$ la [[Cadena vacía]].
 
-### Tipo 0
+### Tipo 0: Recursivamente enumerada
 
 Una [[Gramática]] $G$ se llama tipo 0 en caso contrario.
 

@@ -16,7 +16,7 @@ Algo solo es considerado [[Información]] la primera vez que lo vemos y aprendem
 > [!important]
 > Para **comunicar** la [[Información]], es importante la **interpretación**.
 
-Segun el nivel de ==sorpresa== de cada mensaje $E$, podemos calcular cuánta [[Información]] $I(E)$ aporta utilizando la [[Probabilidad]] $P(E)$ de su ocurrencia. Se mide en [[Bit|bits]].
+Segun el nivel de ==sorpresa== de cada mensaje $E$, podemos calcular cuánta [[Información]] $I(E)$ aporta utilizando la [[Sistemas y Procesos de Negocios/Probabilidad]] $P(E)$ de su ocurrencia. Se mide en [[Bit|bits]].
 
 $$
 I(E) = \log_2 \left( \frac{1}{P(E)} \right) \text{ bits} = - \log_2 \left( P(E) \right) \text{ bits}

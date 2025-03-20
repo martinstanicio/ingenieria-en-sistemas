@@ -1,6 +1,58 @@
 {
   "recentFiles": [
     {
+      "basename": "Gramática",
+      "path": "Lógica y Estructuras Discretas/Gramática.md"
+    },
+    {
+      "basename": "Punto aislado",
+      "path": "Análisis Matemático II/Punto aislado.md"
+    },
+    {
+      "basename": "Punto exterior",
+      "path": "Análisis Matemático II/Punto exterior.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+    },
+    {
+      "basename": "Punto interior",
+      "path": "Análisis Matemático II/Punto interior.md"
+    },
+    {
+      "basename": "Entorno circular",
+      "path": "Análisis Matemático II/Entorno circular.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Probabilidades y Estadísticas/Probabilidad.md"
+    },
+    {
+      "basename": "Frecuencia relativa",
+      "path": "Probabilidades y Estadísticas/Frecuencia relativa.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
+    },
+    {
+      "basename": "Laplace",
+      "path": "Probabilidades y Estadísticas/Laplace.md"
+    },
+    {
+      "basename": "Frecuencia absoluta",
+      "path": "Probabilidades y Estadísticas/Frecuencia absoluta.md"
+    },
+    {
+      "basename": "Evento",
+      "path": "Probabilidades y Estadísticas/Evento.md"
+    },
+    {
+      "basename": "Espacio muestrario",
+      "path": "Probabilidades y Estadísticas/Espacio muestrario.md"
+    },
+    {
       "basename": "Inducción estructural",
       "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
     },
@@ -81,10 +133,6 @@
       "path": "Lógica y Estructuras Discretas/Autómata de estados finitos.md"
     },
     {
-      "basename": "Gramática",
-      "path": "Lógica y Estructuras Discretas/Gramática.md"
-    },
-    {
       "basename": "Autómata",
       "path": "Lógica y Estructuras Discretas/Autómata.md"
     },
@@ -151,54 +199,6 @@
     {
       "basename": "Cadena vacía",
       "path": "Lógica y Estructuras Discretas/Cadena vacía.md"
-    },
-    {
-      "basename": "Cadena en blanco",
-      "path": "Lógica y Estructuras Discretas/Cadena en blanco.md"
-    },
-    {
-      "basename": "Cadena",
-      "path": "Lógica y Estructuras Discretas/Cadena.md"
-    },
-    {
-      "basename": "Lenguaje vacío",
-      "path": "Lógica y Estructuras Discretas/Lenguaje vacío.md"
-    },
-    {
-      "basename": "Potencia de un alfabeto",
-      "path": "Lógica y Estructuras Discretas/Potencia de un alfabeto.md"
-    },
-    {
-      "basename": "Cadena",
-      "path": "Algoritmos y Estructuras de Datos/Cadena.md"
-    },
-    {
-      "basename": "Norma",
-      "path": "Álgebra y Geometría Analítica/Norma.md"
-    },
-    {
-      "basename": "Matriz",
-      "path": "Álgebra y Geometría Analítica/Matriz.md"
-    },
-    {
-      "basename": "Lenguaje",
-      "path": "Ingeniería y Sociedad/Lenguaje.md"
-    },
-    {
-      "basename": "Condicional 0",
-      "path": "Inglés II/Condicional 0.md"
-    },
-    {
-      "basename": "Condicional 3",
-      "path": "Inglés II/Condicional 3.md"
-    },
-    {
-      "basename": "Condicional 2",
-      "path": "Inglés II/Condicional 2.md"
-    },
-    {
-      "basename": "Conectores",
-      "path": "Inglés II/Conectores.md"
     }
   ],
   "omittedPaths": [],
