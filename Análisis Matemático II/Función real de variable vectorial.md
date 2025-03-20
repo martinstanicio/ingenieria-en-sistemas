@@ -4,7 +4,7 @@ aliases:
   - Campo escalar
   - Campos escalares
 created: 2025-03-20 14:20:11
-modified: 2025-03-20 14:36:12
+modified: 2025-03-20 15:10:01
 title: Función real de variable vectorial
 ---
 
