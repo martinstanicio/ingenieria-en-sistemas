@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Entornos circulares
 created: 2025-03-19 21:56:39
-modified: 2025-03-19 22:01:33
+modified: 2025-03-20 11:36:47
 title: Entorno circular
 ---
 

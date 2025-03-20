@@ -1,28 +1,76 @@
 {
   "recentFiles": [
     {
-      "basename": "Gramática",
-      "path": "Lógica y Estructuras Discretas/Gramática.md"
+      "basename": "Conjunto cerrado",
+      "path": "Análisis Matemático II/Conjunto cerrado.md"
+    },
+    {
+      "basename": "Conjunto abierto",
+      "path": "Análisis Matemático II/Conjunto abierto.md"
     },
     {
       "basename": "Punto aislado",
       "path": "Análisis Matemático II/Punto aislado.md"
     },
     {
-      "basename": "Punto exterior",
-      "path": "Análisis Matemático II/Punto exterior.md"
+      "basename": "Entorno circular",
+      "path": "Análisis Matemático II/Entorno circular.md"
     },
     {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
+      "basename": "Entorno reducido",
+      "path": "Análisis Matemático II/Entorno reducido.md"
+    },
+    {
+      "basename": "Punto exterior",
+      "path": "Análisis Matemático II/Punto exterior.md"
     },
     {
       "basename": "Punto interior",
       "path": "Análisis Matemático II/Punto interior.md"
     },
     {
-      "basename": "Entorno circular",
-      "path": "Análisis Matemático II/Entorno circular.md"
+      "basename": "Punto frontera",
+      "path": "Análisis Matemático I/Punto frontera.md"
+    },
+    {
+      "basename": "Entorno",
+      "path": "Análisis Matemático I/Entorno.md"
+    },
+    {
+      "basename": "Análisis Matemático II",
+      "path": "Análisis Matemático II/Análisis Matemático II.md"
+    },
+    {
+      "basename": "Sintaxis",
+      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis.md"
+    },
+    {
+      "basename": "Semántica",
+      "path": "Sintaxis y Semántica de los Lenguajes/Semántica.md"
+    },
+    {
+      "basename": "Léxico",
+      "path": "Sintaxis y Semántica de los Lenguajes/Léxico.md"
+    },
+    {
+      "basename": "Lexema",
+      "path": "Sintaxis y Semántica de los Lenguajes/Lexema.md"
+    },
+    {
+      "basename": "Token",
+      "path": "Sintaxis y Semántica de los Lenguajes/Token.md"
+    },
+    {
+      "basename": "Identificadores",
+      "path": "Sintaxis y Semántica de los Lenguajes/Identificadores.md"
+    },
+    {
+      "basename": "Gramática",
+      "path": "Lógica y Estructuras Discretas/Gramática.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
     },
     {
       "basename": "Probabilidad",
@@ -57,16 +105,8 @@
       "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
     },
     {
-      "basename": "Identificadores",
-      "path": "Sintaxis y Semántica de los Lenguajes/Identificadores.md"
-    },
-    {
       "basename": "Traductor de lenguajes",
       "path": "Sintaxis y Semántica de los Lenguajes/Traductor de lenguajes.md"
-    },
-    {
-      "basename": "Token",
-      "path": "Sintaxis y Semántica de los Lenguajes/Token.md"
     },
     {
       "basename": "Interpretador",
@@ -81,24 +121,8 @@
       "path": "Sintaxis y Semántica de los Lenguajes/Operador relacional.md"
     },
     {
-      "basename": "Lexema",
-      "path": "Sintaxis y Semántica de los Lenguajes/Lexema.md"
-    },
-    {
-      "basename": "Léxico",
-      "path": "Sintaxis y Semántica de los Lenguajes/Léxico.md"
-    },
-    {
       "basename": "Operadores lógicos",
       "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Semántica",
-      "path": "Sintaxis y Semántica de los Lenguajes/Semántica.md"
-    },
-    {
-      "basename": "Sintaxis",
-      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis.md"
     },
     {
       "basename": "Autómata de estados finitos no determinístico",
@@ -175,30 +199,6 @@
     {
       "basename": "Diagrama de estados",
       "path": "Lógica y Estructuras Discretas/Diagrama de estados.md"
-    },
-    {
-      "basename": "Ciclo desde-hasta",
-      "path": "Algoritmos y Estructuras de Datos/Ciclo desde-hasta.md"
-    },
-    {
-      "basename": "Estructura de repetición",
-      "path": "Algoritmos y Estructuras de Datos/Estructura de repetición.md"
-    },
-    {
-      "basename": "Estado",
-      "path": "Sistemas y Procesos de Negocios/Estado.md"
-    },
-    {
-      "basename": "Cerradura positiva",
-      "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
-    },
-    {
-      "basename": "Potencia de un lenguaje",
-      "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
-    },
-    {
-      "basename": "Cadena vacía",
-      "path": "Lógica y Estructuras Discretas/Cadena vacía.md"
     }
   ],
   "omittedPaths": [],
