@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Conjuntos
 created: 2024-04-26 15:04:27
-modified: 2024-07-08 17:35:48
+modified: 2025-03-20 11:51:36
 title: Conjunto
 ---
 

@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Conjunto conexo",
+      "path": "Análisis Matemático II/Conjunto conexo.md"
+    },
+    {
       "basename": "Conjunto cerrado",
       "path": "Análisis Matemático II/Conjunto cerrado.md"
     },
     {
       "basename": "Conjunto abierto",
       "path": "Análisis Matemático II/Conjunto abierto.md"
+    },
+    {
+      "basename": "Conjunto",
+      "path": "Lógica y Estructuras Discretas/Conjunto.md"
     },
     {
       "basename": "Punto aislado",
@@ -67,10 +75,6 @@
     {
       "basename": "Gramática",
       "path": "Lógica y Estructuras Discretas/Gramática.md"
-    },
-    {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
     },
     {
       "basename": "Probabilidad",
@@ -195,10 +199,6 @@
     {
       "basename": "Máquina de Moore",
       "path": "Lógica y Estructuras Discretas/Máquina de Moore.md"
-    },
-    {
-      "basename": "Diagrama de estados",
-      "path": "Lógica y Estructuras Discretas/Diagrama de estados.md"
     }
   ],
   "omittedPaths": [],
