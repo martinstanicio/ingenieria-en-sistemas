@@ -2,7 +2,7 @@
 aliases:
   - Conjuntos conexos
 created: 2025-03-20 12:03:34
-modified: 2025-03-20 12:05:29
+modified: 2025-03-20 12:10:56
 title: Conjunto conexo
 ---
 

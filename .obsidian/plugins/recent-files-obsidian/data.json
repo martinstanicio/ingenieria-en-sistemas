@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Conjunto convexo",
+      "path": "Análisis Matemático II/Conjunto convexo.md"
+    },
+    {
+      "basename": "Conjunto múltiplemente conexo",
+      "path": "Análisis Matemático II/Conjunto múltiplemente conexo.md"
+    },
+    {
+      "basename": "Conjunto simplemente conexo",
+      "path": "Análisis Matemático II/Conjunto simplemente conexo.md"
+    },
+    {
       "basename": "Conjunto conexo",
       "path": "Análisis Matemático II/Conjunto conexo.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Relación",
       "path": "Lógica y Estructuras Discretas/Relación.md"
-    },
-    {
-      "basename": "Equivalencia lógica",
-      "path": "Lógica y Estructuras Discretas/Equivalencia lógica.md"
-    },
-    {
-      "basename": "Máquina de Mealy",
-      "path": "Lógica y Estructuras Discretas/Máquina de Mealy.md"
-    },
-    {
-      "basename": "Máquina de Moore",
-      "path": "Lógica y Estructuras Discretas/Máquina de Moore.md"
     }
   ],
   "omittedPaths": [],
