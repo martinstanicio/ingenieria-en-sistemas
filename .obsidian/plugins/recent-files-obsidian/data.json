@@ -1,8 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "Probabilidad",
+      "path": "Probabilidades y Estadísticas/Probabilidad.md"
+    },
+    {
+      "basename": "Probabilidades y Estadísticas",
+      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
+    },
+    {
       "basename": "Función real de variable vectorial",
       "path": "Análisis Matemático II/Función real de variable vectorial.md"
+    },
+    {
+      "basename": "Paradigma",
+      "path": "Paradigmas de Programación/Paradigma.md"
+    },
+    {
+      "basename": "Paradigma lógico",
+      "path": "Paradigmas de Programación/Paradigma lógico.md"
+    },
+    {
+      "basename": "Paradigma funcional",
+      "path": "Paradigmas de Programación/Paradigma funcional.md"
+    },
+    {
+      "basename": "Paradigma orientado a objetos",
+      "path": "Paradigmas de Programación/Paradigma orientado a objetos.md"
+    },
+    {
+      "basename": "Punto exterior",
+      "path": "Análisis Matemático II/Punto exterior.md"
+    },
+    {
+      "basename": "Entorno circular",
+      "path": "Análisis Matemático II/Entorno circular.md"
+    },
+    {
+      "basename": "Laplace",
+      "path": "Probabilidades y Estadísticas/Laplace.md"
+    },
+    {
+      "basename": "Frecuencia absoluta",
+      "path": "Probabilidades y Estadísticas/Frecuencia absoluta.md"
+    },
+    {
+      "basename": "Frecuencia relativa",
+      "path": "Probabilidades y Estadísticas/Frecuencia relativa.md"
+    },
+    {
+      "basename": "Punto aislado",
+      "path": "Análisis Matemático II/Punto aislado.md"
     },
     {
       "basename": "Función vectorial de variable vectorial",
@@ -73,20 +121,8 @@
       "path": "Lógica y Estructuras Discretas/Conjunto.md"
     },
     {
-      "basename": "Punto aislado",
-      "path": "Análisis Matemático II/Punto aislado.md"
-    },
-    {
-      "basename": "Entorno circular",
-      "path": "Análisis Matemático II/Entorno circular.md"
-    },
-    {
       "basename": "Entorno reducido",
       "path": "Análisis Matemático II/Entorno reducido.md"
-    },
-    {
-      "basename": "Punto exterior",
-      "path": "Análisis Matemático II/Punto exterior.md"
     },
     {
       "basename": "Punto interior",
@@ -134,23 +170,7 @@
     },
     {
       "basename": "Probabilidad",
-      "path": "Probabilidades y Estadísticas/Probabilidad.md"
-    },
-    {
-      "basename": "Frecuencia relativa",
-      "path": "Probabilidades y Estadísticas/Frecuencia relativa.md"
-    },
-    {
-      "basename": "Probabilidad",
       "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
-    },
-    {
-      "basename": "Laplace",
-      "path": "Probabilidades y Estadísticas/Laplace.md"
-    },
-    {
-      "basename": "Frecuencia absoluta",
-      "path": "Probabilidades y Estadísticas/Frecuencia absoluta.md"
     },
     {
       "basename": "Evento",
@@ -179,26 +199,6 @@
     {
       "basename": "Operador relacional",
       "path": "Sintaxis y Semántica de los Lenguajes/Operador relacional.md"
-    },
-    {
-      "basename": "Operadores lógicos",
-      "path": "Algoritmos y Estructuras de Datos/Operadores lógicos.md"
-    },
-    {
-      "basename": "Autómata de estados finitos no determinístico",
-      "path": "Lógica y Estructuras Discretas/Autómata de estados finitos no determinístico.md"
-    },
-    {
-      "basename": "Teorema Fundamental del Cálculo Integral",
-      "path": "Análisis Matemático I/Teorema Fundamental del Cálculo Integral.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "Conjunto singleton",
-      "path": "Lógica y Estructuras Discretas/Conjunto singleton.md"
     }
   ],
   "omittedPaths": [],
