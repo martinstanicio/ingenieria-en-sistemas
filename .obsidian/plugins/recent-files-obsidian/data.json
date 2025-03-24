@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "Alfabeto",
+      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
+    },
+    {
+      "basename": "Cerradura de Kleene",
+      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
+    },
+    {
+      "basename": "Lenguaje",
+      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
+    },
+    {
+      "basename": "Lenguaje",
+      "path": "Ingeniería y Sociedad/Lenguaje.md"
+    },
+    {
+      "basename": "Cadena",
+      "path": "Lógica y Estructuras Discretas/Cadena.md"
+    },
+    {
+      "basename": "Algoritmo de Fleury",
+      "path": "Lógica y Estructuras Discretas/Algoritmo de Fleury.md"
+    },
+    {
       "basename": "Probabilidad",
       "path": "Probabilidades y Estadísticas/Probabilidad.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "Token",
       "path": "Sintaxis y Semántica de los Lenguajes/Token.md"
-    },
-    {
-      "basename": "Identificadores",
-      "path": "Sintaxis y Semántica de los Lenguajes/Identificadores.md"
-    },
-    {
-      "basename": "Gramática",
-      "path": "Lógica y Estructuras Discretas/Gramática.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
-    },
-    {
-      "basename": "Evento",
-      "path": "Probabilidades y Estadísticas/Evento.md"
-    },
-    {
-      "basename": "Espacio muestrario",
-      "path": "Probabilidades y Estadísticas/Espacio muestrario.md"
-    },
-    {
-      "basename": "Inducción estructural",
-      "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
     }
   ],
   "omittedPaths": [],
