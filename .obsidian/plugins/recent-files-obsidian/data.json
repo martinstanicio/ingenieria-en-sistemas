@@ -5,28 +5,44 @@
       "path": "Probabilidades y Estadísticas/Probabilidad.md"
     },
     {
+      "basename": "Interrupción",
+      "path": "Análisis de Sistemas de Información/Interrupción.md"
+    },
+    {
+      "basename": "Modificación",
+      "path": "Análisis de Sistemas de Información/Modificación.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
+      "basename": "Integridad",
+      "path": "Sistemas y Procesos de Negocios/Integridad.md"
+    },
+    {
+      "basename": "Intercepción",
+      "path": "Análisis de Sistemas de Información/Intercepción.md"
+    },
+    {
+      "basename": "Confidencialidad",
+      "path": "Sistemas y Procesos de Negocios/Confidencialidad.md"
+    },
+    {
+      "basename": "Disponibilidad",
+      "path": "Sistemas y Procesos de Negocios/Disponibilidad.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
       "basename": "Probabilidades y Estadísticas",
       "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
     },
     {
       "basename": "Función real de variable vectorial",
       "path": "Análisis Matemático II/Función real de variable vectorial.md"
-    },
-    {
-      "basename": "Paradigma",
-      "path": "Paradigmas de Programación/Paradigma.md"
-    },
-    {
-      "basename": "Paradigma lógico",
-      "path": "Paradigmas de Programación/Paradigma lógico.md"
-    },
-    {
-      "basename": "Paradigma funcional",
-      "path": "Paradigmas de Programación/Paradigma funcional.md"
-    },
-    {
-      "basename": "Paradigma orientado a objetos",
-      "path": "Paradigmas de Programación/Paradigma orientado a objetos.md"
     },
     {
       "basename": "Punto exterior",
@@ -183,22 +199,6 @@
     {
       "basename": "Inducción estructural",
       "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
-    },
-    {
-      "basename": "Traductor de lenguajes",
-      "path": "Sintaxis y Semántica de los Lenguajes/Traductor de lenguajes.md"
-    },
-    {
-      "basename": "Interpretador",
-      "path": "Algoritmos y Estructuras de Datos/Interpretador.md"
-    },
-    {
-      "basename": "Compilador",
-      "path": "Algoritmos y Estructuras de Datos/Compilador.md"
-    },
-    {
-      "basename": "Operador relacional",
-      "path": "Sintaxis y Semántica de los Lenguajes/Operador relacional.md"
     }
   ],
   "omittedPaths": [],

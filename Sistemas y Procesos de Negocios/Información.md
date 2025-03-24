@@ -1,12 +1,15 @@
 ---
 created: 2024-04-30 19:56:40
-modified: 2024-11-12 14:29:36
+modified: 2025-03-21 21:36:05
 title: Información
 ---
 
 # Información
 
-Es el [[Conocimiento]], que en un ==contexto dado== puede ser relevante y tener un significado ==para alguien particular==.
+Es el [[Conocimiento]], que en un ==contexto dado== puede ser relevante y tener un significado ==para alguien particular==. Sirve para **reducir la incertidumbre** al tomar decisiones.
+
+> [!tip]
+> Debe ser veraz, oportuna y en forma.
 
 > [!note]
 > Es la inversa de la [[Entropía]].
@@ -27,7 +30,7 @@ $$
 
 ## Atributos primarios
 
-La información cuenta con 3 [[Atributos]] principales:
+La [[Información]] cuenta con 3 [[Atributos]] principales:
 
 - [[Confidencialidad]]
 - [[Integridad]]
@@ -35,7 +38,7 @@ La información cuenta con 3 [[Atributos]] principales:
 
 ## Atributos secundarios
 
-La información cuenta con 6 [[Atributos]] secundarios:
+La [[Información]] cuenta con 6 [[Atributos]] secundarios:
 
 - [[Autenticidad]]
 - [[Trazabilidad]]
@@ -43,3 +46,11 @@ La información cuenta con 6 [[Atributos]] secundarios:
 - [[No repudio]]
 - [[Legalidad]]
 - [[Confiabilidad]]
+
+## Estados de la información
+
+La [[Información]] puede estar:
+
+- Almacenada
+- En tránsito
+- Bajo procesamiento
