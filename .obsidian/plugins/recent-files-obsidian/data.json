@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Alfabeto",
-      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
+      "basename": "Potencia de un lenguaje",
+      "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
     },
     {
       "basename": "Cerradura de Kleene",
       "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
+    },
+    {
+      "basename": "Cerradura positiva",
+      "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
     },
     {
       "basename": "Lenguaje",
@@ -15,6 +19,10 @@
     {
       "basename": "Lenguaje",
       "path": "Ingeniería y Sociedad/Lenguaje.md"
+    },
+    {
+      "basename": "Alfabeto",
+      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
     },
     {
       "basename": "Cadena",
@@ -191,14 +199,6 @@
     {
       "basename": "Léxico",
       "path": "Sintaxis y Semántica de los Lenguajes/Léxico.md"
-    },
-    {
-      "basename": "Lexema",
-      "path": "Sintaxis y Semántica de los Lenguajes/Lexema.md"
-    },
-    {
-      "basename": "Token",
-      "path": "Sintaxis y Semántica de los Lenguajes/Token.md"
     }
   ],
   "omittedPaths": [],

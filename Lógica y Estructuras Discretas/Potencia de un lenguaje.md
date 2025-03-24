@@ -1,6 +1,6 @@
 ---
 created: 2025-02-27 20:05:08
-modified: 2025-02-27 20:07:36
+modified: 2025-03-24 18:13:19
 title: Potencia de un lenguaje
 ---
 
@@ -12,7 +12,7 @@ $$
 L^n = \left\{
     \begin{array}{c}
         \set{\lambda} \space \text{si} \space n = 0 \\
-        AA^{n - 1} \space \text{si} \space n \geq 1 \\
+        LL^{n - 1} \space \text{si} \space n \geq 1 \\
     \end{array} 
 \right.
 $$
