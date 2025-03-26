@@ -1,16 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "Potencia de un lenguaje",
-      "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
+      "basename": "Medio guiado punto a punto",
+      "path": "Comunicación de Datos/Medio guiado punto a punto.md"
     },
     {
-      "basename": "Primer principio de la termodinámica",
-      "path": "Física II/Primer principio de la termodinámica.md"
+      "basename": "Medio guiado",
+      "path": "Comunicación de Datos/Medio guiado.md"
+    },
+    {
+      "basename": "Medio",
+      "path": "Comunicación de Datos/Medio.md"
+    },
+    {
+      "basename": "Medio no guiado",
+      "path": "Comunicación de Datos/Medio no guiado.md"
+    },
+    {
+      "basename": "Enlace directo",
+      "path": "Comunicación de Datos/Enlace directo.md"
+    },
+    {
+      "basename": "Transmisión",
+      "path": "Comunicación de Datos/Transmisión.md"
+    },
+    {
+      "basename": "Receptor",
+      "path": "Comunicación de Datos/Receptor.md"
+    },
+    {
+      "basename": "Emisor",
+      "path": "Comunicación de Datos/Emisor.md"
+    },
+    {
+      "basename": "Señal",
+      "path": "Comunicación de Datos/Señal.md"
     },
     {
       "basename": "Sistema",
       "path": "Física II/Sistema.md"
+    },
+    {
+      "basename": "Física II",
+      "path": "Física II/Física II.md"
+    },
+    {
+      "basename": "Potencia de un lenguaje",
+      "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
     },
     {
       "basename": "Integridad",
@@ -163,42 +199,6 @@
     {
       "basename": "Conjunto linealmente independiente",
       "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
-    },
-    {
-      "basename": "Conjunto linealmente dependiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente dependiente.md"
-    },
-    {
-      "basename": "Combinación lineal",
-      "path": "Álgebra y Geometría Analítica/Combinación lineal.md"
-    },
-    {
-      "basename": "Conjunto",
-      "path": "Lógica y Estructuras Discretas/Conjunto.md"
-    },
-    {
-      "basename": "Entorno reducido",
-      "path": "Análisis Matemático II/Entorno reducido.md"
-    },
-    {
-      "basename": "Punto interior",
-      "path": "Análisis Matemático II/Punto interior.md"
-    },
-    {
-      "basename": "Punto frontera",
-      "path": "Análisis Matemático I/Punto frontera.md"
-    },
-    {
-      "basename": "Entorno",
-      "path": "Análisis Matemático I/Entorno.md"
-    },
-    {
-      "basename": "Análisis Matemático II",
-      "path": "Análisis Matemático II/Análisis Matemático II.md"
-    },
-    {
-      "basename": "Sintaxis",
-      "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis.md"
     }
   ],
   "omittedPaths": [],
