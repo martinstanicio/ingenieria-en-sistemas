@@ -1,6 +1,62 @@
 {
   "recentFiles": [
     {
+      "basename": "Amplitud de pico",
+      "path": "Comunicación de Datos/Amplitud de pico.md"
+    },
+    {
+      "basename": "Frecuencia",
+      "path": "Comunicación de Datos/Frecuencia.md"
+    },
+    {
+      "basename": "Periodo",
+      "path": "Comunicación de Datos/Periodo.md"
+    },
+    {
+      "basename": "Señal periódica",
+      "path": "Comunicación de Datos/Señal periódica.md"
+    },
+    {
+      "basename": "Señal digital",
+      "path": "Comunicación de Datos/Señal digital.md"
+    },
+    {
+      "basename": "Señal analógica",
+      "path": "Comunicación de Datos/Señal analógica.md"
+    },
+    {
+      "basename": "Full-duplex",
+      "path": "Comunicación de Datos/Full-duplex.md"
+    },
+    {
+      "basename": "Half-duplex",
+      "path": "Comunicación de Datos/Half-duplex.md"
+    },
+    {
+      "basename": "Simplex",
+      "path": "Comunicación de Datos/Simplex.md"
+    },
+    {
+      "basename": "Criterio de la primera derivada",
+      "path": "Análisis Matemático I/Criterio de la primera derivada.md"
+    },
+    {
+      "basename": "Medio guiado multipunto",
+      "path": "Comunicación de Datos/Medio guiado multipunto.md"
+    },
+    {
+      "basename": "Derivadas laterales",
+      "path": "Análisis Matemático I/Derivadas laterales.md"
+    },
+    {
+      "basename": "Función",
+      "path": "Análisis Matemático I/Función.md"
+    },
+    {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
       "basename": "Medio guiado punto a punto",
       "path": "Comunicación de Datos/Medio guiado punto a punto.md"
     },
@@ -9,16 +65,16 @@
       "path": "Comunicación de Datos/Medio guiado.md"
     },
     {
+      "basename": "Enlace directo",
+      "path": "Comunicación de Datos/Enlace directo.md"
+    },
+    {
       "basename": "Medio",
       "path": "Comunicación de Datos/Medio.md"
     },
     {
       "basename": "Medio no guiado",
       "path": "Comunicación de Datos/Medio no guiado.md"
-    },
-    {
-      "basename": "Enlace directo",
-      "path": "Comunicación de Datos/Enlace directo.md"
     },
     {
       "basename": "Transmisión",
@@ -143,62 +199,6 @@
     {
       "basename": "Punto aislado",
       "path": "Análisis Matemático II/Punto aislado.md"
-    },
-    {
-      "basename": "Función vectorial de variable vectorial",
-      "path": "Análisis Matemático II/Función vectorial de variable vectorial.md"
-    },
-    {
-      "basename": "Función real de variable real",
-      "path": "Análisis Matemático II/Función real de variable real.md"
-    },
-    {
-      "basename": "Función vectorial de variable real",
-      "path": "Análisis Matemático II/Función vectorial de variable real.md"
-    },
-    {
-      "basename": "Dominio",
-      "path": "Análisis Matemático I/Dominio.md"
-    },
-    {
-      "basename": "Imagen",
-      "path": "Análisis Matemático I/Imagen.md"
-    },
-    {
-      "basename": "Conjunto cerrado",
-      "path": "Análisis Matemático II/Conjunto cerrado.md"
-    },
-    {
-      "basename": "Conjunto abierto",
-      "path": "Análisis Matemático II/Conjunto abierto.md"
-    },
-    {
-      "basename": "Espacio vectorial",
-      "path": "Álgebra y Geometría Analítica/Espacio vectorial.md"
-    },
-    {
-      "basename": "Conjunto conexo",
-      "path": "Análisis Matemático II/Conjunto conexo.md"
-    },
-    {
-      "basename": "Conjunto simplemente conexo",
-      "path": "Análisis Matemático II/Conjunto simplemente conexo.md"
-    },
-    {
-      "basename": "Conjunto múltiplemente conexo",
-      "path": "Análisis Matemático II/Conjunto múltiplemente conexo.md"
-    },
-    {
-      "basename": "Conjunto convexo",
-      "path": "Análisis Matemático II/Conjunto convexo.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
-    },
-    {
-      "basename": "Conjunto linealmente independiente",
-      "path": "Álgebra y Geometría Analítica/Conjunto linealmente independiente.md"
     }
   ],
   "omittedPaths": [],
