@@ -5,6 +5,26 @@
       "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
     },
     {
+      "basename": "Primer principio de la termodinámica",
+      "path": "Física II/Primer principio de la termodinámica.md"
+    },
+    {
+      "basename": "Sistema",
+      "path": "Física II/Sistema.md"
+    },
+    {
+      "basename": "Integridad",
+      "path": "Sistemas y Procesos de Negocios/Integridad.md"
+    },
+    {
+      "basename": "Intercepción",
+      "path": "Análisis de Sistemas de Información/Intercepción.md"
+    },
+    {
+      "basename": "Interrupción",
+      "path": "Análisis de Sistemas de Información/Interrupción.md"
+    },
+    {
       "basename": "Cerradura de Kleene",
       "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
     },
@@ -37,24 +57,12 @@
       "path": "Probabilidades y Estadísticas/Probabilidad.md"
     },
     {
-      "basename": "Interrupción",
-      "path": "Análisis de Sistemas de Información/Interrupción.md"
-    },
-    {
       "basename": "Modificación",
       "path": "Análisis de Sistemas de Información/Modificación.md"
     },
     {
       "basename": "Análisis de Sistemas de Información",
       "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
-    },
-    {
-      "basename": "Integridad",
-      "path": "Sistemas y Procesos de Negocios/Integridad.md"
-    },
-    {
-      "basename": "Intercepción",
-      "path": "Análisis de Sistemas de Información/Intercepción.md"
     },
     {
       "basename": "Confidencialidad",
@@ -191,14 +199,6 @@
     {
       "basename": "Sintaxis",
       "path": "Sintaxis y Semántica de los Lenguajes/Sintaxis.md"
-    },
-    {
-      "basename": "Semántica",
-      "path": "Sintaxis y Semántica de los Lenguajes/Semántica.md"
-    },
-    {
-      "basename": "Léxico",
-      "path": "Sintaxis y Semántica de los Lenguajes/Léxico.md"
     }
   ],
   "omittedPaths": [],
