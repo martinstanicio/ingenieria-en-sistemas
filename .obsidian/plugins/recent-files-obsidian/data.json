@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Amplitud de pico",
-      "path": "Comunicación de Datos/Amplitud de pico.md"
+      "basename": "Fase",
+      "path": "Comunicación de Datos/Fase.md"
+    },
+    {
+      "basename": "Onda sinusoidal",
+      "path": "Comunicación de Datos/Onda sinusoidal.md"
+    },
+    {
+      "basename": "Periodo",
+      "path": "Comunicación de Datos/Periodo.md"
     },
     {
       "basename": "Frecuencia",
       "path": "Comunicación de Datos/Frecuencia.md"
     },
     {
-      "basename": "Periodo",
-      "path": "Comunicación de Datos/Periodo.md"
+      "basename": "Amplitud",
+      "path": "Comunicación de Datos/Amplitud.md"
     },
     {
       "basename": "Señal periódica",
@@ -191,14 +199,6 @@
     {
       "basename": "Frecuencia absoluta",
       "path": "Probabilidades y Estadísticas/Frecuencia absoluta.md"
-    },
-    {
-      "basename": "Frecuencia relativa",
-      "path": "Probabilidades y Estadísticas/Frecuencia relativa.md"
-    },
-    {
-      "basename": "Punto aislado",
-      "path": "Análisis Matemático II/Punto aislado.md"
     }
   ],
   "omittedPaths": [],
