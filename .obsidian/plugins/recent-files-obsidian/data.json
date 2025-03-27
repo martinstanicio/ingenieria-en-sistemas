@@ -1,24 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "Transmisión digital",
+      "path": "Comunicación de Datos/Transmisión digital.md"
+    },
+    {
+      "basename": "Amplificador",
+      "path": "Comunicación de Datos/Amplificador.md"
+    },
+    {
+      "basename": "Transmisión analógica",
+      "path": "Comunicación de Datos/Transmisión analógica.md"
+    },
+    {
+      "basename": "Repetidor",
+      "path": "Comunicación de Datos/Repetidor.md"
+    },
+    {
+      "basename": "Señal analógica",
+      "path": "Comunicación de Datos/Señal analógica.md"
+    },
+    {
+      "basename": "Codec",
+      "path": "Comunicación de Datos/Codec.md"
+    },
+    {
+      "basename": "Señal digital",
+      "path": "Comunicación de Datos/Señal digital.md"
+    },
+    {
+      "basename": "Módem",
+      "path": "Comunicación de Datos/Módem.md"
+    },
+    {
+      "basename": "Dato analógico",
+      "path": "Comunicación de Datos/Dato analógico.md"
+    },
+    {
       "basename": "Dato digital",
       "path": "Comunicación de Datos/Dato digital.md"
     },
     {
-      "basename": "Presión",
-      "path": "Física I/Presión.md"
+      "basename": "Señal",
+      "path": "Comunicación de Datos/Señal.md"
     },
     {
-      "basename": "Señalización",
-      "path": "Comunicación de Datos/Señalización.md"
+      "basename": "Espectro",
+      "path": "Comunicación de Datos/Espectro.md"
     },
     {
-      "basename": "Frecuencia central",
-      "path": "Comunicación de Datos/Frecuencia central.md"
-    },
-    {
-      "basename": "Periodo",
-      "path": "Comunicación de Datos/Periodo.md"
+      "basename": "Ancho de banda absoluto",
+      "path": "Comunicación de Datos/Ancho de banda absoluto.md"
     },
     {
       "basename": "Ancho de banda",
@@ -29,32 +61,28 @@
       "path": "Comunicación de Datos/Componente continua.md"
     },
     {
-      "basename": "Ancho de banda absoluto",
-      "path": "Comunicación de Datos/Ancho de banda absoluto.md"
-    },
-    {
-      "basename": "Espectro",
-      "path": "Comunicación de Datos/Espectro.md"
-    },
-    {
-      "basename": "Señal",
-      "path": "Comunicación de Datos/Señal.md"
+      "basename": "Frecuencia",
+      "path": "Comunicación de Datos/Frecuencia.md"
     },
     {
       "basename": "Frecuencia fundamental",
       "path": "Comunicación de Datos/Frecuencia fundamental.md"
     },
     {
-      "basename": "Frecuencia",
-      "path": "Comunicación de Datos/Frecuencia.md"
+      "basename": "Periodo",
+      "path": "Comunicación de Datos/Periodo.md"
     },
     {
-      "basename": "Señal analógica",
-      "path": "Comunicación de Datos/Señal analógica.md"
+      "basename": "Frecuencia central",
+      "path": "Comunicación de Datos/Frecuencia central.md"
     },
     {
-      "basename": "Señal digital",
-      "path": "Comunicación de Datos/Señal digital.md"
+      "basename": "Señalización",
+      "path": "Comunicación de Datos/Señalización.md"
+    },
+    {
+      "basename": "Presión",
+      "path": "Física I/Presión.md"
     },
     {
       "basename": "Señal periódica",
@@ -171,34 +199,6 @@
     {
       "basename": "Medio",
       "path": "Comunicación de Datos/Medio.md"
-    },
-    {
-      "basename": "Medio no guiado",
-      "path": "Comunicación de Datos/Medio no guiado.md"
-    },
-    {
-      "basename": "Transmisión",
-      "path": "Comunicación de Datos/Transmisión.md"
-    },
-    {
-      "basename": "Receptor",
-      "path": "Comunicación de Datos/Receptor.md"
-    },
-    {
-      "basename": "Emisor",
-      "path": "Comunicación de Datos/Emisor.md"
-    },
-    {
-      "basename": "Sistema",
-      "path": "Física II/Sistema.md"
-    },
-    {
-      "basename": "Física II",
-      "path": "Física II/Física II.md"
-    },
-    {
-      "basename": "Potencia de un lenguaje",
-      "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
     }
   ],
   "omittedPaths": [],
