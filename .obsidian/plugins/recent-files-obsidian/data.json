@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Señal",
+      "path": "Comunicación de Datos/Señal.md"
+    },
+    {
+      "basename": "Periodo",
+      "path": "Comunicación de Datos/Periodo.md"
+    },
+    {
+      "basename": "Frecuencia fundamental",
+      "path": "Comunicación de Datos/Frecuencia fundamental.md"
+    },
+    {
+      "basename": "Frecuencia",
+      "path": "Comunicación de Datos/Frecuencia.md"
+    },
+    {
+      "basename": "Señal analógica",
+      "path": "Comunicación de Datos/Señal analógica.md"
+    },
+    {
+      "basename": "Señal digital",
+      "path": "Comunicación de Datos/Señal digital.md"
+    },
+    {
+      "basename": "Señal periódica",
+      "path": "Comunicación de Datos/Señal periódica.md"
+    },
+    {
+      "basename": "Amplitud",
+      "path": "Comunicación de Datos/Amplitud.md"
+    },
+    {
       "basename": "Fase",
       "path": "Comunicación de Datos/Fase.md"
+    },
+    {
+      "basename": "Longitud de onda",
+      "path": "Comunicación de Datos/Longitud de onda.md"
     },
     {
       "basename": "Variaciones",
@@ -55,30 +91,6 @@
     {
       "basename": "Onda sinusoidal",
       "path": "Comunicación de Datos/Onda sinusoidal.md"
-    },
-    {
-      "basename": "Periodo",
-      "path": "Comunicación de Datos/Periodo.md"
-    },
-    {
-      "basename": "Frecuencia",
-      "path": "Comunicación de Datos/Frecuencia.md"
-    },
-    {
-      "basename": "Amplitud",
-      "path": "Comunicación de Datos/Amplitud.md"
-    },
-    {
-      "basename": "Señal periódica",
-      "path": "Comunicación de Datos/Señal periódica.md"
-    },
-    {
-      "basename": "Señal digital",
-      "path": "Comunicación de Datos/Señal digital.md"
-    },
-    {
-      "basename": "Señal analógica",
-      "path": "Comunicación de Datos/Señal analógica.md"
     },
     {
       "basename": "Full-duplex",
@@ -145,10 +157,6 @@
       "path": "Comunicación de Datos/Emisor.md"
     },
     {
-      "basename": "Señal",
-      "path": "Comunicación de Datos/Señal.md"
-    },
-    {
       "basename": "Sistema",
       "path": "Física II/Sistema.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Alfabeto",
       "path": "Lógica y Estructuras Discretas/Alfabeto.md"
-    },
-    {
-      "basename": "Cadena",
-      "path": "Lógica y Estructuras Discretas/Cadena.md"
-    },
-    {
-      "basename": "Algoritmo de Fleury",
-      "path": "Lógica y Estructuras Discretas/Algoritmo de Fleury.md"
     }
   ],
   "omittedPaths": [],

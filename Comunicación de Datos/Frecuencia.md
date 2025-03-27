@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Frecuencias
 created: 2025-03-26 14:30:05
-modified: 2025-03-26 14:32:14
+modified: 2025-03-27 00:37:16
 title: Frecuencia
 ---
 
