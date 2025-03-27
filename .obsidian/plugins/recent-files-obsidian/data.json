@@ -1,12 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "Señal",
-      "path": "Comunicación de Datos/Señal.md"
+      "basename": "Dato digital",
+      "path": "Comunicación de Datos/Dato digital.md"
+    },
+    {
+      "basename": "Presión",
+      "path": "Física I/Presión.md"
+    },
+    {
+      "basename": "Señalización",
+      "path": "Comunicación de Datos/Señalización.md"
+    },
+    {
+      "basename": "Frecuencia central",
+      "path": "Comunicación de Datos/Frecuencia central.md"
     },
     {
       "basename": "Periodo",
       "path": "Comunicación de Datos/Periodo.md"
+    },
+    {
+      "basename": "Ancho de banda",
+      "path": "Comunicación de Datos/Ancho de banda.md"
+    },
+    {
+      "basename": "Componente continua",
+      "path": "Comunicación de Datos/Componente continua.md"
+    },
+    {
+      "basename": "Ancho de banda absoluto",
+      "path": "Comunicación de Datos/Ancho de banda absoluto.md"
+    },
+    {
+      "basename": "Espectro",
+      "path": "Comunicación de Datos/Espectro.md"
+    },
+    {
+      "basename": "Señal",
+      "path": "Comunicación de Datos/Señal.md"
     },
     {
       "basename": "Frecuencia fundamental",
@@ -167,38 +199,6 @@
     {
       "basename": "Potencia de un lenguaje",
       "path": "Lógica y Estructuras Discretas/Potencia de un lenguaje.md"
-    },
-    {
-      "basename": "Integridad",
-      "path": "Sistemas y Procesos de Negocios/Integridad.md"
-    },
-    {
-      "basename": "Intercepción",
-      "path": "Análisis de Sistemas de Información/Intercepción.md"
-    },
-    {
-      "basename": "Interrupción",
-      "path": "Análisis de Sistemas de Información/Interrupción.md"
-    },
-    {
-      "basename": "Cerradura de Kleene",
-      "path": "Lógica y Estructuras Discretas/Cerradura de Kleene.md"
-    },
-    {
-      "basename": "Cerradura positiva",
-      "path": "Lógica y Estructuras Discretas/Cerradura positiva.md"
-    },
-    {
-      "basename": "Lenguaje",
-      "path": "Lógica y Estructuras Discretas/Lenguaje.md"
-    },
-    {
-      "basename": "Lenguaje",
-      "path": "Ingeniería y Sociedad/Lenguaje.md"
-    },
-    {
-      "basename": "Alfabeto",
-      "path": "Lógica y Estructuras Discretas/Alfabeto.md"
     }
   ],
   "omittedPaths": [],
