@@ -1,6 +1,6 @@
 ---
 created: 2025-03-19 19:41:57
-modified: 2025-03-19 19:58:52
+modified: 2025-03-26 18:42:46
 title: Probabilidad
 ---
 
@@ -18,4 +18,4 @@ La [[Análisis Matemático I/Función|Función]] $P$ cumple las siguientes condi
 
 1. Para todo [[Evento]] de $S$: $0 \leq P(A) \leq$
 2. $P(S) = 1$
-3. Si dos [[Evento|Eventos]] $A$ y $B$ verifican que no tienen [[Intersección (∩)]], es decir $A \cap B = \emptyset$, la [[Probabilidades y Estadísticas/Probabilidad|Probabilidad]] de $P(A \cup B) = P(A) + P(B)$
+3. Si dos [[Evento|Eventos]] $A$ y $B$ verifican que no tienen [[Intersección (∩)]], es decir $A \cap B = \emptyset$, la [[Probabilidades y Estadísticas/Probabilidad|Probabilidad]] de $P(A \cup B) = P(A) + P(B)$. Caso contrario, $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
