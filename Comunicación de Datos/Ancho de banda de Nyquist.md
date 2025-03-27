@@ -1,16 +1,26 @@
+---
+created: 2025-03-27 14:49:56
+modified: 2025-03-27 15:05:52
+title: Ancho de banda de Nyquist
+---
+
 # Ancho de banda de Nyquist
-The Nyquist bandwidth refers to a limitation on the data rate in a noise-free channel based solely on the bandwidth of the signal. Nyquist stated that if the rate of signal transmission is 2B, then a signal with frequencies no greater than B is sufficient to carry that signal rate. Conversely, given a bandwidth of B, the highest signal rate that can be carried is 2B. This limitation arises due to intersymbol interference, which can be caused by delay distortion.
 
-For binary signals (two voltage levels), a bandwidth of B Hz can support a data rate of **2B bps**. However, if signals with more than two levels (multilevel signaling) are used, each signal element can represent more than one bit, and the Nyquist formulation becomes:
+El [[Ancho de banda de Nyquist]] dice que en un [[Comunicación de Datos/Medio|Medio]] libre de [[Ruido]], la [[Capacidad del canal]] está limitada únicamente por el [[Ancho de banda]]. Dado un [[Ancho de banda]] $B$, la máxima velocidad de [[Transmisión]] que se puede alcanzar es $2B$.
 
-**C = 2B log₂ M**
+> [!note]
+> Esta limitación ocurre debido a la interferencia generada por la [[Distorsión de retardo]].
 
-where:
+> [!danger]
+> El [[Ancho de banda de Nyquist]] asume un [[Comunicación de Datos/Medio|Medio]] libre de [[Ruido]], algo prácticamente imposible de alcanzar en la realidad.
 
-- C is the channel capacity.
-- B is the bandwidth.
-- M is the number of discrete signal levels.
+Para [[Señal|Señales]] ==binarias== (dos voltajes), un [[Ancho de banda]] de $B \space \text{Hz}$ soporta una velocidad de [[Transmisión]] de $2B \space \text{bps}$. Sin embargo, con [[Señalización]] ==multinivel== cada nivel de tensión puede representar más de un [[Bit]], y la formulación de Nyquist para obtener la [[Capacidad del canal]] es la siguiente.
 
-For example, a voice channel with a bandwidth of 3100 Hz has a Nyquist capacity of **6200 bps** for binary signals (M=2). With multilevel signaling, such as M=8, the capacity becomes **18,600 bps** for the same bandwidth.
+$$
+C = 2B \cdot \log_2 M
+$$
 
-It's important to note that the Nyquist formulation considers a noise-free channel. In real-world scenarios, noise is a significant limiting factor, and the maximum achievable data rate is often better described by the Shannon Capacity Formula, which takes into account the signal-to-noise ratio (SNR). Nyquist's formula is particularly useful in the development of digital-to-analog encoding schemes. The term 'Nyquist bandwidth' is a key term related to channel capacity. The works of Shannon and Nyquist both place upper limits on the bit rate of a channel but based on different approaches.
+Donde $M$ es el número de niveles de tensión utilizados.
+
+> [!warning]
+> El valor de $M$ está limitado por la dificultad del [[Receptor]] para interpretar [[Señal|Señales]] multinivel debido al [[Ruido]], entre otras dificultades.

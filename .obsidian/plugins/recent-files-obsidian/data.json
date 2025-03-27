@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Cociente $E_bN_0$",
+      "path": "Comunicación de Datos/Cociente $E_bN_0$.md"
+    },
+    {
+      "basename": "Relación señal-ruido",
+      "path": "Comunicación de Datos/Relación señal-ruido.md"
+    },
+    {
       "basename": "Ancho de banda de Nyquist",
       "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
     },
     {
-      "basename": "Capacidad de un canal",
-      "path": "Comunicación de Datos/Capacidad de un canal.md"
+      "basename": "Capacidad del canal",
+      "path": "Comunicación de Datos/Capacidad del canal.md"
     },
     {
       "basename": "Ruido impulsivo",
@@ -191,14 +199,6 @@
     {
       "basename": "Límite simultáneo",
       "path": "Análisis Matemático II/Límite simultáneo.md"
-    },
-    {
-      "basename": "Onda sinusoidal",
-      "path": "Comunicación de Datos/Onda sinusoidal.md"
-    },
-    {
-      "basename": "Full-duplex",
-      "path": "Comunicación de Datos/Full-duplex.md"
     }
   ],
   "omittedPaths": [],
