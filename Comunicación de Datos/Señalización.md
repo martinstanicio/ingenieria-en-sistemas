@@ -5,4 +5,4 @@ title: Señalización
 ---
 # Señalización
 
-La propagación física de las [[Señal|Señales]] a través de un [[Medio]] adecuado.
+La propagación física de las [[Señal|Señales]] a través de un [[Comunicación de Datos/Medio]] adecuado.

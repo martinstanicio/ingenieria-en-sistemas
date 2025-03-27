@@ -15,7 +15,7 @@ La banda de [[Frecuencia|Frecuencias]] donde se concentra la mayor parte de la [
 Esta banda suele ser más estrecha que el [[Espectro]], pero también pueden ser iguales.
 
 > [!danger]
-> Mientras mayor sea el [[Ancho de banda]] que un [[Medio]] permita transmitir, mayor será el **costo**.
+> Mientras mayor sea el [[Ancho de banda]] que un [[Comunicación de Datos/Medio]] permita transmitir, mayor será el **costo**.
 > 
 > Mientras más limitado sea el [[Ancho de banda]], mayor será la **distorsión**, y mayor la probabilidad de que se cometan **errores** en el [[Receptor]].
 

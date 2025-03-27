@@ -9,4 +9,4 @@ title: Medio guiado punto a punto
 Un [[Medio guiado]] donde se proporciona un [[Enlace directo]] entre el [[Emisor]] y el [[Receptor]].
 
 > [!tip]
-> El [[Emisor]] y el [[Receptor]] son los únicos dispositivos conectados al [[Medio]].
+> El [[Emisor]] y el [[Receptor]] son los únicos dispositivos conectados al [[Comunicación de Datos/Medio]].

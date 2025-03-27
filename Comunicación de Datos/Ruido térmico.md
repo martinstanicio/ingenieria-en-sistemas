@@ -8,7 +8,7 @@ title: Ruido térmico
 
 # Ruido térmico
 
-Un tipo de [[Ruido]] generado por la ==agitación térmica de los electrones==. Existe en todos los [[Medio|Medios de transmisión]], y está uniformemente distribuido en el [[Espectro]], por lo que se lo suele llamar ==ruido blanco==.
+Un tipo de [[Ruido]] generado por la ==agitación térmica de los electrones==. Existe en todos los [[Comunicación de Datos/Medio|Medios de transmisión]], y está uniformemente distribuido en el [[Espectro]], por lo que se lo suele llamar ==ruido blanco==.
 
 > [!important]
 > El [[Ruido térmico]] no se puede eliminar.

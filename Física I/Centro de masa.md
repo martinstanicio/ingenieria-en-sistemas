@@ -1,12 +1,12 @@
 ---
 created: 2024-10-31 10:55:59
-modified: 2024-10-31 12:20:40
+modified: 2025-03-27 10:30:47
 title: Centro de masa
 ---
 
 # Centro de masa
 
-Es el punto en un **sistema de partículas** en el cual se puede considerar que está concentrada toda la masa, con el fin de analizar su [[Movimiento]].
+Es el punto en un **sistema de partículas** en el cual se puede considerar que está concentrada toda la [[Masa]], con el fin de analizar su [[Movimiento]].
 
 > [!important]
 > Este punto se comporta como si todas las [[Fuerza|Fuerzas]] externas estuvieran actuando sobre él.

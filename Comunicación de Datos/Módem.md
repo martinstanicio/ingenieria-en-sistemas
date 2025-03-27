@@ -9,6 +9,6 @@ title: Módem
 Su nombre es un acrónimo de ==modulador/demodulador==. Es un dispositivo que convierte una [[Señal digital]] (serie de pulsos binarios) en una [[Señal analógica]], codificando los [[Dato digital|Datos digitales]].
 
 > [!tip]
-> Los [[Módem]] más convencionales suelen utilizar el [[Espectro]] de la voz, lo que les permite utilizar **líneas telefónicas** como [[Medio]].
+> Los [[Módem]] más convencionales suelen utilizar el [[Espectro]] de la voz, lo que les permite utilizar **líneas telefónicas** como [[Comunicación de Datos/Medio]].
 
 En el otro extremo de la línea, el [[Módem]] demodula la [[Señal]] para recuperar los [[Dato digital|Datos digitales]] originales.

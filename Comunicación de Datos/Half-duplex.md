@@ -6,7 +6,7 @@ title: Half-duplex
 
 # Half-duplex
 
-Un [[Medio]] o [[Transmisión]] bidireccional, donde ambas estaciones pueden transmitir [[Señal|Señales]], pero ==no simultáneamente==.
+Un [[Comunicación de Datos/Medio]] o [[Transmisión]] bidireccional, donde ambas estaciones pueden transmitir [[Señal|Señales]], pero ==no simultáneamente==.
 
 > [!note]
 > Ambas estaciones pueden ser el [[Emisor]] y el [[Receptor]], pero deben turnarse.

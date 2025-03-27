@@ -5,7 +5,7 @@ title: Full-duplex
 ---
 # Full-duplex
 
-Un [[Medio]] o [[Transmisión]] bidireccional, donde ambas estaciones pueden transmitir [[Señal|Señales]] ==simultáneamente==.
+Un [[Comunicación de Datos/Medio]] o [[Transmisión]] bidireccional, donde ambas estaciones pueden transmitir [[Señal|Señales]] ==simultáneamente==.
 
 > [!note]
-> Para esto, el [[Medio]] transmite [[Señal|Señales]] en ambas sentidos al mismo tiempo.
+> Para esto, el [[Comunicación de Datos/Medio]] transmite [[Señal|Señales]] en ambas sentidos al mismo tiempo.

@@ -6,4 +6,4 @@ title: Transmisión
 
 # Transmisión
 
-La [[Transmisión]] es la comunicación de [[Dato|Datos]] mediante la ==propagación y procesamiento== de [[Señal|Señales]], a través de un [[Medio]].
+La [[Transmisión]] es la comunicación de [[Dato|Datos]] mediante la ==propagación y procesamiento== de [[Señal|Señales]], a través de un [[Comunicación de Datos/Medio]].

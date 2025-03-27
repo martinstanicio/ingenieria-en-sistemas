@@ -10,6 +10,6 @@ title: Medio no guiado
 
 # Medio no guiado
 
-Un [[Medio]] donde las ondas electromagnéticas ==se transmiten sin confinarlas==.
+Un [[Comunicación de Datos/Medio]] donde las ondas electromagnéticas ==se transmiten sin confinarlas==.
 
 Por ejemplo, en la propagación a través del aire, el mar o el vacío.

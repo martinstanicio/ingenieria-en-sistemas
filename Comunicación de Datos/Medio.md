@@ -8,7 +8,7 @@ title: Medio
 
 # Medio
 
-Un [[Medio]] de [[Transmisión]] es el camino físico entre el [[Emisor]] y el [[Receptor]].
+Un [[Comunicación de Datos/Medio]] de [[Transmisión]] es el camino físico entre el [[Emisor]] y el [[Receptor]].
 
 Puede ser un [[Medio guiado]] o [[Medio no guiado]].
 

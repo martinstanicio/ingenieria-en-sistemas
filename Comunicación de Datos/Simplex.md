@@ -5,7 +5,7 @@ title: Simplex
 ---
 # Simplex
 
-Un [[Medio]] o [[Transmisión]] donde las [[Señal|Señales]] se transmiten en una ==única dirección==.
+Un [[Comunicación de Datos/Medio]] o [[Transmisión]] donde las [[Señal|Señales]] se transmiten en una ==única dirección==.
 
 > [!note]
 > Existe un único [[Emisor]] y un único [[Receptor]].

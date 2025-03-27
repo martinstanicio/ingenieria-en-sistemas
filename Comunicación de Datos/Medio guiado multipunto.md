@@ -6,4 +6,4 @@ title: Medio guiado multipunto
 
 # Medio guiado multipunto
 
-Un [[Medio guiado]] donde el mismo [[Medio]] es compartido por ==más de dos dispositivos==.
+Un [[Medio guiado]] donde el mismo [[Comunicación de Datos/Medio]] es compartido por ==más de dos dispositivos==.
