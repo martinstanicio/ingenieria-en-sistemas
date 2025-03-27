@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "Ecualización",
-      "path": "Comunicación de Datos/Ecualización.md"
+      "basename": "Ruido impulsivo",
+      "path": "Ruido impulsivo.md"
+    },
+    {
+      "basename": "Ruido",
+      "path": "Ruido.md"
+    },
+    {
+      "basename": "Ruido térmico",
+      "path": "Ruido térmico.md"
+    },
+    {
+      "basename": "Diafonía",
+      "path": "Diafonía.md"
+    },
+    {
+      "basename": "Ruido de intermodulación",
+      "path": "Ruido de intermodulación.md"
+    },
+    {
+      "basename": "Constante de Boltzmann",
+      "path": "Constante de Boltzmann.md"
+    },
+    {
+      "basename": "Distorsión de retardo",
+      "path": "Comunicación de Datos/Distorsión de retardo.md"
     },
     {
       "basename": "Atenuación",
       "path": "Comunicación de Datos/Atenuación.md"
+    },
+    {
+      "basename": "Ecualización",
+      "path": "Comunicación de Datos/Ecualización.md"
     },
     {
       "basename": "Transmisión digital",
@@ -171,34 +199,6 @@
     {
       "basename": "Simplex",
       "path": "Comunicación de Datos/Simplex.md"
-    },
-    {
-      "basename": "Criterio de la primera derivada",
-      "path": "Análisis Matemático I/Criterio de la primera derivada.md"
-    },
-    {
-      "basename": "Medio guiado multipunto",
-      "path": "Comunicación de Datos/Medio guiado multipunto.md"
-    },
-    {
-      "basename": "Derivadas laterales",
-      "path": "Análisis Matemático I/Derivadas laterales.md"
-    },
-    {
-      "basename": "Función",
-      "path": "Análisis Matemático I/Función.md"
-    },
-    {
-      "basename": "Derivada",
-      "path": "Análisis Matemático I/Derivada.md"
-    },
-    {
-      "basename": "Medio guiado punto a punto",
-      "path": "Comunicación de Datos/Medio guiado punto a punto.md"
-    },
-    {
-      "basename": "Medio guiado",
-      "path": "Comunicación de Datos/Medio guiado.md"
     }
   ],
   "omittedPaths": [],
