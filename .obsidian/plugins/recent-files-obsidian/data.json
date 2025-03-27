@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Ecualización",
+      "path": "Comunicación de Datos/Ecualización.md"
+    },
+    {
+      "basename": "Atenuación",
+      "path": "Comunicación de Datos/Atenuación.md"
+    },
+    {
       "basename": "Transmisión digital",
       "path": "Comunicación de Datos/Transmisión digital.md"
+    },
+    {
+      "basename": "Repetidor",
+      "path": "Comunicación de Datos/Repetidor.md"
     },
     {
       "basename": "Amplificador",
@@ -11,10 +23,6 @@
     {
       "basename": "Transmisión analógica",
       "path": "Comunicación de Datos/Transmisión analógica.md"
-    },
-    {
-      "basename": "Repetidor",
-      "path": "Comunicación de Datos/Repetidor.md"
     },
     {
       "basename": "Señal analógica",
@@ -191,14 +199,6 @@
     {
       "basename": "Medio guiado",
       "path": "Comunicación de Datos/Medio guiado.md"
-    },
-    {
-      "basename": "Enlace directo",
-      "path": "Comunicación de Datos/Enlace directo.md"
-    },
-    {
-      "basename": "Medio",
-      "path": "Comunicación de Datos/Medio.md"
     }
   ],
   "omittedPaths": [],
