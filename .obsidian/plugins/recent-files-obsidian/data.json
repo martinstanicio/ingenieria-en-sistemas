@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Ancho de banda de Nyquist",
+      "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
+    },
+    {
+      "basename": "Capacidad de un canal",
+      "path": "Comunicación de Datos/Capacidad de un canal.md"
+    },
+    {
       "basename": "Ruido impulsivo",
       "path": "Ruido impulsivo.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Full-duplex",
       "path": "Comunicación de Datos/Full-duplex.md"
-    },
-    {
-      "basename": "Half-duplex",
-      "path": "Comunicación de Datos/Half-duplex.md"
-    },
-    {
-      "basename": "Simplex",
-      "path": "Comunicación de Datos/Simplex.md"
     }
   ],
   "omittedPaths": [],
