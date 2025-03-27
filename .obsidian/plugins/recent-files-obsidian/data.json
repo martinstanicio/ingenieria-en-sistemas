@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Decibelio",
+      "path": "Comunicación de Datos/Decibelio.md"
+    },
+    {
       "basename": "Cociente $E_bN_0$",
       "path": "Comunicación de Datos/Cociente $E_bN_0$.md"
     },
@@ -191,14 +195,6 @@
     {
       "basename": "Evento",
       "path": "Probabilidades y Estadísticas/Evento.md"
-    },
-    {
-      "basename": "Experimento",
-      "path": "Probabilidades y Estadísticas/Experimento.md"
-    },
-    {
-      "basename": "Límite simultáneo",
-      "path": "Análisis Matemático II/Límite simultáneo.md"
     }
   ],
   "omittedPaths": [],
