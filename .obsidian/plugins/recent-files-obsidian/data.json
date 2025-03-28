@@ -1,10 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "Decibelio",
-      "path": "Comunicación de Datos/Decibelio.md"
-    },
-    {
       "basename": "Cociente $E_bN_0$",
       "path": "Comunicación de Datos/Cociente $E_bN_0$.md"
     },
@@ -15,6 +11,26 @@
     {
       "basename": "Ancho de banda de Nyquist",
       "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
+    },
+    {
+      "basename": "Ecualización",
+      "path": "Comunicación de Datos/Ecualización.md"
+    },
+    {
+      "basename": "Diafonía",
+      "path": "Comunicación de Datos/Diafonía.md"
+    },
+    {
+      "basename": "Ruido de intermodulación",
+      "path": "Comunicación de Datos/Ruido de intermodulación.md"
+    },
+    {
+      "basename": "Códec",
+      "path": "Comunicación de Datos/Códec.md"
+    },
+    {
+      "basename": "Decibelio",
+      "path": "Comunicación de Datos/Decibelio.md"
     },
     {
       "basename": "Capacidad del canal",
@@ -53,10 +69,6 @@
       "path": "Comunicación de Datos/Atenuación.md"
     },
     {
-      "basename": "Ecualización",
-      "path": "Comunicación de Datos/Ecualización.md"
-    },
-    {
       "basename": "Transmisión digital",
       "path": "Comunicación de Datos/Transmisión digital.md"
     },
@@ -75,10 +87,6 @@
     {
       "basename": "Señal analógica",
       "path": "Comunicación de Datos/Señal analógica.md"
-    },
-    {
-      "basename": "Codec",
-      "path": "Comunicación de Datos/Codec.md"
     },
     {
       "basename": "Señal digital",
@@ -191,10 +199,6 @@
     {
       "basename": "Laplace",
       "path": "Probabilidades y Estadísticas/Laplace.md"
-    },
-    {
-      "basename": "Evento",
-      "path": "Probabilidades y Estadísticas/Evento.md"
     }
   ],
   "omittedPaths": [],
