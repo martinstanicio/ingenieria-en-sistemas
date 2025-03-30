@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Untitled",
+      "path": "Untitled.md"
+    },
+    {
       "basename": "Cociente $E_bN_0$",
       "path": "Comunicación de Datos/Cociente $E_bN_0$.md"
+    },
+    {
+      "basename": "Actividades",
+      "path": "Sistemas y Procesos de Negocios/Actividades.md"
+    },
+    {
+      "basename": "Trabajo",
+      "path": "Física I/Trabajo.md"
+    },
+    {
+      "basename": "Decibelio",
+      "path": "Comunicación de Datos/Decibelio.md"
+    },
+    {
+      "basename": "Frecuencia fundamental",
+      "path": "Comunicación de Datos/Frecuencia fundamental.md"
+    },
+    {
+      "basename": "Primer principio de la termodinámica",
+      "path": "Física I/Primer principio de la termodinámica.md"
     },
     {
       "basename": "Relación señal-ruido",
@@ -27,10 +51,6 @@
     {
       "basename": "Códec",
       "path": "Comunicación de Datos/Códec.md"
-    },
-    {
-      "basename": "Decibelio",
-      "path": "Comunicación de Datos/Decibelio.md"
     },
     {
       "basename": "Capacidad del canal",
@@ -129,10 +149,6 @@
       "path": "Comunicación de Datos/Frecuencia.md"
     },
     {
-      "basename": "Frecuencia fundamental",
-      "path": "Comunicación de Datos/Frecuencia fundamental.md"
-    },
-    {
       "basename": "Periodo",
       "path": "Comunicación de Datos/Periodo.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "Permutaciones con repetición",
       "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
-    },
-    {
-      "basename": "Permutaciones",
-      "path": "Probabilidades y Estadísticas/Permutaciones.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Probabilidades y Estadísticas/Probabilidad.md"
-    },
-    {
-      "basename": "Probabilidades y Estadísticas",
-      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
-    },
-    {
-      "basename": "Laplace",
-      "path": "Probabilidades y Estadísticas/Laplace.md"
     }
   ],
   "omittedPaths": [],

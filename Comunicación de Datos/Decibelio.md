@@ -4,13 +4,13 @@ aliases:
   - Decibelios
   - Decibels
 created: 2025-03-27 16:14:25
-modified: 2025-03-27 16:28:47
+modified: 2025-03-28 20:18:37
 title: Decibelio
 ---
 
 # Decibelio
 
-Una medida ==logarítmica== que sirve para medir la ==diferencia relativa== entre dos [[Señal|Señales]].
+Una medida adimensional, de escala ==logarítmica==, que sirve para medir la ==diferencia relativa== entre dos [[Señal|Señales]].
 
 > [!warning]
 > Es una medida ==relativa==, no absoluta.
