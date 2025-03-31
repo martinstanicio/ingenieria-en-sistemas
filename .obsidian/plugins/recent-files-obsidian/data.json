@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Ecuación de estado de los gases ideales",
-      "path": "Física II/Ecuación de estado de los gases ideales.md"
+      "basename": "Combinaciones",
+      "path": "Probabilidades y Estadísticas/Combinaciones.md"
     },
     {
-      "basename": "Gas ideal",
-      "path": "Física II/Gas ideal.md"
+      "basename": "Variaciones",
+      "path": "Probabilidades y Estadísticas/Variaciones.md"
+    },
+    {
+      "basename": "Permutaciones",
+      "path": "Probabilidades y Estadísticas/Permutaciones.md"
+    },
+    {
+      "basename": "Transformación isócora",
+      "path": "Física II/Transformación isócora.md"
     },
     {
       "basename": "Transformación isotérmica",
@@ -17,24 +25,40 @@
       "path": "Física II/Transformación isobárica.md"
     },
     {
-      "basename": "Presión",
-      "path": "Física I/Presión.md"
-    },
-    {
       "basename": "Transformación adiabática",
       "path": "Física II/Transformación adiabática.md"
-    },
-    {
-      "basename": "Calor",
-      "path": "Física II/Calor.md"
     },
     {
       "basename": "Transformación",
       "path": "Física II/Transformación.md"
     },
     {
+      "basename": "Volumen",
+      "path": "Física II/Volumen.md"
+    },
+    {
       "basename": "Temperatura",
       "path": "Física II/Temperatura.md"
+    },
+    {
+      "basename": "Presión",
+      "path": "Física I/Presión.md"
+    },
+    {
+      "basename": "Gas ideal",
+      "path": "Física II/Gas ideal.md"
+    },
+    {
+      "basename": "Ecuación de estado de los gases ideales",
+      "path": "Física II/Ecuación de estado de los gases ideales.md"
+    },
+    {
+      "basename": "Constante de los gases ideales",
+      "path": "Física II/Constante de los gases ideales.md"
+    },
+    {
+      "basename": "Calor",
+      "path": "Física II/Calor.md"
     },
     {
       "basename": "Primer principio de la termodinámica",
@@ -175,30 +199,6 @@
     {
       "basename": "Módem",
       "path": "Comunicación de Datos/Módem.md"
-    },
-    {
-      "basename": "Dato analógico",
-      "path": "Comunicación de Datos/Dato analógico.md"
-    },
-    {
-      "basename": "Dato digital",
-      "path": "Comunicación de Datos/Dato digital.md"
-    },
-    {
-      "basename": "Señal",
-      "path": "Comunicación de Datos/Señal.md"
-    },
-    {
-      "basename": "Espectro",
-      "path": "Comunicación de Datos/Espectro.md"
-    },
-    {
-      "basename": "Ancho de banda absoluto",
-      "path": "Comunicación de Datos/Ancho de banda absoluto.md"
-    },
-    {
-      "basename": "Ancho de banda",
-      "path": "Comunicación de Datos/Ancho de banda.md"
     }
   ],
   "omittedPaths": [],
