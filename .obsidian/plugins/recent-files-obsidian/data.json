@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "Permutaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
+      "basename": "Variaciones con repetición",
+      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
+    },
+    {
+      "basename": "Variaciones",
+      "path": "Probabilidades y Estadísticas/Variaciones.md"
     },
     {
       "basename": "Anagramas",
@@ -47,10 +51,6 @@
     {
       "basename": "Probabilidad condicional",
       "path": "Probabilidades y Estadísticas/Probabilidad condicional.md"
-    },
-    {
-      "basename": "Variaciones",
-      "path": "Probabilidades y Estadísticas/Variaciones.md"
     },
     {
       "basename": "Transformación isócora",

@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Variaciones sin repetición
 created: 2025-03-26 19:01:23
-modified: 2025-03-31 10:36:38
+modified: 2025-03-31 11:13:39
 title: Variaciones
 ---
 
