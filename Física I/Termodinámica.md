@@ -1,9 +1,9 @@
 ---
 created: 2024-03-21 22:08:19
-modified: 2024-05-08 01:33:31
+modified: 2025-03-31 09:34:19
 title: Termodinámica
 ---
 
 # Termodinámica
 
-Estudia los tipos de [[Energía]], en especial la que deriva del calor y la temperatura, así como los procesos de transferencia de energía calórica y sus efectos en los cuerpos.
+Estudia los tipos de [[Energía]], en especial la que deriva del [[Calor]] y la [[Temperatura]], así como los procesos de transferencia de [[Energía]] calórica y sus efectos en los cuerpos.

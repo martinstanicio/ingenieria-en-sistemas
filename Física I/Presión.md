@@ -1,6 +1,6 @@
 ---
 created: 2024-10-31 13:02:28
-modified: 2024-10-31 14:54:15
+modified: 2025-03-31 09:46:05
 title: Presión
 ---
 
@@ -14,15 +14,18 @@ $$
 P = \frac{F}{A}
 $$
 
-> [!important]
+> [!note]
 > En el **Sistema Internacional**, la unidad de medición de la [[Presión]] es el *Pascal*.
 >
 > $$
 > Pa = \frac{N}{m^2}
 > $$
 
-> [!note]
+> [!tip]
 > La [[Presión]] disminuye conforme aumenta la **elevación**.
+
+> [!important]
+> Cuando en una [[Transformación]] la [[Presión]] $P$ se mantiene constante $P_0 = P_f$, estamos ante una [[Transformación isobárica]].
 
 ## Presión hidrostática
 

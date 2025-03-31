@@ -1,16 +1,80 @@
 {
   "recentFiles": [
     {
+      "basename": "Ecuación de estado de los gases ideales",
+      "path": "Física II/Ecuación de estado de los gases ideales.md"
+    },
+    {
+      "basename": "Gas ideal",
+      "path": "Física II/Gas ideal.md"
+    },
+    {
+      "basename": "Transformación isotérmica",
+      "path": "Física II/Transformación isotérmica.md"
+    },
+    {
+      "basename": "Transformación isobárica",
+      "path": "Física II/Transformación isobárica.md"
+    },
+    {
+      "basename": "Presión",
+      "path": "Física I/Presión.md"
+    },
+    {
+      "basename": "Transformación adiabática",
+      "path": "Física II/Transformación adiabática.md"
+    },
+    {
+      "basename": "Calor",
+      "path": "Física II/Calor.md"
+    },
+    {
+      "basename": "Transformación",
+      "path": "Física II/Transformación.md"
+    },
+    {
+      "basename": "Temperatura",
+      "path": "Física II/Temperatura.md"
+    },
+    {
+      "basename": "Primer principio de la termodinámica",
+      "path": "Física II/Primer principio de la termodinámica.md"
+    },
+    {
+      "basename": "Energía interna",
+      "path": "Física II/Energía interna.md"
+    },
+    {
+      "basename": "Termodinámica",
+      "path": "Física I/Termodinámica.md"
+    },
+    {
+      "basename": "Calor latente",
+      "path": "Física II/Calor latente.md"
+    },
+    {
+      "basename": "Calor específico",
+      "path": "Física II/Calor específico.md"
+    },
+    {
+      "basename": "Trabajo",
+      "path": "Física I/Trabajo.md"
+    },
+    {
+      "basename": "Medio",
+      "path": "Física II/Medio.md"
+    },
+    {
+      "basename": "Sistema",
+      "path": "Física II/Sistema.md"
+    },
+    {
       "basename": "Cociente $E_bN_0$",
       "path": "Comunicación de Datos/Cociente $E_bN_0$.md"
     },
     {
       "basename": "Actividades",
       "path": "Sistemas y Procesos de Negocios/Actividades.md"
-    },
-    {
-      "basename": "Trabajo",
-      "path": "Física I/Trabajo.md"
     },
     {
       "basename": "Decibelio",
@@ -135,66 +199,6 @@
     {
       "basename": "Ancho de banda",
       "path": "Comunicación de Datos/Ancho de banda.md"
-    },
-    {
-      "basename": "Componente continua",
-      "path": "Comunicación de Datos/Componente continua.md"
-    },
-    {
-      "basename": "Frecuencia",
-      "path": "Comunicación de Datos/Frecuencia.md"
-    },
-    {
-      "basename": "Periodo",
-      "path": "Comunicación de Datos/Periodo.md"
-    },
-    {
-      "basename": "Frecuencia central",
-      "path": "Comunicación de Datos/Frecuencia central.md"
-    },
-    {
-      "basename": "Señalización",
-      "path": "Comunicación de Datos/Señalización.md"
-    },
-    {
-      "basename": "Presión",
-      "path": "Física I/Presión.md"
-    },
-    {
-      "basename": "Señal periódica",
-      "path": "Comunicación de Datos/Señal periódica.md"
-    },
-    {
-      "basename": "Amplitud",
-      "path": "Comunicación de Datos/Amplitud.md"
-    },
-    {
-      "basename": "Fase",
-      "path": "Comunicación de Datos/Fase.md"
-    },
-    {
-      "basename": "Longitud de onda",
-      "path": "Comunicación de Datos/Longitud de onda.md"
-    },
-    {
-      "basename": "Variaciones",
-      "path": "Probabilidades y Estadísticas/Variaciones.md"
-    },
-    {
-      "basename": "Anagramas",
-      "path": "Probabilidades y Estadísticas/Anagramas.md"
-    },
-    {
-      "basename": "Probabilidad condicional",
-      "path": "Probabilidades y Estadísticas/Probabilidad condicional.md"
-    },
-    {
-      "basename": "Combinaciones",
-      "path": "Probabilidades y Estadísticas/Combinaciones.md"
-    },
-    {
-      "basename": "Permutaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
     }
   ],
   "omittedPaths": [],
