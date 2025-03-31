@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Combinaciones",
+      "path": "Probabilidades y Estadísticas/Combinaciones.md"
+    },
+    {
       "basename": "Permutaciones con repetición",
       "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "Permutaciones",
       "path": "Probabilidades y Estadísticas/Permutaciones.md"
-    },
-    {
-      "basename": "Combinaciones",
-      "path": "Probabilidades y Estadísticas/Combinaciones.md"
     },
     {
       "basename": "Espacio muestrario",
