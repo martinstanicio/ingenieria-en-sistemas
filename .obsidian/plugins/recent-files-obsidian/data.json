@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Permutaciones con repetición",
+      "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
+    },
+    {
       "basename": "Variaciones con repetición",
       "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
     },
@@ -9,8 +13,8 @@
       "path": "Probabilidades y Estadísticas/Variaciones.md"
     },
     {
-      "basename": "Anagramas",
-      "path": "Probabilidades y Estadísticas/Anagramas.md"
+      "basename": "Permutaciones",
+      "path": "Probabilidades y Estadísticas/Permutaciones.md"
     },
     {
       "basename": "Combinaciones",
@@ -39,10 +43,6 @@
     {
       "basename": "Laplace",
       "path": "Probabilidades y Estadísticas/Laplace.md"
-    },
-    {
-      "basename": "Permutaciones",
-      "path": "Probabilidades y Estadísticas/Permutaciones.md"
     },
     {
       "basename": "Probabilidad",
