@@ -1,16 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "Permutaciones con repetición",
+      "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
+    },
+    {
+      "basename": "Anagramas",
+      "path": "Probabilidades y Estadísticas/Anagramas.md"
+    },
+    {
       "basename": "Combinaciones",
       "path": "Probabilidades y Estadísticas/Combinaciones.md"
     },
     {
-      "basename": "Variaciones",
-      "path": "Probabilidades y Estadísticas/Variaciones.md"
+      "basename": "Espacio muestrario",
+      "path": "Probabilidades y Estadísticas/Espacio muestrario.md"
+    },
+    {
+      "basename": "Evento",
+      "path": "Probabilidades y Estadísticas/Evento.md"
+    },
+    {
+      "basename": "Experimento",
+      "path": "Probabilidades y Estadísticas/Experimento.md"
+    },
+    {
+      "basename": "Frecuencia absoluta",
+      "path": "Probabilidades y Estadísticas/Frecuencia absoluta.md"
+    },
+    {
+      "basename": "Frecuencia relativa",
+      "path": "Probabilidades y Estadísticas/Frecuencia relativa.md"
+    },
+    {
+      "basename": "Laplace",
+      "path": "Probabilidades y Estadísticas/Laplace.md"
     },
     {
       "basename": "Permutaciones",
       "path": "Probabilidades y Estadísticas/Permutaciones.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Probabilidades y Estadísticas/Probabilidad.md"
+    },
+    {
+      "basename": "Probabilidad condicional",
+      "path": "Probabilidades y Estadísticas/Probabilidad condicional.md"
+    },
+    {
+      "basename": "Variaciones",
+      "path": "Probabilidades y Estadísticas/Variaciones.md"
     },
     {
       "basename": "Transformación isócora",
@@ -159,46 +199,6 @@
     {
       "basename": "Ruido de intermodulación",
       "path": "Ruido de intermodulación.md"
-    },
-    {
-      "basename": "Constante de Boltzmann",
-      "path": "Constante de Boltzmann.md"
-    },
-    {
-      "basename": "Distorsión de retardo",
-      "path": "Comunicación de Datos/Distorsión de retardo.md"
-    },
-    {
-      "basename": "Atenuación",
-      "path": "Comunicación de Datos/Atenuación.md"
-    },
-    {
-      "basename": "Transmisión digital",
-      "path": "Comunicación de Datos/Transmisión digital.md"
-    },
-    {
-      "basename": "Repetidor",
-      "path": "Comunicación de Datos/Repetidor.md"
-    },
-    {
-      "basename": "Amplificador",
-      "path": "Comunicación de Datos/Amplificador.md"
-    },
-    {
-      "basename": "Transmisión analógica",
-      "path": "Comunicación de Datos/Transmisión analógica.md"
-    },
-    {
-      "basename": "Señal analógica",
-      "path": "Comunicación de Datos/Señal analógica.md"
-    },
-    {
-      "basename": "Señal digital",
-      "path": "Comunicación de Datos/Señal digital.md"
-    },
-    {
-      "basename": "Módem",
-      "path": "Comunicación de Datos/Módem.md"
     }
   ],
   "omittedPaths": [],
