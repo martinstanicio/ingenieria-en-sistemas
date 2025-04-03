@@ -5,6 +5,10 @@
       "path": "Comunicación de Datos/Medio guiado.md"
     },
     {
+      "basename": "Medio no guiado",
+      "path": "Comunicación de Datos/Medio no guiado.md"
+    },
+    {
       "basename": "Atenuación",
       "path": "Comunicación de Datos/Atenuación.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Capacidad del canal",
       "path": "Comunicación de Datos/Capacidad del canal.md"
-    },
-    {
-      "basename": "Ruido impulsivo",
-      "path": "Ruido impulsivo.md"
     }
   ],
   "omittedPaths": [],
