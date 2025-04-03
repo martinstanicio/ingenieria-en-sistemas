@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Interfaz",
+      "path": "Paradigmas de Programación/Interfaz.md"
+    },
+    {
       "basename": "Polimorfismo",
       "path": "Paradigmas de Programación/Polimorfismo.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Actividades",
       "path": "Sistemas y Procesos de Negocios/Actividades.md"
-    },
-    {
-      "basename": "Decibelio",
-      "path": "Comunicación de Datos/Decibelio.md"
     }
   ],
   "omittedPaths": [],

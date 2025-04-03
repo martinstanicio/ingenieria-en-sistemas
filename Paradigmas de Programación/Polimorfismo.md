@@ -1,6 +1,6 @@
 ---
 created: 2025-04-03 18:52:50
-modified: 2025-04-03 19:07:14
+modified: 2025-04-03 19:15:54
 title: Polimorfismo
 ---
 
@@ -17,6 +17,5 @@ Dentro de cada [[Objeto]], sus [[Método|Métodos]] deben tener la misma firma, 
 - La misma cantidad de [[Parámetros]], donde cada uno de ellos debe respetar un dado tipo de [[Dato]]
 - Tener el mismo tipo de [[Dato]] retornado
 
-
 > [!note]
-> El [[Polimorfismo]] siempre se evalúa en relación a una operación. 
+> El [[Polimorfismo]] siempre se evalúa en relación a una operación. Entonces, para que dos [[Objeto|Objetos]] sean [[Polimorfismo|Polimórficos]], solo es necesario que tengan el mismo [[Método]] en común que está siendo utilizado.
