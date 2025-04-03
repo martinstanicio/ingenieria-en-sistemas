@@ -8,7 +8,7 @@ title: Medio guiado
 
 # Medio guiado
 
-Un [[Comunicación de Datos/Medio]] donde las ondas se transmiten confinándolas a lo largo de un ==camino físico==.
+Un [[Comunicación de Datos/Medio|Medio]] donde las ondas se transmiten confinándolas a lo largo de un ==camino físico==.
 
 Por ejemplo:
 

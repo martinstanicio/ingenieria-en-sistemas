@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Medio guiado",
+      "path": "Comunicación de Datos/Medio guiado.md"
+    },
+    {
+      "basename": "Atenuación",
+      "path": "Comunicación de Datos/Atenuación.md"
+    },
+    {
+      "basename": "Medio",
+      "path": "Comunicación de Datos/Medio.md"
+    },
+    {
       "basename": "Inducción estructural",
       "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Ruido impulsivo",
       "path": "Ruido impulsivo.md"
-    },
-    {
-      "basename": "Ruido",
-      "path": "Ruido.md"
-    },
-    {
-      "basename": "Ruido térmico",
-      "path": "Ruido térmico.md"
-    },
-    {
-      "basename": "Diafonía",
-      "path": "Diafonía.md"
     }
   ],
   "omittedPaths": [],
