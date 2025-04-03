@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Clases
 created: 2025-04-03 18:33:47
-modified: 2025-04-03 18:36:42
+modified: 2025-04-03 18:56:34
 title: Clase
 ---
 

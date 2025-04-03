@@ -1,20 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "Método",
-      "path": "Paradigmas de Programación/Método.md"
+      "basename": "Polimorfismo",
+      "path": "Paradigmas de Programación/Polimorfismo.md"
     },
     {
       "basename": "Atributo",
       "path": "Paradigmas de Programación/Atributo.md"
     },
     {
-      "basename": "Objeto",
-      "path": "Paradigmas de Programación/Objeto.md"
+      "basename": "Método",
+      "path": "Paradigmas de Programación/Método.md"
+    },
+    {
+      "basename": "Estructuras de datos",
+      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
     },
     {
       "basename": "Clase",
       "path": "Paradigmas de Programación/Clase.md"
+    },
+    {
+      "basename": "Paradigma",
+      "path": "Paradigmas de Programación/Paradigma.md"
+    },
+    {
+      "basename": "Objeto",
+      "path": "Paradigmas de Programación/Objeto.md"
     },
     {
       "basename": "Instancia",
@@ -187,18 +199,6 @@
     {
       "basename": "Decibelio",
       "path": "Comunicación de Datos/Decibelio.md"
-    },
-    {
-      "basename": "Frecuencia fundamental",
-      "path": "Comunicación de Datos/Frecuencia fundamental.md"
-    },
-    {
-      "basename": "Primer principio de la termodinámica",
-      "path": "Física I/Primer principio de la termodinámica.md"
-    },
-    {
-      "basename": "Relación señal-ruido",
-      "path": "Comunicación de Datos/Relación señal-ruido.md"
     }
   ],
   "omittedPaths": [],
