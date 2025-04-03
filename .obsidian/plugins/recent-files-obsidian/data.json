@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Inducción estructural",
+      "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
+    },
+    {
       "basename": "Probabilidad condicional",
       "path": "Probabilidades y Estadísticas/Probabilidad condicional.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Diafonía",
       "path": "Diafonía.md"
-    },
-    {
-      "basename": "Ruido de intermodulación",
-      "path": "Ruido de intermodulación.md"
     }
   ],
   "omittedPaths": [],
