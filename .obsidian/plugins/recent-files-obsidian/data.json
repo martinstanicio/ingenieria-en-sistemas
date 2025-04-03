@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "Método",
+      "path": "Paradigmas de Programación/Método.md"
+    },
+    {
+      "basename": "Atributo",
+      "path": "Paradigmas de Programación/Atributo.md"
+    },
+    {
+      "basename": "Objeto",
+      "path": "Paradigmas de Programación/Objeto.md"
+    },
+    {
+      "basename": "Clase",
+      "path": "Paradigmas de Programación/Clase.md"
+    },
+    {
+      "basename": "Instancia",
+      "path": "Sistemas y Procesos de Negocios/Instancia.md"
+    },
+    {
+      "basename": "Entidad",
+      "path": "Sistemas y Procesos de Negocios/Entidad.md"
+    },
+    {
       "basename": "Medio guiado",
       "path": "Comunicación de Datos/Medio guiado.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "Relación señal-ruido",
       "path": "Comunicación de Datos/Relación señal-ruido.md"
-    },
-    {
-      "basename": "Ancho de banda de Nyquist",
-      "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
-    },
-    {
-      "basename": "Ecualización",
-      "path": "Comunicación de Datos/Ecualización.md"
-    },
-    {
-      "basename": "Diafonía",
-      "path": "Comunicación de Datos/Diafonía.md"
-    },
-    {
-      "basename": "Ruido de intermodulación",
-      "path": "Comunicación de Datos/Ruido de intermodulación.md"
-    },
-    {
-      "basename": "Códec",
-      "path": "Comunicación de Datos/Códec.md"
-    },
-    {
-      "basename": "Capacidad del canal",
-      "path": "Comunicación de Datos/Capacidad del canal.md"
     }
   ],
   "omittedPaths": [],

@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Instancias
 created: 2024-05-14 19:30:57
-modified: 2024-05-14 19:33:54
+modified: 2025-04-03 18:36:16
 title: Instancia
 ---
 
