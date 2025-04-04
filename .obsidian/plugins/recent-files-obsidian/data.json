@@ -5,6 +5,14 @@
       "path": "Paradigmas de Programación/Interfaz.md"
     },
     {
+      "basename": "Combinaciones",
+      "path": "Probabilidades y Estadísticas/Combinaciones.md"
+    },
+    {
+      "basename": "Actividades",
+      "path": "Sistemas y Procesos de Negocios/Actividades.md"
+    },
+    {
       "basename": "Polimorfismo",
       "path": "Paradigmas de Programación/Polimorfismo.md"
     },
@@ -63,10 +71,6 @@
     {
       "basename": "Probabilidad condicional",
       "path": "Probabilidades y Estadísticas/Probabilidad condicional.md"
-    },
-    {
-      "basename": "Combinaciones",
-      "path": "Probabilidades y Estadísticas/Combinaciones.md"
     },
     {
       "basename": "Permutaciones con repetición",
@@ -195,10 +199,6 @@
     {
       "basename": "Cociente $E_bN_0$",
       "path": "Comunicación de Datos/Cociente $E_bN_0$.md"
-    },
-    {
-      "basename": "Actividades",
-      "path": "Sistemas y Procesos de Negocios/Actividades.md"
     }
   ],
   "omittedPaths": [],
