@@ -1,8 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "Comunicación de Datos",
+      "path": "Comunicación de Datos/Comunicación de Datos.md"
+    },
+    {
+      "basename": "Capítulo 4 Medios de transmisión",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Fibra óptica",
+      "path": "Comunicación de Datos/Fibra óptica.md"
+    },
+    {
+      "basename": "Cable coaxial",
+      "path": "Comunicación de Datos/Cable coaxial.md"
+    },
+    {
+      "basename": "Par trenzado apantallado",
+      "path": "Comunicación de Datos/Par trenzado apantallado.md"
+    },
+    {
+      "basename": "Par trenzado no apantallado",
+      "path": "Comunicación de Datos/Par trenzado no apantallado.md"
+    },
+    {
       "basename": "Par trenzado",
-      "path": "Comunicación de Datos/Resumenes/Par trenzado.md"
+      "path": "Comunicación de Datos/Par trenzado.md"
+    },
+    {
+      "basename": "Capítulo 3 Transmisión de datos",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
+    },
+    {
+      "basename": "Diafonía",
+      "path": "Comunicación de Datos/Diafonía.md"
     },
     {
       "basename": "señal-digital",
@@ -21,16 +53,8 @@
       "path": "Comunicación de Datos/attachments/ecualización-1.jpg"
     },
     {
-      "basename": "Capítulo 4 Medios de transmisión",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
-    },
-    {
       "basename": "Medio",
       "path": "Comunicación de Datos/Medio.md"
-    },
-    {
-      "basename": "Capítulo 3 Transmisión de datos",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
     },
     {
       "basename": "Señal periódica",
@@ -175,30 +199,6 @@
     {
       "basename": "Frecuencia relativa",
       "path": "Probabilidades y Estadísticas/Frecuencia relativa.md"
-    },
-    {
-      "basename": "Laplace",
-      "path": "Probabilidades y Estadísticas/Laplace.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Probabilidades y Estadísticas/Probabilidad.md"
-    },
-    {
-      "basename": "Transformación isócora",
-      "path": "Física II/Transformación isócora.md"
-    },
-    {
-      "basename": "Transformación isotérmica",
-      "path": "Física II/Transformación isotérmica.md"
-    },
-    {
-      "basename": "Transformación isobárica",
-      "path": "Física II/Transformación isobárica.md"
-    },
-    {
-      "basename": "Transformación adiabática",
-      "path": "Física II/Transformación adiabática.md"
     }
   ],
   "omittedPaths": [],
