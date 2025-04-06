@@ -1,12 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "Interfaz",
-      "path": "Paradigmas de Programación/Interfaz.md"
+      "basename": "Componente continua",
+      "path": "Comunicación de Datos/Componente continua.md"
+    },
+    {
+      "basename": "Analista de sistemas",
+      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
+    },
+    {
+      "basename": "Cociente EbNo",
+      "path": "Comunicación de Datos/Cociente EbNo.md"
+    },
+    {
+      "basename": "Bit Error Rate",
+      "path": "Comunicación de Datos/Bit Error Rate.md"
+    },
+    {
+      "basename": "Señalización",
+      "path": "Comunicación de Datos/Señalización.md"
     },
     {
       "basename": "Combinaciones",
       "path": "Probabilidades y Estadísticas/Combinaciones.md"
+    },
+    {
+      "basename": "Espectro",
+      "path": "Comunicación de Datos/Espectro.md"
+    },
+    {
+      "basename": "Longitud de onda",
+      "path": "Comunicación de Datos/Longitud de onda.md"
+    },
+    {
+      "basename": "Amplificador",
+      "path": "Comunicación de Datos/Amplificador.md"
+    },
+    {
+      "basename": "Interfaz",
+      "path": "Paradigmas de Programación/Interfaz.md"
     },
     {
       "basename": "Actividades",
@@ -167,38 +199,6 @@
     {
       "basename": "Primer principio de la termodinámica",
       "path": "Física II/Primer principio de la termodinámica.md"
-    },
-    {
-      "basename": "Energía interna",
-      "path": "Física II/Energía interna.md"
-    },
-    {
-      "basename": "Termodinámica",
-      "path": "Física I/Termodinámica.md"
-    },
-    {
-      "basename": "Calor latente",
-      "path": "Física II/Calor latente.md"
-    },
-    {
-      "basename": "Calor específico",
-      "path": "Física II/Calor específico.md"
-    },
-    {
-      "basename": "Trabajo",
-      "path": "Física I/Trabajo.md"
-    },
-    {
-      "basename": "Medio",
-      "path": "Física II/Medio.md"
-    },
-    {
-      "basename": "Sistema",
-      "path": "Física II/Sistema.md"
-    },
-    {
-      "basename": "Cociente $E_bN_0$",
-      "path": "Comunicación de Datos/Cociente $E_bN_0$.md"
     }
   ],
   "omittedPaths": [],

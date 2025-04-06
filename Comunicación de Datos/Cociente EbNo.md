@@ -1,10 +1,10 @@
 ---
 created: 2025-03-27 15:21:45
-modified: 2025-03-27 15:39:38
-title: Cociente $E_b/N_0$
+modified: 2025-04-04 19:38:34
+title: Cociente EbNo
 ---
 
-# Cociente $E_b/N_0$
+# Cociente EbNo
 
 Es el cociente entre la [[Energía]] de la [[Señal]] por [[Bit]] y la densidad de potencia del [[Ruido]] por hercio.
 
@@ -37,4 +37,4 @@ E_b = S \cdot T_b
 $$
 
 > [!tip]
-> La ventaja del [[Cociente $E_bN_0$|Cociente $E_b/N_0$]] sobre la [[Relación señal-ruido]] es que el primero tiene en cuenta el [[Ancho de banda]].
+> La ventaja del [[Cociente EbNo]] sobre la [[Relación señal-ruido]] es que el primero tiene en cuenta el [[Ancho de banda]].
