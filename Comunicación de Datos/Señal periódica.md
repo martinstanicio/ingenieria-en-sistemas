@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Señales periódicas
 created: 2025-03-26 14:25:39
-modified: 2025-03-26 14:29:24
+modified: 2025-04-06 05:24:57
 title: Señal periódica
 ---
 

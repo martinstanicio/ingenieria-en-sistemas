@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Capítulo 3 Transmisión de datos",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
+    },
+    {
+      "basename": "Señal periódica",
+      "path": "Comunicación de Datos/Señal periódica.md"
+    },
+    {
+      "basename": "Enlace directo",
+      "path": "Comunicación de Datos/Enlace directo.md"
+    },
+    {
       "basename": "Componente continua",
       "path": "Comunicación de Datos/Componente continua.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Ecuación de estado de los gases ideales",
       "path": "Física II/Ecuación de estado de los gases ideales.md"
-    },
-    {
-      "basename": "Constante de los gases ideales",
-      "path": "Física II/Constante de los gases ideales.md"
-    },
-    {
-      "basename": "Calor",
-      "path": "Física II/Calor.md"
-    },
-    {
-      "basename": "Primer principio de la termodinámica",
-      "path": "Física II/Primer principio de la termodinámica.md"
     }
   ],
   "omittedPaths": [],

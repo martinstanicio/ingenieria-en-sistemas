@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FasImages",
+      "FasPencil",
       "FasRobot",
       "FasUsersViewfinder",
-      "FasQuoteLeft",
-      "FasHouseUser",
-      "FasCircleNodes"
+      "FasQuoteLeft"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -131,5 +131,7 @@
     "iconColor": "#00bcd5"
   },
   "Sistemas de Gestión": "FasUsersViewfinder",
-  "Tecnologías para la Automatización": "FasRobot"
+  "Tecnologías para la Automatización": "FasRobot",
+  "Comunicación de Datos/Resumenes": "FasPencil",
+  "Comunicación de Datos/attachments": "FasImages"
 }
