@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Analista de sistemas",
+      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
+    },
+    {
+      "basename": "Intercepción",
+      "path": "Análisis de Sistemas de Información/Intercepción.md"
+    },
+    {
+      "basename": "Informática",
+      "path": "Análisis de Sistemas de Información/Informática.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
       "basename": "Comunicación de Datos",
       "path": "Comunicación de Datos/Comunicación de Datos.md"
     },
@@ -67,10 +87,6 @@
     {
       "basename": "Componente continua",
       "path": "Comunicación de Datos/Componente continua.md"
-    },
-    {
-      "basename": "Analista de sistemas",
-      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
     },
     {
       "basename": "Cociente EbNo",
@@ -183,22 +199,6 @@
     {
       "basename": "Espacio muestrario",
       "path": "Probabilidades y Estadísticas/Espacio muestrario.md"
-    },
-    {
-      "basename": "Evento",
-      "path": "Probabilidades y Estadísticas/Evento.md"
-    },
-    {
-      "basename": "Experimento",
-      "path": "Probabilidades y Estadísticas/Experimento.md"
-    },
-    {
-      "basename": "Frecuencia absoluta",
-      "path": "Probabilidades y Estadísticas/Frecuencia absoluta.md"
-    },
-    {
-      "basename": "Frecuencia relativa",
-      "path": "Probabilidades y Estadísticas/Frecuencia relativa.md"
     }
   ],
   "omittedPaths": [],
