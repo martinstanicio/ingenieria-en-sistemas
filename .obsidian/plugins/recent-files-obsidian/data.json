@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Par trenzado",
+      "path": "Comunicación de Datos/Resumenes/Par trenzado.md"
+    },
+    {
+      "basename": "señal-digital",
+      "path": "Comunicación de Datos/attachments/señal-digital.jpg"
+    },
+    {
+      "basename": "señal-analógica",
+      "path": "Comunicación de Datos/attachments/señal-analógica.jpg"
+    },
+    {
+      "basename": "ecualización-2",
+      "path": "Comunicación de Datos/attachments/ecualización-2.jpg"
+    },
+    {
+      "basename": "ecualización-1",
+      "path": "Comunicación de Datos/attachments/ecualización-1.jpg"
+    },
+    {
+      "basename": "Capítulo 4 Medios de transmisión",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Medio",
+      "path": "Comunicación de Datos/Medio.md"
+    },
+    {
       "basename": "Capítulo 3 Transmisión de datos",
       "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
     },
@@ -105,10 +133,6 @@
       "path": "Comunicación de Datos/Atenuación.md"
     },
     {
-      "basename": "Medio",
-      "path": "Comunicación de Datos/Medio.md"
-    },
-    {
       "basename": "Inducción estructural",
       "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
     },
@@ -175,30 +199,6 @@
     {
       "basename": "Transformación adiabática",
       "path": "Física II/Transformación adiabática.md"
-    },
-    {
-      "basename": "Transformación",
-      "path": "Física II/Transformación.md"
-    },
-    {
-      "basename": "Volumen",
-      "path": "Física II/Volumen.md"
-    },
-    {
-      "basename": "Temperatura",
-      "path": "Física II/Temperatura.md"
-    },
-    {
-      "basename": "Presión",
-      "path": "Física I/Presión.md"
-    },
-    {
-      "basename": "Gas ideal",
-      "path": "Física II/Gas ideal.md"
-    },
-    {
-      "basename": "Ecuación de estado de los gases ideales",
-      "path": "Física II/Ecuación de estado de los gases ideales.md"
     }
   ],
   "omittedPaths": [],
