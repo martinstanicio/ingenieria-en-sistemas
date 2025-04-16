@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Variaciones",
+      "path": "Probabilidades y Estadísticas/Variaciones.md"
+    },
+    {
+      "basename": "Variaciones con repetición",
+      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
+    },
+    {
       "basename": "Autovector",
       "path": "Álgebra y Geometría Analítica/Autovector.md"
     },
@@ -169,16 +177,8 @@
       "path": "Probabilidades y Estadísticas/Combinaciones.md"
     },
     {
-      "basename": "Variaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
-    },
-    {
       "basename": "Permutaciones con repetición",
       "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
-    },
-    {
-      "basename": "Variaciones",
-      "path": "Probabilidades y Estadísticas/Variaciones.md"
     },
     {
       "basename": "Intercepción",
