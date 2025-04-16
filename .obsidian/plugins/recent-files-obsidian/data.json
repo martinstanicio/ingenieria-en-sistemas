@@ -1,8 +1,184 @@
 {
   "recentFiles": [
     {
+      "basename": "Autovector",
+      "path": "Álgebra y Geometría Analítica/Autovector.md"
+    },
+    {
       "basename": "Analista de sistemas",
       "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
+    },
+    {
+      "basename": "Transmisión analógica",
+      "path": "Comunicación de Datos/Transmisión analógica.md"
+    },
+    {
+      "basename": "Señal",
+      "path": "Comunicación de Datos/Señal.md"
+    },
+    {
+      "basename": "Ruido térmico",
+      "path": "Comunicación de Datos/Ruido térmico.md"
+    },
+    {
+      "basename": "Ruido impulsivo",
+      "path": "Comunicación de Datos/Ruido impulsivo.md"
+    },
+    {
+      "basename": "Ruido de intermodulación",
+      "path": "Comunicación de Datos/Ruido de intermodulación.md"
+    },
+    {
+      "basename": "Ruido",
+      "path": "Comunicación de Datos/Ruido.md"
+    },
+    {
+      "basename": "Repetidor",
+      "path": "Comunicación de Datos/Repetidor.md"
+    },
+    {
+      "basename": "Relación señal-ruido",
+      "path": "Comunicación de Datos/Relación señal-ruido.md"
+    },
+    {
+      "basename": "Módem",
+      "path": "Comunicación de Datos/Módem.md"
+    },
+    {
+      "basename": "Medio guiado punto a punto",
+      "path": "Comunicación de Datos/Medio guiado punto a punto.md"
+    },
+    {
+      "basename": "Medio guiado multipunto",
+      "path": "Comunicación de Datos/Medio guiado multipunto.md"
+    },
+    {
+      "basename": "Full-duplex",
+      "path": "Comunicación de Datos/Full-duplex.md"
+    },
+    {
+      "basename": "Frecuencia fundamental",
+      "path": "Comunicación de Datos/Frecuencia fundamental.md"
+    },
+    {
+      "basename": "Frecuencia",
+      "path": "Comunicación de Datos/Frecuencia.md"
+    },
+    {
+      "basename": "Fibra óptica",
+      "path": "Comunicación de Datos/Fibra óptica.md"
+    },
+    {
+      "basename": "Espectro",
+      "path": "Comunicación de Datos/Espectro.md"
+    },
+    {
+      "basename": "Enlace directo",
+      "path": "Comunicación de Datos/Enlace directo.md"
+    },
+    {
+      "basename": "Emisor",
+      "path": "Comunicación de Datos/Emisor.md"
+    },
+    {
+      "basename": "Ecualización",
+      "path": "Comunicación de Datos/Ecualización.md"
+    },
+    {
+      "basename": "Distorsión de retardo",
+      "path": "Comunicación de Datos/Distorsión de retardo.md"
+    },
+    {
+      "basename": "Diafonía",
+      "path": "Comunicación de Datos/Diafonía.md"
+    },
+    {
+      "basename": "Decibelio",
+      "path": "Comunicación de Datos/Decibelio.md"
+    },
+    {
+      "basename": "Dato analógico",
+      "path": "Comunicación de Datos/Dato analógico.md"
+    },
+    {
+      "basename": "Constante de Boltzmann",
+      "path": "Comunicación de Datos/Constante de Boltzmann.md"
+    },
+    {
+      "basename": "Comunicación de Datos",
+      "path": "Comunicación de Datos/Comunicación de Datos.md"
+    },
+    {
+      "basename": "Componente continua",
+      "path": "Comunicación de Datos/Componente continua.md"
+    },
+    {
+      "basename": "Códec",
+      "path": "Comunicación de Datos/Códec.md"
+    },
+    {
+      "basename": "Cociente EbNo",
+      "path": "Comunicación de Datos/Cociente EbNo.md"
+    },
+    {
+      "basename": "Capacidad del canal",
+      "path": "Comunicación de Datos/Capacidad del canal.md"
+    },
+    {
+      "basename": "Cable coaxial",
+      "path": "Comunicación de Datos/Cable coaxial.md"
+    },
+    {
+      "basename": "Bit Error Rate",
+      "path": "Comunicación de Datos/Bit Error Rate.md"
+    },
+    {
+      "basename": "Atenuación",
+      "path": "Comunicación de Datos/Atenuación.md"
+    },
+    {
+      "basename": "Medio",
+      "path": "Comunicación de Datos/Medio.md"
+    },
+    {
+      "basename": "Ancho de banda de Nyquist",
+      "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
+    },
+    {
+      "basename": "Ancho de banda absoluto",
+      "path": "Comunicación de Datos/Ancho de banda absoluto.md"
+    },
+    {
+      "basename": "Ancho de banda",
+      "path": "Comunicación de Datos/Ancho de banda.md"
+    },
+    {
+      "basename": "Amplitud",
+      "path": "Comunicación de Datos/Amplitud.md"
+    },
+    {
+      "basename": "Amplificador",
+      "path": "Comunicación de Datos/Amplificador.md"
+    },
+    {
+      "basename": "Diferencial",
+      "path": "Análisis Matemático I/Diferencial.md"
+    },
+    {
+      "basename": "Combinaciones",
+      "path": "Probabilidades y Estadísticas/Combinaciones.md"
+    },
+    {
+      "basename": "Variaciones con repetición",
+      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
+    },
+    {
+      "basename": "Permutaciones con repetición",
+      "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
+    },
+    {
+      "basename": "Variaciones",
+      "path": "Probabilidades y Estadísticas/Variaciones.md"
     },
     {
       "basename": "Intercepción",
@@ -21,184 +197,8 @@
       "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
     },
     {
-      "basename": "Comunicación de Datos",
-      "path": "Comunicación de Datos/Comunicación de Datos.md"
-    },
-    {
       "basename": "Capítulo 4 Medios de transmisión",
       "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
-    },
-    {
-      "basename": "Fibra óptica",
-      "path": "Comunicación de Datos/Fibra óptica.md"
-    },
-    {
-      "basename": "Cable coaxial",
-      "path": "Comunicación de Datos/Cable coaxial.md"
-    },
-    {
-      "basename": "Par trenzado apantallado",
-      "path": "Comunicación de Datos/Par trenzado apantallado.md"
-    },
-    {
-      "basename": "Par trenzado no apantallado",
-      "path": "Comunicación de Datos/Par trenzado no apantallado.md"
-    },
-    {
-      "basename": "Par trenzado",
-      "path": "Comunicación de Datos/Par trenzado.md"
-    },
-    {
-      "basename": "Capítulo 3 Transmisión de datos",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
-    },
-    {
-      "basename": "Diafonía",
-      "path": "Comunicación de Datos/Diafonía.md"
-    },
-    {
-      "basename": "señal-digital",
-      "path": "Comunicación de Datos/attachments/señal-digital.jpg"
-    },
-    {
-      "basename": "señal-analógica",
-      "path": "Comunicación de Datos/attachments/señal-analógica.jpg"
-    },
-    {
-      "basename": "ecualización-2",
-      "path": "Comunicación de Datos/attachments/ecualización-2.jpg"
-    },
-    {
-      "basename": "ecualización-1",
-      "path": "Comunicación de Datos/attachments/ecualización-1.jpg"
-    },
-    {
-      "basename": "Medio",
-      "path": "Comunicación de Datos/Medio.md"
-    },
-    {
-      "basename": "Señal periódica",
-      "path": "Comunicación de Datos/Señal periódica.md"
-    },
-    {
-      "basename": "Enlace directo",
-      "path": "Comunicación de Datos/Enlace directo.md"
-    },
-    {
-      "basename": "Componente continua",
-      "path": "Comunicación de Datos/Componente continua.md"
-    },
-    {
-      "basename": "Cociente EbNo",
-      "path": "Comunicación de Datos/Cociente EbNo.md"
-    },
-    {
-      "basename": "Bit Error Rate",
-      "path": "Comunicación de Datos/Bit Error Rate.md"
-    },
-    {
-      "basename": "Señalización",
-      "path": "Comunicación de Datos/Señalización.md"
-    },
-    {
-      "basename": "Combinaciones",
-      "path": "Probabilidades y Estadísticas/Combinaciones.md"
-    },
-    {
-      "basename": "Espectro",
-      "path": "Comunicación de Datos/Espectro.md"
-    },
-    {
-      "basename": "Longitud de onda",
-      "path": "Comunicación de Datos/Longitud de onda.md"
-    },
-    {
-      "basename": "Amplificador",
-      "path": "Comunicación de Datos/Amplificador.md"
-    },
-    {
-      "basename": "Interfaz",
-      "path": "Paradigmas de Programación/Interfaz.md"
-    },
-    {
-      "basename": "Actividades",
-      "path": "Sistemas y Procesos de Negocios/Actividades.md"
-    },
-    {
-      "basename": "Polimorfismo",
-      "path": "Paradigmas de Programación/Polimorfismo.md"
-    },
-    {
-      "basename": "Atributo",
-      "path": "Paradigmas de Programación/Atributo.md"
-    },
-    {
-      "basename": "Método",
-      "path": "Paradigmas de Programación/Método.md"
-    },
-    {
-      "basename": "Estructuras de datos",
-      "path": "Algoritmos y Estructuras de Datos/Estructuras de datos.md"
-    },
-    {
-      "basename": "Clase",
-      "path": "Paradigmas de Programación/Clase.md"
-    },
-    {
-      "basename": "Paradigma",
-      "path": "Paradigmas de Programación/Paradigma.md"
-    },
-    {
-      "basename": "Objeto",
-      "path": "Paradigmas de Programación/Objeto.md"
-    },
-    {
-      "basename": "Instancia",
-      "path": "Sistemas y Procesos de Negocios/Instancia.md"
-    },
-    {
-      "basename": "Entidad",
-      "path": "Sistemas y Procesos de Negocios/Entidad.md"
-    },
-    {
-      "basename": "Medio guiado",
-      "path": "Comunicación de Datos/Medio guiado.md"
-    },
-    {
-      "basename": "Medio no guiado",
-      "path": "Comunicación de Datos/Medio no guiado.md"
-    },
-    {
-      "basename": "Atenuación",
-      "path": "Comunicación de Datos/Atenuación.md"
-    },
-    {
-      "basename": "Inducción estructural",
-      "path": "Lógica y Estructuras Discretas/Inducción estructural.md"
-    },
-    {
-      "basename": "Probabilidad condicional",
-      "path": "Probabilidades y Estadísticas/Probabilidad condicional.md"
-    },
-    {
-      "basename": "Permutaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
-    },
-    {
-      "basename": "Variaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
-    },
-    {
-      "basename": "Variaciones",
-      "path": "Probabilidades y Estadísticas/Variaciones.md"
-    },
-    {
-      "basename": "Permutaciones",
-      "path": "Probabilidades y Estadísticas/Permutaciones.md"
-    },
-    {
-      "basename": "Espacio muestrario",
-      "path": "Probabilidades y Estadísticas/Espacio muestrario.md"
     }
   ],
   "omittedPaths": [],

@@ -6,7 +6,7 @@ title: Atenuación
 
 # Atenuación
 
-La [[Atenuación]] es la reducción de la [[Energía]] de una [[Señal]] al propagarse por un [[Comunicación de Datos/Medio]] de [[Transmisión]].
+La [[Atenuación]] es la reducción de la [[Energía]] de una [[Señal]] al propagarse por un [[Comunicación de Datos/Medio|Medio]] de [[Transmisión]].
 
 Esto es un problema, ya que la [[Señal]] debe tener suficiente [[Energía]], y debe mantener un nivel suficientemente más alto que el [[Ruido]], para poder ser interpretada por el [[Receptor]].
 
