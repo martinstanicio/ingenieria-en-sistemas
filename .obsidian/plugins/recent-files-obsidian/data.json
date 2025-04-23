@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Variaciones con repetición",
+      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
+    },
+    {
       "basename": "Variaciones",
       "path": "Probabilidades y Estadísticas/Variaciones.md"
     },
     {
-      "basename": "Variaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
+      "basename": "Probabilidades y Estadísticas",
+      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
     },
     {
       "basename": "Autovector",
@@ -195,10 +199,6 @@
     {
       "basename": "Análisis de Sistemas de Información",
       "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
-    },
-    {
-      "basename": "Capítulo 4 Medios de transmisión",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
     }
   ],
   "omittedPaths": [],
