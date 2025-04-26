@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Relación señal-ruido",
+      "path": "Comunicación de Datos/Relación señal-ruido.md"
+    },
+    {
+      "basename": "Ancho de banda",
+      "path": "Comunicación de Datos/Ancho de banda.md"
+    },
+    {
+      "basename": "Capacidad del canal",
+      "path": "Comunicación de Datos/Capacidad del canal.md"
+    },
+    {
+      "basename": "Par trenzado",
+      "path": "Comunicación de Datos/Par trenzado.md"
+    },
+    {
+      "basename": "Transmisión analógica",
+      "path": "Comunicación de Datos/Transmisión analógica.md"
+    },
+    {
       "basename": "Variaciones con repetición",
       "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
     },
@@ -19,10 +39,6 @@
     {
       "basename": "Analista de sistemas",
       "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
-    },
-    {
-      "basename": "Transmisión analógica",
-      "path": "Comunicación de Datos/Transmisión analógica.md"
     },
     {
       "basename": "Señal",
@@ -47,10 +63,6 @@
     {
       "basename": "Repetidor",
       "path": "Comunicación de Datos/Repetidor.md"
-    },
-    {
-      "basename": "Relación señal-ruido",
-      "path": "Comunicación de Datos/Relación señal-ruido.md"
     },
     {
       "basename": "Módem",
@@ -133,10 +145,6 @@
       "path": "Comunicación de Datos/Cociente EbNo.md"
     },
     {
-      "basename": "Capacidad del canal",
-      "path": "Comunicación de Datos/Capacidad del canal.md"
-    },
-    {
       "basename": "Cable coaxial",
       "path": "Comunicación de Datos/Cable coaxial.md"
     },
@@ -159,10 +167,6 @@
     {
       "basename": "Ancho de banda absoluto",
       "path": "Comunicación de Datos/Ancho de banda absoluto.md"
-    },
-    {
-      "basename": "Ancho de banda",
-      "path": "Comunicación de Datos/Ancho de banda.md"
     },
     {
       "basename": "Amplitud",
@@ -195,10 +199,6 @@
     {
       "basename": "Información",
       "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
     }
   ],
   "omittedPaths": [],

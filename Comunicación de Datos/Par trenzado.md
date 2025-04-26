@@ -4,7 +4,7 @@ aliases:
   - Pares trenzados
   - Twisted pairs
 created: 2025-04-06 06:15:10
-modified: 2025-04-06 06:34:35
+modified: 2025-04-25 17:12:10
 title: Par trenzado
 ---
 
@@ -18,6 +18,9 @@ El [[Par trenzado]] es el [[Medio guiado]] más económico y utilizado. Consiste
 > El trenzado tiende a reducir la [[Diafonía]] entre los pares adyacentes dentro de una misma envoltura. Para esto, cada [[Par trenzado]] debe tener una longitud de trenzado diferente.
 
 El [[Par trenzado]] está limitado en distancia, [[Ancho de banda]] y velocidad de [[Transmisión]]. Además, es muy susceptible a la [[Atenuación]] y el [[Ruido]] o interferencia por campos electromagnéticos cercanos.
+
+> [!note]
+> En la actualidad, el [[Par trenzado]] más básico que se consigue es el **CAT 5E**.
 
 Existen dos variaciones del [[Par trenzado]]:
 
