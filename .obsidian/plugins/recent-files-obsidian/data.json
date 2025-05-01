@@ -1,40 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Autoridad funcional",
-      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
-    },
-    {
-      "basename": "Autoridad de línea",
-      "path": "Análisis de Sistemas de Información/Autoridad de línea.md"
-    },
-    {
-      "basename": "20240809 - Frases",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
-    },
-    {
-      "basename": "Autoridad",
-      "path": "Análisis de Sistemas de Información/Autoridad.md"
-    },
-    {
-      "basename": "Poder",
-      "path": "Análisis de Sistemas de Información/Poder.md"
-    },
-    {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
-    },
-    {
-      "basename": "Descentralización",
-      "path": "Análisis de Sistemas de Información/Descentralización.md"
-    },
-    {
-      "basename": "Centralización",
-      "path": "Análisis de Sistemas de Información/Centralización.md"
+      "basename": "Estructura organizacional",
+      "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
     },
     {
       "basename": "Delegación de decisiones",
       "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
+    },
+    {
+      "basename": "Centralización",
+      "path": "Análisis de Sistemas de Información/Centralización.md"
     },
     {
       "basename": "Organización informal",
@@ -43,6 +19,46 @@
     {
       "basename": "Organización formal",
       "path": "Análisis de Sistemas de Información/Organización formal.md"
+    },
+    {
+      "basename": "Departamentalización",
+      "path": "Análisis de Sistemas de Información/Departamentalización.md"
+    },
+    {
+      "basename": "Staff",
+      "path": "Análisis de Sistemas de Información/Staff.md"
+    },
+    {
+      "basename": "Autoridad funcional",
+      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
+    },
+    {
+      "basename": "Autoridad de línea",
+      "path": "Análisis de Sistemas de Información/Autoridad de línea.md"
+    },
+    {
+      "basename": "Autoridad",
+      "path": "Análisis de Sistemas de Información/Autoridad.md"
+    },
+    {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+    },
+    {
+      "basename": "Subconjunto",
+      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
+    },
+    {
+      "basename": "20240809 - Frases",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
+    },
+    {
+      "basename": "Poder",
+      "path": "Análisis de Sistemas de Información/Poder.md"
+    },
+    {
+      "basename": "Descentralización",
+      "path": "Análisis de Sistemas de Información/Descentralización.md"
     },
     {
       "basename": "Organización",
@@ -183,22 +199,6 @@
     {
       "basename": "Ecualización",
       "path": "Comunicación de Datos/Ecualización.md"
-    },
-    {
-      "basename": "Distorsión de retardo",
-      "path": "Comunicación de Datos/Distorsión de retardo.md"
-    },
-    {
-      "basename": "Diafonía",
-      "path": "Comunicación de Datos/Diafonía.md"
-    },
-    {
-      "basename": "Decibelio",
-      "path": "Comunicación de Datos/Decibelio.md"
-    },
-    {
-      "basename": "Dato analógico",
-      "path": "Comunicación de Datos/Dato analógico.md"
     }
   ],
   "omittedPaths": [],

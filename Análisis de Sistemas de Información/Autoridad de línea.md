@@ -2,7 +2,7 @@
 aliases:
   - Autoridad lineal
 created: 2025-05-01 18:32:29
-modified: 2025-05-01 18:38:41
+modified: 2025-05-01 19:11:21
 title: Autoridad de línea
 ---
 
@@ -18,4 +18,4 @@ flowchart TB
 	superior --> subordinado
 ```
 
-La [[Autoridad de línea]] favorece el control, y brinda una línea de [[Autoridad]] clara; pero también lleva a una [[Estructura]] rígida, y ==no favorece a la formación de líderes==.
+Favorece el control, y brinda una línea de [[Autoridad]] clara; pero también lleva a una [[Estructura organizacional]] rígida, y ==no favorece a la formación de líderes==.

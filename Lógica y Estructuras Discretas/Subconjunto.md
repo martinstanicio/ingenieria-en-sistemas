@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Subconjuntos
 created: 2024-04-26 15:12:37
-modified: 2024-05-08 01:33:30
+modified: 2025-05-01 18:50:40
 title: Subconjunto
 ---
 
