@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
       "basename": "Variaciones con repetición",
       "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Intercepción",
       "path": "Análisis de Sistemas de Información/Intercepción.md"
-    },
-    {
-      "basename": "Informática",
-      "path": "Análisis de Sistemas de Información/Informática.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
     }
   ],
   "omittedPaths": [],
