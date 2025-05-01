@@ -2,7 +2,7 @@
 aliases:
   - Sistemas de información
 created: 2024-05-14 20:29:19
-modified: 2024-11-12 14:21:05
+modified: 2025-05-01 19:37:50
 title: Sistema de información
 ---
 
@@ -10,16 +10,19 @@ title: Sistema de información
 
 Uno o más [[Sistema informático|Sistemas informáticos]] y un [[Sistema de comunicación]], junto con los [[Recursos]] de la organización asociados, tales como recursos humanos, técnicos y financieros, que **proporcionan** y **distribuyen** la [[Información]].
 
-Sirve para dar **apoyo** o ==soporte a un [[Sistemas|Sistema]] más amplio== (del cual es [[Subsistema]]) para la ==toma de decisiones==. Para esto realiza 4 tareas con los [[Dato|Datos]]:
+Sirve para dar **apoyo** o ==soporte a un [[Sistemas|Sistema]] más amplio== (del cual es [[Subsistema]]): la [[Organización]]; para la ==toma de decisiones==. Para esto realiza 4 tareas con los [[Dato|Datos]]:
 
 1. Recolectar
 2. Almacenar
 3. Procesar
 4. Distribuir
 
+> [!note]
+> Se compone de [[Información directiva]] e [[Información operativa]].
+
 ## Evaluación y mejora de un proceso
 
-El [[Sistema de información]] de una organización está estrechamente realcionado con los [[Indicadores]].
+El [[Sistema de información]] de una organización está estrechamente relacionado con los [[Indicadores]].
 
 1. **Recopilación de datos**
    Los [[Sistema de información|Sistemas de información]] son responsable de recopilar, almacenar y procesar [[Dato|Datos]] relevantes para calcular los [[Indicadores]].

@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Información operativa",
+      "path": "Sistemas y Procesos de Negocios/Información operativa.md"
+    },
+    {
+      "basename": "Información directiva",
+      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
+    },
+    {
+      "basename": "Sistema de información",
+      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
+    },
+    {
+      "basename": "Organización",
+      "path": "Análisis de Sistemas de Información/Organización.md"
+    },
+    {
       "basename": "Estructura organizacional",
       "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
+    },
+    {
+      "basename": "Autoridad funcional",
+      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
+    },
+    {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+    },
+    {
+      "basename": "Organización formal",
+      "path": "Análisis de Sistemas de Información/Organización formal.md"
+    },
+    {
+      "basename": "Descentralización",
+      "path": "Análisis de Sistemas de Información/Descentralización.md"
+    },
+    {
+      "basename": "Organización informal",
+      "path": "Análisis de Sistemas de Información/Organización informal.md"
     },
     {
       "basename": "Delegación de decisiones",
@@ -13,14 +49,6 @@
       "path": "Análisis de Sistemas de Información/Centralización.md"
     },
     {
-      "basename": "Organización informal",
-      "path": "Análisis de Sistemas de Información/Organización informal.md"
-    },
-    {
-      "basename": "Organización formal",
-      "path": "Análisis de Sistemas de Información/Organización formal.md"
-    },
-    {
       "basename": "Departamentalización",
       "path": "Análisis de Sistemas de Información/Departamentalización.md"
     },
@@ -29,20 +57,12 @@
       "path": "Análisis de Sistemas de Información/Staff.md"
     },
     {
-      "basename": "Autoridad funcional",
-      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
-    },
-    {
-      "basename": "Autoridad de línea",
-      "path": "Análisis de Sistemas de Información/Autoridad de línea.md"
-    },
-    {
       "basename": "Autoridad",
       "path": "Análisis de Sistemas de Información/Autoridad.md"
     },
     {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+      "basename": "Autoridad de línea",
+      "path": "Análisis de Sistemas de Información/Autoridad de línea.md"
     },
     {
       "basename": "Subconjunto",
@@ -55,14 +75,6 @@
     {
       "basename": "Poder",
       "path": "Análisis de Sistemas de Información/Poder.md"
-    },
-    {
-      "basename": "Descentralización",
-      "path": "Análisis de Sistemas de Información/Descentralización.md"
-    },
-    {
-      "basename": "Organización",
-      "path": "Análisis de Sistemas de Información/Organización.md"
     },
     {
       "basename": "Estructura",
@@ -187,18 +199,6 @@
     {
       "basename": "Espectro",
       "path": "Comunicación de Datos/Espectro.md"
-    },
-    {
-      "basename": "Enlace directo",
-      "path": "Comunicación de Datos/Enlace directo.md"
-    },
-    {
-      "basename": "Emisor",
-      "path": "Comunicación de Datos/Emisor.md"
-    },
-    {
-      "basename": "Ecualización",
-      "path": "Comunicación de Datos/Ecualización.md"
     }
   ],
   "omittedPaths": [],

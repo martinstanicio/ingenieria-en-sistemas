@@ -2,13 +2,18 @@
 aliases:
   - Organizaciones
 created: 2025-05-01 17:52:45
-modified: 2025-05-01 18:01:04
+modified: 2025-05-01 19:31:56
 title: Organización
 ---
 
 # Organización
 
-Grupo de personas con un [[Objetivo]] común, que cuenta con [[Recursos]], y está regulada por una serie de normas. Para formar una [[Organización]], es necesario seguir una serie de pasos:
+Grupo de personas con un [[Objetivo]] común, que cuenta con [[Recursos]], y está regulada por una serie de normas.
+
+> [!important]
+> La [[Organización]] está definida por una [[Estructura organizacional]]. Los [[Sistema de información|Sistemas de información]] se implementan y dan soporte sobre esta [[Estructura organizacional|Estructura]].
+
+Para formar una [[Organización]], es necesario seguir una serie de pasos:
 
 1. Establecer los [[Objetivo|Objetivos]] de la [[Organización]] de forma general.
 2. Formular [[Objetivo|Objetivos]] específicos y cuantificables, políticas y planes de soporte.
