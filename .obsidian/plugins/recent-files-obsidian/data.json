@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "Información operativa",
-      "path": "Sistemas y Procesos de Negocios/Información operativa.md"
+      "basename": "Codificar y arreglar",
+      "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
     },
     {
-      "basename": "Información directiva",
-      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
+      "basename": "Metodología",
+      "path": "Análisis de Sistemas de Información/Metodología.md"
+    },
+    {
+      "basename": "Requerimientos",
+      "path": "Análisis de Sistemas de Información/Requerimientos.md"
+    },
+    {
+      "basename": "Calidad",
+      "path": "Análisis de Sistemas de Información/Calidad.md"
+    },
+    {
+      "basename": "Organización",
+      "path": "Análisis de Sistemas de Información/Organización.md"
     },
     {
       "basename": "Sistema de información",
       "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
     },
     {
-      "basename": "Organización",
-      "path": "Análisis de Sistemas de Información/Organización.md"
+      "basename": "Información directiva",
+      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
+    },
+    {
+      "basename": "Información operativa",
+      "path": "Sistemas y Procesos de Negocios/Información operativa.md"
     },
     {
       "basename": "Estructura organizacional",
@@ -183,22 +199,6 @@
     {
       "basename": "Full-duplex",
       "path": "Comunicación de Datos/Full-duplex.md"
-    },
-    {
-      "basename": "Frecuencia fundamental",
-      "path": "Comunicación de Datos/Frecuencia fundamental.md"
-    },
-    {
-      "basename": "Frecuencia",
-      "path": "Comunicación de Datos/Frecuencia.md"
-    },
-    {
-      "basename": "Fibra óptica",
-      "path": "Comunicación de Datos/Fibra óptica.md"
-    },
-    {
-      "basename": "Espectro",
-      "path": "Comunicación de Datos/Espectro.md"
     }
   ],
   "omittedPaths": [],
