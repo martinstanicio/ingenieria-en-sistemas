@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+      "basename": "Probabilidad",
+      "path": "Probabilidades y Estadísticas/Probabilidad.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
     },
     {
       "basename": "Análisis de Sistemas de Información",
       "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
     },
     {
       "basename": "Variaciones con repetición",
@@ -187,18 +199,6 @@
     {
       "basename": "Diferencial",
       "path": "Análisis Matemático I/Diferencial.md"
-    },
-    {
-      "basename": "Combinaciones",
-      "path": "Probabilidades y Estadísticas/Combinaciones.md"
-    },
-    {
-      "basename": "Permutaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Permutaciones con repetición.md"
-    },
-    {
-      "basename": "Intercepción",
-      "path": "Análisis de Sistemas de Información/Intercepción.md"
     }
   ],
   "omittedPaths": [],

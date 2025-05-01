@@ -1,23 +1,19 @@
 ---
 created: 2024-04-30 19:56:40
-modified: 2025-03-21 21:36:05
+modified: 2025-05-01 17:41:33
 title: Información
 ---
 
 # Información
 
-Es el [[Conocimiento]], que en un ==contexto dado== puede ser relevante y tener un significado ==para alguien particular==. Sirve para **reducir la incertidumbre** al tomar decisiones.
+Es el [[Conocimiento]], que en un ==contexto dado== puede ser relevante y tener un significado ==para alguien particular==, bajo su ==correcta interpretación==. Sirve para **reducir la incertidumbre** al tomar decisiones, por lo que es la inversa de la [[Entropía]].
 
 > [!tip]
-> Debe ser veraz, oportuna y en forma.
-
-> [!note]
-> Es la inversa de la [[Entropía]].
+> Debe ser **veraz**, **oportuna** y **en forma**.
 
 Algo solo es considerado [[Información]] la primera vez que lo vemos y aprendemos, luego, pasa a ser un [[Dato]].
 
-> [!important]
-> Para **comunicar** la [[Información]], es importante la **interpretación**.
+---
 
 Segun el nivel de ==sorpresa== de cada mensaje $E$, podemos calcular cuánta [[Información]] $I(E)$ aporta utilizando la [[Sistemas y Procesos de Negocios/Probabilidad]] $P(E)$ de su ocurrencia. Se mide en [[Bit|bits]].
 
