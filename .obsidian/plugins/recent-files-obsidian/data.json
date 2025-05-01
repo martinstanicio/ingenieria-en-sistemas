@@ -1,12 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "Probabilidad",
-      "path": "Probabilidades y Estadísticas/Probabilidad.md"
+      "basename": "Delegación de decisiones",
+      "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
     },
     {
-      "basename": "Probabilidad",
-      "path": "Sistemas y Procesos de Negocios/Probabilidad.md"
+      "basename": "Organización informal",
+      "path": "Análisis de Sistemas de Información/Organización informal.md"
+    },
+    {
+      "basename": "Organización formal",
+      "path": "Análisis de Sistemas de Información/Organización formal.md"
+    },
+    {
+      "basename": "Organización",
+      "path": "Análisis de Sistemas de Información/Organización.md"
+    },
+    {
+      "basename": "Estructura",
+      "path": "Sistemas y Procesos de Negocios/Estructura.md"
+    },
+    {
+      "basename": "Elemento",
+      "path": "Sistemas y Procesos de Negocios/Elemento.md"
+    },
+    {
+      "basename": "Objetivo",
+      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
+    },
+    {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
     },
     {
       "basename": "Información",
@@ -17,8 +41,12 @@
       "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
     },
     {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+      "basename": "Entropía",
+      "path": "Sistemas y Procesos de Negocios/Entropía.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Probabilidades y Estadísticas/Probabilidad.md"
     },
     {
       "basename": "Variaciones con repetición",
@@ -171,34 +199,6 @@
     {
       "basename": "Bit Error Rate",
       "path": "Comunicación de Datos/Bit Error Rate.md"
-    },
-    {
-      "basename": "Atenuación",
-      "path": "Comunicación de Datos/Atenuación.md"
-    },
-    {
-      "basename": "Medio",
-      "path": "Comunicación de Datos/Medio.md"
-    },
-    {
-      "basename": "Ancho de banda de Nyquist",
-      "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
-    },
-    {
-      "basename": "Ancho de banda absoluto",
-      "path": "Comunicación de Datos/Ancho de banda absoluto.md"
-    },
-    {
-      "basename": "Amplitud",
-      "path": "Comunicación de Datos/Amplitud.md"
-    },
-    {
-      "basename": "Amplificador",
-      "path": "Comunicación de Datos/Amplificador.md"
-    },
-    {
-      "basename": "Diferencial",
-      "path": "Análisis Matemático I/Diferencial.md"
     }
   ],
   "omittedPaths": [],

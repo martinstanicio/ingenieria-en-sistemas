@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Elementos
 created: 2024-04-16 15:01:09
-modified: 2024-05-08 01:33:31
+modified: 2025-05-01 17:59:34
 title: Elemento
 ---
 

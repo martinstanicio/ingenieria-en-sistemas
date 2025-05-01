@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Objetivos
 created: 2024-03-24 20:50:01
-modified: 2024-05-08 01:33:31
+modified: 2025-05-01 17:56:11
 title: Objetivo
 ---
 

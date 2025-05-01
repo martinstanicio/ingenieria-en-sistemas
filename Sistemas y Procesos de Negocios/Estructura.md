@@ -1,22 +1,22 @@
 ---
 created: 2024-04-16 15:45:01
-modified: 2024-07-02 15:21:54
+modified: 2025-05-01 17:59:46
 title: Estructura
 ---
 
 # Estructura
 
-Está formada por las ==interrelaciones medianamente estables== entre los [[Elemento|elementos]] de un [[Sistemas|sistema]], que ==pueden ser verificadas== (identificadas) en un momento dado. 
+Está formada por las ==interrelaciones medianamente estables== entre los [[Elemento|elementos]] de un [[Sistemas|Sistema]], que ==pueden ser verificadas== (identificadas) en un momento dado. 
 
 > *Las clases particulares de interrelaciones más o menos estables de los componentes que se verifican en un momento dado constituyen la estructura particular del sistema en ese momento, alcanzando de tal modo una suerte de "totalidad".*
 > 
 > \- Buckley (1970)
 
-Estas interrelaciones son las definen las características y la naturaleza del [[Sistemas|Sistema]] en cuestión. Ello implica que, si un [[Elemento]] modifica su condición, establece una variación a nivel de totalidad sistémica, dado que moviliza cambios que alteran el [[Sistemas y Procesos de Negocios/Estado]] de los otros elementos con los que interactúan directa o indirectamente ([[Retroalimentación]]).
+Estas interrelaciones son las definen las características y la naturaleza del [[Sistemas|Sistema]] en cuestión. Ello implica que, si un [[Elemento]] modifica su condición, establece una variación a nivel de totalidad sistémica, dado que moviliza cambios que alteran el [[Sistemas y Procesos de Negocios/Estado|Estado]] de los otros elementos con los que interactúan directa o indirectamente ([[Retroalimentación]]).
 
 ## Relaciones Superfluas
 
-Aquellas que ==repiten otras relaciones dentro de un sistema==. Aunque pueden aumentar la [[Sistemas y Procesos de Negocios/Probabilidad]] de que un [[Sistemas|Sistema]] funcione de manera continua, también implican un costo adicional.
+Aquellas que ==repiten otras relaciones dentro de un sistema==. Aunque pueden aumentar la [[Probabilidad]] de que un [[Sistemas|Sistema]] funcione de manera continua, también implican un costo adicional.
 
 Su presencia se justifica por la ==confiabilidad que aportan== al sistema, pero es importante considerar su costo en relación con los beneficios que aportan.
 
