@@ -36,7 +36,7 @@
       }
     },
     {
-      "query": "path:\"Sistemas y Procesos de Negocios\"  ",
+      "query": "path:\"Sistemas\"",
       "color": {
         "a": 1,
         "rgb": 10234033
@@ -81,6 +81,6 @@
   "repelStrength": 15,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.13895684809538447,
+  "scale": 0.07069594805115842,
   "close": false
 }

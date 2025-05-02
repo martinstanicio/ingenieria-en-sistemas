@@ -1,12 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "Codificar y arreglar",
-      "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
-    },
-    {
-      "basename": "Metodología",
-      "path": "Análisis de Sistemas de Información/Metodología.md"
+      "basename": "Analista de sistemas",
+      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
     },
     {
       "basename": "Requerimientos",
@@ -15,6 +11,22 @@
     {
       "basename": "Calidad",
       "path": "Análisis de Sistemas de Información/Calidad.md"
+    },
+    {
+      "basename": "Metodología",
+      "path": "Análisis de Sistemas de Información/Metodología.md"
+    },
+    {
+      "basename": "Integración por partes",
+      "path": "Análisis Matemático I/Integración por partes.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
+      "basename": "Codificar y arreglar",
+      "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
     },
     {
       "basename": "Organización",
@@ -109,10 +121,6 @@
       "path": "Sistemas y Procesos de Negocios/Información.md"
     },
     {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
-    },
-    {
       "basename": "Entropía",
       "path": "Sistemas y Procesos de Negocios/Entropía.md"
     },
@@ -157,10 +165,6 @@
       "path": "Álgebra y Geometría Analítica/Autovector.md"
     },
     {
-      "basename": "Analista de sistemas",
-      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
-    },
-    {
       "basename": "Señal",
       "path": "Comunicación de Datos/Señal.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Medio guiado multipunto",
       "path": "Comunicación de Datos/Medio guiado multipunto.md"
-    },
-    {
-      "basename": "Full-duplex",
-      "path": "Comunicación de Datos/Full-duplex.md"
     }
   ],
   "omittedPaths": [],
