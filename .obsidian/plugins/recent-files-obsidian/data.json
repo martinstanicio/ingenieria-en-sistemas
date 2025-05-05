@@ -1,24 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "Objetivo",
-      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
+      "basename": "Relevamiento",
+      "path": "Análisis de Sistemas de Información/Relevamiento.md"
     },
     {
       "basename": "Expresión de deseo",
       "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
     },
     {
+      "basename": "Metodología",
+      "path": "Análisis de Sistemas de Información/Metodología.md"
+    },
+    {
       "basename": "Requerimientos",
       "path": "Análisis de Sistemas de Información/Requerimientos.md"
     },
     {
-      "basename": "Calidad",
-      "path": "Análisis de Sistemas de Información/Calidad.md"
+      "basename": "Sistemas y Procesos de Negocios",
+      "path": "Sistemas y Procesos de Negocios/Sistemas y Procesos de Negocios.md"
     },
     {
-      "basename": "Metodología",
-      "path": "Análisis de Sistemas de Información/Metodología.md"
+      "basename": "Propósito",
+      "path": "Sistemas y Procesos de Negocios/Propósito.md"
+    },
+    {
+      "basename": "Recursos",
+      "path": "Sistemas y Procesos de Negocios/Recursos.md"
+    },
+    {
+      "basename": "Salidas",
+      "path": "Sistemas y Procesos de Negocios/Salidas.md"
+    },
+    {
+      "basename": "SaaS",
+      "path": "Sistemas y Procesos de Negocios/SaaS.md"
+    },
+    {
+      "basename": "Objetivo",
+      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
+    },
+    {
+      "basename": "Calidad",
+      "path": "Análisis de Sistemas de Información/Calidad.md"
     },
     {
       "basename": "Mejoras de sistemas",
@@ -175,30 +199,6 @@
     {
       "basename": "Probabilidades y Estadísticas",
       "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
-    },
-    {
-      "basename": "Autovector",
-      "path": "Álgebra y Geometría Analítica/Autovector.md"
-    },
-    {
-      "basename": "Señal",
-      "path": "Comunicación de Datos/Señal.md"
-    },
-    {
-      "basename": "Ruido térmico",
-      "path": "Comunicación de Datos/Ruido térmico.md"
-    },
-    {
-      "basename": "Ruido impulsivo",
-      "path": "Comunicación de Datos/Ruido impulsivo.md"
-    },
-    {
-      "basename": "Ruido de intermodulación",
-      "path": "Comunicación de Datos/Ruido de intermodulación.md"
-    },
-    {
-      "basename": "Ruido",
-      "path": "Comunicación de Datos/Ruido.md"
     }
   ],
   "omittedPaths": [],

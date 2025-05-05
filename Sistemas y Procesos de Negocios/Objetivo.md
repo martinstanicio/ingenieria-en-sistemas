@@ -2,7 +2,7 @@
 aliases:
   - Objetivos
 created: 2024-03-24 20:50:01
-modified: 2025-05-05 11:10:42
+modified: 2025-05-05 11:12:05
 title: Objetivo
 ---
 
