@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "Mejoras de sistemas",
+      "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
+    },
+    {
+      "basename": "Autoridad funcional",
+      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
+    },
+    {
+      "basename": "Organización",
+      "path": "Análisis de Sistemas de Información/Organización.md"
+    },
+    {
       "basename": "Analista de sistemas",
       "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
+    },
+    {
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
+      "basename": "Ciclo de vida de un sistema",
+      "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
     },
     {
       "basename": "Requerimientos",
@@ -29,10 +49,6 @@
       "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
     },
     {
-      "basename": "Organización",
-      "path": "Análisis de Sistemas de Información/Organización.md"
-    },
-    {
       "basename": "Sistema de información",
       "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
     },
@@ -47,10 +63,6 @@
     {
       "basename": "Estructura organizacional",
       "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
-    },
-    {
-      "basename": "Autoridad funcional",
-      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
     },
     {
       "basename": "Expresión de deseo",
@@ -187,18 +199,6 @@
     {
       "basename": "Repetidor",
       "path": "Comunicación de Datos/Repetidor.md"
-    },
-    {
-      "basename": "Módem",
-      "path": "Comunicación de Datos/Módem.md"
-    },
-    {
-      "basename": "Medio guiado punto a punto",
-      "path": "Comunicación de Datos/Medio guiado punto a punto.md"
-    },
-    {
-      "basename": "Medio guiado multipunto",
-      "path": "Comunicación de Datos/Medio guiado multipunto.md"
     }
   ],
   "omittedPaths": [],

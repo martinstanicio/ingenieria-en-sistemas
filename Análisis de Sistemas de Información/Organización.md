@@ -2,7 +2,7 @@
 aliases:
   - Organizaciones
 created: 2025-05-01 17:52:45
-modified: 2025-05-01 19:31:56
+modified: 2025-05-05 10:24:11
 title: Organización
 ---
 
@@ -24,3 +24,17 @@ Para formar una [[Organización]], es necesario seguir una serie de pasos:
 
 > [!note]
 > Las [[Organización|Organizaciones]] puede ser [[Organización formal|formales]] o [[Organización informal|informales]].
+
+## Problemas
+
+A nadie le gusta reconocer los problemas de su [[Organización]], por lo que debemos prestar atención a los ==posibles síntomas de los problemas==, tanto en las personas como en los [[Sistemas]], si los hubiera.
+
+- Errores excesivos
+- Trabajos lentos, incompletos, incorrectos o no realizados
+- Las personan no logran los [[Objetivo|Objetivos]] de desempeños básicos
+- Ausentismo
+- Gran rotación de personal
+- Alto grado de insatisfacción
+
+> [!important]
+> Es importante prestar atención a la [[Retroalimentación]].
