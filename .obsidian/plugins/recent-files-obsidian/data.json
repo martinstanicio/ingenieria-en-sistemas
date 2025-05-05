@@ -1,28 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "Mejoras de sistemas",
-      "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
+      "basename": "Objetivo",
+      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
     },
     {
-      "basename": "Autoridad funcional",
-      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
-    },
-    {
-      "basename": "Organización",
-      "path": "Análisis de Sistemas de Información/Organización.md"
-    },
-    {
-      "basename": "Analista de sistemas",
-      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "Ciclo de vida de un sistema",
-      "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
     },
     {
       "basename": "Requerimientos",
@@ -35,6 +19,34 @@
     {
       "basename": "Metodología",
       "path": "Análisis de Sistemas de Información/Metodología.md"
+    },
+    {
+      "basename": "Mejoras de sistemas",
+      "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
+    },
+    {
+      "basename": "Organización",
+      "path": "Análisis de Sistemas de Información/Organización.md"
+    },
+    {
+      "basename": "Analista de sistemas",
+      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
+    },
+    {
+      "basename": "Selección del proyecto",
+      "path": "Análisis de Sistemas de Información/Selección del proyecto.md"
+    },
+    {
+      "basename": "Autoridad funcional",
+      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
+    },
+    {
+      "basename": "Sistemas",
+      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
+    },
+    {
+      "basename": "Ciclo de vida de un sistema",
+      "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
     },
     {
       "basename": "Integración por partes",
@@ -63,10 +75,6 @@
     {
       "basename": "Estructura organizacional",
       "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
-    },
-    {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
     },
     {
       "basename": "Organización formal",
@@ -123,10 +131,6 @@
     {
       "basename": "Elemento",
       "path": "Sistemas y Procesos de Negocios/Elemento.md"
-    },
-    {
-      "basename": "Objetivo",
-      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
     },
     {
       "basename": "Información",
@@ -195,10 +199,6 @@
     {
       "basename": "Ruido",
       "path": "Comunicación de Datos/Ruido.md"
-    },
-    {
-      "basename": "Repetidor",
-      "path": "Comunicación de Datos/Repetidor.md"
     }
   ],
   "omittedPaths": [],

@@ -1,6 +1,6 @@
 ---
 created: 2025-05-05 10:25:53
-modified: 2025-05-05 10:36:51
+modified: 2025-05-05 10:45:04
 title: Mejoras de sistemas
 ---
 
@@ -36,3 +36,7 @@ Se busca mejorar y optimizar la integración entre ellos, y con la propia [[Orga
 
 - Reducción de errores de [[Entradas|Entrada]]
 - Reducción de [[Salidas]] redundantes
+
+## Experiencia de usuario (UX)
+
+Consiste en mejorar la ==satisfacción del usuario== del [[Sistemas|Sistema]], y ==facilitar su interacción== con clientes, proveedores, vendedores, etc.
