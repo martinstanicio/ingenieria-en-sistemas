@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Metodologías ágiles",
+      "path": "Análisis de Sistemas de Información/Metodologías ágiles.md"
+    },
+    {
       "basename": "Metodología de desarrollo",
       "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
+    },
+    {
+      "basename": "Metodologías clásicas",
+      "path": "Análisis de Sistemas de Información/Metodologías clásicas.md"
     },
     {
       "basename": "CMMI",
@@ -191,14 +199,6 @@
     {
       "basename": "Poder",
       "path": "Análisis de Sistemas de Información/Poder.md"
-    },
-    {
-      "basename": "Estructura",
-      "path": "Sistemas y Procesos de Negocios/Estructura.md"
-    },
-    {
-      "basename": "Elemento",
-      "path": "Sistemas y Procesos de Negocios/Elemento.md"
     }
   ],
   "omittedPaths": [],
