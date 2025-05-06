@@ -1,20 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Encuesta",
-      "path": "Análisis de Sistemas de Información/Encuesta.md"
+      "basename": "Riesgo",
+      "path": "Análisis de Sistemas de Información/Riesgo.md"
     },
     {
-      "basename": "Entrevista",
-      "path": "Análisis de Sistemas de Información/Entrevista.md"
+      "basename": "Administración de riesgos",
+      "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
+    },
+    {
+      "basename": "Metodología",
+      "path": "Análisis de Sistemas de Información/Metodología.md"
     },
     {
       "basename": "Relevamiento",
       "path": "Análisis de Sistemas de Información/Relevamiento.md"
     },
     {
-      "basename": "Metodología",
-      "path": "Análisis de Sistemas de Información/Metodología.md"
+      "basename": "Encuesta",
+      "path": "Análisis de Sistemas de Información/Encuesta.md"
+    },
+    {
+      "basename": "Entrevista",
+      "path": "Análisis de Sistemas de Información/Entrevista.md"
     },
     {
       "basename": "Requerimientos",
@@ -191,14 +199,6 @@
     {
       "basename": "Capacidad del canal",
       "path": "Comunicación de Datos/Capacidad del canal.md"
-    },
-    {
-      "basename": "Par trenzado",
-      "path": "Comunicación de Datos/Par trenzado.md"
-    },
-    {
-      "basename": "Transmisión analógica",
-      "path": "Comunicación de Datos/Transmisión analógica.md"
     }
   ],
   "omittedPaths": [],
