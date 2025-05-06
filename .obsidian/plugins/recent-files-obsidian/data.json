@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "CMMI",
+      "path": "Análisis de Sistemas de Información/CMMI.md"
+    },
+    {
+      "basename": "Modelo de calidad de software",
+      "path": "Análisis de Sistemas de Información/Modelo de calidad de software.md"
+    },
+    {
+      "basename": "Calidad",
+      "path": "Análisis de Sistemas de Información/Calidad.md"
+    },
+    {
+      "basename": "Control de calidad",
+      "path": "Análisis de Sistemas de Información/Control de calidad.md"
+    },
+    {
       "basename": "Riesgo predecible",
       "path": "Análisis de Sistemas de Información/Riesgo predecible.md"
-    },
-    {
-      "basename": "Riesgo",
-      "path": "Análisis de Sistemas de Información/Riesgo.md"
-    },
-    {
-      "basename": "Riesgo impredecible",
-      "path": "Análisis de Sistemas de Información/Riesgo impredecible.md"
     },
     {
       "basename": "Administración de riesgos",
@@ -19,6 +27,14 @@
     {
       "basename": "Plan de contingencia",
       "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
+    },
+    {
+      "basename": "Riesgo",
+      "path": "Análisis de Sistemas de Información/Riesgo.md"
+    },
+    {
+      "basename": "Riesgo impredecible",
+      "path": "Análisis de Sistemas de Información/Riesgo impredecible.md"
     },
     {
       "basename": "Metodología",
@@ -39,10 +55,6 @@
     {
       "basename": "Requerimientos",
       "path": "Análisis de Sistemas de Información/Requerimientos.md"
-    },
-    {
-      "basename": "Calidad",
-      "path": "Análisis de Sistemas de Información/Calidad.md"
     },
     {
       "basename": "Expresión de deseo",
@@ -187,18 +199,6 @@
     {
       "basename": "Elemento",
       "path": "Sistemas y Procesos de Negocios/Elemento.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
-    },
-    {
-      "basename": "Entropía",
-      "path": "Sistemas y Procesos de Negocios/Entropía.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Probabilidades y Estadísticas/Probabilidad.md"
     }
   ],
   "omittedPaths": [],
