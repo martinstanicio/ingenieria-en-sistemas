@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Metodología de desarrollo",
+      "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
+    },
+    {
       "basename": "CMMI",
       "path": "Análisis de Sistemas de Información/CMMI.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "Riesgo impredecible",
       "path": "Análisis de Sistemas de Información/Riesgo impredecible.md"
-    },
-    {
-      "basename": "Metodología",
-      "path": "Análisis de Sistemas de Información/Metodología.md"
     },
     {
       "basename": "Relevamiento",

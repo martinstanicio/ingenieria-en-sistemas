@@ -8,7 +8,7 @@ title: Codificar y arreglar
 
 # Codificar y arreglar
 
-Una [[Metodología]] en la que simplemente se recibe el problema, se programa una solución, y se hacen arreglos sobre el mismo de forma iterada para acercarse al producto deseado.
+Una [[Metodología de desarrollo]] en la que simplemente se recibe el problema, se programa una solución, y se hacen arreglos sobre el mismo de forma iterada para acercarse al producto deseado.
 
 > [!danger]
-> No es una [[Metodología]] recomendada, ya que suele ser caótica e ineficiente.
+> No es una [[Metodología de desarrollo]] recomendada, ya que suele ser caótica e ineficiente.
