@@ -9,16 +9,8 @@
       "path": "Análisis de Sistemas de Información/Entrevista.md"
     },
     {
-      "basename": "Relación señal-ruido",
-      "path": "Comunicación de Datos/Relación señal-ruido.md"
-    },
-    {
       "basename": "Relevamiento",
       "path": "Análisis de Sistemas de Información/Relevamiento.md"
-    },
-    {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
     },
     {
       "basename": "Metodología",
@@ -27,6 +19,18 @@
     {
       "basename": "Requerimientos",
       "path": "Análisis de Sistemas de Información/Requerimientos.md"
+    },
+    {
+      "basename": "Calidad",
+      "path": "Análisis de Sistemas de Información/Calidad.md"
+    },
+    {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+    },
+    {
+      "basename": "Relación señal-ruido",
+      "path": "Comunicación de Datos/Relación señal-ruido.md"
     },
     {
       "basename": "Sistemas y Procesos de Negocios",
@@ -51,10 +55,6 @@
     {
       "basename": "Objetivo",
       "path": "Sistemas y Procesos de Negocios/Objetivo.md"
-    },
-    {
-      "basename": "Calidad",
-      "path": "Análisis de Sistemas de Información/Calidad.md"
     },
     {
       "basename": "Mejoras de sistemas",
