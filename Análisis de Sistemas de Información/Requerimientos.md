@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Requisitos
 created: 2025-05-01 19:48:12
-modified: 2025-05-01 19:48:33
+modified: 2025-05-05 11:54:27
 title: Requerimientos
 ---
 

@@ -1,14 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "Encuesta",
-      "path": "Análisis de Sistemas de Información/Encuesta.md"
-    },
-    {
-      "basename": "Entrevista",
-      "path": "Análisis de Sistemas de Información/Entrevista.md"
-    },
-    {
       "basename": "Relación señal-ruido",
       "path": "Comunicación de Datos/Relación señal-ruido.md"
     },
@@ -199,6 +191,14 @@
     {
       "basename": "Transmisión analógica",
       "path": "Comunicación de Datos/Transmisión analógica.md"
+    },
+    {
+      "basename": "Variaciones",
+      "path": "Probabilidades y Estadísticas/Variaciones.md"
+    },
+    {
+      "basename": "Probabilidades y Estadísticas",
+      "path": "Probabilidades y Estadísticas/Probabilidades y Estadísticas.md"
     }
   ],
   "omittedPaths": [],
