@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Riesgo predecible",
+      "path": "Análisis de Sistemas de Información/Riesgo predecible.md"
+    },
+    {
       "basename": "Riesgo",
       "path": "Análisis de Sistemas de Información/Riesgo.md"
     },
     {
+      "basename": "Riesgo impredecible",
+      "path": "Análisis de Sistemas de Información/Riesgo impredecible.md"
+    },
+    {
       "basename": "Administración de riesgos",
       "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
+    },
+    {
+      "basename": "Plan de contingencia",
+      "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
     },
     {
       "basename": "Metodología",
@@ -187,18 +199,6 @@
     {
       "basename": "Probabilidad",
       "path": "Probabilidades y Estadísticas/Probabilidad.md"
-    },
-    {
-      "basename": "Variaciones con repetición",
-      "path": "Probabilidades y Estadísticas/Variaciones con repetición.md"
-    },
-    {
-      "basename": "Ancho de banda",
-      "path": "Comunicación de Datos/Ancho de banda.md"
-    },
-    {
-      "basename": "Capacidad del canal",
-      "path": "Comunicación de Datos/Capacidad del canal.md"
     }
   ],
   "omittedPaths": [],

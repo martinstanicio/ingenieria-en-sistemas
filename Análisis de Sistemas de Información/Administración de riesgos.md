@@ -1,6 +1,6 @@
 ---
 created: 2025-05-06 14:07:19
-modified: 2025-05-06 14:11:37
+modified: 2025-05-06 14:26:22
 title: Administración de riesgos
 ---
 
@@ -11,12 +11,28 @@ Tarea que ayuda a comprender y manejar el [[Riesgo]] en un proyecto de desarroll
 > [!important]
 > Todos los involucrados en el [[Proceso]] de desarrollo deben desempeñar esta tarea.
 
-## Análisis de riesgo
+## Detección de riesgos
 
-En esta etapa se obtienen 3 planes importantes:
+Para poder detectar los [[Riesgo|Riesgos]], primero hay que saber ==reconocer que algo puede salir mal==, e identificarlo.
 
-- Plan de reducción
-- Plan de supervisión
-- Plan de gestión
+Luego, se hace una lista de posibles [[Riesgo|Riesgos]], y se establece la [[Probabilidad]], impacto y costo de cada uno.
 
-Los ==planes deben revisarse== conforme avanza el proyecto, y modificarse si las circunstancias lo ameritan. Además, se deben ejecutar los ==planes de contingencia== cuando sea necesario.
+Finalmente, se los clasifica según su [[Probabilidad]] e impacto, y se genera un [[Plan de contingencia]] para aquellos con ==alta [[Probabilidad]] e impacto==.
+
+> [!note]
+> Se pueden generar múltiples planes para la [[Administración de riesgos]]:
+> 
+> - Plan de reducción
+> - Plan de supervisión
+> - Plan de gestión
+> - [[Plan de contingencia]]
+> 
+> Los mismos ==deben revisarse== conforme avanza el proyecto, y modificarse si fuera necesario.
+
+## Estrategias reactivas
+
+Se reacciona cuando finalmente sucede algo. Por lo tanto, puede llevar a una ==situación de crisis==, haciendo que los ==proyectos corran peligro==.
+
+## Estrategias proactivas
+
+La eventualidad de un [[Riesgo]] se estudia, y a partir de dicho estudio se forma un [[Plan de contingencia]].
