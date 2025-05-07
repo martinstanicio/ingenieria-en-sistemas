@@ -2,7 +2,7 @@
 aliases:
   - Pruebas de software
 created: 2025-05-06 21:56:04
-modified: 2025-05-06 22:07:31
+modified: 2025-05-06 22:45:36
 title: Prueba de software
 ---
 
@@ -18,3 +18,11 @@ Un buen caso de [[Prueba de software|Prueba]] es aquel que tiene una ==alta [[Pr
 
 > [!important]
 > Una [[Prueba de software|Prueba]] tiene éxito si descubre un [[Errores|Error]] no detectado hasta entonces.
+
+---
+
+Normalmente un software comercial pasa por 3 etapas de [[Prueba de software|Prueba]]:
+
+- [[Prueba de desarrollo|Pruebas de desarrollo]]
+- [[Versión de prueba|Versiones de prueba]]
+- [[Prueba de usuario|Pruebas de usuario]]
