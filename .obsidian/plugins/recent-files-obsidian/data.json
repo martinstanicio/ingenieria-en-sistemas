@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "Metodologías ágiles",
-      "path": "Análisis de Sistemas de Información/Metodologías ágiles.md"
+      "basename": "Validación y verificación",
+      "path": "Análisis de Sistemas de Información/Validación y verificación.md"
+    },
+    {
+      "basename": "Prueba de software",
+      "path": "Análisis de Sistemas de Información/Prueba de software.md"
+    },
+    {
+      "basename": "Errores",
+      "path": "Algoritmos y Estructuras de Datos/Errores.md"
     },
     {
       "basename": "Metodologías clásicas",
       "path": "Análisis de Sistemas de Información/Metodologías clásicas.md"
     },
     {
-      "basename": "Metodología de desarrollo",
-      "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
+      "basename": "Control de calidad",
+      "path": "Análisis de Sistemas de Información/Control de calidad.md"
     },
     {
       "basename": "CMMI",
       "path": "Análisis de Sistemas de Información/CMMI.md"
+    },
+    {
+      "basename": "Metodologías ágiles",
+      "path": "Análisis de Sistemas de Información/Metodologías ágiles.md"
+    },
+    {
+      "basename": "Metodología de desarrollo",
+      "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
     },
     {
       "basename": "Modelo de calidad de software",
@@ -23,10 +39,6 @@
     {
       "basename": "Calidad",
       "path": "Análisis de Sistemas de Información/Calidad.md"
-    },
-    {
-      "basename": "Control de calidad",
-      "path": "Análisis de Sistemas de Información/Control de calidad.md"
     },
     {
       "basename": "Riesgo predecible",
@@ -187,18 +199,6 @@
     {
       "basename": "Autoridad de línea",
       "path": "Análisis de Sistemas de Información/Autoridad de línea.md"
-    },
-    {
-      "basename": "Subconjunto",
-      "path": "Lógica y Estructuras Discretas/Subconjunto.md"
-    },
-    {
-      "basename": "20240809 - Frases",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240809 - Frases.md"
-    },
-    {
-      "basename": "Poder",
-      "path": "Análisis de Sistemas de Información/Poder.md"
     }
   ],
   "omittedPaths": [],
