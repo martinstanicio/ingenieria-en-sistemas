@@ -1,16 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "Prueba de enfoque funcional",
+      "path": "Análisis de Sistemas de Información/Prueba de enfoque funcional.md"
+    },
+    {
+      "basename": "Prueba de enfoque estructural",
+      "path": "Análisis de Sistemas de Información/Prueba de enfoque estructural.md"
+    },
+    {
+      "basename": "Prueba de software",
+      "path": "Análisis de Sistemas de Información/Prueba de software.md"
+    },
+    {
+      "basename": "Grupo Independiente de Prueba",
+      "path": "Análisis de Sistemas de Información/Grupo Independiente de Prueba.md"
+    },
+    {
       "basename": "Prueba de usuario",
       "path": "Análisis de Sistemas de Información/Prueba de usuario.md"
     },
     {
       "basename": "Validación y verificación",
       "path": "Análisis de Sistemas de Información/Validación y verificación.md"
-    },
-    {
-      "basename": "Prueba de software",
-      "path": "Análisis de Sistemas de Información/Prueba de software.md"
     },
     {
       "basename": "Versión de prueba",
@@ -187,18 +199,6 @@
     {
       "basename": "Organización informal",
       "path": "Análisis de Sistemas de Información/Organización informal.md"
-    },
-    {
-      "basename": "Delegación de decisiones",
-      "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
-    },
-    {
-      "basename": "Centralización",
-      "path": "Análisis de Sistemas de Información/Centralización.md"
-    },
-    {
-      "basename": "Departamentalización",
-      "path": "Análisis de Sistemas de Información/Departamentalización.md"
     }
   ],
   "omittedPaths": [],
