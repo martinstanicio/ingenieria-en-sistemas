@@ -2,7 +2,7 @@
 aliases:
   - Pruebas de software
 created: 2025-05-06 21:56:04
-modified: 2025-05-08 11:46:58
+modified: 2025-05-08 11:56:51
 title: Prueba de software
 ---
 
@@ -24,7 +24,7 @@ Se busca diseñar las [[Prueba de software|Pruebas]] que tengan la mayor [[Proba
 
 Normalmente un software comercial pasa por 3 etapas de [[Prueba de software|Prueba]]:
 
-- [[Prueba de desarrollo|Pruebas de desarrollo]]
+- [[Prueba de desarrollo|Pruebas de desarrollo]] ([[Prueba de unidad|Pruebas de unidad]] y [[Prueba de integración|Pruebas de integración]])
 - [[Versión de prueba|Versiones de prueba]] o [[Versión de prueba|Pruebas de sistema]]
 - [[Prueba de usuario|Pruebas de usuario]] o [[Prueba de usuario|Pruebas de aceptación]]
 

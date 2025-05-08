@@ -12,3 +12,6 @@ Esta [[Prueba de software]] consiste en poner a prueba al [[Sistemas|Sistema]] p
 
 > [!note]
 > Participan diseñadores y programadores del [[Sistemas|Sistema]].
+
+> [!important]
+> El responsable del desarrollo siempre es responsable de probar las unidades del [[Programa propio|Programa]] ([[Prueba de unidad|Pruebas de unidad]]), y muchas veces también se encarga de las [[Prueba de integración|Pruebas de integración]].
