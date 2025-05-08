@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "Prueba de unidad",
+      "path": "Análisis de Sistemas de Información/Prueba de unidad.md"
+    },
+    {
+      "basename": "Prueba de software",
+      "path": "Análisis de Sistemas de Información/Prueba de software.md"
+    },
+    {
+      "basename": "Versión de prueba",
+      "path": "Análisis de Sistemas de Información/Versión de prueba.md"
+    },
+    {
+      "basename": "Prueba de desarrollo",
+      "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
+    },
+    {
+      "basename": "20240903 - Micros",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
+    },
+    {
       "basename": "Prueba de enfoque funcional",
       "path": "Análisis de Sistemas de Información/Prueba de enfoque funcional.md"
     },
     {
       "basename": "Prueba de enfoque estructural",
       "path": "Análisis de Sistemas de Información/Prueba de enfoque estructural.md"
-    },
-    {
-      "basename": "Prueba de software",
-      "path": "Análisis de Sistemas de Información/Prueba de software.md"
     },
     {
       "basename": "Grupo Independiente de Prueba",
@@ -23,14 +39,6 @@
     {
       "basename": "Validación y verificación",
       "path": "Análisis de Sistemas de Información/Validación y verificación.md"
-    },
-    {
-      "basename": "Versión de prueba",
-      "path": "Análisis de Sistemas de Información/Versión de prueba.md"
-    },
-    {
-      "basename": "Prueba de desarrollo",
-      "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
     },
     {
       "basename": "Sistemas",
@@ -191,14 +199,6 @@
     {
       "basename": "Organización formal",
       "path": "Análisis de Sistemas de Información/Organización formal.md"
-    },
-    {
-      "basename": "Descentralización",
-      "path": "Análisis de Sistemas de Información/Descentralización.md"
-    },
-    {
-      "basename": "Organización informal",
-      "path": "Análisis de Sistemas de Información/Organización informal.md"
     }
   ],
   "omittedPaths": [],
