@@ -5,6 +5,10 @@
       "path": "Análisis de Sistemas de Información/Prueba de usuario.md"
     },
     {
+      "basename": "Validación y verificación",
+      "path": "Análisis de Sistemas de Información/Validación y verificación.md"
+    },
+    {
       "basename": "Prueba de software",
       "path": "Análisis de Sistemas de Información/Prueba de software.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "Prueba de desarrollo",
       "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
-    },
-    {
-      "basename": "Validación y verificación",
-      "path": "Análisis de Sistemas de Información/Validación y verificación.md"
     },
     {
       "basename": "Sistemas",

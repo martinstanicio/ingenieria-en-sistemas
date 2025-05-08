@@ -4,7 +4,7 @@ aliases:
   - Prueba de aceptación
   - Pruebas de aceptación
 created: 2025-05-06 22:48:33
-modified: 2025-05-06 22:49:43
+modified: 2025-05-06 23:19:37
 title: Prueba de usuario
 ---
 
