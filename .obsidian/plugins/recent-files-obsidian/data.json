@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Grupo Independiente de Prueba",
-      "path": "Análisis de Sistemas de Información/Grupo Independiente de Prueba.md"
+      "basename": "Capítulo 4 Medios de transmisión",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Capítulo 3 Transmisión de datos",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
     },
     {
       "basename": "Prueba de desarrollo",
       "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
+    },
+    {
+      "basename": "Grupo Independiente de Prueba",
+      "path": "Análisis de Sistemas de Información/Grupo Independiente de Prueba.md"
     },
     {
       "basename": "Prueba de software",
@@ -191,14 +199,6 @@
     {
       "basename": "Información directiva",
       "path": "Sistemas y Procesos de Negocios/Información directiva.md"
-    },
-    {
-      "basename": "Información operativa",
-      "path": "Sistemas y Procesos de Negocios/Información operativa.md"
-    },
-    {
-      "basename": "Estructura organizacional",
-      "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
     }
   ],
   "omittedPaths": [],
