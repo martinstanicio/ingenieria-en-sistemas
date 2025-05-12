@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Centralización",
+      "path": "Análisis de Sistemas de Información/Centralización.md"
+    },
+    {
+      "basename": "Descentralización",
+      "path": "Análisis de Sistemas de Información/Descentralización.md"
+    },
+    {
+      "basename": "Delegación de decisiones",
+      "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
+    },
+    {
+      "basename": "Delegación",
+      "path": "Análisis de Sistemas de Información/Delegación.md"
+    },
+    {
+      "basename": "Departamentalización",
+      "path": "Análisis de Sistemas de Información/Departamentalización.md"
+    },
+    {
+      "basename": "Diagrama de PERT",
+      "path": "Análisis de Sistemas de Información/Diagrama de PERT.md"
+    },
+    {
+      "basename": "pert",
+      "path": "Análisis de Sistemas de Información/attachments/pert.png"
+    },
+    {
+      "basename": "Árbol de decisión",
+      "path": "Lógica y Estructuras Discretas/Árbol de decisión.md"
+    },
+    {
       "basename": "Diagrama de Gantt",
       "path": "Análisis de Sistemas de Información/Diagrama de Gantt.md"
+    },
+    {
+      "basename": "gantt",
+      "path": "Análisis de Sistemas de Información/attachments/gantt.png"
     },
     {
       "basename": "Estimación",
@@ -163,42 +199,6 @@
     {
       "basename": "Requerimientos",
       "path": "Análisis de Sistemas de Información/Requerimientos.md"
-    },
-    {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
-    },
-    {
-      "basename": "Relación señal-ruido",
-      "path": "Comunicación de Datos/Relación señal-ruido.md"
-    },
-    {
-      "basename": "Sistemas y Procesos de Negocios",
-      "path": "Sistemas y Procesos de Negocios/Sistemas y Procesos de Negocios.md"
-    },
-    {
-      "basename": "Propósito",
-      "path": "Sistemas y Procesos de Negocios/Propósito.md"
-    },
-    {
-      "basename": "Recursos",
-      "path": "Sistemas y Procesos de Negocios/Recursos.md"
-    },
-    {
-      "basename": "Salidas",
-      "path": "Sistemas y Procesos de Negocios/Salidas.md"
-    },
-    {
-      "basename": "SaaS",
-      "path": "Sistemas y Procesos de Negocios/SaaS.md"
-    },
-    {
-      "basename": "Objetivo",
-      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
-    },
-    {
-      "basename": "Mejoras de sistemas",
-      "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
     }
   ],
   "omittedPaths": [],
