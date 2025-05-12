@@ -1,6 +1,6 @@
 ---
 created: 2025-05-01 18:43:50
-modified: 2025-05-01 19:09:02
+modified: 2025-05-11 23:44:41
 title: Departamentalización
 ---
 
@@ -9,7 +9,7 @@ title: Departamentalización
 Acción de dividir un [[Conjunto]] de [[Actividades]] en varios [[Subconjunto|Subconjuntos]], llamados ==departamentos==.
 
 > [!important]
-> A mayor especialización, mayor eficiencia.
+> Está relacionado con la [[Estructura organizacional|Estructura]] horizontal de la [[Organización]].
 
 Esta división se puede realizar de múltiples formas:
 
@@ -18,6 +18,9 @@ Esta división se puede realizar de múltiples formas:
 - Por grupo de clientes
 - Por producto
 - Por tiempo
+
+> [!tip]
+> A mayor especialización, mayor eficiencia.
 
 ## Interdependencia entre departamentos
 

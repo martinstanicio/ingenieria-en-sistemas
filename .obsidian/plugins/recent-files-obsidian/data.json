@@ -1,24 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "Centralización",
-      "path": "Análisis de Sistemas de Información/Centralización.md"
+      "basename": "Poder",
+      "path": "Análisis de Sistemas de Información/Poder.md"
     },
     {
-      "basename": "Descentralización",
-      "path": "Análisis de Sistemas de Información/Descentralización.md"
+      "basename": "Autoridad",
+      "path": "Análisis de Sistemas de Información/Autoridad.md"
     },
     {
-      "basename": "Delegación de decisiones",
-      "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
+      "basename": "Departamentalización",
+      "path": "Análisis de Sistemas de Información/Departamentalización.md"
     },
     {
       "basename": "Delegación",
       "path": "Análisis de Sistemas de Información/Delegación.md"
     },
     {
-      "basename": "Departamentalización",
-      "path": "Análisis de Sistemas de Información/Departamentalización.md"
+      "basename": "Descentralización",
+      "path": "Análisis de Sistemas de Información/Descentralización.md"
+    },
+    {
+      "basename": "Centralización",
+      "path": "Análisis de Sistemas de Información/Centralización.md"
+    },
+    {
+      "basename": "Estructura organizacional",
+      "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
+    },
+    {
+      "basename": "Delegación de decisiones",
+      "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
     },
     {
       "basename": "Diagrama de PERT",
@@ -187,18 +199,6 @@
     {
       "basename": "Riesgo impredecible",
       "path": "Análisis de Sistemas de Información/Riesgo impredecible.md"
-    },
-    {
-      "basename": "Relevamiento",
-      "path": "Análisis de Sistemas de Información/Relevamiento.md"
-    },
-    {
-      "basename": "Entrevista",
-      "path": "Análisis de Sistemas de Información/Entrevista.md"
-    },
-    {
-      "basename": "Requerimientos",
-      "path": "Análisis de Sistemas de Información/Requerimientos.md"
     }
   ],
   "omittedPaths": [],

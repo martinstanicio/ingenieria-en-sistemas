@@ -2,7 +2,7 @@
 aliases:
   - Estructura
 created: 2025-05-01 19:10:46
-modified: 2025-05-01 19:26:14
+modified: 2025-05-11 23:37:20
 title: Estructura organizacional
 ---
 
@@ -55,7 +55,7 @@ Sin embargo, se puede ver a simple vista que genera ==muchos niveles administrat
 
 ## Tramos amplios
 
-Este formato permite el fácil uso de la ==delegación==, y la creación de políticas claras para toda la [[Organización]].
+Este formato permite el fácil uso de la [[Delegación]], y la creación de políticas claras para toda la [[Organización]].
 
 ```mermaid
 flowchart TB
@@ -86,4 +86,4 @@ flowchart TB
 	AD --> ADA & ADB & ADC & ADD & ADE & ADF & ADG & ADH & ADI & ADJ & ADK & ADL
 ```
 
-Sin embargo, genera ==cuellos de botella== en la [[Delegación de decisiones|Toma de decisiones]], haciendo que el superior correspondiente pueda ==perder el control==.
+Sin embargo, genera ==cuellos de botella== en la toma de decisiones, haciendo que el superior correspondiente pueda ==perder el control==.
