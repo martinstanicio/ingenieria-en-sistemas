@@ -1,6 +1,6 @@
 ---
 created: 2025-04-06 05:59:23
-modified: 2025-04-06 06:46:15
+modified: 2025-05-09 16:58:43
 title: "Capítulo 4: Medios de transmisión"
 ---
 
@@ -8,7 +8,7 @@ title: "Capítulo 4: Medios de transmisión"
 
 ## 4.1. Medios de transmisión guiados
 
-Los [[Medio guiado|Medios guiados]] son [[Comunicación de Datos/Medio|Medios]] físicos que proporcionan una trayectoria definida para la propagación de [[Señal|Señales]]. Se mencionan los siguientes:
+Los [[Medio guiado|Medios guiados]] son [[Comunicación de Datos/Medio|Medios]] físicos sólidos que proporcionan una trayectoria definida para la propagación de [[Señal|Señales]]. Se mencionan los siguientes:
 
 - [[Par trenzado]]: históricamente el más utilizado. Existen múltiples variantes [[Par trenzado no apantallado|UTP]] y [[Par trenzado apantallado|STP]].
 - [[Cable coaxial]]: soporta mayores velocidades y distancias que el anterior.

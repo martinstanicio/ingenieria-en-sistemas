@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Comunicación de Datos",
+      "path": "Comunicación de Datos/Comunicación de Datos.md"
+    },
+    {
       "basename": "Capítulo 4 Medios de transmisión",
       "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Fibra óptica",
+      "path": "Comunicación de Datos/Fibra óptica.md"
+    },
+    {
+      "basename": "Encuesta",
+      "path": "Análisis de Sistemas de Información/Encuesta.md"
     },
     {
       "basename": "Capítulo 3 Transmisión de datos",
@@ -113,10 +125,6 @@
       "path": "Análisis de Sistemas de Información/Relevamiento.md"
     },
     {
-      "basename": "Encuesta",
-      "path": "Análisis de Sistemas de Información/Encuesta.md"
-    },
-    {
       "basename": "Entrevista",
       "path": "Análisis de Sistemas de Información/Entrevista.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Codificar y arreglar",
       "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
-    },
-    {
-      "basename": "Sistema de información",
-      "path": "Sistemas y Procesos de Negocios/Sistema de información.md"
-    },
-    {
-      "basename": "Información directiva",
-      "path": "Sistemas y Procesos de Negocios/Información directiva.md"
     }
   ],
   "omittedPaths": [],
