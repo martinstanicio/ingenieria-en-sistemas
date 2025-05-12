@@ -1,6 +1,122 @@
 {
   "recentFiles": [
     {
+      "basename": "Metodología de desarrollo",
+      "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
+    },
+    {
+      "basename": "Mejoras de sistemas",
+      "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
+    },
+    {
+      "basename": "Información",
+      "path": "Sistemas y Procesos de Negocios/Información.md"
+    },
+    {
+      "basename": "Modificación",
+      "path": "Análisis de Sistemas de Información/Modificación.md"
+    },
+    {
+      "basename": "Organización",
+      "path": "Análisis de Sistemas de Información/Organización.md"
+    },
+    {
+      "basename": "Producción",
+      "path": "Análisis de Sistemas de Información/Producción.md"
+    },
+    {
+      "basename": "Intercepción",
+      "path": "Análisis de Sistemas de Información/Intercepción.md"
+    },
+    {
+      "basename": "Prueba de desarrollo",
+      "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
+    },
+    {
+      "basename": "Interrupción",
+      "path": "Análisis de Sistemas de Información/Interrupción.md"
+    },
+    {
+      "basename": "Informática",
+      "path": "Análisis de Sistemas de Información/Informática.md"
+    },
+    {
+      "basename": "Grupo Independiente de Prueba",
+      "path": "Análisis de Sistemas de Información/Grupo Independiente de Prueba.md"
+    },
+    {
+      "basename": "Factibilidad operativa",
+      "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
+    },
+    {
+      "basename": "Factibilidad económica",
+      "path": "Análisis de Sistemas de Información/Factibilidad económica.md"
+    },
+    {
+      "basename": "Factibilidad técnica",
+      "path": "Análisis de Sistemas de Información/Factibilidad técnica.md"
+    },
+    {
+      "basename": "Factibilidad",
+      "path": "Análisis de Sistemas de Información/Factibilidad.md"
+    },
+    {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+    },
+    {
+      "basename": "Estructura organizacional",
+      "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
+    },
+    {
+      "basename": "Estimación",
+      "path": "Análisis de Sistemas de Información/Estimación.md"
+    },
+    {
+      "basename": "Entrevista",
+      "path": "Análisis de Sistemas de Información/Entrevista.md"
+    },
+    {
+      "basename": "Encuesta",
+      "path": "Análisis de Sistemas de Información/Encuesta.md"
+    },
+    {
+      "basename": "Diagrama de Gantt",
+      "path": "Análisis de Sistemas de Información/Diagrama de Gantt.md"
+    },
+    {
+      "basename": "Descentralización",
+      "path": "Análisis de Sistemas de Información/Descentralización.md"
+    },
+    {
+      "basename": "Departamentalización",
+      "path": "Análisis de Sistemas de Información/Departamentalización.md"
+    },
+    {
+      "basename": "Delegación",
+      "path": "Análisis de Sistemas de Información/Delegación.md"
+    },
+    {
+      "basename": "Control de calidad",
+      "path": "Análisis de Sistemas de Información/Control de calidad.md"
+    },
+    {
+      "basename": "Codificar y arreglar",
+      "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
+    },
+    {
+      "basename": "CMMI",
+      "path": "Análisis de Sistemas de Información/CMMI.md"
+    },
+    {
+      "basename": "Ciclo de vida de un sistema",
+      "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
+    },
+    {
+      "basename": "Centralización",
+      "path": "Análisis de Sistemas de Información/Centralización.md"
+    },
+    {
       "basename": "Calidad",
       "path": "Análisis de Sistemas de Información/Calidad.md"
     },
@@ -41,18 +157,6 @@
       "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
     },
     {
-      "basename": "Factibilidad operativa",
-      "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
-    },
-    {
-      "basename": "Estimación",
-      "path": "Análisis de Sistemas de Información/Estimación.md"
-    },
-    {
-      "basename": "Diagrama de Gantt",
-      "path": "Análisis de Sistemas de Información/Diagrama de Gantt.md"
-    },
-    {
       "basename": "Diagrama de PERT",
       "path": "Análisis de Sistemas de Información/Diagrama de PERT.md"
     },
@@ -61,40 +165,8 @@
       "path": "Sistemas y Procesos de Negocios/Objetivo.md"
     },
     {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
-    },
-    {
-      "basename": "Ciclo de vida de un sistema",
-      "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
-    },
-    {
-      "basename": "Estructura organizacional",
-      "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
-    },
-    {
-      "basename": "Delegación",
-      "path": "Análisis de Sistemas de Información/Delegación.md"
-    },
-    {
-      "basename": "Departamentalización",
-      "path": "Análisis de Sistemas de Información/Departamentalización.md"
-    },
-    {
       "basename": "Poder",
       "path": "Análisis de Sistemas de Información/Poder.md"
-    },
-    {
-      "basename": "Descentralización",
-      "path": "Análisis de Sistemas de Información/Descentralización.md"
-    },
-    {
-      "basename": "Centralización",
-      "path": "Análisis de Sistemas de Información/Centralización.md"
-    },
-    {
-      "basename": "Delegación de decisiones",
-      "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
     },
     {
       "basename": "pert",
@@ -113,18 +185,6 @@
       "path": "Sistemas y Procesos de Negocios/Atributos.md"
     },
     {
-      "basename": "Factibilidad",
-      "path": "Análisis de Sistemas de Información/Factibilidad.md"
-    },
-    {
-      "basename": "Factibilidad económica",
-      "path": "Análisis de Sistemas de Información/Factibilidad económica.md"
-    },
-    {
-      "basename": "Factibilidad técnica",
-      "path": "Análisis de Sistemas de Información/Factibilidad técnica.md"
-    },
-    {
       "basename": "Comunicación de Datos",
       "path": "Comunicación de Datos/Comunicación de Datos.md"
     },
@@ -137,68 +197,8 @@
       "path": "Comunicación de Datos/Fibra óptica.md"
     },
     {
-      "basename": "Encuesta",
-      "path": "Análisis de Sistemas de Información/Encuesta.md"
-    },
-    {
       "basename": "Capítulo 3 Transmisión de datos",
       "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
-    },
-    {
-      "basename": "Prueba de desarrollo",
-      "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
-    },
-    {
-      "basename": "Grupo Independiente de Prueba",
-      "path": "Análisis de Sistemas de Información/Grupo Independiente de Prueba.md"
-    },
-    {
-      "basename": "Prueba de software",
-      "path": "Análisis de Sistemas de Información/Prueba de software.md"
-    },
-    {
-      "basename": "Prueba de unidad",
-      "path": "Análisis de Sistemas de Información/Prueba de unidad.md"
-    },
-    {
-      "basename": "Prueba de integración",
-      "path": "Análisis de Sistemas de Información/Prueba de integración.md"
-    },
-    {
-      "basename": "Prueba de enfoque estructural",
-      "path": "Análisis de Sistemas de Información/Prueba de enfoque estructural.md"
-    },
-    {
-      "basename": "Prueba de enfoque funcional",
-      "path": "Análisis de Sistemas de Información/Prueba de enfoque funcional.md"
-    },
-    {
-      "basename": "Validación y verificación",
-      "path": "Análisis de Sistemas de Información/Validación y verificación.md"
-    },
-    {
-      "basename": "Prueba de usuario",
-      "path": "Análisis de Sistemas de Información/Prueba de usuario.md"
-    },
-    {
-      "basename": "Versión de prueba",
-      "path": "Análisis de Sistemas de Información/Versión de prueba.md"
-    },
-    {
-      "basename": "20240903 - Micros",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
-    },
-    {
-      "basename": "Sistemas",
-      "path": "Sistemas y Procesos de Negocios/Sistemas.md"
-    },
-    {
-      "basename": "Errores",
-      "path": "Algoritmos y Estructuras de Datos/Errores.md"
-    },
-    {
-      "basename": "Metodologías clásicas",
-      "path": "Análisis de Sistemas de Información/Metodologías clásicas.md"
     }
   ],
   "omittedPaths": [],

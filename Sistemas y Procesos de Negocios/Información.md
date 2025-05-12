@@ -1,6 +1,6 @@
 ---
 created: 2024-04-30 19:56:40
-modified: 2025-05-01 17:47:56
+modified: 2025-05-12 17:08:20
 title: Información
 ---
 
@@ -16,7 +16,7 @@ Algo solo es considerado [[Información]] la primera vez que lo vemos y aprendem
 > [!tip]
 > A medida que crece la inversión crece la [[Información]] con que mejorar la toma de decisiones, pero solo conviene invertir hasta que la inversión sea igual a la utilidad ganada.
 
-Sin embargo, el valor brindado por la [[Información]] no suele ser valorado hasta que esta pierde alguno de sus atributos.
+Sin embargo, el valor brindado por la [[Información]] no suele ser valorado hasta que esta pierde alguno de sus atributos, por eventos como la [[Intercepción]], [[Interrupción]], [[Modificación]] y [[Producción]].
 
 ---
 

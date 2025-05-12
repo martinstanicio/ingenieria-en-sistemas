@@ -10,6 +10,10 @@ Es uno de los [[Modelo de calidad de software|Modelos de calidad de software]] m
 
 ## Modelo escalonado
 
-Está dirigido al software, y permite clasificar las [[Organización|Organizaciones]] en cinco tipos establecidos.
+Está dirigido al software, y permite clasificar las [[Organización|Organizaciones]] en cinco tipos establecidos:
 
-![[cmmi.png]]
+- Inicial
+- Repetible
+- Definido
+- Gestionado
+- Optimizado

@@ -1,1 +1,0 @@
-# Delegación de decisiones
