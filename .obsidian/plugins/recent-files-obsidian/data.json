@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Factibilidad",
+      "path": "Análisis de Sistemas de Información/Factibilidad.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
       "basename": "Comunicación de Datos",
       "path": "Comunicación de Datos/Comunicación de Datos.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Integración por partes",
       "path": "Análisis Matemático I/Integración por partes.md"
-    },
-    {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
-    },
-    {
-      "basename": "Codificar y arreglar",
-      "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
     }
   ],
   "omittedPaths": [],
