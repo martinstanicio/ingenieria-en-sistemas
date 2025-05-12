@@ -1,6 +1,6 @@
 ---
 created: 2025-05-06 14:07:19
-modified: 2025-05-06 14:26:22
+modified: 2025-05-12 15:21:21
 title: Administración de riesgos
 ---
 
@@ -25,7 +25,6 @@ Finalmente, se los clasifica según su [[Probabilidad]] e impacto, y se genera u
 > - Plan de reducción
 > - Plan de supervisión
 > - Plan de gestión
-> - [[Plan de contingencia]]
 > 
 > Los mismos ==deben revisarse== conforme avanza el proyecto, y modificarse si fuera necesario.
 

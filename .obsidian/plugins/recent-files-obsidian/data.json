@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "Administración de riesgos",
+      "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
+    },
+    {
+      "basename": "Probabilidad",
+      "path": "Probabilidades y Estadísticas/Probabilidad.md"
+    },
+    {
+      "basename": "Riesgo",
+      "path": "Análisis de Sistemas de Información/Riesgo.md"
+    },
+    {
+      "basename": "Plan de contingencia",
+      "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
+    },
+    {
+      "basename": "Factibilidad operativa",
+      "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
+    },
+    {
+      "basename": "Estimación",
+      "path": "Análisis de Sistemas de Información/Estimación.md"
+    },
+    {
+      "basename": "Diagrama de Gantt",
+      "path": "Análisis de Sistemas de Información/Diagrama de Gantt.md"
+    },
+    {
+      "basename": "Diagrama de PERT",
+      "path": "Análisis de Sistemas de Información/Diagrama de PERT.md"
+    },
+    {
       "basename": "Objetivo",
       "path": "Sistemas y Procesos de Negocios/Objetivo.md"
     },
@@ -9,16 +41,8 @@
       "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
     },
     {
-      "basename": "Administración de riesgos",
-      "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
-    },
-    {
       "basename": "Ciclo de vida de un sistema",
       "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
-    },
-    {
-      "basename": "Estimación",
-      "path": "Análisis de Sistemas de Información/Estimación.md"
     },
     {
       "basename": "Estructura organizacional",
@@ -53,10 +77,6 @@
       "path": "Análisis de Sistemas de Información/Delegación de decisiones.md"
     },
     {
-      "basename": "Diagrama de PERT",
-      "path": "Análisis de Sistemas de Información/Diagrama de PERT.md"
-    },
-    {
       "basename": "pert",
       "path": "Análisis de Sistemas de Información/attachments/pert.png"
     },
@@ -65,20 +85,12 @@
       "path": "Lógica y Estructuras Discretas/Árbol de decisión.md"
     },
     {
-      "basename": "Diagrama de Gantt",
-      "path": "Análisis de Sistemas de Información/Diagrama de Gantt.md"
-    },
-    {
       "basename": "gantt",
       "path": "Análisis de Sistemas de Información/attachments/gantt.png"
     },
     {
       "basename": "Atributos",
       "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "Factibilidad operativa",
-      "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
     },
     {
       "basename": "Análisis de Sistemas de Información",
@@ -187,18 +199,6 @@
     {
       "basename": "Metodología de desarrollo",
       "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
-    },
-    {
-      "basename": "Modelo de calidad de software",
-      "path": "Análisis de Sistemas de Información/Modelo de calidad de software.md"
-    },
-    {
-      "basename": "Calidad",
-      "path": "Análisis de Sistemas de Información/Calidad.md"
-    },
-    {
-      "basename": "Riesgo predecible",
-      "path": "Análisis de Sistemas de Información/Riesgo predecible.md"
     }
   ],
   "omittedPaths": [],
