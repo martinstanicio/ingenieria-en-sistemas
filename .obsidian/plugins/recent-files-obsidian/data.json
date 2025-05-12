@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Objetivo",
+      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
+    },
+    {
+      "basename": "Expresión de deseo",
+      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
+    },
+    {
+      "basename": "Administración de riesgos",
+      "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
+    },
+    {
       "basename": "Ciclo de vida de un sistema",
       "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
+    },
+    {
+      "basename": "Estimación",
+      "path": "Análisis de Sistemas de Información/Estimación.md"
     },
     {
       "basename": "Estructura organizacional",
@@ -55,10 +71,6 @@
     {
       "basename": "gantt",
       "path": "Análisis de Sistemas de Información/attachments/gantt.png"
-    },
-    {
-      "basename": "Estimación",
-      "path": "Análisis de Sistemas de Información/Estimación.md"
     },
     {
       "basename": "Atributos",
@@ -187,18 +199,6 @@
     {
       "basename": "Riesgo predecible",
       "path": "Análisis de Sistemas de Información/Riesgo predecible.md"
-    },
-    {
-      "basename": "Administración de riesgos",
-      "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
-    },
-    {
-      "basename": "Plan de contingencia",
-      "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
-    },
-    {
-      "basename": "Riesgo",
-      "path": "Análisis de Sistemas de Información/Riesgo.md"
     }
   ],
   "omittedPaths": [],
