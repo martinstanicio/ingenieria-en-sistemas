@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Diagrama de Gantt",
+      "path": "Análisis de Sistemas de Información/Diagrama de Gantt.md"
+    },
+    {
+      "basename": "Estimación",
+      "path": "Análisis de Sistemas de Información/Estimación.md"
+    },
+    {
+      "basename": "Atributos",
+      "path": "Sistemas y Procesos de Negocios/Atributos.md"
+    },
+    {
       "basename": "Factibilidad operativa",
       "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
     },
     {
       "basename": "Factibilidad",
@@ -15,10 +31,6 @@
     {
       "basename": "Factibilidad técnica",
       "path": "Análisis de Sistemas de Información/Factibilidad técnica.md"
-    },
-    {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
     },
     {
       "basename": "Comunicación de Datos",
@@ -187,18 +199,6 @@
     {
       "basename": "Mejoras de sistemas",
       "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
-    },
-    {
-      "basename": "Organización",
-      "path": "Análisis de Sistemas de Información/Organización.md"
-    },
-    {
-      "basename": "Analista de sistemas",
-      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
-    },
-    {
-      "basename": "Selección del proyecto",
-      "path": "Análisis de Sistemas de Información/Selección del proyecto.md"
     }
   ],
   "omittedPaths": [],
