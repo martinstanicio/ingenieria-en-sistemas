@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Calidad",
+      "path": "Análisis de Sistemas de Información/Calidad.md"
+    },
+    {
+      "basename": "Autoridad funcional",
+      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
+    },
+    {
+      "basename": "Autoridad de línea",
+      "path": "Análisis de Sistemas de Información/Autoridad de línea.md"
+    },
+    {
+      "basename": "Autoridad",
+      "path": "Análisis de Sistemas de Información/Autoridad.md"
+    },
+    {
       "basename": "Analista de sistemas",
       "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
     },
@@ -63,10 +79,6 @@
     {
       "basename": "Departamentalización",
       "path": "Análisis de Sistemas de Información/Departamentalización.md"
-    },
-    {
-      "basename": "Autoridad",
-      "path": "Análisis de Sistemas de Información/Autoridad.md"
     },
     {
       "basename": "Poder",
@@ -187,18 +199,6 @@
     {
       "basename": "Metodologías clásicas",
       "path": "Análisis de Sistemas de Información/Metodologías clásicas.md"
-    },
-    {
-      "basename": "Control de calidad",
-      "path": "Análisis de Sistemas de Información/Control de calidad.md"
-    },
-    {
-      "basename": "CMMI",
-      "path": "Análisis de Sistemas de Información/CMMI.md"
-    },
-    {
-      "basename": "Metodologías ágiles",
-      "path": "Análisis de Sistemas de Información/Metodologías ágiles.md"
     }
   ],
   "omittedPaths": [],

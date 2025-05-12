@@ -1,12 +1,12 @@
 ---
 created: 2025-05-01 18:39:17
-modified: 2025-05-01 19:11:34
+modified: 2025-05-12 16:31:24
 title: Autoridad funcional
 ---
 
 # Autoridad funcional
 
-Un tipo de [[Autoridad]], dada por la tipificación de funciones. Una persona puede responder a jefes de distintos [[Departamentalización|departamentos]].
+Un tipo de [[Autoridad]], dada por la tipificación de funciones. Una persona puede responder a jefes de distintos [[Departamentalización|Departamentos]].
 
 ```mermaid
 flowchart TB
