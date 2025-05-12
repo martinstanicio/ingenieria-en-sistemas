@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Factibilidad operativa",
+      "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
+    },
+    {
       "basename": "Factibilidad",
       "path": "Análisis de Sistemas de Información/Factibilidad.md"
+    },
+    {
+      "basename": "Factibilidad económica",
+      "path": "Análisis de Sistemas de Información/Factibilidad económica.md"
+    },
+    {
+      "basename": "Factibilidad técnica",
+      "path": "Análisis de Sistemas de Información/Factibilidad técnica.md"
     },
     {
       "basename": "Análisis de Sistemas de Información",
@@ -187,18 +199,6 @@
     {
       "basename": "Selección del proyecto",
       "path": "Análisis de Sistemas de Información/Selección del proyecto.md"
-    },
-    {
-      "basename": "Autoridad funcional",
-      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
-    },
-    {
-      "basename": "Ciclo de vida de un sistema",
-      "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
-    },
-    {
-      "basename": "Integración por partes",
-      "path": "Análisis Matemático I/Integración por partes.md"
     }
   ],
   "omittedPaths": [],
