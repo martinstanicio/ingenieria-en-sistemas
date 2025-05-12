@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Analista de sistemas",
+      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
       "basename": "Administración de riesgos",
       "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
     },
@@ -91,10 +99,6 @@
     {
       "basename": "Atributos",
       "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
     },
     {
       "basename": "Factibilidad",
@@ -195,10 +199,6 @@
     {
       "basename": "Metodologías ágiles",
       "path": "Análisis de Sistemas de Información/Metodologías ágiles.md"
-    },
-    {
-      "basename": "Metodología de desarrollo",
-      "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
     }
   ],
   "omittedPaths": [],
