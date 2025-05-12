@@ -1,6 +1,110 @@
 {
   "recentFiles": [
     {
+      "basename": "Selección del proyecto",
+      "path": "Análisis de Sistemas de Información/Selección del proyecto.md"
+    },
+    {
+      "basename": "Validación y verificación",
+      "path": "Análisis de Sistemas de Información/Validación y verificación.md"
+    },
+    {
+      "basename": "Versión de prueba",
+      "path": "Análisis de Sistemas de Información/Versión de prueba.md"
+    },
+    {
+      "basename": "Staff",
+      "path": "Análisis de Sistemas de Información/Staff.md"
+    },
+    {
+      "basename": "Riesgo predecible",
+      "path": "Análisis de Sistemas de Información/Riesgo predecible.md"
+    },
+    {
+      "basename": "Riesgo impredecible",
+      "path": "Análisis de Sistemas de Información/Riesgo impredecible.md"
+    },
+    {
+      "basename": "Riesgo",
+      "path": "Análisis de Sistemas de Información/Riesgo.md"
+    },
+    {
+      "basename": "Requerimientos",
+      "path": "Análisis de Sistemas de Información/Requerimientos.md"
+    },
+    {
+      "basename": "Relevamiento",
+      "path": "Análisis de Sistemas de Información/Relevamiento.md"
+    },
+    {
+      "basename": "Prueba de usuario",
+      "path": "Análisis de Sistemas de Información/Prueba de usuario.md"
+    },
+    {
+      "basename": "Prueba de integración",
+      "path": "Análisis de Sistemas de Información/Prueba de integración.md"
+    },
+    {
+      "basename": "Prueba de unidad",
+      "path": "Análisis de Sistemas de Información/Prueba de unidad.md"
+    },
+    {
+      "basename": "Prueba de software",
+      "path": "Análisis de Sistemas de Información/Prueba de software.md"
+    },
+    {
+      "basename": "Prueba de enfoque funcional",
+      "path": "Análisis de Sistemas de Información/Prueba de enfoque funcional.md"
+    },
+    {
+      "basename": "Prueba de enfoque estructural",
+      "path": "Análisis de Sistemas de Información/Prueba de enfoque estructural.md"
+    },
+    {
+      "basename": "Prueba de desarrollo",
+      "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
+    },
+    {
+      "basename": "Producción",
+      "path": "Análisis de Sistemas de Información/Producción.md"
+    },
+    {
+      "basename": "Poder",
+      "path": "Análisis de Sistemas de Información/Poder.md"
+    },
+    {
+      "basename": "Plan de contingencia",
+      "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
+    },
+    {
+      "basename": "Organización informal",
+      "path": "Análisis de Sistemas de Información/Organización informal.md"
+    },
+    {
+      "basename": "Organización formal",
+      "path": "Análisis de Sistemas de Información/Organización formal.md"
+    },
+    {
+      "basename": "Organización",
+      "path": "Análisis de Sistemas de Información/Organización.md"
+    },
+    {
+      "basename": "Modificación",
+      "path": "Análisis de Sistemas de Información/Modificación.md"
+    },
+    {
+      "basename": "Modelo de calidad de software",
+      "path": "Análisis de Sistemas de Información/Modelo de calidad de software.md"
+    },
+    {
+      "basename": "Metodologías clásicas",
+      "path": "Análisis de Sistemas de Información/Metodologías clásicas.md"
+    },
+    {
+      "basename": "Metodologías ágiles",
+      "path": "Análisis de Sistemas de Información/Metodologías ágiles.md"
+    },
+    {
       "basename": "Metodología de desarrollo",
       "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
     },
@@ -13,24 +117,8 @@
       "path": "Sistemas y Procesos de Negocios/Información.md"
     },
     {
-      "basename": "Modificación",
-      "path": "Análisis de Sistemas de Información/Modificación.md"
-    },
-    {
-      "basename": "Organización",
-      "path": "Análisis de Sistemas de Información/Organización.md"
-    },
-    {
-      "basename": "Producción",
-      "path": "Análisis de Sistemas de Información/Producción.md"
-    },
-    {
       "basename": "Intercepción",
       "path": "Análisis de Sistemas de Información/Intercepción.md"
-    },
-    {
-      "basename": "Prueba de desarrollo",
-      "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
     },
     {
       "basename": "Interrupción",
@@ -111,94 +199,6 @@
     {
       "basename": "Ciclo de vida de un sistema",
       "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
-    },
-    {
-      "basename": "Centralización",
-      "path": "Análisis de Sistemas de Información/Centralización.md"
-    },
-    {
-      "basename": "Calidad",
-      "path": "Análisis de Sistemas de Información/Calidad.md"
-    },
-    {
-      "basename": "Autoridad funcional",
-      "path": "Análisis de Sistemas de Información/Autoridad funcional.md"
-    },
-    {
-      "basename": "Autoridad de línea",
-      "path": "Análisis de Sistemas de Información/Autoridad de línea.md"
-    },
-    {
-      "basename": "Autoridad",
-      "path": "Análisis de Sistemas de Información/Autoridad.md"
-    },
-    {
-      "basename": "Analista de sistemas",
-      "path": "Análisis de Sistemas de Información/Analista de sistemas.md"
-    },
-    {
-      "basename": "Análisis de Sistemas de Información",
-      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
-    },
-    {
-      "basename": "Administración de riesgos",
-      "path": "Análisis de Sistemas de Información/Administración de riesgos.md"
-    },
-    {
-      "basename": "Probabilidad",
-      "path": "Probabilidades y Estadísticas/Probabilidad.md"
-    },
-    {
-      "basename": "Riesgo",
-      "path": "Análisis de Sistemas de Información/Riesgo.md"
-    },
-    {
-      "basename": "Plan de contingencia",
-      "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
-    },
-    {
-      "basename": "Diagrama de PERT",
-      "path": "Análisis de Sistemas de Información/Diagrama de PERT.md"
-    },
-    {
-      "basename": "Objetivo",
-      "path": "Sistemas y Procesos de Negocios/Objetivo.md"
-    },
-    {
-      "basename": "Poder",
-      "path": "Análisis de Sistemas de Información/Poder.md"
-    },
-    {
-      "basename": "pert",
-      "path": "Análisis de Sistemas de Información/attachments/pert.png"
-    },
-    {
-      "basename": "Árbol de decisión",
-      "path": "Lógica y Estructuras Discretas/Árbol de decisión.md"
-    },
-    {
-      "basename": "gantt",
-      "path": "Análisis de Sistemas de Información/attachments/gantt.png"
-    },
-    {
-      "basename": "Atributos",
-      "path": "Sistemas y Procesos de Negocios/Atributos.md"
-    },
-    {
-      "basename": "Comunicación de Datos",
-      "path": "Comunicación de Datos/Comunicación de Datos.md"
-    },
-    {
-      "basename": "Capítulo 4 Medios de transmisión",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
-    },
-    {
-      "basename": "Fibra óptica",
-      "path": "Comunicación de Datos/Fibra óptica.md"
-    },
-    {
-      "basename": "Capítulo 3 Transmisión de datos",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
     }
   ],
   "omittedPaths": [],

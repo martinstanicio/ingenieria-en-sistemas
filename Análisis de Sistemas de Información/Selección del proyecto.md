@@ -1,6 +1,6 @@
 ---
 created: 2025-05-05 10:46:49
-modified: 2025-05-05 11:00:42
+modified: 2025-05-12 17:27:48
 title: Selección del proyecto
 ---
 
@@ -15,7 +15,7 @@ El proyecto debe ser útil para ayudar a cumplir los [[Objetivo|Objetivos]] de l
 
 - [[Entrevista|Entrevistar]] las áreas involucradas
 - Revisar proyectos previos
-- Determinar la factibilidad, mediante un ==informe de viabilidad==
+- Determinar la [[Factibilidad]], mediante un ==informe de viabilidad==
 
 ## Criterios de selección
 

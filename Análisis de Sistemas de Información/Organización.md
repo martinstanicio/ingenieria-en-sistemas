@@ -2,7 +2,7 @@
 aliases:
   - Organizaciones
 created: 2025-05-01 17:52:45
-modified: 2025-05-05 10:24:11
+modified: 2025-05-12 17:15:06
 title: Organización
 ---
 
@@ -23,7 +23,7 @@ Para formar una [[Organización]], es necesario seguir una serie de pasos:
 6. Unir los grupos horizontal y verticalmente a través de relaciones de [[Autoridad]] y flujos de [[Información]].
 
 > [!note]
-> Las [[Organización|Organizaciones]] puede ser [[Organización formal|formales]] o [[Organización informal|informales]].
+> Las [[Organización|Organizaciones]] puede ser [[Organización formal|Formales]] o [[Organización informal|Informales]].
 
 ## Problemas
 
