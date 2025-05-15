@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Análisis Matemático II",
+      "path": "Análisis Matemático II/Análisis Matemático II.md"
+    },
+    {
       "basename": "Selección del proyecto",
       "path": "Análisis de Sistemas de Información/Selección del proyecto.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "CMMI",
       "path": "Análisis de Sistemas de Información/CMMI.md"
-    },
-    {
-      "basename": "Ciclo de vida de un sistema",
-      "path": "Análisis de Sistemas de Información/Ciclo de vida de un sistema.md"
     }
   ],
   "omittedPaths": [],
