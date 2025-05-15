@@ -1,6 +1,6 @@
 ---
 created: 2025-04-06 05:59:23
-modified: 2025-05-09 16:58:43
+modified: 2025-05-15 15:42:18
 title: "Capítulo 4: Medios de transmisión"
 ---
 
@@ -20,7 +20,8 @@ La [[Medio no guiado|Transmisión inalámbrica]] es aquella que no requiere un [
 
 - [[Microondas terrestres]]
 - [[Microondas por satélite]]
-- Ondas de radio e infrarrojos
+- [[Ondas de radio]]
+- [[Frecuencias infrarrojas|Infrarrojos]]
 
 La emisión y recepción de las mismas se hace mediante [[Antena|Antenas]].
 
