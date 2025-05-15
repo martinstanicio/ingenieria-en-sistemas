@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Capítulo 4 Medios de transmisión",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Ancho de banda de Nyquist",
+      "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
+    },
+    {
+      "basename": "Componente continua",
+      "path": "Comunicación de Datos/Componente continua.md"
+    },
+    {
       "basename": "Análisis Matemático II",
       "path": "Análisis Matemático II/Análisis Matemático II.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Delegación",
       "path": "Análisis de Sistemas de Información/Delegación.md"
-    },
-    {
-      "basename": "Control de calidad",
-      "path": "Análisis de Sistemas de Información/Control de calidad.md"
-    },
-    {
-      "basename": "Codificar y arreglar",
-      "path": "Análisis de Sistemas de Información/Codificar y arreglar.md"
-    },
-    {
-      "basename": "CMMI",
-      "path": "Análisis de Sistemas de Información/CMMI.md"
     }
   ],
   "omittedPaths": [],
