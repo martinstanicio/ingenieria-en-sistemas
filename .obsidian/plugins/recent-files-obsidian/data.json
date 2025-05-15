@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Antena",
-      "path": "Comunicación de Datos/Antena.md"
+      "basename": "Antena parabólica de reflexión",
+      "path": "Comunicación de Datos/Antena parabólica de reflexión.md"
+    },
+    {
+      "basename": "Ganancia de una antena",
+      "path": "Comunicación de Datos/Ganancia de una antena.md"
     },
     {
       "basename": "Antena isotrópica",
       "path": "Comunicación de Datos/Antena isotrópica.md"
+    },
+    {
+      "basename": "Antena",
+      "path": "Comunicación de Datos/Antena.md"
+    },
+    {
+      "basename": "Diagrama de radiación",
+      "path": "Comunicación de Datos/Diagrama de radiación.md"
     },
     {
       "basename": "Receptor",
@@ -187,18 +199,6 @@
     {
       "basename": "Interrupción",
       "path": "Análisis de Sistemas de Información/Interrupción.md"
-    },
-    {
-      "basename": "Informática",
-      "path": "Análisis de Sistemas de Información/Informática.md"
-    },
-    {
-      "basename": "Grupo Independiente de Prueba",
-      "path": "Análisis de Sistemas de Información/Grupo Independiente de Prueba.md"
-    },
-    {
-      "basename": "Factibilidad operativa",
-      "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
     }
   ],
   "omittedPaths": [],
