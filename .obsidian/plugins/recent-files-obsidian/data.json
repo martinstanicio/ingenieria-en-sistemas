@@ -1,8 +1,56 @@
 {
   "recentFiles": [
     {
+      "basename": "Antena",
+      "path": "Comunicación de Datos/Antena.md"
+    },
+    {
+      "basename": "Antena isotrópica",
+      "path": "Comunicación de Datos/Antena isotrópica.md"
+    },
+    {
+      "basename": "Receptor",
+      "path": "Comunicación de Datos/Receptor.md"
+    },
+    {
+      "basename": "20240903 - Micros",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
+    },
+    {
+      "basename": "20240702 - Fechas",
+      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Fechas.md"
+    },
+    {
       "basename": "Capítulo 4 Medios de transmisión",
       "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Frecuencias microondas",
+      "path": "Comunicación de Datos/Frecuencias microondas.md"
+    },
+    {
+      "basename": "Ondas de radio",
+      "path": "Comunicación de Datos/Ondas de radio.md"
+    },
+    {
+      "basename": "Frecuencias infrarrojas",
+      "path": "Comunicación de Datos/Frecuencias infrarrojas.md"
+    },
+    {
+      "basename": "Medio multipunto",
+      "path": "Comunicación de Datos/Medio multipunto.md"
+    },
+    {
+      "basename": "Enlace punto a punto",
+      "path": "Comunicación de Datos/Enlace punto a punto.md"
+    },
+    {
+      "basename": "Capítulo 3 Transmisión de datos",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
+    },
+    {
+      "basename": "Enlace directo",
+      "path": "Comunicación de Datos/Enlace directo.md"
     },
     {
       "basename": "Ancho de banda de Nyquist",
@@ -151,54 +199,6 @@
     {
       "basename": "Factibilidad operativa",
       "path": "Análisis de Sistemas de Información/Factibilidad operativa.md"
-    },
-    {
-      "basename": "Factibilidad económica",
-      "path": "Análisis de Sistemas de Información/Factibilidad económica.md"
-    },
-    {
-      "basename": "Factibilidad técnica",
-      "path": "Análisis de Sistemas de Información/Factibilidad técnica.md"
-    },
-    {
-      "basename": "Factibilidad",
-      "path": "Análisis de Sistemas de Información/Factibilidad.md"
-    },
-    {
-      "basename": "Expresión de deseo",
-      "path": "Análisis de Sistemas de Información/Expresión de deseo.md"
-    },
-    {
-      "basename": "Estructura organizacional",
-      "path": "Análisis de Sistemas de Información/Estructura organizacional.md"
-    },
-    {
-      "basename": "Estimación",
-      "path": "Análisis de Sistemas de Información/Estimación.md"
-    },
-    {
-      "basename": "Entrevista",
-      "path": "Análisis de Sistemas de Información/Entrevista.md"
-    },
-    {
-      "basename": "Encuesta",
-      "path": "Análisis de Sistemas de Información/Encuesta.md"
-    },
-    {
-      "basename": "Diagrama de Gantt",
-      "path": "Análisis de Sistemas de Información/Diagrama de Gantt.md"
-    },
-    {
-      "basename": "Descentralización",
-      "path": "Análisis de Sistemas de Información/Descentralización.md"
-    },
-    {
-      "basename": "Departamentalización",
-      "path": "Análisis de Sistemas de Información/Departamentalización.md"
-    },
-    {
-      "basename": "Delegación",
-      "path": "Análisis de Sistemas de Información/Delegación.md"
     }
   ],
   "omittedPaths": [],

@@ -1,6 +1,6 @@
 ---
 created: 2025-04-06 05:19:17
-modified: 2025-04-06 05:35:58
+modified: 2025-05-15 14:35:35
 title: "Capítulo 3: Transmisión de datos"
 ---
 
@@ -8,7 +8,7 @@ title: "Capítulo 3: Transmisión de datos"
 
 ## 3.1. Conceptos y terminología
 
-[[Comunicación de Datos/Medio|Medios de transmisión]] [[Medio guiado|guiados]] y [[Medio no guiado|no guiados]], [[Enlace directo]], configuraciones [[Medio guiado punto a punto|punto a punto]] y [[Medio guiado multipunto|multipunto]], y los modos de transmisión [[Simplex]] (unidireccional), [[Half-duplex]] (bidireccional por turnos) y [[Full-duplex]] (bidireccional simultaneo).
+[[Comunicación de Datos/Medio|Medios de transmisión]] [[Medio guiado|guiados]] y [[Medio no guiado|no guiados]], [[Enlace directo]], configuraciones [[Enlace punto a punto|Punto a punto]] y [[Medio multipunto|multipunto]], y los modos de transmisión [[Simplex]] (unidireccional), [[Half-duplex]] (bidireccional por turnos) y [[Full-duplex]] (bidireccional simultaneo).
 
 [[Señal analógica|Señales analógicas]] y [[Señal digital|digitales]], [[Señal periódica|Señales periódicas]], componentes de una onda electromagnética ([[Amplitud]], [[Frecuencia]], [[Fase]], [[Periodo]], [[Longitud de onda]]), y sus diferencias fundamentales al aplicarlas en el dominio del tiempo y de la frecuencia; características de una [[Transmisión]] ([[Espectro]], [[Ancho de banda absoluto]] y [[Ancho de banda|efectivo]], y [[Componente continua]]).
 
