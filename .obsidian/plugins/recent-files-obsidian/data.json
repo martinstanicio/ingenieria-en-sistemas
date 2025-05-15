@@ -1,16 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "Ondas de radio",
+      "path": "Comunicación de Datos/Ondas de radio.md"
+    },
+    {
+      "basename": "Capítulo 4 Medios de transmisión",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
       "basename": "Microondas terrestres",
       "path": "Microondas terrestres.md"
+    },
+    {
+      "basename": "Microondas por satélite",
+      "path": "Microondas por satélite.md"
     },
     {
       "basename": "Ganancia de una antena",
       "path": "Comunicación de Datos/Ganancia de una antena.md"
     },
     {
-      "basename": "Capítulo 4 Medios de transmisión",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+      "basename": "Enlace punto a punto",
+      "path": "Comunicación de Datos/Enlace punto a punto.md"
     },
     {
       "basename": "Antena parabólica de reflexión",
@@ -49,20 +61,12 @@
       "path": "Comunicación de Datos/Frecuencias microondas.md"
     },
     {
-      "basename": "Ondas de radio",
-      "path": "Comunicación de Datos/Ondas de radio.md"
-    },
-    {
       "basename": "Frecuencias infrarrojas",
       "path": "Comunicación de Datos/Frecuencias infrarrojas.md"
     },
     {
       "basename": "Medio multipunto",
       "path": "Comunicación de Datos/Medio multipunto.md"
-    },
-    {
-      "basename": "Enlace punto a punto",
-      "path": "Comunicación de Datos/Enlace punto a punto.md"
     },
     {
       "basename": "Capítulo 3 Transmisión de datos",
@@ -195,10 +199,6 @@
     {
       "basename": "Mejoras de sistemas",
       "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
-    },
-    {
-      "basename": "Información",
-      "path": "Sistemas y Procesos de Negocios/Información.md"
     }
   ],
   "omittedPaths": [],

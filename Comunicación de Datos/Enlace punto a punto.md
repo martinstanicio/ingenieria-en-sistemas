@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Enlaces punto a punto
 created: 2025-03-26 14:02:44
-modified: 2025-05-15 14:35:12
+modified: 2025-05-15 16:08:52
 title: Enlace punto a punto
 ---
 
