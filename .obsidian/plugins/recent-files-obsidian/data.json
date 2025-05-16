@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Capítulo 4 Medios de transmisión",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Dispersión de retardo",
+      "path": "Comunicación de Datos/Dispersión de retardo.md"
+    },
+    {
       "basename": "Multitrayectorias",
       "path": "Comunicación de Datos/Multitrayectorias.md"
     },
     {
       "basename": "Absorción atmosférica",
       "path": "Comunicación de Datos/Absorción atmosférica.md"
-    },
-    {
-      "basename": "Capítulo 4 Medios de transmisión",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
     },
     {
       "basename": "Pérdida en el espacio libre",
@@ -195,10 +199,6 @@
     {
       "basename": "Producción",
       "path": "Análisis de Sistemas de Información/Producción.md"
-    },
-    {
-      "basename": "Poder",
-      "path": "Análisis de Sistemas de Información/Poder.md"
     }
   ],
   "omittedPaths": [],
