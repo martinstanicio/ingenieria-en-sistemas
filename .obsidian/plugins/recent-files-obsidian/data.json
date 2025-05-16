@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Multitrayectorias",
+      "path": "Comunicación de Datos/Multitrayectorias.md"
+    },
+    {
       "basename": "Absorción atmosférica",
       "path": "Comunicación de Datos/Absorción atmosférica.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Poder",
       "path": "Análisis de Sistemas de Información/Poder.md"
-    },
-    {
-      "basename": "Plan de contingencia",
-      "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
     }
   ],
   "omittedPaths": [],
