@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "Propagación en la trayectoria visual",
-      "path": "Propagación en la trayectoria visual.md"
+      "basename": "Absorción atmosférica",
+      "path": "Comunicación de Datos/Absorción atmosférica.md"
+    },
+    {
+      "basename": "Capítulo 4 Medios de transmisión",
+      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Pérdida en el espacio libre",
+      "path": "Comunicación de Datos/Pérdida en el espacio libre.md"
+    },
+    {
+      "basename": "Decibelio",
+      "path": "Comunicación de Datos/Decibelio.md"
     },
     {
       "basename": "Línea visual efectiva",
-      "path": "Línea visual efectiva.md"
-    },
-    {
-      "basename": "Línea visual óptica",
-      "path": "Línea visual óptica.md"
+      "path": "Comunicación de Datos/Línea visual efectiva.md"
     },
     {
       "basename": "Propagación superficial",
@@ -21,8 +29,12 @@
       "path": "Comunicación de Datos/Propagación aérea.md"
     },
     {
-      "basename": "Capítulo 4 Medios de transmisión",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+      "basename": "Propagación en la trayectoria visual",
+      "path": "Comunicación de Datos/Propagación en la trayectoria visual.md"
+    },
+    {
+      "basename": "Línea visual óptica",
+      "path": "Comunicación de Datos/Línea visual óptica.md"
     },
     {
       "basename": "Amplificador",
@@ -38,11 +50,11 @@
     },
     {
       "basename": "Microondas terrestres",
-      "path": "Microondas terrestres.md"
+      "path": "Comunicación de Datos/Microondas terrestres.md"
     },
     {
       "basename": "Microondas por satélite",
-      "path": "Microondas por satélite.md"
+      "path": "Comunicación de Datos/Microondas por satélite.md"
     },
     {
       "basename": "Ganancia de una antena",
@@ -187,18 +199,6 @@
     {
       "basename": "Plan de contingencia",
       "path": "Análisis de Sistemas de Información/Plan de contingencia.md"
-    },
-    {
-      "basename": "Organización informal",
-      "path": "Análisis de Sistemas de Información/Organización informal.md"
-    },
-    {
-      "basename": "Organización formal",
-      "path": "Análisis de Sistemas de Información/Organización formal.md"
-    },
-    {
-      "basename": "Organización",
-      "path": "Análisis de Sistemas de Información/Organización.md"
     }
   ],
   "omittedPaths": [],
