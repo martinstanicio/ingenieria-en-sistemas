@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "Ondas de radio",
-      "path": "Comunicación de Datos/Ondas de radio.md"
-    },
-    {
       "basename": "Capítulo 4 Medios de transmisión",
       "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Frecuencias infrarrojas",
+      "path": "Comunicación de Datos/Frecuencias infrarrojas.md"
+    },
+    {
+      "basename": "Ondas de radio",
+      "path": "Comunicación de Datos/Ondas de radio.md"
     },
     {
       "basename": "Microondas terrestres",
@@ -59,10 +63,6 @@
     {
       "basename": "Frecuencias microondas",
       "path": "Comunicación de Datos/Frecuencias microondas.md"
-    },
-    {
-      "basename": "Frecuencias infrarrojas",
-      "path": "Comunicación de Datos/Frecuencias infrarrojas.md"
     },
     {
       "basename": "Medio multipunto",
