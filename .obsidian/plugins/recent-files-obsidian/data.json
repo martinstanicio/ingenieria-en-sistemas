@@ -5,12 +5,20 @@
       "path": "Propagación en la trayectoria visual.md"
     },
     {
-      "basename": "Propagación aérea",
-      "path": "Comunicación de Datos/Propagación aérea.md"
+      "basename": "Línea visual efectiva",
+      "path": "Línea visual efectiva.md"
+    },
+    {
+      "basename": "Línea visual óptica",
+      "path": "Línea visual óptica.md"
     },
     {
       "basename": "Propagación superficial",
       "path": "Comunicación de Datos/Propagación superficial.md"
+    },
+    {
+      "basename": "Propagación aérea",
+      "path": "Comunicación de Datos/Propagación aérea.md"
     },
     {
       "basename": "Capítulo 4 Medios de transmisión",
@@ -191,14 +199,6 @@
     {
       "basename": "Organización",
       "path": "Análisis de Sistemas de Información/Organización.md"
-    },
-    {
-      "basename": "Modificación",
-      "path": "Análisis de Sistemas de Información/Modificación.md"
-    },
-    {
-      "basename": "Modelo de calidad de software",
-      "path": "Análisis de Sistemas de Información/Modelo de calidad de software.md"
     }
   ],
   "omittedPaths": [],
