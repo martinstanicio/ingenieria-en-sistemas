@@ -1,6 +1,6 @@
 ---
 created: 2025-04-06 05:59:23
-modified: 2025-05-15 15:42:18
+modified: 2025-05-16 10:32:34
 title: "Capítulo 4: Medios de transmisión"
 ---
 
@@ -29,7 +29,7 @@ Por una cuestiones de seguridad e interferencias, existe una asignación de [[Fr
 
 ## 4.3. Propagación inalámbrica
 
-Explicación de los diferentes modos de propagación de las ondas electromagnéticas a través del espacio:
+Explicación de los diferentes modos de propagación de las ondas electromagnéticas a través del espacio, es decir, la trayectoria que puede seguir una [[Señal]] irradiada por una [[Antena]]:
 
 - [[Propagación superficial]]
 - [[Propagación aérea]]

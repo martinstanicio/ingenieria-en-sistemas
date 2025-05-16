@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "Propagación en la trayectoria visual",
+      "path": "Propagación en la trayectoria visual.md"
+    },
+    {
+      "basename": "Propagación aérea",
+      "path": "Comunicación de Datos/Propagación aérea.md"
+    },
+    {
+      "basename": "Propagación superficial",
+      "path": "Comunicación de Datos/Propagación superficial.md"
+    },
+    {
       "basename": "Capítulo 4 Medios de transmisión",
       "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Amplificador",
+      "path": "Comunicación de Datos/Amplificador.md"
     },
     {
       "basename": "Frecuencias infrarrojas",
@@ -183,22 +199,6 @@
     {
       "basename": "Modelo de calidad de software",
       "path": "Análisis de Sistemas de Información/Modelo de calidad de software.md"
-    },
-    {
-      "basename": "Metodologías clásicas",
-      "path": "Análisis de Sistemas de Información/Metodologías clásicas.md"
-    },
-    {
-      "basename": "Metodologías ágiles",
-      "path": "Análisis de Sistemas de Información/Metodologías ágiles.md"
-    },
-    {
-      "basename": "Metodología de desarrollo",
-      "path": "Análisis de Sistemas de Información/Metodología de desarrollo.md"
-    },
-    {
-      "basename": "Mejoras de sistemas",
-      "path": "Análisis de Sistemas de Información/Mejoras de sistemas.md"
     }
   ],
   "omittedPaths": [],
