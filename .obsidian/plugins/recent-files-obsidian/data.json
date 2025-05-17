@@ -1,12 +1,72 @@
 {
   "recentFiles": [
     {
+      "basename": "Entorno reducido",
+      "path": "Análisis Matemático II/Entorno reducido.md"
+    },
+    {
+      "basename": "Límite simultáneo",
+      "path": "Análisis Matemático II/Límite simultáneo.md"
+    },
+    {
+      "basename": "Punto interior",
+      "path": "Análisis Matemático II/Punto interior.md"
+    },
+    {
+      "basename": "Punto exterior",
+      "path": "Análisis Matemático II/Punto exterior.md"
+    },
+    {
+      "basename": "Punto de acumulación",
+      "path": "Análisis Matemático II/Punto de acumulación.md"
+    },
+    {
+      "basename": "Punto aislado",
+      "path": "Análisis Matemático II/Punto aislado.md"
+    },
+    {
+      "basename": "Límites iterados",
+      "path": "Análisis Matemático II/Límites iterados.md"
+    },
+    {
+      "basename": "Función vectorial de variable vectorial",
+      "path": "Análisis Matemático II/Función vectorial de variable vectorial.md"
+    },
+    {
+      "basename": "Función vectorial de variable real",
+      "path": "Análisis Matemático II/Función vectorial de variable real.md"
+    },
+    {
+      "basename": "Función real de variable vectorial",
+      "path": "Análisis Matemático II/Función real de variable vectorial.md"
+    },
+    {
+      "basename": "Función real de variable real",
+      "path": "Análisis Matemático II/Función real de variable real.md"
+    },
+    {
+      "basename": "Entorno circular",
+      "path": "Análisis Matemático II/Entorno circular.md"
+    },
+    {
+      "basename": "Conjunto simplemente conexo",
+      "path": "Análisis Matemático II/Conjunto simplemente conexo.md"
+    },
+    {
+      "basename": "Conjunto múltiplemente conexo",
+      "path": "Análisis Matemático II/Conjunto múltiplemente conexo.md"
+    },
+    {
       "basename": "Conjunto convexo",
       "path": "Análisis Matemático II/Conjunto convexo.md"
     },
     {
       "basename": "Conjunto cerrado",
       "path": "Análisis Matemático II/Conjunto cerrado.md"
+    },
+    {
+      "basename": "Conjunto abierto",
+      "path": "Análisis Matemático II/Conjunto abierto.md"
     },
     {
       "basename": "Análisis de Sistemas de Información",
@@ -139,66 +199,6 @@
     {
       "basename": "Ancho de banda de Nyquist",
       "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
-    },
-    {
-      "basename": "Componente continua",
-      "path": "Comunicación de Datos/Componente continua.md"
-    },
-    {
-      "basename": "Análisis Matemático II",
-      "path": "Análisis Matemático II/Análisis Matemático II.md"
-    },
-    {
-      "basename": "Selección del proyecto",
-      "path": "Análisis de Sistemas de Información/Selección del proyecto.md"
-    },
-    {
-      "basename": "Validación y verificación",
-      "path": "Análisis de Sistemas de Información/Validación y verificación.md"
-    },
-    {
-      "basename": "Versión de prueba",
-      "path": "Análisis de Sistemas de Información/Versión de prueba.md"
-    },
-    {
-      "basename": "Staff",
-      "path": "Análisis de Sistemas de Información/Staff.md"
-    },
-    {
-      "basename": "Riesgo predecible",
-      "path": "Análisis de Sistemas de Información/Riesgo predecible.md"
-    },
-    {
-      "basename": "Riesgo impredecible",
-      "path": "Análisis de Sistemas de Información/Riesgo impredecible.md"
-    },
-    {
-      "basename": "Riesgo",
-      "path": "Análisis de Sistemas de Información/Riesgo.md"
-    },
-    {
-      "basename": "Requerimientos",
-      "path": "Análisis de Sistemas de Información/Requerimientos.md"
-    },
-    {
-      "basename": "Relevamiento",
-      "path": "Análisis de Sistemas de Información/Relevamiento.md"
-    },
-    {
-      "basename": "Prueba de usuario",
-      "path": "Análisis de Sistemas de Información/Prueba de usuario.md"
-    },
-    {
-      "basename": "Prueba de integración",
-      "path": "Análisis de Sistemas de Información/Prueba de integración.md"
-    },
-    {
-      "basename": "Prueba de unidad",
-      "path": "Análisis de Sistemas de Información/Prueba de unidad.md"
-    },
-    {
-      "basename": "Prueba de software",
-      "path": "Análisis de Sistemas de Información/Prueba de software.md"
     }
   ],
   "omittedPaths": [],
