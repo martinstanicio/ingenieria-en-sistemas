@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Dispersión de retardo",
-      "path": "Comunicación de Datos/Dispersión de retardo.md"
+      "basename": "Conjunto convexo",
+      "path": "Análisis Matemático II/Conjunto convexo.md"
+    },
+    {
+      "basename": "Conjunto cerrado",
+      "path": "Análisis Matemático II/Conjunto cerrado.md"
+    },
+    {
+      "basename": "Análisis de Sistemas de Información",
+      "path": "Análisis de Sistemas de Información/Análisis de Sistemas de Información.md"
+    },
+    {
+      "basename": "Comunicación de Datos",
+      "path": "Comunicación de Datos/Comunicación de Datos.md"
     },
     {
       "basename": "Capítulo 4 Medios de transmisión",
       "path": "Comunicación de Datos/Resumenes/Capítulo 4 Medios de transmisión.md"
+    },
+    {
+      "basename": "Dispersión de retardo",
+      "path": "Comunicación de Datos/Dispersión de retardo.md"
     },
     {
       "basename": "Multitrayectorias",
@@ -183,22 +199,6 @@
     {
       "basename": "Prueba de software",
       "path": "Análisis de Sistemas de Información/Prueba de software.md"
-    },
-    {
-      "basename": "Prueba de enfoque funcional",
-      "path": "Análisis de Sistemas de Información/Prueba de enfoque funcional.md"
-    },
-    {
-      "basename": "Prueba de enfoque estructural",
-      "path": "Análisis de Sistemas de Información/Prueba de enfoque estructural.md"
-    },
-    {
-      "basename": "Prueba de desarrollo",
-      "path": "Análisis de Sistemas de Información/Prueba de desarrollo.md"
-    },
-    {
-      "basename": "Producción",
-      "path": "Análisis de Sistemas de Información/Producción.md"
     }
   ],
   "omittedPaths": [],
