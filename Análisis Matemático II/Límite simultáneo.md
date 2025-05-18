@@ -2,11 +2,13 @@
 aliases:
   - Límite doble
 created: 2025-03-26 15:56:09
-modified: 2025-05-17 17:29:56
+modified: 2025-05-17 20:33:10
 title: Límite simultáneo
 ---
 
 # Límite simultáneo
+
+FALTA COMPLETAR
 
 Definir el [[Límite simultáneo]] de forma que:
 
