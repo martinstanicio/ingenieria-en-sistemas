@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Superficie cilíndrica",
+      "path": "Análisis Matemático II/Superficie cilíndrica.md"
+    },
+    {
+      "basename": "Plano",
+      "path": "Análisis Matemático II/Plano.md"
+    },
+    {
+      "basename": "Recta normal",
+      "path": "Análisis Matemático I/Recta normal.md"
+    },
+    {
+      "basename": "plano",
+      "path": "Análisis Matemático II/attachments/plano.png"
+    },
+    {
+      "basename": "Reglas de derivación",
+      "path": "Análisis Matemático I/Reglas de derivación.md"
+    },
+    {
+      "basename": "Derivada",
+      "path": "Análisis Matemático I/Derivada.md"
+    },
+    {
+      "basename": "Criterio de la segunda derivada",
+      "path": "Análisis Matemático I/Criterio de la segunda derivada.md"
+    },
+    {
       "basename": "Límite simultáneo",
       "path": "Análisis Matemático II/Límite simultáneo.md"
     },
@@ -171,34 +199,6 @@
     {
       "basename": "Receptor",
       "path": "Comunicación de Datos/Receptor.md"
-    },
-    {
-      "basename": "20240903 - Micros",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240903 - Micros.md"
-    },
-    {
-      "basename": "20240702 - Fechas",
-      "path": "Algoritmos y Estructuras de Datos/Actividades/20240702 - Fechas.md"
-    },
-    {
-      "basename": "Frecuencias microondas",
-      "path": "Comunicación de Datos/Frecuencias microondas.md"
-    },
-    {
-      "basename": "Medio multipunto",
-      "path": "Comunicación de Datos/Medio multipunto.md"
-    },
-    {
-      "basename": "Capítulo 3 Transmisión de datos",
-      "path": "Comunicación de Datos/Resumenes/Capítulo 3 Transmisión de datos.md"
-    },
-    {
-      "basename": "Enlace directo",
-      "path": "Comunicación de Datos/Enlace directo.md"
-    },
-    {
-      "basename": "Ancho de banda de Nyquist",
-      "path": "Comunicación de Datos/Ancho de banda de Nyquist.md"
     }
   ],
   "omittedPaths": [],
