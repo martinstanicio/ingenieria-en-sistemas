@@ -2,7 +2,7 @@
 aliases:
   - Límites reiterados
 created: 2025-03-26 16:17:17
-modified: 2025-05-19 18:22:25
+modified: 2025-05-19 18:28:01
 title: Límites iterados
 ---
 
@@ -30,4 +30,4 @@ $$
 Si los [[Límites iterados]] existen y son distintos, el [[Límite simultáneo]] ==no existe==.
 
 > [!warning]
-> Si los [[Límites iterados]] existen y son iguales, o alguno de ellos no existe, no se puede afirmar nada sobre la existencia del [[Límite simultáneo]].
+> Si los [[Límites iterados]] existen y son iguales, o alguno de ellos no existe, **no se puede afirmar nada** sobre la existencia del [[Límite simultáneo]].
