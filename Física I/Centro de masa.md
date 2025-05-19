@@ -1,6 +1,6 @@
 ---
 created: 2024-10-31 10:55:59
-modified: 2025-03-27 10:30:47
+modified: 2025-05-19 17:38:14
 title: Centro de masa
 ---
 
@@ -25,7 +25,7 @@ O en el caso de un cuerpo continuo, la siguiente fórmula.
 
 $$
 \vec{R} =
-\frac{1}{M} \int \vec{r} \, dm
+\frac{1}{M} \int \vec{r} dm
 $$
 
 Donde:

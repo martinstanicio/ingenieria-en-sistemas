@@ -1,8 +1,10 @@
 ---
 aliases:
   - Entornos reducidos
+  - Disco reducido
+  - Entorno disco reducido
 created: 2025-03-20 11:24:00
-modified: 2025-05-19 17:13:08
+modified: 2025-05-19 17:24:52
 title: Entorno reducido
 ---
 
