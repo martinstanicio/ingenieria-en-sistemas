@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Superficie de revolución",
+      "path": "Análisis Matemático II/Superficie de revolución.md"
+    },
+    {
+      "basename": "paraboloide-de-revolución",
+      "path": "Análisis Matemático II/attachments/paraboloide-de-revolución.png"
+    },
+    {
       "basename": "Superficie cilíndrica",
       "path": "Análisis Matemático II/Superficie cilíndrica.md"
+    },
+    {
+      "basename": "Superficie cuádrica",
+      "path": "Análisis Matemático II/Superficie cuádrica.md"
     },
     {
       "basename": "Plano",
@@ -187,18 +199,6 @@
     {
       "basename": "Rapidez de la luz",
       "path": "Física I/Rapidez de la luz.md"
-    },
-    {
-      "basename": "Antena isotrópica",
-      "path": "Comunicación de Datos/Antena isotrópica.md"
-    },
-    {
-      "basename": "Diagrama de radiación",
-      "path": "Comunicación de Datos/Diagrama de radiación.md"
-    },
-    {
-      "basename": "Receptor",
-      "path": "Comunicación de Datos/Receptor.md"
     }
   ],
   "omittedPaths": [],
