@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Funciones
 created: 2024-03-22 22:31:56
-modified: 2024-08-15 02:32:07
+modified: 2025-05-19 18:12:31
 title: Función
 ---
 

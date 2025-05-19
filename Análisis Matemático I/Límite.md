@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Límites
 created: 2024-04-23 14:09:56
-modified: 2024-08-14 00:36:03
+modified: 2025-05-19 18:20:41
 title: Límite
 ---
 
