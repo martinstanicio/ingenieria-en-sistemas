@@ -6,7 +6,7 @@ title: Derivación implícita
 
 # Derivación implícita
 
-Dada una [[Relación]] en [[Forma implícita]] $f(x, y) = 0$. Para calcular la [[Derivada]] debemos seguir los siguientes pasos, hasta llegar a una expresión de la forma $\frac{dy}{dx} = (\dots)$.
+Dada una [[Relación]] en [[Función implícita|Forma implícita]] $f(x, y) = 0$. Para calcular la [[Derivada]] debemos seguir los siguientes pasos, hasta llegar a una expresión de la forma $\frac{dy}{dx} = (\dots)$.
 
 > [!note]
 > Por costumbre, tomamos $x$ como la **variable independiente**, e $y$ como la **variable dependiente**, pero también se puede realizar lo opuesto.
