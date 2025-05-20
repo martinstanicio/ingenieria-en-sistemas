@@ -2,7 +2,7 @@
 aliases:
   - Diferenciabilidad
 created: 2024-08-19 15:06:55
-modified: 2025-05-20 16:11:52
+modified: 2025-05-20 16:29:50
 title: Diferencial
 ---
 
@@ -59,8 +59,6 @@ En el caso de una [[Función real de variable real]], esto nos permite calcular 
 >
 > $$f(x_0 + \Delta x) \cong f(x_0) + f'(x_0) \cdot \Delta x$$
 
----
-
 Por ejemplo, con $f(x) = \sqrt{x}$, sabemos que $f'(x) = \frac{1}{2 \sqrt{x}}$, buscamos aproximar $f(50) = \sqrt{50}$. Tomamos el ==valor más cercano conocido== $f(49) = \sqrt{49} = 7$, por lo que $\Delta x = 1$.
 
 $$
@@ -71,3 +69,10 @@ $$
 ## Función real de variable vectorial
 
 En el caso de una [[Función real de variable vectorial]], esto nos permite encontrar el [[Plano tangente]] a la superficie en un punto $\left( x_0, y_0, f(x_0, y_0) \right)$.
+
+> [!tip]
+> Si una [[Función real de variable vectorial]] es [[diferencial|Diferenciable]] en un punto, entonces es [[Continuidad|Continua]] en ese punto, pero **no necesariamente su recíproca**.
+
+### Teorema
+
+Si una [[Función real de variable vectorial]] tiene [[Derivada parcial|Derivadas parciales]] [[Continuidad|Continuas]] $f_x (x,y)$ y $f_y (x,y)$ en un disco $D$, cuyo interior contiene al punto $(a, b)$, entonces $f(x, y)$ es [[Diferencial|Diferenciable]] en $(a, b)$.

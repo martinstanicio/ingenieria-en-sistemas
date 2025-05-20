@@ -1,6 +1,6 @@
 ---
 created: 2025-05-20 15:25:26
-modified: 2025-05-20 15:31:48
+modified: 2025-05-20 16:26:59
 title: Vector gradiente
 ---
 
@@ -16,3 +16,6 @@ $$
 \nabla f \left( P \right) =
 \left( f_x \left( P \right), f_y \left( P \right) \right)
 $$
+
+> [!tip]
+> El [[Vector gradiente]] de una [[Función real de variable real]] puede ser interpretado como simplemente la [[Derivada]] de la [[Análisis Matemático I/Función|Función]].
