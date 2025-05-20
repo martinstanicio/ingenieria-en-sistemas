@@ -1,6 +1,6 @@
 ---
 created: 2024-06-14 21:02:56
-modified: 2025-05-20 14:42:51
+modified: 2025-05-20 19:08:38
 title: Recta tangente
 ---
 

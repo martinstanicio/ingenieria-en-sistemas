@@ -3,7 +3,7 @@ aliases:
   - Funciones implícitas
   - Forma implícita
 created: 2024-08-19 18:17:29
-modified: 2025-05-20 18:43:47
+modified: 2025-05-20 19:08:04
 title: Función implícita
 ---
 
@@ -31,3 +31,8 @@ $$
 \frac{\partial y}{\partial x_i} =
 - \frac{\partial F / \partial x_i}{\partial F / \partial y}
 $$
+
+> [!important]
+> El [[Vector gradiente]] en un punto es [[Vectores ortogonales|Ortogonal]] a la gráfica de la [[Función implícita]] en ese punto.
+> 
+> Esto es muy útil para hallar la [[Recta normal]], o el [[Recta normal|Vector normal]] a una superficie.
