@@ -2,7 +2,7 @@
 aliases:
   - Diferenciabilidad
 created: 2024-08-19 15:06:55
-modified: 2025-05-20 16:29:50
+modified: 2025-05-20 16:53:23
 title: Diferencial
 ---
 
