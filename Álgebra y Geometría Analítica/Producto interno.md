@@ -1,8 +1,10 @@
 ---
 aliases:
   - Producto interior
+  - Producto escalar
+  - Producto punto
 created: 2024-11-11 13:15:21
-modified: 2024-11-14 13:57:27
+modified: 2025-05-20 19:19:07
 title: Producto interno
 ---
 

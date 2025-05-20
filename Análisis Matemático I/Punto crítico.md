@@ -8,7 +8,7 @@ title: Punto crítico
 
 # Punto crítico
 
-Dada una [[Análisis Matemático I/Función|Función]] $f: A \to \mathbb{R}, y = f(x)$, y un punto $c \in A$, decimos que $c$ es un [[Punto crítico]] de $y = f(x)$ si se cumple alguna de las siguientes condiciones.
+Se denominan [[Punto crítico|Puntos críticos]] a aquellos puntos $p$ donde es posible que la [[Análisis Matemático I/Función|Función]] $f(p)$ sea un [[Extremo relativo|Extremo]]. Existen tres tipos de [[Punto crítico|Puntos críticos]]:
 
 - Es un [[Punto estacionario]].
 - Es un [[Punto singular]].
