@@ -1,10 +1,36 @@
 ---
+aliases:
+  - Diferenciabilidad
 created: 2024-08-19 15:06:55
-modified: 2025-05-20 15:10:36
+modified: 2025-05-20 15:42:56
 title: Diferencial
 ---
 
 # Diferencial
+
+Una [[Análisis Matemático I/Función|Función]] $f$ es [[Diferencial|Diferenciable]] o [[Diferencial|Localmente lineal]] en un punto $P$ si se puede escribir el incremento $\Delta f$ de la [[Análisis Matemático I/Función|Función]] como una [[Combinación lineal]] de los incrementos de las variables independientes, más un término que es despreciable frente al anterior cuando esos incrementos tienden a $0$.
+
+$$
+\Delta f =
+\nabla f \cdot h + \epsilon(h) \cdot h =
+\left( \nabla f + \epsilon(h) \right) \cdot h
+$$
+
+- $\nabla f$ es el [[Vector gradiente]] de $f$
+- $h$ es el vector cuyas componentes son los incrementos de las variables independientes ($\Delta x, \Delta y, \dots$)
+- $\epsilon(h)$ es el vector que representa el [[error]] de componentes
+
+$$
+f(p + h) = f(p) + \nabla f(p) \cdot h + \epsilon(h) \cdot h
+$$
+
+
+
+
+
+
+
+
 
 El [[Diferencial]] $df = dy$ nos permite realizar una ==aproximación lineal== de cómo cambia $y = f(x)$ a medida que cambia el valor de $x$. Este cambio $\Delta x = x - x_0$ se llama $dx$.
 
