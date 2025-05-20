@@ -1,8 +1,9 @@
 ---
 aliases:
   - Paraboloides hiperbólicos
+  - Silla de montar
 created: 2025-05-19 16:44:33
-modified: 2025-05-19 16:53:01
+modified: 2025-05-20 20:08:53
 title: Paraboloide hiperbólico
 ---
 
