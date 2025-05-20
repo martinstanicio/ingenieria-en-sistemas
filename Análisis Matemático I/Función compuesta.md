@@ -1,6 +1,6 @@
 ---
 created: 2024-07-06 15:59:25
-modified: 2024-08-15 00:45:31
+modified: 2025-05-20 13:51:59
 title: Función compuesta
 ---
 
@@ -14,6 +14,8 @@ $$
 
 > [!note]
 > La expresión $(f \circ g)(x)$ se lee como "$f$ de $g$ de $x$".
+
+---
 
 Por ejemplo, con las siguientes [[Análisis Matemático I/Función|Funciones]].
 

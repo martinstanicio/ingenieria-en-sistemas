@@ -1,6 +1,6 @@
 ---
 created: 2025-05-19 18:28:05
-modified: 2025-05-19 18:31:12
+modified: 2025-05-20 13:45:06
 title: Límite en coordenadas polares
 ---
 
@@ -16,4 +16,4 @@ $$
 $$
 
 > [!important]
-> Este es uno de los pocos métodos que nos permiten confirmar la existencia del [[Límite simultáneo]].
+> Este es uno de los pocos métodos que nos permiten **confirmar** la existencia del [[Límite simultáneo]].
