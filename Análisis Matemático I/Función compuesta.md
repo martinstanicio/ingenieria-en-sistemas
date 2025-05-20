@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Funciones compuestas
 created: 2024-07-06 15:59:25
-modified: 2025-05-20 13:51:59
+modified: 2025-05-20 17:40:22
 title: Función compuesta
 ---
 

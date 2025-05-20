@@ -1,12 +1,14 @@
 ---
 created: 2025-05-20 16:37:21
-modified: 2025-05-20 16:54:24
+modified: 2025-05-20 17:31:43
 title: Derivada direccional
 ---
 
 # Derivada direccional
 
 Mientras que las [[Derivada parcial|Derivadas parciales]] nos permiten calcular la razón de cambio de la [[Análisis Matemático I/Función|Función]] en la dirección de los ejes $x$ e $y$, la [[Derivada direccional]] $D_u$ nos permite calcular la razón de cambio en ==cualquier dirección==, en un punto dado $p_0$.
+
+![[derivada-direccional.jpg]]
 
 $$
 D_u f(p_0) =
@@ -23,5 +25,44 @@ Si $f(p)$ es [[Diferencial|Diferenciable]] en $p$ entonces tiene una [[Derivada 
 $$
 D_u f(p) = \nabla f(p) \cdot \vec{u}
 $$
+
 ## Máxima razón de cambio
-Esto significaría encontrar
+
+Para encontrar la máxima razón de cambio, debemos calcular en qué dirección del [[Versor]] $\vec{u}$, la [[Derivada direccional]] alcanza su valor máximo.
+
+$$
+D_u f(p) =
+\nabla f(p) \cdot \vec{u} =
+\vert \nabla f(p) \vert \cdot \Vert \vec{u} \Vert \cdot \cos \theta =
+\vert \nabla f(p) \vert \cdot \cos \theta
+$$
+
+- $\theta$ es el ángulo entre el [[Vector gradiente]] y el [[Versor]] $\vec{u}$
+
+> [!tip]
+> Debido a que la [[Norma]] de un [[Versor]] siempre es $1$, podemos descartar $\Vert \vec{u} \Vert$.
+
+Como el valor del [[Vector gradiente]] en un punto no varía, el valor de la [[Derivada direccional]] está condicionado por $\cos \theta$. Por lo tanto, la [[Derivada direccional]] alcanzará su valor máximo cuando el [[Versor]] $\vec{u}$ tenga la misma dirección y sentido que el [[Vector gradiente]].
+
+$$
+\theta = 0
+\Rightarrow
+\cos \theta = 1
+\Rightarrow
+D_u f(p) = \vert \nabla f(p) \vert
+$$
+
+## Mínima razón de cambio
+
+De forma análoga, obtendremos la mínima razón de cambio cuando el [[Versor]] $\vec{u}$ tenga la misma dirección, pero sentido opuesto al [[Vector gradiente]].
+
+$$
+\theta = \pi
+\Rightarrow
+\cos \theta = -1
+\Rightarrow
+D_u f(p) = - \vert \nabla f(p) \vert
+$$
+
+> [!important]
+> Para las direcciones $\theta = \frac{\pi}{2}$ y $\theta = \frac{3}{2} \pi$, la [[Derivada direccional]] es nula, ya que $\cos \theta = 0$.
