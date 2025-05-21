@@ -3,8 +3,10 @@ aliases:
   - Extremo condicionado
   - Extremos vinculados
   - Extremos condicionados
+  - Extremo con restricción
+  - Extremos con restricción
 created: 2025-05-21 12:03:22
-modified: 2025-05-21 12:34:28
+modified: 2025-05-21 14:11:46
 title: Extremo vinculado
 ---
 
