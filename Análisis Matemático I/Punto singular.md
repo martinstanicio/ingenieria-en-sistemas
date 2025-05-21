@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Puntos singulares
 created: 2024-08-20 17:21:52
-modified: 2025-05-20 19:51:25
+modified: 2025-05-21 13:41:26
 title: Punto singular
 ---
 

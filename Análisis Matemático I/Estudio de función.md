@@ -1,6 +1,6 @@
 ---
 created: 2024-08-21 01:59:35
-modified: 2024-08-21 02:03:52
+modified: 2025-05-21 13:33:35
 title: Estudio de función
 ---
 
@@ -17,7 +17,7 @@ El estudio completo de una [[Análisis Matemático I/Función|Función]] nos per
 		- [[Asíntota no vertical|Asíntotas no verticales]]
 		- [[Límite|Límites]] al infinito
 2. [[Derivada]] de la [[Análisis Matemático I/Función|Función]]: $y = f'(x)$.
-	- Crecimieno y decrecimiento
+	- Crecimiento y decrecimiento
 	- [[Extremo relativo|Extremos relativos]]
 	- [[Extremo absoluto|Extremos absolutos]]
 3. [[Derivada]] segunda de la [[Análisis Matemático I/Función|Función]] $y = f''(x)$.
