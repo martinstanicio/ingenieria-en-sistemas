@@ -2,7 +2,7 @@
 aliases:
   - Método de los multiplicadores de Lagrange
 created: 2025-05-21 14:06:26
-modified: 2025-05-21 15:29:01
+modified: 2025-05-21 15:30:03
 title: Multiplicadores de Lagrange
 ---
 
@@ -25,7 +25,7 @@ Entonces, los [[Punto crítico|Puntos críticos]] encontrados son aquellos perte
 $$
 \left\{
     \begin{array}{l}
-        \nabla f \left( \vec{p} \right) = \lambda \nabla G \left( \vec{p} \right) \\
+        \nabla f \left( \vec{p} \right) = \lambda \nabla G \left( \vec{p} \right), \lambda \in \mathbb{R} \\
         G \left( \vec{p} \right) = 0 \\
     \end{array}
 \right.
