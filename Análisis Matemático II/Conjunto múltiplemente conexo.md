@@ -12,5 +12,5 @@ Un [[Conjunto conexo]] que **no** es [[Conjunto simplemente conexo|Simplemente c
 
 > [!tip]
 > Un [[Conjunto conexo]] con huecos o agujeros.
-
 Si el [[Conjunto]] tiene un solo hueco, es **doblemente conexo**, si tiene dos es **triplemente conexo**, y así sucesivamente.
+
