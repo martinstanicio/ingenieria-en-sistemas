@@ -1,6 +1,6 @@
 ---
 created: 2024-06-14 21:02:56
-modified: 2025-05-20 19:08:38
+modified: 2025-05-23 16:26:58
 title: Recta tangente
 ---
 
@@ -30,7 +30,7 @@ $$
 \right.
 $$
 
-Podemos hacer lo mismo, pero con la [[Derivada parcial]] respecto de $y$, tomando $t = \Delta y = y - y_0$:
+Podemos hacer lo mismo, pero con la [[Derivada parcial]] respecto de $y$, tomando $t = \Delta y = y - y_0$
 
 $$
 \left\{
