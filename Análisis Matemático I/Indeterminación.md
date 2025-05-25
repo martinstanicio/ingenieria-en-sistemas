@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Indeterminaciones
 created: 2024-05-25 14:35:53
-modified: 2024-08-14 00:16:04
+modified: 2025-05-25 12:03:15
 title: Indeterminación
 ---
 
