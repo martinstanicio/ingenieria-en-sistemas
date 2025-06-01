@@ -3,7 +3,7 @@ aliases:
   - Hessiano
   - Matriz Hessiana
 created: 2025-05-20 19:57:25
-modified: 2025-05-20 20:06:44
+modified: 2025-05-31 21:23:28
 title: Teorema de las segundas derivadas parciales
 ---
 
@@ -15,6 +15,7 @@ Primero, se debe calcular el [[Teorema de las segundas derivadas parciales|Hessi
 
 $$
 H =
+D =
 \left\vert
     \begin{array}{c}
         f_{xx} & f_{xy} \\
