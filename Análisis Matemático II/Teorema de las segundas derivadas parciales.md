@@ -3,7 +3,7 @@ aliases:
   - Hessiano
   - Matriz Hessiana
 created: 2025-05-20 19:57:25
-modified: 2025-05-31 21:23:28
+modified: 2025-05-31 22:13:37
 title: Teorema de las segundas derivadas parciales
 ---
 
@@ -11,11 +11,11 @@ title: Teorema de las segundas derivadas parciales
 
 Un criterio que nos permite identificar [[Extremo relativo|Extremos locales]] y [[Punto silla|Puntos silla]] en los [[Punto estacionario|Puntos estacionarios]] de [[Función real de variable vectorial|Funciones reales de variable vectorial]].
 
-Primero, se debe calcular el [[Teorema de las segundas derivadas parciales|Hessiano]] o [[Teorema de las segundas derivadas parciales|Matriz Hessiana]].
+Primero, se debe calcular el determinante del [[Teorema de las segundas derivadas parciales|Hessiano]] o [[Teorema de las segundas derivadas parciales|Matriz Hessiana]] $H$.
 
 $$
-H =
 D =
+\vert H \vert =
 \left\vert
     \begin{array}{c}
         f_{xx} & f_{xy} \\
