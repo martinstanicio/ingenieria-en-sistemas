@@ -2,7 +2,7 @@
 aliases:
   - Gramáticas
 created: 2025-02-28 16:10:19
-modified: 2025-03-17 21:18:03
+modified: 2025-06-07 19:07:22
 title: Gramática
 ---
 
@@ -11,21 +11,19 @@ title: Gramática
 Es una cuaterna a partir de la cual podemos generar un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
 
 $$
-G = (T, N, P, S_0)
+G = (T, N, P, S)
 $$
 
 ## Símbolos terminales
 
-$T$ es el [[Conjunto]] de **símbolos terminales**, que son aquellas ==subcadenas== que terminan formando [[Lógica y Estructuras Discretas/Cadena|Cadenas]] más complejas, llamadas ==oraciones==.
+$T$ es el [[Conjunto]] de símbolos terminales, que son los símbolos que terminan formando las [[Lógica y Estructuras Discretas/Cadena|Cadenas]] del [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
 
 > [!note]
 > Este [[Conjunto]] suele coincidir con el [[Alfabeto]] $\Sigma$.
 
-Una ==oración== o [[Lógica y Estructuras Discretas/Cadena|Cadena]] de nuestro [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] siempre está formada únicamente por **símbolos terminales**.
-
 ## Símbolos no terminales
 
-$N$ es el [[Conjunto]] de **símbolos no terminales**, que son un medio que me permite formar ==oraciones más complejas==, pero ==no aparecen== en las mismas.
+$N$ es el [[Conjunto]] de símbolos no terminales, que son el medio que me permite formar símbolos terminales, pero no aparecen en las [[Lógica y Estructuras Discretas/Cadena|Cadenas]] del [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
 
 > [!important]
 > Un símbolo no puede ser terminal y no terminal a la vez.
@@ -36,19 +34,19 @@ $N$ es el [[Conjunto]] de **símbolos no terminales**, que son un medio que me p
 
 ## Producciones
 
-$P$ es el [[Conjunto]] de **producciones**, de forma que:
+$P$ es el [[Conjunto]] de producciones, de forma que:
 
 $$
 P \subseteq \left[ \left( T \cup N \right)^* - T^* \right] \times \left[ \left( T \cup N \right)^* \right]
 $$
 
-Me dice como intercambiar los ==objetos intermedios== por los ==objetos finales==, que son los que van a aparecer en la oración formada.
+Son los pasos a seguir para ==pasar de los símbolos no terminales a los terminales==, partiendo desde el símbolo distinguido.
 
 ## Símbolo inicial o distinguido
 
-$S_0$ o $\sigma$ es el **símbolo inicial o distinguido** de la [[Gramática]], y $\sigma \in N$.
+$S$, $S_0$ o $\sigma$ es el símbolo inicial o distinguido de la [[Gramática]], y $S \in N$.
 
-Es un caso especial de los [[Gramática#Símbolos no terminales|Símbolos no terminales]], que es el punto de partida para empezar a ==generar las oraciones== de mi [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
+Es el punto de partida para generar cualquier [[Lógica y Estructuras Discretas/Cadena|Cadena]] del [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
 
 ## Clasificación de Chomsky
 
