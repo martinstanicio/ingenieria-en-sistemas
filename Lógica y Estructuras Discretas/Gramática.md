@@ -2,7 +2,7 @@
 aliases:
   - Gramáticas
 created: 2025-02-28 16:10:19
-modified: 2025-06-07 19:07:22
+modified: 2025-06-07 19:33:30
 title: Gramática
 ---
 
@@ -56,30 +56,25 @@ $$
 T3 \subset T2 \subset T1 \subset T0
 $$
 
-> [!note]
-> Un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] es de tipo $n$ si existe una [[Gramática]] de tipo $n$ que lo genera.
-
 ### Tipo 3: Regular
 
-Una [[Gramática]] $G$ se llama regular o tipo 3 si sus [[Gramática#Producciones|Producciones]] son de la siguiente forma.
+Una [[Gramática]] $G$ se llama ==regular== o tipo 3 si sus [[Gramática#Producciones|Producciones]] son de la siguiente forma.
 
 $$
-\left( A \to aB \right)
+\left( A \to aB, A \to a \right)
 \lor
-\left( A \to a \right)
-\space \text{donde} \space
+\left( A \to Ba, A \to a \right)
+/
 A, B \in N \land a \in T
 $$
 
-Es decir, si todas las [[Gramática#Producciones|Producciones]] se derivan en un terminal, o un terminal seguido de un no terminal.
-
 ### Tipo 2: Libre de contexto
 
-Una [[Gramática]] $G$ se llama libre de contexto o tipo 2 si sus [[Gramática#Producciones|Producciones]] son de la siguiente forma.
+Una [[Gramática]] $G$ se llama libre de contexto, independiente de contexto, o tipo 2 si sus [[Gramática#Producciones|Producciones]] son de la siguiente forma.
 
 $$
 \left( A \to \alpha \right)
-\space \text{donde} \space
+/
 A \in N \land \alpha \in \left( T \cup N \right)^* - \set{\lambda}
 $$
 
@@ -91,11 +86,11 @@ Una [[Gramática]] $G$ se llama sensible al contexto o tipo 1 si sus [[Gramátic
 
 $$
 \left( \alpha A \beta \to \alpha \gamma \beta \right)
-\space \text{donde} \space
+/
 A \in N \land \alpha, \beta, \gamma \in \left( T \cup N \right)^* - \set{\lambda}
 $$
 
-Siendo $\lambda$ la [[Cadena vacía]].
+La parte derecha de una producción debe ser, en longitud, mayor o igual que la longitud de la parte izquierda.
 
 ### Tipo 0: Recursivamente enumerada
 

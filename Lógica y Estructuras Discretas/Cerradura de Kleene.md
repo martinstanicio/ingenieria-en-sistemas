@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Clausura de Kleene
 created: 2025-02-27 19:37:47
-modified: 2025-02-27 20:10:40
+modified: 2025-06-07 19:34:55
 title: Cerradura de Kleene
 ---
 

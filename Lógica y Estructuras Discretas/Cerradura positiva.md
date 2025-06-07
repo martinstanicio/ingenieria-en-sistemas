@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Clausura positiva
 created: 2025-02-27 19:37:47
-modified: 2025-02-27 20:11:04
+modified: 2025-06-07 19:35:17
 title: Cerradura positiva
 ---
 
