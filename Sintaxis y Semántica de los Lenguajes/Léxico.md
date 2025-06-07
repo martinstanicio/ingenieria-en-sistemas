@@ -1,9 +1,9 @@
 ---
 created: 2025-03-17 19:07:28
-modified: 2025-03-17 19:22:27
+modified: 2025-06-07 19:55:51
 title: Léxico
 ---
 
 # Léxico
 
-Dentro de una oración, las palabras del diccionario que la forman, más específicamente los [[Token|Tokens]].
+Son las mínimas unidades identificables de un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]], determinadas [[Lexema|Lexemas]].
