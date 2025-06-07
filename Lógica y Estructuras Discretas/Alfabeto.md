@@ -1,12 +1,12 @@
 ---
 created: 2025-02-27 18:42:06
-modified: 2025-02-27 19:48:16
+modified: 2025-06-07 16:39:24
 title: Alfabeto
 ---
 
 # Alfabeto
 
-Es un [[Conjunto]] $\Sigma \neq \emptyset$ cuyos elementos se llaman **letras** o **símbolos**.
+Es un [[Conjunto]] finito $\Sigma \neq \emptyset$ cuyos elementos se llaman **letras** o **símbolos**.
 
 > [!important]
 > Ningún símbolo puede comenzar con otro símbolo del [[Alfabeto]].

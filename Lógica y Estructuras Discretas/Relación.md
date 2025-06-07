@@ -1,25 +1,20 @@
 ---
 created: 2024-05-01 16:39:04
-modified: 2024-11-19 20:36:45
+modified: 2025-06-07 16:13:34
 title: Relación
 ---
 
 # Relación
 
-Se le llama relación a cualquier [[Conjunto]] que es ==[[Subconjunto]] de un [[Producto cartesiano]]==.
+Dados dos [[Conjunto|Conjuntos]] $A$ y $B$, se define una [[Relación]] $R$ como el [[Conjunto]] de pares ordenados $(a, b)$ donde $a \in A$ y $b \in B$.
+
+> [!note]
+> La [[Relación]] se puede expresar como $aRb$ o $R: A \to B$.
+
+Toda [[Relación]] $R: A \to B$ está incluida en el [[Producto cartesiano]] de $A \times B$.
 
 $$
-R \subseteq (A \times B)
-$$
-
-Toda relación tiene un [[Dominio]], formado por todos los valores utilizados en la primera componente de los elementos del [[Subconjunto]].
-
-$$
-Dominio_R = \{ x \in A: (\exists y \in B) \land ((x,y) \in R) \}
-$$
-
-Y también tiene una [[Imagen]], formada por todos los valores utilizados en la segunda componente de los elementos del [[Subconjunto]].
-
-$$
-Imagen_R = \{ y \in B: (\exists x \in A) \land ((x,y) \in R) \}
+R: A \to B
+\Rightarrow
+R \subseteq A \times B
 $$
