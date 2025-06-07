@@ -3,13 +3,16 @@ aliases:
   - Cadena de símbolos
   - Cadenas
 created: 2025-02-27 19:44:50
-modified: 2025-02-27 19:53:52
+modified: 2025-06-07 16:40:57
 title: Cadena
 ---
 
 # Cadena
 
 Si $w \in \Sigma^k$, con $k \geq 1$, entonces $w$ se llama una [[Lógica y Estructuras Discretas/Cadena|Cadena]] de $k$ símbolos del [[Alfabeto]] $\Sigma$.
+
+> [!tip]
+> Un [[Conjunto]] ordenado de elementos de un [[Alfabeto]].
 
 ## Longitud
 
