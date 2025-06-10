@@ -1,6 +1,10 @@
 ---
+aliases:
+  - Diagramas de transición
+  - Diagrama de estados
+  - Diagramas de estados
 created: 2025-06-07 20:17:37
-modified: 2025-06-07 20:29:01
+modified: 2025-06-10 17:06:02
 title: Diagrama de transición
 ---
 
