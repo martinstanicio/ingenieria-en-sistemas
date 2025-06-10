@@ -4,7 +4,7 @@ aliases:
   - Diagrama de estados
   - Diagramas de estados
 created: 2025-06-07 20:17:37
-modified: 2025-06-10 17:06:02
+modified: 2025-06-10 17:58:45
 title: Diagrama de transición
 ---
 
@@ -36,7 +36,7 @@ flowchart LR
 - Cada arco dirigido representa una parte de la función de transición
 - El símbolo sobre el arco indica qué produjo esa transición
 
-La definición formal de este [[Autómata finito|Autómata de estados finitos determinístico]] $M$ es la siguiente.
+La definición formal de este [[Autómata finito|AF]] $M$ es la siguiente.
 
 $$
 M = \left< \set{ q_0, q_1, q_2, q_3 }, \set{ 0, 1 }, q_0, \delta, \set{ q_3 } \right>
@@ -53,4 +53,4 @@ $$
 $$
 
 > [!note]
-> El [[Autómata]] $M$ acepta el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L = \set{ 01, 001 }$.
+> El [[Autómata finito|AF]] $M$ acepta el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L = \set{ 01, 001 }$.
