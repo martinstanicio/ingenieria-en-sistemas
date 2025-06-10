@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos
   - Autómatas de estados finitos
 created: 2025-03-04 15:16:59
-modified: 2025-06-10 17:54:03
+modified: 2025-06-10 18:36:56
 title: Autómata finito
 ---
 
@@ -15,13 +15,13 @@ title: Autómata finito
 Es un [[Autómata]] con una cantidad finita de [[Lógica y Estructuras Discretas/Estado|Estados]]. Es una quíntupla $M$.
 
 $$
-M = \left( I, K, q_0, \delta, F \right)
+M = \left( K, I, \delta, q_0, F \right)
 $$
 
-- $I$: [[Conjunto]] finito de [[Entradas]] ($I \neq \emptyset$), que suele ser el [[Alfabeto]] $\Sigma$.
 - $K$: [[Conjunto]] finito de [[Lógica y Estructuras Discretas/Estado|Estados]] ($K \neq \emptyset$).
-- $q_0$: El [[Lógica y Estructuras Discretas/Estado|Estado]] inicial del [[Autómata]] ($q_0 \in K$).
+- $I$: [[Conjunto]] finito de [[Entradas]] ($I \neq \emptyset$), que suele ser el [[Alfabeto]] $\Sigma$.
 - $\delta$: [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente, que asigna [[Lógica y Estructuras Discretas/Estado|Estados]] para cada posible combinación de [[Lógica y Estructuras Discretas/Estado|Estados]] y [[Entradas]].
+- $q_0$: El [[Lógica y Estructuras Discretas/Estado|Estado]] inicial del [[Autómata]] ($q_0 \in K$).
 - $F$: [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] aceptados o finales ($F \subseteq K$).
 
 ## Lenguaje aceptado
