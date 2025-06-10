@@ -48,5 +48,5 @@ $$
 \end{array}
 $$
 
-> [!tip]
+> [!note]
 > El [[Autómata]] $M$ acepta el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L = \set{ 01, 001 }$.
