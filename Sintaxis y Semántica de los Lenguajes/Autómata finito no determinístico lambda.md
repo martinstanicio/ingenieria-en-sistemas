@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos no determinístico lambda
   - Autómatas de estados finitos no determinísticos lambda
 created: 2025-03-06 14:40:22
-modified: 2025-06-10 18:40:36
+modified: 2025-06-10 19:14:02
 title: Autómata finito no determinístico lambda
 ---
 
@@ -23,8 +23,8 @@ $$
 
 ## Pasaje de AFND-λ a AFD
 
-Sea un [[Autómata finito no determinístico|AFND]] $M = \left< K, \Sigma, \delta, q_0, F \right>$, luego existe un [[Autómata finito no determinístico lambda|AFND-λ]] $M'$ tal que $L \left( M \right) = L \left( M' \right)$, donde $M' = \left< K, \Sigma, \delta', q_0, F \right>$ y
+Sea un [[Autómata finito no determinístico lambda|AFND-λ]] $M = \left< K, \Sigma, \delta, q_0, F \right>$, luego existe un [[Autómata finito determinístico|AFD]] $M'$ tal que $L \left( M \right) = L \left( M' \right)$, donde $M' = \left< K', \Sigma, \delta', Q_0, F' \right>$ y $\delta': K' \times \Sigma \to K'$, de forma que dado $Q \in K'$:
 
 $$
-\delta': K \times \Sigma \cup \set{ \lambda } \to P \left( K \right), \delta' \left( q, a \right) = \delta \left( q, a \right) \land \delta' \left( q, \lambda \right) = \set{ q }
+\delta' \left( Q, a \right) = \set{ p: \left( q, a \right) \vdash^* \left( p, \lambda \right), q \in Q }
 $$

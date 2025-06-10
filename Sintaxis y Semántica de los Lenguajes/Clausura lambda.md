@@ -22,5 +22,7 @@ $$
 Dado un [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] $Q \subseteq K$, también se puede calcular la [[Clausura lambda]] $\text{Cl-}\lambda: P \left( K \right) \to P \left( K \right)$ del mismo, de la siguiente forma.
 
 $$
-\text{Cl-}\lambda \left( Q \right) = \set{ q' \in K: \exists q \in Q \land \left( q, \lambda \right) \vdash^* \left( q', \lambda \right) }
+\text{Cl-}\lambda \left( Q \right) =
+\set{ q' \in K: \exists q \in Q \land \left( q, \lambda \right) \vdash^* \left( q', \lambda \right) } =
+\bigcup_{q_i \in Q} \text{Cl-}\lambda \left( q_i \right)
 $$
