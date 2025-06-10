@@ -10,7 +10,7 @@ title: Diagrama de transición
 
 # Diagrama de transición
 
-Es una representación gráfica de un [[Autómata de estados finitos]].
+Es una representación gráfica de un [[Autómata finito]].
 
 ```mermaid
 flowchart LR
@@ -36,7 +36,7 @@ flowchart LR
 - Cada arco dirigido representa una parte de la función de transición
 - El símbolo sobre el arco indica qué produjo esa transición
 
-La definición formal de este [[Autómata de estados finitos|Autómata de estados finitos determinístico]] $M$ es la siguiente.
+La definición formal de este [[Autómata finito|Autómata de estados finitos determinístico]] $M$ es la siguiente.
 
 $$
 M = \left< \set{ q_0, q_1, q_2, q_3 }, \set{ 0, 1 }, q_0, \delta, \set{ q_3 } \right>
