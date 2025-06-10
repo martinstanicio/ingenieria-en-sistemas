@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos no determinístico lambda
   - Autómatas de estados finitos no determinísticos lambda
 created: 2025-03-06 14:40:22
-modified: 2025-06-10 19:14:02
+modified: 2025-06-10 19:38:07
 title: Autómata finito no determinístico lambda
 ---
 
@@ -28,3 +28,16 @@ Sea un [[Autómata finito no determinístico lambda|AFND-λ]] $M = \left< K, \Si
 $$
 \delta' \left( Q, a \right) = \set{ p: \left( q, a \right) \vdash^* \left( p, \lambda \right), q \in Q }
 $$
+
+Para calcular los elementos restantes, aplicamos el siguiente [[Algoritmos|Algoritmo]] (utilizamos el [[Algoritmo mover]]):
+
+1. Hacer $Q_0 = \text{Cl-}\lambda \left( \set{ q_0 } \right)$
+2. Hacer $K' = \set{ Q_0 }$ donde $K'$ es marcable y $Q_0$ está sin marcar
+3. Mientras haya $T \in K'$ sin marcar:
+	1. Marcar $T$
+	2. Para cada $a \in \Sigma$:
+		1. Hacer $U = \text{mover} \left( T, a \right)$
+		2. Si $U \notin K'$:
+			1. Agregar $U$ a $K'$ sin marcar
+		3. $\delta' \left( T, a \right) = U$
+4. Hacer $F' = \set{ x \in K': x \cap F \neq \emptyset }$
