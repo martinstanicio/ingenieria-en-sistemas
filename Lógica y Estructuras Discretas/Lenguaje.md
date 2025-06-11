@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Lenguajes
 created: 2025-02-27 18:41:12
-modified: 2025-06-07 19:16:14
+modified: 2025-06-10 21:52:43
 title: Lenguaje
 ---
 

@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos
   - Autómatas de estados finitos
 created: 2025-03-04 15:16:59
-modified: 2025-06-10 18:36:56
+modified: 2025-06-10 22:11:29
 title: Autómata finito
 ---
 
@@ -20,7 +20,7 @@ $$
 
 - $K$: [[Conjunto]] finito de [[Lógica y Estructuras Discretas/Estado|Estados]] ($K \neq \emptyset$).
 - $I$: [[Conjunto]] finito de [[Entradas]] ($I \neq \emptyset$), que suele ser el [[Alfabeto]] $\Sigma$.
-- $\delta$: [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente, que asigna [[Lógica y Estructuras Discretas/Estado|Estados]] para cada posible combinación de [[Lógica y Estructuras Discretas/Estado|Estados]] y [[Entradas]].
+- $\delta$: [[Función de transición]].
 - $q_0$: El [[Lógica y Estructuras Discretas/Estado|Estado]] inicial del [[Autómata]] ($q_0 \in K$).
 - $F$: [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] aceptados o finales ($F \subseteq K$).
 
@@ -31,5 +31,5 @@ Sea $L(G)$ el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] asociado a u
 Un arreglo de [[Entradas|Entrada]] $\alpha = x_1, \dots, x_n$, perteneciente a la [[Cerradura de Kleene]] del [[Conjunto]] de [[Entradas]] ($\alpha \in I^*$), pertenece al [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado del [[Autómata finito|AF]] ($\alpha \in Ac(M)$) si se cumple lo siguiente.
 
 1. El [[Lógica y Estructuras Discretas/Estado|Estado]] inicial es el especificado ($q_0 = q_0$).
-2. Dado un [[Lógica y Estructuras Discretas/Estado|Estado]] y la [[Entradas|Entrada]] siguiente, la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente me devuelve siempre el [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente ($\delta (q_{i - 1}, x_i) = q_i$).
+2. Dado un [[Lógica y Estructuras Discretas/Estado|Estado]] y la [[Entradas|Entrada]] siguiente, la [[Función de transición]] me devuelve siempre el [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente ($\delta (q_{i - 1}, x_i) = q_i$).
 3. El [[Lógica y Estructuras Discretas/Estado|Estado]] final es un [[Lógica y Estructuras Discretas/Estado|Estado]] aceptado ($q_n \in F$).

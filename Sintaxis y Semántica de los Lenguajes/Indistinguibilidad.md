@@ -2,7 +2,7 @@
 aliases:
   - Estados indistinguibles
 created: 2025-06-10 19:51:41
-modified: 2025-06-10 20:02:23
+modified: 2025-06-10 22:10:32
 title: Indistinguibilidad
 ---
 
@@ -17,8 +17,8 @@ $$
 \hat{\delta} \left( r, \alpha \right) \in F
 $$
 
-> [!important]
-> $\hat{\delta}$ es la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente ==extendida==. La diferencia fundamental es que mientras $\delta$ solo acepta un elemento $a \in \Sigma$ a la vez, $\hat{\delta}$ acepta una [[Lógica y Estructuras Discretas/Cadena|Cadena]] completa $\alpha \in \Sigma^*$.
+> [!note]
+> $\hat{\delta}$ es la [[Función de transición extendida]].
 
 La [[Indistinguibilidad]] tiene dos propiedades importantes:
 

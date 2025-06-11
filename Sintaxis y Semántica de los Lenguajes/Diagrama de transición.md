@@ -33,7 +33,7 @@ flowchart LR
 - Cada círculo es un estado
 - Cada círculo doble es un estado final
 - Una flecha apuntando a un estado indica que es el estado inicial
-- Cada arco dirigido representa una parte de la función de transición
+- Cada arco dirigido representa una parte de la [[Función de transición]]
 - El símbolo sobre el arco indica qué produjo esa transición
 
 La definición formal de este [[Autómata finito|AF]] $M$ es la siguiente.

@@ -6,17 +6,19 @@ aliases:
   - Autómata de estados finitos determinístico
   - Autómatas de estados finitos determinísticos
 created: 2025-06-10 17:49:07
-modified: 2025-06-10 18:05:05
+modified: 2025-06-10 22:13:20
 title: Autómata finito determinístico
 ---
 
 # Autómata finito determinístico
 
-Un [[Autómata finito determinístico|AFD]] es un [[Autómata finito]], donde la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente $\delta$ está definida de la siguiente forma.
+Un [[Autómata finito determinístico|AFD]] es un [[Autómata finito]], donde la [[Función de transición]] $\delta$ está definida de la siguiente forma.
 
 $$
 \delta: \left( K \times I \right) \to K
 $$
+
+^718883
 
 ## Pasaje de AFD a AFND
 

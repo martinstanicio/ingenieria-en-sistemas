@@ -3,7 +3,7 @@ aliases:
   - Configuraciones instantáneas
   - Configuración instantánea de un AF
 created: 2025-06-10 16:27:45
-modified: 2025-06-10 18:00:39
+modified: 2025-06-10 22:15:35
 title: Configuración instantánea
 ---
 
@@ -25,7 +25,7 @@ $$
 r \in \delta \left( q, a \right)
 $$
 
-Donde $q, r \in K$ son [[Lógica y Estructuras Discretas/Estado|Estados]] del [[Autómata finito|AF]], $a \in \Sigma$ es un elemento del [[Alfabeto]], $\alpha \in \Sigma^*$ es la [[Lógica y Estructuras Discretas/Cadena|Cadena]] que resta consumir, y $\delta: \left( K \times \Sigma \right) \to P(K)$ es la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estado]] siguiente del [[Autómata finito|AF]] ($P(K)$ es el [[Conjunto potencia]] de $K$).
+Donde $q, r \in K$ son [[Lógica y Estructuras Discretas/Estado|Estados]] del [[Autómata finito|AF]], $a \in \Sigma$ es un elemento del [[Alfabeto]], $\alpha \in \Sigma^*$ es la [[Lógica y Estructuras Discretas/Cadena|Cadena]] que resta consumir, y $\delta: \left( K \times \Sigma \right) \to P(K)$ es la [[Función de transición]] del [[Autómata finito|AF]] ($P(K)$ es el [[Conjunto potencia]] de $K$).
 
 > [!important]
 > Particularmente si el [[Autómata finito|AF]] es un [[Autómata finito determinístico]], se cumple lo siguiente, debido a que $\delta: \left( K \times \Sigma \right) \to K$.

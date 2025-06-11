@@ -6,13 +6,13 @@ aliases:
   - Autómata de estados finitos no determinístico lambda
   - Autómatas de estados finitos no determinísticos lambda
 created: 2025-03-06 14:40:22
-modified: 2025-06-10 19:38:07
+modified: 2025-06-10 22:14:54
 title: Autómata finito no determinístico lambda
 ---
 
 # Autómata finito no determinístico lambda
 
-Un [[Autómata finito no determinístico lambda|AFND-λ]] es un [[Autómata finito]], donde la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estados]] siguientes $\delta$ está definida de la siguiente forma.
+Un [[Autómata finito no determinístico lambda|AFND-λ]] es un [[Autómata finito]], donde la [[Función de transición]] $\delta$ está definida de la siguiente forma.
 
 $$
 \delta: K \times \Sigma \cup \set{ \lambda } \to P \left( K \right)

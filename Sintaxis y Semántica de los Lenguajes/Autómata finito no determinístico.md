@@ -6,24 +6,26 @@ aliases:
   - Autómata de estados finitos no determinístico
   - Autómatas de estados finitos no determinísticos
 created: 2025-03-06 14:40:22
-modified: 2025-06-10 18:38:44
+modified: 2025-06-10 22:14:40
 title: Autómata finito no determinístico
 ---
 
 # Autómata finito no determinístico
 
-Un [[Autómata finito no determinístico|AFND]] es un [[Autómata finito]], donde la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estados]] siguientes $\delta$ está definida de la siguiente forma.
+Un [[Autómata finito no determinístico|AFND]] es un [[Autómata finito]], donde la [[Función de transición]] $\delta$ está definida de la siguiente forma.
 
 $$
 \delta: \left( K \times I \right) \to P \left( K \right)
 $$
 
+^d6497c
+
 Donde $P \left( K \right)$ es el [[Conjunto potencia]] del [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] $K$.
 
 > [!tip]
-> La única diferencia con los [[Autómata finito determinístico|AFD]] es que la [[Imagen]] de la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estados]] siguientes está formada por los elementos del [[Conjunto potencia]] de $K$.
+> La única diferencia con los [[Autómata finito determinístico|AFD]] es que la [[Imagen]] de la [[Función de transición]] está formada por los elementos del [[Conjunto potencia]] de $K$.
 > 
-> Por lo tanto, dado $K = \set{A, B, C}$, tanto $\emptyset$, $\set{A, C}$, $\set{B}$, y $\set{A, B, C}$ son algunas de las posibles [[Imagen|Imágenes]] de la [[Análisis Matemático I/Función|Función]] de [[Lógica y Estructuras Discretas/Estado|Estados]] siguientes.
+> Por lo tanto, dado $K = \set{A, B, C}$, tanto $\emptyset$, $\set{A, C}$, $\set{B}$, y $\set{A, B, C}$ son algunas de las posibles [[Imagen|Imágenes]] de la [[Función de transición]].
 
 ## Pasaje de AFND a AFND-λ
 
