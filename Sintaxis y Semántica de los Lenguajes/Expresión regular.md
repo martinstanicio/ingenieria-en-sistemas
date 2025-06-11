@@ -4,7 +4,7 @@ aliases:
   - ER
   - REGEX
 created: 2025-06-10 21:47:38
-modified: 2025-06-10 21:55:28
+modified: 2025-06-11 14:10:46
 title: Expresión regular
 ---
 
@@ -28,3 +28,9 @@ Sea un [[Alfabeto]] $\Sigma$, las [[Expresión regular|ER]] sobre $\Sigma$ y los
 > $$
 > rr^* = r^+
 > $$
+
+## Pasaje de ER a AFND-λ
+
+Sea $r$ una [[Expresión regular|ER]], entonces existe un [[Autómata finito no determinístico lambda|AFND-λ]] que acepta $L \left( r \right)$.
+
+==**FALTA PROCEDIMIENTO (gráficos de disyunción, concatenación y cerradura de kleene)**==
