@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos no determinístico
   - Autómatas de estados finitos no determinísticos
 created: 2025-03-06 14:40:22
-modified: 2025-06-10 22:14:40
+modified: 2025-06-10 22:58:01
 title: Autómata finito no determinístico
 ---
 
@@ -37,7 +37,7 @@ $$
 
 ## Teorema de pasaje de GR a AFND
 
-Sea $G = \left( N, T, P, S_0 \right)$ una [[Gramática#Tipo 3 Regular|Gramática regular]], luego existe $M = \left( I, K, q_0, \delta, F \right)$ un [[Autómata finito no determinístico|AFND]] tal que $L(G) = Ac(M)$ donde:
+Sea $G = \left( N, T, P, S_0 \right)$ una [[Clasificación de Chomsky#Tipo 3 Regular|Gramática regular]], luego existe $M = \left( I, K, q_0, \delta, F \right)$ un [[Autómata finito no determinístico|AFND]] tal que $L(G) = Ac(M)$ donde:
 
 $$
 \begin{array}{c}

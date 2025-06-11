@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos determinístico
   - Autómatas de estados finitos determinísticos
 created: 2025-06-10 17:49:07
-modified: 2025-06-10 22:13:20
+modified: 2025-06-10 23:07:03
 title: Autómata finito determinístico
 ---
 
@@ -33,5 +33,11 @@ $$
 Sea $M = \left( I, K, q_0, \delta, F \right)$ un [[Autómata finito determinístico|AFD]] y formamos las siguientes producciones. Si $\delta (q_i, a) = q_j$ entonces $q_i \to a q_j \in P$, y además si $q_j \in F$ entonces $q_i \to a \in P$. Luego, formamos la [[Gramática]] $G = \left( K, I, P, q_0 \right)$, tal que su [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] generado es el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado por el [[Autómata finito determinístico|AFD]].
 
 $$
-L(G) = Ac(M)
+L(G) = L(M)
 $$
+
+## Pasaje de AFD a ER
+
+Si un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L$ es aceptado por un [[Autómata finito determinístico|AFD]] $M$, entonces $L$ puede ser expresado mediante una [[Expresión regular]].
+
+==**FALTA ALGORITMO DE PASAJE**==
