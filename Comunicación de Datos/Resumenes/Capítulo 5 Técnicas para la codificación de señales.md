@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-12 14:56:13
+modified: 2025-06-12 15:26:31
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -19,12 +19,9 @@ Se introduce la terminología básica:
 
 Se estudian distintos esquemas de [[Codificación digital]] para convertir [[Dato digital|Datos digitales]] en [[Señal digital|Señales digitales]]
 
-- [[NRZ-L]]
-- [[NRZI]]
-- [[Bipolar-AMI]]
-- [[Pseudoternaria]]
-- [[Manchester]]
-- [[Manchester diferencial]]
+- [[Códigos NRZ]] ([[NRZ-L]] y [[NRZI]])
+- [[Códigos multinivel]] ([[Bipolar-AMI]] y [[Pseudoternaria]])
+- [[Códigos autosincronizados]] ([[Manchester]] y [[Manchester diferencial]])
 
 Se discuten aspectos clave para evaluar esquemas:
 
