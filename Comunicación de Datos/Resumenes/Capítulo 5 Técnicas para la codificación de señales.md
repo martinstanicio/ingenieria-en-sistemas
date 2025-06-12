@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-12 12:35:16
+modified: 2025-06-12 14:56:13
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -8,7 +8,7 @@ title: "Capítulo 5: Técnicas para la codificación de señales"
 
 ## 5.1. Datos digitales, señales digitales
 
-Se estudian distintos esquemas de codificación para convertir datos digitales en señales digitales. Se introduce la terminología básica:
+Se introduce la terminología básica:
 
 - [[Velocidad de modulación]]
 - [[Elemento de señal]]
@@ -17,7 +17,7 @@ Se estudian distintos esquemas de codificación para convertir datos digitales e
 > [!note]
 > Además, a veces se utilizan los términos **marca** y **espacio** para referirse a los dígitos binarios $1$ y $0$ respectivamente.
 
-Se detallan varias técnicas de codificación:
+Se estudian distintos esquemas de [[Codificación digital]] para convertir [[Dato digital|Datos digitales]] en [[Señal digital|Señales digitales]]
 
 - [[NRZ-L]]
 - [[NRZI]]

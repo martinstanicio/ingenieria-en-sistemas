@@ -2,7 +2,7 @@
 aliases:
   - Codificaciones diferenciales
 created: 2025-06-12 12:32:23
-modified: 2025-06-12 14:42:00
+modified: 2025-06-12 14:43:55
 title: Codificación diferencial
 ---
 
@@ -17,4 +17,4 @@ Es una técnica para codificar [[Dato digital|Datos digitales]] en una [[Señal 
 > Una de sus principales ventajas es que resulta más fiable **detectar una transición** en presencia de [[Ruido]], que comparar un valor con un umbral fijo.
 
 > [!important]
-> Cuando se utiliza una [[Codificación diferencial]], es necesario que el [[Emisor]] y el [[Receptor]] decidan cuál será el [[Bit]] que simulará ser
+> Cuando se utiliza una [[Codificación diferencial]], es necesario que el [[Emisor]] y el [[Receptor]] decidan cuál será el [[Bit]] que simulará ser *el anterior* al primer [[Bit]] de los [[Dato digital|Datos digitales]] que se busca transmitir.
