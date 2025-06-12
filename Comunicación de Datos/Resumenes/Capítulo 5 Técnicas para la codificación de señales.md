@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-12 11:50:32
+modified: 2025-06-12 12:35:16
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -12,17 +12,19 @@ Se estudian distintos esquemas de codificación para convertir datos digitales e
 
 - [[Velocidad de modulación]]
 - [[Elemento de señal]]
-- Señales [[unipolares]] y [[polares]]
-- [[Marca]] y [[espacio]]
+- [[Señal unipolar|Señales unipolares]] y [[Señal polar|Polares]]
+
+> [!note]
+> Además, a veces se utilizan los términos **marca** y **espacio** para referirse a los dígitos binarios $1$ y $0$ respectivamente.
 
 Se detallan varias técnicas de codificación:
 
-- [[NRZ-L]] (No retorno a nivel cero): niveles fijos para 0 y 1.
-- [[NRZI]] (No retorno a cero invertido): transición para 1, sin cambio para 0.
-- [[AMI]] (Bipolar-AMI): 1 alterna polaridad, 0 sin señal.
-- [[Pseudoternario]]: 0 alterna polaridad, 1 sin señal.
-- [[Manchester]]: transición en mitad del bit, bajo-alto (1), alto-bajo (0).
-- [[Manchester diferencial]]: siempre hay transición en el medio; codificación diferencial.
+- [[NRZ-L]]
+- [[NRZI]]
+- [[Bipolar-AMI]]
+- [[Pseudoternaria]]
+- [[Manchester]]
+- [[Manchester diferencial]]
 
 Se discuten aspectos clave para evaluar esquemas:
 
@@ -32,10 +34,10 @@ Se discuten aspectos clave para evaluar esquemas:
 - [[Inmunidad al ruido e interferencias]]
 - [[Coste y complejidad]]
 
-Se introducen las [[técnicas de aleatorización]]:
+Se introducen las [[Técnicas de aleatorización]]:
 
-- [[B8ZS]] (Bipolar with 8-Zeros Substitution): reemplaza 8 ceros por patrones con violaciones.
-- [[HDB3]] (High Density Bipolar-3 Zeros): reemplaza 4 ceros según reglas dependientes de polaridad y cantidad de pulsos.
+- [[B8ZS]]
+- [[HDB3]]
 
 ## 5.2. Datos digitales, señales analógicas
 
