@@ -10,6 +10,8 @@ Una técnica de [[Codificación digital]] que se caracteriza por ==siempre tener
 
 > [!important]
 > El hecho de que existe esta transición periódica, permite que la codificación [[Manchester]] brinde al [[Receptor]] una [[Sincronización]] constante.
+> 
+> Además, permite la detección de errores, en 
 
 Además, esta transición sirve para transmitir los [[Dato|Datos]], pues una transición de bajo a alto representa un $1$, y una transición de alto a bajo representa $0$.
 
