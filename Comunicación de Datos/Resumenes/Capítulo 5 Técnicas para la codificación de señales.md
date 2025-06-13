@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-13 11:38:06
+modified: 2025-06-13 12:49:29
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -55,7 +55,6 @@ Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]: [[P
 Se repasan técnicas de [[Modulación]] analógica:
 
 - [[AM]]
-- [[FM]]
-- [[PM]]
+- [[Modulación angular]] ([[FM]] y [[PM]])
 
 Se menciona la [[FDM|Multiplexación por división en frecuencia]] para transmitir múltiples [[Señal|Señales]] sobre un mismo [[Comunicación de Datos/Medio|Medio]].
