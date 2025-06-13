@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-13 11:19:09
+modified: 2025-06-13 11:38:06
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -48,15 +48,7 @@ Se comparan prestaciones:
 
 ## 5.3. Datos analógicos, señales digitales
 
-Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]:
-
-- [[PCM]]
-    - [[Teorema de muestreo]].
-    - [[Error de cuantificación]]
-    - [[Codificación no lineal]] y [[Companding]]
-- [[DM]]
-    - [[Tamaño del paso]] $d$
-    - [[Frecuencia de muestreo]]
+Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]: [[PCM]] y [[DM]], junto con sus conceptos relacionados ([[Teorema de muestreo]], [[Error de cuantificación]], [[Codificación no lineal]] y [[Companding]])
 
 ## 5.4. Datos analógicos, señales analógicas
 
