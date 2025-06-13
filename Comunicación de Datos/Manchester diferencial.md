@@ -21,4 +21,4 @@ La [[Dato|Datos]] se codifican utilizando la [[Codificación diferencial]]: un $
 > Al igual que [[Manchester]], requiere un [[Ancho de banda]] mayor que los [[Códigos NRZ]] y [[Códigos multinivel|Multinivel]].
 
 > [!note]
-> Al igual que [[Manchester]], permite la detección de errores mediante la ausencia de una transición en el intervalo del [[Bit]].
+> Al igual que [[Manchester]], permite la [[Detección de errores]] mediante la ausencia de una transición en el intervalo del [[Bit]].

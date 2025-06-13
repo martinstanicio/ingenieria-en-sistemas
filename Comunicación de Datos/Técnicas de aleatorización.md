@@ -2,7 +2,7 @@
 aliases:
   - Scrambling
 created: 2025-06-12 12:33:27
-modified: 2025-06-12 16:41:51
+modified: 2025-06-13 00:45:15
 title: Técnicas de aleatorización
 ---
 
@@ -14,9 +14,11 @@ Un método de [[Codificación digital]] que busca reemplazar las secuencias de [
 > Como la secuencia reemplazada es de la misma longitud, la velocidad de transmisión no se ve afectada.
 
 > [!important]
-> Las [[Técnicas de aleatorización]] permiten la detección de errores.
+> Las [[Técnicas de aleatorización]] permiten la [[Detección de errores]].
 
 - [[B8ZS]]
 - [[HDB3]]
 
 ![[scrambling.jpg]]
+
+^scrambling

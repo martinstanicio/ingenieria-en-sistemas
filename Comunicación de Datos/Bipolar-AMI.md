@@ -2,7 +2,7 @@
 aliases:
   - AMI
 created: 2025-06-12 12:30:08
-modified: 2025-06-12 15:14:46
+modified: 2025-06-13 00:44:54
 title: Bipolar-AMI
 ---
 
@@ -22,4 +22,4 @@ Técnica de [[Codificación digital]], que se caracteriza por generar [[Señal|S
 > Aunque [[Bipolar-AMI]] permite la [[Sincronización]] frente a [[Lógica y Estructuras Discretas/Cadena|Cadenas]] largas de unos, una [[Lógica y Estructuras Discretas/Cadena|Cadena]] larga de ceros sigue siendo un pulso de tensión constante, que no es posible [[Sincronización|Sincronizar]].
 
 > [!important]
-> La alternancia de los pulsos permite la ==detección de errores==, ya que, si se invierte una cantidad de [[Bit|Bits]] impar, causará una violación de la [[Codificación digital|Codificación]], pues romperá la secuencia alternante de pulsos.
+> La alternancia de los pulsos permite la [[Detección de errores]], ya que, si se invierte una cantidad de [[Bit|Bits]] impar, causará una violación de la [[Codificación digital|Codificación]], pues romperá la secuencia alternante de pulsos.

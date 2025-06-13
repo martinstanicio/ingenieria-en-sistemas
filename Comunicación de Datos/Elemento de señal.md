@@ -1,8 +1,9 @@
 ---
 aliases:
   - Elementos de señal
+  - Elementos de señalización
 created: 2025-06-12 12:15:06
-modified: 2025-06-12 12:18:35
+modified: 2025-06-13 00:54:42
 title: Elemento de señal
 ---
 

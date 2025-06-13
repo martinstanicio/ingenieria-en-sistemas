@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-12 15:26:31
+modified: 2025-06-13 00:49:58
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -25,11 +25,11 @@ Se estudian distintos esquemas de [[Codificación digital]] para convertir [[Dat
 
 Se discuten aspectos clave para evaluar esquemas:
 
-- [[Espectro de la señal]]
+- [[Espectro]] de la [[Señal]]: se busca evitar altas [[Frecuencia|Frecuencias]] y la [[Componente continua]], y también es deseable que la potencia transmitida esté en la parte central del [[Ancho de banda]]
 - [[Sincronización]]
 - [[Detección de errores]]
-- [[Inmunidad al ruido e interferencias]]
-- [[Coste y complejidad]]
+- Inmunidad al [[Ruido]] e interferencias
+- Coste y complejidad: cuanto mayor es la [[Velocidad de modulación]] para una velocidad de transmisión dada, mayor es el coste
 
 Se introducen las [[Técnicas de aleatorización]]:
 
@@ -38,27 +38,13 @@ Se introducen las [[Técnicas de aleatorización]]:
 
 ## 5.2. Datos digitales, señales analógicas
 
-Se analiza la conversión digital-analógica mediante modulación:
-
-- [[ASK]] (Amplitude Shift Keying): amplitud cambia según bit.
-- [[FSK]] (Frequency Shift Keying): frecuencia cambia según bit.
-- [[PSK]] (Phase Shift Keying): fase cambia según bit.
-
-Variantes importantes:
-
-- [[BPSK]]: fase de 180° entre 0 y 1.
-- [[DPSK]]: codificación diferencial, cambio relativo de fase.
-- [[QPSK]]: 2 bits por símbolo, desplazamientos de 90°.
-- [[OQPSK]]: versión de QPSK con desfase en la secuencia Q.
-- [[MPSK]] y [[MFSK]]: versiones multinivel.
-
-Se introduce también la [[QAM]] (Quadrature Amplitude Modulation), que combina PSK y ASK.
+Se analiza la conversión digital-analógica mediante [[Modulación]]: [[ASK]], [[FSK]] y [[PSK]], junto con sus variantes más importantes ([[BPSK]], [[DPSK]], [[QPSK]], [[OQPSK]], [[MPSK]] y [[MFSK]]). Se introduce también la [[QAM]], que combina [[PSK]] y [[ASK]].
 
 Se comparan prestaciones:
 
-- [[Ancho de banda]] (BT)
-- [[Eficiencia del ancho de banda]]
-- [[Eb/N0]] y [[BER]] (Bit Error Rate)
+- [[Ancho de banda]]
+- Eficiencia del [[Ancho de banda]]
+- [[Cociente EbNo]] y [[Bit Error Rate]]
 
 ## 5.3. Datos analógicos, señales digitales
 
