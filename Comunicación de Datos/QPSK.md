@@ -4,7 +4,7 @@ aliases:
   - PSK en cuadratura
   - PSK de cuatro niveles
 created: 2025-06-12 19:35:57
-modified: 2025-06-12 19:50:08
+modified: 2025-06-13 01:33:36
 title: QPSK
 ---
 
@@ -28,3 +28,8 @@ $$
 - $A$: [[Amplitud]]
 - $f_c$: [[Frecuencia]] de la portadora
 - $t$: tiempo
+
+> [!important]
+> Logra hacer un uso más eficiente del [[Ancho de banda]], ya que cada [[Elemento de señal]] representa 2 [[Bit|Bits]].
+
+![[qpsk-constellation-diagram.svg]] Diagrama de constelación de [[QPSK]]

@@ -1,6 +1,6 @@
 ---
 created: 2025-04-06 05:19:17
-modified: 2025-05-15 14:35:35
+modified: 2025-06-13 01:57:24
 title: "Capítulo 3: Transmisión de datos"
 ---
 
@@ -53,7 +53,7 @@ La capacidad $C$ de un canal es la velocidad máxima de [[Transmisión]] de [[Da
 
 ### Ancho de banda de Nyquist
 
-En un canal exento de [[Ruido]], dado un [[Ancho de banda]] $B$, la máxima velocidad de [[Transmisión]] que se puede alcanzar es $2B$. Para [[Señal|Señales]] multinivel ([[Señal digital|Señalización digital]] con $M \in \mathbb{N}$ niveles de tensión) se utiliza la formulación de [[Ancho de banda de Nyquist|Nyquist]].
+En un canal exento de [[Ruido]], dado un [[Ancho de banda]] $B$, la máxima [[Velocidad de transmisión]] que se puede alcanzar es $2B$. Para [[Señal|Señales]] multinivel ([[Señal digital|Señalización digital]] con $M \in \mathbb{N}$ niveles de tensión) se utiliza la formulación de [[Ancho de banda de Nyquist|Nyquist]].
 
 $$
 C = 2B \cdot \log_2 M
@@ -61,7 +61,7 @@ $$
 
 ### Fórmula para la capacidad de Shannon
 
-Relación entre la velocidad de [[Transmisión]], el [[Ruido]] y la tasa de errores. La fórmula de Shannon define la capacidad máxima del canal en [[Bit|Bits]] por segundo, en base al [[Ancho de banda]] $B$ y la [[Relación señal-ruido]] (SNR).
+Relación entre la [[Velocidad de transmisión]], el [[Ruido]] y la tasa de errores. La fórmula de Shannon define la capacidad máxima del canal en [[Bit|Bits]] por segundo, en base al [[Ancho de banda]] $B$ y la [[Relación señal-ruido]] (SNR).
 
 $$
 C = B \cdot \log_2 \left( 1 + \text{SNR} \right)
@@ -69,7 +69,7 @@ $$
 
 ### El cociente $E_b / N_0$
 
-El [[Cociente EbNo]] es la relación entre la [[Energía]] de la [[Señal]] por [[Bit]] y la densidad de potencia del [[Ruido]] por hercio. Es más adecuado que el [[Relación señal-ruido|SNR]] para determinar las tasas de error y la velocidad de [[Transmisión]] en [[Sistemas]] de comunicación [[Transmisión digital|digital]], ya que tiene en cuenta el [[Ancho de banda]].
+El [[Cociente EbNo]] es la relación entre la [[Energía]] de la [[Señal]] por [[Bit]] y la densidad de potencia del [[Ruido]] por hercio. Es más adecuado que el [[Relación señal-ruido|SNR]] para determinar las tasas de error y la [[Velocidad de transmisión]] en [[Sistemas]] de comunicación [[Transmisión digital|digital]], ya que tiene en cuenta el [[Ancho de banda]].
 
 ## Apéndice 3A: Decibelios y energía de la señal
 

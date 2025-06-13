@@ -4,7 +4,7 @@ aliases:
   - PSK binario
   - PSK de dos niveles
 created: 2025-06-12 19:35:57
-modified: 2025-06-13 01:26:24
+modified: 2025-06-13 01:32:36
 title: BPSK
 ---
 
@@ -35,4 +35,4 @@ $$
 - $f_c$: [[Frecuencia]] de la portadora
 - $t$: tiempo
 
-![[bpsk-constellation-diagram.svg]]
+![[bpsk-constellation-diagram.svg]] Diagrama de constelación de [[BPSK]]

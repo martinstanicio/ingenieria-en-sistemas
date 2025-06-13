@@ -1,6 +1,6 @@
 ---
 created: 2025-03-27 15:21:45
-modified: 2025-04-04 19:38:34
+modified: 2025-06-13 01:57:40
 title: Cociente EbNo
 ---
 
@@ -17,7 +17,7 @@ $$
 - $E_b$ es la [[Energía]] de la [[Señal]] por [[Bit]]
 - $N_0$ es la densidad de potencia del [[Ruido]] por hercio
 - $S$ es la potencia de la [[Señal]]
-- $R$ es la velocidad de [[Transmisión]]
+- $R$ es la [[Velocidad de transmisión]]
 - $k$ es la [[Constante de Boltzmann]]
 - $T$ es la [[Temperatura]]
 

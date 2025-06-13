@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-13 01:11:06
+modified: 2025-06-13 01:54:46
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -29,7 +29,7 @@ Se discuten aspectos clave para evaluar esquemas:
 - [[Sincronización]]
 - [[Detección de errores]]
 - Inmunidad al [[Ruido]] e interferencias
-- Coste y complejidad: cuanto mayor es la [[Velocidad de modulación]] para una velocidad de transmisión dada, mayor es el coste
+- Coste y complejidad: cuanto mayor es la [[Velocidad de modulación]] para una [[Velocidad de transmisión]] dada, mayor es el coste
 
 Se introducen las [[Técnicas de aleatorización]]:
 

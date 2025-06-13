@@ -4,7 +4,7 @@ aliases:
   - Ancho de banda efectivo
   - Effective bandwidth
 created: 2025-03-27 00:42:52
-modified: 2025-03-27 01:03:53
+modified: 2025-06-13 01:56:02
 title: Ancho de banda
 ---
 
@@ -19,4 +19,4 @@ Esta banda suele ser más estrecha que el [[Espectro]], pero también pueden ser
 > 
 > Mientras más limitado sea el [[Ancho de banda]], mayor será la **distorsión**, y mayor la probabilidad de que se cometan **errores** en el [[Receptor]].
 
-Mientras mayor sea el [[Ancho de banda]], mayor será la velocidad de [[Transmisión]] de los [[Dato|Datos]].
+Mientras mayor sea el [[Ancho de banda]], mayor será la [[Velocidad de transmisión]] de los [[Dato|Datos]].

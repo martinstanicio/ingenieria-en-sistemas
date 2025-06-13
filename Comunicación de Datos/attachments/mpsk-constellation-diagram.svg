@@ -1,0 +1,7 @@
+<svg width="165mm" height="165mm" version="1.1" viewBox="0 0 165 165" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="165" height="165" fill="#fff"/>
+ <g id="b"><path d="m155 85 2-3-2-3 9 3z"/><path d="m157 82-154 0" stroke="#000"/></g>
+ <use transform="rotate(-90 82 82)" xlink:href="#b"/>
+ <g id="a" fill="#bee" stroke="#000"><circle cx="82" cy="22" r="7"/><circle cx="124" cy="40" r="7"/></g>
+ <use transform="rotate(90 82 82)" xlink:href="#a"/><use transform="rotate(180 82 82)" xlink:href="#a"/><use transform="rotate(-90 82 82)" xlink:href="#a"/><circle cx="82" cy="82" r="60" fill="none" stroke="#000"/>
+ <g font-family="Arial" font-size="9px"><text x="129" y="35">110</text><text x="128" y="136">101</text><text x="20" y="136">000</text>
+ <text x="22" y="33">011</text><text x="89" y="17">010</text><text x="146" y="75">111</text><text x="89" y="151">100</text><text x="6" y="74">001</text><text x="70" y="11" font-size="11px">Q<tspan x="155" y="94">I</tspan></text></g></svg>

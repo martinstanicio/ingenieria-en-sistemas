@@ -15,7 +15,7 @@ D = \frac{R}{L} = \frac{R}{\log_2 \left( M \right)}
 $$
 
 - $D$: [[Velocidad de modulación]] en baudios
-- $R$: Velocidad de transmisión
+- $R$: [[Velocidad de transmisión]]
 - $M = 2^L$: Número de [[Elemento de señal|Elementos de señalización]] diferentes
 - $L$: Número de [[Bit|Bits]] por [[Elemento de señal]]
 
