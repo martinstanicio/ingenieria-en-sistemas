@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-13 01:54:46
+modified: 2025-06-13 02:17:17
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -43,27 +43,27 @@ Se analiza la conversión digital-analógica mediante [[Modulación]]: [[ASK]], 
 Se comparan prestaciones:
 
 - [[Ancho de banda]]
-- Eficiencia del [[Ancho de banda]]
+- [[Eficiencia del ancho de banda]]
 - [[Cociente EbNo]] y [[Bit Error Rate]]
 
 ## 5.3. Datos analógicos, señales digitales
 
-Se describe la [[digitalización]] de señales analógicas:
+Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]:
 
-- [[PCM]] (Pulse Code Modulation): muestreo + cuantificación.
+- [[PCM]]
     - Uso del [[Teorema de muestreo]].
     - [[Ruido de cuantificación]]
     - Codificación [[lineal]] y [[no lineal]] (compresión-expansión)
-- [[DM]] (Delta Modulation): aproxima mediante una función escalera.
-    - [[Tamaño del paso]] (d)
+- [[DM]]
+    - [[Tamaño del paso]] $d$
     - [[Frecuencia de muestreo]]
 
 ## 5.4. Datos analógicos, señales analógicas
 
-Se repasan técnicas de modulación analógica:
+Se repasan técnicas de [[Modulación]] analógica:
 
-- [[AM]] (Modulación de Amplitud)
-- [[FM]] (Modulación de Frecuencia)
-- [[PM]] (Modulación de Fase)
+- [[AM]]
+- [[FM]]
+- [[PM]]
 
-Se menciona la [[multiplexación por división en frecuencia]] (FDM) para transmitir múltiples señales sobre un mismo medio.
+Se menciona la [[FDM|Multiplexación por división en frecuencia]] para transmitir múltiples [[Señal|Señales]] sobre un mismo [[Comunicación de Datos/Medio|Medio]].

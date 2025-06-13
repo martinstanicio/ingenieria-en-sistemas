@@ -3,7 +3,7 @@ aliases:
   - Amplitude-Shift Keying
   - Modulación por desplazamiento de amplitud
 created: 2025-06-12 19:08:13
-modified: 2025-06-13 01:03:56
+modified: 2025-06-13 02:01:19
 title: ASK
 ---
 
@@ -29,3 +29,14 @@ $$
 - $A$: [[Amplitud]]
 - $f_c$: [[Frecuencia]] de la portadora
 - $t$: tiempo
+
+---
+
+El [[Ancho de banda]] $B_T$ para [[ASK]] es de la forma:
+
+$$
+B_T = \left( 1 + r \right) R
+$$
+
+- $R$: [[Velocidad de transmisión]]
+- $r$: un valor relacionado con la técnica de filtrado aplicada para limitar el [[Ancho de banda]], que generalmente verifica $0 < r < 1$
