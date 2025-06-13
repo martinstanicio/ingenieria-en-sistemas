@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-13 02:49:45
+modified: 2025-06-13 11:19:09
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -53,7 +53,7 @@ Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]:
 - [[PCM]]
     - [[Teorema de muestreo]].
     - [[Error de cuantificación]]
-    - Codificación [[lineal]] y [[no lineal]] (compresión-expansión)
+    - [[Codificación no lineal]] y [[Companding]]
 - [[DM]]
     - [[Tamaño del paso]] $d$
     - [[Frecuencia de muestreo]]
