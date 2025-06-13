@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-13 00:49:58
+modified: 2025-06-13 01:11:06
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -38,7 +38,7 @@ Se introducen las [[Técnicas de aleatorización]]:
 
 ## 5.2. Datos digitales, señales analógicas
 
-Se analiza la conversión digital-analógica mediante [[Modulación]]: [[ASK]], [[FSK]] y [[PSK]], junto con sus variantes más importantes ([[BPSK]], [[DPSK]], [[QPSK]], [[OQPSK]], [[MPSK]] y [[MFSK]]). Se introduce también la [[QAM]], que combina [[PSK]] y [[ASK]].
+Se analiza la conversión digital-analógica mediante [[Modulación]]: [[ASK]], [[FSK]] y [[PSK]], junto con sus variantes más importantes ([[BFSK]], [[MFSK]], [[BPSK]], [[DPSK]], [[QPSK]], [[OQPSK]] y [[MPSK]]). Se introduce también la [[QAM]], que combina [[PSK]] y [[ASK]].
 
 Se comparan prestaciones:
 

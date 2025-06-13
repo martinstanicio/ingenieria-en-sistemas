@@ -2,7 +2,7 @@
 aliases:
   - High Density Bipolar-3 Zeros
 created: 2025-06-12 12:31:20
-modified: 2025-06-13 00:58:03
+modified: 2025-06-13 00:58:40
 title: HDB3
 ---
 
@@ -12,9 +12,9 @@ Igual que el [[Bipolar-AMI]], excepto que cualquier [[Lógica y Estructuras Disc
 
 El reemplazo de la secuencia de ceros se realiza en base al número de pulsos bipolares desde la última sustitución:
 
-| Polaridad del pulso anterior | Impar  | Par    |
-| ---------------------------- | ------ | ------ |
-| $-$                          | $000-$ | $+00+$ |
-| $+$                          | $000+$ | $-00-$ |
+| Polaridad del pulso anterior | N° de pulsos previos impar | N° de pulsos previos par |
+| ---------------------------- | -------------------------- | ------------------------ |
+| $-$                          | $000-$                     | $+00+$                   |
+| $+$                          | $000+$                     | $-00-$                   |
 
 ![[Técnicas de aleatorización#^scrambling]]

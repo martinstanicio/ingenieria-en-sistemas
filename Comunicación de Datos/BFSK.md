@@ -4,13 +4,15 @@ aliases:
   - FSK binario
   - FSK de dos niveles
 created: 2025-06-12 19:58:27
-modified: 2025-06-12 19:59:51
+modified: 2025-06-13 01:12:42
 title: BFSK
 ---
 
 # BFSK
 
 La implementación más simple de [[FSK]], que utiliza dos [[Frecuencia|Frecuencias]].
+
+![[bfsk.jpg]]
 
 $$
 s \left( t \right) =

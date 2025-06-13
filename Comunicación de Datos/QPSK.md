@@ -10,7 +10,7 @@ title: QPSK
 
 # QPSK
 
-Una implementación de [[PSK]], más específicamente [[PSK multinivel]], que utiliza cuatro [[Fase|Fases]].
+Una implementación de [[PSK]], más específicamente [[MPSK]], que utiliza cuatro [[Fase|Fases]].
 
 $$
 s \left( t \right) =

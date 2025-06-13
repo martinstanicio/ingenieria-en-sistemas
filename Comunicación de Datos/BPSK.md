@@ -4,13 +4,15 @@ aliases:
   - PSK binario
   - PSK de dos niveles
 created: 2025-06-12 19:35:57
-modified: 2025-06-12 19:49:28
+modified: 2025-06-13 01:26:24
 title: BPSK
 ---
 
 # BPSK
 
-La implementación más simple de [[PSK]], más específicamente [[PSK multinivel]], que utiliza dos [[Fase|Fases]].
+La implementación más simple de [[PSK]], más específicamente [[MPSK]], que utiliza dos [[Fase|Fases]].
+
+![[bpsk.jpg]]
 
 $$
 s \left( t \right) =
@@ -32,3 +34,5 @@ $$
 - $A$: [[Amplitud]]
 - $f_c$: [[Frecuencia]] de la portadora
 - $t$: tiempo
+
+![[bpsk-constellation-diagram.svg]]
