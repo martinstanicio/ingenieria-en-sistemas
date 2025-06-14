@@ -2,7 +2,7 @@
 aliases:
   - Derivada de una ER
 created: 2025-06-11 13:47:31
-modified: 2025-06-14 15:55:18
+modified: 2025-06-14 16:23:08
 title: Derivada de una expresión regular
 ---
 
@@ -26,6 +26,6 @@ Podemos definir la [[Derivada]] de una [[Expresión regular]] de la siguiente fo
 > También se puede utilizar el símbolo de [[Derivada parcial]] $\partial_x \left( u \right)$.
 
 > [!tip]
-> Sea un [[Autómata finito determinístico|AFD]] $M$ que acepta el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L = L \left( M \right)$, con el [[Alfabeto]] $\Sigma = \set{ a, \dots }$.
+> La [[Derivada de una expresión regular|Derivada de una ER]] $u$ respecto a un símbolo $a$, denotada $D_a \left( u \right)$, es el [[Conjunto]] de [[Lógica y Estructuras Discretas/Cadena|Cadenas]] $\beta$ tales que $a \beta$ pertenece al [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L$ definido por la [[Expresión regular|ER]].
 > 
-> Desde $q_0$, $M$ aceptará el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L$. Luego de hacer una transición por $a$, y pasar a un [[Lógica y Estructuras Discretas/Estado|Estado]] $q_i$, aceptará el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $D_a \left( L \right)$.
+> Si hacemos el pasaje a un [[Autómata finito determinístico|AFD]], serían las [[Lógica y Estructuras Discretas/Cadena|Cadenas]] aceptadas del mismo, luego de pasar del [[Lógica y Estructuras Discretas/Estado|Estado]] inicial $q_0$ a un [[Lógica y Estructuras Discretas/Estado|Estado]] $q_i$, mediante el símbolo $a$.
