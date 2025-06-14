@@ -4,7 +4,7 @@ aliases:
   - ER
   - REGEX
 created: 2025-06-10 21:47:38
-modified: 2025-06-14 18:58:27
+modified: 2025-06-14 19:24:40
 title: Expresión regular
 ---
 
@@ -38,18 +38,22 @@ La [[Expresión regular|ER]] inicial $u$ representa el [[Lógica y Estructuras D
 
 ## Pasaje de ER a AFND-λ
 
-Sea $r$ una [[Expresión regular|ER]], entonces existe un [[Autómata finito no determinístico lambda|AFND-λ]] que acepta $L \left( r \right)$.
+Sea $r$ una [[Expresión regular|ER]], entonces existe un [[Autómata finito no determinístico lambda|AFND-λ]] $M$ que acepta $L \left( r \right)$.
+
+### Disyunción
+
+Dadas dos [[Expresión regular|ER]] $r_1$ y $r_2$, con sus [[Autómata finito|Autómatas finitos]] asociados $M_1$ y $M_2$, su [[Disyunción (∨)]] $r = r_1 + r_2 = r_1 / r_2$ puede ser representada de la siguiente forma.
 
 ```mermaid
 flowchart LR
-    q0["$$q_0$$"]
+    q0(("$$q_0$$"))
     subgraph "$$M_1$$"
-        q1["$$q_1$$"] -- "..." --> f1["$$f_1$$"]
+        q1(("$$q_1$$")) -- "..." --> f1(("$$f_1$$"))
     end
     subgraph "$$M_2$$"
-        q2["$$q_2$$"] -- "..." --> f2["$$f_2$$"]
+        q2(("$$q_2$$")) -- "..." --> f2(("$$f_2$$"))
     end
-    f0["$$f_0$$"]
+    f0((("$$f_0$$")))
     
     q0 --> |"$$\lambda$$"| q1 & q2
     f1 & f2 --> |"$$\lambda$$"| f0
@@ -59,4 +63,54 @@ $$
 r = r_1 + r_2 \land L \left( r_1 \right) = L \left( M_1 \right) \land L \left( r_2 \right) = L \left( M_2 \right) \Rightarrow L \left( r \right) = L \left( M \right)
 $$
 
-==**FALTA PROCEDIMIENTO (gráficos de disyunción, concatenación y cerradura de kleene)**==
+> [!note]
+> $f_1$ y $f_2$ son los [[Lógica y Estructuras Discretas/Estado|Estados]] finales de $M_1$ y $M_2$ respectivamente, pero el único [[Lógica y Estructuras Discretas/Estado|Estado]] final de $M$ es $f_0$, y su [[Lógica y Estructuras Discretas/Estado|Estado]] inicial es $q_0$.
+
+### Concatenación
+
+Dadas dos [[Expresión regular|ER]] $r_1$ y $r_2$, con sus [[Autómata finito|Autómatas finitos]] asociados $M_1$ y $M_2$, su concatenación $r = r_1 r_2 = r_1 \cdot r_2$ puede ser representada de la siguiente forma.
+
+```mermaid
+flowchart LR
+    subgraph "$$M_1$$"
+        q1(("$$q_1$$")) -- "..." --> f1(("$$f_1$$"))
+    end
+    subgraph "$$M_2$$"
+        q2(("$$q_2$$")) -- "..." --> f2((("$$f_2$$")))
+    end
+    
+    f1 --> |"$$\lambda$$"| q2
+```
+
+$$
+r = r_1 r_2 \land L \left( r_1 \right) = L \left( M_1 \right) \land L \left( r_2 \right) = L \left( M_2 \right) \Rightarrow L \left( r \right) = L \left( M \right)
+$$
+
+> [!note]
+> $f_1$ y $f_2$ son los [[Lógica y Estructuras Discretas/Estado|Estados]] finales de $M_1$ y $M_2$ respectivamente, pero el único [[Lógica y Estructuras Discretas/Estado|Estado]] final de $M$ es $f_2$, y su [[Lógica y Estructuras Discretas/Estado|Estado]] inicial es $q_1$.
+
+### Cerradura de Kleene
+
+Dada una [[Expresión regular|ER]] $r_1$, con su [[Autómata finito|Autómata finito]] asociado $M_1$, su [[Cerradura de Kleene]] $r = r_1^*$ puede ser representada de la siguiente forma.
+
+```mermaid
+flowchart LR
+    q0(("$$q_0$$"))
+    subgraph "$$M_1$$"
+        q1(("$$q_1$$"))
+        f1(("$$f_1$$"))
+    end
+    f0((("$$f_0$$")))
+    
+    q0 --> |"$$\lambda$$"| q1 & f0
+    f1 --> |"$$\lambda$$"| f0
+    q1 -- "..." --> f1
+    f1 --> |"$$\lambda$$"| q1
+```
+
+$$
+r = r_1^* \land L \left( r_1 \right) = L \left( M_1 \right) \Rightarrow L \left( r \right) = L \left( M \right)
+$$
+
+> [!note]
+> $f_1$ es el [[Lógica y Estructuras Discretas/Estado|Estado]] final de $M_1$, pero el único [[Lógica y Estructuras Discretas/Estado|Estado]] final de $M$ es $f_0$, y su [[Lógica y Estructuras Discretas/Estado|Estado]] inicial es $q_0$.

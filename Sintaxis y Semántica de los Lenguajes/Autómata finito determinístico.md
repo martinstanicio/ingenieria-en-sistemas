@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos determinístico
   - Autómatas de estados finitos determinísticos
 created: 2025-06-10 17:49:07
-modified: 2025-06-10 23:07:03
+modified: 2025-06-14 19:35:10
 title: Autómata finito determinístico
 ---
 
@@ -38,6 +38,6 @@ $$
 
 ## Pasaje de AFD a ER
 
-Si un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L$ es aceptado por un [[Autómata finito determinístico|AFD]] $M$, entonces $L$ puede ser expresado mediante una [[Expresión regular]].
+Sea $L_0$ el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado por el [[Autómata finito determinístico|AFD]] $M$ desde su [[Lógica y Estructuras Discretas/Estado|Estado]] inicial $q_0$, entonces $L_0$ puede ser expresado mediante una [[Expresión regular]].
 
-==**FALTA ALGORITMO DE PASAJE**==
+Supongamos que $M$ tiene el [[Alfabeto]] $\Sigma = \set{ a, b}$, y sea $\delta \left( q_0, a \right) = q_1$ y $\delta \left( q_0, b \right) = q_2$, podemos expresar [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado desde $q_1$ y $q_2$ como $D_a \left( L_0 \right)$ y $D_b \left( L_0 \right)$ respectivamente.
