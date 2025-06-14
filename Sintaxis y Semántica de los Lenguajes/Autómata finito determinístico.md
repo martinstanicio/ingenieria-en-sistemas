@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos determinístico
   - Autómatas de estados finitos determinísticos
 created: 2025-06-10 17:49:07
-modified: 2025-06-14 19:35:10
+modified: 2025-06-14 19:58:54
 title: Autómata finito determinístico
 ---
 
@@ -30,14 +30,42 @@ $$
 
 ## Pasaje de AFD a GR
 
-Sea $M = \left( I, K, q_0, \delta, F \right)$ un [[Autómata finito determinístico|AFD]] y formamos las siguientes producciones. Si $\delta (q_i, a) = q_j$ entonces $q_i \to a q_j \in P$, y además si $q_j \in F$ entonces $q_i \to a \in P$. Luego, formamos la [[Gramática]] $G = \left( K, I, P, q_0 \right)$, tal que su [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] generado es el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado por el [[Autómata finito determinístico|AFD]].
+Sea un [[Autómata finito determinístico|AFD]] $M = \left< K, \Sigma, \delta, q_0, F \right>$, el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado por el mismo puede ser representado mediante una [[Gramática regular|GR]] $G = \left< N, T, P, Q_0 \right>$, tal que $L(M) = L(G)$.
 
-$$
-L(G) = L(M)
-$$
+1. Hacer $T = \Sigma$
+2. Hacer $N = K$ (con sus [[Lógica y Estructuras Discretas/Estado|Estados]] escritos en mayúsculas)
+3. Para cada [[Lógica y Estructuras Discretas/Estado|Estado]] $q \in K$ y para cada símbolo $a \in \Sigma$:
+	1. Si $\delta \left( q, a \right) = r$:
+		1. Agregar a $P$ la producción $\left( Q \to a R \right)$, con $Q, R \in N$
+		2. Si $r \in F$:
+			1. Agregar a $P$ la producción $\left( Q \to a \right)$
+4. Si $q_0 \in F$:
+	1. Agregar a $P$ la producción $\left( Q_0 \to \lambda \right)$
 
 ## Pasaje de AFD a ER
 
 Sea $L_0$ el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado por el [[Autómata finito determinístico|AFD]] $M$ desde su [[Lógica y Estructuras Discretas/Estado|Estado]] inicial $q_0$, entonces $L_0$ puede ser expresado mediante una [[Expresión regular]].
 
-Supongamos que $M$ tiene el [[Alfabeto]] $\Sigma = \set{ a, b}$, y sea $\delta \left( q_0, a \right) = q_1$ y $\delta \left( q_0, b \right) = q_2$, podemos expresar [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado desde $q_1$ y $q_2$ como $D_a \left( L_0 \right)$ y $D_b \left( L_0 \right)$ respectivamente.
+Supongamos que $M$ tiene el [[Alfabeto]] $\Sigma = \set{ a, b}$, y sea $\delta \left( q_0, a \right) = q_1$ y $\delta \left( q_0, b \right) = q_2$, podemos expresar [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado desde $q_1$ y $q_2$ como $D_a \left( L_0 \right)$ y $D_b \left( L_0 \right)$ respectivamente. Así, podemos notar:
+
+$$
+L_0 = a L_1 + b L_2
+$$
+
+Donde $L_1$ y $L_2$ son los [[Lógica y Estructuras Discretas/Lenguaje|Lenguajes]] aceptados por $M$ desde $q_1$ y $q_2$ respectivamente.
+
+> [!note]
+> El proceso se repite para cada [[Lógica y Estructuras Discretas/Estado|Estado]] ante cada símbolo del [[Alfabeto]] (por el momento, solo $L_1$ y $L_2$), hasta llegar a una definición formada únicamente por símbolos, no por [[Lógica y Estructuras Discretas/Lenguaje|Lenguajes]].
+
+> [!important]
+> En los [[Lógica y Estructuras Discretas/Estado|Estados]] finales $L_i$, si ingresa la [[Cadena vacía]] $\lambda$, el lexema sigue siendo válido. Por lo tanto, es necesario agregar $\lambda$ a la [[Expresión regular|ER]] que define al [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado desde un [[Lógica y Estructuras Discretas/Estado|Estado]] final.
+>
+> $$
+> L_i = a L_j + b L_k + \lambda
+> $$
+>
+> Y en los [[Lógica y Estructuras Discretas/Estado|Estados]] trampa $L_t$, no existe ninguna [[Lógica y Estructuras Discretas/Cadena|Cadena]] adicional que haga que el lexema sea válido, por lo que es necesario agregar $\emptyset$ a su [[Expresión regular|ER]] asociada.
+>
+> $$
+> L_t = a L_t + b L_t + \emptyset
+> $$
