@@ -4,7 +4,7 @@ aliases:
   - Diagrama de estados
   - Diagramas de estados
 created: 2025-06-07 20:17:37
-modified: 2025-06-10 17:58:45
+modified: 2025-06-14 18:55:59
 title: Diagrama de transición
 ---
 
@@ -14,11 +14,11 @@ Es una representación gráfica de un [[Autómata finito]].
 
 ```mermaid
 flowchart LR
-    q0(("q0"))
-    q1(("q1"))
-    q2(("q2"))
-    q3((("q3")))
-    T(("T"))
+    q0(("$$q_0$$"))
+    q1(("$$q_1$$"))
+    q2(("$$q_2$$"))
+    q3((("$$q_3$$")))
+    T(("$$T$$"))
     
     q0 -- "0" --> q1
     q0 -- "1" --> T
