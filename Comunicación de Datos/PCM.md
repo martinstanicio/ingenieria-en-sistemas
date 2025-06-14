@@ -3,7 +3,7 @@ aliases:
   - Pulse Code Modulation
   - Modulación por impulsos codificados
 created: 2025-06-13 02:31:09
-modified: 2025-06-13 11:12:12
+modified: 2025-06-13 18:43:25
 title: PCM
 ---
 
@@ -28,3 +28,6 @@ Los dispositivos que realizan esta conversión se denominan [[Códec]].
 
 > [!note]
 > [[PCM]] generalmente logra una mejor [[Relación señal-ruido]] en comparación con otras técnicas como [[DM]], manteniendo la misma [[Velocidad de transmisión]].
+
+> [!important]
+> [[PCM]] provee alta fidelidad, pero a un alto costo.
