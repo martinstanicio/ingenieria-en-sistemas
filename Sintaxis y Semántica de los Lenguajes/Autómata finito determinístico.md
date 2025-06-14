@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos determinístico
   - Autómatas de estados finitos determinísticos
 created: 2025-06-10 17:49:07
-modified: 2025-06-14 19:58:54
+modified: 2025-06-14 20:09:02
 title: Autómata finito determinístico
 ---
 
@@ -68,4 +68,11 @@ Donde $L_1$ y $L_2$ son los [[Lógica y Estructuras Discretas/Lenguaje|Lenguajes
 >
 > $$
 > L_t = a L_t + b L_t + \emptyset
+> $$
+
+> [!tip]
+> Para resolver ecuaciones como $L_t = a L_t + b L_t + \emptyset$, es conveniente y necesario utilizar el [[Lema de Arden]]:
+>
+> $$
+> \left[ L_t = \left( a + b \right) L_t + \emptyset \right] \land \lambda \notin \left( a + b \right) \Rightarrow L_t = \left( a + b \right)^* \emptyset = \emptyset
 > $$
