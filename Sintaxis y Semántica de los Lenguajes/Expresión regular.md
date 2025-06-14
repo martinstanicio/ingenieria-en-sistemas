@@ -35,26 +35,11 @@ El pasaje de una Expresión Regular (ER) a un Autómata Finito Determinístico (
 
 El proceso general implica lo siguiente:
 
-- **Derivación de un lenguaje**:
-    
-    - La **derivada de un lenguaje L con respecto a un símbolo `a`**, denotada `∂a(L)`, es el conjunto de cadenas `α` tales que `aα` pertenece a `L`. Es decir, se eliminan los prefijos `a` de las cadenas del lenguaje.
-    - La función **`T(L)`** se define para un lenguaje `L` como `` si `L` no contiene la cadena vacía (``), y como `{}` si `L` sí la contiene. Esta función es clave para identificar los estados finales en el AFD resultante.
-- **Derivación de una expresión regular**:
-    
-    - De manera análoga a la derivación de lenguajes, se definen reglas para la derivada de una expresión regular `u` con respecto a un símbolo `a` (`∂a(u)`):
-        - `∂a() = `
-        - `∂a() = `
-        - `∂a(b) = ` si `a = b`, y `` si `a ≠ b` (para un símbolo `b`).
-        - `∂a(u/v) = ∂a(u) / ∂a(v)` (para la unión).
-        - `∂a(u.v) = ∂a(u).v / T(u).∂a(v)` (para la concatenación).
-        - `∂a(u*) = ∂a(u).u*` (para la clausura de Kleene).
-- **Construcción del AFD**:
-    
-    - La expresión regular inicial `u` representa el lenguaje que será aceptado por el **estado inicial** del AFD.
-    - Al **calcular sistemáticamente las derivadas** de la expresión regular `u` para cada símbolo del alfabeto (``), y luego las derivadas de esas derivadas, se van descubriendo la **estructura del autómata**.
-    - Cada nueva expresión regular (o "lenguaje" derivado) que surge de este proceso se considera un **estado** en el AFD.
-    - Las **transiciones** entre estados se definen por estas derivadas: si `∂a(Lx) = Ly`, entonces hay una transición desde el estado `Lx` al estado `Ly` con el símbolo `a`.
-    - Un **estado es final** si el lenguaje que representa (su expresión regular derivada) **contiene la cadena vacía (``)**; es decir, si `T(Lx)` no es ``.
+- La expresión regular inicial `u` representa el lenguaje que será aceptado por el **estado inicial** del AFD.
+- Al **calcular sistemáticamente las derivadas** de la expresión regular `u` para cada símbolo del alfabeto (``), y luego las derivadas de esas derivadas, se van descubriendo la **estructura del autómata**.
+- Cada nueva expresión regular (o "lenguaje" derivado) que surge de este proceso se considera un **estado** en el AFD.
+- Las **transiciones** entre estados se definen por estas derivadas: si `∂a(Lx) = Ly`, entonces hay una transición desde el estado `Lx` al estado `Ly` con el símbolo `a`.
+- Un **estado es final** si el lenguaje que representa (su expresión regular derivada) **contiene la cadena vacía (``)**; es decir, si `T(Lx)` no es ``.
 
 Este método permite determinar los estados, el estado inicial, las transiciones y los estados finales del AFD directamente a partir de la expresión regular, simulando cómo el autómata procesaría las entradas y qué "parte restante" del lenguaje aún necesitaría reconocer.
 
