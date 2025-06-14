@@ -1,13 +1,13 @@
 ---
 aliases:
   - Delta Modulation
-  - Modulación delta
+  - DM
 created: 2025-06-13 02:38:58
-modified: 2025-06-13 11:36:20
-title: DM
+modified: 2025-06-14 15:38:31
+title: Modulación delta
 ---
 
-# DM
+# Modulación delta
 
 Una técnica utilizada por los [[Códec|Códecs]] en el proceso de [[Digitalización]].
 

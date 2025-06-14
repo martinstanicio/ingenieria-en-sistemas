@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-13 12:49:29
+modified: 2025-06-14 15:37:45
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -48,13 +48,24 @@ Se comparan prestaciones:
 
 ## 5.3. Datos analógicos, señales digitales
 
-Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]: [[PCM]] y [[DM]], junto con sus conceptos relacionados ([[Teorema de muestreo]], [[Error de cuantificación]], [[Codificación no lineal]] y [[Companding]])
+Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]: [[PCM]] y [[Modulación delta]], junto con sus conceptos relacionados ([[Teorema de muestreo]], [[Error de cuantificación]], [[Codificación no lineal]] y [[Companding]])
 
 ## 5.4. Datos analógicos, señales analógicas
 
 Se repasan técnicas de [[Modulación]] analógica:
 
-- [[AM]]
-- [[Modulación angular]] ([[FM]] y [[PM]])
+- [[Modulación de amplitud]]
+- [[Modulación angular]] ([[Modulación de frecuencia]] y [[Modulación de fase]])
 
 Se menciona la [[FDM|Multiplexación por división en frecuencia]] para transmitir múltiples [[Señal|Señales]] sobre un mismo [[Comunicación de Datos/Medio|Medio]].
+
+> [!danger]
+> FALTA COMPLETAR LOS SIGUIENTES CONCEPTOS CON MÁS INFORMACIÓN.
+> 
+> - [[Modulación de amplitud]]
+> - [[Modulación angular]]
+> - [[Modulación de frecuencia]]
+> - [[Modulación de fase]]
+> - [[Multiplexación]]
+> - [[FDM]]
+> - [[TDM]]

@@ -27,7 +27,7 @@ Técnica de [[Digitalización]] cuyo funcionamiento se basa en el [[Teorema de m
 Los dispositivos que realizan esta conversión se denominan [[Códec]].
 
 > [!note]
-> [[PCM]] generalmente logra una mejor [[Relación señal-ruido]] en comparación con otras técnicas como [[DM]], manteniendo la misma [[Velocidad de transmisión]].
+> [[PCM]] generalmente logra una mejor [[Relación señal-ruido]] en comparación con otras técnicas como [[Modulación delta]], manteniendo la misma [[Velocidad de transmisión]].
 
 > [!important]
 > [[PCM]] provee alta fidelidad, pero a un alto costo.

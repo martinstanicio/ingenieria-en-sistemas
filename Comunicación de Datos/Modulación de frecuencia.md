@@ -1,13 +1,13 @@
 ---
 aliases:
   - Frequency Modulation
-  - Modulación de frecuencia
+  - FM
 created: 2025-06-13 11:41:10
-modified: 2025-06-13 13:13:48
-title: FM
+modified: 2025-06-14 15:39:10
+title: Modulación de frecuencia
 ---
 
-# FM
+# Modulación de frecuencia
 
 Un tipo de [[Modulación angular]] en la que se varía la [[Frecuencia]] de una [[Señal]] portadora. Esta variación se realiza de acuerdo con la [[Señal]] moduladora que lleva la [[Información]].
 

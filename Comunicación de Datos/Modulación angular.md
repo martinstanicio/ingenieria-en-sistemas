@@ -12,5 +12,5 @@ $$
 s \left( t \right) = A_c \cos \left( 2 \pi f_c t + \phi \left( t \right) \right)
 $$
 
-- [[FM]]
-- [[PM]]
+- [[Modulación de frecuencia]]
+- [[Modulación de fase]]

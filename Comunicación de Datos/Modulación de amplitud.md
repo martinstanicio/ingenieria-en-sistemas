@@ -1,13 +1,13 @@
 ---
 aliases:
   - Amplitude Modulation
-  - Modulación de amplitud
+  - AM
 created: 2025-06-13 11:41:10
-modified: 2025-06-13 13:14:01
-title: AM
+modified: 2025-06-14 15:38:53
+title: Modulación de amplitud
 ---
 
-# AM
+# Modulación de amplitud
 
 Es la forma más sencilla de [[Modulación]], donde la [[Amplitud]] de la onda portadora varía de acuerdo con alguna característica de la [[Señal analógica]] modulante.
 
