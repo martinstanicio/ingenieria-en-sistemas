@@ -4,7 +4,7 @@ aliases:
   - ER
   - REGEX
 created: 2025-06-10 21:47:38
-modified: 2025-06-14 16:14:53
+modified: 2025-06-14 17:31:53
 title: Expresión regular
 ---
 
@@ -31,17 +31,7 @@ Sea un [[Alfabeto]] $\Sigma$, las [[Expresión regular|ER]] sobre $\Sigma$ y los
 
 ## Pasaje de ER a AFD
 
-El pasaje de una Expresión Regular (ER) a un Autómata Finito Determinístico (AFD) se basa en el **cálculo sistemático de las derivadas de la expresión regular**.
-
-El proceso general implica lo siguiente:
-
-- La expresión regular inicial `u` representa el lenguaje que será aceptado por el **estado inicial** del AFD.
-- Al **calcular sistemáticamente las derivadas** de la expresión regular `u` para cada símbolo del alfabeto (``), y luego las derivadas de esas derivadas, se van descubriendo la **estructura del autómata**.
-- Cada nueva expresión regular (o "lenguaje" derivado) que surge de este proceso se considera un **estado** en el AFD.
-- Las **transiciones** entre estados se definen por estas derivadas: si `∂a(Lx) = Ly`, entonces hay una transición desde el estado `Lx` al estado `Ly` con el símbolo `a`.
-- Un **estado es final** si el lenguaje que representa (su expresión regular derivada) **contiene la cadena vacía (``)**; es decir, si `T(Lx)` no es ``.
-
-Este método permite determinar los estados, el estado inicial, las transiciones y los estados finales del AFD directamente a partir de la expresión regular, simulando cómo el autómata procesaría las entradas y qué "parte restante" del lenguaje aún necesitaría reconocer.
+La [[Expresión regular|ER]] inicial $u$ representa el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] que será aceptado por el [[Lógica y Estructuras Discretas/Estado|Estado]] inicial del [[Autómata finito determinístico|AFD]]. Al calcular sistemáticamente las [[Derivada de una expresión regular|Derivadas]] de la [[Expresión regular|ER]] $u$ para cada símbolo del alfabeto $\Sigma$, y luego las [[Derivada de una expresión regular|Derivadas]] de esas [[Derivada de una expresión regular|Derivadas]], se van descubriendo la estructura del [[Autómata finito determinístico|AFD]]. Cada [[Expresión regular|ER]] diferente que surge de este proceso se considera un [[Lógica y Estructuras Discretas/Estado|Estado]] en el [[Autómata finito determinístico|AFD]]. Las transiciones entre [[Lógica y Estructuras Discretas/Estado|Estados]] se definen por estas derivadas: si $D_a \left( L_x \right) = L_y$, entonces hay una transición desde el [[Lógica y Estructuras Discretas/Estado|Estado]] $L_x$ al estado $L_y$ con el símbolo $a$. Un [[Lógica y Estructuras Discretas/Estado|Estado]] es final si el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] que representa (su [[Expresión regular|ER]] derivada) contiene la [[Cadena vacía]] $\lambda$; es decir, si $T \left( L_x \right)$ no es $\emptyset$.
 
 ## Pasaje de ER a AFND-λ
 
