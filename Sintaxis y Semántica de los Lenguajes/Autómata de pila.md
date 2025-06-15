@@ -3,7 +3,7 @@ aliases:
   - Autómatas de pila
   - AP
 created: 2025-06-14 23:12:10
-modified: 2025-06-15 00:34:39
+modified: 2025-06-15 00:58:22
 title: Autómata de pila
 ---
 
@@ -55,12 +55,71 @@ $$
 
 Sea $M = \left< K, \Sigma, \Gamma, \delta, q_0, z_0, F \right>$ un [[Autómata de pila|AP]] que acepta por [[Lógica y Estructuras Discretas/Estado|Estado]] final, definimos $M' = \left< K', \Sigma, \Gamma', \delta', q_0', z_0', F' \right>$ un [[Autómata de pila|AP]] que acepta por [[Pila]] vacía.
 
-Definimos el [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] $K' = K \cup \set{ q_0' } \cup \set{ q' }$, $q_0', q' \notin K$; y el [[Alfabeto]] de la [[Pila]] $\Gamma' = \Gamma \cup \set{ z_0' }$. Luego, definimos la [[Función de transición]]:
+Definimos el [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] $K' = K \cup \set{ q_0' } \cup \set{ q' }$, $q_0', q' \notin K$; el [[Alfabeto]] de la [[Pila]] $\Gamma' = \Gamma \cup \set{ z_0' }$; y el [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] finales $F' = \emptyset$. Finalmente, definimos la [[Función de transición]] $\delta'$:
+
 $$
 \delta' \left( q, a, t \right) =
 \left\{
     \begin{array}{l}
-        \delta \left( q, a, t \right) \space \text{si} \space q \in K \\
+        \delta \left( q, a, t \right) \space &\text{si} \space q \in K \\
+        \set{ \left( q_0, z_0 z_0' \right) } \space &\text{si} \space q = q_0' \land a = \lambda \land t = z_0' \\
+        \set{ \left( q', t \right) } \space &\text{si} \space q \in F \land a = \lambda \\
+        \set{ \left( q', \lambda \right) } \space &\text{si} \space q = q' \land a = \lambda \\
     \end{array}
 \right.
 $$
+
+```mermaid
+flowchart LR
+    q0p(("$$q_0'$$"))
+    subgraph "$$M$$"
+        q0(("$$q_0$$"))
+        F(("$$\forall f \in F$$"))
+    end
+    qp(("$$q'$$"))
+    
+    q0p --> |"$$\lambda, z_0' / z_0 z_0'$$"| q0
+    q0 --> |"$$\alpha$$"| F
+    F --> |"$$\lambda, x / x$$"| qp
+    qp --> |"$$\lambda, x / \lambda$$"| qp
+```
+
+> [!note]
+> El [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] finales es $\emptyset$ ya que el [[Autómata de pila|AP]] acepta por [[Pila]] vacía.
+
+## Pasaje de AP de aceptación por pila vacía a AP de aceptación por estado final
+
+Sea $M = \left< K, \Sigma, \Gamma, \delta, q_0, z_0, F \right>$ un [[Autómata de pila|AP]] que acepta por [[Pila]] vacía, definimos $M' = \left< K', \Sigma, \Gamma', \delta', q_0', z_0', F' \right>$ un [[Autómata de pila|AP]] que acepta por [[Lógica y Estructuras Discretas/Estado|Estado]] final.
+
+Definimos el [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] $K' = K \cup \set{ q_0' } \cup \set{ f' }$; el [[Alfabeto]] de la [[Pila]] $\Gamma' = \Gamma \cup \set{ z_0' }$; y el [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] finales $F' = \set{ f' }$. Finalmente, definimos la [[Función de transición]] $\delta'$:
+
+$$
+\delta' \left( q, a, t \right) =
+\left\{
+    \begin{array}{l}
+        \delta \left( q, a, t \right) \space &\text{si} \space q \in K \land t \neq z_0' \\
+        \set{ \left( q_0, z_0 z_0' \right) } \space &\text{si} \space q = q_0' \land a = \lambda \land t = z_0' \\
+        \set{ \left( f', z_0' \right) } \space &\text{si} \space q \in K \land a = \lambda \land t = z_0' \\
+    \end{array}
+\right.
+$$
+
+```mermaid
+flowchart LR
+    q0p(("$$q_0'$$"))
+    subgraph "$$M$$"
+        q0(("$$q_0$$"))
+        x(("$$\dots$$"))
+    end
+    fp((("$$f'$$")))
+    
+    q0p --> |"$$\lambda, z_0' / z_0 z_0'$$"| q0
+    x --> |"$$\lambda, z_0' / z_0'$$"| fp
+```
+
+> [!note]
+> Una vez que en la [[Pila]] solo queda $z_0'$, se realiza una transición, desde cualquier [[Lógica y Estructuras Discretas/Estado|Estado]] de $M$, consumiendo $\lambda$, terminando en el [[Lógica y Estructuras Discretas/Estado|Estado]] final $f'$, con la siguiente [[Configuración instantánea]]:
+>
+> $$
+> \left( f', \lambda, z_0' \right)
+> $$
