@@ -3,7 +3,7 @@ aliases:
   - Autómatas de pila
   - AP
 created: 2025-06-14 23:12:10
-modified: 2025-06-14 23:50:37
+modified: 2025-06-15 00:34:39
 title: Autómata de pila
 ---
 
@@ -52,3 +52,15 @@ $$
 > Cuando la [[Pila]] está vacía, el [[Autómata de pila|AP]] no puede realizar ninguna transición más.
 
 ## Pasaje de AP de aceptación por estado final a AP de aceptación por pila vacía
+
+Sea $M = \left< K, \Sigma, \Gamma, \delta, q_0, z_0, F \right>$ un [[Autómata de pila|AP]] que acepta por [[Lógica y Estructuras Discretas/Estado|Estado]] final, definimos $M' = \left< K', \Sigma, \Gamma', \delta', q_0', z_0', F' \right>$ un [[Autómata de pila|AP]] que acepta por [[Pila]] vacía.
+
+Definimos el [[Conjunto]] de [[Lógica y Estructuras Discretas/Estado|Estados]] $K' = K \cup \set{ q_0' } \cup \set{ q' }$, $q_0', q' \notin K$; y el [[Alfabeto]] de la [[Pila]] $\Gamma' = \Gamma \cup \set{ z_0' }$. Luego, definimos la [[Función de transición]]:
+$$
+\delta' \left( q, a, t \right) =
+\left\{
+    \begin{array}{l}
+        \delta \left( q, a, t \right) \space \text{si} \space q \in K \\
+    \end{array}
+\right.
+$$
