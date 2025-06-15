@@ -4,13 +4,13 @@ aliases:
   - ER
   - REGEX
 created: 2025-06-10 21:47:38
-modified: 2025-06-14 19:24:40
+modified: 2025-06-14 22:57:11
 title: Expresión regular
 ---
 
 # Expresión regular
 
-Es un formalismo para expresar un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] ==regular== (tipo 3).
+Es un formalismo para expresar un [[Lenguaje regular]].
 
 Sea un [[Alfabeto]] $\Sigma$, las [[Expresión regular|ER]] sobre $\Sigma$ y los [[Conjunto|Conjuntos]] que ellas denotan ([[Conjunto regular|Conjuntos regulares]]) son definidos recursivamente de la siguiente forma.
 
