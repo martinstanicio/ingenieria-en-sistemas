@@ -3,11 +3,13 @@ aliases:
   - Autómatas de pila
   - AP
 created: 2025-06-14 23:12:10
-modified: 2025-06-15 00:58:22
+modified: 2025-06-15 01:11:07
 title: Autómata de pila
 ---
 
 # Autómata de pila
+
+Un [[Autómata]] $M$ que utiliza una [[Pila]] para representar un [[Lenguaje libre de contexto]].
 
 $$
 M = \left< K, \Sigma, \Gamma, \delta, q_0, z_0, F \right>

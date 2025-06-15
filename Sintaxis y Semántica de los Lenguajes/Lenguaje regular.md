@@ -1,8 +1,9 @@
 ---
 aliases:
   - Lenguajes regulares
+  - LR
 created: 2025-06-14 22:55:20
-modified: 2025-06-14 23:04:14
+modified: 2025-06-15 01:15:59
 title: Lenguaje regular
 ---
 
@@ -12,7 +13,7 @@ Un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] considerado ==regular o
 
 ## Union de lenguajes regulares
 
-Dados $L_1$ y $L_2$ dos [[Lenguaje regular|Lenguajes regulares]], su [[Unión (∪)]] $L = L_1 \cup L_2$ es también un [[Lenguaje regular]].
+Dados $L_1$ y $L_2$ dos [[Lenguaje regular|LR]], su [[Unión (∪)]] $L = L_1 \cup L_2$ es también un [[Lenguaje regular|LR]].
 
 > [!warning]
 > La [[Unión (∪)]] infinita de [[Lenguaje regular|Lenguajes regulares]] no es un [[Lenguaje regular]].
@@ -23,8 +24,8 @@ Dados $L_1$ y $L_2$ dos [[Lenguaje regular|Lenguajes regulares]], su [[Unión (�
 
 ## Intersección de lenguajes regulares
 
-Dados $L_1$ y $L_2$ dos [[Lenguaje regular|Lenguajes regulares]], su [[Intersección (∩)]] $L = L_1 \cap L_2$ es también un [[Lenguaje regular]].
+Dados $L_1$ y $L_2$ dos [[Lenguaje regular|LR]], su [[Intersección (∩)]] $L = L_1 \cap L_2$ es también un [[Lenguaje regular|LR]].
 
 ## Complemento de lenguajes regulares
 
-Dado $L$ un [[Lenguaje regular]], su [[Complemento]] $C \left( L \right)$ es también un [[Lenguaje regular]].
+Dado $L$ un [[Lenguaje regular|LR]], su [[Complemento]] $C \left( L \right)$ es también un [[Lenguaje regular|LR]].

@@ -1,6 +1,6 @@
 ---
 created: 2024-04-15 19:32:56
-modified: 2024-06-23 18:49:17
+modified: 2025-06-15 01:13:23
 title: Cardinal
 ---
 
@@ -15,5 +15,5 @@ $$
 O para $\mathbb{R}^n$:
 
 $$
-\#(\mathbb{R}^n)=∞
+\# \left( \mathbb{R}^n \right) = \infty
 $$
