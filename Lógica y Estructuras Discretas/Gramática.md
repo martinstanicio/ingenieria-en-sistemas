@@ -2,7 +2,7 @@
 aliases:
   - Gramáticas
 created: 2025-02-28 16:10:19
-modified: 2025-06-14 19:56:33
+modified: 2025-06-15 20:10:02
 title: Gramática
 ---
 
@@ -11,15 +11,8 @@ title: Gramática
 Es una cuaterna a partir de la cual podemos generar un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
 
 $$
-G = (T, N, P, S)
+G = \left< N, T, P, S \right>
 $$
-
-## Símbolos terminales
-
-$T$ es el [[Conjunto]] de símbolos terminales, que son los símbolos que terminan formando las [[Lógica y Estructuras Discretas/Cadena|Cadenas]] del [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
-
-> [!note]
-> Este [[Conjunto]] suele coincidir con el [[Alfabeto]] $\Sigma$.
 
 ## Símbolos no terminales
 
@@ -31,6 +24,13 @@ $N$ es el [[Conjunto]] de símbolos no terminales, que son el medio que me permi
 > $$
 > T \cap N = \emptyset
 > $$
+
+## Símbolos terminales
+
+$T$ es el [[Conjunto]] de símbolos terminales, que son los símbolos que terminan formando las [[Lógica y Estructuras Discretas/Cadena|Cadenas]] del [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]].
+
+> [!note]
+> Este [[Conjunto]] suele coincidir con el [[Alfabeto]] $\Sigma$.
 
 ## Producciones
 
