@@ -20,4 +20,4 @@ Si la **forma** de un razonamiento es la correcta, el mismo será válido, indep
 - [[Demostración formal]]
 	- Directa
 	- Indirecta
-- Árboles semánticos
+- [[Árbol semántico|Árboles semánticos]]

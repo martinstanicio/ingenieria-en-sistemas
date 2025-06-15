@@ -3,13 +3,16 @@ aliases:
   - Gramáticas libres de contexto
   - GLC
 created: 2025-06-15 00:58:32
-modified: 2025-06-15 01:07:19
+modified: 2025-06-15 19:17:44
 title: Gramática libre de contexto
 ---
 
 # Gramática libre de contexto
 
 Una [[Gramática]] considerada ==libre de contexto o tipo 2== según la [[Clasificación de Chomsky]].
+
+> [!important]
+> A las [[Lógica y Estructuras Discretas/Cadena|Cadenas]] generadas por una [[Gramática libre de contexto]] se les puede asociar un [[Árbol de derivación]].
 
 ## Pasaje de GLC a AP que acepta por pila vacía
 
