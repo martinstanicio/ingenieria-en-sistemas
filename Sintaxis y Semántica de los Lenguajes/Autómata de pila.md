@@ -1,6 +1,9 @@
 ---
+aliases:
+  - Autómatas de pila
+  - AP
 created: 2025-06-14 23:12:10
-modified: 2025-06-14 23:36:12
+modified: 2025-06-14 23:50:37
 title: Autómata de pila
 ---
 
@@ -23,10 +26,29 @@ $$
 
 ---
 
-La [[Configuración instantánea]] del [[Autómata de pila]] está definida en:
+La [[Configuración instantánea]] del [[Autómata de pila|AP]] está definida en:
 
 $$
 K \times \Sigma^* \times \Gamma^*
 $$
 
 Representada por $\left( q, \alpha, \tau \right)$ , donde $q$ es el [[Lógica y Estructuras Discretas/Estado|Estado]] actual, $\alpha$ es la [[Lógica y Estructuras Discretas/Cadena|Cadena]] que aún falta consumir, y $\tau$ es el contenido de la [[Pila]].
+
+---
+
+Un [[Lexema]] puede ser aceptado por un [[Autómata de pila|AP]] de dos formas diferentes: cuando al consumir toda la [[Lógica y Estructuras Discretas/Cadena|Cadena]] el mismo llega a un [[Lógica y Estructuras Discretas/Estado|Estado]] final, generando un [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado $L \left( M \right)$:
+
+$$
+L \left( M \right) = \set{ \alpha \in \Sigma^*: \left( q_0, \alpha, z_0 \right) \vdash^* \left( r, \lambda, p \right) \land r \in F }, p \in \Gamma^*
+$$
+
+O cuando la [[Pila]] se vacía completamente, y al mismo tiempo se termina de consumir la [[Lógica y Estructuras Discretas/Cadena|Cadena]]:
+
+$$
+L \left( M \right) = \set{ \alpha \in \Sigma^*: \left( q_0, \alpha, z_0 \right) \vdash^* \left( r, \lambda, \lambda \right) }
+$$
+
+> [!warning]
+> Cuando la [[Pila]] está vacía, el [[Autómata de pila|AP]] no puede realizar ninguna transición más.
+
+## Pasaje de AP de aceptación por estado final a AP de aceptación por pila vacía
