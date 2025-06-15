@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos determinístico
   - Autómatas de estados finitos determinísticos
 created: 2025-06-10 17:49:07
-modified: 2025-06-14 20:09:02
+modified: 2025-06-14 23:36:54
 title: Autómata finito determinístico
 ---
 
@@ -58,13 +58,13 @@ Donde $L_1$ y $L_2$ son los [[Lógica y Estructuras Discretas/Lenguaje|Lenguajes
 > El proceso se repite para cada [[Lógica y Estructuras Discretas/Estado|Estado]] ante cada símbolo del [[Alfabeto]] (por el momento, solo $L_1$ y $L_2$), hasta llegar a una definición formada únicamente por símbolos, no por [[Lógica y Estructuras Discretas/Lenguaje|Lenguajes]].
 
 > [!important]
-> En los [[Lógica y Estructuras Discretas/Estado|Estados]] finales $L_i$, si ingresa la [[Cadena vacía]] $\lambda$, el lexema sigue siendo válido. Por lo tanto, es necesario agregar $\lambda$ a la [[Expresión regular|ER]] que define al [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado desde un [[Lógica y Estructuras Discretas/Estado|Estado]] final.
+> En los [[Lógica y Estructuras Discretas/Estado|Estados]] finales $L_i$, si ingresa la [[Cadena vacía]] $\lambda$, el [[Lexema]] sigue siendo válido. Por lo tanto, es necesario agregar $\lambda$ a la [[Expresión regular|ER]] que define al [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] aceptado desde un [[Lógica y Estructuras Discretas/Estado|Estado]] final.
 >
 > $$
 > L_i = a L_j + b L_k + \lambda
 > $$
 >
-> Y en los [[Lógica y Estructuras Discretas/Estado|Estados]] trampa $L_t$, no existe ninguna [[Lógica y Estructuras Discretas/Cadena|Cadena]] adicional que haga que el lexema sea válido, por lo que es necesario agregar $\emptyset$ a su [[Expresión regular|ER]] asociada.
+> Y en los [[Lógica y Estructuras Discretas/Estado|Estados]] trampa $L_t$, no existe ninguna [[Lógica y Estructuras Discretas/Cadena|Cadena]] adicional que haga que el [[Lexema]] sea válido, por lo que es necesario agregar $\emptyset$ a su [[Expresión regular|ER]] asociada.
 >
 > $$
 > L_t = a L_t + b L_t + \emptyset
