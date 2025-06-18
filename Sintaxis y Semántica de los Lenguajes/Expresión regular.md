@@ -4,7 +4,7 @@ aliases:
   - ER
   - REGEX
 created: 2025-06-10 21:47:38
-modified: 2025-06-14 22:57:11
+modified: 2025-06-18 00:50:28
 title: Expresión regular
 ---
 
@@ -34,7 +34,7 @@ Sea un [[Alfabeto]] $\Sigma$, las [[Expresión regular|ER]] sobre $\Sigma$ y los
 La [[Expresión regular|ER]] inicial $u$ representa el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] $L_0 = L \left( u \right)$ que será aceptado por el [[Lógica y Estructuras Discretas/Estado|Estado]] inicial $q_0$ del [[Autómata finito determinístico|AFD]]. Luego, se calculan las [[Derivada de una expresión regular|Derivadas]] de la [[Expresión regular|ER]] para cada símbolo del alfabeto $\Sigma$; cada [[Expresión regular|ER]] $L_i$ diferente resultante representa un [[Lógica y Estructuras Discretas/Estado|Estado]] $q_i$ del [[Autómata finito determinístico|AFD]], que se alcanza ante una transición por el símbolo $a \in \Sigma$ respecto al cual se realizó la [[Derivada de una expresión regular|Derivada]] $D_a \left( L_0 \right) = L_i$.
 
 > [!important]
-> Un [[Lógica y Estructuras Discretas/Estado|Estado]] es final si el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] que representa contiene la [[Cadena vacía]] $\lambda$; es decir, si $T \left( L_i \right)$ no es $\emptyset$.
+> Un [[Lógica y Estructuras Discretas/Estado|Estado]] es final si el [[Lógica y Estructuras Discretas/Lenguaje|Lenguaje]] que representa contiene la [[Cadena vacía]] $\lambda$; es decir, si $T \left( L_i \right) = \lambda \neq \emptyset$.
 
 ## Pasaje de ER a AFND-λ
 

@@ -2,7 +2,7 @@
 aliases:
   - Derivada de una ER
 created: 2025-06-11 13:47:31
-modified: 2025-06-14 16:23:08
+modified: 2025-06-18 00:49:44
 title: Derivada de una expresión regular
 ---
 

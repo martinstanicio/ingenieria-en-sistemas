@@ -1,21 +1,20 @@
 ---
 aliases:
   - Estados accesibles
-created: 2025-06-10 19:44:00
-modified: 2025-06-10 19:47:15
+  - Estado alcanzable
+  - Estados alcanzables
+created: 2025-06-18 00:58:05
+modified: 2025-06-18 01:04:54
 title: Estado accesible
 ---
 
 # Estado accesible
 
-Sea un [[Autómata finito|AF]] $M = \left( K, \Sigma, \delta, q_0, F \right)$ y $q \in K$, $q$ es un [[Estado accesible]] si existe una [[Lógica y Estructuras Discretas/Cadena|Cadena]] que me permita llegar al mismo, partiendo desde el [[Lógica y Estructuras Discretas/Estado|Estado]] inicial, es decir:
+Dado un [[Autómata finito]] $M = \left< K, \Sigma, \delta, q_0, F \right>$, el [[Lógica y Estructuras Discretas/Estado|Estado]] $q \in K$ es [[Estado accesible|Accesible]] si es posible llegar al mismo partiendo desde el [[Lógica y Estructuras Discretas/Estado|Estado]] inicial.
 
 $$
-\exists \alpha \in \Sigma^*:
-\left( q_0, \alpha \right) \vdash^* \left( q, \lambda \right)
-\Leftrightarrow
-\delta \left( q_0, \alpha \right) = q
+\exists \alpha \in \Sigma^*: \left( q_0, \alpha \right) \vdash^* \left( q, \lambda \right)
 $$
 
 > [!warning]
-> $\alpha$ no necesariamente tiene que pertenecer a $L \left( M \right)$.
+> La [[Lógica y Estructuras Discretas/Cadena|Cadena]] $\alpha$ no necesariamente tiene que pertenecer a $L \left( M \right)$
