@@ -6,9 +6,7 @@ title: Laplace
 
 # Laplace
 
-Si los [[Evento|Eventos]] que constituyen el [[Espacio muestrario|Espacio muestral]] son equiprobables.
-
-La [[Probabilidades y Estadísticas/Probabilidad|Probabilidad]] de que un evento $A$ ocurra dado un [[Espacio muestrario|Espacio muestral]] $S$.
+Si los [[Evento|Eventos]] que constituyen el [[Espacio muestrario|Espacio muestral]] $S$ son ==equiprobables==, la [[Probabilidades y Estadísticas/Probabilidad|Probabilidad]] de que un [[Evento]] $A$ ocurra se puede calcual.
 
 $$
 P(A) = \frac{\# A}{\# S}
