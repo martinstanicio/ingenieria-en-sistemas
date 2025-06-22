@@ -1,6 +1,6 @@
 ---
 created: 2025-03-26 20:22:52
-modified: 2025-06-22 16:12:54
+modified: 2025-06-22 17:05:08
 title: Probabilidad condicional
 ---
 
@@ -9,7 +9,7 @@ title: Probabilidad condicional
 La [[Probabilidad]] de que ocurra un [[Evento]] $A$, dado que está confirmado que ya ocurrió otro [[Evento]] $B$.
 
 $$
-P(A \space \text{dado que ocurra} \space B) =
-P(A|B) =
-\frac{P(A \cap B)}{P(B)}
+P \left( A \space \text{dado que ocurra} \space B \right) =
+P \left( A  \vert B \right) =
+\frac{P \left( A \cap B \right)}{P \left( B \right)}
 $$
