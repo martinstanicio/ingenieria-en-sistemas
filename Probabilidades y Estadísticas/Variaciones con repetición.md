@@ -18,6 +18,3 @@ $$
 > $$
 > V_{rep}^{(4, 3)} = 4^3 = 64
 > $$
-
-> [!warning]
-> En clase vimos esta fórmula con el nombre ==Permutaciones con repetición==.
