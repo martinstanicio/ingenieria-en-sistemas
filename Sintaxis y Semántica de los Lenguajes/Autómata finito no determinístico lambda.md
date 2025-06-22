@@ -6,7 +6,7 @@ aliases:
   - Autómata de estados finitos no determinístico lambda
   - Autómatas de estados finitos no determinísticos lambda
 created: 2025-03-06 14:40:22
-modified: 2025-06-10 22:14:54
+modified: 2025-06-22 12:14:35
 title: Autómata finito no determinístico lambda
 ---
 
@@ -29,7 +29,7 @@ $$
 \delta' \left( Q, a \right) = \set{ p: \left( q, a \right) \vdash^* \left( p, \lambda \right), q \in Q }
 $$
 
-Para calcular los elementos restantes, aplicamos el siguiente [[Algoritmos|Algoritmo]] (utilizamos el [[Algoritmo mover]]):
+Para calcular los elementos restantes, aplicamos el siguiente [[Algoritmos|Algoritmo]] (utilizamos el [[Algoritmo mover]] y la [[Clausura lambda|Clausura-λ]]):
 
 1. Hacer $Q_0 = \text{Cl-}\lambda \left( \set{ q_0 } \right)$
 2. Hacer $K' = \set{ Q_0 }$ donde $K'$ es marcable y $Q_0$ está sin marcar

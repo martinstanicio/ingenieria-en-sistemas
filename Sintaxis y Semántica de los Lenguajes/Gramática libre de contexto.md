@@ -6,7 +6,7 @@ created: 2025-06-15 00:58:32
 modified: 2025-06-15 19:17:44
 title: Gramática libre de contexto
 ---
-
+	
 # Gramática libre de contexto
 
 Una [[Gramática]] considerada ==libre de contexto o tipo 2== según la [[Clasificación de Chomsky]].
