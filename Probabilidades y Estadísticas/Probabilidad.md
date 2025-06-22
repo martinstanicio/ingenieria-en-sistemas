@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Probabilidades
 created: 2025-03-19 19:41:57
-modified: 2025-06-22 16:22:30
+modified: 2025-06-22 17:52:17
 title: Probabilidad
 ---
 
