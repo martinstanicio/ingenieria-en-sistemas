@@ -5,7 +5,7 @@ aliases:
   - Funciones de distribución acumulada
   - FDA
 created: 2025-06-22 20:45:35
-modified: 2025-06-22 20:49:09
+modified: 2025-06-22 22:16:48
 title: Función de distribución acumulativa
 ---
 
@@ -19,3 +19,22 @@ $$
 
 > [!tip]
 > Para cualquier número $x$, $F \left( x \right)$ es la [[Probabilidad]] de que el valor observado de $X$ será como máximo $x$.
+
+---
+
+Por ejemplo, dada la siguiente [[Función de distribución acumulativa]], es posible representarla mediante un gráfico.
+
+$$
+F \left( y \right) =
+\left\{
+    \begin{array}{l}
+        0 \space &\text{si} \space y < 1 \\
+        0.4 \space &\text{si} \space 1 \leq y < 2 \\
+        0.7 \space &\text{si} \space 2 \leq y < 3 \\
+        0.9 \space &\text{si} \space 3 \leq y < 4 \\
+        1 \space &\text{si} \space 4 \leq y \\
+    \end{array}
+\right.
+$$
+
+![[función-de-distribución-acumulativa.jpg]]

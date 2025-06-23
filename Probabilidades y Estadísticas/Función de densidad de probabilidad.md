@@ -6,7 +6,7 @@ aliases:
   - Funciones masa de probabilidad
   - FMP
 created: 2025-06-22 20:29:26
-modified: 2025-06-22 20:39:45
+modified: 2025-06-22 22:12:35
 title: Función de densidad de probabilidad
 ---
 
@@ -17,3 +17,5 @@ La [[Función de densidad de probabilidad]] de una [[Variable aleatoria discreta
 $$
 p \left( x \right) = P \left( X = x \right) = P \left( \forall s \in S: X \left( s \right) = x \right)
 $$
+
+![[función-de-densidad-de-probabilidad.jpg]]
