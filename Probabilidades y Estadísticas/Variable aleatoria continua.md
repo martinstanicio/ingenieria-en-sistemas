@@ -1,7 +1,6 @@
 ---
 aliases:
   - Variables aleatorias continuas
-  - VA continua
 created: 2025-06-22 19:32:21
 modified: 2025-06-22 20:23:24
 title: Variable aleatoria continua

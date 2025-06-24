@@ -1,7 +1,6 @@
 ---
 aliases:
   - Variables aleatorias discretas
-  - VA discreta
 created: 2025-06-22 19:10:21
 modified: 2025-06-22 20:19:03
 title: Variable aleatoria discreta

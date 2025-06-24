@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Variables aleatorias binomiales
 created: 2025-06-22 22:43:25
-modified: 2025-06-22 23:00:28
+modified: 2025-06-24 01:23:12
 title: Variable aleatoria binomial
 ---
 
