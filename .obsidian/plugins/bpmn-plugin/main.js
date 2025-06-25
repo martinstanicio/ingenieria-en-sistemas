@@ -4604,21 +4604,21 @@ function findBezierIntersections(bez1, bez2, justCount) {
   }
   for (i7 = 0; i7 < n1; i7++) {
     for (var j6 = 0; j6 < n22; j6++) {
-      var di = dots1[i7], di1 = dots1[i7 + 1], dj = dots2[j6], dj1 = dots2[j6 + 1], ci = abs(di1.x - di.x) < 0.01 ? "y" : "x", cj = abs(dj1.x - dj.x) < 0.01 ? "y" : "x", is8 = intersectLines(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y), key;
-      if (is8) {
-        key = is8.x.toFixed(9) + "#" + is8.y.toFixed(9);
+      var di = dots1[i7], di1 = dots1[i7 + 1], dj = dots2[j6], dj1 = dots2[j6 + 1], ci = abs(di1.x - di.x) < 0.01 ? "y" : "x", cj = abs(dj1.x - dj.x) < 0.01 ? "y" : "x", is7 = intersectLines(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y), key;
+      if (is7) {
+        key = is7.x.toFixed(9) + "#" + is7.y.toFixed(9);
         if (xy[key]) {
           continue;
         }
         xy[key] = true;
-        var t1 = di.t + abs((is8[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t), t22 = dj.t + abs((is8[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
+        var t1 = di.t + abs((is7[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t), t22 = dj.t + abs((is7[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
         if (t1 >= 0 && t1 <= 1 && t22 >= 0 && t22 <= 1) {
           if (justCount) {
             res++;
           } else {
             res.push({
-              x: is8.x,
-              y: is8.y,
+              x: is7.x,
+              y: is7.y,
               t1,
               t2: t22
             });
@@ -14958,8 +14958,8 @@ function BaseViewer(options) {
   options = assign({}, DEFAULT_OPTIONS, options);
   this._moddle = this._createModdle(options);
   this._container = this._createContainer(options);
-  addProjectLogo(this._container);
   this._init(this._container, this._moddle, options);
+  addProjectLogo(this._container);
 }
 e(BaseViewer, Diagram);
 BaseViewer.prototype.importXML = async function importXML(xml2, bpmnDiagram) {
@@ -20135,10 +20135,10 @@ function w(n4, l5) {
   for (var u6 in l5) n4[u6] = l5[u6];
   return n4;
 }
-function _(n4) {
+function g(n4) {
   n4 && n4.parentNode && n4.parentNode.removeChild(n4);
 }
-function g(l5, u6, t7) {
+function _(l5, u6, t7) {
   var i7, r7, o5, e8 = {};
   for (o5 in u6) "key" == o5 ? i7 = u6[o5] : "ref" == o5 ? r7 = u6[o5] : e8[o5] = u6[o5];
   if (arguments.length > 2 && (e8.children = arguments.length > 3 ? n.call(arguments, 2) : t7), "function" == typeof l5 && null != l5.defaultProps) for (o5 in l5.defaultProps) void 0 === e8[o5] && (e8[o5] = l5.defaultProps[o5]);
@@ -20154,38 +20154,37 @@ function k(n4) {
 function x(n4, l5) {
   this.props = n4, this.context = l5;
 }
-function C(n4, l5) {
-  if (null == l5) return n4.__ ? C(n4.__, n4.__i + 1) : null;
+function S(n4, l5) {
+  if (null == l5) return n4.__ ? S(n4.__, n4.__i + 1) : null;
   for (var u6; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) return u6.__e;
-  return "function" == typeof n4.type ? C(n4) : null;
+  return "function" == typeof n4.type ? S(n4) : null;
 }
-function S(n4) {
+function C(n4) {
   var l5, u6;
   if (null != (n4 = n4.__) && null != n4.__c) {
     for (n4.__e = n4.__c.base = null, l5 = 0; l5 < n4.__k.length; l5++) if (null != (u6 = n4.__k[l5]) && null != u6.__e) {
       n4.__e = n4.__c.base = u6.__e;
       break;
     }
-    return S(n4);
+    return C(n4);
   }
 }
 function M(n4) {
-  (!n4.__d && (n4.__d = true) && i.push(n4) && !P.__r++ || r !== l.debounceRendering) && ((r = l.debounceRendering) || o)(P);
+  (!n4.__d && (n4.__d = true) && i.push(n4) && !$.__r++ || r !== l.debounceRendering) && ((r = l.debounceRendering) || o)($);
 }
-function P() {
-  var n4, u6, t7, r7, o5, f6, c5, s5;
-  for (i.sort(e3); n4 = i.shift(); ) n4.__d && (u6 = i.length, r7 = void 0, f6 = (o5 = (t7 = n4).__v).__e, c5 = [], s5 = [], t7.__P && ((r7 = w({}, o5)).__v = o5.__v + 1, l.vnode && l.vnode(r7), j(t7.__P, r7, o5, t7.__n, t7.__P.namespaceURI, 32 & o5.__u ? [f6] : null, c5, null == f6 ? C(o5) : f6, !!(32 & o5.__u), s5), r7.__v = o5.__v, r7.__.__k[r7.__i] = r7, z(c5, r7, s5), r7.__e != f6 && S(r7)), i.length > u6 && i.sort(e3));
-  P.__r = 0;
+function $() {
+  for (var n4, u6, t7, r7, o5, f6, c5, s5 = 1; i.length; ) i.length > s5 && i.sort(e3), n4 = i.shift(), s5 = i.length, n4.__d && (t7 = void 0, o5 = (r7 = (u6 = n4).__v).__e, f6 = [], c5 = [], u6.__P && ((t7 = w({}, r7)).__v = r7.__v + 1, l.vnode && l.vnode(t7), j(u6.__P, t7, r7, u6.__n, u6.__P.namespaceURI, 32 & r7.__u ? [o5] : null, f6, null == o5 ? S(r7) : o5, !!(32 & r7.__u), c5), t7.__v = r7.__v, t7.__.__k[t7.__i] = t7, z(f6, t7, c5), t7.__e != o5 && C(t7)));
+  $.__r = 0;
 }
-function $(n4, l5, u6, t7, i7, r7, o5, e8, f6, c5, s5) {
-  var a6, h5, y5, d5, w6, _5, g6 = t7 && t7.__k || v, m6 = l5.length;
-  for (f6 = I(u6, l5, g6, f6, m6), a6 = 0; a6 < m6; a6++) null != (y5 = u6.__k[a6]) && (h5 = -1 === y5.__i ? p : g6[y5.__i] || p, y5.__i = a6, _5 = j(n4, y5, h5, i7, r7, o5, e8, f6, c5, s5), d5 = y5.__e, y5.ref && h5.ref != y5.ref && (h5.ref && V(h5.ref, null, y5), s5.push(y5.ref, y5.__c || d5, y5)), null == w6 && null != d5 && (w6 = d5), 4 & y5.__u || h5.__k === y5.__k ? f6 = A(y5, f6, n4) : "function" == typeof y5.type && void 0 !== _5 ? f6 = _5 : d5 && (f6 = d5.nextSibling), y5.__u &= -7);
+function I(n4, l5, u6, t7, i7, r7, o5, e8, f6, c5, s5) {
+  var a6, h5, y5, d5, w6, g6, _5 = t7 && t7.__k || v, m6 = l5.length;
+  for (f6 = P(u6, l5, _5, f6, m6), a6 = 0; a6 < m6; a6++) null != (y5 = u6.__k[a6]) && (h5 = -1 === y5.__i ? p : _5[y5.__i] || p, y5.__i = a6, g6 = j(n4, y5, h5, i7, r7, o5, e8, f6, c5, s5), d5 = y5.__e, y5.ref && h5.ref != y5.ref && (h5.ref && V(h5.ref, null, y5), s5.push(y5.ref, y5.__c || d5, y5)), null == w6 && null != d5 && (w6 = d5), 4 & y5.__u || h5.__k === y5.__k ? f6 = A(y5, f6, n4) : "function" == typeof y5.type && void 0 !== g6 ? f6 = g6 : d5 && (f6 = d5.nextSibling), y5.__u &= -7);
   return u6.__e = w6, f6;
 }
-function I(n4, l5, u6, t7, i7) {
+function P(n4, l5, u6, t7, i7) {
   var r7, o5, e8, f6, c5, s5 = u6.length, a6 = s5, h5 = 0;
-  for (n4.__k = new Array(i7), r7 = 0; r7 < i7; r7++) null != (o5 = l5[r7]) && "boolean" != typeof o5 && "function" != typeof o5 ? (f6 = r7 + h5, (o5 = n4.__k[r7] = "string" == typeof o5 || "number" == typeof o5 || "bigint" == typeof o5 || o5.constructor == String ? m(null, o5, null, null, null) : d(o5) ? m(k, { children: o5 }, null, null, null) : void 0 === o5.constructor && o5.__b > 0 ? m(o5.type, o5.props, o5.key, o5.ref ? o5.ref : null, o5.__v) : o5).__ = n4, o5.__b = n4.__b + 1, e8 = null, -1 !== (c5 = o5.__i = L(o5, u6, f6, a6)) && (a6--, (e8 = u6[c5]) && (e8.__u |= 2)), null == e8 || null === e8.__v ? (-1 == c5 && h5--, "function" != typeof o5.type && (o5.__u |= 4)) : c5 != f6 && (c5 == f6 - 1 ? h5-- : c5 == f6 + 1 ? h5++ : (c5 > f6 ? h5-- : h5++, o5.__u |= 4))) : n4.__k[r7] = null;
-  if (a6) for (r7 = 0; r7 < s5; r7++) null != (e8 = u6[r7]) && 0 == (2 & e8.__u) && (e8.__e == t7 && (t7 = C(e8)), q(e8, e8));
+  for (n4.__k = new Array(i7), r7 = 0; r7 < i7; r7++) null != (o5 = l5[r7]) && "boolean" != typeof o5 && "function" != typeof o5 ? (f6 = r7 + h5, (o5 = n4.__k[r7] = "string" == typeof o5 || "number" == typeof o5 || "bigint" == typeof o5 || o5.constructor == String ? m(null, o5, null, null, null) : d(o5) ? m(k, { children: o5 }, null, null, null) : void 0 === o5.constructor && o5.__b > 0 ? m(o5.type, o5.props, o5.key, o5.ref ? o5.ref : null, o5.__v) : o5).__ = n4, o5.__b = n4.__b + 1, e8 = null, -1 !== (c5 = o5.__i = L(o5, u6, f6, a6)) && (a6--, (e8 = u6[c5]) && (e8.__u |= 2)), null == e8 || null === e8.__v ? (-1 == c5 && (i7 > s5 ? h5-- : i7 < s5 && h5++), "function" != typeof o5.type && (o5.__u |= 4)) : c5 != f6 && (c5 == f6 - 1 ? h5-- : c5 == f6 + 1 ? h5++ : (c5 > f6 ? h5-- : h5++, o5.__u |= 4))) : n4.__k[r7] = null;
+  if (a6) for (r7 = 0; r7 < s5; r7++) null != (e8 = u6[r7]) && 0 == (2 & e8.__u) && (e8.__e == t7 && (t7 = S(e8)), q(e8, e8));
   return t7;
 }
 function A(n4, l5, u6) {
@@ -20194,7 +20193,7 @@ function A(n4, l5, u6) {
     for (t7 = n4.__k, i7 = 0; t7 && i7 < t7.length; i7++) t7[i7] && (t7[i7].__ = n4, l5 = A(t7[i7], l5, u6));
     return l5;
   }
-  n4.__e != l5 && (l5 && n4.type && !u6.contains(l5) && (l5 = C(n4)), u6.insertBefore(n4.__e, l5 || null), l5 = n4.__e);
+  n4.__e != l5 && (l5 && n4.type && !u6.contains(l5) && (l5 = S(n4)), u6.insertBefore(n4.__e, l5 || null), l5 = n4.__e);
   do {
     l5 = l5 && l5.nextSibling;
   } while (null != l5 && 8 == l5.nodeType);
@@ -20202,7 +20201,7 @@ function A(n4, l5, u6) {
 }
 function L(n4, l5, u6, t7) {
   var i7, r7, o5 = n4.key, e8 = n4.type, f6 = l5[u6];
-  if (null === f6 || f6 && o5 == f6.key && e8 === f6.type && 0 == (2 & f6.__u)) return u6;
+  if (null === f6 && null == n4.key || f6 && o5 == f6.key && e8 === f6.type && 0 == (2 & f6.__u)) return u6;
   if (t7 > (null != f6 && 0 == (2 & f6.__u) ? 1 : 0)) for (i7 = u6 - 1, r7 = u6 + 1; i7 >= 0 || r7 < l5.length; ) {
     if (i7 >= 0) {
       if ((f6 = l5[i7]) && 0 == (2 & f6.__u) && o5 == f6.key && e8 === f6.type) return i7;
@@ -20247,35 +20246,35 @@ function O(n4) {
   };
 }
 function j(n4, u6, t7, i7, r7, o5, e8, f6, c5, s5) {
-  var a6, h5, p5, v5, y5, g6, m6, b4, C5, S3, M4, P5, I4, A6, H3, L4, T6, F6 = u6.type;
+  var a6, h5, p5, v5, y5, _5, m6, b4, S3, C5, M4, $4, P5, A6, H3, L4, T6, F6, O4 = u6.type;
   if (void 0 !== u6.constructor) return null;
   128 & t7.__u && (c5 = !!(32 & t7.__u), o5 = [f6 = u6.__e = t7.__e]), (a6 = l.__b) && a6(u6);
-  n: if ("function" == typeof F6) try {
-    if (b4 = u6.props, C5 = "prototype" in F6 && F6.prototype.render, S3 = (a6 = F6.contextType) && i7[a6.__c], M4 = a6 ? S3 ? S3.props.value : a6.__ : i7, t7.__c ? m6 = (h5 = u6.__c = t7.__c).__ = h5.__E : (C5 ? u6.__c = h5 = new F6(b4, M4) : (u6.__c = h5 = new x(b4, M4), h5.constructor = F6, h5.render = B), S3 && S3.sub(h5), h5.props = b4, h5.state || (h5.state = {}), h5.context = M4, h5.__n = i7, p5 = h5.__d = true, h5.__h = [], h5._sb = []), C5 && null == h5.__s && (h5.__s = h5.state), C5 && null != F6.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = w({}, h5.__s)), w(h5.__s, F6.getDerivedStateFromProps(b4, h5.__s))), v5 = h5.props, y5 = h5.state, h5.__v = u6, p5) C5 && null == F6.getDerivedStateFromProps && null != h5.componentWillMount && h5.componentWillMount(), C5 && null != h5.componentDidMount && h5.__h.push(h5.componentDidMount);
+  n: if ("function" == typeof O4) try {
+    if (b4 = u6.props, S3 = "prototype" in O4 && O4.prototype.render, C5 = (a6 = O4.contextType) && i7[a6.__c], M4 = a6 ? C5 ? C5.props.value : a6.__ : i7, t7.__c ? m6 = (h5 = u6.__c = t7.__c).__ = h5.__E : (S3 ? u6.__c = h5 = new O4(b4, M4) : (u6.__c = h5 = new x(b4, M4), h5.constructor = O4, h5.render = B), C5 && C5.sub(h5), h5.props = b4, h5.state || (h5.state = {}), h5.context = M4, h5.__n = i7, p5 = h5.__d = true, h5.__h = [], h5._sb = []), S3 && null == h5.__s && (h5.__s = h5.state), S3 && null != O4.getDerivedStateFromProps && (h5.__s == h5.state && (h5.__s = w({}, h5.__s)), w(h5.__s, O4.getDerivedStateFromProps(b4, h5.__s))), v5 = h5.props, y5 = h5.state, h5.__v = u6, p5) S3 && null == O4.getDerivedStateFromProps && null != h5.componentWillMount && h5.componentWillMount(), S3 && null != h5.componentDidMount && h5.__h.push(h5.componentDidMount);
     else {
-      if (C5 && null == F6.getDerivedStateFromProps && b4 !== v5 && null != h5.componentWillReceiveProps && h5.componentWillReceiveProps(b4, M4), !h5.__e && (null != h5.shouldComponentUpdate && false === h5.shouldComponentUpdate(b4, h5.__s, M4) || u6.__v == t7.__v)) {
+      if (S3 && null == O4.getDerivedStateFromProps && b4 !== v5 && null != h5.componentWillReceiveProps && h5.componentWillReceiveProps(b4, M4), !h5.__e && (null != h5.shouldComponentUpdate && false === h5.shouldComponentUpdate(b4, h5.__s, M4) || u6.__v == t7.__v)) {
         for (u6.__v != t7.__v && (h5.props = b4, h5.state = h5.__s, h5.__d = false), u6.__e = t7.__e, u6.__k = t7.__k, u6.__k.some(function(n5) {
           n5 && (n5.__ = u6);
-        }), P5 = 0; P5 < h5._sb.length; P5++) h5.__h.push(h5._sb[P5]);
+        }), $4 = 0; $4 < h5._sb.length; $4++) h5.__h.push(h5._sb[$4]);
         h5._sb = [], h5.__h.length && e8.push(h5);
         break n;
       }
-      null != h5.componentWillUpdate && h5.componentWillUpdate(b4, h5.__s, M4), C5 && null != h5.componentDidUpdate && h5.__h.push(function() {
-        h5.componentDidUpdate(v5, y5, g6);
+      null != h5.componentWillUpdate && h5.componentWillUpdate(b4, h5.__s, M4), S3 && null != h5.componentDidUpdate && h5.__h.push(function() {
+        h5.componentDidUpdate(v5, y5, _5);
       });
     }
-    if (h5.context = M4, h5.props = b4, h5.__P = n4, h5.__e = false, I4 = l.__r, A6 = 0, C5) {
-      for (h5.state = h5.__s, h5.__d = false, I4 && I4(u6), a6 = h5.render(h5.props, h5.state, h5.context), H3 = 0; H3 < h5._sb.length; H3++) h5.__h.push(h5._sb[H3]);
+    if (h5.context = M4, h5.props = b4, h5.__P = n4, h5.__e = false, P5 = l.__r, A6 = 0, S3) {
+      for (h5.state = h5.__s, h5.__d = false, P5 && P5(u6), a6 = h5.render(h5.props, h5.state, h5.context), H3 = 0; H3 < h5._sb.length; H3++) h5.__h.push(h5._sb[H3]);
       h5._sb = [];
     } else do {
-      h5.__d = false, I4 && I4(u6), a6 = h5.render(h5.props, h5.state, h5.context), h5.state = h5.__s;
+      h5.__d = false, P5 && P5(u6), a6 = h5.render(h5.props, h5.state, h5.context), h5.state = h5.__s;
     } while (h5.__d && ++A6 < 25);
-    h5.state = h5.__s, null != h5.getChildContext && (i7 = w(w({}, i7), h5.getChildContext())), C5 && !p5 && null != h5.getSnapshotBeforeUpdate && (g6 = h5.getSnapshotBeforeUpdate(v5, y5)), f6 = $(n4, d(L4 = null != a6 && a6.type === k && null == a6.key ? a6.props.children : a6) ? L4 : [L4], u6, t7, i7, r7, o5, e8, f6, c5, s5), h5.base = u6.__e, u6.__u &= -161, h5.__h.length && e8.push(h5), m6 && (h5.__E = h5.__ = null);
+    h5.state = h5.__s, null != h5.getChildContext && (i7 = w(w({}, i7), h5.getChildContext())), S3 && !p5 && null != h5.getSnapshotBeforeUpdate && (_5 = h5.getSnapshotBeforeUpdate(v5, y5)), T6 = (L4 = null != a6 && a6.type === k && null == a6.key) ? a6.props.children : a6, L4 && (a6.props.children = null), f6 = I(n4, d(T6) ? T6 : [T6], u6, t7, i7, r7, o5, e8, f6, c5, s5), h5.base = u6.__e, u6.__u &= -161, h5.__h.length && e8.push(h5), m6 && (h5.__E = h5.__ = null);
   } catch (n5) {
     if (u6.__v = null, c5 || null != o5) if (n5.then) {
       for (u6.__u |= c5 ? 160 : 128; f6 && 8 == f6.nodeType && f6.nextSibling; ) f6 = f6.nextSibling;
       o5[o5.indexOf(f6)] = null, u6.__e = f6;
-    } else for (T6 = o5.length; T6--; ) _(o5[T6]);
+    } else for (F6 = o5.length; F6--; ) g(o5[F6]);
     else u6.__e = t7.__e, u6.__k = t7.__k;
     l.__e(n5, u6, t7);
   }
@@ -20295,7 +20294,7 @@ function z(n4, u6, t7) {
   });
 }
 function N(u6, t7, i7, r7, o5, e8, f6, c5, s5) {
-  var a6, h5, v5, y5, w6, g6, m6, b4 = i7.props, k6 = t7.props, x6 = t7.type;
+  var a6, h5, v5, y5, w6, _5, m6, b4 = i7.props, k6 = t7.props, x6 = t7.type;
   if ("svg" == x6 ? o5 = "http://www.w3.org/2000/svg" : "math" == x6 ? o5 = "http://www.w3.org/1998/Math/MathML" : o5 || (o5 = "http://www.w3.org/1999/xhtml"), null != e8) {
     for (a6 = 0; a6 < e8.length; a6++) if ((w6 = e8[a6]) && "setAttribute" in w6 == !!x6 && (x6 ? w6.localName == x6 : 3 == w6.nodeType)) {
       u6 = w6, e8[a6] = null;
@@ -20315,10 +20314,10 @@ function N(u6, t7, i7, r7, o5, e8, f6, c5, s5) {
       if ("value" == a6 && "defaultValue" in k6 || "checked" == a6 && "defaultChecked" in k6) continue;
       F(u6, a6, null, w6, o5);
     }
-    for (a6 in k6) w6 = k6[a6], "children" == a6 ? y5 = w6 : "dangerouslySetInnerHTML" == a6 ? h5 = w6 : "value" == a6 ? g6 = w6 : "checked" == a6 ? m6 = w6 : c5 && "function" != typeof w6 || b4[a6] === w6 || F(u6, a6, w6, b4[a6], o5);
+    for (a6 in k6) w6 = k6[a6], "children" == a6 ? y5 = w6 : "dangerouslySetInnerHTML" == a6 ? h5 = w6 : "value" == a6 ? _5 = w6 : "checked" == a6 ? m6 = w6 : c5 && "function" != typeof w6 || b4[a6] === w6 || F(u6, a6, w6, b4[a6], o5);
     if (h5) c5 || v5 && (h5.__html === v5.__html || h5.__html === u6.innerHTML) || (u6.innerHTML = h5.__html), t7.__k = [];
-    else if (v5 && (u6.innerHTML = ""), $(u6, d(y5) ? y5 : [y5], t7, i7, r7, "foreignObject" == x6 ? "http://www.w3.org/1999/xhtml" : o5, e8, f6, e8 ? e8[0] : i7.__k && C(i7, 0), c5, s5), null != e8) for (a6 = e8.length; a6--; ) _(e8[a6]);
-    c5 || (a6 = "value", "progress" == x6 && null == g6 ? u6.removeAttribute("value") : void 0 !== g6 && (g6 !== u6[a6] || "progress" == x6 && !g6 || "option" == x6 && g6 !== b4[a6]) && F(u6, a6, g6, b4[a6], o5), a6 = "checked", void 0 !== m6 && m6 !== u6[a6] && F(u6, a6, m6, b4[a6], o5));
+    else if (v5 && (u6.innerHTML = ""), I("template" === t7.type ? u6.content : u6, d(y5) ? y5 : [y5], t7, i7, r7, "foreignObject" == x6 ? "http://www.w3.org/1999/xhtml" : o5, e8, f6, e8 ? e8[0] : i7.__k && S(i7, 0), c5, s5), null != e8) for (a6 = e8.length; a6--; ) g(e8[a6]);
+    c5 || (a6 = "value", "progress" == x6 && null == _5 ? u6.removeAttribute("value") : void 0 !== _5 && (_5 !== u6[a6] || "progress" == x6 && !_5 || "option" == x6 && _5 !== b4[a6]) && F(u6, a6, _5, b4[a6], o5), a6 = "checked", void 0 !== m6 && m6 !== u6[a6] && F(u6, a6, m6, b4[a6], o5));
   }
   return u6;
 }
@@ -20343,14 +20342,14 @@ function q(n4, u6, t7) {
     i7.base = i7.__P = null;
   }
   if (i7 = n4.__k) for (r7 = 0; r7 < i7.length; r7++) i7[r7] && q(i7[r7], u6, t7 || "function" != typeof n4.type);
-  t7 || _(n4.__e), n4.__c = n4.__ = n4.__e = void 0;
+  t7 || g(n4.__e), n4.__c = n4.__ = n4.__e = void 0;
 }
 function B(n4, l5, u6) {
   return this.constructor(n4, u6);
 }
 function D(u6, t7, i7) {
   var r7, o5, e8, f6;
-  t7 == document && (t7 = document.documentElement), l.__ && l.__(u6, t7), o5 = (r7 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, e8 = [], f6 = [], j(t7, u6 = (!r7 && i7 || t7).__k = g(k, null, [u6]), o5 || p, p, t7.namespaceURI, !r7 && i7 ? [i7] : o5 ? null : t7.firstChild ? n.call(t7.childNodes) : null, e8, !r7 && i7 ? i7 : o5 ? o5.__e : t7.firstChild, r7, f6), z(e8, u6, f6);
+  t7 == document && (t7 = document.documentElement), l.__ && l.__(u6, t7), o5 = (r7 = "function" == typeof i7) ? null : i7 && i7.__k || t7.__k, e8 = [], f6 = [], j(t7, u6 = (!r7 && i7 || t7).__k = _(k, null, [u6]), o5 || p, p, t7.namespaceURI, !r7 && i7 ? [i7] : o5 ? null : t7.firstChild ? n.call(t7.childNodes) : null, e8, !r7 && i7 ? i7 : o5 ? o5.__e : t7.firstChild, r7, f6), z(e8, u6, f6);
 }
 n = v.slice, l = { __e: function(n4, l5, u6, t7) {
   for (var i7, r7, o5; l5 = l5.__; ) if ((i7 = l5.__c) && !i7.__) try {
@@ -20368,7 +20367,7 @@ n = v.slice, l = { __e: function(n4, l5, u6, t7) {
   this.__v && (this.__e = true, n4 && this.__h.push(n4), M(this));
 }, x.prototype.render = k, i = [], o = "function" == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout, e3 = function(n4, l5) {
   return n4.__v.__b - l5.__v.__b;
-}, P.__r = 0, f = /(PointerCapture)$|Capture$/i, c = 0, s = O(false), a = O(true), h = 0;
+}, $.__r = 0, f = /(PointerCapture)$|Capture$/i, c = 0, s = O(false), a = O(true), h = 0;
 
 // node_modules/htm/dist/htm.module.js
 var n2 = function(t7, s5, r7, e8) {
@@ -20395,7 +20394,7 @@ function htm_module_default(s5) {
 }
 
 // node_modules/htm/preact/index.module.js
-var m2 = htm_module_default.bind(g);
+var m2 = htm_module_default.bind(_);
 
 // node_modules/preact/hooks/dist/hooks.module.js
 var t3;
@@ -20411,20 +20410,20 @@ var v2 = c2.diffed;
 var l2 = c2.__c;
 var m3 = c2.unmount;
 var s2 = c2.__;
-function d2(n4, t7) {
+function p2(n4, t7) {
   c2.__h && c2.__h(r2, n4, o2 || t7), o2 = 0;
   var u6 = r2.__H || (r2.__H = { __: [], __h: [] });
   return n4 >= u6.__.length && u6.__.push({}), u6.__[n4];
 }
-function h2(n4) {
-  return o2 = 1, p2(D2, n4);
+function d2(n4) {
+  return o2 = 1, h2(D2, n4);
 }
-function p2(n4, u6, i7) {
-  var o5 = d2(t3++, 2);
+function h2(n4, u6, i7) {
+  var o5 = p2(t3++, 2);
   if (o5.t = n4, !o5.__c && (o5.__ = [i7 ? i7(u6) : D2(void 0, u6), function(n5) {
     var t7 = o5.__N ? o5.__N[0] : o5.__[0], r7 = o5.t(t7, n5);
     t7 !== r7 && (o5.__N = [r7, o5.__[1]], o5.__c.setState({}));
-  }], o5.__c = r2, !r2.u)) {
+  }], o5.__c = r2, !r2.__f)) {
     var f6 = function(n5, t7, r7) {
       if (!o5.__c.__H) return true;
       var u7 = o5.__c.__H.__.filter(function(n6) {
@@ -20441,7 +20440,7 @@ function p2(n4, u6, i7) {
         }
       }), c5 && c5.call(this, n5, t7, r7) || i8;
     };
-    r2.u = true;
+    r2.__f = true;
     var c5 = r2.shouldComponentUpdate, e8 = r2.componentWillUpdate;
     r2.componentWillUpdate = function(n5, t7, r7) {
       if (this.__e) {
@@ -20454,12 +20453,12 @@ function p2(n4, u6, i7) {
   return o5.__N || o5.__;
 }
 function y2(n4, u6) {
-  var i7 = d2(t3++, 3);
-  !c2.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__H.__h.push(i7));
+  var i7 = p2(t3++, 3);
+  !c2.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.u = u6, r2.__H.__h.push(i7));
 }
 function _2(n4, u6) {
-  var i7 = d2(t3++, 4);
-  !c2.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.i = u6, r2.__h.push(i7));
+  var i7 = p2(t3++, 4);
+  !c2.__s && C2(i7.__H, u6) && (i7.__ = n4, i7.u = u6, r2.__h.push(i7));
 }
 function A2(n4) {
   return o2 = 5, T2(function() {
@@ -20467,7 +20466,7 @@ function A2(n4) {
   }, []);
 }
 function T2(n4, r7) {
-  var u6 = d2(t3++, 7);
+  var u6 = p2(t3++, 7);
   return C2(u6.__H, r7) && (u6.__ = n4(), u6.__H = r7, u6.__h = n4), u6.__;
 }
 function q2(n4, t7) {
@@ -20490,13 +20489,13 @@ c2.__b = function(n4) {
   a2 && a2(n4), t3 = 0;
   var i7 = (r2 = n4.__c).__H;
   i7 && (u2 === r2 ? (i7.__h = [], r2.__h = [], i7.__.forEach(function(n5) {
-    n5.__N && (n5.__ = n5.__N), n5.i = n5.__N = void 0;
+    n5.__N && (n5.__ = n5.__N), n5.u = n5.__N = void 0;
   })) : (i7.__h.forEach(z2), i7.__h.forEach(B2), i7.__h = [], t3 = 0)), u2 = r2;
 }, c2.diffed = function(n4) {
   v2 && v2(n4);
   var t7 = n4.__c;
   t7 && t7.__H && (t7.__H.__h.length && (1 !== f2.push(t7) && i2 === c2.requestAnimationFrame || ((i2 = c2.requestAnimationFrame) || w2)(j2)), t7.__H.__.forEach(function(n5) {
-    n5.i && (n5.__H = n5.i), n5.i = void 0;
+    n5.u && (n5.__H = n5.u), n5.u = void 0;
   })), u2 = r2 = null;
 }, c2.__c = function(n4, t7) {
   t7.some(function(n5) {
@@ -20782,7 +20781,7 @@ function PopupMenuComponent(props) {
     }
     return originalEntries.length > 5;
   }, [search2, originalEntries]);
-  const [value, setValue] = h2("");
+  const [value, setValue] = d2("");
   const filterEntries = q2((originalEntries2, value2) => {
     if (!searchable) {
       return originalEntries2;
@@ -20799,8 +20798,8 @@ function PopupMenuComponent(props) {
       ]
     }).map(({ item }) => item);
   }, [searchable]);
-  const [entries, setEntries] = h2(filterEntries(originalEntries, value));
-  const [selectedEntry, setSelectedEntry] = h2(entries[0]);
+  const [entries, setEntries] = d2(filterEntries(originalEntries, value));
+  const [selectedEntry, setSelectedEntry] = d2(entries[0]);
   const updateEntries = q2((newEntries) => {
     if (!selectedEntry || !newEntries.includes(selectedEntry)) {
       setSelectedEntry(newEntries[0]);
@@ -29874,7 +29873,7 @@ function BpmnReplace(bpmnFactory, elementFactory, moddleCopy, modeling, replace,
   function replaceElement(element, targetElement, hints) {
     hints = hints || {};
     var type = targetElement.type, oldBusinessObject = element.businessObject;
-    if (isSubProcess(oldBusinessObject) && type === "bpmn:SubProcess") {
+    if (isSubProcess(oldBusinessObject) && (type === "bpmn:SubProcess" || type === "bpmn:AdHocSubProcess")) {
       if (shouldToggleCollapsed(element, targetElement)) {
         modeling.toggleCollapse(element);
         return element;
@@ -30709,15 +30708,29 @@ var space_tool_default = {
 };
 
 // node_modules/bpmn-js/lib/features/space-tool/BpmnSpaceTool.js
-function BpmnSpaceTool(injector) {
+function BpmnSpaceTool(injector, canvas) {
   injector.invoke(SpaceTool, this);
+  this._canvas = canvas;
 }
 BpmnSpaceTool.$inject = [
-  "injector"
+  "injector",
+  "canvas"
 ];
 e(BpmnSpaceTool, SpaceTool);
 BpmnSpaceTool.prototype.calculateAdjustments = function(elements, axis, delta2, start) {
-  var adjustments = SpaceTool.prototype.calculateAdjustments.call(this, elements, axis, delta2, start);
+  var canvasRoot = this._canvas.getRootElement(), spaceRoot = elements[0] === canvasRoot ? null : elements[0], enclosedArtifacts = [];
+  if (spaceRoot) {
+    enclosedArtifacts = values(
+      getEnclosedElements(
+        canvasRoot.children.filter(
+          (child) => is(child, "bpmn:Artifact")
+        ),
+        getBBox(spaceRoot)
+      )
+    );
+  }
+  const elementsToMove = [...elements, ...enclosedArtifacts];
+  var adjustments = SpaceTool.prototype.calculateAdjustments.call(this, elementsToMove, axis, delta2, start);
   adjustments.resizingShapes = adjustments.resizingShapes.filter(function(shape) {
     if (is(shape, "bpmn:TextAnnotation")) {
       return false;
@@ -35744,11 +35757,59 @@ var SUBPROCESS_EXPANDED = [
     }
   },
   {
+    label: "Ad-hoc sub-process",
+    actionName: "replace-with-ad-hoc-subprocess",
+    className: "bpmn-icon-subprocess-expanded",
+    target: {
+      type: "bpmn:AdHocSubProcess",
+      isExpanded: true
+    }
+  },
+  {
     label: "Sub-process (collapsed)",
     actionName: "replace-with-collapsed-subprocess",
     className: "bpmn-icon-subprocess-collapsed",
     target: {
       type: "bpmn:SubProcess",
+      isExpanded: false
+    }
+  }
+];
+var AD_HOC_SUBPROCESS_EXPANDED = [
+  {
+    label: "Sub-process",
+    actionName: "replace-with-subprocess",
+    className: "bpmn-icon-subprocess-expanded",
+    target: {
+      type: "bpmn:SubProcess",
+      isExpanded: true
+    }
+  },
+  {
+    label: "Transaction",
+    actionName: "replace-with-transaction",
+    className: "bpmn-icon-transaction",
+    target: {
+      type: "bpmn:Transaction",
+      isExpanded: true
+    }
+  },
+  {
+    label: "Event sub-process",
+    actionName: "replace-with-event-subprocess",
+    className: "bpmn-icon-event-subprocess-expanded",
+    target: {
+      type: "bpmn:SubProcess",
+      triggeredByEvent: true,
+      isExpanded: true
+    }
+  },
+  {
+    label: "Ad-hoc sub-process (collapsed)",
+    actionName: "replace-with-collapsed-ad-hoc-subprocess",
+    className: "bpmn-icon-subprocess-collapsed",
+    target: {
+      type: "bpmn:AdHocSubProcess",
       isExpanded: false
     }
   }
@@ -35769,6 +35830,15 @@ var TRANSACTION = [
     className: "bpmn-icon-subprocess-expanded",
     target: {
       type: "bpmn:SubProcess",
+      isExpanded: true
+    }
+  },
+  {
+    label: "Ad-hoc sub-process",
+    actionName: "replace-with-ad-hoc-subprocess",
+    className: "bpmn-icon-subprocess-expanded",
+    target: {
+      type: "bpmn:AdHocSubProcess",
       isExpanded: true
     }
   },
@@ -35872,6 +35942,24 @@ var TASK = [
     className: "bpmn-icon-subprocess-expanded",
     target: {
       type: "bpmn:SubProcess",
+      isExpanded: true
+    }
+  },
+  {
+    label: "Ad-hoc sub-process (collapsed)",
+    actionName: "replace-with-collapsed-ad-hoc-subprocess",
+    className: "bpmn-icon-subprocess-collapsed",
+    target: {
+      type: "bpmn:AdHocSubProcess",
+      isExpanded: false
+    }
+  },
+  {
+    label: "Ad-hoc sub-process (expanded)",
+    actionName: "replace-with-ad-hoc-subprocess",
+    className: "bpmn-icon-subprocess-expanded",
+    target: {
+      type: "bpmn:AdHocSubProcess",
       isExpanded: true
     }
   }
@@ -36194,6 +36282,202 @@ var PARTICIPANT = [
     }
   }
 ];
+var TYPED_EVENT = {
+  "bpmn:MessageEventDefinition": [
+    {
+      label: "Message start event",
+      actionName: "replace-with-message-start",
+      className: "bpmn-icon-start-event-message",
+      target: {
+        type: "bpmn:StartEvent",
+        eventDefinitionType: "bpmn:MessageEventDefinition"
+      }
+    },
+    {
+      label: "Message intermediate catch event",
+      actionName: "replace-with-message-intermediate-catch",
+      className: "bpmn-icon-intermediate-event-catch-message",
+      target: {
+        type: "bpmn:IntermediateCatchEvent",
+        eventDefinitionType: "bpmn:MessageEventDefinition"
+      }
+    },
+    {
+      label: "Message intermediate throw event",
+      actionName: "replace-with-message-intermediate-throw",
+      className: "bpmn-icon-intermediate-event-throw-message",
+      target: {
+        type: "bpmn:IntermediateThrowEvent",
+        eventDefinitionType: "bpmn:MessageEventDefinition"
+      }
+    },
+    {
+      label: "Message end event",
+      actionName: "replace-with-message-end",
+      className: "bpmn-icon-end-event-message",
+      target: {
+        type: "bpmn:EndEvent",
+        eventDefinitionType: "bpmn:MessageEventDefinition"
+      }
+    }
+  ],
+  "bpmn:TimerEventDefinition": [
+    {
+      label: "Timer start event",
+      actionName: "replace-with-timer-start",
+      className: "bpmn-icon-start-event-timer",
+      target: {
+        type: "bpmn:StartEvent",
+        eventDefinitionType: "bpmn:TimerEventDefinition"
+      }
+    },
+    {
+      label: "Timer intermediate catch event",
+      actionName: "replace-with-timer-intermediate-catch",
+      className: "bpmn-icon-intermediate-event-catch-timer",
+      target: {
+        type: "bpmn:IntermediateCatchEvent",
+        eventDefinitionType: "bpmn:TimerEventDefinition"
+      }
+    }
+  ],
+  "bpmn:ConditionalEventDefinition": [
+    {
+      label: "Conditional start event",
+      actionName: "replace-with-conditional-start",
+      className: "bpmn-icon-start-event-condition",
+      target: {
+        type: "bpmn:StartEvent",
+        eventDefinitionType: "bpmn:ConditionalEventDefinition"
+      }
+    },
+    {
+      label: "Conditional intermediate catch event",
+      actionName: "replace-with-conditional-intermediate-catch",
+      className: "bpmn-icon-intermediate-event-catch-condition",
+      target: {
+        type: "bpmn:IntermediateCatchEvent",
+        eventDefinitionType: "bpmn:ConditionalEventDefinition"
+      }
+    }
+  ],
+  "bpmn:SignalEventDefinition": [
+    {
+      label: "Signal start event",
+      actionName: "replace-with-signal-start",
+      className: "bpmn-icon-start-event-signal",
+      target: {
+        type: "bpmn:StartEvent",
+        eventDefinitionType: "bpmn:SignalEventDefinition"
+      }
+    },
+    {
+      label: "Signal intermediate catch event",
+      actionName: "replace-with-signal-intermediate-catch",
+      className: "bpmn-icon-intermediate-event-catch-signal",
+      target: {
+        type: "bpmn:IntermediateCatchEvent",
+        eventDefinitionType: "bpmn:SignalEventDefinition"
+      }
+    },
+    {
+      label: "Signal intermediate throw event",
+      actionName: "replace-with-signal-intermediate-throw",
+      className: "bpmn-icon-intermediate-event-throw-signal",
+      target: {
+        type: "bpmn:IntermediateThrowEvent",
+        eventDefinitionType: "bpmn:SignalEventDefinition"
+      }
+    },
+    {
+      label: "Signal end event",
+      actionName: "replace-with-signal-end",
+      className: "bpmn-icon-end-event-signal",
+      target: {
+        type: "bpmn:EndEvent",
+        eventDefinitionType: "bpmn:SignalEventDefinition"
+      }
+    }
+  ],
+  "bpmn:ErrorEventDefinition": [
+    {
+      label: "Error start event",
+      actionName: "replace-with-error-start",
+      className: "bpmn-icon-start-event-error",
+      target: {
+        type: "bpmn:StartEvent",
+        eventDefinitionType: "bpmn:ErrorEventDefinition"
+      }
+    },
+    {
+      label: "Error end event",
+      actionName: "replace-with-error-end",
+      className: "bpmn-icon-end-event-error",
+      target: {
+        type: "bpmn:EndEvent",
+        eventDefinitionType: "bpmn:ErrorEventDefinition"
+      }
+    }
+  ],
+  "bpmn:EscalationEventDefinition": [
+    {
+      label: "Escalation start event",
+      actionName: "replace-with-escalation-start",
+      className: "bpmn-icon-start-event-escalation",
+      target: {
+        type: "bpmn:StartEvent",
+        eventDefinitionType: "bpmn:EscalationEventDefinition"
+      }
+    },
+    {
+      label: "Escalation intermediate throw event",
+      actionName: "replace-with-escalation-intermediate-throw",
+      className: "bpmn-icon-intermediate-event-throw-escalation",
+      target: {
+        type: "bpmn:IntermediateThrowEvent",
+        eventDefinitionType: "bpmn:EscalationEventDefinition"
+      }
+    },
+    {
+      label: "Escalation end event",
+      actionName: "replace-with-escalation-end",
+      className: "bpmn-icon-end-event-escalation",
+      target: {
+        type: "bpmn:EndEvent",
+        eventDefinitionType: "bpmn:EscalationEventDefinition"
+      }
+    }
+  ],
+  "bpmn:CompensateEventDefinition": [
+    {
+      label: "Compensation start event",
+      actionName: "replace-with-compensation-start",
+      className: "bpmn-icon-start-event-compensation",
+      target: {
+        type: "bpmn:StartEvent",
+        eventDefinitionType: "bpmn:CompensateEventDefinition"
+      }
+    },
+    {
+      label: "Compensation intermediate throw event",
+      actionName: "replace-with-compensation-intermediate-throw",
+      className: "bpmn-icon-intermediate-event-throw-compensation",
+      target: {
+        type: "bpmn:IntermediateThrowEvent",
+        eventDefinitionType: "bpmn:CompensateEventDefinition"
+      }
+    },
+    {
+      label: "Compensation end event",
+      actionName: "replace-with-compensation-end",
+      className: "bpmn-icon-end-event-compensation",
+      target: {
+        type: "bpmn:EndEvent",
+        eventDefinitionType: "bpmn:CompensateEventDefinition"
+      }
+    }
+  ]
+};
 
 // node_modules/bpmn-js/lib/features/popup-menu/util/Icons.js
 var Icons_default = {
@@ -36238,8 +36522,10 @@ ReplaceMenuProvider.prototype._register = function() {
   this._popupMenu.registerProvider("bpmn-replace", this);
 };
 ReplaceMenuProvider.prototype.getPopupMenuEntries = function(target) {
+  var _a;
   var businessObject = target.businessObject;
   var rules = this._rules;
+  var sameTypeEventOptions = [], eventDefinitionType;
   var filteredReplaceOptions = [];
   if (isArray(target) || !rules.allowed("shape.replace", { element: target })) {
     return {};
@@ -36251,8 +36537,20 @@ ReplaceMenuProvider.prototype.getPopupMenuEntries = function(target) {
   if (is(businessObject, "bpmn:DataStoreReference") && !is(target.parent, "bpmn:Collaboration")) {
     return this._createEntries(target, DATA_STORE_REFERENCE);
   }
+  if (is(businessObject, "bpmn:Event") && !is(businessObject, "bpmn:BoundaryEvent")) {
+    eventDefinitionType = (_a = businessObject.get("eventDefinitions")[0]) == null ? void 0 : _a.$type;
+    sameTypeEventOptions = TYPED_EVENT[eventDefinitionType] || [];
+    if (!isEventSubProcess(businessObject.$parent) && is(businessObject.$parent, "bpmn:SubProcess")) {
+      sameTypeEventOptions = filter(sameTypeEventOptions, function(option) {
+        return option.target.type !== "bpmn:StartEvent";
+      });
+    }
+  }
   if (is(businessObject, "bpmn:StartEvent") && !is(businessObject.$parent, "bpmn:SubProcess")) {
-    filteredReplaceOptions = filter(START_EVENT, differentType);
+    filteredReplaceOptions = filter(
+      START_EVENT.concat(sameTypeEventOptions),
+      differentType
+    );
     return this._createEntries(target, filteredReplaceOptions);
   }
   if (is(businessObject, "bpmn:Participant")) {
@@ -36262,20 +36560,26 @@ ReplaceMenuProvider.prototype.getPopupMenuEntries = function(target) {
     return this._createEntries(target, filteredReplaceOptions);
   }
   if (is(businessObject, "bpmn:StartEvent") && isEventSubProcess(businessObject.$parent)) {
-    filteredReplaceOptions = filter(EVENT_SUB_PROCESS_START_EVENT, function(replaceOption) {
-      var target2 = replaceOption.target;
-      var isInterrupting4 = target2.isInterrupting !== false;
-      var isInterruptingEqual = businessObject.isInterrupting === isInterrupting4;
-      return differentType(replaceOption) || !differentType(replaceOption) && !isInterruptingEqual;
-    });
+    filteredReplaceOptions = filter(
+      EVENT_SUB_PROCESS_START_EVENT.concat(sameTypeEventOptions),
+      function(replaceOption) {
+        var target2 = replaceOption.target;
+        var isInterrupting4 = target2.isInterrupting !== false;
+        var isInterruptingEqual = businessObject.isInterrupting === isInterrupting4;
+        return differentType(replaceOption) || !differentType(replaceOption) && !isInterruptingEqual;
+      }
+    );
     return this._createEntries(target, filteredReplaceOptions);
   }
   if (is(businessObject, "bpmn:StartEvent") && !isEventSubProcess(businessObject.$parent) && is(businessObject.$parent, "bpmn:SubProcess")) {
-    filteredReplaceOptions = filter(START_EVENT_SUB_PROCESS, differentType);
+    filteredReplaceOptions = filter(
+      START_EVENT_SUB_PROCESS.concat(sameTypeEventOptions),
+      differentType
+    );
     return this._createEntries(target, filteredReplaceOptions);
   }
   if (is(businessObject, "bpmn:EndEvent")) {
-    filteredReplaceOptions = filter(END_EVENT, function(replaceOption) {
+    filteredReplaceOptions = filter(END_EVENT.concat(sameTypeEventOptions), function(replaceOption) {
       var target2 = replaceOption.target;
       if (target2.eventDefinitionType == "bpmn:CancelEventDefinition" && !is(businessObject.$parent, "bpmn:Transaction")) {
         return false;
@@ -36297,7 +36601,10 @@ ReplaceMenuProvider.prototype.getPopupMenuEntries = function(target) {
     return this._createEntries(target, filteredReplaceOptions);
   }
   if (is(businessObject, "bpmn:IntermediateCatchEvent") || is(businessObject, "bpmn:IntermediateThrowEvent")) {
-    filteredReplaceOptions = filter(INTERMEDIATE_EVENT, differentType);
+    filteredReplaceOptions = filter(
+      INTERMEDIATE_EVENT.concat(sameTypeEventOptions),
+      differentType
+    );
     return this._createEntries(target, filteredReplaceOptions);
   }
   if (is(businessObject, "bpmn:Gateway")) {
@@ -36312,16 +36619,19 @@ ReplaceMenuProvider.prototype.getPopupMenuEntries = function(target) {
     filteredReplaceOptions = filter(EVENT_SUB_PROCESS, differentType);
     return this._createEntries(target, filteredReplaceOptions);
   }
+  if (is(businessObject, "bpmn:AdHocSubProcess") && isExpanded(target)) {
+    filteredReplaceOptions = filter(AD_HOC_SUBPROCESS_EXPANDED, differentType);
+    return this._createEntries(target, filteredReplaceOptions);
+  }
   if (is(businessObject, "bpmn:SubProcess") && isExpanded(target)) {
     filteredReplaceOptions = filter(SUBPROCESS_EXPANDED, differentType);
     return this._createEntries(target, filteredReplaceOptions);
   }
-  if (is(businessObject, "bpmn:AdHocSubProcess") && !isExpanded(target)) {
+  if (is(businessObject, "bpmn:SubProcess") && !isExpanded(target)) {
     filteredReplaceOptions = filter(TASK, function(replaceOption) {
-      var target2 = replaceOption.target;
-      var isTargetSubProcess = target2.type === "bpmn:SubProcess";
-      var isTargetExpanded = target2.isExpanded === true;
-      return isDifferentType(target2, target2) && (!isTargetSubProcess || isTargetExpanded);
+      var isTargetSameType = replaceOption.target.type === target.type;
+      var isTargetExpanded = replaceOption.target.isExpanded === true;
+      return isTargetSameType === isTargetExpanded;
     });
     return this._createEntries(target, filteredReplaceOptions);
   }
@@ -36330,11 +36640,6 @@ ReplaceMenuProvider.prototype.getPopupMenuEntries = function(target) {
   }
   if (is(businessObject, "bpmn:FlowNode")) {
     filteredReplaceOptions = filter(TASK, differentType);
-    if (is(businessObject, "bpmn:SubProcess") && !isExpanded(target)) {
-      filteredReplaceOptions = filter(filteredReplaceOptions, function(replaceOption) {
-        return replaceOption.label !== "Sub-process (collapsed)";
-      });
-    }
     return this._createEntries(target, filteredReplaceOptions);
   }
   return {};
@@ -36357,12 +36662,6 @@ ReplaceMenuProvider.prototype.getPopupMenuHeaderEntries = function(target) {
     headerEntries = {
       ...headerEntries,
       ...this._getParticipantMultiplicityHeaderEntries(target)
-    };
-  }
-  if (is(target, "bpmn:SubProcess") && !is(target, "bpmn:Transaction") && !isEventSubProcess(target)) {
-    headerEntries = {
-      ...headerEntries,
-      ...this._getAdHocHeaderEntries(target)
     };
   }
   if (canBeNonInterrupting(target)) {
@@ -36550,32 +36849,6 @@ ReplaceMenuProvider.prototype._getParticipantMultiplicityHeaderEntries = functio
       title: translate4("Participant multiplicity"),
       active: !!participantMultiplicity,
       action: toggleParticipantMultiplicity
-    }
-  };
-};
-ReplaceMenuProvider.prototype._getAdHocHeaderEntries = function(element) {
-  var translate4 = this._translate;
-  var businessObject = getBusinessObject(element);
-  var isAdHoc = is(businessObject, "bpmn:AdHocSubProcess");
-  var replaceElement = this._bpmnReplace.replaceElement;
-  return {
-    "toggle-adhoc": {
-      className: "bpmn-icon-ad-hoc-marker",
-      title: translate4("Ad-hoc"),
-      active: isAdHoc,
-      action: function(event2, entry) {
-        if (isAdHoc) {
-          return replaceElement(element, { type: "bpmn:SubProcess" }, {
-            autoResize: false,
-            layoutConnection: false
-          });
-        } else {
-          return replaceElement(element, { type: "bpmn:AdHocSubProcess" }, {
-            autoResize: false,
-            layoutConnection: false
-          });
-        }
-      }
     }
   };
 };
@@ -43309,27 +43582,27 @@ var feelHighlighting = (0, import_highlight.styleTags)({
 var spec_identifier = { __proto__: null, for: 10, in: 32, return: 36, if: 40, then: 42, else: 44, some: 48, every: 50, satisfies: 56, or: 60, and: 64, between: 72, instance: 86, of: 89, days: 101, time: 103, duration: 105, years: 107, months: 109, date: 111, list: 117, context: 123, function: 130, null: 156, true: 330, false: 330, "?": 170, external: 186, not: 211 };
 var parser = import_lr.LRParser.deserialize({
   version: 14,
-  states: "C|O`QYOOO`QYOOO$mQYOOOOQU'#Ce'#CeO$wQYO'#C`O&QQYO'#FQOOQQ'#Ff'#FfO&[QYO'#FfO`QYO'#DVOOQU'#En'#EnO'{Q^O'#D]OOQU'#D^'#D^OOQU'#D]'#D]OOQO'#Fn'#FnO)xQWO'#DvOOQQ'#D}'#D}OOQQ'#EO'#EOOOQQ'#EP'#EPO)}OWO'#ESO)xQWO'#EQOOQQ'#EQ'#EQOOQQ'#Ft'#FtOOQQ'#Fr'#FrOOQQ'#Fy'#FyOOQQ'#EU'#EUO`QYO'#EWOOQQ'#FS'#FSO*SQ^O'#FSO+yQYO'#EXO,QQWO'#EYOOQP'#F}'#F}O,VQXO'#EaOOQQ'#Fz'#FzOOQQ'#FR'#FRQOQWOOOOQQ'#FT'#FTOOQQ'#F^'#F^O`QYO'#CoOOQQ'#F_'#F_O$wQYO'#CsO,bQYO'#DwOOQQ'#Fs'#FsO,gQYO'#EROOQO'#ER'#ERO`QYO'#EVO`QYO'#EUOOQO'#F{'#F{Q,oQWOOO,tQYO'#DRO-kQWO'#FbOOQO'#DT'#DTO-vQYO'#FfO-}QWOOO.tQYO'#CdO/RQYO'#FVOOQQ'#Cc'#CcO/WQYO'#FUOOQQ'#Cb'#CbO/`QYO,58zO`QYO,59iOOQQ'#Fc'#FcOOQQ'#Fd'#FdOOQQ'#Fe'#FeO`QYO,59qO`QYO,59qO`QYO,59qOOQQ'#Fl'#FlO/eQYO,5:^OOQQ'#Fm'#FmO`QYO,5:`O`QYO,59eO`QYO,59gO`QYO,59iO1^QYO,59iO1eQYO,59rOOQQ,5:i,5:iO1jQYO,59qOOQU-E8l-E8lO3^QYO'#FoOOQQ,5:b,5:bOOQQ,5:n,5:nOOQQ,5:l,5:lO3eQYO,5:rOOQQ,5;n,5;nO3oQYO,5:qO3|QWO,5:sO4RQYO,5:tOOQP'#Ee'#EeO4xQXO'#EdOOQO'#Ec'#EcO5PQWO'#EbO5UQWO'#GOO5^QWO,5:{O5cQYO,59ZO/RQYO'#FaOOQQ'#Cw'#CwO5jQYO'#F`OOQQ'#Cv'#CvO5rQYO,59_O5wQYO,5:cO5|QYO,5:mO3hQYO,5:qO6RQYO,5:pO`QYO'#EwQ,oQWOOO`QYO'#EmO6xQWO,5;|O`QYOOOOQR'#Cf'#CfOOQQ'#Ej'#EjO7rQYO,59OO`QYO,5;qOOQQ'#FY'#FYO$wQYO'#EkO8SQYO,5;pO`QYO1G.fOOQQ'#F]'#F]O8yQYO1G/TO;pQYO1G/]O;zQYO1G/]O<UQYO1G/]OOQQ1G/x1G/xO=xQYO1G/zO>PQYO1G/PO?YQYO1G/RO@cQYO1G/TO`QYO1G/TOOQQ1G/T1G/TO@yQYO1G/^OAhQ^O'#CdOBzQYO'#FqOOQO'#Dz'#DzOCUQWO'#DyOCZQWO'#FpOOQO'#Dx'#DxOOQO'#D{'#D{OCcQWO,5<ZOOQQ1G0^1G0^O`QYO1G0]O`QYO'#EsOChQWO,5<]OOQQ1G0_1G0_OCsQWO'#E[ODOQWO'#F|OOQO'#EZ'#EZODWQWO1G0`OOQP'#Eu'#EuOD]QXO,5;OO`QYO,5:|ODdQXO'#EvODlQWO,5<jOOQQ1G0g1G0gO`QYO1G.uO`QYO,5;{O$wQYO'#ElODtQYO,5;zO`QYO1G.yOD|QYO1G/}OOQO1G0X1G0XOOQO,5;c,5;cOOQO-E8u-E8uOOQO,5;X,5;XOOQO-E8k-E8kOERQWOOOOQQ-E8h-E8hOEWQYO'#CmOOQQ1G1]1G1]OOQQ,5;V,5;VOOQQ-E8i-E8iOEeQYO7+$QOOQQ7+%f7+%fO`QYO7+$oOF[QYO,5:rOFiQWO7+$oOFnQYO'#D[OOQQ'#DZ'#DZOHbQYO'#D_OHgQYO'#D_OHlQYO'#D_OHqQ`O'#DgOHvQ`O'#DjOH{Q`O'#DnOOQQ7+$x7+$xO`QYO,5:eO$wQYO'#ErOIQQWO,5<[OOQQ1G1u1G1uOJWQYO7+%wOJeQYO,5;_OOQO-E8q-E8qO@yQYO,5:vO$wQYO'#EtOJrQWO,5<hOJzQYO7+%zOOQP-E8s-E8sOKRQYO1G0hOOQO,5;b,5;bOOQO-E8t-E8tOK]QYO7+$aOKdQYO1G1gOOQQ,5;W,5;WOOQQ-E8j-E8jOKnQYO7+$eOOQO7+%i7+%iO`QYO,59XOLeQYO<<HZOOQQ<<HZ<<HZO/eQYO'#EoOMnQYO,59vO! bQYO,59yO! gQYO,59yO! lQYO,59yO! qQYO,5:RO$wQYO,5:UO!!`QbO,5:YO!!gQYO1G0POOQO,5;^,5;^OOQO-E8p-E8pO!!qQYO<<IcOOQQ<<Ic<<IcOOQO1G0b1G0bOOQO,5;`,5;`OOQO-E8r-E8rO!%pQYO'#E^OOQQ<<If<<IfO`QYO<<IfO`QYO<<G{O!&gQYO1G.sOOQQ,5;Z,5;ZOOQQ-E8m-E8mO!&qQYO1G/eOOQQ1G/e1G/eO!&vQbO'#D]O!'XQ`O'#D[O!'dQ`O1G/mO!'iQWO'#DmO!'nQ`O'#FhOOQO'#Dl'#DlO!'vQ`O1G/pOOQO'#Dq'#DqO!'{Q`O'#FjOOQO'#Dp'#DpO!(TQ`O1G/tOOQQAN?QAN?QO!(YQYOAN=gOOQQ7+%P7+%PO!)PQ`O,59vOOQQ7+%X7+%XO! qQYO,5:XO$wQYO'#EpO!)[Q`O,5<SOOQQ7+%[7+%[O! qQYO'#EqO!)dQ`O,5<UO!)lQ`O7+%`OOQO1G/s1G/sOOQO,5;[,5;[OOQO-E8n-E8nOOQO,5;],5;]OOQO-E8o-E8oO@yQYO<<HzOOQQAN>fAN>fO/eQYO'#EoO! qQYO<<HzO!)qQ`O7+%`O!)vQ`O1G/tO!!`QbO,5:YO!){Q`O'#Dn",
-  stateData: "!*[~O#rOS#sOSPOSQOS~OTsOZVO[UOdtOhvOivOs}OviO!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~OTsO[UOdtOhvOivOs}OviO!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~OZ!TO#]!UO~P#PO#nRO#oRO~OZ!^O[!^O]!_O^!_O_!`O`!kOn!hOp!iOr!]Os!]Ot!jO{!lO!i!fO#z!dOv$bX~O#l#tX$s#tX~P%PO$i!mOT$YXZ$YX[$YXd$YXh$YXi$YXs$YXv$YX!T$YX!U$YX!V$YX!X$YX!c$YX!g$YX!i$YX!p$YX!w$YX#S$YX#n$YX#o$YX$Z$YX$j$YX$k$YX$l$YX~O#nRO#oROZ!PX[!PX]!PX^!PX_!PX`!PXn!PXp!PXr!PXs!PXt!PXv!PX{!PX!i!PX#l!PX#p!PX#z!PX$s!PX$O!PXx!PX#}!PX!g!PXe!PXb!PX#R!PXf!PXl!PX~Ov!pO~O$j`O~O#p!uOZ#vX[#vX]#vX^#vX_#vX`#vXn#vXp#vXr#vXs#vXt#vXv#vX{#vX!i#vX#l#vX#z#vX$s#vX$O#vXx#vX#}#vX!g#vXe#vXb#vX#R#vXf#vXl#vX~O!g$eP~P`Ov!xO~O#m!yO$j`O#R$rP~Op#VO~Op#WOv!uX~O$s#ZO~O#luX$OuX$suXxuX#}uX!guXeuXbuX#RuXfuXluX~P%PO$O#]O#l$UXx$UX~O#l#[X~P&[Ov#_O~OZ#`O[#`O]#`O^#`O_#`O#nRO#oRO#z#`O#{#`O$]WX~O`WXxWX$OWX~P.SO`#dO~O$O#eOb#xX~Ob#hO~O#nRO#oRO$ZZO~OTsOZVO[UOdtOhvOivOs}O!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~Ov#rO~P/pO|#tO~O{!lO!i!fO#z!dOZya[ya]ya^ya_ya`yanyapyaryasyatyav$bX#lya$sya$Oyaxya#}ya!gyaeyabya#Ryafyalya~Ox$eP~P`Ox#}O#}$OO~P%PO#}$OO$O$PO!g$eX~P%PO!g$RO~O#nRO#oROx$pP~OZ#`O[#`O]#`O^#`O_#`O#m!yO#z#`O#{#`O~O$]#WX~P4^O$]$YO~O$O$ZO#R$rX~O#R$]O~Oe$^O~P%PO$O$`Ol$SX~Ol$bO~O!W$cO~O!T$dO~O#l!xa$s!xa$O!xax!xa#}!xa!g!xae!xab!xa#R!xaf!xal!xa~P%PO$O#]O#l$Uax$Ua~OZ#`O[#`O]#`O^#`O_#`O#nRO#oRO#z#`O#{#`O~O`Wa$]WaxWa$OWa~P7TO$O#eOb#xa~OZ!^O[!^O]!_O^!_O_!`O{!lO!i!fO#z!dOv$bX~O`qinqipqirqisqitqi#lqi$sqi$Oqixqi#}qi!gqieqibqi#Rqifqilqi~P8[O_!`O{!lO!i!fO#z!dOZyi[yi`yinyipyiryisyityiv$bX#lyi$syi$Oyixyi#}yi!gyieyibyi#Ryifyilyi~O]!_O^!_O~P:SO]yi^yi~P:SO{!lO!i!fO#z!dOZyi[yi]yi^yi_yi`yinyipyiryisyityiv$bX#lyi$syi$Oyixyi#}yi!gyieyibyi#Ryifyilyi~O!g$pO~P%PO`!kOp!iOr!]Os!]Ot!jOnmi#lmi$smi$Omixmi#}mi!gmiemibmi#Rmifmilmi~P8[O`!kOr!]Os!]Ot!jOnoipoi#loi$soi$Ooixoi#}oi!goieoiboi#Roifoiloi~P8[O`!kOn!hOp$qOr!]Os!]Ot!jO~P8[O!S$vO!V$wO!X$xO![$yO!_$zO!c${O#nRO#oRO$ZZO~OZ#bX[#bX]#bX^#bX_#bX`#bXn#bXp#bXr#bXs#bXt#bXv#bXx#bX{#bX!i#bX#n#bX#o#bX#p#bX#z#bX$O#bX~P.SO$O$POx$eX~P%PO$]$}O~O$O%OOx$dX~Ox%QO~O$O$PO!g$eax$ea~O$]%UOx#OX$O#OX~O$O%VOx$pX~Ox%XO~O$]#Wa~P4^O#m!yO$j`O~O$O$ZO#R$ra~O$O$`Ol$Sa~O!U%cO~OxrO~O#}%dObaX$OaX~P%PO#lSq$sSq$OSqxSq#}Sq!gSqeSqbSq#RSqfSqlSq~P%POx#}O#}$OO$OuX~P%POx%fO~O#z%gOZ!OX[!OX]!OX^!OX_!OX`!OXn!OXp!OXr!OXs!OXt!OXv!OX{!OX!i!OX#l!OX$s!OX$O!OXx!OX#}!OX!g!OXe!OXb!OX#R!OXf!OXl!OX~Op%iO~Op%jO~Op%kO~O!]%lO~O!]%mO~O!]%nO~O$O%OOx$da~OZ!^O[!^O]!_O^!_O_!`O`!kOn!hOp!iOr!]Os!]Ot!jO{!lO#z!dOv$bX~Ox%sO!g%sO!i%rO~PIYO!g#ga$O#gax#ga~P%PO$O%VOx$pa~O#P%yO~P`O#R#Ui$O#Ui~P%POf%zO~P%POl$Ti$O$Ti~P%PO#lgq$sgq$Ogqxgq#}gq!ggqegqbgq#Rgqfgqlgq~P%PO`qynqypqyrqysqytqy#lqy$sqy$Oqyxqy#}qy!gqyeqybqy#Rqyfqylqy~P8[O#z%gOZ!Oa[!Oa]!Oa^!Oa_!Oa`!Oan!Oap!Oar!Oas!Oat!Oav!Oa{!Oa!i!Oa#l!Oa$s!Oa$O!Oax!Oa#}!Oa!g!Oae!Oab!Oa#R!Oaf!Oal!Oa~O!T&OO~O!W&OO~O!T&PO~O!S$vO!V$wO!X$xO![$yO!_$zO!c&uO#nRO#oRO$ZZO~O!Y$^P~P! qOx!mi$O!mi~P%POT$aXZ$aX[$aX]!yy^!yy_!yy`!yyd$aXh$aXi$aXn!yyp!yyr!yys$aXt!yyv$aX{!yy!T$aX!U$aX!V$aX!X$aX!c$aX!g$aX!i$aX!p$aX!w$aX#S$aX#l!yy#n$aX#o$aX#z!yy$Z$aX$i$aX$j$aX$k$aX$l$aX$s!yy$O!yyx!yy#}!yye!yyb!yy#R!yyf!yyl!yy~O#l#QX$s#QX$O#QXx#QX#}#QX!g#QXe#QXb#QX#R#QXf#QXl#QX~P%PObai$Oai~P%PO!U&_O~O#nRO#oRO!Y!PX#z!PX$O!PX~O#z&pO!Y!OX$O!OX~O!Y&aO~O$]&bO~O$O&cO!Y$[X~O!Y&eO~O$O&fO!Y$^X~O!Y&hO~O#lc!R$sc!R$Oc!Rxc!R#}c!R!gc!Rec!Rbc!R#Rc!Rfc!Rlc!R~P%PO#z&pO!Y!Oa$O!Oa~O$O&cO!Y$[a~O$O&fO!Y$^a~O$_&nO~O$_&qO~O!Y&rO~O!]&tO~O$Z~QP_^$i]#z~",
+  states: "C|O`QYOOO`QYOOO$sQYOOOOQU'#Ce'#CeO$}QYO'#C`O&WQYO'#FQOOQQ'#Ff'#FfO&bQYO'#FfO`QYO'#DVOOQU'#En'#EnO(UQ^O'#D]OOQU'#D^'#D^OOQU'#D]'#D]OOQO'#Fn'#FnO*RQWO'#DvOOQQ'#D}'#D}OOQQ'#EO'#EOOOQQ'#EP'#EPO*WOWO'#ESO*RQWO'#EQOOQQ'#EQ'#EQOOQQ'#Ft'#FtOOQQ'#Fr'#FrOOQQ'#Fy'#FyOOQQ'#EU'#EUO`QYO'#EWOOQQ'#FS'#FSO*]Q^O'#FSO,SQYO'#EXO,ZQWO'#EYOOQP'#F}'#F}O,`QXO'#EaOOQQ'#Fz'#FzOOQQ'#FR'#FRQOQWOOOOQQ'#FT'#FTOOQQ'#F^'#F^O`QYO'#CoOOQQ'#F_'#F_O$}QYO'#CsO,kQYO'#DwOOQQ'#Fs'#FsO,pQYO'#EROOQO'#ER'#ERO`QYO'#EVO`QYO'#EUOOQO'#F{'#F{Q,xQWOOO,}QYO'#DRO-tQWO'#FbOOQO'#DT'#DTO.PQYO'#FfO.WQWOOO.}QYO'#CdO/[QYO'#FVOOQQ'#Cc'#CcO/aQYO'#FUOOQQ'#Cb'#CbO/iQYO,58zO`QYO,59iOOQQ'#Fc'#FcOOQQ'#Fd'#FdOOQQ'#Fe'#FeO`QYO,59qO`QYO,59qO`QYO,59qOOQQ'#Fl'#FlO/nQYO,5:^OOQQ'#Fm'#FmO`QYO,5:`O`QYO,59eO`QYO,59gO`QYO,59iO1jQYO,59iO1qQYO,59rOOQQ,5:i,5:iO1vQYO,59qOOQU-E8l-E8lO3jQYO'#FoOOQQ,5:b,5:bOOQQ,5:n,5:nOOQQ,5:l,5:lO3qQYO,5:rOOQQ,5;n,5;nO3{QYO,5:qO4YQWO,5:sO4_QYO,5:tOOQP'#Ee'#EeO5UQXO'#EdOOQO'#Ec'#EcO5]QWO'#EbO5bQWO'#GOO5jQWO,5:{O5oQYO,59ZO/[QYO'#FaOOQQ'#Cw'#CwO5vQYO'#F`OOQQ'#Cv'#CvO6OQYO,59_O6TQYO,5:cO6YQYO,5:mO3tQYO,5:qO6_QYO,5:pO`QYO'#EwQ,xQWOOO`QYO'#EmO7UQWO,5;|O`QYOOOOQR'#Cf'#CfOOQQ'#Ej'#EjO8OQYO,59OO`QYO,5;qOOQQ'#FY'#FYO$}QYO'#EkO8`QYO,5;pO`QYO1G.fOOQQ'#F]'#F]O9VQYO1G/TO;|QYO1G/]O<WQYO1G/]O<bQYO1G/]OOQQ1G/x1G/xO>UQYO1G/zO>]QYO1G/PO?fQYO1G/RO@oQYO1G/TO`QYO1G/TOOQQ1G/T1G/TOAVQYO1G/^OAtQ^O'#CdOCWQYO'#FqOOQO'#Dz'#DzOCbQWO'#DyOCgQWO'#FpOOQO'#Dx'#DxOOQO'#D{'#D{OCoQWO,5<ZOOQQ1G0^1G0^O`QYO1G0]O`QYO'#EsOCtQWO,5<]OOQQ1G0_1G0_ODPQWO'#E[OD[QWO'#F|OOQO'#EZ'#EZODdQWO1G0`OOQP'#Eu'#EuODiQXO,5;OO`QYO,5:|ODpQXO'#EvODxQWO,5<jOOQQ1G0g1G0gO`QYO1G.uO`QYO,5;{O$}QYO'#ElOEQQYO,5;zO`QYO1G.yOEYQYO1G/}OOQO1G0X1G0XOOQO,5;c,5;cOOQO-E8u-E8uOOQO,5;X,5;XOOQO-E8k-E8kOE_QWOOOOQQ-E8h-E8hOEdQYO'#CmOOQQ1G1]1G1]OOQQ,5;V,5;VOOQQ-E8i-E8iOEqQYO7+$QOOQQ7+%f7+%fO`QYO7+$oOFhQYO,5:rOFuQWO7+$oOFzQYO'#D[OOQQ'#DZ'#DZOHnQYO'#D_OHsQYO'#D_OHxQYO'#D_OH}Q`O'#DgOISQ`O'#DjOIXQ`O'#DnOOQQ7+$x7+$xO`QYO,5:eO$}QYO'#ErOI^QWO,5<[OOQQ1G1u1G1uOJdQYO7+%wOJqQYO,5;_OOQO-E8q-E8qOAVQYO,5:vO$}QYO'#EtOKOQWO,5<hOKWQYO7+%zOOQP-E8s-E8sOK_QYO1G0hOOQO,5;b,5;bOOQO-E8t-E8tOKiQYO7+$aOKpQYO1G1gOOQQ,5;W,5;WOOQQ-E8j-E8jOKzQYO7+$eOOQO7+%i7+%iO`QYO,59XOLqQYO<<HZOOQQ<<HZ<<HZO/nQYO'#EoOMzQYO,59vO! nQYO,59yO! sQYO,59yO! xQYO,59yO! }QYO,5:RO$}QYO,5:UO!!lQbO,5:YO!!sQYO1G0POOQO,5;^,5;^OOQO-E8p-E8pO!!}QYO<<IcOOQQ<<Ic<<IcOOQO1G0b1G0bOOQO,5;`,5;`OOQO-E8r-E8rO!%|QYO'#E^OOQQ<<If<<IfO`QYO<<IfO`QYO<<G{O!&sQYO1G.sOOQQ,5;Z,5;ZOOQQ-E8m-E8mO!&}QYO1G/eOOQQ1G/e1G/eO!'SQbO'#D]O!'eQ`O'#D[O!'pQ`O1G/mO!'uQWO'#DmO!'zQ`O'#FhOOQO'#Dl'#DlO!(SQ`O1G/pOOQO'#Dq'#DqO!(XQ`O'#FjOOQO'#Dp'#DpO!(aQ`O1G/tOOQQAN?QAN?QO!(fQYOAN=gOOQQ7+%P7+%PO!)]Q`O,59vOOQQ7+%X7+%XO! }QYO,5:XO$}QYO'#EpO!)hQ`O,5<SOOQQ7+%[7+%[O! }QYO'#EqO!)pQ`O,5<UO!)xQ`O7+%`OOQO1G/s1G/sOOQO,5;[,5;[OOQO-E8n-E8nOOQO,5;],5;]OOQO-E8o-E8oOAVQYO<<HzOOQQAN>fAN>fO/nQYO'#EoO! }QYO<<HzO!)}Q`O7+%`O!*SQ`O1G/tO!!lQbO,5:YO!*XQ`O'#Dn",
+  stateData: "!*h~O#rOS#sOSPOSQOS~OTsOZVO[UOdtOhvOivOr}Os}OviO!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~OTsO[UOdtOhvOivOr}Os}OviO!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~OZ!TO#]!UO~P#SO#nRO#oRO~OZ!^O[!^O]!_O^!_O_!`O`!kOn!hOp!iOr!]Os!]Ot!jO{!lO!i!fO#z!dOv$bX~O#l#tX$s#tX~P%VO$i!mOT$YXZ$YX[$YXd$YXh$YXi$YXr$YXs$YXv$YX!T$YX!U$YX!V$YX!X$YX!c$YX!g$YX!i$YX!p$YX!w$YX#S$YX#n$YX#o$YX$Z$YX$j$YX$k$YX$l$YX~O#nRO#oROZ!PX[!PX]!PX^!PX_!PX`!PXn!PXp!PXr!PXs!PXt!PXv!PX{!PX!i!PX#l!PX#p!PX#z!PX$s!PX$O!PXx!PX#}!PX!g!PXe!PXb!PX#R!PXf!PXl!PX~Ov!pO~O$j`O~O#p!uOZ#vX[#vX]#vX^#vX_#vX`#vXn#vXp#vXr#vXs#vXt#vXv#vX{#vX!i#vX#l#vX#z#vX$s#vX$O#vXx#vX#}#vX!g#vXe#vXb#vX#R#vXf#vXl#vX~O!g$eP~P`Ov!xO~O#m!yO$j`O#R$rP~Op#VO~Op#WOv!uX~O$s#ZO~O#luX$OuX$suXxuX#}uX!guXeuXbuX#RuXfuXluX~P%VO$O#]O#l$UXx$UX~O#l#[X~P&bOv#_O~OZ#`O[#`O]#`O^#`O_#`O#nRO#oRO#z#`O#{#`O$]WX~O`WXxWX$OWX~P.]O`#dO~O$O#eOb#xX~Ob#hO~O#nRO#oRO$ZZO~OTsOZVO[UOdtOhvOivOr}Os}O!T{O!U{O!VxO!XzO!c!OO!g|O!igO!pyO!wjO#SnO#nRO#oRO$ZZO$i_O$j`O$kaO$lbO~Ov#rO~P/yO|#tO~O{!lO!i!fO#z!dOZya[ya]ya^ya_ya`yanyapyaryasyatyav$bX#lya$sya$Oyaxya#}ya!gyaeyabya#Ryafyalya~Ox$eP~P`Ox#}O#}$OO~P%VO#}$OO$O$PO!g$eX~P%VO!g$RO~O#nRO#oROx$pP~OZ#`O[#`O]#`O^#`O_#`O#m!yO#z#`O#{#`O~O$]#WX~P4jO$]$YO~O$O$ZO#R$rX~O#R$]O~Oe$^O~P%VO$O$`Ol$SX~Ol$bO~O!W$cO~O!T$dO~O#l!xa$s!xa$O!xax!xa#}!xa!g!xae!xab!xa#R!xaf!xal!xa~P%VO$O#]O#l$Uax$Ua~OZ#`O[#`O]#`O^#`O_#`O#nRO#oRO#z#`O#{#`O~O`Wa$]WaxWa$OWa~P7aO$O#eOb#xa~OZ!^O[!^O]!_O^!_O_!`O{!lO!i!fO#z!dOv$bX~O`qinqipqirqisqitqi#lqi$sqi$Oqixqi#}qi!gqieqibqi#Rqifqilqi~P8hO_!`O{!lO!i!fO#z!dOZyi[yi`yinyipyiryisyityiv$bX#lyi$syi$Oyixyi#}yi!gyieyibyi#Ryifyilyi~O]!_O^!_O~P:`O]yi^yi~P:`O{!lO!i!fO#z!dOZyi[yi]yi^yi_yi`yinyipyiryisyityiv$bX#lyi$syi$Oyixyi#}yi!gyieyibyi#Ryifyilyi~O!g$pO~P%VO`!kOp!iOr!]Os!]Ot!jOnmi#lmi$smi$Omixmi#}mi!gmiemibmi#Rmifmilmi~P8hO`!kOr!]Os!]Ot!jOnoipoi#loi$soi$Ooixoi#}oi!goieoiboi#Roifoiloi~P8hO`!kOn!hOp$qOr!]Os!]Ot!jO~P8hO!S$vO!V$wO!X$xO![$yO!_$zO!c${O#nRO#oRO$ZZO~OZ#bX[#bX]#bX^#bX_#bX`#bXn#bXp#bXr#bXs#bXt#bXv#bXx#bX{#bX!i#bX#n#bX#o#bX#p#bX#z#bX$O#bX~P.]O$O$POx$eX~P%VO$]$}O~O$O%OOx$dX~Ox%QO~O$O$PO!g$eax$ea~O$]%UOx#OX$O#OX~O$O%VOx$pX~Ox%XO~O$]#Wa~P4jO#m!yO$j`O~O$O$ZO#R$ra~O$O$`Ol$Sa~O!U%cO~OxrO~O#}%dObaX$OaX~P%VO#lSq$sSq$OSqxSq#}Sq!gSqeSqbSq#RSqfSqlSq~P%VOx#}O#}$OO$OuX~P%VOx%fO~O#z%gOZ!OX[!OX]!OX^!OX_!OX`!OXn!OXp!OXr!OXs!OXt!OXv!OX{!OX!i!OX#l!OX$s!OX$O!OXx!OX#}!OX!g!OXe!OXb!OX#R!OXf!OXl!OX~Op%iO~Op%jO~Op%kO~O!]%lO~O!]%mO~O!]%nO~O$O%OOx$da~OZ!^O[!^O]!_O^!_O_!`O`!kOn!hOp!iOr!]Os!]Ot!jO{!lO#z!dOv$bX~Ox%sO!g%sO!i%rO~PIfO!g#ga$O#gax#ga~P%VO$O%VOx$pa~O#P%yO~P`O#R#Ui$O#Ui~P%VOf%zO~P%VOl$Ti$O$Ti~P%VO#lgq$sgq$Ogqxgq#}gq!ggqegqbgq#Rgqfgqlgq~P%VO`qynqypqyrqysqytqy#lqy$sqy$Oqyxqy#}qy!gqyeqybqy#Rqyfqylqy~P8hO#z%gOZ!Oa[!Oa]!Oa^!Oa_!Oa`!Oan!Oap!Oar!Oas!Oat!Oav!Oa{!Oa!i!Oa#l!Oa$s!Oa$O!Oax!Oa#}!Oa!g!Oae!Oab!Oa#R!Oaf!Oal!Oa~O!T&OO~O!W&OO~O!T&PO~O!S$vO!V$wO!X$xO![$yO!_$zO!c&uO#nRO#oRO$ZZO~O!Y$^P~P! }Ox!mi$O!mi~P%VOT$aXZ$aX[$aX]!yy^!yy_!yy`!yyd$aXh$aXi$aXn!yyp!yyr$aXs$aXt!yyv$aX{!yy!T$aX!U$aX!V$aX!X$aX!c$aX!g$aX!i$aX!p$aX!w$aX#S$aX#l!yy#n$aX#o$aX#z!yy$Z$aX$i$aX$j$aX$k$aX$l$aX$s!yy$O!yyx!yy#}!yye!yyb!yy#R!yyf!yyl!yy~O#l#QX$s#QX$O#QXx#QX#}#QX!g#QXe#QXb#QX#R#QXf#QXl#QX~P%VObai$Oai~P%VO!U&_O~O#nRO#oRO!Y!PX#z!PX$O!PX~O#z&pO!Y!OX$O!OX~O!Y&aO~O$]&bO~O$O&cO!Y$[X~O!Y&eO~O$O&fO!Y$^X~O!Y&hO~O#lc!R$sc!R$Oc!Rxc!R#}c!R!gc!Rec!Rbc!R#Rc!Rfc!Rlc!R~P%VO#z&pO!Y!Oa$O!Oa~O$O&cO!Y$[a~O$O&fO!Y$^a~O$_&nO~O$_&qO~O!Y&rO~O!]&tO~O$Z~QP_^$i]#z~",
   goto: "E|$sPPPP$tP%m%p%v&Y'sPPPPPP'|P$tPPP$tPP(P(SP$tP$tP$tPPP(YP(eP$t$tPP(n)T)`*m)TPPPPPPP)TPP)TP+r+u)TP+{,R$tP$tP$t,Y-R-U-[-RP-d.]-d-d/]0UP$t0}$t1v1v2o2rP2xPP1v3O3U/X3YPP3bP3e3l3r3x4O5Z5e5k5q5w6O6U6[6bPPPPPPPP6h6q8x9q:j:mPP:qPP:w:z;s<l<o<s<x=g>V>vP?oP?rP?v@iA[BTBZB^$tBdBdPPPPC]8xDUD}EQEy!mjOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR![SQ!YSR$m#eS!WS#eS#Qw$`W#w!p!x%O%VT&T%m&c#WXOPQWYilu|}!]!a!b!c!e!g!h!i!j!k#Z#]#_#c#g#r#t$O$P$Y$^$_$b$q$}%U%X%d%g%l%n%y%z&Q&b&f&n&p&q&tb!VSw!x#e$`%O%V%m&cU#a!V#b#uR#u!pU#a!V#b#uT$W!z$XR$l#cR#UwQ#SwR%`$`U!RQ#_#rQ#s!kR$g#]QrQQ$i#_R$s#rQ$|#tQ%t%UQ&S%lU&X%n&f&tQ&i&bT&o&n&qc$u#t%U%l%n&b&f&n&q&t!lkOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zQ#m!eU$t#t%U&nS%|%g&p]&R%l%n&b&f&q&t#V[OPQWilu|}!]!a!b!c!e!g!h!i!j!k!p#Z#]#_#c#g#r#t$O$P$Y$^$_$b$q$}%U%X%d%g%l%n%y%z&b&f&n&p&q&tR&W%mQ&U%mR&j&cQ&[%nR&s&tS&Y%n&tR&l&f!m]OPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR#|!pQ#y!pR%p%OS#x!p%OT$S!x%V!meOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!leOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zQ!rbT!{o$Z!mcOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mdOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mhOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mpOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR$V!xQ$T!xR%u%VQ%x%XR&]%yQ!}oR%[$ZT!|o$ZS!zo$ZT$W!z$XRrQS#b!V#uR$j#bQ#f!YR$n#fQ$a#SR%a$aQ#^!RR$h#^!vYOPQWilu|}!]!a!b!c!e!g!h!i!j!k!p#Z#]#_#c#g#r#t$O$P$Y$^$_$b$q$}%U%X%d%g%y%z&nS!oY&Q_&Q%l%n&b&f&p&q&tQ%h$tS%}%h&`R&`&RQ&d&UR&k&dQ&g&YR&m&gQ%P#yR%q%PS$Q!v#vR%T$QQ%W$TR%v%WQ$X!zR%Y$XQ$[!}R%]$[Q#[!PR$f#[QrOQ!PPR$e#ZUTOP#ZW!QQ!k#]#_Q!nWQ!tiQ!vlQ#PuQ#X|Q#Y}Q#i!]Q#j!aQ#k!bQ#l!cQ#n!gQ#o!hQ#p!iQ#q!jQ#v!pQ$k#cQ$o#gQ$r#rQ%R$OQ%S$PQ%Z$YQ%^$^Q%_$_Q%b$bQ%e$qQ%o$}S%w%X%yQ%{%dR&^%z!mqOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mSOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR!ZST!XS#eQ#c!WR$_#QR#g![!muOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mwOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR#TwT#Rw$`V!SQ#_#r!X!aT!Q!t!v#P#X#Y#i#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!Z!bT!Q!t!v#P#X#Y#i#j#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!]!cT!Q!t!v#P#X#Y#i#j#k#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!mWOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR&V%mT&Z%n&t!a!eT!Q!n!t!v#P#X#Y#i#j#k#l#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!a!gT!Q!n!t!v#P#X#Y#i#j#k#l#n#o#p#q#v$k$o$r%R%S%Z%^%_%b%e%o%w%{&^!m^OPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zQ!q^R!scR#z!pQ!wlR#{!p!mfOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mlOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%z!mmOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR$U!x!moOPQWilu|}!]!a!b!c!g!h!i!j!k!p#Z#]#_#c#g#r$O$P$Y$^$_$b$q$}%X%d%y%zR#Oo",
   nodeNames: "\u26A0 LineComment BlockComment Expression ForExpression for InExpressions InExpression Name Identifier Identifier ArithOp ArithOp ArithOp ArithOp ArithOp in IterationContext return IfExpression if then else QuantifiedExpression some every InExpressions InExpression satisfies Disjunction or Conjunction and Comparison CompareOp CompareOp between PositiveUnaryTest ( PositiveUnaryTests ) ArithmeticExpression InstanceOfExpression instance of Type QualifiedName VariableName BacktickIdentifier SpecialType days time duration years months date > ListType list < ContextType context ContextEntryTypes ContextEntryType FunctionType function ArgumentTypes ArgumentType PathExpression ] FilterExpression [ FunctionInvocation SpecialFunctionName NamedParameters NamedParameter ParameterName PositionalParameters null NumericLiteral StringLiteral BooleanLiteral DateTimeLiteral DateTimeConstructor AtLiteral ? SimplePositiveUnaryTest Interval ParenthesizedExpression List FunctionDefinition FormalParameters FormalParameter external FunctionBody } { Context ContextEntry Key Name Identifier Expressions UnaryTests Wildcard not",
   maxTerm: 173,
   context: variableTracker,
   nodeProps: [
+    ["group", -17, 4, 19, 23, 29, 31, 33, 41, 42, 68, 70, 72, 85, 86, 88, 89, 90, 97, "Expr", 47, "Expr Expr", -5, 78, 79, 80, 81, 82, "Expr Literal"],
     ["closedBy", 38, ")", 71, "]", 96, "}"],
-    ["openedBy", 40, "(", 69, "[", 95, "{"],
-    ["group", -5, 78, 79, 80, 81, 82, "Literal"]
+    ["openedBy", 40, "(", 69, "[", 95, "{"]
   ],
   propSources: [feelHighlighting],
   skippedNodes: [0, 1, 2],
   repeatNodeCount: 14,
-  tokenData: "-c~RvXY#iYZ$^Z[#i]^$^pq#iqr$crs$nwx&fxy&kyz&pz{&u{|'S|}'X}!O'^!O!P'k!P!Q(T!Q![*O![!]*a!]!^*f!^!_*k!_!`$i!`!a*z!b!c+U!}#O+Z#P#Q+`#Q#R&}#S#T+e#o#p-X#q#r-^$f$g#i#BY#BZ#i$IS$I_#i$I|$I}$^$I}$JO$^$JT$JU#i$KV$KW#i&FU&FV#i?HT?HU#i~#nY#r~XY#iZ[#ipq#i$f$g#i#BY#BZ#i$IS$I_#i$JT$JU#i$KV$KW#i&FU&FV#i?HT?HU#i~$cO#s~~$fP!_!`$i~$nOr~~$sW$j~OY$nZr$nrs%]s#O$n#O#P%b#P;'S$n;'S;=`&`<%lO$n~%bO$j~~%eRO;'S$n;'S;=`%n;=`O$n~%sX$j~OY$nZr$nrs%]s#O$n#O#P%b#P;'S$n;'S;=`&`;=`<%l$n<%lO$n~&cP;=`<%l$n~&kO#{~~&pOv~~&uOx~~&zP^~z{&}~'SO_~~'XO[~~'^O$O~R'cPZP!`!a'fQ'kO$_Q~'pQ#z~!O!P'v!Q!['{~'{O#}~~(QP$i~!Q!['{~(YQ]~z{(`!P!Q)g~(cTOz(`z{(r{;'S(`;'S;=`)a<%lO(`~(uVOz(`z{(r{!P(`!P!Q)[!Q;'S(`;'S;=`)a<%lO(`~)aOQ~~)dP;=`<%l(`~)lSP~OY)gZ;'S)g;'S;=`)x<%lO)g~){P;=`<%l)g~*TQ$i~!O!P*Z!Q![*O~*^P!Q!['{~*fO$]~~*kO$s~R*rP!]QsP!_!`*uP*zOsPR+RP!YQsP!_!`*u~+ZO$l~~+`O!i~~+eO!g~~+hWOY+eZ#O+e#O#P,Q#P#S+e#S#T,|#T;'S+e;'S;=`-R<%lO+e~,TRO;'S+e;'S;=`,^;=`O+e~,aXOY+eZ#O+e#O#P,Q#P#S+e#S#T,|#T;'S+e;'S;=`-R;=`<%l+e<%lO+e~-RO$Z~~-UP;=`<%l+e~-^O#S~~-cO#R~",
+  tokenData: ".Z~RvXY#iYZ$^Z[#i]^$^pq#iqr$crs$nwx&fxy&kyz&pz{&u{|'S|}'X}!O'^!O!P'k!P!Q(u!Q![*p![!]+X!]!^+^!^!_+c!_!`$i!`!a+r!b!c+|!}#O,R#P#Q,W#Q#R&}#S#T,]#o#p.P#q#r.U$f$g#i#BY#BZ#i$IS$I_#i$I|$I}$^$I}$JO$^$JT$JU#i$KV$KW#i&FU&FV#i?HT?HU#i~#nY#r~XY#iZ[#ipq#i$f$g#i#BY#BZ#i$IS$I_#i$JT$JU#i$KV$KW#i&FU&FV#i?HT?HU#i~$cO#s~~$fP!_!`$i~$nOr~~$sW$j~OY$nZr$nrs%]s#O$n#O#P%b#P;'S$n;'S;=`&`<%lO$n~%bO$j~~%eRO;'S$n;'S;=`%n;=`O$n~%sX$j~OY$nZr$nrs%]s#O$n#O#P%b#P;'S$n;'S;=`&`;=`<%l$n<%lO$n~&cP;=`<%l$n~&kO#{~~&pOv~~&uOx~~&zP^~z{&}~'SO_~~'XO[~~'^O$O~R'cPZP!`!a'fQ'kO$_Q~'pQ#z~!O!P'v!Q!['{~'{O#}~~(QR$i~!Q!['{!g!h(Z#X#Y(Z~(^R{|(g}!O(g!Q![(m~(jP!Q![(m~(rP$i~!Q![(m~(zQ]~z{)Q!P!Q*X~)TTOz)Qz{)d{;'S)Q;'S;=`*R<%lO)Q~)gVOz)Qz{)d{!P)Q!P!Q)|!Q;'S)Q;'S;=`*R<%lO)Q~*ROQ~~*UP;=`<%l)Q~*^SP~OY*XZ;'S*X;'S;=`*j<%lO*X~*mP;=`<%l*X~*uS$i~!O!P+R!Q![*p!g!h(Z#X#Y(Z~+UP!Q!['{~+^O$]~~+cO$s~R+jP!]QsP!_!`+mP+rOsPR+yP!YQsP!_!`+m~,RO$l~~,WO!i~~,]O!g~~,`WOY,]Z#O,]#O#P,x#P#S,]#S#T-t#T;'S,];'S;=`-y<%lO,]~,{RO;'S,];'S;=`-U;=`O,]~-XXOY,]Z#O,]#O#P,x#P#S,]#S#T-t#T;'S,];'S;=`-y;=`<%l,]<%lO,]~-yO$Z~~-|P;=`<%l,]~.UO#S~~.ZO#R~",
   tokenizers: [propertyIdentifiers, identifiers, insertSemicolon, 0, 1],
   topRules: { "Expression": [0, 3], "Expressions": [1, 102], "UnaryTests": [2, 103] },
-  dialects: { camunda: 2532 },
+  dialects: { camunda: 2544 },
   dynamicPrecedences: { "31": -1, "68": 1, "72": -1, "74": -1 },
   specialized: [{ term: 122, get: (value) => spec_identifier[value] || -1 }],
-  tokenPrec: 2534
+  tokenPrec: 2546
 });
 
 // node_modules/feelers/dist/index.mjs
@@ -43421,7 +43694,9 @@ var Type;
   Type3[Type3["URL"] = 44] = "URL";
 })(Type || (Type = {}));
 var LeafBlock = class {
-  /// @internal
+  /**
+  @internal
+  */
   constructor(start, content) {
     this.start = start;
     this.content = content;
@@ -43440,25 +43715,33 @@ var Line = class {
     this.indent = 0;
     this.next = -1;
   }
-  /// @internal
+  /**
+  @internal
+  */
   forward() {
     if (this.basePos > this.pos)
       this.forwardInner();
   }
-  /// @internal
+  /**
+  @internal
+  */
   forwardInner() {
     let newPos = this.skipSpace(this.basePos);
     this.indent = this.countIndent(newPos, this.pos, this.indent);
     this.pos = newPos;
     this.next = newPos == this.text.length ? -1 : this.text.charCodeAt(newPos);
   }
-  /// Skip whitespace after the given position, return the position of
-  /// the next non-space character or the end of the line if there's
-  /// only space after `from`.
+  /**
+  Skip whitespace after the given position, return the position of
+  the next non-space character or the end of the line if there's
+  only space after `from`.
+  */
   skipSpace(from) {
     return skipSpace(this.text, from);
   }
-  /// @internal
+  /**
+  @internal
+  */
   reset(text) {
     this.text = text;
     this.baseIndent = this.basePos = this.pos = this.indent = 0;
@@ -43467,40 +43750,52 @@ var Line = class {
     while (this.markers.length)
       this.markers.pop();
   }
-  /// Move the line's base position forward to the given position.
-  /// This should only be called by composite [block
-  /// parsers](#BlockParser.parse) or [markup skipping
-  /// functions](#NodeSpec.composite).
+  /**
+  Move the line's base position forward to the given position.
+  This should only be called by composite [block
+  parsers](#BlockParser.parse) or [markup skipping
+  functions](#NodeSpec.composite).
+  */
   moveBase(to) {
     this.basePos = to;
     this.baseIndent = this.countIndent(to, this.pos, this.indent);
   }
-  /// Move the line's base position forward to the given _column_.
+  /**
+  Move the line's base position forward to the given _column_.
+  */
   moveBaseColumn(indent2) {
     this.baseIndent = indent2;
     this.basePos = this.findColumn(indent2);
   }
-  /// Store a composite-block-level marker. Should be called from
-  /// [markup skipping functions](#NodeSpec.composite) when they
-  /// consume any non-whitespace characters.
+  /**
+  Store a composite-block-level marker. Should be called from
+  [markup skipping functions](#NodeSpec.composite) when they
+  consume any non-whitespace characters.
+  */
   addMarker(elt2) {
     this.markers.push(elt2);
   }
-  /// Find the column position at `to`, optionally starting at a given
-  /// position and column.
+  /**
+  Find the column position at `to`, optionally starting at a given
+  position and column.
+  */
   countIndent(to, from = 0, indent2 = 0) {
     for (let i7 = from; i7 < to; i7++)
       indent2 += this.text.charCodeAt(i7) == 9 ? 4 - indent2 % 4 : 1;
     return indent2;
   }
-  /// Find the position corresponding to the given column.
+  /**
+  Find the position corresponding to the given column.
+  */
   findColumn(goal) {
     let i7 = 0;
     for (let indent2 = 0; i7 < this.text.length && indent2 < goal; i7++)
       indent2 += this.text.charCodeAt(i7) == 9 ? 4 - indent2 % 4 : 1;
     return i7;
   }
-  /// @internal
+  /**
+  @internal
+  */
   scrub() {
     if (!this.baseIndent)
       return this.text;
@@ -43943,7 +44238,9 @@ var DefaultEndLeaf = [
 ];
 var scanLineResult = { text: "", end: 0 };
 var BlockContext = class {
-  /// @internal
+  /**
+  @internal
+  */
   constructor(parser4, input, fragments, ranges) {
     this.parser = parser4;
     this.input = input;
@@ -44047,20 +44344,26 @@ var BlockContext = class {
     }
     return true;
   }
-  /// The number of parent blocks surrounding the current block.
+  /**
+  The number of parent blocks surrounding the current block.
+  */
   get depth() {
     return this.stack.length;
   }
-  /// Get the type of the parent block at the given depth. When no
-  /// depth is passed, return the type of the innermost parent.
+  /**
+  Get the type of the parent block at the given depth. When no
+  depth is passed, return the type of the innermost parent.
+  */
   parentType(depth = this.depth - 1) {
     return this.parser.nodeSet.types[this.stack[depth].type];
   }
-  /// Move to the next input line. This should only be called by
-  /// (non-composite) [block parsers](#BlockParser.parse) that consume
-  /// the line directly, or leaf block parser
-  /// [`nextLine`](#LeafBlockParser.nextLine) methods when they
-  /// consume the current line (and return true).
+  /**
+  Move to the next input line. This should only be called by
+  (non-composite) [block parsers](#BlockParser.parse) that consume
+  the line directly, or leaf block parser
+  [`nextLine`](#LeafBlockParser.nextLine) methods when they
+  consume the current line (and return true).
+  */
   nextLine() {
     this.lineStart += this.line.text.length;
     if (this.absoluteLineEnd >= this.to) {
@@ -44076,13 +44379,23 @@ var BlockContext = class {
       return true;
     }
   }
+  /**
+  Retrieve the text of the line after the current one, without
+  actually moving the context's current line forward.
+  */
+  peekLine() {
+    return this.scanLine(this.absoluteLineEnd + 1).text;
+  }
   moveRangeI() {
     while (this.rangeI < this.ranges.length - 1 && this.absoluteLineStart >= this.ranges[this.rangeI].to) {
       this.rangeI++;
       this.absoluteLineStart = Math.max(this.absoluteLineStart, this.ranges[this.rangeI].from);
     }
   }
-  /// @internal
+  /**
+  @internal
+  Collect the text for the next line.
+  */
   scanLine(start) {
     let r7 = scanLineResult;
     r7.end = start;
@@ -44105,7 +44418,11 @@ var BlockContext = class {
     }
     return r7;
   }
-  /// @internal
+  /**
+  @internal
+  Populate this.line with the content of the next line. Skip
+  leading characters covered by composite blocks.
+  */
   readLine() {
     let { line: line2 } = this, { text, end } = this.scanLine(this.absoluteLineStart);
     this.absoluteLineEnd = end;
@@ -44129,38 +44446,52 @@ var BlockContext = class {
     }
     return pos + text.length > this.to ? text.slice(0, this.to - pos) : text;
   }
-  /// The end position of the previous line.
+  /**
+  The end position of the previous line.
+  */
   prevLineEnd() {
     return this.atEnd ? this.lineStart : this.lineStart - 1;
   }
-  /// @internal
+  /**
+  @internal
+  */
   startContext(type, start, value = 0) {
     this.block = CompositeBlock.create(type, value, this.lineStart + start, this.block.hash, this.lineStart + this.line.text.length);
     this.stack.push(this.block);
   }
-  /// Start a composite block. Should only be called from [block
-  /// parser functions](#BlockParser.parse) that return null.
+  /**
+  Start a composite block. Should only be called from [block
+  parser functions](#BlockParser.parse) that return null.
+  */
   startComposite(type, start, value = 0) {
     this.startContext(this.parser.getNodeType(type), start, value);
   }
-  /// @internal
+  /**
+  @internal
+  */
   addNode(block, from, to) {
     if (typeof block == "number")
       block = new import_common.Tree(this.parser.nodeSet.types[block], none, none, (to !== null && to !== void 0 ? to : this.prevLineEnd()) - from);
     this.block.addChild(block, from - this.block.from);
   }
-  /// Add a block element. Can be called by [block
-  /// parsers](#BlockParser.parse).
+  /**
+  Add a block element. Can be called by [block
+  parsers](#BlockParser.parse).
+  */
   addElement(elt2) {
     this.block.addChild(elt2.toTree(this.parser.nodeSet), elt2.from - this.block.from);
   }
-  /// Add a block element from a [leaf parser](#LeafBlockParser). This
-  /// makes sure any extra composite block markup (such as blockquote
-  /// markers) inside the block are also added to the syntax tree.
+  /**
+  Add a block element from a [leaf parser](#LeafBlockParser). This
+  makes sure any extra composite block markup (such as blockquote
+  markers) inside the block are also added to the syntax tree.
+  */
   addLeafElement(leaf, elt2) {
     this.addNode(this.buffer.writeElements(injectMarks(elt2.children, leaf.marks), -elt2.from).finish(elt2.type, elt2.to - elt2.from), elt2.from);
   }
-  /// @internal
+  /**
+  @internal
+  */
   finishContext() {
     let cx = this.stack.pop();
     let top = this.stack[this.stack.length - 1];
@@ -44175,7 +44506,9 @@ var BlockContext = class {
   addGaps(tree) {
     return this.ranges.length > 1 ? injectGaps(this.ranges, 0, tree.topNode, this.ranges[0].from, this.reusePlaceholders) : tree;
   }
-  /// @internal
+  /**
+  @internal
+  */
   finishLeaf(leaf) {
     for (let parser4 of leaf.parsers)
       if (parser4.finish(this, leaf))
@@ -44188,7 +44521,9 @@ var BlockContext = class {
       return elt(this.parser.getNodeType(type), from, to, children);
     return new TreeElement(type, from);
   }
-  /// @internal
+  /**
+  @internal
+  */
   get buffer() {
     return new Buffer2(this.parser.nodeSet);
   }
@@ -44223,7 +44558,9 @@ function injectGaps(ranges, rangeI, tree, offset, dummies) {
   return new import_common.Tree(tree.type, children, positions, tree.to + offset - start, tree.tree ? tree.tree.propValues : void 0);
 }
 var MarkdownParser = class _MarkdownParser extends import_common.Parser {
-  /// @internal
+  /**
+  @internal
+  */
   constructor(nodeSet, blockParsers, leafBlockParsers, blockNames, endLeafBlock, skipContextMarkup, inlineParsers, inlineNames, wrappers) {
     super();
     this.nodeSet = nodeSet;
@@ -44245,7 +44582,9 @@ var MarkdownParser = class _MarkdownParser extends import_common.Parser {
       parse3 = w6(parse3, input, fragments, ranges);
     return parse3;
   }
-  /// Reconfigure the parser.
+  /**
+  Reconfigure the parser.
+  */
   configure(spec) {
     let config = resolveConfig(spec);
     if (!config)
@@ -44324,16 +44663,20 @@ var MarkdownParser = class _MarkdownParser extends import_common.Parser {
       wrappers = wrappers.concat(config.wrap);
     return new _MarkdownParser(nodeSet, blockParsers, leafBlockParsers, blockNames, endLeafBlock, skipContextMarkup, inlineParsers, inlineNames, wrappers);
   }
-  /// @internal
+  /**
+  @internal
+  */
   getNodeType(name2) {
     let found = this.nodeTypes[name2];
     if (found == null)
       throw new RangeError(`Unknown node type '${name2}'`);
     return found;
   }
-  /// Parse the given piece of inline text at the given offset,
-  /// returning an array of [`Element`](#Element) objects representing
-  /// the inline content.
+  /**
+  Parse the given piece of inline text at the given offset,
+  returning an array of [`Element`](#Element) objects representing
+  the inline content.
+  */
   parseInline(text, offset) {
     let cx = new InlineContext(this, text, offset);
     outer: for (let pos = offset; pos < cx.end; ) {
@@ -44418,20 +44761,26 @@ var Buffer2 = class {
   }
 };
 var Element2 = class {
-  /// @internal
+  /**
+  @internal
+  */
   constructor(type, from, to, children = none) {
     this.type = type;
     this.from = from;
     this.to = to;
     this.children = children;
   }
-  /// @internal
+  /**
+  @internal
+  */
   writeTo(buf, offset) {
     let startOff = buf.content.length;
     buf.writeElements(this.children, offset);
     buf.content.push(this.type, this.from + offset, this.to + offset, buf.content.length + 4 - startOff);
   }
-  /// @internal
+  /**
+  @internal
+  */
   toTree(nodeSet) {
     return new Buffer2(nodeSet).writeElements(this.children, -this.from).finish(this.type, this.to - this.from);
   }
@@ -44709,41 +45058,55 @@ function parseLinkLabel(text, start, offset, requireNonWS) {
   return null;
 }
 var InlineContext = class {
-  /// @internal
+  /**
+  @internal
+  */
   constructor(parser4, text, offset) {
     this.parser = parser4;
     this.text = text;
     this.offset = offset;
     this.parts = [];
   }
-  /// Get the character code at the given (document-relative)
-  /// position.
+  /**
+  Get the character code at the given (document-relative)
+  position.
+  */
   char(pos) {
     return pos >= this.end ? -1 : this.text.charCodeAt(pos - this.offset);
   }
-  /// The position of the end of this inline section.
+  /**
+  The position of the end of this inline section.
+  */
   get end() {
     return this.offset + this.text.length;
   }
-  /// Get a substring of this inline section. Again uses
-  /// document-relative positions.
+  /**
+  Get a substring of this inline section. Again uses
+  document-relative positions.
+  */
   slice(from, to) {
     return this.text.slice(from - this.offset, to - this.offset);
   }
-  /// @internal
+  /**
+  @internal
+  */
   append(elt2) {
     this.parts.push(elt2);
     return elt2.to;
   }
-  /// Add a [delimiter](#DelimiterType) at this given position. `open`
-  /// and `close` indicate whether this delimiter is opening, closing,
-  /// or both. Returns the end of the delimiter, for convenient
-  /// returning from [parse functions](#InlineParser.parse).
+  /**
+  Add a [delimiter](#DelimiterType) at this given position. `open`
+  and `close` indicate whether this delimiter is opening, closing,
+  or both. Returns the end of the delimiter, for convenient
+  returning from [parse functions](#InlineParser.parse).
+  */
   addDelimiter(type, from, to, open3, close) {
     return this.append(new InlineDelimiter(type, from, to, (open3 ? 1 : 0) | (close ? 2 : 0)));
   }
-  /// Returns true when there is an unmatched link or image opening
-  /// token before the current position.
+  /**
+  Returns true when there is an unmatched link or image opening
+  token before the current position.
+  */
   get hasOpenLink() {
     for (let i7 = this.parts.length - 1; i7 >= 0; i7--) {
       let part = this.parts[i7];
@@ -44752,12 +45115,16 @@ var InlineContext = class {
     }
     return false;
   }
-  /// Add an inline element. Returns the end of the element.
+  /**
+  Add an inline element. Returns the end of the element.
+  */
   addElement(elt2) {
     return this.append(elt2);
   }
-  /// Resolve markers between this.parts.length and from, wrapping matched markers in the
-  /// appropriate node and updating the content of this.parts. @internal
+  /**
+  Resolve markers between this.parts.length and from, wrapping matched markers in the
+  appropriate node and updating the content of this.parts. @internal
+  */
   resolveMarkers(from) {
     for (let i7 = from; i7 < this.parts.length; i7++) {
       let close = this.parts[i7];
@@ -44809,9 +45176,11 @@ var InlineContext = class {
     }
     return result;
   }
-  /// Find an opening delimiter of the given type. Returns `null` if
-  /// no delimiter is found, or an index that can be passed to
-  /// [`takeContent`](#InlineContext.takeContent) otherwise.
+  /**
+  Find an opening delimiter of the given type. Returns `null` if
+  no delimiter is found, or an index that can be passed to
+  [`takeContent`](#InlineContext.takeContent) otherwise.
+  */
   findOpeningDelimiter(type) {
     for (let i7 = this.parts.length - 1; i7 >= 0; i7--) {
       let part = this.parts[i7];
@@ -44820,19 +45189,23 @@ var InlineContext = class {
     }
     return null;
   }
-  /// Remove all inline elements and delimiters starting from the
-  /// given index (which you should get from
-  /// [`findOpeningDelimiter`](#InlineContext.findOpeningDelimiter),
-  /// resolve delimiters inside of them, and return them as an array
-  /// of elements.
+  /**
+  Remove all inline elements and delimiters starting from the
+  given index (which you should get from
+  [`findOpeningDelimiter`](#InlineContext.findOpeningDelimiter),
+  resolve delimiters inside of them, and return them as an array
+  of elements.
+  */
   takeContent(startIndex) {
     let content = this.resolveMarkers(startIndex);
     this.parts.length = startIndex;
     return content;
   }
-  /// Skip space after the given (document) position, returning either
-  /// the position of the next non-space character or the end of the
-  /// section.
+  /**
+  Skip space after the given (document) position, returning either
+  the position of the next non-space character or the end of the
+  section.
+  */
   skipSpace(from) {
     return skipSpace(this.text, from - this.offset) + this.offset;
   }
@@ -45092,7 +45465,7 @@ var Table = {
     endLeaf(cx, line2, leaf) {
       if (leaf.parsers.some((p5) => p5 instanceof TableParser) || !hasPipe(line2.text, line2.basePos))
         return false;
-      let next = cx.scanLine(cx.absoluteLineEnd + 1).text;
+      let next = cx.peekLine();
       return delimiterLine.test(next) && parseRow(cx, line2.text, line2.basePos) == parseRow(cx, next, line2.basePos);
     },
     before: "SetextHeading"
@@ -45959,6 +46332,18 @@ var snippets = [(0, import_autocomplete2.snippetCompletion)("function(${params})
   label: "context",
   detail: "block",
   type: "keyword"
+}), (0, import_autocomplete2.snippetCompletion)("null", {
+  label: "null",
+  detail: "literal",
+  type: "keyword"
+}), (0, import_autocomplete2.snippetCompletion)("true", {
+  label: "true",
+  detail: "literal",
+  type: "keyword"
+}), (0, import_autocomplete2.snippetCompletion)("false", {
+  label: "false",
+  detail: "literal",
+  type: "keyword"
 })];
 function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function(target) {
@@ -46012,9 +46397,27 @@ var keywordCompletions = [contextualKeyword({
   after: "InExpressions",
   keyword: "return"
 })];
-var dontComplete = ["StringLiteral", "Identifier", "LineComment", "BlockComment", "PathExpression"];
+var dontComplete = ["StringLiteral", "Identifier", "LineComment", "BlockComment", "PathExpression", "Context", "Key", "ParameterName"];
+var doComplete = ["Expr", "ContextEntry"];
+function ifExpression(completionSource) {
+  const allNodes = [...dontComplete, ...doComplete];
+  return (context) => {
+    const {
+      state,
+      pos
+    } = context;
+    const match = matchUp((0, import_language4.syntaxTree)(state).resolveInner(pos, -1), allNodes);
+    if (match) {
+      const [_5, name2] = match;
+      if (dontComplete.includes(name2)) {
+        return null;
+      }
+    }
+    return completionSource(context);
+  };
+}
 function snippetCompletion(snippets2) {
-  return (0, import_autocomplete2.ifNotIn)(dontComplete, (0, import_autocomplete2.completeFromList)(snippets2.map((s5) => _extends({}, s5, {
+  return ifExpression((0, import_autocomplete2.completeFromList)(snippets2.map((s5) => _extends({}, s5, {
     type: "text"
   }))));
 }
@@ -46044,10 +46447,12 @@ function matchUp(node2, nodeNames) {
     nodeNames = [nodeNames];
   }
   for (; node2; node2 = node2.parent) {
-    if (nodeNames.includes(node2.name)) {
-      return node2;
+    const nodeType = node2.type;
+    const matchedName = nodeNames.find((name2) => name2 && nodeType.is(name2));
+    if (matchedName) {
+      return [node2, matchedName];
     }
-    if (node2.type.isTop) {
+    if (nodeType.isTop) {
       break;
     }
   }
@@ -46065,10 +46470,11 @@ function ifInside(options, source) {
       state,
       pos
     } = context;
-    const node2 = matchUp((0, import_language4.syntaxTree)(state).resolveInner(pos, -1), nodes);
-    if (!node2) {
+    const match = matchUp((0, import_language4.syntaxTree)(state).resolveInner(pos, -1), nodes);
+    if (!match) {
       return null;
     }
+    const [node2] = match;
     if (matchLeft(node2, pos, [keyword, before])) {
       return null;
     }
@@ -46388,7 +46794,7 @@ function completions({ variables = [], builtins = [] }) {
 function language(options) {
   return feel2(options);
 }
-function createContext(variables, builtins) {
+function createContext(variables) {
   return variables.slice().reverse().reduce((context, builtin) => {
     context[builtin.name] = () => {
     };
@@ -46398,8 +46804,10 @@ function createContext(variables, builtins) {
 var builtinsFacet = import_state2.Facet.define();
 var variablesFacet = import_state2.Facet.define();
 var dialectFacet = import_state2.Facet.define();
+var parserDialectFacet = import_state2.Facet.define();
 function configure({
   dialect = "expression",
+  parserDialect,
   variables = [],
   builtins = [],
   completions: completions$1 = completions({ builtins, variables })
@@ -46409,8 +46817,10 @@ function configure({
     dialectFacet.of(dialect),
     builtinsFacet.of(builtins),
     variablesFacet.of(variables),
+    parserDialectFacet.of(parserDialect),
     language({
       dialect,
+      parserDialect,
       context,
       completions: completions$1
     })
@@ -46420,10 +46830,12 @@ function get3(state) {
   const builtins = state.facet(builtinsFacet)[0];
   const variables = state.facet(variablesFacet)[0];
   const dialect = state.facet(dialectFacet)[0];
+  const parserDialect = state.facet(parserDialectFacet)[0];
   return {
     builtins,
     variables,
-    dialect
+    dialect,
+    parserDialect
   };
 }
 var camundaTags = [
@@ -46477,7 +46889,7 @@ var camundaTags = [
   },
   {
     name: "number(from)",
-    description: '<p>Parses the given string to a number.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">number(from: string): number\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">number(&quot;1500.5&quot;)\n// 1500.5\n</code></pre>\n'
+    description: '<p>Parses the given string to a number.</p>\n<p>Returns <code>null</code> if the string is not a number.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">number(from: string): number\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">number(&quot;1500.5&quot;)\n// 1500.5\n</code></pre>\n'
   },
   {
     name: "context(entries)",
@@ -46485,11 +46897,11 @@ var camundaTags = [
   },
   {
     name: "date(from)",
-    description: '<p>Returns a date from the given value.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date(from: string): date\n</code></pre>\n<p>Parses the given string into a date.</p>\n<pre><code class="language-feel">date(from: date and time): date\n</code></pre>\n<p>Extracts the date component from the given date and time.</p>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date(&quot;2018-04-29&quot;)\n// date(&quot;2018-04-29&quot;)\n\ndate(date and time(&quot;2012-12-25T11:00:00&quot;))\n// date(&quot;2012-12-25&quot;)\n</code></pre>\n'
+    description: '<p>Returns a date from the given value.</p>\n<p>Returns <code>null</code> if the string is not a valid calendar date. For example, <code>&quot;2024-06-31&quot;</code> is invalid because June has\nonly 30 days.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date(from: string): date\n</code></pre>\n<p>Parses the given string into a date.</p>\n<pre><code class="language-feel">date(from: date and time): date\n</code></pre>\n<p>Extracts the date component from the given date and time.</p>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date(&quot;2018-04-29&quot;)\n// date(&quot;2018-04-29&quot;)\n\ndate(date and time(&quot;2012-12-25T11:00:00&quot;))\n// date(&quot;2012-12-25&quot;)\n</code></pre>\n'
   },
   {
     name: "date(year, month, day)",
-    description: '<p>Returns a date from the given components.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date(year: number, month: number, day: number): date\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date(2012, 12, 25)\n// date(&quot;2012-12-25&quot;)\n</code></pre>\n'
+    description: '<p>Returns a date from the given components.</p>\n<p>Returns <code>null</code> if the components don&#39;t represent a valid calendar date. For example, <code>2024,6,31</code> is invalid because\nJune has only 30 days.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date(year: number, month: number, day: number): date\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date(2012, 12, 25)\n// date(&quot;2012-12-25&quot;)\n</code></pre>\n'
   },
   {
     name: "time(from)",
@@ -46505,7 +46917,7 @@ var camundaTags = [
   },
   {
     name: "date and time(from)",
-    description: '<p>Parses the given string into a date and time.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date and time(from: string): date and time\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date and time(&quot;2018-04-29T09:30:00&quot;)\n// date and time(&quot;2018-04-29T09:30:00&quot;)\n</code></pre>\n'
+    description: '<p>Parses the given string into a date and time.</p>\n<p>Returns <code>null</code> if the string is not a valid calendar date. For example, <code>&quot;2024-06-31T10:00:00&quot;</code> is invalid because\nJune has only 30 days.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">date and time(from: string): date and time\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">date and time(&quot;2018-04-29T09:30:00&quot;)\n// date and time(&quot;2018-04-29T09:30:00&quot;)\n</code></pre>\n'
   },
   {
     name: "date and time(date, time)",
@@ -46634,6 +47046,14 @@ var camundaTags = [
   {
     name: "string join(list, delimiter, prefix, suffix)",
     description: '<p><em>Camunda Extension</em></p>\n<p>Joins a list of strings into a single string. This is similar to\nJava&#39;s <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/stream/Collectors.html#joining(java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence)">joining</a>\nfunction.</p>\n<p>If an item of the list is <code>null</code>, the item is ignored for the result string. If an item is\nneither a string nor <code>null</code>, the function returns <code>null</code> instead of a string.</p>\n<p>The resulting string starts with <code>prefix</code>, contains a <code>delimiter</code> between each element, and ends\nwith <code>suffix</code>.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">string join(list: list&lt;string&gt;, delimiter: string, prefix: string, suffix: string): string\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">string join([&quot;a&quot;,&quot;b&quot;,&quot;c&quot;], &quot;, &quot;, &quot;[&quot;, &quot;]&quot;)\n// &quot;[a, b, c]&quot;\n</code></pre>\n'
+  },
+  {
+    name: "is empty(list)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns <code>true</code> if the given list is empty. Otherwise, returns <code>false</code>.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">is empty(list: list): boolean\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">is empty([])\n// true\n\nis empty([1,2,3])\n// false\n</code></pre>\n'
+  },
+  {
+    name: "partition(list\uFF0C size)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns consecutive sublists of a list, each of the same size (the final list may be smaller).</p>\n<p>If <code>size</code> is less than <code>0</code>, it returns <code>null</code>.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">partition(list: list, size: number): list\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">partition([1,2,3,4,5], 2)\n// [[1,2], [3,4], [5]]\n\npartition([], 2)\n// []\n\npartition([1,2], 0)\n// null\n</code></pre>\n'
   },
   {
     name: "decimal(n, scale)",
@@ -46813,11 +47233,11 @@ var camundaTags = [
   },
   {
     name: "substring(string, start position)",
-    description: '<p>Returns a substring of the given value starting at <code>start position</code>.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">substring(string: string, start position: number): string\n</code></pre>\n<p>The <code>start position</code> starts at the index <code>1</code>. The last position is <code>-1</code>.</p>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">substring(&quot;foobar&quot;, 3)\n// &quot;obar&quot;\n</code></pre>\n'
+    description: '<p>Returns a substring of the given value starting at <code>start position</code>.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">substring(string: string, start position: number): string\n</code></pre>\n<p>The <code>start position</code> starts at the index <code>1</code>. The last position is <code>-1</code>.</p>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">substring(&quot;foobar&quot;, 3)\n// &quot;obar&quot;\n\nsubstring(&quot;foobar&quot;, -2)\n// &quot;ar&quot;\n</code></pre>\n'
   },
   {
     name: "substring(string, start position, length)",
-    description: '<p>Returns a substring of the given value starting at <code>start position</code>.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">substring(string: string, start position: number, length: number): string\n</code></pre>\n<p>The <code>start position</code> starts at the index <code>1</code>. The last position is <code>-1</code>.</p>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">substring(&quot;foobar&quot;, 3, 3)\n// &quot;oba&quot;\n</code></pre>\n'
+    description: '<p>Returns a substring of the given value, starting at <code>start position</code> with the given <code>length</code>. If <code>length</code> is greater than\nthe remaining characters of the value, it returns all characters from <code>start position</code> until the end.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">substring(string: string, start position: number, length: number): string\n</code></pre>\n<p>The <code>start position</code> starts at the index <code>1</code>. The last position is <code>-1</code>.</p>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">substring(&quot;foobar&quot;, 3, 3)\n// &quot;oba&quot;\n\nsubstring(&quot;foobar&quot;, -3, 2)\n// &quot;ba&quot;\n\nsubstring(&quot;foobar&quot;, 3, 10)\n// &quot;obar&quot;\n</code></pre>\n'
   },
   {
     name: "string length(string)",
@@ -46876,6 +47296,22 @@ var camundaTags = [
     description: '<p><em>Camunda Extension</em></p>\n<p>Returns all matches of the pattern in the given string. Returns an empty list if the pattern doesn&#39;t\nmatch.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">extract(string: string, pattern: string): list&lt;string&gt;\n</code></pre>\n<p>The <code>pattern</code> is a string that contains a regular expression.</p>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">extract(&quot;references are 1234, 1256, 1378&quot;, &quot;12[0-9]*&quot;)\n// [&quot;1234&quot;,&quot;1256&quot;]\n</code></pre>\n'
   },
   {
+    name: "trim(string)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns the given string without leading and trailing spaces.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">trim(string: string): string\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">trim(&quot;  hello world  &quot;)\n// &quot;hello world&quot;\n\ntrim(&quot;hello   world &quot;)\n// &quot;hello   world&quot;\n</code></pre>\n'
+  },
+  {
+    name: "uuid()",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns a UUID (Universally Unique Identifier) with 36 characters.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">uuid(): string\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">uuid()\n// &quot;7793aab1-d761-4d38-916b-b7270e309894&quot;\n</code></pre>\n'
+  },
+  {
+    name: "to base64(value)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns the given string encoded in Base64 format.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">to base64(value: string): string\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">to base64(&quot;FEEL&quot;)\n// &quot;RkVFTA==&quot;\n</code></pre>\n'
+  },
+  {
+    name: "is blank(string)",
+    description: '<p><em>Camunda Extension</em></p>\n<p>Returns <code>true</code> if the given string is blank (empty or contains only whitespaces).</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">is blank(string: string): boolean\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">is blank(&quot;&quot;)\n// true\n\nis blank(&quot; &quot;)\n// true\n\nis blank(&quot;hello world&quot;)\n// false\n</code></pre>\n'
+  },
+  {
     name: "now()",
     description: '<p>Returns the current date and time including the timezone.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">now(): date and time\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">now()\n// date and time(&quot;2020-07-31T14:27:30@Europe/Berlin&quot;)\n</code></pre>\n'
   },
@@ -46906,22 +47342,6 @@ var camundaTags = [
   {
     name: "last day of month(date)",
     description: '<p><em>Camunda Extension</em></p>\n<p>Takes the month of the given date or date-time value and returns the last day of this month.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">last day of month(date: date): date\n</code></pre>\n<pre><code class="language-feel">last day of month(date: date and time): date\n</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">last day of month(date(&quot;2022-10-01&quot;))\n// date(&quot;2022-10-31&quot;))\n\nlast day of month(date and time(&quot;2022-10-16T12:00:00&quot;))\n// date(&quot;2022-10-31&quot;))\n</code></pre>\n'
-  },
-  {
-    name: "is empty(list)",
-    description: '<p><em>Camunda Extension</em></p>\n<p>Returns true if the given list is empty. Otherwise, returns false.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">is empty(list: list): boolean</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">is empty([])\n// true\n\nis empty([1,2,3])\n// false\n</code></pre>'
-  },
-  {
-    name: "trim(string)",
-    description: '<p><em>Camunda Extension</em></p>\n<p>Returns the given string without leading and trailing spaces.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">trim(string: string): string</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">trim("  hello world  ")\n// "hello world"\n\ntrim("hello   world ")\n// "hello   world"\n</code></pre>'
-  },
-  {
-    name: "uuid()",
-    description: '<p><em>Camunda Extension</em></p>\n<p>Returns a UUID (Universally Unique Identifier) with 36 characters.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">uuid(): string</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">uuid()\n// "7793aab1-d761-4d38-916b-b7270e309894"\n</code></pre>'
-  },
-  {
-    name: "to base64(string)",
-    description: '<p><em>Camunda Extension</em></p>\n<p>Returns the given string encoded in Base64 format.</p>\n<p><strong>Function signature</strong></p>\n<pre><code class="language-feel">to base64(value: string): string</code></pre>\n<p><strong>Examples</strong></p>\n<pre><code class="language-feel">to base64("FEEL")\n// "RkVFTA=="\n</code></pre>'
   }
 ];
 function parseBuiltins(builtins) {
@@ -46952,6 +47372,7 @@ var placeholderConf = new import_state2.Compartment();
 function FeelEditor({
   extensions: editorExtensions = [],
   dialect = "expression",
+  parserDialect,
   container,
   contentAttributes = {},
   tooltipContainer,
@@ -46998,7 +47419,8 @@ function FeelEditor({
     coreConf.of(configure({
       dialect,
       builtins,
-      variables
+      variables,
+      parserDialect
     })),
     (0, import_language5.bracketMatching)(),
     (0, import_language5.indentOnInput)(),
@@ -47050,15 +47472,11 @@ FeelEditor.prototype.getSelection = function() {
   return this._cmEditor.state.selection;
 };
 FeelEditor.prototype.setVariables = function(variables) {
-  const {
-    dialect,
-    builtins
-  } = get3(this._cmEditor.state);
+  const config = get3(this._cmEditor.state);
   this._cmEditor.dispatch({
     effects: [
       coreConf.reconfigure(configure({
-        dialect,
-        builtins,
+        ...config,
         variables
       }))
     ]
@@ -47477,7 +47895,7 @@ var activeFocusTraps = {
     if (trapStack.length > 0) {
       var activeTrap = trapStack[trapStack.length - 1];
       if (activeTrap !== trap) {
-        activeTrap.pause();
+        activeTrap._setPausedState(true);
       }
     }
     var trapIndex = trapStack.indexOf(trap);
@@ -47493,8 +47911,8 @@ var activeFocusTraps = {
     if (trapIndex !== -1) {
       trapStack.splice(trapIndex, 1);
     }
-    if (trapStack.length > 0) {
-      trapStack[trapStack.length - 1].unpause();
+    if (trapStack.length > 0 && !trapStack[trapStack.length - 1]._isManuallyPaused()) {
+      trapStack[trapStack.length - 1]._setPausedState(false);
     }
   }
 };
@@ -47567,6 +47985,7 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
     mostRecentlyFocusedNode: null,
     active: false,
     paused: false,
+    manuallyPaused: false,
     // timer ID for when delayInitialFocus is true and initial focus in this trap
     //  has been delayed during activation
     delayInitialFocusTimer: void 0,
@@ -48062,31 +48481,21 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       return this;
     },
     pause: function pause(pauseOptions) {
-      if (state.paused || !state.active) {
+      if (!state.active) {
         return this;
       }
-      var onPause = getOption(pauseOptions, "onPause");
-      var onPostPause = getOption(pauseOptions, "onPostPause");
-      state.paused = true;
-      onPause === null || onPause === void 0 || onPause();
-      removeListeners();
-      updateObservedNodes();
-      onPostPause === null || onPostPause === void 0 || onPostPause();
-      return this;
+      state.manuallyPaused = true;
+      return this._setPausedState(true, pauseOptions);
     },
     unpause: function unpause(unpauseOptions) {
-      if (!state.paused || !state.active) {
+      if (!state.active) {
         return this;
       }
-      var onUnpause = getOption(unpauseOptions, "onUnpause");
-      var onPostUnpause = getOption(unpauseOptions, "onPostUnpause");
-      state.paused = false;
-      onUnpause === null || onUnpause === void 0 || onUnpause();
-      updateTabbableNodes();
-      addListeners();
-      updateObservedNodes();
-      onPostUnpause === null || onPostUnpause === void 0 || onPostUnpause();
-      return this;
+      state.manuallyPaused = false;
+      if (trapStack[trapStack.length - 1] !== this) {
+        return this;
+      }
+      return this._setPausedState(false, unpauseOptions);
     },
     updateContainerElements: function updateContainerElements(containerElements) {
       var elementsAsArray = [].concat(containerElements).filter(Boolean);
@@ -48100,6 +48509,38 @@ var createFocusTrap = function createFocusTrap2(elements, userOptions) {
       return this;
     }
   };
+  Object.defineProperties(trap, {
+    _isManuallyPaused: {
+      value: function value() {
+        return state.manuallyPaused;
+      }
+    },
+    _setPausedState: {
+      value: function value(paused, options) {
+        if (state.paused === paused) {
+          return this;
+        }
+        state.paused = paused;
+        if (paused) {
+          var onPause = getOption(options, "onPause");
+          var onPostPause = getOption(options, "onPostPause");
+          onPause === null || onPause === void 0 || onPause();
+          removeListeners();
+          updateObservedNodes();
+          onPostPause === null || onPostPause === void 0 || onPostPause();
+        } else {
+          var onUnpause = getOption(options, "onUnpause");
+          var onPostUnpause = getOption(options, "onPostUnpause");
+          onUnpause === null || onUnpause === void 0 || onUnpause();
+          updateTabbableNodes();
+          addListeners();
+          updateObservedNodes();
+          onPostUnpause === null || onPostUnpause === void 0 || onPostUnpause();
+        }
+        return this;
+      }
+    }
+  });
   trap.updateContainerElements(elements);
   return trap;
 };
@@ -48345,7 +48786,7 @@ function TooltipWrapper(props) {
   return u5(Tooltip, {
     ...props,
     value,
-    forId: prefixId$9(forId)
+    forId: `bio-properties-panel-${forId}`
   });
 }
 function Tooltip(props) {
@@ -48356,71 +48797,48 @@ function Tooltip(props) {
     direction = "right",
     position
   } = props;
-  const [visible, setShow] = h4(false);
-  const [focusedViaKeyboard, setFocusedViaKeyboard] = h4(false);
+  const [visible, setVisible3] = h4(false);
+  const SHOW_DELAY = 200;
   let timeout = null;
   const wrapperRef = _4(null);
   const tooltipRef = _4(null);
-  const showTooltip = async (event2) => {
-    const show = () => setShow(true);
-    if (!visible && !timeout) {
-      if (event2 instanceof MouseEvent) {
-        timeout = setTimeout(show, 200);
-      } else {
-        show();
-        setFocusedViaKeyboard(true);
-      }
+  const show = (_5, delay3) => {
+    if (visible) return;
+    if (delay3) {
+      timeout = setTimeout(() => {
+        setVisible3(true);
+      }, SHOW_DELAY);
+    } else {
+      setVisible3(true);
     }
   };
-  const hideTooltip = () => {
-    setShow(false);
-    setFocusedViaKeyboard(false);
+  const hide = () => {
+    clearTimeout(timeout);
+    setVisible3(false);
   };
-  const hideTooltipViaEscape = (e8) => {
-    e8.code === "Escape" && hideTooltip();
-  };
-  const isTooltipHovered = ({
-    x: x6,
-    y: y5
+  const handleMouseLeave = ({
+    relatedTarget
   }) => {
-    const tooltip = tooltipRef.current;
-    const wrapper = wrapperRef.current;
-    return tooltip && (inBounds(x6, y5, wrapper.getBoundingClientRect()) || inBounds(x6, y5, tooltip.getBoundingClientRect()));
-  };
-  p4(() => {
-    const {
-      current
-    } = wrapperRef;
-    if (!current) {
+    if (relatedTarget === wrapperRef.current || relatedTarget === tooltipRef.current || (relatedTarget == null ? void 0 : relatedTarget.parentElement) === tooltipRef.current) {
       return;
     }
-    const hideHoveredTooltip = (e8) => {
-      const isFocused = document.activeElement === wrapperRef.current || document.activeElement.closest(".bio-properties-panel-tooltip");
-      if (visible && !isTooltipHovered({
-        x: e8.x,
-        y: e8.y
-      }) && !(isFocused && focusedViaKeyboard)) {
-        hideTooltip();
-      }
-    };
-    const hideFocusedTooltip = (e8) => {
-      const {
-        relatedTarget
-      } = e8;
-      const isTooltipChild = (el) => !!el.closest(".bio-properties-panel-tooltip");
-      if (visible && !isHovered(wrapperRef.current) && relatedTarget && !isTooltipChild(relatedTarget)) {
-        hideTooltip();
-      }
-    };
-    document.addEventListener("wheel", hideHoveredTooltip);
-    document.addEventListener("focusout", hideFocusedTooltip);
-    document.addEventListener("mousemove", hideHoveredTooltip);
-    return () => {
-      document.removeEventListener("wheel", hideHoveredTooltip);
-      document.removeEventListener("mousemove", hideHoveredTooltip);
-      document.removeEventListener("focusout", hideFocusedTooltip);
-    };
-  }, [wrapperRef.current, visible, focusedViaKeyboard]);
+    hide();
+  };
+  const handleFocusOut = (e8) => {
+    var _a;
+    const {
+      target
+    } = e8;
+    const isHovered = target.matches(":hover") || ((_a = tooltipRef.current) == null ? void 0 : _a.matches(":hover"));
+    if (target === wrapperRef.current && isHovered) {
+      e8.stopPropagation();
+      return;
+    }
+    hide();
+  };
+  const hideTooltipViaEscape = (e8) => {
+    e8.code === "Escape" && hide();
+  };
   const renderTooltip = () => {
     return u5("div", {
       class: `bio-properties-panel-tooltip ${direction}`,
@@ -48430,6 +48848,7 @@ function Tooltip(props) {
       style: position || getTooltipPosition(wrapperRef.current),
       ref: tooltipRef,
       onClick: (e8) => e8.stopPropagation(),
+      onMouseLeave: handleMouseLeave,
       children: [u5("div", {
         class: "bio-properties-panel-tooltip-content",
         children: value
@@ -48442,36 +48861,19 @@ function Tooltip(props) {
     class: "bio-properties-panel-tooltip-wrapper",
     tabIndex: "0",
     ref: wrapperRef,
-    onMouseEnter: showTooltip,
-    onMouseLeave: () => {
-      clearTimeout(timeout);
-      timeout = null;
-    },
-    onFocus: showTooltip,
+    onMouseEnter: (e8) => show(e8, true),
+    onMouseLeave: handleMouseLeave,
+    onFocus: show,
+    onBlur: handleFocusOut,
     onKeyDown: hideTooltipViaEscape,
     children: [props.children, visible ? parent ? j5(renderTooltip(), parent.current) : renderTooltip() : null]
   });
-}
-function inBounds(x6, y5, bounds) {
-  const {
-    top,
-    right,
-    bottom,
-    left
-  } = bounds;
-  return x6 >= left && x6 <= right && y5 >= top && y5 <= bottom;
 }
 function getTooltipPosition(refElement) {
   const refPosition = refElement.getBoundingClientRect();
   const right = `calc(100% - ${refPosition.x}px)`;
   const top = `${refPosition.top - 10}px`;
   return `right: ${right}; top: ${top};`;
-}
-function isHovered(element) {
-  return element.matches(":hover");
-}
-function prefixId$9(id) {
-  return `bio-properties-panel-${id}`;
 }
 function useDescriptionContext(id, element) {
   const {
@@ -49682,6 +50084,7 @@ function FeelTextfieldComponent(props) {
     label,
     hostLanguage,
     onInput,
+    onBlur,
     onError,
     placeholder: placeholder2,
     feel: feel3,
@@ -49743,6 +50146,12 @@ function FeelTextfieldComponent(props) {
     if (!feelActive && isString(newValue) && newValue.startsWith("=")) {
       setFocus(-1);
     }
+  };
+  const handleOnBlur = (e8) => {
+    if (onBlur) {
+      onBlur(e8);
+    }
+    setLocalValue(e8.target.value.trim());
   };
   const handleLint = useStaticCallback((lint2 = []) => {
     const syntaxError = lint2.some((report) => report.type === "Syntax Error");
@@ -49861,6 +50270,7 @@ function FeelTextfieldComponent(props) {
         ...props,
         popupOpen: popuOpen,
         onInput: handleLocalInput,
+        onBlur: handleOnBlur,
         contentAttributes: {
           "id": prefixId$5(id),
           "aria-label": label
@@ -51035,6 +51445,12 @@ function TextArea(props) {
     autoResize && resizeToContents(e8.target);
     setLocalValue(e8.target.value);
   };
+  const handleOnBlur = (e8) => {
+    if (onBlur) {
+      onBlur(e8);
+    }
+    setLocalValue(e8.target.value.trim());
+  };
   y4(() => {
     autoResize && resizeToContents(ref.current);
   }, []);
@@ -51066,7 +51482,7 @@ function TextArea(props) {
       class: (0, import_classnames.default)("bio-properties-panel-input", monospace ? "bio-properties-panel-input-monospace" : "", autoResize ? "auto-resize" : ""),
       onInput: handleInput,
       onFocus,
-      onBlur,
+      onBlur: handleOnBlur,
       placeholder: placeholder2,
       rows,
       value: localValue,
@@ -51164,6 +51580,12 @@ function Textfield(props) {
   const handleInputCallback = F4(() => {
     return debounce2((target) => onInput(target.value.length ? target.value : void 0));
   }, [onInput, debounce2]);
+  const handleOnBlur = (e8) => {
+    if (onBlur) {
+      onBlur(e8);
+    }
+    setLocalValue(e8.target.value.trim());
+  };
   const handleInput = (e8) => {
     handleInputCallback(e8.target);
     setLocalValue(e8.target.value);
@@ -51196,7 +51618,7 @@ function Textfield(props) {
       class: "bio-properties-panel-input",
       onInput: handleInput,
       onFocus,
-      onBlur,
+      onBlur: handleOnBlur,
       placeholder: placeholder2,
       value: localValue
     })]
@@ -51544,6 +51966,12 @@ function extractResultVariables(options) {
       return;
     }
     var resultVariable = baseElement.resultVariable;
+    if (processVariables.some((x6) => x6.origin[0] === element && x6.scope === containerElement)) {
+      containerElement = element;
+      if (processVariables.some((variable) => variable.name === resultVariable)) {
+        return processVariables;
+      }
+    }
     if (resultVariable) {
       var newVariable = createProcessVariable(
         element,
@@ -55409,7 +55837,7 @@ function isMultiInstanceSupported$1(element) {
 function getBody(expression) {
   return expression && expression.get("body");
 }
-function getProperty$2(element, propertyName) {
+function getProperty$3(element, propertyName) {
   const loopCharacteristics = getLoopCharacteristics$2(element);
   return loopCharacteristics && loopCharacteristics.get(propertyName);
 }
@@ -55451,14 +55879,14 @@ function updateFormalExpression(element, propertyName, newValue, bpmnFactory) {
   };
 }
 function getLoopCardinality(element) {
-  return getProperty$2(element, "loopCardinality");
+  return getProperty$3(element, "loopCardinality");
 }
 function getLoopCardinalityValue(element) {
   const loopCardinality = getLoopCardinality(element);
   return getBody(loopCardinality);
 }
 function getCompletionCondition$1(element) {
-  return getProperty$2(element, "completionCondition");
+  return getProperty$3(element, "completionCondition");
 }
 function getCompletionConditionValue(element) {
   const completionCondition = getCompletionCondition$1(element);
@@ -56176,64 +56604,6 @@ var index$2 = {
   __init__: ["bpmnPropertiesProvider"],
   bpmnPropertiesProvider: ["type", BpmnPropertiesProvider]
 };
-function getExtensionElementsList(businessObject, type = void 0) {
-  const extensionElements = businessObject.get("extensionElements");
-  if (!extensionElements) {
-    return [];
-  }
-  const values2 = extensionElements.get("values");
-  if (!values2 || !values2.length) {
-    return [];
-  }
-  if (type) {
-    return values2.filter((value) => is(value, type));
-  }
-  return values2;
-}
-function addExtensionElements(element, businessObject, extensionElementToAdd, bpmnFactory, commandStack) {
-  const commands = [];
-  let extensionElements = businessObject.get("extensionElements");
-  if (!extensionElements) {
-    extensionElements = createElement("bpmn:ExtensionElements", {
-      values: []
-    }, businessObject, bpmnFactory);
-    commands.push({
-      cmd: "element.updateModdleProperties",
-      context: {
-        element,
-        moddleElement: businessObject,
-        properties: {
-          extensionElements
-        }
-      }
-    });
-  }
-  extensionElementToAdd.$parent = extensionElements;
-  commands.push({
-    cmd: "element.updateModdleProperties",
-    context: {
-      element,
-      moddleElement: extensionElements,
-      properties: {
-        values: [...extensionElements.get("values"), extensionElementToAdd]
-      }
-    }
-  });
-  commandStack.execute("properties-panel.multi-command-executor", commands);
-}
-function removeExtensionElements(element, businessObject, extensionElementsToRemove, commandStack) {
-  if (!isArray(extensionElementsToRemove)) {
-    extensionElementsToRemove = [extensionElementsToRemove];
-  }
-  const extensionElements = businessObject.get("extensionElements"), values2 = extensionElements.get("values").filter((value) => !extensionElementsToRemove.includes(value));
-  commandStack.execute("element.updateModdleProperties", {
-    element,
-    moddleElement: extensionElements,
-    properties: {
-      values: values2
-    }
-  });
-}
 function withProps(Component2, otherProps) {
   return (props) => {
     return u5(Component2, {
@@ -56301,6 +56671,129 @@ function withTooltipContainer(Component2) {
 }
 var FeelEntry2 = withTooltipContainer(FeelEntry);
 var FeelEntryWithVariableContext = withVariableContext(FeelEntry2);
+function getExtensionElementsList(businessObject, type = void 0) {
+  const extensionElements = businessObject.get("extensionElements");
+  if (!extensionElements) {
+    return [];
+  }
+  const values2 = extensionElements.get("values");
+  if (!values2 || !values2.length) {
+    return [];
+  }
+  if (type) {
+    return values2.filter((value) => is(value, type));
+  }
+  return values2;
+}
+function addExtensionElements(element, businessObject, extensionElementToAdd, bpmnFactory, commandStack) {
+  const commands = [];
+  let extensionElements = businessObject.get("extensionElements");
+  if (!extensionElements) {
+    extensionElements = createElement("bpmn:ExtensionElements", {
+      values: []
+    }, businessObject, bpmnFactory);
+    commands.push({
+      cmd: "element.updateModdleProperties",
+      context: {
+        element,
+        moddleElement: businessObject,
+        properties: {
+          extensionElements
+        }
+      }
+    });
+  }
+  extensionElementToAdd.$parent = extensionElements;
+  commands.push({
+    cmd: "element.updateModdleProperties",
+    context: {
+      element,
+      moddleElement: extensionElements,
+      properties: {
+        values: [...extensionElements.get("values"), extensionElementToAdd]
+      }
+    }
+  });
+  commandStack.execute("properties-panel.multi-command-executor", commands);
+}
+function removeExtensionElements(element, businessObject, extensionElementsToRemove, commandStack) {
+  if (!isArray(extensionElementsToRemove)) {
+    extensionElementsToRemove = [extensionElementsToRemove];
+  }
+  const extensionElements = businessObject.get("extensionElements"), values2 = extensionElements.get("values").filter((value) => !extensionElementsToRemove.includes(value));
+  commandStack.execute("element.updateModdleProperties", {
+    element,
+    moddleElement: extensionElements,
+    properties: {
+      values: values2
+    }
+  });
+}
+function ActiveElementsProps(props) {
+  const {
+    element
+  } = props;
+  if (!is(element, "bpmn:AdHocSubProcess")) {
+    return [];
+  }
+  const entries = [{
+    id: "activeElementsCollection",
+    component: ActiveElementsCollection,
+    isEdited: isEdited$6
+  }];
+  return entries;
+}
+function ActiveElementsCollection(props) {
+  const {
+    element
+  } = props;
+  const commandStack = useService("commandStack");
+  const bpmnFactory = useService("bpmnFactory");
+  const translate4 = useService("translate");
+  const debounce2 = useService("debounceInput");
+  const getValue = () => {
+    return getProperty$2(element);
+  };
+  const setValue = (value) => {
+    return setProperty$1(element, value, commandStack, bpmnFactory);
+  };
+  return FeelEntryWithVariableContext({
+    element,
+    id: "activeElements-activeElementsCollection",
+    label: translate4("Active elements collection"),
+    feel: "required",
+    getValue,
+    setValue,
+    debounce: debounce2
+  });
+}
+function getProperty$2(element) {
+  const extensionElement = getExtensionElement(element);
+  return extensionElement && extensionElement.get("activeElementsCollection");
+}
+function setProperty$1(element, value, commandStack, bpmnFactory) {
+  const extensionElement = getExtensionElement(element);
+  if (!extensionElement) {
+    const adHoc = createElement("zeebe:AdHoc", {
+      activeElementsCollection: value
+    }, void 0, bpmnFactory);
+    const businessObject = getBusinessObject(element);
+    addExtensionElements(element, businessObject, adHoc, bpmnFactory, commandStack);
+  } else {
+    commandStack.execute("element.updateModdleProperties", {
+      element,
+      moddleElement: extensionElement,
+      properties: {
+        activeElementsCollection: value
+      }
+    });
+  }
+}
+function getExtensionElement(element) {
+  const businessObject = getBusinessObject(element);
+  const extensions = getExtensionElementsList(businessObject, "zeebe:AdHoc");
+  return extensions[0];
+}
 function AssignmentDefinitionProps(props) {
   const {
     element
@@ -59707,10 +60200,11 @@ function getTaskDefinition(element) {
   const businessObject = getBusinessObject(element);
   return getExtensionElementsList(businessObject, "zeebe:TaskDefinition")[0];
 }
-var EVENT_TYPE = ["completing", "assigning"];
+var EVENT_TYPE = ["assigning", "updating", "completing"];
 var EVENT_TO_LABEL$1 = {
-  completing: "Completing",
-  assigning: "Assigning"
+  assigning: "Assigning",
+  updating: "Updating",
+  completing: "Completing"
 };
 function TaskListenerEntries(props) {
   const {
@@ -60733,7 +61227,7 @@ function getPropertiesList(element, namespace = "camunda") {
   return properties && properties.get(getPropertyName(namespace));
 }
 var LOW_PRIORITY$1 = 500;
-var ZEEBE_GROUPS = [BusinessRuleImplementationGroup, CalledDecisionGroup, ScriptImplementationGroup, ScriptGroup$1, UserTaskImplementationGroup, TaskDefinitionGroup, AssignmentDefinitionGroup, FormGroup$1, ConditionGroup$1, TargetGroup, InputPropagationGroup, InputGroup$1, OutputPropagationGroup, OutputGroup$1, HeaderGroup, TaskListenersGroup, ExecutionListenersGroup, ExtensionPropertiesGroup$1];
+var ZEEBE_GROUPS = [BusinessRuleImplementationGroup, CalledDecisionGroup, ScriptImplementationGroup, ScriptGroup$1, UserTaskImplementationGroup, TaskDefinitionGroup, AssignmentDefinitionGroup, ActiveElementsGroup, FormGroup$1, ConditionGroup$1, TargetGroup, InputPropagationGroup, InputGroup$1, OutputPropagationGroup, OutputGroup$1, HeaderGroup, TaskListenersGroup, ExecutionListenersGroup, ExtensionPropertiesGroup$1];
 var ZeebePropertiesProvider = class {
   constructor(propertiesPanel, injector) {
     propertiesPanel.registerProvider(LOW_PRIORITY$1, this);
@@ -60941,6 +61435,18 @@ function AssignmentDefinitionGroup(element, injector) {
     }), ...TaskScheduleProps({
       element
     }), ...PriorityDefinitionProps({
+      element
+    })],
+    component: Group
+  };
+  return group.entries.length ? group : null;
+}
+function ActiveElementsGroup(element, injector) {
+  const translate4 = injector.get("translate");
+  const group = {
+    id: "activeElements",
+    label: translate4("Active elements"),
+    entries: [...ActiveElementsProps({
       element
     })],
     component: Group
@@ -69490,6 +69996,15 @@ function isTypedEvent3(event2, eventDefinitionType) {
     return eventDefinitionType ? is(definition, eventDefinitionType) : true;
   });
 }
+function getChildren3(element, elementRegistry) {
+  if (element.children && element.children.length !== 0) {
+    return element.children;
+  }
+  if (is(element, "bpmn:SubProcess") && !element.di.isExpanded) {
+    return elementRegistry.get(getPlaneIdFromShape(element)).children;
+  }
+  return [];
+}
 
 // node_modules/bpmn-js-token-simulation/lib/simulator/Simulator.js
 function Simulator(injector, eventBus, elementRegistry) {
@@ -69957,12 +70472,12 @@ function Simulator(injector, eventBus, elementRegistry) {
     } = context;
     const scope = createScope(context);
     const {
-      children = [],
       attachers = []
     } = element;
+    const children = getChildren3(element, elementRegistry);
     for (const childElement of children) {
       if (isEventSubProcess3(childElement)) {
-        const startEvents = childElement.children.filter(
+        const startEvents = getChildren3(childElement, elementRegistry).filter(
           (element2) => isStartEvent(element2) && !isCompensationEvent(element2)
         );
         for (const startEvent of startEvents) {
@@ -70693,11 +71208,13 @@ SubProcessBehavior.prototype._start = function(context) {
       });
     }
   }
+  if (!startNodes.length) {
+    this._simulator.exit(context);
+  }
 };
 SubProcessBehavior.prototype._findStarts = function(element, startEvent) {
-  element = this._elementRegistry.get(element.id + "_plane") || element;
   const isStartEvent2 = startEvent ? (node2) => startEvent === node2 : (node2) => isNoneStartEvent(node2);
-  return element.children.filter(
+  return getChildren3(element, this._elementRegistry).filter(
     (node2) => isStartEvent2(node2) || isImplicitStartEvent(node2)
   );
 };
@@ -70712,13 +71229,15 @@ var CANCEL_EVENT = {
   boundary: false,
   persistent: true
 };
-function TransactionBehavior(simulator, scopeBehavior) {
+function TransactionBehavior(simulator, scopeBehavior, elementRegistry) {
   this._simulator = simulator;
   this._scopeBehavior = scopeBehavior;
+  this._elementRegistry = elementRegistry;
 }
 TransactionBehavior.$inject = [
   "simulator",
-  "scopeBehavior"
+  "scopeBehavior",
+  "elementRegistry"
 ];
 TransactionBehavior.prototype.setup = function(context) {
   const {
@@ -70779,10 +71298,11 @@ TransactionBehavior.prototype.registerCompensation = function(scope) {
   const {
     element
   } = scope;
-  const compensateStartEvents = element.children.filter(
+  const children = getChildren3(element, this._elementRegistry);
+  const compensateStartEvents = children.filter(
     isEventSubProcess3
   ).map(
-    (element2) => element2.children.find(
+    (element2) => getChildren3(element2, this._elementRegistry).find(
       (element3) => isStartEvent(element3) && isCompensationEvent(element3)
     )
   ).filter((s5) => s5);
@@ -70790,7 +71310,7 @@ TransactionBehavior.prototype.registerCompensation = function(scope) {
   if (!compensateStartEvents.length && !compensateBoundaryEvents.length) {
     return;
   }
-  const transactionScope = this.findTransactionScope(scope.parent);
+  const transactionScope = this.findTransactionScope(scope);
   if (!is(transactionScope.element, "bpmn:Transaction")) {
     this.makeCompensable(transactionScope);
   }
@@ -70980,25 +71500,14 @@ MessageFlowBehavior2.prototype.exit = function(context) {
 };
 
 // node_modules/bpmn-js-token-simulation/lib/util/ElementHelper.js
-function is7(element, types3) {
-  if (element.type === "label") {
-    return false;
-  }
-  if (!Array.isArray(types3)) {
-    types3 = [types3];
-  }
-  return types3.some(function(type) {
-    return is(element, type);
-  });
-}
 function getEventDefinition4(event2, eventDefinitionType) {
   return find(getBusinessObject(event2).eventDefinitions, (definition) => {
-    return is7(definition, eventDefinitionType);
+    return is(definition, eventDefinitionType);
   });
 }
 function isTypedEvent4(event2, eventDefinitionType) {
   return some(getBusinessObject(event2).eventDefinitions, (definition) => {
-    return is7(definition, eventDefinitionType);
+    return is(definition, eventDefinitionType);
   });
 }
 
@@ -71023,7 +71532,8 @@ EventBehaviors.prototype.get = function(element) {
       const link = getLinkDefinition(element2);
       const parentScope = scope.parent;
       const parentElement = parentScope.element;
-      const linkTargets = parentElement.children.filter(
+      const children = getChildren3(parentElement, this._elementRegistry);
+      const linkTargets = children.filter(
         (element3) => isLinkCatch(element3) && getLinkDefinition(element3).name === link.name
       );
       for (const linkTarget of linkTargets) {
@@ -71475,6 +71985,11 @@ ScopeFilter.prototype.isShown = function(scope) {
   }
   return scope && this._filter(scope);
 };
+ScopeFilter.prototype.isFocused = function(scope) {
+  var _a;
+  const id = scope.id || scope;
+  return ((_a = this._scope) == null ? void 0 : _a.id) === id;
+};
 ScopeFilter.prototype.findScope = function(options) {
   return this._simulator.findScopes(options).filter((s5) => this.isShown(s5))[0];
 };
@@ -71900,7 +72415,7 @@ function ExclusiveGatewayHandler(exclusiveGatewaySettings) {
 }
 ExclusiveGatewayHandler.prototype.createContextPads = function(element) {
   const outgoingFlows = element.outgoing.filter(function(outgoing) {
-    return is7(outgoing, "bpmn:SequenceFlow");
+    return is(outgoing, "bpmn:SequenceFlow");
   });
   if (outgoingFlows.length < 2) {
     return;
@@ -71963,7 +72478,7 @@ function PauseHandler(simulator) {
   this._simulator = simulator;
 }
 PauseHandler.prototype.createContextPads = function(element) {
-  if (is7(element, "bpmn:ReceiveTask") || is7(element, "bpmn:SubProcess") && getBusinessObject(element).triggeredByEvent) {
+  if (is(element, "bpmn:ReceiveTask") || is(element, "bpmn:SubProcess") && getBusinessObject(element).triggeredByEvent) {
     return [];
   }
   return [
@@ -72089,7 +72604,7 @@ function ContextPads(eventBus, elementRegistry, overlays, injector, canvas, scop
   });
   eventBus.on(SCOPE_FILTER_CHANGED_EVENT, (event2) => {
     const showElements = all(
-      ".djs-overlay-ts-context-menu [data-scope-ids]",
+      ".djs-overlay-bts-context-menu [data-scope-ids]",
       overlays._overlayRoot
     );
     for (const element of showElements) {
@@ -72098,7 +72613,7 @@ function ContextPads(eventBus, elementRegistry, overlays, injector, canvas, scop
       classes2(element).toggle("hidden", !shown);
     }
     const hideElements = all(
-      ".djs-overlay-ts-context-menu [data-hide-scope-ids]",
+      ".djs-overlay-bts-context-menu [data-hide-scope-ids]",
       overlays._overlayRoot
     );
     for (const element of hideElements) {
@@ -72121,7 +72636,7 @@ ContextPads.prototype.registerHandler = function(type, handlerCls) {
 };
 ContextPads.prototype.getHandlers = function(element) {
   return this._handlers.filter(
-    ({ type }) => is7(element, type)
+    ({ type }) => is(element, type)
   ).map(
     ({ handler }) => handler
   );
@@ -72471,6 +72986,7 @@ function ShowScopes(eventBus, canvas, scopeFilter, elementColors, simulationStyl
     for (const element of allElements) {
       const scopeId = element.dataset.scopeId;
       classes2(element).toggle("inactive", !this._scopeFilter.isShown(scopeId));
+      classes2(element).toggle("focussed", this._scopeFilter.isFocused(scopeId));
     }
   });
   eventBus.on(SCOPE_CREATE_EVENT, (event2) => {
@@ -72499,14 +73015,14 @@ ShowScopes.prototype.addScope = function(scope) {
   const {
     element: scopeElement
   } = scope;
-  if (!processElements.includes(scopeElement.type)) {
+  if (!isAny(scopeElement, processElements)) {
     return;
   }
   const colors2 = scope.colors;
-  const colorMarkup = colors2 ? `style="color: ${colors2.auxiliary}; background: ${colors2.primary}"` : "";
+  const colorMarkup = colors2 ? `style="color: ${colors2.auxiliary}; background: ${colors2.primary}; outline-color: ${colors2.primary}"` : "";
   const html = domify$1(`
     <div data-scope-id="${scope.id}" class="bts-scope"
-         title="View Process Instance ${scope.id}" ${colorMarkup}>
+         title="Focus process instance ${scope.id}" ${colorMarkup}>
       ${scope.getTokens()}
     </div>
   `);
@@ -72522,6 +73038,7 @@ ShowScopes.prototype.addScope = function(scope) {
   if (!this._scopeFilter.isShown(scope)) {
     classes2(html).add("inactive");
   }
+  classes2(html).toggle("focussed", this._scopeFilter.isFocused(scope));
   this._container.appendChild(html);
 };
 ShowScopes.prototype.getScopeElements = function() {
@@ -72642,34 +73159,34 @@ function getEventTypeString(element) {
     return "none";
   }
   const eventDefinition = bo.eventDefinitions[0];
-  if (is7(eventDefinition, "bpmn:MessageEventDefinition")) {
+  if (is(eventDefinition, "bpmn:MessageEventDefinition")) {
     return "message";
   }
-  if (is7(eventDefinition, "bpmn:TimerEventDefinition")) {
+  if (is(eventDefinition, "bpmn:TimerEventDefinition")) {
     return "timer";
   }
-  if (is7(eventDefinition, "bpmn:SignalEventDefinition")) {
+  if (is(eventDefinition, "bpmn:SignalEventDefinition")) {
     return "signal";
   }
-  if (is7(eventDefinition, "bpmn:ErrorEventDefinition")) {
+  if (is(eventDefinition, "bpmn:ErrorEventDefinition")) {
     return "error";
   }
-  if (is7(eventDefinition, "bpmn:EscalationEventDefinition")) {
+  if (is(eventDefinition, "bpmn:EscalationEventDefinition")) {
     return "escalation";
   }
-  if (is7(eventDefinition, "bpmn:CompensateEventDefinition")) {
+  if (is(eventDefinition, "bpmn:CompensateEventDefinition")) {
     return "compensation";
   }
-  if (is7(eventDefinition, "bpmn:ConditionalEventDefinition")) {
+  if (is(eventDefinition, "bpmn:ConditionalEventDefinition")) {
     return "condition";
   }
-  if (is7(eventDefinition, "bpmn:LinkEventDefinition")) {
+  if (is(eventDefinition, "bpmn:LinkEventDefinition")) {
     return "link";
   }
-  if (is7(eventDefinition, "bpmn:CancelEventDefinition")) {
+  if (is(eventDefinition, "bpmn:CancelEventDefinition")) {
     return "cancel";
   }
-  if (is7(eventDefinition, "bpmn:TerminateEventDefinition")) {
+  if (is(eventDefinition, "bpmn:TerminateEventDefinition")) {
     return "terminate";
   }
   return "none";
@@ -72700,10 +73217,10 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
       "bpmn:Participant",
       "bpmn:SubProcess"
     ];
-    if (!processScopes.includes(scopeElement.type)) {
+    if (!isAny(scopeElement, processScopes)) {
       return;
     }
-    const isSubProcess2 = is7(scopeElement, "bpmn:SubProcess");
+    const isSubProcess2 = is(scopeElement, "bpmn:SubProcess");
     const text = `${isSubProcess2 ? getElementName(scopeElement) || "SubProcess" : "Process"} ${completed ? "finished" : "canceled"}`;
     this.log({
       text,
@@ -72723,10 +73240,10 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
       "bpmn:Participant",
       "bpmn:SubProcess"
     ];
-    if (!processScopes.includes(scopeElement.type)) {
+    if (!isAny(scopeElement, processScopes)) {
       return;
     }
-    const isSubProcess2 = is7(scopeElement, "bpmn:SubProcess");
+    const isSubProcess2 = is(scopeElement, "bpmn:SubProcess");
     const text = `${isSubProcess2 ? getElementName(scopeElement) || "SubProcess" : "Process"} started`;
     this.log({
       text,
@@ -72745,119 +73262,119 @@ function Log(eventBus, notifications, tokenSimulationPalette, canvas, scopeFilte
     }
     const scope = elementScope.parent;
     const elementName = getElementName(element);
-    if (is7(element, "bpmn:ServiceTask")) {
+    if (is(element, "bpmn:ServiceTask")) {
       return this.log({
         text: elementName || "Service Task",
         icon: "bpmn-icon-service",
         scope
       });
     }
-    if (is7(element, "bpmn:UserTask")) {
+    if (is(element, "bpmn:UserTask")) {
       return this.log({
         text: elementName || "User Task",
         icon: "bpmn-icon-user",
         scope
       });
     }
-    if (is7(element, "bpmn:CallActivity")) {
+    if (is(element, "bpmn:CallActivity")) {
       return this.log({
         text: elementName || "Call Activity",
         icon: "bpmn-icon-call-activity",
         scope
       });
     }
-    if (is7(element, "bpmn:ScriptTask")) {
+    if (is(element, "bpmn:ScriptTask")) {
       return this.log({
         text: elementName || "Script Task",
         icon: "bpmn-icon-script",
         scope
       });
     }
-    if (is7(element, "bpmn:BusinessRuleTask")) {
+    if (is(element, "bpmn:BusinessRuleTask")) {
       return this.log({
         text: elementName || "Business Rule Task",
         icon: "bpmn-icon-business-rule",
         scope
       });
     }
-    if (is7(element, "bpmn:ManualTask")) {
+    if (is(element, "bpmn:ManualTask")) {
       return this.log({
         text: elementName || "Manual Task",
         icon: "bpmn-icon-manual-task",
         scope
       });
     }
-    if (is7(element, "bpmn:ReceiveTask")) {
+    if (is(element, "bpmn:ReceiveTask")) {
       return this.log({
         text: elementName || "Receive Task",
         icon: "bpmn-icon-receive",
         scope
       });
     }
-    if (is7(element, "bpmn:SendTask")) {
+    if (is(element, "bpmn:SendTask")) {
       return this.log({
         text: elementName || "Send Task",
         icon: "bpmn-icon-send",
         scope
       });
     }
-    if (is7(element, "bpmn:Task")) {
+    if (is(element, "bpmn:Task")) {
       return this.log({
         text: elementName || "Task",
         icon: "bpmn-icon-task",
         scope
       });
     }
-    if (is7(element, "bpmn:ExclusiveGateway")) {
+    if (is(element, "bpmn:ExclusiveGateway")) {
       return this.log({
         text: elementName || "Exclusive Gateway",
         icon: "bpmn-icon-gateway-xor",
         scope
       });
     }
-    if (is7(element, "bpmn:ParallelGateway")) {
+    if (is(element, "bpmn:ParallelGateway")) {
       return this.log({
         text: elementName || "Parallel Gateway",
         icon: "bpmn-icon-gateway-parallel",
         scope
       });
     }
-    if (is7(element, "bpmn:InclusiveGateway")) {
+    if (is(element, "bpmn:InclusiveGateway")) {
       return this.log({
         text: elementName || "Inclusive Gateway",
         icon: "bpmn-icon-gateway-or",
         scope
       });
     }
-    if (is7(element, "bpmn:StartEvent")) {
+    if (is(element, "bpmn:StartEvent")) {
       return this.log({
         text: elementName || "Start Event",
         icon: `bpmn-icon-start-event-${getEventTypeString(element)}`,
         scope
       });
     }
-    if (is7(element, "bpmn:IntermediateCatchEvent")) {
+    if (is(element, "bpmn:IntermediateCatchEvent")) {
       return this.log({
         text: elementName || "Intermediate Event",
         icon: getIconForIntermediateEvent(element, "catch"),
         scope
       });
     }
-    if (is7(element, "bpmn:IntermediateThrowEvent")) {
+    if (is(element, "bpmn:IntermediateThrowEvent")) {
       return this.log({
         text: elementName || "Intermediate Event",
         icon: getIconForIntermediateEvent(element, "throw"),
         scope
       });
     }
-    if (is7(element, "bpmn:BoundaryEvent")) {
+    if (is(element, "bpmn:BoundaryEvent")) {
       return this.log({
         text: elementName || "Boundary Event",
         icon: getIconForIntermediateEvent(element, "catch"),
         scope
       });
     }
-    if (is7(element, "bpmn:EndEvent")) {
+    if (is(element, "bpmn:EndEvent")) {
       return this.log({
         text: elementName || "End Event",
         icon: `bpmn-icon-end-event-${getEventTypeString(element)}`,
@@ -73013,7 +73530,7 @@ ElementSupport.prototype.enable = function() {
     if (isLabel3(element)) {
       return;
     }
-    if (!is7(element, UNSUPPORTED_ELEMENTS)) {
+    if (!isAny(element, UNSUPPORTED_ELEMENTS)) {
       return;
     }
     this.showWarning(element);
@@ -73233,11 +73750,11 @@ function TokenCount(eventBus, overlays, simulator, scopeFilter, simulationStyles
   });
 }
 TokenCount.prototype.addTokenCounts = function(element) {
-  if (is7(element, "bpmn:MessageFlow") || is7(element, "bpmn:SequenceFlow")) {
+  if (is(element, "bpmn:MessageFlow") || is(element, "bpmn:SequenceFlow")) {
     return;
   }
   const scopes = this._simulator.findScopes((scope) => {
-    return !scope.destroyed && scope.children.some((c5) => !c5.destroyed && c5.element === element && !c5.children.length);
+    return !scope.destroyed && scope.children.some((c5) => !c5.destroyed && c5.element === element);
   });
   this.addTokenCount(element, scopes);
 };
@@ -73390,7 +73907,7 @@ function getNext(gateway, sequenceFlow) {
   }
 }
 function isSequenceFlow3(connection) {
-  return is7(connection, "bpmn:SequenceFlow");
+  return is(connection, "bpmn:SequenceFlow");
 }
 var ID3 = "exclusive-gateway-settings";
 var HIGH_PRIORITY24 = 2e3;
@@ -73409,7 +73926,7 @@ function ExclusiveGatewaySettings(eventBus, elementRegistry, elementColors, simu
 }
 ExclusiveGatewaySettings.prototype.setSequenceFlowsDefault = function() {
   const exclusiveGateways = this._elementRegistry.filter((element) => {
-    return is7(element, "bpmn:ExclusiveGateway");
+    return is(element, "bpmn:ExclusiveGateway");
   });
   for (const gateway of exclusiveGateways) {
     this.setSequenceFlow(gateway);
@@ -73417,7 +73934,7 @@ ExclusiveGatewaySettings.prototype.setSequenceFlowsDefault = function() {
 };
 ExclusiveGatewaySettings.prototype.resetSequenceFlows = function() {
   const exclusiveGateways = this._elementRegistry.filter((element) => {
-    return is7(element, "bpmn:ExclusiveGateway");
+    return is(element, "bpmn:ExclusiveGateway");
   });
   exclusiveGateways.forEach((exclusiveGateway) => {
     if (exclusiveGateway.outgoing.filter(isSequenceFlow3).length) {
@@ -73884,18 +74401,13 @@ function DisableModeling(eventBus, contextPad, dragging, directEditing, editorAc
   throwIfModelingDisabled(modeling, "reconnectEnd");
   intercept(editorActions, "trigger", function(fn2, args) {
     const action = args[0];
-    if (modelingDisabled && isAnyAction([
-      "undo",
-      "redo",
-      "copy",
-      "paste",
-      "removeSelection",
-      "spaceTool",
-      "lassoTool",
-      "globalConnectTool",
-      "distributeElements",
-      "alignElements",
-      "directEditing"
+    if (modelingDisabled && !isAnyAction([
+      "toggleTokenSimulation",
+      "toggleTokenSimulationLog",
+      "togglePauseTokenSimulation",
+      "resetTokenSimulation",
+      "stepZoom",
+      "zoom"
     ], action)) {
       return;
     }
@@ -74067,7 +74579,7 @@ function KeyboardBindings2(eventBus, injector) {
   eventBus.on("keyboard.init", function() {
     keyboard.addListener(VERY_HIGH_PRIORITY3, function(event2) {
       var keyEvent = event2.keyEvent;
-      handleKeyEvent(keyEvent);
+      return handleKeyEvent(keyEvent);
     });
   });
   eventBus.on(TOGGLE_MODE_EVENT, function(context) {
@@ -74184,7 +74696,7 @@ SimulationSupport.prototype.scopeDestroyed = function(scope = null) {
           "bpmn:Process",
           "bpmn:SubProcess"
         ];
-        if (scopeElements.every((t7) => !is7(event2.scope.element, t7))) {
+        if (scopeElements.every((t7) => !is(event2.scope.element, t7))) {
           return;
         }
         eventBus.off(SCOPE_DESTROYED_EVENT, listener);
@@ -74221,7 +74733,7 @@ SimulationSupport.prototype.elementExit = function(id = null) {
 SimulationSupport.prototype.getHistory = function(history) {
   return this._bpmnjs.invoke(["simulationTrace", function(simulationTrace) {
     return simulationTrace.getAll().filter(function(event2) {
-      return event2.action === "exit" && (is7(event2.element, "bpmn:StartEvent") || is7(event2.element, "bpmn:BoundaryEvent")) || event2.action === "enter";
+      return event2.action === "exit" && (is(event2.element, "bpmn:StartEvent") || is(event2.element, "bpmn:BoundaryEvent")) || event2.action === "enter";
     }).map(function(event2) {
       return event2.element.id;
     });
@@ -75659,7 +76171,7 @@ tabbable/dist/index.esm.js:
 
 focus-trap/dist/focus-trap.esm.js:
   (*!
-  * focus-trap 7.6.2
+  * focus-trap 7.6.4
   * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
   *)
 */
