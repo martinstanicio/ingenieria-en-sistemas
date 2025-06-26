@@ -2,7 +2,7 @@
 aliases:
   - Combinaciones sin repetición
 created: 2025-03-26 19:10:45
-modified: 2025-03-31 11:44:55
+modified: 2025-06-25 18:33:07
 title: Combinaciones
 ---
 
@@ -11,7 +11,7 @@ title: Combinaciones
 Cantidad de grupos de $k$ elementos que se pueden formar dado un [[Conjunto]] de $n$ elementos, donde **el orden no importa**, sin repeticiones.
 
 $$
-C_k^n = \left( \begin{array}{c} n \\ k \end{array} \right) = \frac{n!}{k! \cdot (n - k)!} = \frac{P_n}{k!}
+C_k^n = \left( \begin{array}{c} n \\ k \end{array} \right) = \frac{n!}{k! \cdot (n - k)!}
 $$
 
 > [!note]
