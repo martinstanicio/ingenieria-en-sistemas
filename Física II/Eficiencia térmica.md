@@ -2,7 +2,7 @@
 aliases:
   - Rendimiento térmico
 created: 2025-06-26 19:53:38
-modified: 2025-06-26 19:56:12
+modified: 2025-06-26 20:02:10
 title: Eficiencia térmica
 ---
 
@@ -15,4 +15,13 @@ e =
 \frac{\text{energía entregada}}{\text{energía consumida}} =
 \frac{\vert W \vert}{\vert Q_h \vert}
 $$
-Pero como en una [[Máquina térmica]] la variación de [[Energía interna]] $\Delta U = 0$, sabemos que $Q =
+
+Pero como en una [[Máquina térmica]] la variación de [[Energía interna]] $\Delta U = 0$, sabemos que el [[Trabajo]] realizado $W$ es igual a la diferencia entre la [[Energía]] recibida $Q_h$ y la [[Energía]] liberada $Q_c$. Por lo tanto, podemos calcular la [[Eficiencia térmica]] $e$ de la siguiente forma:
+
+$$
+\vert W \vert = \vert Q_h \vert - \vert Q_c \vert
+\Rightarrow
+e =
+\frac{\vert Q_h \vert - \vert Q_c \vert}{\vert Q_h \vert} =
+1 - \frac{\vert Q_c \vert}{\vert Q_h \vert}
+$$

@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Máquinas térmicas
 created: 2025-06-26 19:44:15
-modified: 2025-06-26 19:53:20
+modified: 2025-06-26 20:08:56
 title: Máquina térmica
 ---
 
