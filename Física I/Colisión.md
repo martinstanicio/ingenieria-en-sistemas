@@ -1,8 +1,10 @@
 ---
 aliases:
   - Choque
+  - Colisiones
+  - Choques
 created: 2024-07-04 17:40:09
-modified: 2024-10-24 15:07:18
+modified: 2025-06-26 19:39:21
 title: Colisión
 ---
 

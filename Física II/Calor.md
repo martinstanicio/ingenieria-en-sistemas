@@ -1,6 +1,6 @@
 ---
 created: 2025-03-27 10:34:07
-modified: 2025-06-26 19:28:08
+modified: 2025-06-26 19:28:19
 title: Calor
 ---
 
@@ -22,9 +22,6 @@ Si hay un cambio de [[Estado de agregación]], la [[Temperatura]] se mantiene co
 $$
 Q = m \cdot c_L
 $$
-
-> [!note]
-> La unidad a utilizar es $\text{J}$ (Joules) o $\text{cal}$ (calorías).
 
 > [!important]
 > Cuando en una [[Transformación]] el no se intercambia [[Calor]] con el [[Física II/Medio|Medio]] $Q = 0$, estamos ante una [[Transformación adiabática]].
