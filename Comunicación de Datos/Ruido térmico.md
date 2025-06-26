@@ -2,7 +2,7 @@
 aliases:
   - Ruido blanco
 created: 2025-03-27 02:22:17
-modified: 2025-03-27 02:32:43
+modified: 2025-06-26 16:16:40
 title: Ruido térmico
 ---
 
@@ -21,7 +21,7 @@ $$
 N_0 = k T
 $$
 
-Donde $N_0$ es la densidad de potencia del [[Ruido]], en Watts por $1 Hz$ de [[Ancho de banda]], $k$ es la [[Constante de Boltzmann]], y $T$ es la [[Temperatura]] absoluta en Kelvin.
+Donde $N_0$ es la densidad de potencia del [[Ruido]], en Watts por $1 Hz$ de [[Ancho de banda]], $k$ es la [[Constante de Boltzmann]], y $T$ es la [[Temperatura absoluta]] (en kelvin).
 
 ---
 
