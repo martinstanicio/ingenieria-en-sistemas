@@ -4,7 +4,7 @@ aliases:
   - Transformaciones isócoras
   - Transformaciones isométricas
 created: 2025-03-31 09:55:33
-modified: 2025-03-31 09:57:27
+modified: 2025-06-26 16:34:20
 title: Transformación isócora
 ---
 
@@ -13,6 +13,8 @@ title: Transformación isócora
 El [[Volumen]] $V$ se mantiene constante durante toda la [[Transformación]].
 
 $$
+\Delta V = 0
+\Leftrightarrow
 V_0 = V_f
 $$
 

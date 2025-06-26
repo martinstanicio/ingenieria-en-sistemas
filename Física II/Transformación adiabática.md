@@ -2,7 +2,7 @@
 aliases:
   - Transformaciones adiabáticas
 created: 2025-03-31 09:39:19
-modified: 2025-03-31 09:42:40
+modified: 2025-06-26 16:33:47
 title: Transformación adiabática
 ---
 

@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Transformaciones
 created: 2025-03-27 10:32:05
-modified: 2025-06-26 16:26:01
+modified: 2025-06-26 16:30:14
 title: Transformación
 ---
 

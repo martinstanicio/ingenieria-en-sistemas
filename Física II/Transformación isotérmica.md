@@ -2,7 +2,7 @@
 aliases:
   - Transformaciones isotérmicas
 created: 2025-03-31 09:46:09
-modified: 2025-03-31 09:48:10
+modified: 2025-06-26 16:34:29
 title: Transformación isotérmica
 ---
 
@@ -11,6 +11,8 @@ title: Transformación isotérmica
 La [[Temperatura]] $T$ se mantiene constante durante toda la [[Transformación]].
 
 $$
+\Delta T = 0
+\Leftrightarrow
 T_0 = T_f
 $$
 

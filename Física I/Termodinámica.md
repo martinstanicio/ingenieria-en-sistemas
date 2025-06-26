@@ -1,6 +1,6 @@
 ---
 created: 2024-03-21 22:08:19
-modified: 2025-03-31 09:34:19
+modified: 2025-06-26 16:35:35
 title: Termodinámica
 ---
 
