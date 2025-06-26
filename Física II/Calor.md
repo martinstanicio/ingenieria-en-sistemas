@@ -1,6 +1,6 @@
 ---
 created: 2025-03-27 10:34:07
-modified: 2025-03-31 09:41:43
+modified: 2025-06-26 19:28:08
 title: Calor
 ---
 
@@ -11,16 +11,16 @@ El [[Calor]] $Q$ es la transferencia de [[Energía]] a través de la frontera de
 Si no hay un cambio de [[Estado de agregación]], lo calculamos utilizando el [[Calor específico]] $c_e$.
 
 $$
-Q = m \cdot c_e \cdot (T_f - T_0) = m \cdot c_e \cdot \Delta T
+Q = m \cdot c_e \cdot \Delta T
 $$
 
 > [!tip]
 > Si el [[Sistema]] recibe [[Calor]], $Q$ es positivo; y si cede [[Calor]], $Q$ es negativo.
 
-Si hay un cambio de [[Estado de agregación]], la [[Temperatura]] se mantiene constante durante dicho proceso, y debemos calcular el [[Calor]] utilizando el [[Calor latente]] $c_l$.
+Si hay un cambio de [[Estado de agregación]], la [[Temperatura]] se mantiene constante durante dicho proceso, y debemos calcular el [[Calor]] utilizando el [[Calor latente]] $c_L$.
 
 $$
-Q = m \cdot c_l
+Q = m \cdot c_L
 $$
 
 > [!note]

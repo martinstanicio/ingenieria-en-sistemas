@@ -1,6 +1,6 @@
 ---
 created: 2024-05-30 18:00:17
-modified: 2025-06-26 18:08:12
+modified: 2025-06-26 19:11:11
 title: Trabajo
 ---
 
@@ -26,5 +26,5 @@ $$
 W =
 F \cdot \Delta x =
 \int_{x_0}^{x_f} F dx =
-\int_{V_0}^{V_f} P dV
+- \int_{V_0}^{V_f} P dV
 $$

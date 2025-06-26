@@ -1,6 +1,6 @@
 ---
 created: 2025-03-31 09:33:54
-modified: 2025-06-26 18:08:47
+modified: 2025-06-26 19:14:43
 title: Primer principio de la termodinámica
 ---
 
@@ -11,3 +11,5 @@ El primer principio de la [[Termodinámica]] dice que, la variación de la [[Ene
 $$
 \Delta U = W + Q
 $$
+
+^ppdlt
