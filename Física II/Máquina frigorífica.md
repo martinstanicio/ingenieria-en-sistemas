@@ -2,7 +2,7 @@
 aliases:
   - Máquinas frigoríficas
 created: 2025-06-26 19:44:15
-modified: 2025-06-26 20:10:15
+modified: 2025-06-26 20:34:51
 title: Máquina frigorífica
 ---
 
@@ -14,7 +14,7 @@ Un dispositivo que toma [[Energía]] en forma de [[Calor]] $Q$, y la cede a una 
 2. Realiza un [[Trabajo]] $W$ (consume [[Energía]])
 3. Libera [[Energía]] en forma de [[Calor]] $Q_h$
 
-![[máquina-térmica.jpg]]
+![[máquina-frigorífica.jpg]]
 
 Aplicando el [[Primer principio de la termodinámica]] sabemos que $\Delta U = Q + W$, pero por ser una [[Transformación]] cíclica $\Delta U = 0$, entonces:
 
