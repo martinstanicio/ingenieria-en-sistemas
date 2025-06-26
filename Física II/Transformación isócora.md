@@ -3,8 +3,10 @@ aliases:
   - Transformación isométrica
   - Transformaciones isócoras
   - Transformaciones isométricas
+  - Transformación isovolumétrica
+  - Transformaciones isovolumétricas
 created: 2025-03-31 09:55:33
-modified: 2025-06-26 16:34:20
+modified: 2025-06-26 18:11:30
 title: Transformación isócora
 ---
 

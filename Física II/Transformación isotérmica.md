@@ -2,7 +2,7 @@
 aliases:
   - Transformaciones isotérmicas
 created: 2025-03-31 09:46:09
-modified: 2025-06-26 16:34:29
+modified: 2025-06-26 18:21:56
 title: Transformación isotérmica
 ---
 
@@ -15,6 +15,8 @@ $$
 \Leftrightarrow
 T_0 = T_f
 $$
+
+![[transformación-isotérmica.jpg]] [[Diagrama PV]] de una [[Transformación isotérmica]] de un [[Gas ideal]]. La curva es una hipérbola.
 
 Para [[Gas ideal|Gases ideales]], eso implica que la [[Energía interna]] $U$ es constante.
 
