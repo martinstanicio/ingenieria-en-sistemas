@@ -3,7 +3,7 @@ aliases:
   - Delta Modulation
   - DM
 created: 2025-06-13 02:38:58
-modified: 2025-06-14 15:38:31
+modified: 2025-06-27 01:11:39
 title: Modulación delta
 ---
 
@@ -29,6 +29,6 @@ En el [[Receptor]], esta secuencia binaria se utiliza para reconstruir la [[Aná
 > La [[Análisis Matemático I/Función|Función]] reconstruida puede ser suavizada mediante un **proceso de integración** o un **filtro paso bajo** para generar una aproximación analógica de la [[Señal]] de [[Entradas|Entrada]] original.
 
 > [!warning]
-> Cuando la [[Señal analógica]] varía muy lentamente, el [[Error de cuantificación|Ruido de cuantificación]] es mayor cuanto mayor sea el tamaño del escalón $\delta$.
+> Cuando la [[Señal analógica]] varía muy lentamente, el [[Error de cuantización|Ruido de cuantización]] es mayor cuanto mayor sea el tamaño del escalón $\delta$.
 > 
 > Cuando la [[Señal analógica]] cambia tan rápidamente que la [[Análisis Matemático I/Función|Función]] escalera no puede seguirla, el [[Ruido]] de sobrecarga de la pendiente es mayor cuanto menor sea $\delta$.

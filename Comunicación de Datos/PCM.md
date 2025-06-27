@@ -20,7 +20,7 @@ Técnica de [[Digitalización]] cuyo funcionamiento se basa en el [[Teorema de m
 ![[pcm-1.jpg]]
 
 > [!warning]
-> Al cuantificar los [[PAM]], la [[Señal]] original solo se **aproxima** y no puede recuperarse exactamente, lo que se conoce como [[Error de cuantificación]].
+> Al cuantificar los [[PAM]], la [[Señal]] original solo se **aproxima** y no puede recuperarse exactamente, lo que se conoce como [[Error de cuantización]].
 
 ![[pcm-2.jpg]]
 

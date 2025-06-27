@@ -48,7 +48,7 @@ Se comparan prestaciones:
 
 ## 5.3. Datos analógicos, señales digitales
 
-Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]: [[PCM]] y [[Modulación delta]], junto con sus conceptos relacionados ([[Teorema de muestreo]], [[Error de cuantificación]], [[Codificación no lineal]] y [[Companding]])
+Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]: [[PCM]] y [[Modulación delta]], junto con sus conceptos relacionados ([[Teorema de muestreo]], [[Error de cuantización]], [[Codificación no lineal]] y [[Companding]])
 
 ## 5.4. Datos analógicos, señales analógicas
 
