@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-27 01:57:58
+modified: 2025-06-27 02:19:35
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -58,13 +58,3 @@ Se repasan técnicas de [[Modulación]] analógica:
 - [[Modulación angular]] ([[Modulación de frecuencia]] y [[Modulación de fase]])
 
 Se menciona la [[FDM|Multiplexación por división en frecuencia]] para transmitir múltiples [[Señal|Señales]] sobre un mismo [[Comunicación de Datos/Medio|Medio]].
-
-> [!danger]
-> FALTA COMPLETAR LOS SIGUIENTES CONCEPTOS CON MÁS INFORMACIÓN.
-> 
-> - [[Modulación angular]]
-> - [[Modulación de frecuencia]]
-> - [[Modulación de fase]]
-> - [[Multiplexación]]
-> - [[FDM]]
-> - [[TDM]]
