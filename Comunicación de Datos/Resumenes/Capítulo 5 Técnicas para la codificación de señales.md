@@ -1,6 +1,6 @@
 ---
 created: 2025-06-12 11:48:54
-modified: 2025-06-14 15:37:45
+modified: 2025-06-27 01:57:58
 title: "Capítulo 5: Técnicas para la codificación de señales"
 ---
 
@@ -54,7 +54,7 @@ Se describe la [[Digitalización]] de [[Dato analógico|Datos analógicos]]: [[P
 
 Se repasan técnicas de [[Modulación]] analógica:
 
-- [[Modulación de amplitud]]
+- [[Modulación de amplitud]] ([[DSBTC]], [[SSB]], [[DSBSC]] y [[VSB]])
 - [[Modulación angular]] ([[Modulación de frecuencia]] y [[Modulación de fase]])
 
 Se menciona la [[FDM|Multiplexación por división en frecuencia]] para transmitir múltiples [[Señal|Señales]] sobre un mismo [[Comunicación de Datos/Medio|Medio]].
@@ -62,7 +62,6 @@ Se menciona la [[FDM|Multiplexación por división en frecuencia]] para transmit
 > [!danger]
 > FALTA COMPLETAR LOS SIGUIENTES CONCEPTOS CON MÁS INFORMACIÓN.
 > 
-> - [[Modulación de amplitud]]
 > - [[Modulación angular]]
 > - [[Modulación de frecuencia]]
 > - [[Modulación de fase]]
