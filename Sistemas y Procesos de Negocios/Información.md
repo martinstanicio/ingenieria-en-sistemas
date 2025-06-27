@@ -1,12 +1,12 @@
 ---
 created: 2024-04-30 19:56:40
-modified: 2025-05-12 17:08:20
+modified: 2025-06-26 22:46:06
 title: Información
 ---
 
 # Información
 
-Es el [[Conocimiento]], que en un ==contexto dado== puede ser relevante y tener un significado ==para alguien particular==, bajo su ==correcta interpretación==. Sirve para **reducir la incertidumbre** al tomar decisiones, por lo que es la inversa de la [[Entropía]].
+Es el [[Conocimiento]], que en un ==contexto dado== puede ser relevante y tener un significado ==para alguien particular==, bajo su ==correcta interpretación==. Sirve para **reducir la incertidumbre** al tomar decisiones, por lo que es la inversa de la [[Sistemas y Procesos de Negocios/Entropía|Entropía]].
 
 > [!important]
 > Debe ser **veraz**, **oportuna** y **en forma**.

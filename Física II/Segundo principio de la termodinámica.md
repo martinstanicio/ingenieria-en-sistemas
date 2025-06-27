@@ -1,8 +1,8 @@
 ---
 aliases:
-  - Enunciado de Kelvin-Planck
+  - Enunciados de Clausius y Kelvin-Planck
 created: 2025-06-26 20:03:00
-modified: 2025-06-26 21:45:05
+modified: 2025-06-26 22:35:35
 title: Segundo principio de la termodinámica
 ---
 
