@@ -1,6 +1,8 @@
 ---
+aliases:
+  - Temperaturas
 created: 2025-03-27 10:29:51
-modified: 2025-03-31 09:55:30
+modified: 2025-06-26 21:57:42
 title: Temperatura
 ---
 

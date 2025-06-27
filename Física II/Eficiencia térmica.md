@@ -2,7 +2,7 @@
 aliases:
   - Rendimiento térmico
 created: 2025-06-26 19:53:38
-modified: 2025-06-26 20:02:10
+modified: 2025-06-26 21:53:21
 title: Eficiencia térmica
 ---
 
@@ -25,3 +25,10 @@ e =
 \frac{\vert Q_h \vert - \vert Q_c \vert}{\vert Q_h \vert} =
 1 - \frac{\vert Q_c \vert}{\vert Q_h \vert}
 $$
+
+> [!warning]
+> Para que se cumpla el [[Segundo principio de la termodinámica]], la [[Eficiencia térmica]] debe ser menor al $100 \%$, ya que la única forma de que $e = 1$ sería que $Q_c = 0$; es decir, que el $100 \%$ de la [[Energía]] absorbida $Q_h$ se convierta en [[Trabajo]] $W$.
+>
+> $$
+> e < 1
+> $$
