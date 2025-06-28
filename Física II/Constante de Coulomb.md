@@ -10,3 +10,4 @@ k =
 \frac{1}{4 \pi \epsilon} =
 \frac{8.9874 \cdot 10^* \space m^2}{1 \space C^2}
 $$
+Donde $\epsilon = \epsilon_r \cdot \epsilon_0$, 
