@@ -1,6 +1,6 @@
 ---
 created: 2024-05-30 18:00:17
-modified: 2025-06-26 19:11:11
+modified: 2025-06-28 19:53:20
 title: Trabajo
 ---
 
@@ -8,7 +8,7 @@ title: Trabajo
 
 Una [[Fuerza]] aplicada por una **distancia**.
 
-Es el ==producto escalar== entre la [[Fuerza]] aplicada, el desplazamiento realizado, y el coseno del ángulo entre la [[Fuerza]] y el desplazamiento.
+Es el [[Producto interno|Producto escalar]] entre la [[Fuerza]] aplicada $F$, el desplazamiento realizado $\Delta x$, y el coseno del ángulo $\theta$ entre la [[Fuerza]] y el desplazamiento.
 
 $$
 W = F \cdot \Delta x\cdot \cos{\theta}
