@@ -1,6 +1,6 @@
 ---
 created: 2025-06-28 16:19:25
-modified: 2025-06-28 16:22:34
+modified: 2025-06-28 17:17:03
 title: Densidad de carga superficial
 ---
 
@@ -13,4 +13,4 @@ $$
 $$
 
 > [!warning]
-> Esto solo es válido para una ==distribución continua de cargas==.
+> Esto solo es válido para una [[Distribución continua de cargas]].

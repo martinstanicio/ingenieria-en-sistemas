@@ -13,4 +13,4 @@ $$
 $$
 
 > [!warning]
-> Esto solo es válido para una ==distribución continua de cargas==.
+> Esto solo es válido para una [[Distribución continua de cargas]].

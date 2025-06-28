@@ -1,6 +1,6 @@
 ---
 created: 2025-06-28 16:19:25
-modified: 2025-06-28 16:23:08
+modified: 2025-06-28 17:17:10
 title: Densidad de carga lineal
 ---
 
@@ -13,4 +13,4 @@ $$
 $$
 
 > [!warning]
-> Esto solo es válido para una ==distribución continua de cargas==.
+> Esto solo es válido para una [[Distribución continua de cargas]].
