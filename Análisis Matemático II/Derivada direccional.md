@@ -12,37 +12,37 @@ Mientras que las [[Derivada parcial|Derivadas parciales]] nos permiten calcular 
 
 $$
 D_u f(p_0) =
-\lim_{h \to 0} \frac{f(p_0 + h \vec{u}) - f(p_0)}{h}
+\lim_{h \to 0} \frac{f(p_0 + h \hat{u}) - f(p_0)}{h}
 $$
 
 - $h$ es la distancia entre dos puntos cercanos $p$ y $p_0$ (es la [[Norma]] del vector $\vec{h}$)
-- $\vec{u}$ es el [[Versor]] que nos indica la dirección de la [[Derivada direccional]]
+- $\hat{u}$ es el [[Versor]] que nos indica la dirección de la [[Derivada direccional]]
 
 ## Teorema
 
-Si $f(p)$ es [[Diferencial|Diferenciable]] en $p$ entonces tiene una [[Derivada direccional]] en la dirección del [[Versor]] $\vec{u}$ y su valor es:
+Si $f(p)$ es [[Diferencial|Diferenciable]] en $p$ entonces tiene una [[Derivada direccional]] en la dirección del [[Versor]] $\hat{u}$ y su valor es:
 
 $$
-D_u f(p) = \nabla f(p) \cdot \vec{u}
+D_u f(p) = \nabla f(p) \cdot \hat{u}
 $$
 
 ## Máxima razón de cambio
 
-Para encontrar la máxima razón de cambio, debemos calcular en qué dirección del [[Versor]] $\vec{u}$, la [[Derivada direccional]] alcanza su valor máximo.
+Para encontrar la máxima razón de cambio, debemos calcular en qué dirección del [[Versor]] $\hat{u}$, la [[Derivada direccional]] alcanza su valor máximo.
 
 $$
 D_u f(p) =
-\nabla f(p) \cdot \vec{u} =
-\vert \nabla f(p) \vert \cdot \Vert \vec{u} \Vert \cdot \cos \theta =
+\nabla f(p) \cdot \hat{u} =
+\vert \nabla f(p) \vert \cdot \Vert \hat{u} \Vert \cdot \cos \theta =
 \vert \nabla f(p) \vert \cdot \cos \theta
 $$
 
-- $\theta$ es el ángulo entre el [[Vector gradiente]] y el [[Versor]] $\vec{u}$
+- $\theta$ es el ángulo entre el [[Vector gradiente]] y el [[Versor]] $\hat{u}$
 
 > [!tip]
-> Debido a que la [[Norma]] de un [[Versor]] siempre es $1$, podemos descartar $\Vert \vec{u} \Vert$.
+> Debido a que la [[Norma]] de un [[Versor]] siempre es $1$, podemos descartar $\Vert \hat{u} \Vert$.
 
-Como el valor del [[Vector gradiente]] en un punto no varía, el valor de la [[Derivada direccional]] está condicionado por $\cos \theta$. Por lo tanto, la [[Derivada direccional]] alcanzará su valor máximo cuando el [[Versor]] $\vec{u}$ tenga la misma dirección y sentido que el [[Vector gradiente]].
+Como el valor del [[Vector gradiente]] en un punto no varía, el valor de la [[Derivada direccional]] está condicionado por $\cos \theta$. Por lo tanto, la [[Derivada direccional]] alcanzará su valor máximo cuando el [[Versor]] $\hat{u}$ tenga la misma dirección y sentido que el [[Vector gradiente]].
 
 $$
 \theta = 0
@@ -54,7 +54,7 @@ $$
 
 ## Mínima razón de cambio
 
-De forma análoga, obtendremos la mínima razón de cambio cuando el [[Versor]] $\vec{u}$ tenga la misma dirección, pero sentido opuesto al [[Vector gradiente]].
+De forma análoga, obtendremos la mínima razón de cambio cuando el [[Versor]] $\hat{u}$ tenga la misma dirección, pero sentido opuesto al [[Vector gradiente]].
 
 $$
 \theta = \pi
