@@ -3,7 +3,7 @@ aliases:
   - Máquina ideal
   - Ciclo de Carnot
 created: 2025-06-26 22:02:26
-modified: 2025-06-26 22:23:46
+modified: 2025-06-28 13:11:22
 title: Máquina de Carnot
 ---
 
@@ -19,8 +19,8 @@ Es un tipo de [[Máquina térmica]] cuyo ciclo está definido por dos [[Transfor
 ---
 
 1. El proceso 1-2 es una compresión [[Transformación adiabática|Adiabática]]
-2. El proceso 2-3 es [[Transformación isotérmica|Isotérmico]] y el [[Sistema]] absorbe [[Calor]] de la fuente caliente $T_h$ (línea amarilla superior)
+2. El proceso 2-3 es una expansión [[Transformación isotérmica|Isotérmica]] y el [[Sistema]] absorbe [[Calor]] de la fuente caliente $T_h$ (línea amarilla superior)
 3. El proceso 3-4 es una expansión [[Transformación adiabática|Adiabática]]
-4. El proceso 4-1 es [[Transformación isotérmica|Isotérmico]] y el [[Sistema]] libera [[Calor]] a la fuente fría $T_c$ (línea amarilla inferior)
+4. El proceso 4-1 es una compresión [[Transformación isotérmica|Isotérmica]] y el [[Sistema]] libera [[Calor]] a la fuente fría $T_c$ (línea amarilla inferior)
 
 ![[máquina-de-carnot-2.png]]
