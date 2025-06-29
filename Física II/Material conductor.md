@@ -27,7 +27,7 @@ $$
 \vec{E} = \frac{\sigma}{\epsilon_0}
 $$
 
-Donde $\sigma$ es la [[Densidad de carga superficial]] en el punto, y $\epsilon_0$ es la permitividad del vacío.
+Donde $\sigma$ es la [[Densidad de carga superficial]] en el punto, y $\epsilon_0$ es la [[Permitividad eléctrica del vacío]].
 
 > [!important]
 > En un [[Material conductor|Conductor]] de forma irregular, la [[Densidad de carga superficial]] $\sigma$ es máxima en aquellos puntos donde el radio de curvatura es el menor.

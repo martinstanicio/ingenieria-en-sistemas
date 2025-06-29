@@ -14,7 +14,7 @@ $$
 \frac{Q}{\epsilon_0}
 $$
 
-Donde $Q$ es la carga neta encerrada en la superficie, y $\epsilon_0$ es la permitividad del vacío.
+Donde $Q$ es la carga neta encerrada en la superficie, y $\epsilon_0$ es la [[Permitividad eléctrica del vacío]].
 
 > [!tip]
 > El [[Flujo eléctrico]] a través de una superficie cerrada que no rodea a ninguna carga es cero.

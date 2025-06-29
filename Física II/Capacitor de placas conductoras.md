@@ -16,6 +16,6 @@ C =
 \frac{A \cdot \epsilon_0}{d}
 $$
 
-Donde $\Delta V$ es la diferencia de [[Potencial]] entre ambas placas, y $\epsilon_0$ es la permitividad del vacío.
+Donde $\Delta V$ es la diferencia de [[Potencial]] entre ambas placas, y $\epsilon_0$ es la [[Permitividad eléctrica del vacío]].
 
 ![[capacitor-de-placas-conductoras.jpg]]
