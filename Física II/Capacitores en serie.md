@@ -1,6 +1,6 @@
 ---
 created: 2025-06-29 00:29:00
-modified: 2025-06-29 00:30:57
+modified: 2025-06-29 02:36:15
 title: Capacitores en serie
 ---
 
@@ -17,3 +17,16 @@ $$
 $$
 
 ![[capacitores-en-serie.png]]
+
+> [!important]
+> Por ser un circuito en serie, cada capacitor tiene la misma carga $Q$.
+>
+> $$
+> Q = Q_1 = Q_2 = \dots = Q_n
+> $$
+>
+> Y la diferencia de [[Potencial]] total $\Delta V$ es la suma de las diferencias de [[Potencial|Potenciales]] $\Delta V_i$.
+>
+> $$
+> \Delta V = \Delta V_1 + \Delta V_2 + \dots \Delta V_n
+> $$
