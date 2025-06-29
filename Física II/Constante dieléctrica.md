@@ -2,13 +2,13 @@
 aliases:
   - Permitividad relativa
 created: 2025-06-29 01:12:27
-modified: 2025-06-29 01:16:32
+modified: 2025-06-29 01:20:31
 title: Constante dieléctrica
 ---
 
 # Constante dieléctrica
 
-La [[Constante dieléctrica]] $k = \epsilon_r$ de un medio está relacionado con la [[Permitividad eléctrica]] del medio.
+La [[Constante dieléctrica]] $k = \epsilon_r$ de un [[Material dieléctrico]] está relacionado con la [[Permitividad eléctrica]] del mismo.
 
 $$
 k = \epsilon_r = \frac{\epsilon}{\epsilon_0}
