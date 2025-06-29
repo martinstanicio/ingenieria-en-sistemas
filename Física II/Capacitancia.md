@@ -2,7 +2,7 @@
 aliases:
   - Capacidad
 created: 2025-06-29 00:06:34
-modified: 2025-06-29 00:11:52
+modified: 2025-06-29 02:05:48
 title: Capacitancia
 ---
 
@@ -17,7 +17,7 @@ $$
 Donde $\Delta V$ es la diferencia de [[Potencial]] entre ambos conductores.
 
 > [!note]
-> La unidad utilizada para medir [[Capacitancia]] es el *Faradio*.
+> La unidad utilizada para medir [[Capacitancia]] es el *Faradio* $F$.
 >
 > $$
 > \left[ C \right] =
