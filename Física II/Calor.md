@@ -1,6 +1,6 @@
 ---
 created: 2025-03-27 10:34:07
-modified: 2025-06-26 19:28:19
+modified: 2025-06-29 16:06:53
 title: Calor
 ---
 
@@ -13,6 +13,8 @@ Si no hay un cambio de [[Estado de agregación]], lo calculamos utilizando el [[
 $$
 Q = m \cdot c_e \cdot \Delta T
 $$
+
+Donde $m$ es la [[Masa]], y $\Delta T$ es la variación de [[Temperatura]].
 
 > [!tip]
 > Si el [[Sistema]] recibe [[Calor]], $Q$ es positivo; y si cede [[Calor]], $Q$ es negativo.
