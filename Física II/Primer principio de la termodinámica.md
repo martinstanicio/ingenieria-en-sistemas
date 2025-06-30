@@ -1,6 +1,6 @@
 ---
 created: 2025-03-31 09:33:54
-modified: 2025-06-26 19:14:43
+modified: 2025-06-30 19:30:29
 title: Primer principio de la termodinámica
 ---
 
