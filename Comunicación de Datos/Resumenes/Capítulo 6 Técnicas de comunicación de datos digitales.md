@@ -1,6 +1,6 @@
 ---
 created: 2025-08-02 13:50:05
-modified: 2025-08-02 13:50:42
+modified: 2025-08-03 20:37:34
 title: "Capítulo 6: Técnicas de comunicación de datos digitales"
 ---
 
@@ -8,86 +8,46 @@ title: "Capítulo 6: Técnicas de comunicación de datos digitales"
 
 ## 6.1. Transmisión asíncrona y síncrona
 
-Se presentan dos formas de [[Transmisión de datos]]: la [[Transmisión asíncrona]], en la que los datos se envían carácter por carácter con bits adicionales de control; y la [[Transmisión síncrona]], en la que los datos se agrupan en bloques más grandes, requiriendo sincronización entre emisor y receptor.
+Se presentan dos formas de [[Transmisión]] de [[Dato|Datos]]: la [[Transmisión asíncrona]] y la [[Transmisión síncrona]].
 
-Conceptos mencionados:
+En la [[Transmisión asíncrona]], los [[Dato|Datos]] se envían carácter por carácter, utilizando [[Bit|Bits]] adicionales de control, como el [[Bit de inicio]], el [[Bit de parada]] y, opcionalmente, el [[Bit de paridad]]. Esta técnica no requiere que el [[Emisor]] y el [[Receptor]] mantengan una [[Sincronización]] constante.
 
-- [[Bit de inicio]]
-- [[Bit de parada]]
-- [[Bit de paridad]]
-- [[Temporización]]
-- [[Bloque de datos]]
-- [[Sincronización de reloj]]
+En la [[Transmisión síncrona]], los [[Dato|Datos]] se envían como [[Bloque de datos]], sin [[Bit|Bits]] de control por carácter, pero se necesita [[Sincronización]] permanente entre [[Emisor]] y [[Receptor]].
 
 ## 6.2. Tipos de errores
 
-Se analizan los distintos tipos de [[Error de transmisión]] que pueden producirse durante la [[Transmisión de datos]]:
-
-- [[Error aislado]]
-- [[Ráfaga de errores]]
-
-También se menciona la [[Tasa de error de bits]], como medida para evaluar la calidad de una línea de transmisión.
-
+Durante la [[Transmisión]] de [[Dato|Datos]] pueden producirse errores que alteren uno o más [[Bit|Bits]] de una secuencia. Se distingue entre [[Error aislado]] y [[Ráfaga de errores]]
 ## 6.3. Detección de errores
 
-Se presentan varias técnicas para la [[Detección de errores]], basadas en el uso de información redundante:
+Se presentan técnicas de [[Detección de errores]] que permiten identificar si una secuencia de datos ha sido alterada durante la transmisión, sin necesidad de corregirla en el momento.
 
-- [[Bit de paridad]]: se utiliza [[Paridad par]] o [[Paridad impar]]
-- [[Verificación de redundancia longitudinal]] ([[LRC]])
-- [[Verificación de redundancia cíclica]] ([[CRC]])
+Una técnica simple consiste en agregar un [[Bit de paridad]] al final de cada carácter, de modo que el número total de bits 1 sea par (paridad par) o impar (paridad impar). Aunque simple, esta técnica solo permite detectar un número impar de errores por carácter.
 
-Otros conceptos utilizados:
+Otra técnica es la [[Verificación de redundancia longitudinal]] (LRC), que organiza los datos en una [[Matriz de bits]] y agrega una fila adicional calculada por [[Bit de paridad]] en cada columna, mejorando la capacidad de detección frente a ráfagas de errores cortas.
 
-- [[Matriz de bits]]
-- [[Polinomio generador]]
-- [[División módulo 2]]
-- [[Secuencia de verificación]]
+Finalmente, se introduce la [[Verificación de redundancia cíclica]] (CRC), una técnica más robusta que representa la secuencia de datos como un polinomio binario y la divide por un [[Polinomio generador]], usando [[División módulo 2]]. El [[Residuo]] de esta división se transmite como [[Secuencia de verificación]]. El receptor repite la operación para verificar la integridad de los datos.
 
 ## 6.4. Corrección de errores
 
-Se introduce la [[Corrección de errores]] mediante el agregado de [[Bit de verificación]] en posiciones específicas. Se menciona el uso del [[Código de Hamming]] como técnica capaz de detectar y corregir errores simples.
+Para la [[Corrección de errores]] se agregan [[Bits de verificación]] a la secuencia transmitida, permitiendo al receptor no solo detectar, sino también corregir errores sin necesidad de retransmisión. Se presenta el [[Código de Hamming]], que permite detectar y corregir errores simples, y detectar errores dobles. Este código se basa en el concepto de [[Distancia de Hamming]], que mide el número de bits diferentes entre dos cadenas binarias. La cantidad de [[Número de bits de verificación]] necesarios depende de la longitud del mensaje y de la capacidad de corrección deseada.
 
-También se incluyen esquemas basados en [[Retransmisión automática]] ([[ARQ]]):
-
-- [[Stop and wait]]
-- [[Go back N]]
-- [[Selective reject]]
-
-Conceptos relacionados:
-
-- [[Distancia de Hamming]]
-- [[Número de bits de verificación]]
-- [[Detección de errores simples]]
-- [[Corrección de errores simples]]
-- [[Errores múltiples]]
+Como alternativa a la corrección directa, se presenta la [[Retransmisión automática]] (ARQ), en la que el receptor solicita una retransmisión en caso de detectar errores. Se describen tres variantes: [[Stop and wait]], donde el emisor espera una confirmación antes de enviar la siguiente trama; [[Go back N]], donde se pueden enviar varias tramas antes de recibir confirmación, pero se deben retransmitir todas en caso de error; y [[Selective reject]], donde solo se retransmiten las tramas erróneas.
 
 ## 6.5. Configuraciones de línea
 
-Se describen diferentes formas de organización de los dispositivos en una [[Configuración de línea]]:
+Se describen las distintas [[Configuraciones de línea]] posibles en una red de transmisión. La configuración [[Punto a punto]] conecta un emisor y un receptor en forma exclusiva. En cambio, la configuración [[Multipunto]] permite que varios dispositivos compartan un mismo canal de transmisión, aunque solo uno puede transmitir a la vez.
 
-- [[Punto a punto]]
-- [[Multipunto]]
-
-También se clasifican según la [[Direccionalidad de la transmisión]]:
-
-- [[Simplex]]
-- [[Semidúplex]]
-- [[Dúplex completo]]
+Además, según la [[Direccionalidad de la transmisión]], se clasifican los sistemas como [[Simplex]] (transmisión en una sola dirección), [[Semidúplex]] (transmisión en ambas direcciones, pero no simultáneamente) y [[Dúplex completo]] (transmisión simultánea en ambas direcciones).
 
 ## 6.6. Interfaces
 
-Se introduce el concepto de [[Interfaz de comunicación]] entre un [[DTE]] (equipo terminal de datos) y un [[DCE]] (equipo de comunicación de datos).
+Se introduce el concepto de [[Interfaz de comunicación]] entre un [[DTE]] (Equipo terminal de datos) y un [[DCE]] (Equipo de comunicación de datos), que define la forma en que ambos dispositivos se conectan e intercambian información.
 
-Se describen sus distintas características:
+Las interfaces se caracterizan por:
 
-- [[Características mecánicas]]
-- [[Características eléctricas]]
-- [[Características funcionales]]
-- [[Características de procedimiento]]
+- Sus [[Características mecánicas]]: como el tipo de conector y la cantidad de pines.
+- Sus [[Características eléctricas]]: como los niveles de tensión requeridos para representar los bits.
+- Sus [[Características funcionales]]: que describen la función de cada señal.
+- Sus [[Características de procedimiento]]: que definen cómo se intercambian las señales en tiempo.
 
-Ejemplos de interfaces estandarizadas:
-
-- [[RS-232]]
-- [[V.24]]
-- [[V.35]]
-- [[X.21]]
+Se mencionan algunos estándares comunes de interfaz, como [[RS-232]], [[V.24]], [[V.35]] y [[X.21]].
