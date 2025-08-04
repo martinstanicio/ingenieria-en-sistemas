@@ -1,6 +1,6 @@
 ---
 created: 2025-08-02 13:50:05
-modified: 2025-08-03 22:01:11
+modified: 2025-08-03 22:35:58
 title: "Capítulo 6: Técnicas de comunicación de datos digitales"
 ---
 
@@ -24,7 +24,7 @@ Se presentan técnicas de [[Detección de errores]] , como el [[Bit de paridad]]
 
 ## 6.4. Corrección de errores
 
-Para la [[Corrección de errores]] se agregan [[Bits de verificación]] a la secuencia transmitida, permitiendo al receptor no solo detectar, sino también corregir errores sin necesidad de retransmisión. Se presenta el [[Código de Hamming]], que permite detectar y corregir errores simples, y detectar errores dobles. Este código se basa en el concepto de [[Distancia de Hamming]], que mide el número de bits diferentes entre dos cadenas binarias. La cantidad de [[Número de bits de verificación]] necesarios depende de la longitud del mensaje y de la capacidad de corrección deseada.
+Para la [[Corrección de errores]] se agregan [[Bits]] de verificación a la secuencia transmitida, permitiendo al [[Receptor]] no solo detectar y corregir errores sin necesidad de retransmisión. Se presenta el [[Código de Hamming]], basado en el concepto de [[Distancia de Hamming]].
 
 Como alternativa a la corrección directa, se presenta la [[Retransmisión automática]] (ARQ), en la que el receptor solicita una retransmisión en caso de detectar errores. Se describen tres variantes: [[Stop and wait]], donde el emisor espera una confirmación antes de enviar la siguiente trama; [[Go back N]], donde se pueden enviar varias tramas antes de recibir confirmación, pero se deben retransmitir todas en caso de error; y [[Selective reject]], donde solo se retransmiten las tramas erróneas.
 
