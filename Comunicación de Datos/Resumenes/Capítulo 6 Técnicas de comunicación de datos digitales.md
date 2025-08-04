@@ -1,6 +1,6 @@
 ---
 created: 2025-08-02 13:50:05
-modified: 2025-08-03 20:37:34
+modified: 2025-08-03 22:01:11
 title: "Capítulo 6: Técnicas de comunicación de datos digitales"
 ---
 
@@ -17,15 +17,10 @@ En la [[Transmisión síncrona]], los [[Dato|Datos]] se envían como [[Bloque de
 ## 6.2. Tipos de errores
 
 Durante la [[Transmisión]] de [[Dato|Datos]] pueden producirse errores que alteren uno o más [[Bit|Bits]] de una secuencia. Se distingue entre [[Error aislado]] y [[Ráfaga de errores]].
+
 ## 6.3. Detección de errores
 
-Se presentan técnicas de [[Detección de errores]] que permiten identificar si una secuencia de datos ha sido alterada durante la transmisión, sin necesidad de corregirla en el momento.
-
-Una técnica simple consiste en agregar un [[Bit de paridad]] al final de cada carácter, de modo que el número total de bits 1 sea par (paridad par) o impar (paridad impar). Aunque simple, esta técnica solo permite detectar un número impar de errores por carácter.
-
-Otra técnica es la [[Verificación de redundancia longitudinal]] (LRC), que organiza los datos en una [[Matriz de bits]] y agrega una fila adicional calculada por [[Bit de paridad]] en cada columna, mejorando la capacidad de detección frente a ráfagas de errores cortas.
-
-Finalmente, se introduce la [[Verificación de redundancia cíclica]] (CRC), una técnica más robusta que representa la secuencia de datos como un polinomio binario y la divide por un [[Polinomio generador]], usando [[División módulo 2]]. El [[Residuo]] de esta división se transmite como [[Secuencia de verificación]]. El receptor repite la operación para verificar la integridad de los datos.
+Se presentan técnicas de [[Detección de errores]] , como el [[Bit de paridad]], la [[Verificación de redundancia longitudinal]], y la [[Verificación de redundancia cíclica]].
 
 ## 6.4. Corrección de errores
 
