@@ -16,7 +16,7 @@ En la [[Transmisión síncrona]], los [[Dato|Datos]] se envían como [[Bloque de
 
 ## 6.2. Tipos de errores
 
-Durante la [[Transmisión]] de [[Dato|Datos]] pueden producirse errores que alteren uno o más [[Bit|Bits]] de una secuencia. Se distingue entre [[Error aislado]] y [[Ráfaga de errores]]
+Durante la [[Transmisión]] de [[Dato|Datos]] pueden producirse errores que alteren uno o más [[Bit|Bits]] de una secuencia. Se distingue entre [[Error aislado]] y [[Ráfaga de errores]].
 ## 6.3. Detección de errores
 
 Se presentan técnicas de [[Detección de errores]] que permiten identificar si una secuencia de datos ha sido alterada durante la transmisión, sin necesidad de corregirla en el momento.
