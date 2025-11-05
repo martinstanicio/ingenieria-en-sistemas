@@ -37,3 +37,4 @@ flowchart TB
 ```embed-python
 PATH: "vault://Algoritmos y Estructuras de Datos/python/20240924-matriz-aleatoria.py"
 ```
+	
