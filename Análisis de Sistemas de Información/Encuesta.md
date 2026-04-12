@@ -8,7 +8,7 @@ title: Encuesta
 
 # Encuesta
 
-Una técnica de [[Relevamiento]] para relevar [[Información]] de personas ==ampliamente dispersas==, o una ==gran cantidad== de personas.
+Una técnica de [[Relevamiento]] para relevar [[Sistemas y Procesos de Negocios/Información]] de personas ==ampliamente dispersas==, o una ==gran cantidad== de personas.
 
 Es particularmente útil para realizar estudios de opinión, o para identificar problemas antes de las [[Entrevista|Entrevistas]].
 

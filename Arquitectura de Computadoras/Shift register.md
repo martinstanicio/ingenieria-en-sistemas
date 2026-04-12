@@ -8,4 +8,4 @@ title: Shift register
 
 # Shift register
 
-Son [[Circuito secuencial|Circuitos secuenciales]] que consisten en una serie de [[Biestable|Flip-flops]] conectados en cadena, sincronizados por un pulso de reloj. Según las conexiones de los [[Biestable|Biestables]], se hace un desplazamiento hacia la izquierda o la derecha de la [[Información]] almacenada.
+Son [[Circuito secuencial|Circuitos secuenciales]] que consisten en una serie de [[Biestable|Flip-flops]] conectados en cadena, sincronizados por un pulso de reloj. Según las conexiones de los [[Biestable|Biestables]], se hace un desplazamiento hacia la izquierda o la derecha de la [[Sistemas y Procesos de Negocios/Información]] almacenada.

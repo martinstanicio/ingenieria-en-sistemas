@@ -6,4 +6,4 @@ title: Conocimiento
 
 # Conocimiento
 
-Hechos o [[Información]] adquiridos por una persona a través de la experiencia o la educación, la comprensión técnica o práctica de un asunto referente a la realidad.
+Hechos o [[Sistemas y Procesos de Negocios/Información]] adquiridos por una persona a través de la experiencia o la educación, la comprensión técnica o práctica de un asunto referente a la realidad.

@@ -20,7 +20,7 @@ Para formar una [[Organización]], es necesario seguir una serie de pasos:
 3. Identificar, analizar y clasificar las [[Actividades]] necesarias para alcanzar estos [[Objetivo|Objetivos]].
 4. Agrupar las [[Actividades]] según los [[Recursos]] humanos y materiales disponibles.
 5. Delegar a los líderes de cada grupo la [[Autoridad]] necesaria para desempeñar las [[Actividades]].
-6. Unir los grupos horizontal y verticalmente a través de relaciones de [[Autoridad]] y flujos de [[Información]].
+6. Unir los grupos horizontal y verticalmente a través de relaciones de [[Autoridad]] y flujos de [[Sistemas y Procesos de Negocios/Información]].
 
 > [!note]
 > Las [[Organización|Organizaciones]] puede ser [[Organización formal|Formales]] o [[Organización informal|Informales]].

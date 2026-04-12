@@ -6,10 +6,10 @@ title: Información directiva
 
 # Información directiva
 
-Es un tipo de [[Información]] que ==no es absolutamente necesaria== para el funcionamiento operativo del [[Sistemas|Sistema]], pero su demora o mal procesamiento puede reducir la eficacia de la misma.
+Es un tipo de [[Sistemas y Procesos de Negocios/Información]] que ==no es absolutamente necesaria== para el funcionamiento operativo del [[Sistemas|Sistema]], pero su demora o mal procesamiento puede reducir la eficacia de la misma.
 
 > [!important]
-> No está disponible directamente, sino que es necesario **calcularla o deducirla** a partir de otra [[Información]].
+> No está disponible directamente, sino que es necesario **calcularla o deducirla** a partir de otra [[Sistemas y Procesos de Negocios/Información]].
 
 Un error en la misma puede tener un alto costo, ya que afecta a todas las operaciones, a diferencia de un error con la [[Información operativa]], que solo afecta a operaciones aisladas.
 

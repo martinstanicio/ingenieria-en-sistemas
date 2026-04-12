@@ -9,8 +9,8 @@ title: Ciclo de vida de un sistema
 Kendall & Kendall plantea el siguiente ciclo de vida de los [[Sistemas]].
 
 1. **Identificación de problemas, oportunidades y [[Objetivo|Objetivos]]**
-   Análisis general del [[Sistemas|Sistema]]. Se busca definir el problema y el objetivo, calendarizar el proyecto y administrar los [[Recursos]] humanos y materiales. Con esta [[Información]] se decide si continuar o no con el proyecto.
-2. **Determinación de los requerimientos de [[Información]]**
+   Análisis general del [[Sistemas|Sistema]]. Se busca definir el problema y el objetivo, calendarizar el proyecto y administrar los [[Recursos]] humanos y materiales. Con esta [[Sistemas y Procesos de Negocios/Información]] se decide si continuar o no con el proyecto.
+2. **Determinación de los requerimientos de [[Sistemas y Procesos de Negocios/Información]]**
 3. **Análisis de las necesidades del [[Sistemas|Sistema]]**
 4. **Diseño del [[Sistemas|Sistema]] recomendado**
 5. **Desarrollo y documentación del software**

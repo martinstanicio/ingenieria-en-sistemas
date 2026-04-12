@@ -6,7 +6,7 @@ title: Definición no formal
 
 # Definición no formal
 
-No sigue una estructura determinada. Utiliza [[Información]] general y ==muy poco precisa==. Utiliza ==sinónimos y antónimos==.
+No sigue una estructura determinada. Utiliza [[Sistemas y Procesos de Negocios/Información]] general y ==muy poco precisa==. Utiliza ==sinónimos y antónimos==.
 
 Ejemplos:
 

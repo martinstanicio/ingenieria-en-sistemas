@@ -14,7 +14,7 @@ Una técnica de [[Relevamiento]]. Consiste de 3 etapas.
 
 Se busca ==establecer el [[Objetivo]]== de la [[Entrevista]], elegir al entrevistado y prepararlo para la misma.
 
-Luego, se decide el ==tipo y estructura== de la [[Entrevista]], y cómo llevar ==registro== de la [[Información]] relevada (grabar, tomar nota, etc).
+Luego, se decide el ==tipo y estructura== de la [[Entrevista]], y cómo llevar ==registro== de la [[Sistemas y Procesos de Negocios/Información]] relevada (grabar, tomar nota, etc).
 
 ## Conducción
 
@@ -24,4 +24,4 @@ Durante la [[Entrevista]], es importante ==adaptarse al entrevistado==, y presta
 
 ## Reporte
 
-Consiste en redactar conclusiones, ==formalizar la [[Información]] relevada==, analizar si se cumplió el [[Objetivo]], y si es necesario aplicar más técnicas de [[Relevamiento]].
+Consiste en redactar conclusiones, ==formalizar la [[Sistemas y Procesos de Negocios/Información]] relevada==, analizar si se cumplió el [[Objetivo]], y si es necesario aplicar más técnicas de [[Relevamiento]].

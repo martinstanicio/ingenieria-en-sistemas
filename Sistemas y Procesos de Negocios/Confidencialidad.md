@@ -6,7 +6,7 @@ title: Confidencialidad
 
 # Confidencialidad
 
-Propiedad por la que se garantiza que la [[Información]] sea accesible sólo a aquellas personas, entidades o procesos ==autorizadas== a tener acceso a la misma.
+Propiedad por la que se garantiza que la [[Sistemas y Procesos de Negocios/Información]] sea accesible sólo a aquellas personas, entidades o procesos ==autorizadas== a tener acceso a la misma.
 
 > [!warning]
 > Una ==intercepción== es el evento que puede afectar la [[Confidencialidad]].

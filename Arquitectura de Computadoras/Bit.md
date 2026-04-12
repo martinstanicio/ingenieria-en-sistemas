@@ -8,4 +8,4 @@ title: Bit
 
 # Bit
 
-La unidad del [[Sistema binario]]. Es una unidad de [[Información]].
+La unidad del [[Sistema binario]]. Es una unidad de [[Sistemas y Procesos de Negocios/Información]].

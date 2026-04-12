@@ -8,7 +8,7 @@ title: Biestable
 
 # Biestable
 
-Son ==circuitos digitales== fundamentales, pues son capaces de **almacenar** un [[Bit]] de [[Información]], **manteniendo su estado** hasta que una señal externa la cambie.
+Son ==circuitos digitales== fundamentales, pues son capaces de **almacenar** un [[Bit]] de [[Sistemas y Procesos de Negocios/Información]], **manteniendo su estado** hasta que una señal externa la cambie.
 
 > [!note]
 > Son la base de la [[RAM|Memoria]] y los registros de una computadora.

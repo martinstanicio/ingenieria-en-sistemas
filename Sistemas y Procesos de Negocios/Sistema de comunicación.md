@@ -6,4 +6,4 @@ title: Sistema de comunicación
 
 # Sistema de comunicación
 
-Herramientas, [[Sistemas]], programas, etc; específicos que se utilizan para ==transferir [[Información]] entre las partes== del [[Sistema de información]].
+Herramientas, [[Sistemas]], programas, etc; específicos que se utilizan para ==transferir [[Sistemas y Procesos de Negocios/Información]] entre las partes== del [[Sistema de información]].

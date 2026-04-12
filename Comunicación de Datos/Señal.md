@@ -8,7 +8,7 @@ title: Señal
 
 # Señal
 
-Una **representación** electromagnética de [[Información]]. Suele estar compuesta de múltiples [[Frecuencia|Frecuencias]].
+Una **representación** electromagnética de [[Sistemas y Procesos de Negocios/Información]]. Suele estar compuesta de múltiples [[Frecuencia|Frecuencias]].
 
 > [!note]
 > Mediante el análisis de Fourier se pueden obtener las componentes sinusoidales correspondientes a una [[Señal]] dada.

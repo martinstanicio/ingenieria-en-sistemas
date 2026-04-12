@@ -6,4 +6,4 @@ title: Producción
 
 # Producción
 
-Es el evento que puede afectar la [[Integridad]] de la [[Información]].
+Es el evento que puede afectar la [[Integridad]] de la [[Sistemas y Procesos de Negocios/Información]].

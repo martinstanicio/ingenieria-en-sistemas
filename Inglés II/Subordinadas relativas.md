@@ -18,7 +18,7 @@ Por ejemplo, dadas las oraciones "This type of rivet is used for joints" y "In t
 
 ## Especificativas (Defining)
 
-Otorgan [[Información]] ==esencial== sobre la oración.
+Otorgan [[Sistemas y Procesos de Negocios/Información]] ==esencial== sobre la oración.
 
 > [!warning]
 > NO se escriben entre comas.
@@ -30,7 +30,7 @@ No pueden omitirse porque modificarían el sentido de la oración.
 
 ## Explicativas (Non-defining)
 
-Proveen [[Información]] ==extra== dentro de la oración. Se escriben entre comas.
+Proveen [[Sistemas y Procesos de Negocios/Información]] ==extra== dentro de la oración. Se escriben entre comas.
 
 > [!note]
 > Pueden omitirse sin modificar el sentido de la oración.

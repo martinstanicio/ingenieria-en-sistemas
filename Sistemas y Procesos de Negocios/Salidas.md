@@ -13,7 +13,7 @@ Son creadas por el [[Sistemas|sistema]] y se envían al [[Ambiente]] con el fin 
 
 > Son la corriente de productos procesados por el sistema a partir de las [[Entradas]] ingresadas.
 
-Pueden ser bienes materiales, servicios, [[Información]] que podrán exportarse al [[Ambiente|Entorno]] o servir de *retroinput*, al ser reabsorbido por el mismo [[Sistemas|Sistema]] como una nueva [[Entradas|Entrada]].
+Pueden ser bienes materiales, servicios, [[Sistemas y Procesos de Negocios/Información]] que podrán exportarse al [[Ambiente|Entorno]] o servir de *retroinput*, al ser reabsorbido por el mismo [[Sistemas|Sistema]] como una nueva [[Entradas|Entrada]].
 
 Las salidas ==actúan para alcanzar algún [[Propósito]]== en el sistema. Es decir, deben ser coherentes con el [[Objetivo]] del sistema.
 

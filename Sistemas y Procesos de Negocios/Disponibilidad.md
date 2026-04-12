@@ -6,7 +6,7 @@ title: Disponibilidad
 
 # Disponibilidad
 
-Asegurar que los usuarios autorizados tengan acceso a la [[Información]] y a los [[Recursos]] relacionados con la misma, toda vez que lo requieran.
+Asegurar que los usuarios autorizados tengan acceso a la [[Sistemas y Procesos de Negocios/Información]] y a los [[Recursos]] relacionados con la misma, toda vez que lo requieran.
 
 > [!warning]
 > Una ==interrupción== es el evento que puede afectar la [[Disponibilidad]].

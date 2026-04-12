@@ -6,6 +6,6 @@ title: Permeabilidad
 
 # Permeabilidad
 
-La capacidad de un [[Sistemas|Sistema]] para ==intercambiar== [[Información]], energía o materia con su [[Ambiente|Entorno]] a través de sus [[Límites]].
+La capacidad de un [[Sistemas|Sistema]] para ==intercambiar== [[Sistemas y Procesos de Negocios/Información]], energía o materia con su [[Ambiente|Entorno]] a través de sus [[Límites]].
 
 Mientras más puntos de contacto tenga el [[Sistemas|Sistema]] con el [[Ambiente]], más permeable es, y mayor será su capacidad de ==adaptarse a los cambios==, es decir, su [[Retroalimentación]] podrá ser más eficiente.

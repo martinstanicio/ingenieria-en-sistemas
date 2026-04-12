@@ -5,4 +5,4 @@ title: Informática
 ---
 # Informática
 
-Es la ciencia que estudia la [[Información]].
+Es la ciencia que estudia la [[Sistemas y Procesos de Negocios/Información]].

@@ -8,7 +8,7 @@ title: Dato
 
 # Dato
 
-La representación de la [[Información]] de una manera formalizada, adecuada para la comunicación, la interpretación o el procesamiento.
+La representación de la [[Sistemas y Procesos de Negocios/Información]] de una manera formalizada, adecuada para la comunicación, la interpretación o el procesamiento.
 
 > [!tip]
-> El **tamaño** de los datos ==no tiene relación con la cantidad== de [[Información]] que poseen, aunque si pueden afectar directamente el ==costo de su comunicación==.
+> El **tamaño** de los datos ==no tiene relación con la cantidad== de [[Sistemas y Procesos de Negocios/Información]] que poseen, aunque si pueden afectar directamente el ==costo de su comunicación==.

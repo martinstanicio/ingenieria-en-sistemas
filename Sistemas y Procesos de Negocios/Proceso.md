@@ -55,7 +55,7 @@ Un [[Proceso]] debe tener las siguientes características:
 La [[Entradas|Entrada]] es el evento que inicia el proceso.
 
 > [!note]
-> La [[Entradas|Entrada]] puede estar integrada por un conjunto de materiales, repuestos, instrucciones, [[Información]], etc.
+> La [[Entradas|Entrada]] puede estar integrada por un conjunto de materiales, repuestos, instrucciones, [[Sistemas y Procesos de Negocios/Información]], etc.
 
 Puede ser una solicitud de [[Cliente interno]] o [[Cliente externo|Externo]].
 

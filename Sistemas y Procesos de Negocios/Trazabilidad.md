@@ -6,4 +6,4 @@ title: Trazabilidad
 
 # Trazabilidad
 
-Asegurar que en todo momento se podrá determinar ==quién== hizo ==qué== con la [[Información]], y ==cuándo==. Define todos los eventos de un [[Sistemas|sistema]] deben poder ser registrados para su control posterior.
+Asegurar que en todo momento se podrá determinar ==quién== hizo ==qué== con la [[Sistemas y Procesos de Negocios/Información]], y ==cuándo==. Define todos los eventos de un [[Sistemas|sistema]] deben poder ser registrados para su control posterior.

@@ -6,7 +6,7 @@ title: 20241102 - Eliminar cliente
 
 # 20241102 - Eliminar cliente
 
-Tienes un [[Archivo]] llamado `clientes.txt` que almacena [[Información]] de clientes. Cada registro contiene:
+Tienes un [[Archivo]] llamado `clientes.txt` que almacena [[Sistemas y Procesos de Negocios/Información]] de clientes. Cada registro contiene:
 
 - ID de cliente (entero)
 - Nombre (cadena)

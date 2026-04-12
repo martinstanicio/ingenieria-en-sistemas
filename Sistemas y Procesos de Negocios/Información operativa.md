@@ -6,7 +6,7 @@ title: Información operativa
 
 # Información operativa
 
-Es un tipo de [[Información]] que se utiliza para la ==realización directa== de los [[Proceso|Procesos]] de un [[Sistemas|Sistema]].
+Es un tipo de [[Sistemas y Procesos de Negocios/Información]] que se utiliza para la ==realización directa== de los [[Proceso|Procesos]] de un [[Sistemas|Sistema]].
 
 Se ==necesita en cada operación==, por lo que debe tener una alta [[Disponibilidad]] para mantener una eficiencia alta.
 

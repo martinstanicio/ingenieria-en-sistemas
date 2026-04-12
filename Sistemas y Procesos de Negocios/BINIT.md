@@ -11,4 +11,4 @@ title: BINIT
 Es la abreviación de ==BINary digIT==, y representa al [[Conjunto binario]].
 
 > [!important]
-> El [[BINIT]] es una unidad de ==almacenamiento==, y no debe ser confundido con un [[Arquitectura de Computadoras/Bit|Bit]], una unidad de ==[[Información]]==.
+> El [[BINIT]] es una unidad de ==almacenamiento==, y no debe ser confundido con un [[Arquitectura de Computadoras/Bit|Bit]], una unidad de ==[[Sistemas y Procesos de Negocios/Información]]==.

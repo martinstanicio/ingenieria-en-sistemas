@@ -6,4 +6,4 @@ title: Autenticidad
 
 # Autenticidad
 
-Asegurar la validez de la [[Información]] en tiempo, forma y distribución. Es decir, que proviene realmente de la fuente declarada y no ha sido alterada para evitar suplantación de identidades.
+Asegurar la validez de la [[Sistemas y Procesos de Negocios/Información]] en tiempo, forma y distribución. Es decir, que proviene realmente de la fuente declarada y no ha sido alterada para evitar suplantación de identidades.

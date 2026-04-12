@@ -21,10 +21,10 @@ $$
 - $n_a = A_x / A_c$: índice de [[Modulación]], que es el cociente entre la [[Amplitud]] de la [[Señal]] de [[Entradas|Entrada]] y la portadora
 
 > [!note]
-> El término $1$ en la ecuación es una [[Componente continua]] que previene la pérdida de [[Información]].
+> El término $1$ en la ecuación es una [[Componente continua]] que previene la pérdida de [[Sistemas y Procesos de Negocios/Información]].
 
 > [!danger]
-> Si $n_a < 1$, la envolvente será una reproducción **exacta** de la [[Señal]] original, pero si $n_a > 1$, la envolvente cruzará el eje de tiempos, perdiéndose así [[Información]].
+> Si $n_a < 1$, la envolvente será una reproducción **exacta** de la [[Señal]] original, pero si $n_a > 1$, la envolvente cruzará el eje de tiempos, perdiéndose así [[Sistemas y Procesos de Negocios/Información]].
 > 
 > Mientras más cerca esté $n_a$ de $1$, mejor se aprovechará la potencia utilizada para transmitir la [[Señal]].
 

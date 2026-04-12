@@ -6,9 +6,9 @@ title: Relevamiento
 
 # Relevamiento
 
-Un [[Relevamiento]] es una revisión, una investigación, o un estudio de algo. Se busca registrar cierta [[Información]] que se detecta a partir de una ==observación==.
+Un [[Relevamiento]] es una revisión, una investigación, o un estudio de algo. Se busca registrar cierta [[Sistemas y Procesos de Negocios/Información]] que se detecta a partir de una ==observación==.
 
-Su objetivo es identificar los ==problemas== y ==oportunidades==, y definir los [[Requerimientos|Requisitos]] del [[Sistemas|Sistema]]. Esta [[Información]] se puede extraer de:
+Su objetivo es identificar los ==problemas== y ==oportunidades==, y definir los [[Requerimientos|Requisitos]] del [[Sistemas|Sistema]]. Esta [[Sistemas y Procesos de Negocios/Información]] se puede extraer de:
 
 - Actitudes
 - Comportamientos

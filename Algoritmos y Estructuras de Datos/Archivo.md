@@ -79,7 +79,7 @@ Al abrir el [[Archivo]] en [[Archivo#Modo lectura]], un **puntero** se ubica en 
 open(nombre, "a")
 ```
 
-Permite escribir [[Información]] al [[Archivo]], sin eliminar sus contenidos previos.
+Permite escribir [[Sistemas y Procesos de Negocios/Información]] al [[Archivo]], sin eliminar sus contenidos previos.
 
 > [!note]
 > Si el [[Archivo]] no existe, se crea automáticamente.

@@ -6,4 +6,4 @@ title: Interrupción
 
 # Interrupción
 
-Es el evento que puede afectar la [[Disponibilidad]] de la [[Información]].
+Es el evento que puede afectar la [[Disponibilidad]] de la [[Sistemas y Procesos de Negocios/Información]].

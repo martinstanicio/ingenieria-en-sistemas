@@ -6,4 +6,4 @@ title: Valor centinela
 
 # Valor centinela
 
-Una [[Variables|variable]] ingresada por el usuario, que al recibir un ==valor absurdo==, indica que un proceso (generalmente un [[Estructura de repetición|Ciclo]]) debe detenerse, y la [[Información]] ingresada en esta última iteración y ==no debe procesarse==.
+Una [[Variables|variable]] ingresada por el usuario, que al recibir un ==valor absurdo==, indica que un proceso (generalmente un [[Estructura de repetición|Ciclo]]) debe detenerse, y la [[Sistemas y Procesos de Negocios/Información]] ingresada en esta última iteración y ==no debe procesarse==.

@@ -6,7 +6,7 @@ title: Integridad
 
 # Integridad
 
-Refiere a la exactitud y totalidad de la [[Información]] y los métodos de procesamiento.
+Refiere a la exactitud y totalidad de la [[Sistemas y Procesos de Negocios/Información]] y los métodos de procesamiento.
 
 > [!warning]
 > Una ==modificación== o ==producción== es el evento que puede afectar la [[Integridad]].
