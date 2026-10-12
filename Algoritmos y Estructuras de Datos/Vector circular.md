@@ -3,7 +3,7 @@ created: 2024-10-01 21:25:00
 modified: 2024-11-05 15:50:03
 title: Vector circular
 ---
-
+********
 # Vector circular
 
 Permite reutilizar los elementos de un [[Vector]], de forma que luego de haber utilizado el último elemento, podamos volver a utilizar el primer elemento, y todos los que le siguen.
